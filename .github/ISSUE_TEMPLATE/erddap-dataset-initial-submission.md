@@ -1,7 +1,7 @@
 ---
 name: ERDDAP Dataset Initial Submission
 about: 'This issue template present the general Hakai dataset submission workflow. '
-title: Dataset ID Here
+title: 'Dataset Submission: Dataset ID Here'
 labels: Submission
 assignees: JessyBarrette
 
@@ -32,10 +32,10 @@ A more detailed written and visual description of every step is available respec
 - [ ] Add Dataset to Development Branch
 
 ## Dataset Review (Data Administrator)
-- [ ] Dataset Development Branch Revision (Submission Label)
-    - :green_circle: Submission Approved
-    - :yellow_circle: Submission Minor Revisions    
-    - :orange_circle: Submission Major Revisions
+- [ ] Dataset Development Branch Revision (Reviewer Label)
+    - :green_circle: Reviewer Approved
+    - :yellow_circle: Reviewer Minor Revisions    
+    - :orange_circle: Reviewer Major Revisions
 
 ## Dataset Completion (Data Integrator)
 - [ ] Merge Development Dataset to Production Branch 
