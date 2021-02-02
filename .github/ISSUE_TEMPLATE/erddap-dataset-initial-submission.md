@@ -14,28 +14,27 @@ A more detailed written and visual description of every step is available respec
 
 # Submission steps
 ## Initial Submission (Data Administrator)
-- [ ] Raw Data Submission
-- [ ] CIOOS Metadata Form 
+- [ ] Original Data Submission
+- [ ] CIOOS Metadata Form completed
 
 ## ERDDAP Dataset Creation (Data Integrator)
-- Dataset Transformation 
-    - [ ] :green_circle: Directly Compatible
-    - [ ] :yellow_circle: Minor Revisions
-    - [ ] :orange_circle: Major Revisions
-    - [ ] :red_circle:  Incompatible/Missing Information
+- [ ] Dataset Transformation  (Format label)
+    - :green_circle: Format Compatible 
+    - :yellow_circle: Format Minor Revisions
+    - :orange_circle: Format Major Revisions
+    - :red_circle:  Format Incompatible/Missing Information
 - [ ] Near Real-time Data Integration 
-    - [ ] :heavy_exclamation_mark: Required
 - [ ] QARTOD Integration 
-    - [ ] :heavy_exclamation_mark: Required
 - [ ] ERDDAP Integration 
 - [ ] ERDDAP Dataset Documentation 
 - [ ] ERDDAP Test Locally 
 - [ ] Add Dataset to Development Branch
+
 ## Dataset Review (Data Administrator)
-Dataset Development Branch Revision 
-- [ ] :green_circle: Approved
-- [ ] :yellow_circle: Minor Revisions
-- [ ] :orange_circle: Major Revisions
+- [ ] Dataset Development Branch Revision (Submission Label)
+    - :green_circle: Submission Approved
+    - :yellow_circle: Submission Minor Revisions    
+    - :orange_circle: Submission Major Revisions
 
 ## Dataset Completion (Data Integrator)
 - [ ] Merge Development Dataset to Production Branch 
