@@ -1,0 +1,298 @@
+<dataset type="EDDTableFromDatabase" datasetID="HakaiQuadraLimpet5min">
+    <iso19115File>/xml/HakaiQuadraLimpet5min_iso19115.xml</iso19115File>
+
+    <addAttributes>
+        <att name="language">eng</att>
+        <att name="id">HakaiQuadraLimpet5min</att>
+
+        <att name="keywords">oxygen, subSurfaceSalinity, subSurfaceTemperature</att>
+        <att name="keywords_fra">oxygène, salinité du sous-sol, température de la sous-surface</att>
+        <att name="title_fra">Observatoire du fond marin de Hyacinthe Bay de la Colombie-Britannique</att>
+        <att name="summary_fra">La Limpit fournit des données en temps réel sur la température de l'océan, la conductivité et l'oxygène dissous pour les eaux au large de l'île Quadra.</att>
+
+        <att name="site_id">Quadra Limpet</att>
+        <att name="title">Hyacinthe Bay, BC Seafloor Observatory</att>
+        <att name="summary">The limpet provides real-time data on ocean temperature, conductivity, and dissolved oxygen for the waters off Quadra Island.</att>
+        <att name="elevation">-20</att>
+        <att name="measurement_interval">5 minute</att>
+        <att name="institution">Hakai Institute</att>
+        <att name="creator_url">https://www.hakai.org/</att>
+        <att name="publisher_email">data@hakai.org</att>
+        <att name="publisher_name">Hakai Institiute</att>
+        <att name="publisher_url">https://www.hakai.org/</att>
+        <att name="cdm_data_type">TimeSeries</att>
+        <att name="cdm_timeseries_variables">station</att>
+        <att name="infoUrl">https://www.hakai.org</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>measurementTime</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>String</dataType>
+        <addAttributes>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+            <att name="actual_range" type="floatList">1568497833.082 NaN</att>
+        </addAttributes>
+    </dataVariable>
+
+
+    <dataVariable>
+        <sourceName>=50.11736</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            <att name="description">Fixed latitude of the site</att>
+        </addAttributes>
+    </dataVariable>
+
+
+    <dataVariable>
+        <sourceName>=-125.22003</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            <att name="description">Fixed longitude of the site</att>
+        </addAttributes>
+    </dataVariable>
+
+
+    <dataVariable>
+        <sourceName>=Quadra Limpet</sourceName>
+        <destinationName>station</destinationName>
+        <dataType>String</dataType>
+        <addAttributes>
+            <att name="ioos_category">Location</att>
+            <att name="cf_role">timeseries_id</att>
+        </addAttributes>
+    </dataVariable>
+
+
+    <dataVariable>
+        <sourceName>QuadraLimpet:WaterTemp_Avg</sourceName>
+        <destinationName>WaterTemp_Avg</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            <att name="standard_name">sea_water_temperature</att>
+            <att name="sensor_type">SBE 37-SMP-ODO</att>
+            <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
+            <att name="long_name">TWtrQuadraLimpet_Avg</att>
+            <att name="units">deg C</att>
+        </addAttributes>
+    </dataVariable>
+
+
+    <dataVariable>
+        <sourceName>QuadraLimpet:WaterTemp_Std</sourceName>
+        <destinationName>WaterTemp_Std</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            <att name="standard_name">sea_water_temperature</att>
+            <att name="sensor_type">SBE 37-SMP-ODO</att>
+            <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
+            <att name="long_name">TWtrQuadraLimpet_Std</att>
+            <att name="units">deg C</att>
+        </addAttributes>
+    </dataVariable>
+
+
+    <dataVariable>
+        <sourceName>QuadraLimpet:WaterTemp_QC</sourceName>
+        <destinationName>WaterTemp_flags</destinationName>
+        <dataType>String</dataType>
+        <addAttributes>
+            <att name="long_name">TWtrQuadraLimpet Q flags</att>
+            <att name="units">Quality flags</att>
+        </addAttributes>
+    </dataVariable>
+
+
+    <dataVariable>
+        <sourceName>QuadraLimpet:WaterEC_Avg</sourceName>
+        <destinationName>WaterEC_Avg</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            <att name="standard_name">sea_water_electrical_conductivity</att>
+            <att name="sensor_type">SBE 37-SMP-ODO</att>
+            <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
+            <att name="long_name">ConductivityQuadraLimpet_Avg</att>
+            <att name="units">S/m</att>
+        </addAttributes>
+    </dataVariable>
+
+
+    <dataVariable>
+        <sourceName>QuadraLimpet:WaterEC_Std</sourceName>
+        <destinationName>WaterEC_Std</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            <att name="standard_name">sea_water_electrical_conductivity</att>
+            <att name="sensor_type">SBE 37-SMP-ODO</att>
+            <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
+            <att name="long_name">ConductivityQuadraLimpet_Std</att>
+            <att name="units">S/m</att>
+        </addAttributes>
+    </dataVariable>
+
+
+    <dataVariable>
+        <sourceName>QuadraLimpet:WaterEC_QC</sourceName>
+        <destinationName>WaterEC_flags</destinationName>
+        <dataType>String</dataType>
+        <addAttributes>
+            <att name="long_name">ConductivityQuadraLimpet Q flags</att>
+            <att name="units">Quality flags</att>
+        </addAttributes>
+    </dataVariable>
+
+
+    <dataVariable>
+        <sourceName>QuadraLimpet:WaterPressure_Avg</sourceName>
+        <destinationName>WaterPressure_Avg</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            <att name="standard_name">sea_water_pressure</att>
+            <att name="sensor_type">SBE 37-SMP-ODO</att>
+            <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
+            <att name="long_name">PressureQuadraLimpet_Avg</att>
+            <att name="units">decibar</att>
+        </addAttributes>
+    </dataVariable>
+
+
+    <dataVariable>
+        <sourceName>QuadraLimpet:WaterPressure_Std</sourceName>
+        <destinationName>WaterPressure_Std</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            <att name="standard_name">sea_water_pressure</att>
+            <att name="sensor_type">SBE 37-SMP-ODO</att>
+            <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
+            <att name="long_name">PressureQuadraLimpet_Std</att>
+            <att name="units">decibar</att>
+        </addAttributes>
+    </dataVariable>
+
+
+    <dataVariable>
+        <sourceName>QuadraLimpet:WaterPressure_QC</sourceName>
+        <destinationName>WaterPressure_flags</destinationName>
+        <dataType>String</dataType>
+        <addAttributes>
+            <att name="long_name">PressureQuadraLimpet Q flags</att>
+            <att name="units">Quality flags</att>
+        </addAttributes>
+    </dataVariable>
+
+
+    <dataVariable>
+        <sourceName>QuadraLimpet:WaterDepth_Avg</sourceName>
+        <destinationName>WaterDepth_Avg</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            <att name="standard_name">depth</att>
+            <att name="sensor_type">SBE 37-SMP-ODO</att>
+            <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
+            <att name="long_name">DepthQuadraLimpet_Avg</att>
+            <att name="units">m</att>
+        </addAttributes>
+    </dataVariable>
+
+
+    <dataVariable>
+        <sourceName>QuadraLimpet:WaterDepth_QC</sourceName>
+        <destinationName>WaterDepth_flags</destinationName>
+        <dataType>String</dataType>
+        <addAttributes>
+            <att name="long_name">DepthQuadraLimpet Q flags</att>
+            <att name="units">Quality flags</att>
+        </addAttributes>
+    </dataVariable>
+
+
+    <dataVariable>
+        <sourceName>QuadraLimpet:WaterOxygen_Avg</sourceName>
+        <destinationName>WaterOxygen_Avg</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            <att name="standard_name">volume_concentration_of_dissolved_oxygen_in_sea_water</att>
+            <att name="sensor_type">SBE 37-SMP-ODO</att>
+            <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
+            <att name="long_name">O2ConcentrationQuadraLimpet_Avg</att>
+            <att name="units">ml/L</att>
+        </addAttributes>
+    </dataVariable>
+
+
+    <dataVariable>
+        <sourceName>QuadraLimpet:WaterOxygen_Std</sourceName>
+        <destinationName>WaterOxygen_Std</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            <att name="standard_name">volume_concentration_of_dissolved_oxygen_in_sea_water</att>
+            <att name="sensor_type">SBE 37-SMP-ODO</att>
+            <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
+            <att name="long_name">O2ConcentrationQuadraLimpet_Std</att>
+            <att name="units">ml/L</att>
+        </addAttributes>
+    </dataVariable>
+
+
+    <dataVariable>
+        <sourceName>QuadraLimpet:WaterOxygen_QC</sourceName>
+        <destinationName>WaterOxygen_flags</destinationName>
+        <dataType>String</dataType>
+        <addAttributes>
+            <att name="long_name">O2ConcentrationQuadraLimpet Q flags</att>
+            <att name="units">Quality flags</att>
+        </addAttributes>
+    </dataVariable>
+
+
+    <dataVariable>
+        <sourceName>QuadraLimpet:WaterSalinity_Avg</sourceName>
+        <destinationName>WaterSalinity_Avg</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            <att name="standard_name">sea_water_salinity</att>
+            <att name="sensor_type">SBE 37-SMP-ODO</att>
+            <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
+            <att name="long_name">SalinityQuadraLimpet_Avg</att>
+        </addAttributes>
+    </dataVariable>
+
+
+    <dataVariable>
+        <sourceName>QuadraLimpet:WaterSalinity_QC</sourceName>
+        <destinationName>WaterSalinity_flags</destinationName>
+        <dataType>String</dataType>
+        <addAttributes>
+            <att name="long_name">SalinityQuadraLimpet Q flags</att>
+            <att name="units">Quality flags</att>
+        </addAttributes>
+    </dataVariable>
+
+
+    <dataVariable>
+        <sourceName>QuadraLimpet:Chlorophyll_Avg</sourceName>
+        <destinationName>Chlorophyll_Avg</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            <att name="sensor_type">Fluorometer</att>
+            <att name="sensor_description">Wet Labs Fluorometer (WetStar)</att>
+            <att name="long_name">ChlorophyllLimpet_Avg</att>
+            <att name="units">μg/l</att>
+        </addAttributes>
+    </dataVariable>
+
+
+    <dataVariable>
+        <sourceName>QuadraLimpet:Chlorophyll_QC</sourceName>
+        <destinationName>Chlorophyll_flags</destinationName>
+        <dataType>String</dataType>
+        <addAttributes>
+            <att name="long_name">ChlorophyllLimpet Q flags</att>
+            <att name="units">Quality flags</att>
+        </addAttributes>
+    </dataVariable>
+
+</dataset>
