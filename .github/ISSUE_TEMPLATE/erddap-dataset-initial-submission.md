@@ -7,6 +7,7 @@ assignees: JessyBarrette
 
 ---
 
+# Hakai Dataset Submission 
 Below are listed all the different steps related to the initial submission of a dataset. 
 
 A more detailed written and visual description of every step is available respectively 
