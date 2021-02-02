@@ -1,0 +1,683 @@
+<dataset type="EDDTableFromAsciiFiles" datasetID="HakaiColumbiaFerryResearch" active="true">
+	<iso19115File>https://pac-dev1.cioos.org/dev/metadata/pacific/underway_surface_seawater_and__57416.xml</iso19115File>
+	<reloadEveryNMinutes>10080</reloadEveryNMinutes>
+	<updateEveryNMillis>10000</updateEveryNMillis>
+	<fileDir>/datasets/HakaiColumbiaFerryResearch/</fileDir>
+	<fileNameRegex>.*QCed\.zip</fileNameRegex>
+	<recursive>true</recursive>
+	<pathRegex>.*</pathRegex>
+	<metadataFrom>last</metadataFrom>
+	<standardizeWhat>0</standardizeWhat>
+	<charset>UTF-8</charset>
+	<columnSeparator>&#9;</columnSeparator>
+	<columnNamesRow>7</columnNamesRow>
+	<firstDataRow>8</firstDataRow>
+	<sortedColumnSourceName></sortedColumnSourceName>
+	<sortFilesBySourceNames></sortFilesBySourceNames>
+	<fileTableInMemory>false</fileTableInMemory>
+	<accessibleViaFiles>false</accessibleViaFiles>
+	<!-- sourceAttributes>
+	</sourceAttributes -->
+	<!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
+		<att name="cdm_timeseries_variables">station_id, longitude, latitude</att>
+		<att name="subsetVariables">station_id, longitude, latitude</att>
+	-->
+
+	<addAttributes>
+		<att name="cdm_data_type">Trajectory</att>
+		<att name="cdm_trajectory_variables">vessel_id</att>
+		<att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
+		<att name="contributor_name">Wiley Evans</att>
+		<att name="contributor_role">Primary Investigator</att>
+		<att name="contributor_contact">wiley.evans at hakai.org</att>
+		<att name="infoUrl">https://www.hakai.org</att>
+		<att name="license">[standard]</att>
+		<att name="sourceUrl">(local files)</att>
+		<att name="standard_name_vocabulary">CF Standard Name Table v55</att>
+		<att name="subsetVariables">vessel_id,Type_code</att>
+		<att name="date_created">2017-10-25</att>
+		<att name="geospatial_lat_max">59.5</att>
+		<att name="geospatial_lat_min">48.6</att>
+		<att name="geospatial_lon_max">-135.7</att>
+		<att name="geospatial_lon_min">-122.5</att>
+		<att name="geospatial_vertical_max">2.0</att>
+		<att name="geospatial_vertical_min">2.0</att>
+		<att name="institution">Hakai Institute</att>
+		<att name="instrument">SBE 38 ,SBE 45,General Oceanics 8050 pCO2 Measuring System with LI-COR LI-840A,Aanderaa 4330F Oxygen Optode</att>
+		<att name="keywords">salinity,Comlumbia Ferry,Alaska,conductivity,partial pressure,seaSurfaceSalinity,inorganicCarbon,pco2,carbone,oxygen,Alaska Marine Highway,seaSurfaceTemperature,temperature</att>
+		<att name="platform">Alaska Marine Highway System M/V Columbia</att>
+		<att name="summary">Between October 2017 and October 2019, underway surface water measurements were collected from the Alaska Marine Highway System M/V Columbia during 135 service route transits. The service route of the Columbia included the ports of Sitka, Juneau, Haines, Skagway, Wrangell, Petersburg, and Ketchikan in southeast Alaska, and between Ketchikan and Bellingham, WA. The vessel sailed south from Ketchikan every Wednesday, arrived in Bellingham on Friday, returned to Ketchikan on Sunday, and transited between southeast Alaska terminals between Sunday and Wednesday. Measurements of temperature, salinity, dissolved oxygen content, and CO2 partial pressure were made every 2 mins on seawater drawn into the vessel from a ~2 m intake. Seawater was delivered from the intake to analytical equipment on the car deck using a AMT 1/2 HP pump (4295-98). Temperature and salinity data were collected using a Sea-Bird SBE 45 MicroTSG Thermosalinograph, and intake temperature measured using a SBE 38 Digital Oceanographic Thermometer. Dissolved oxygen content was determined using an Aanderaa 4330F that had undergone multipoint calibration at the factory in Norway. CO2 measurements were made using a General Oceanics 8050 (GO8050) pCO2 Measuring System equipped with a LI-COR LI840A non-dispersive infrared detector. All data streams, including GPS information from an antenna and atmospheric pressure from a Vaisala barometer positioned on the foredeck, were captured by the GO8050 control computer. Atmospheric CO2 measurements were also made using the GO8050 on unaltered marine air drawn to the system through an intake located on the foredeck. The CO2 measurement scheme involved the analysis of four gas standards of known CO2 content (150 ppm, 349 ppm, 449 ppm, and 850 ppm; Praxair Distributions Inc), 12 analyses atmospheric CO2, and 240 seawater CO2 measurements in a 8.5 hour period. The atmospheric and seawater CO2 analyses were run in a sequence of 3 atmospheric measurements and 60 seawater measurements that was repeated 4 times between standardization. This project was supported by the Tula Foundation and Alaska Ocean Observing System, and was a collaborative effort between the Hakai Institute, University of Washington Joint Institute for the Study of the Atmosphere and Ocean/NOAA Pacific Marine Environmental Laboratory, State of Alaska Department of Transportation, University of Alaska Southeast Alaska Coastal Rainforest Center, and the Alaska Ocean Observing System.</att>
+		<att name="title">Underway surface seawater and marine boundary layer observations made from the Alaska Marine Highway System M/V Columbia</att>
+	</addAttributes>
+
+
+	<dataVariable>
+		<sourceName>=ColumbiaFerry</sourceName>
+		<destinationName>vessel_id</destinationName>
+		<dataType>String</dataType>
+		<addAttributes>
+			<att name="ioos_category">Location</att>
+			<att name="cf_role">trajectory_id</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>Type code</sourceName>
+		<destinationName>Type_code</destinationName>
+		<dataType>byte</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Type code for gas measurement sequence</att>
+			<att name="description">Equilibrator air sample = 1, Equilibrator drain air sample = 2, atmospheric air sample = 3, gas standard 1 = 4, gas standard 2 = 5, gas standard 3 = 6, gas standard 4 = 7.</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>Date and time (yyyy-mm-dd hh:mm:ss)</sourceName>
+		<destinationName>time</destinationName>
+		<dataType>String</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Date And Time (yyyy-mm-dd Hh:mm:ss)</att>
+			<att name="source_name">Date and time (yyyy-mm-dd hh:mm:ss)</att>
+			<att name="standard_name">time</att>
+			<att name="time_precision">1970-01-01T00:00:00Z</att>
+			<att name="units">yyyy-MM-dd&#39; &#39;HH:mm:ss</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>PC Date (ddmmyy)</sourceName>
+		<destinationName>PC_Date</destinationName>
+		<dataType>int</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">PC Date (ddmmyy)</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>PC time (hhmmss)</sourceName>
+		<destinationName>PC_time</destinationName>
+		<dataType>int</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">PC Time (hhmmss)</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>GPS date (ddmmyy)</sourceName>
+		<destinationName>GPS_date</destinationName>
+		<dataType>int</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">GPS Date (ddmmyy)</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>GPS time (hhmmss)</sourceName>
+		<destinationName>GPS_time</destinationName>
+		<dataType>int</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">GPS Time (hhmmss)</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>latitude</sourceName>
+		<destinationName>latitude</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="colorBarMaximum" type="double">90.0</att>
+			<att name="colorBarMinimum" type="double">-90.0</att>
+			<att name="long_name">Latitude</att>
+			<att name="standard_name">latitude</att>
+			<att name="units">degrees_north</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>longitude</sourceName>
+		<destinationName>longitude</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="colorBarMaximum" type="double">180.0</att>
+			<att name="colorBarMinimum" type="double">-180.0</att>
+			<att name="long_name">Longitude</att>
+			<att name="standard_name">longitude</att>
+			<att name="units">degrees_east</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>equ temp (deg C)</sourceName>
+		<destinationName>equ_temp</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Equ Temp (deg C)</att>
+			<att name="units">deg C</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>std val (ppm)</sourceName>
+		<destinationName>std_val</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="_FillValue" type="float">NaN</att>
+			<att name="long_name">Std Val (ppm)</att>
+			<att name="units">ppm</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>CO2 (abs)</sourceName>
+		<destinationName>CO2_abs</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">raw CO2 Absorbance</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>CO2 (ppm)</sourceName>
+		<destinationName>CO2_ppm</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Raw CO2 mole Fractions in Dry Air</att>
+			<att name="units">ppm</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>H2O (abs)</sourceName>
+		<destinationName>H2O_abs</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Raw H2O Channel Absorbance</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>H2O (ppm)</sourceName>
+		<destinationName>H2O_ppm</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Raw H2O Channel Mole Fractions in Dry Air</att>
+			<att name="units">ppm</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>LICOR temp (deg C)</sourceName>
+		<destinationName>LICOR_temp_deg_C</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">LICOR Cell Temperature</att>
+			<att name="units">deg C</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>LICOR pressure (mbar)</sourceName>
+		<destinationName>LICOR_pressure_mbar</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">LICOR Pressure</att>
+			<att name="units">mbar</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>equ differential pressure (mbar)</sourceName>
+		<destinationName>equ_differential_pressure_mbar</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="colorBarMaximum" type="double">10.0</att>
+			<att name="colorBarMinimum" type="double">-10.0</att>
+			<att name="long_name">Equilibrator Differential Pressure</att>
+			<att name="units">mbar</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>H2O flow (l/min)</sourceName>
+		<destinationName>H2O_flow</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Seawater flow</att>
+			<att name="units">L/min</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>LICOR flow (ml/min)</sourceName>
+		<destinationName>LICOR_flow</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">LICOR Flow</att>
+			<att name="units">mL/min</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>equ pump speed (rpm)</sourceName>
+		<destinationName>equ_pump_speed</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Equilibrator Pump Speed</att>
+			<att name="units">rpm</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>vent flow (ml/min)</sourceName>
+		<destinationName>vent_flow</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Secondary Equilibrator Vent Flow Meter Reading</att>
+			<att name="units">mL/min</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>atm moisture sensor</sourceName>
+		<destinationName>atm_moisture_sensor</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Moisture Detector Reading for Sensor on Outlet of Atmospheric Sample Line through the Condenser.</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>equil moisture sensor</sourceName>
+		<destinationName>equil_moisture_sensor</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Moisture Detector Reading for Sensor on Outlet of Seawater Sample Line through the Condenser.</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>drip sensor</sourceName>
+		<destinationName>drip_sensor</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Moisture Detector on the Inside Bottom of the Wet Box</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>cond temp (deg C)</sourceName>
+		<destinationName>cond_temp</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Temperature at which Condenser is set</att>
+			<att name="units">deg C</att>
+			<att name="description">Temperature at which condenser is set. Used to aid in removing water vapor from the gas stream.</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>dry box temp (deg C)</sourceName>
+		<destinationName>dry_box_temp</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Dry Box Temperature</att>
+			<att name="units">deg C</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>deck pressure (mbar)</sourceName>
+		<destinationName>deck_pressure</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="_FillValue" type="float">NaN</att>
+			<att name="long_name">Deck Pressure</att>
+			<att name="units">mbar</att>
+			<att name="description">Druck barometer pressure located on the Columbia foredeck</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>raw O2 (uM)</sourceName>
+		<destinationName>raw_O2_uM</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Raw Oxygen Concentration</att>
+			<att name="units">uM</att>
+			<att name="description">Raw dissolved oxygen measurement from the Aanderaa 4330F in micro-mole per liter.</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>raw O2 (%Sat)</sourceName>
+		<destinationName>raw_O2_Sat</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Raw O2 Percentage of Saturation</att>
+			<att name="units">%</att>
+			<att name="description">Raw dissolved oxygen percent saturation from the Aanderaa 4330F.</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>O2 Temp (deg C)</sourceName>
+		<destinationName>O2_Temp</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Oxygen Sensor Temperature</att>
+			<att name="units">deg C</att>
+			<att name="standard_name">temperature_of_sensor_for_oxygen_in_sea_water</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>Cal Phase</sourceName>
+		<destinationName>Cal_Phase</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Calibrated phase from the Aanderaa 4330F</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>TCPhase</sourceName>
+		<destinationName>TCPhase</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Temperature compensated phase from the Aanderaa 4330F</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>C1RPh</sourceName>
+		<destinationName>C1RPh</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Phase measurement with blue excitation light from the Aanderaa 4330F</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>C2RPh</sourceName>
+		<destinationName>C2RPh</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Phase measurement with red excitation light from the Aanderaa 4330F</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>C1Amp</sourceName>
+		<destinationName>C1Amp</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Amplitude measurement with blue excitation light from the Aanderaa 4330F</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>C2Amp</sourceName>
+		<destinationName>C2Amp</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Amplitude measurement with red excitation light from the Aanderaa 4330F</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>Raw Temp</sourceName>
+		<destinationName>Raw_Temp</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Voltage from Aanderaa 4330F thermistor bridge</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>TSG T (deg C)</sourceName>
+		<destinationName>TSG_T</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="_FillValue" type="float">NaN</att>
+			<att name="long_name">Sea Water Temperature</att>
+			<att name="units">deg C</att>
+			<att name="standard_name">sea_surface_temperature</att>
+			<att name="instrument">SBE 45 MicroTSG</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>TSG Conductivity (S/m)</sourceName>
+		<destinationName>TSG_Conductivity</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="colorBarMaximum" type="double">40.0</att>
+			<att name="colorBarMinimum" type="double">30.0</att>
+			<att name="long_name">Sea Water Electrical Conductivity</att>
+			<att name="standard_name">sea_water_electrical_conductivity</att>
+			<att name="units">S/m</att>
+			<att name="instrument">SBE 45 MicroTSG</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>TSG Salinity (PSS-78)</sourceName>
+		<destinationName>TSG_Salinity</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="_FillValue" type="float">NaN</att>
+			<att name="colorBarMaximum" type="double">37.0</att>
+			<att name="colorBarMinimum" type="double">32.0</att>
+			<att name="long_name">Sea Water Practical Salinity</att>
+			<att name="standard_name">sea_water_practical_salinity</att>
+			<att name="units">PSU</att>
+			<att name="instrument">SBE 45 MicroTSG</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>Intake T (deg C)</sourceName>
+		<destinationName>Intake_T</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="_FillValue" type="float">NaN</att>
+			<att name="long_name">Water Intake Temperature</att>
+			<att name="units">deg C</att>
+			<att name="instrument">SBE 38</att>
+			<att name="standard_name">sea_surface_temperature</att>
+			<att name="description">Surface temperature in degrees Celsius from the SBE 38 Digital Oceanographic Thermometer.</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>calibrated ATM xCO2 dry (ppm)</sourceName>
+		<destinationName>calibrated_ATM_xCO2_dry</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="_FillValue" type="float">NaN</att>
+			<att name="long_name">Calibrated Atmospheric CO2 mole Fractions in Dry Air</att>
+			<att name="units">ppm</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>calibrated SW xCO2 dry (ppm)</sourceName>
+		<destinationName>calibrated_SW_xCO2_dry</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="_FillValue" type="float">NaN</att>
+			<att name="long_name">Calibrated Seawater CO2 mole Fractions in Dry Air</att>
+			<att name="units">ppm</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>ATM pressure for ATM xCO2 (mbar)</sourceName>
+		<destinationName>ATM_pressure_for_ATM_xCO2</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="_FillValue" type="float">NaN</att>
+			<att name="long_name">Atmospheric Pressure adjusted for Water Vapor Pressure and Over/Under-Pressurization in the Vessel and used to Compute Atmospheric pCO2</att>
+			<att name="units">mbar</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>equilibrator pressure (mbar)</sourceName>
+		<destinationName>equilibrator_pressure</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="_FillValue" type="float">NaN</att>
+			<att name="long_name">Pressure of Equilibration	Corrected for Vapor Pressure and Over/Under-Pressurization in the Equilibrator and Over/Under-Pressurization in the Vessel and used to compute Seawater pCO2</att>
+			<att name="units">mbar</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>ATM pCO2 wet (uatm)</sourceName>
+		<destinationName>ATM_pCO2_wet</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="_FillValue" type="float">NaN</att>
+			<att name="long_name">Atmospheric partial pressure of carbon dioxide</att>
+			<att name="units">uatm</att>
+			<att name="standard_name">surface_partial_pressure_of_carbon_dioxide_in_air</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>SW pCO2 wet equil T (uatm)</sourceName>
+		<destinationName>SW_pCO2_wet_equil_T</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="_FillValue" type="float">NaN</att>
+			<att name="long_name">Partial pressure of carbon dioxide in Sea Water at Equilibration Temperature</att>
+			<att name="units">uatm</att>
+			<att name="standard_name">surface_partial_pressure_of_carbon_dioxide_in_sea_water</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>SW pCO2 wet SST (uatm)</sourceName>
+		<destinationName>SW_pCO2_wet_SST</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="_FillValue" type="float">NaN</att>
+			<att name="long_name">Surface Partial Pressure of Carbon Dioxide in Sea Water at Sea Surface Temperature</att>
+			<att name="units">uatm</att>
+			<att name="standard_name">surface_partial_pressure_of_carbon_dioxide_in_sea_water</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>O2 (umol/kg)</sourceName>
+		<destinationName>O2</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="_FillValue" type="float">NaN</att>
+			<att name="long_name">Dissolved Oxygen Molaire Concentration per kg</att>
+			<att name="units">umol/kg</att>
+			<att name="standard_name">moles_of_oxygen_per_unit_mass_in_sea_water</att>
+			<att name="description">Salinity and density corrected dissolved oxygen in micro-mole per kilogram from the Aanderaa 4330F.	Density was calculated using temperature and salinity from the SBE 45 MicroTSG Thermosalinograph.</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>O2sol (umol/kg)</sourceName>
+		<destinationName>O2sol</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="_FillValue" type="float">NaN</att>
+			<att name="long_name">Dissolved Oxygen Molaire Concentration per kg at Saturation</att>
+			<att name="units">umol/kg</att>
+			<att name="description">Dissolved oxygen solubility in micro-mole per kilogram calculated using seawater temperature and salinity from the SBE 45 MicroTSG Thermosalinograph with the relationship (equation 8, combined fit) from Garcia and Gordon, 1992.	</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>delta-O2 (umol/kg)</sourceName>
+		<destinationName>delta_O2</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="_FillValue" type="float">NaN</att>
+			<att name="long_name">Dissolved Oxygen Molaire Concentration Difference to Solubility</att>
+			<att name="units">umol/kg</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>ATM fCO2_wet (uatm)</sourceName>
+		<destinationName>ATM_fCO2_wet</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="_FillValue" type="float">NaN</att>
+			<att name="long_name">Atmospheric CO2 Fugacity in Wet Air</att>
+			<att name="units">uatm</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>SW fCO2_wet (uatm)</sourceName>
+		<destinationName>SW_fCO2_wet</destinationName>
+		<dataType>float</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="_FillValue" type="float">NaN</att>
+			<att name="long_name">Seawater CO2 Fugacity in Wet Air</att>
+			<att name="units">uatm</att>
+			<att name="standard_name">fugacity_of_carbon_dioxide_in_sea_water</att>
+		</addAttributes>
+	</dataVariable>
+</dataset>
