@@ -24,7 +24,9 @@ A more detailed written and visual description of every step is available respec
     - [ ] :orange_circle: Major Revisions
     - [ ] :red_circle:  Incompatible/Missing Information
 - [ ] Near Real-time Data Integration 
-- [ ] QARTOD Integration (opt
+    - [ ] :heavy_exclamation_mark: Required
+- [ ] QARTOD Integration 
+    - [ ] :heavy_exclamation_mark: Required
 - [ ] ERDDAP Integration 
 - [ ] ERDDAP Dataset Documentation 
 - [ ] ERDDAP Test Locally 
