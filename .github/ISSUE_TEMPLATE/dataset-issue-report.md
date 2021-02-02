@@ -7,12 +7,12 @@ assignees: ''
 
 ---
 
-** Dataset ID** 
-**Describe the issue**
+# Dataset ID
+## Issue description
 A clear and concise description of what the bug is.
 
-**Suggestion for correction**
+## Suggestion for correction
 Descript a possible correction to apply
 
-**Additional context**
+## Additional context
 Add any other context about the problem here.
