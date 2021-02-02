@@ -1,7 +1,7 @@
 ---
 name: ERDDAP Dataset Initial Submission
 about: 'This issue template present the general Hakai dataset submission workflow. '
-title: 'Dataset_ID: Hakai*[Provisional/Research/Climate]'
+title: Dataset ID Here
 labels: Submission
 assignees: JessyBarrette
 
