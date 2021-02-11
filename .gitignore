@@ -1,0 +1,4 @@
+notforrepo
+.env*
+.mypy*
+.ipynb*
