@@ -1,0 +1,27 @@
+Data dictionary for KC_BUOY_May2018_Jan2020.txt
+
+(1) Mooring Name: Name/description of mooring
+(2) Latitude: Mooring latitude in decimal degrees
+(3) Longitude: Mooring longitude in decimal degrees 
+(4) Date: UTC date (mm/dd/yyyy)
+(5) Time: UTS time (hh:mm)
+(6) xCO2 SW (wet): (umol/mol) Mole fraction of CO2 in air in equilibrium with the seawater at sea surface temperature and measured humidity
+(7) CO2 SW QF: Flag for xCO2 sw (wet)
+(8) H20 SW: (mmol/mol) Mole fraction of H2O in air from equilibrator
+(9) xCO2 Air (wet): (umol/mol) Mole fraction of CO2 in air from airblock, 4 feet above the sea surface at measured humidity.
+(10) CO2 Air QF: Quality Flag for xCO2 Air (wet)
+(11) H20 Air: (mmol/mol) Mole fraction of H2O in air from airblock, 4 feet above the sea surface.
+(12) Licor Atm Pressure: (hPa) Atmospheric pressure at the airblock, 4 feet above the sea surface.
+(13) Licor Temp: (C) Temperature of the Infrared Licor 820 in degrees Celsius.
+(14) MAPCO2 %O2: The percent oxygen of the surface seawater divided by the percent oxygen of the atmosphere at 4 feet above the sea surface. Disclaimer: The oxygen measurement is made in the equilibrated air and does not come to complete equilibrium therefore this measurement is qualitative and for diagnostic use only.
+(15) SST: (C) Sea Surface Temperature.
+(16) Salinity: Sea Surface Salinity on the practical scale.
+(17) TS QF: Flag for SST and Salinity
+(18) xCO2 SW (dry): (umol/mol) Mole fraction of CO2 in air in equilibrium with the seawater at sea surface temperature (dry air).
+(19) xCO2 Air (dry): (umol/mol) Mole fraction of CO2 in air at the airblock, 4 feet above the sea surface (dry air).
+(20) fCO2 SW (sat): (uatm) Fugacity of CO2 in air in equilibrium with the seawater at sea surface temperature (100% humidity). Since the measurements are taken at the sea surface, warming calculations are not necessary.
+(21) fCO2 Air (sat): (uatm) Fugacity of CO2 in air at the airblock, 4 feet above the sea surface (100% humidity)
+(22) dfCO2: Difference of the fugacity of the CO2 in seawater and the fugacity of the CO2 in air (fCO2 SW - fCO2 Air).
+(23) pCO2 SW (sat): (uatm) Partial Pressure of CO2 in air in equilibrium with the seawater at sea surface temperature (100% humidity)
+(24) pCO2 Air (sat): (uatm) Partial Pressure of CO2 in air at the airblock, 4 feet above the sea surface (100% humidity).
+(25) dpCO2: Difference of the partial pressure of CO2 in seawater and air (pCO2 SW - pCO2 Air).	
