@@ -1,0 +1,107 @@
+Data dictionary for Columbia_underway_data_Y1.txt
+
+(1) Type code: code for gas measurement sequence. Equilibrator air sample = 1, Equilibrator drain air sample = 2, atmospheric air sample = 3, gas standard 1 = 4, gas standard 2 = 5, gas standard 3 = 6, gas standard 4 = 7.
+
+(2) Date and time: yyyy-mm-dd hh:mm:ss
+
+(3) PC Date (ddmmyy): Computer date in GMT.	
+
+(4) PC time (hhmmss): Computer time in GMT.
+
+(5) GPS date (ddmmyy): GPS date in GMT.
+
+(6) GPS time (hhmmss): GPS time in GMT.
+
+(7) latitude: GPS latitude.	
+
+(8) longitude: GPS longitude.	
+
+(9) equ temp (deg C): equilibrator seawater temperature in degrees Celsius from the Hart thermometer. 	
+
+(10) std val (ppm): gas standard values in parts per million.	
+
+(11) CO2 (abs): raw CO2 absorbance.
+
+(12) CO2 (ppm): raw CO2 mole fractions in dry air.	
+
+(13) H2O (abs): raw H2O channel absorbance.	
+
+(14) H20 (ppm): raw H2O channel mole fractions in dry air.
+
+(15) LICOR temp (deg C): LICOR cell temperature in degrees Celsius.
+
+(16) LICOR pressure (mbar): LICOR pressure in millibar.
+
+(17) equ differential pressure (mbar): equilibrator differential pressure in millibar.
+
+(18) H2O flow (l/min): seawater flow in liters per minute.
+
+(19) LICOR flow (ml/min): LICOR flow meter reading.
+
+(20) equ pump speed (rpm): equilibrator pump speed in rotations per minutes. 	
+
+(21) vent flow (ml/min): secondary equilibrator vent flow meter reading.	
+
+(22) atm moisture sensor: moisture detector reading for sensor on outlet of atmospheric sample line through the condenser.	
+
+(23) equil moisture sensor: moisture detector reading for sensor on outlet of seawater sample line through the condenser.		
+
+(24) drip sensor: moisture detector on the inside bottom of the wet box.
+
+(25) cond temp (deg C): temperature at which condenser is set. Used to aid in removing water vapor from the gas stream.
+
+(26) dry box temp (deg C): temperature of the dry box.
+
+(27) deck pressure (mbar): Druck barometer pressure located on the Columbia foredeck.	
+
+(28) raw O2 (uM): raw dissolved oxygen measurement from the Aanderaa 4330F in micro-mole per liter.	
+
+(29) raw O2 (%Sat): raw dissolved oxygen percent saturation from the Aanderaa 4330F.
+
+(30) O2 Temp (deg C): thermistor seawater temperature in degrees Celsius from the Aanderaa 4330F.	
+
+(31) Cal Phase:	calibrated phase from the Aanderaa 4330F.
+
+(32) TCPhase: temperature compensated phase from the Aanderaa 4330F.	
+
+(33) C1RPh:	phase measurement with blue excitation light from the Aanderaa 4330F.
+
+(34) C2RPh:	phase measurement with red excitation light from the Aanderaa 4330F.
+
+(35) C1Amp:	amplitude measurement with blue excitation light from the Aanderaa 4330F.
+
+(36) C2Amp:	amplitude measurement with red excitation light from the Aanderaa 4330F.
+
+(37) Raw Temp: voltage from Aanderaa 4330F thermistor bridge.	
+
+(38) TSG T (deg C): seawater temperature in degrees Celsius from the SBE 45 MicroTSG Thermosalinograph. 
+
+(39) TSG Conductivity (S/m): seawater conductivity in siemens per meter Celsius from the SBE 45 MicroTSG Thermosalinograph. 	
+
+(40) TSG Salinity (PSS-78):	seawater salinity reported on the 1978 Practical Salinity Scale from the SBE 45 MicroTSG Thermosalinograph. 	
+
+(41) Intake T (deg C): sea surface temperature in degrees Celsius from the SBE 38 Digital Oceanographic Thermometer. 
+
+(42) calibrated ATM xCO2 dry (ppm): calibrated atmospheric CO2 mole fractions in dry air in parts per million.	
+
+(43) calibrated SW xCO2 dry (ppm): calibrated seawater CO2 mole fractions in dry air in parts per million.
+
+(44) ATM pressure for ATM xCO2 (mbar): atmospheric pressure adjusted for water vapor pressure and over- / under-pressurization in the vessel and used to compute ATM pCO2.
+
+(45) equilibrator pressure (mbar): pressure of equilibration	corrected for vapor pressure and over- / under-pressurization in the equilibrator and over- / under-pressurization in the vessel and used to compute SW pCO2.	
+
+(46) ATM pCO2 wet (uatm): atmospheric pCO2 in wet air in micro-atmospheres. 	
+
+(47) SW pCO2 wet equil T (uatm): seawater pCO2 in wet air in micro-atmospheres at the equilibration temperature. 		
+
+(48) SW pCO2 wet SST (uatm): seawater pCO2 in wet air in micro-atmospheres at the sea surface temperature. 			
+
+(49) O2 (umol/kg): salinity and density corrected dissolved oxygen in micro-mole per kilogram from the Aanderaa 4330F.	Density was calculated using temperature and salinity from the SBE 45 MicroTSG Thermosalinograph.
+
+(50) O2sol (umol/kg): dissolved oxygen solubility in micro-mole per kilogram calculated using seawater temperature and salinity from the SBE 45 MicroTSG Thermosalinograph with the relationship (equation 8, combined fit) from Garcia and Gordon, 1992.	
+
+(51) delta-O2 (umol/kg): the difference between salinity and density corrected dissolved oxygen and dissolved oxygen solubility in micro-mole per kilogram.
+
+(52) ATM fCO2_wet (uatm): atmospheric CO2 fugacity in wet air
+
+(53) SW fCO2_wet (uatm): seawater CO2 fugacity in wet air
