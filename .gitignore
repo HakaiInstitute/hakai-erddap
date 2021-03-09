@@ -3,3 +3,4 @@ notforrepo
 .mypy*
 .ipynb*
 datasets.xml
+*.ignore
