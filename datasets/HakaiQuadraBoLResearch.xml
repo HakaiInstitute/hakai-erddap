@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
-<erddapDatasets>
-	<dataset type="EDDTableFromAsciiFiles" datasetID="HakaiQuadraBoLResearch" active="true">
+    <dataset type="EDDTableFromAsciiFiles" datasetID="HakaiQuadraBoLResearch" active="true">
 		<iso19115File>https://pac-dev1.cioos.org/dev/metadata/pacific/high_resolution_record_of_surf_a6f6c.xml</iso19115File>
 		<reloadEveryNMinutes>10080</reloadEveryNMinutes>
 		<updateEveryNMillis>10000</updateEveryNMillis>
@@ -465,4 +463,3 @@
       </addAttributes>
   </dataVariable>
 	</dataset>
-</erddapDatasets>
