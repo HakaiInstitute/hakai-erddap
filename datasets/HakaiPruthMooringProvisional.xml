@@ -1,4 +1,5 @@
 <dataset type="EDDTableFromDatabase" datasetID="HakaiPruthMooringProvisional" active="true">
+    <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <schemaName>erddap</schemaName>
     <tableName>"HakaiPruthMooringProvisional"</tableName>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>

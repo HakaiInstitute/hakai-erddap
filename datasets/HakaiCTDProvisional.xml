@@ -1,7 +1,7 @@
 <dataset type="EDDTableFromDatabase" datasetID="HakaiCTDProvisional">
   <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
   <driverName>org.postgresql.Driver</driverName>
-  <schemaName>ctd</schemaName>
+  <schemaName>erddap</schemaName>
   <tableName>"HakaiCTDProvisional"</tableName>
 
   <!-- <iso19115File>/xml/HakaiCTDQU39_iso19115.xml</iso19115File> -->
