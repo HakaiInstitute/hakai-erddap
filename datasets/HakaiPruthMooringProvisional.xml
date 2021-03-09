@@ -1,5 +1,6 @@
 <dataset type="EDDTableFromDatabase" datasetID="HakaiPruthMooringProvisional" active="true">
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
+    <driverName>org.postgresql.Driver</driverName>
     <schemaName>erddap</schemaName>
     <tableName>"HakaiPruthMooringProvisional"</tableName>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
