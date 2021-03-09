@@ -1,6 +1,8 @@
 <dataset type="EDDTableFromDatabase" datasetID="HakaiQuadraBoL5min">
+  <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
+  <driverName>org.postgresql.Driver</driverName>
   <schemaName>erddap</schemaName>
-  <tableName>dataset_hakaiquadrabol5min</tableName>
+  <tableName>"HakaiQuadraBoL5min"</tableName>
 
   <iso19115File>/xml/HakaiQuadraBoL5min_iso19115.xml</iso19115File>
 

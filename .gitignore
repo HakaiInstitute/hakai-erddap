@@ -2,3 +2,4 @@ notforrepo
 .env*
 .mypy*
 .ipynb*
+datasets.xml
