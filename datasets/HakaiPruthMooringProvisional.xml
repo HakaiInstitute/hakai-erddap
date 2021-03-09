@@ -1,0 +1,141 @@
+<dataset type="EDDTableFromDatabase" datasetID="HakaiPruthMooringProvisional" active="true">
+    <schemaName>erddap</schemaName>
+    <tableName>"HakaiPruthMooringProvisional"</tableName>
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <!-- sourceAttributes>
+    </sourceAttributes -->
+    <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
+        <att name="cdm_timeseries_variables">station_id, longitude, latitude</att>
+        <att name="subsetVariables">station_id, longitude, latitude</att>
+    -->
+    <addAttributes>
+        <att name="cdm_data_type">Other</att>
+        <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
+        <att name="infoUrl">???</att>
+        <att name="institution">???</att>
+        <att name="keywords">average, data, depth, local, max, measurement, med, min, profiler, quality, salinity, salinity-temperature-depth, source, std, temperature, time, uql, watertemp, watertemp_avg, watertemp_max, watertemp_med, watertemp_min, watertemp_qc, watertemp_ql, watertemp_std, watertemp_uql</att>
+        <att name="license">[standard]</att>
+        <att name="sourceUrl">(local database)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+        <att name="summary">Data from a local source.</att>
+        <att name="title">Data from a local source.</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>measurementTime</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">Measurement Time</att>
+            <att name="source_name">measurementTime</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>depth</sourceName>
+        <destinationName>depth</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">8000.0</att>
+            <att name="colorBarMinimum" type="double">-8000.0</att>
+            <att name="colorBarPalette">TopographyDepth</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Depth</att>
+            <att name="standard_name">depth</att>
+            <att name="units">m</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>watertemp_ql</sourceName>
+        <destinationName>watertemp_ql</destinationName>
+        <dataType>short</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Watertemp Ql</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>watertemp_qc</sourceName>
+        <destinationName>watertemp_qc</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Quality</att>
+            <att name="long_name">Watertemp Qc</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>watertemp_uql</sourceName>
+        <destinationName>watertemp_uql</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Watertemp Uql</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>watertemp_med</sourceName>
+        <destinationName>watertemp_med</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Watertemp Med</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>watertemp_avg</sourceName>
+        <destinationName>watertemp_avg</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Watertemp Avg</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>watertemp_min</sourceName>
+        <destinationName>watertemp_min</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Watertemp Min</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>watertemp_max</sourceName>
+        <destinationName>watertemp_max</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Watertemp Max</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>watertemp_std</sourceName>
+        <destinationName>watertemp_std</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Watertemp Std</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
