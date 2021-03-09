@@ -50,7 +50,6 @@
 		<att name="summary">This dataset includes continuous sea surface measurements of partial pressure of carbon dioxide (pCO2), sea surface temperature and salinity collected from Hakai Institute Quadra Island Field Station in Hyacinthe Bay, British Columbia, Canada from 2014-12-19 to 2019-12-31. Quadra Island, at the northern terminus of the Salish Sea, has been a site for shore-based and high-resolution measurement of surface seawater CO2 content since December 2014. Measurements of in situ temperature, salinity, and CO2 partial pressure are made near-continuously on seawater drawn from a sample line with an intake 50 m from shore and a depth of 1 m in Hyacinthe Bay on the eastern side of Quadra Island. The effort to collect these data are part of the Hakai Institute’s directive to advance the understanding of carbon cycling in northeast Pacific coastal settings with specific emphasis on ocean acidification.</att>
 		<att name="title">High-resolution record of surface seawater carbon dioxide (CO2) content collected from Hakai Institute Quadra Island Field Station in Hyacinthe Bay, British Columbia, Canada from 2014-12-19 to 2019-12-31 (NCEI Accession 0208638)</att>
 	</addAttributes>
-	<dataVariable>
 		<sourceName>Expocode</sourceName>
 		<destinationName>Expocode</destinationName>
 		<dataType>String</dataType>
@@ -500,5 +499,4 @@
           <att name="long_name">Revelle Factor (Waters Et Al Constants)</att>
       </addAttributes>
   </dataVariable>
-	</dataset>
-</erddapDatasets>
+</dataset>
