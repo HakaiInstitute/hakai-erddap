@@ -71,3 +71,4 @@ WHERE (
     AND work_area in ('CALVERT', 'QUADRA', 'JOHNSTONE STRAIT')
     AND d.cruise NOT IN ('CEDAR COAST', 'HER')
 ORDER BY "measurementTime" DESC;
+
