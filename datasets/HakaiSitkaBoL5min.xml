@@ -1,6 +1,8 @@
 <dataset type="EDDTableFromDatabase" datasetID="HakaiSitkaBoL5min">
+  <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
+  <driverName>org.postgresql.Driver</driverName>
   <schemaName>erddap</schemaName>
-  <tableName>dataset_hakaisitkabol5min</tableName>
+  <tableName>"HakaiSitkaBoL5min"</tableName>
 
   <iso19115File>/xml/HakaiSitkaBoL5min_iso19115.xml</iso19115File>
 
@@ -66,7 +68,7 @@
 
 
   <dataVariable>
-    <sourceName>=Sitka Burke-o-Lator</sourceName>
+    <sourceName>="Sitka Burke-o-Lator"</sourceName>
     <destinationName>station</destinationName>
     <dataType>String</dataType>
     <addAttributes>

@@ -1,6 +1,9 @@
 <dataset type="EDDTableFromDatabase" datasetID="HakaiBaynesSoundBoL5min">
+  <driverName>org.postgresql.Driver</driverName>
+  <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
+  <driverName>org.postgresql.Driver</driverName>
   <schemaName>erddap</schemaName>
-  <tableName>dataset_hakaibaynessoundbol5min</tableName>
+  <tableName>"HakaiBaynesSoundBoL5min"</tableName>
 
   <iso19115File>/xml/HakaiBaynesSoundBoL5min_iso19115.xml</iso19115File>
 
@@ -68,7 +71,7 @@
 
 
   <dataVariable>
-    <sourceName>=Baynes Sound Burke-o-Lator</sourceName>
+    <sourceName>="Baynes Sound Burke-o-Lator"</sourceName>
     <destinationName>station</destinationName>
     <dataType>String</dataType>
     <addAttributes>

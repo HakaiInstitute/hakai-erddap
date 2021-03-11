@@ -52,7 +52,7 @@
 
 
 	<dataVariable>
-		<sourceName>=ColumbiaFerry</sourceName>
+		<sourceName>="ColumbiaFerry"</sourceName>
 		<destinationName>vessel_id</destinationName>
 		<dataType>String</dataType>
 		<addAttributes>
