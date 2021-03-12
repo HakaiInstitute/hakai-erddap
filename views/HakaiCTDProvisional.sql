@@ -71,5 +71,4 @@ WHERE (
     AND work_area in ('CALVERT', 'QUADRA', 'JOHNSTONE STRAIT')
     AND d.cruise NOT IN ('CEDAR COAST', 'HER')
 ORDER BY "measurementTime" DESC;
-ALTER TABLE ctd.erddap_data OWNER TO hakai_admin;
-GRANT SELECT ON ctd.erddap_data to hakai_erddap_user;
+
