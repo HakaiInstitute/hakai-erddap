@@ -16,6 +16,39 @@ CREATE OR REPLACE VIEW erddap."HakaiPruthMooringProvisional" AS (
                         "PruthMooring:WaterTemp_0m_Std"
                     ),
                     (
+                        2,
+                        "PruthMooring:WaterTemp_2m_QL",
+                        "PruthMooring:WaterTemp_2m_QC",
+                        "PruthMooring:WaterTemp_2m_UQL",
+                        "PruthMooring:WaterTemp_2m_Med",
+                        "PruthMooring:WaterTemp_2m_Avg",
+                        "PruthMooring:WaterTemp_2m_Min",
+                        "PruthMooring:WaterTemp_2m_Max",
+                        "PruthMooring:WaterTemp_2m_Std"
+                    ),
+                    (
+                        5,
+                        "PruthMooring:WaterTemp_5m_QL",
+                        "PruthMooring:WaterTemp_5m_QC",
+                        "PruthMooring:WaterTemp_5m_UQL",
+                        "PruthMooring:WaterTemp_5m_Med",
+                        "PruthMooring:WaterTemp_5m_Avg",
+                        "PruthMooring:WaterTemp_5m_Min",
+                        "PruthMooring:WaterTemp_5m_Max",
+                        "PruthMooring:WaterTemp_5m_Std"
+                    ),
+                    (
+                        7.5,
+                        "PruthMooring:WaterTemp_7_5m_QL",
+                        "PruthMooring:WaterTemp_7_5m_QC",
+                        "PruthMooring:WaterTemp_7_5m_UQL",
+                        "PruthMooring:WaterTemp_7_5m_Med",
+                        "PruthMooring:WaterTemp_7_5m_Avg",
+                        "PruthMooring:WaterTemp_7_5m_Min",
+                        "PruthMooring:WaterTemp_7_5m_Max",
+                        "PruthMooring:WaterTemp_7_5m_Std"
+                    ),
+                    (
                         10,
                         "PruthMooring:WaterTemp_10m_QL",
                         "PruthMooring:WaterTemp_10m_QC",
@@ -36,6 +69,72 @@ CREATE OR REPLACE VIEW erddap."HakaiPruthMooringProvisional" AS (
                         "PruthMooring:WaterTemp_15m_Min",
                         "PruthMooring:WaterTemp_15m_Max",
                         "PruthMooring:WaterTemp_15m_Std"
+                    ),
+                    (
+                        20,
+                        "PruthMooring:WaterTemp_20m_QL",
+                        "PruthMooring:WaterTemp_20m_QC",
+                        "PruthMooring:WaterTemp_20m_UQL",
+                        "PruthMooring:WaterTemp_20m_Med",
+                        "PruthMooring:WaterTemp_20m_Avg",
+                        "PruthMooring:WaterTemp_20m_Min",
+                        "PruthMooring:WaterTemp_20m_Max",
+                        "PruthMooring:WaterTemp_20m_Std"
+                    ),
+                    (
+                        25,
+                        "PruthMooring:WaterTemp_25m_QL",
+                        "PruthMooring:WaterTemp_25m_QC",
+                        "PruthMooring:WaterTemp_25m_UQL",
+                        "PruthMooring:WaterTemp_25m_Med",
+                        "PruthMooring:WaterTemp_25m_Avg",
+                        "PruthMooring:WaterTemp_25m_Min",
+                        "PruthMooring:WaterTemp_25m_Max",
+                        "PruthMooring:WaterTemp_25m_Std"
+                    ),
+                    (
+                        30,
+                        "PruthMooring:WaterTemp_30m_QL",
+                        "PruthMooring:WaterTemp_30m_QC",
+                        "PruthMooring:WaterTemp_30m_UQL",
+                        "PruthMooring:WaterTemp_30m_Med",
+                        "PruthMooring:WaterTemp_30m_Avg",
+                        "PruthMooring:WaterTemp_30m_Min",
+                        "PruthMooring:WaterTemp_30m_Max",
+                        "PruthMooring:WaterTemp_30m_Std"
+                    ),
+                    (
+                        40,
+                        "PruthMooring:WaterTemp_15m_QL",
+                        "PruthMooring:WaterTemp_15m_QC",
+                        "PruthMooring:WaterTemp_15m_UQL",
+                        "PruthMooring:WaterTemp_15m_Med",
+                        "PruthMooring:WaterTemp_15m_Avg",
+                        "PruthMooring:WaterTemp_15m_Min",
+                        "PruthMooring:WaterTemp_15m_Max",
+                        "PruthMooring:WaterTemp_15m_Std"
+                    ),
+                    (
+                        50,
+                        "PruthMooring:WaterTemp_50m_QL",
+                        "PruthMooring:WaterTemp_50m_QC",
+                        "PruthMooring:WaterTemp_50m_UQL",
+                        "PruthMooring:WaterTemp_50m_Med",
+                        "PruthMooring:WaterTemp_50m_Avg",
+                        "PruthMooring:WaterTemp_50m_Min",
+                        "PruthMooring:WaterTemp_50m_Max",
+                        "PruthMooring:WaterTemp_50m_Std"
+                    ),
+                    (
+                        60,
+                        "PruthMooring:WaterTemp_60m_QL",
+                        "PruthMooring:WaterTemp_60m_QC",
+                        "PruthMooring:WaterTemp_60m_UQL",
+                        "PruthMooring:WaterTemp_60m_Med",
+                        "PruthMooring:WaterTemp_60m_Avg",
+                        "PruthMooring:WaterTemp_60m_Min",
+                        "PruthMooring:WaterTemp_60m_Max",
+                        "PruthMooring:WaterTemp_60m_Std"
                     )
             ) AS m(
                 depth,
