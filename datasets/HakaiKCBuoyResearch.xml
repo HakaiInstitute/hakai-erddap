@@ -141,6 +141,7 @@
 			<att name="long_name">Mole fraction of CO2 in AIr at Sea Surface Temperature and Humidity</att>
 			<att name="units">umol/mol</att>
 			<att name="description">Mole fraction of CO2 in air in equilibrium with the seawater at sea surface temperature and measured humidity</att>
+			<att name="ancillary_variables">CO2_SW_QF</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -152,6 +153,7 @@
 		<addAttributes>
 			<att name="long_name">CO2 SW QF</att>
 			<att name="description">Flag for xCO2 SW (wet)</att>
+			<att name="standard_name">quality_flag</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -177,6 +179,7 @@
 			<att name="long_name">Mole fraction of CO2 in Air at Measured Humidity</att>
 			<att name="units">umol/mol</att>
 			<att name="description">Mole fraction of CO2 in air from airblock, 4 feet above the sea surface at measured humidity.</att>
+			<att name="ancillary_variables">CO2_Air_QF</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -188,6 +191,7 @@
 		<addAttributes>
 			<att name="long_name">CO2 Air QF</att>
 			<att name="description">Quality Flag for xCO2 Air (wet)</att>
+			<att name="standard_name">quality_flag</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -249,6 +253,7 @@
 			<att name="standard_name">sea_surface_temperature</att>
 			<att name="units">deg C</att>
 			<att name="description">Sea Surface Temperature</att>
+			<att name="ancillary_variables">TS_QF</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -264,6 +269,7 @@
 			<att name="standard_name">sea_surface_practical_salinity</att>
 			<att name="units">PSU</att>
 			<att name="description">Sea Surface Salinity</att>
+			<att name="ancillary_variables">TS_QF</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -277,6 +283,7 @@
 			<att name="standard_name"></att>
 			<att name="units"></att>
 			<att name="description">Flag for SST and Salinity</att>
+			<att name="standard_name">quality_flag</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
