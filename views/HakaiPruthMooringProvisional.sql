@@ -105,14 +105,14 @@ CREATE OR REPLACE VIEW erddap."HakaiPruthMooringProvisional" AS (
                     ),
                     (
                         40,
-                        "PruthMooring:WaterTemp_15m_QL",
-                        "PruthMooring:WaterTemp_15m_QC",
-                        "PruthMooring:WaterTemp_15m_UQL",
-                        "PruthMooring:WaterTemp_15m_Med",
-                        "PruthMooring:WaterTemp_15m_Avg",
-                        "PruthMooring:WaterTemp_15m_Min",
-                        "PruthMooring:WaterTemp_15m_Max",
-                        "PruthMooring:WaterTemp_15m_Std"
+                        "PruthMooring:WaterTemp_40m_QL",
+                        "PruthMooring:WaterTemp_40m_QC",
+                        "PruthMooring:WaterTemp_40m_UQL",
+                        "PruthMooring:WaterTemp_40m_Med",
+                        "PruthMooring:WaterTemp_40m_Avg",
+                        "PruthMooring:WaterTemp_40m_Min",
+                        "PruthMooring:WaterTemp_40m_Max",
+                        "PruthMooring:WaterTemp_40m_Std"
                     ),
                     (
                         50,
