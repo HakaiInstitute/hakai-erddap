@@ -113,7 +113,6 @@
 		<addAttributes>
 			<att name="long_name">Date</att>
 			<att name="source_name">Date</att>
-			<att name="standard_name">time</att>
 			<att name="time_precision">1970-01-01</att>
 			<att name="units">yyyy-MM-dd</att>
 		</addAttributes>
@@ -215,6 +214,7 @@
 		<addAttributes>
 			<att name="long_name">Licor Atmospheric Pressure</att>
 			<att name="units">hPa</att>
+			<att name="standard_name">surface_air_pressure</att>
 			<att name="description">Atmospheric pressure at the airblock, 4 feet above the sea surface.</att>
 		</addAttributes>
 	</dataVariable>
@@ -309,6 +309,7 @@
 			<att name="_FillValue" type="float">-999.0</att>
 			<att name="long_name">Sea Surface Concentration of CO2 in Air</att>
 			<att name="units">umol/mol</att>
+			<att name="standard_name">dry_atmosphere_mole_fraction_of_carbon_dioxide</att>
 			<att name="description">Mole fraction of CO2 in air at the airblock, 4 feet above the sea surface (dry air).</att>
 		</addAttributes>
 	</dataVariable>
