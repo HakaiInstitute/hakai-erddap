@@ -1,9 +1,8 @@
-
 <dataset type="EDDTableFromAsciiFiles" datasetID="HakaiKCBuoyResearch" active="true">
 	<iso19115File>https://pac-dev1.cioos.org/dev/metadata/pacific/surface_seawater_and_marine_bo_94f9c.xml</iso19115File>
 	<reloadEveryNMinutes>10080</reloadEveryNMinutes>
 	<updateEveryNMillis>10000</updateEveryNMillis>
-	<fileDir>/datasets/HakaiKCBuoyResearch</fileDir>
+	<fileDir>/datasets/HakaiKCBuoyResearch/</fileDir>
 	<fileNameRegex>.*\.csv</fileNameRegex>
 	<recursive>false</recursive>
 	<pathRegex>.*</pathRegex>
@@ -93,7 +92,7 @@
 	</dataVariable>
 	<dataVariable>
 		<sourceName>Date</sourceName>
-		<destinationName>Date2</destinationName>
+		<destinationName>Date</destinationName>
 		<dataType>String</dataType>
 		<!-- sourceAttributes>
 		</sourceAttributes -->
