@@ -11,17 +11,60 @@
         <att name="subsetVariables">station_id, longitude, latitude</att>
     -->
     <addAttributes>
-        <att name="cdm_data_type">Other</att>
         <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
         <att name="infoUrl">www.hakai.org</att>
-        <att name="institution">Hakai Institute</att>
-        <att name="keywords">average, data, depth, local, max, measurement, med, min, profiler, quality, salinity, salinity-temperature-depth, source, std, temperature, time, uql, watertemp, watertemp_avg, watertemp_max, watertemp_med, watertemp_min, watertemp_qc, watertemp_ql, watertemp_std, watertemp_uql</att>
         <att name="license">[standard]</att>
         <att name="sourceUrl">(local database)</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
-        <att name="summary">Data from a local source.</att>
-        <att name="title">QU5M Mooring</att>
+        <att name="contributor_name">Jessy Barrette</att>
+        <att name="contributor_role">custodian</att>
+        <att name="date_created">2018-10-05</att>
+        <att name="geospatial_lat_max">50.12001367</att>
+        <att name="geospatial_lat_min">50.12001367</att>
+        <att name="geospatial_lon_max">-125.212195</att>
+        <att name="geospatial_lon_min">-125.212195</att>
+        <att name="geospatial_vertical_max">60.0</att>
+        <att name="institution">Hakai Institute</att>
+        <att name="instrument">Tidbits v2</att>
+        <att name="keywords">temperature,seaSurfaceTemperature,low-cost,Calvert Island,subSurfaceTemperature,pruth,mooring</att>
+        <att name="summary">The QU5 mooring is a surface mooring deployed in a shallow coastal environment near the Hakai Institute Quadra Island station. The mooring is a test platform were low-cost oceanographic instrumentation is deployed at different depths to record sea water temperatures at an accuracy of 0.2 degrees Celsius. The temperature sensors are attached to an auxiliary line suspended from the surface buoy and along the main anchor line. Instruments are distributed tighter near the surface to better capture the higher vertical variability near the surface. This dataset present the provisional dataset which has been automatically QCed and flagged. </att>
+        <att name="title">QU5M Oceanographic Mooring in Hyacinthe Bay, Quadra Island, Provisional Dataset</att>
+        <att name="cdm_data_type">TimeSeriesProfile</att>
+        <att name="cdm_profile_variables">time</att>
+        <att name="cdm_timeseries_variables">station,latitude,longitude,depth</att>
     </addAttributes>
+    <dataVariable>
+        <sourceName>=QU5M</sourceName>
+        <destinationName>station</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="cf_role">timeseries_id</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>=50.12001367</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            <att name="long_name">Latitude</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+            <att name="description">Fixed latitude of the site</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>=-125.212195</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            <att name="description">Fixed longitude of the site</att>
+            <att name="long_name">Longitude</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+        </addAttributes>
+    </dataVariable>
     <dataVariable>
         <sourceName>measurementTime</sourceName>
         <destinationName>time</destinationName>
@@ -34,6 +77,8 @@
             <att name="source_name">measurementTime</att>
             <att name="standard_name">time</att>
             <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+            <att name="cf_role">profile_id</att>
+            <att name="cell_methods">time: point (interval: 5.0 minutes comment: time correspond to the end of the interval)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -53,13 +98,83 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
+        <sourceName>watertemp_avg</sourceName>
+        <destinationName>watertemp_avg</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Average Water Temperature</att>
+            <att name="units">degree_Celsius</att>
+            <att name="standard_name">sea_water_temperature</att>
+            <att name="ancillary_data">watertemp_ql,watertemp_qc,watertemp_uql</att>
+            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>watertemp_med</sourceName>
+        <destinationName>watertemp_med</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Median Water Temperature</att>
+            <att name="units">degree_Celsius</att>
+            <att name="standard_name">sea_water_temperature</att>
+            <att name="ancillary_data">watertemp_ql,watertemp_qc,watertemp_uql</att>
+            <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>watertemp_min</sourceName>
+        <destinationName>watertemp_min</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Min. Water Temperature</att>
+            <att name="units">degree_Celsius</att>
+            <att name="standard_name">sea_water_temperature</att>
+            <att name="ancillary_data">watertemp_ql,watertemp_qc,watertemp_uql</att>
+            <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>watertemp_max</sourceName>
+        <destinationName>watertemp_max</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Max. Water Temperature</att>
+            <att name="units">degree_Celsius</att>
+            <att name="standard_name">sea_water_temperature</att>
+            <att name="ancillary_data">watertemp_ql,watertemp_qc,watertemp_uql</att>
+            <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>watertemp_std</sourceName>
+        <destinationName>watertemp_std</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Std. Water Temperature</att>
+            <att name="units">degree_Celsius</att>
+            <att name="standard_name">sea_water_temperature</att>
+            <att name="ancillary_data">watertemp_ql,watertemp_qc,watertemp_uql</att>
+            <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
         <sourceName>watertemp_ql</sourceName>
         <destinationName>watertemp_ql</destinationName>
         <dataType>short</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="ioos_category">Unknown</att>
+            <att name="ioos_category">Quality</att>
             <att name="long_name">Watertemp Ql</att>
         </addAttributes>
     </dataVariable>
@@ -81,63 +196,15 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="ioos_category">Unknown</att>
-            <att name="long_name">Watertemp Uql</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>watertemp_med</sourceName>
-        <destinationName>watertemp_med</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="ioos_category">Unknown</att>
-            <att name="long_name">Watertemp Med</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>watertemp_avg</sourceName>
-        <destinationName>watertemp_avg</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="ioos_category">Unknown</att>
-            <att name="long_name">Watertemp Avg</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>watertemp_min</sourceName>
-        <destinationName>watertemp_min</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="ioos_category">Unknown</att>
-            <att name="long_name">Watertemp Min</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>watertemp_max</sourceName>
-        <destinationName>watertemp_max</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="ioos_category">Unknown</att>
-            <att name="long_name">Watertemp Max</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>watertemp_std</sourceName>
-        <destinationName>watertemp_std</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="ioos_category">Unknown</att>
-            <att name="long_name">Watertemp Std</att>
+            <att name="ioos_category">Quality</att>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Water Temperature UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="missing_value" type="byte">2</att>
         </addAttributes>
     </dataVariable>
 </dataset>
