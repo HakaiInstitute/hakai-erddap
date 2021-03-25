@@ -47,7 +47,7 @@
         <att name="subsetVariables">station_id, longitude, latitude</att>
     -->
     <addAttributes>
-        <att name="title">Hakai Water Properties Vertical Profile Measured by Oceanographic Profilers, Research</att>
+        <att name="title">Hakai Water Properties Vertical Profiles Measured by Oceanographic Profilers, Research</att>
         <att name="summary">Temperature, conductivity, dissolved oxygen, fluorescence, photosynthetic active radiation, and turbidity data collected from 2012 to present by the Hakai Institute in waters surrounding Calvert Island, Johnstone Strait and Quadra Island areas. This dataset present data collected by oceanographic profiler instruments (RBR XR-620, RBR Concerto, RBR Maestro and Seabird SBE 19plus v2) which have been automatically processed by following respective manufacturer's  guidelines (see ... documentation). The provisional processed data is then quality controled by applying a series of tests which are following the QARTOD standards and also other tests more specific to the Hakai Institute data (see ... documentation).  Data were collected by the Hakai Institute Oceanography Program, the Nearshore Program and the Juvenile Salmon Program.</att>
         <att name="history">This dataset regroup all the Hakai Institute water properties profile data measured from oceanographic profilers which was then automatically processed and QCed by following the steps described within the Hakai Water Properties Profile Data Processing Procedure Manual.</att>
         <att name="acknowledgment">Hakai Field Technicians, Research and IT groups</att>
