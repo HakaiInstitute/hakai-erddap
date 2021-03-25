@@ -1,6 +1,7 @@
-<dataset type="EDDTableFromDatabase" datasetID="HakaiWaterPropertiesInstrumentProfileProvisional" active="true">
-    <updateEveryNMillis>10000</updateEveryNMillis>
+
+<dataset type="EDDTableFromMultidimNcFiles" datasetID="HakaiWaterPropertiesInstrumentProfileProvisional" active="true">
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
     <fileDir>/datasets/HakaiWaterPropertiesInstrumentProfileProvisional/</fileDir>
     <fileNameRegex>.*\.nc</fileNameRegex>
     <recursive>true</recursive>
@@ -24,6 +25,7 @@
         <att name="publisher_name">Hakai Institiute</att>
         <att name="publisher_url">https://www.hakai.org/</att>
         <att name="infoUrl">https://www.hakai.org</att>
+        <att name="sourceUrl">(local files)</att>
         <att name="keywords_vocabulary">GCMD Science Keywords</att>
         <att name="license">Creative Commons Attribution 4.0</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
@@ -38,7 +40,7 @@
         <att name="instrument">66061,1907674,18032,18066,65679,80217,1907467</att>
         <att name="keywords">Calvert Island,Quadra Island,subSurfaceSalinity,coastal zone,PAR,turbidity,fluorescence,salinity,Strait of Georgia,subSurfaceTemperature,Johnstone Strait,Queen Charlotte Sound,oxygen,photosynthetically active radiation,transmissometer</att>
         <att name="summary">Temperature, conductivity, dissolved oxygen, fluorescence, photosynthetic active radiation, and turbidity data collected from 2012 to present by the Hakai Institute in waters surrounding Calvert Island, Johnstone Strait and Quadra Island areas. This dataset present data collected by oceanographic profiler instruments (RBR XR-620, RBR Concerto, RBR Maestro and Seabird SBE 19plus v2) which have been automatically processed by following respective manufacturer's  guidelines (see ... documentation). The provisional processed data is then quality controled by applying a series of tests which are following the QARTOD standards and also other tests more specific to the Hakai Institute data (see ... documentation).  Data were collected by the Hakai Institute Oceanography Program, the Nearshore Program and the Juvenile Salmon Program.</att>
-        <att name="title">Hakai Provisional Water Properties Vertical Profile Data Measured by Oceanographic Profilers</att>
+        <att name="title">Hakai Water Properties Vertical Profile Data Measured by Oceanographic Profilers, Provisional</att>
             <att name="subsetVariables">cruise, vessel, bottle_drop, device_model, device_sn, device_firmware, work_area, direction_flag, conductivity_UQL,  temperature_UQL, depth_UQL, pressure_UQL, flc_UQL, turbidity_UQL, salinity_UQL, spec_cond, dissolved_oxygen_ml_l_UQL, rinko_do_ml_l_UQL, dissolved_oxygen_percent_UQL, c_star_at_UQL, hakai_id, station</att>
         <att name="cdm_data_type">TimeSeriesProfile</att>
         <att name="cdm_profile_variables">hakai_id</att>
@@ -96,7 +98,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>comments</sourceName>
+        <sourceName>cast_comments</sourceName>
         <destinationName>comments</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
@@ -190,7 +192,7 @@
     </dataVariable>
     <dataVariable>
         <sourceName>latitude</sourceName>
-        <destinationName>precice_latitude</destinationName>
+        <destinationName>precise_latitude</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
             <att name="_FillValue" type="double">NaN</att>
@@ -352,7 +354,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>depth_UQL</sourceName>
+        <sourceName>depth_qartod_flag</sourceName>
         <destinationName>depth_UQL</destinationName>
         <dataType>byte</dataType>
         <!-- sourceAttributes>
@@ -404,7 +406,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>pressure_UQL</sourceName>
+        <sourceName>pressure_qartod_flag</sourceName>
         <destinationName>pressure_UQL</destinationName>
         <dataType>byte</dataType>
         <!-- sourceAttributes>
@@ -457,7 +459,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>conductivity_UQL</sourceName>
+        <sourceName>conductivity_qartod_flag</sourceName>
         <destinationName>conductivity_UQL</destinationName>
         <dataType>byte</dataType>
         <!-- sourceAttributes>
@@ -512,7 +514,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>temperature_UQL</sourceName>
+        <sourceName>temperature_qartod_flag</sourceName>
         <destinationName>temperature_UQL</destinationName>
         <dataType>byte</dataType>
         <!-- sourceAttributes>
@@ -567,7 +569,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>salinity_UQL</sourceName>
+        <sourceName>salinity_qartod_flag</sourceName>
         <destinationName>salinity_UQL</destinationName>
         <dataType>byte</dataType>
         <!-- sourceAttributes>
@@ -630,7 +632,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>dissolved_oxygen_ml_l_UQL</sourceName>
+        <sourceName>dissolved_oxygen_ml_l_qartod_flag</sourceName>
         <destinationName>dissolved_oxygen_ml_l_UQL</destinationName>
         <dataType>byte</dataType>
         <!-- sourceAttributes>
@@ -683,7 +685,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>rinko_do_ml_l_UQL</sourceName>
+        <sourceName>rinko_do_ml_l_qartod_flag</sourceName>
         <destinationName>rinko_do_ml_l_UQL</destinationName>
         <dataType>byte</dataType>
         <!-- sourceAttributes>
@@ -729,7 +731,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>dissolved_oxygen_percent_UQL</sourceName>
+        <sourceName>dissolved_oxygen_percent_qartod_flag</sourceName>
         <destinationName>dissolved_oxygen_percent_UQL</destinationName>
         <dataType>byte</dataType>
         <!-- sourceAttributes>
@@ -782,7 +784,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>flc_UQL</sourceName>
+        <sourceName>flc_qartod_flag</sourceName>
         <destinationName>flc_UQL</destinationName>
         <dataType>byte</dataType>
         <!-- sourceAttributes>
@@ -835,7 +837,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>turbidity_UQL</sourceName>
+        <sourceName>turbidity_qartod_flag</sourceName>
         <destinationName>turbidity_UQL</destinationName>
         <dataType>byte</dataType>
         <!-- sourceAttributes>
@@ -888,7 +890,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>par_UQL</sourceName>
+        <sourceName>par_qartod_flag</sourceName>
         <destinationName>par_UQL</destinationName>
         <dataType>byte</dataType>
         <!-- sourceAttributes>
@@ -941,7 +943,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>c_star_at_UQL</sourceName>
+        <sourceName>c_star_at_qartod_flag</sourceName>
         <destinationName>c_star_at_UQL</destinationName>
         <dataType>byte</dataType>
         <!-- sourceAttributes>
