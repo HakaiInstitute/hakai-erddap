@@ -10,31 +10,41 @@
     <att name="language">eng</att>
     <att name="id">HakaiQuadraBoL5min</att>
 
-    <att name="keywords">inorganicCarbon, subSurfaceTemperature, subSurfaceSalinity</att>
-    <att name="keywords_fra">carbone inorganique, température sous la surface, salinité sous la surface</att>
     <att name="title_fra">Données du Burke-o-Lator dans la baie Hyacinthe en Colombie-Britannique</att>
     <att name="summary_fra">L'analyseur Burke-o-Lator (BoL) pCO2 / TCO2 mesure en continu la pression partielle du dioxyde de carbone (pCO2) et le carbone inorganique total dissous (TCO2) dans un flux d'eau de mer continu et des échantillons discrets. Le BoL est associé à un thermosalinographe SBE 45 qui mesure la température et la salinité de l'eau de mer.</att>
-    <att name="geospatial_vertical_min">1</att>
-    <att name="geospatial_vertical_max">1</att>
-
-    <att name="site_id">Quadra Burke-o-Lator</att>
-    <att name="title">Hyacinthe Bay, BC Burke-o-Lator data</att>
-    <att name="summary">The Burke-o-Lator (BoL) pCO2/TCO2 analyzer measures carbon dioxide partial pressure (pCO2) and total dissolved inorganic carbon (TCO2) both continuously from a flow-through seawater stream and from seawater collected in discrete samples. The BoL is paired with a SBE 45 Thermosalinograph to measure seawater temperature and salinity.</att>
     <att name="site_description">Burke-o-Lator at Hyacinthe Bay, BC</att>
-    <att name="elevation">1</att>
     <att name="measurement_interval">5 minute</att>
     <att name="institution">Hakai Institute</att>
-    <att name="contributor_name">Wiley Evans</att>
-    <att name="contributor_role">Primary Investigator</att>
-    <att name="creator_name">Wiley Evans</att>
-    <att name="creator_email">wiley.evans@hakai.org</att>
-    <att name="creator_url">https://www.hakai.org/</att>
     <att name="publisher_email">data@hakai.org</att>
     <att name="publisher_name">Hakai Institiute</att>
     <att name="publisher_url">https://www.hakai.org/</att>
+
+    <att name="infoUrl">https://www.hakai.org</att>
+    <att name="creator_url">hakai.org</att>
+    <att name="creator_email">data at hakai.org</att>
+    <att name="contributor_name">Wiley Evans</att>
+    <att name="contributor_role">Primary Investigator</att>
+    <att name="contributor_email">wiley.evans at hakai.org</att>
+    <att name="institution">Hakai Institute</att>
+    <att name="infoUrl">https://www.hakai.org</att>
+    <att name="license">Creative Commons Attribution 4.0 (CC-BY-4.0)</att>
+    <att name="sourceUrl">https://www.nodc.noaa.gov/ocads/data/0208638.xml</att>
+    <att name="standard_name_vocabulary">CF Standard Name Table v55</att>
+    <att name="date_created">2014-12-19</att>
+    <att name="geospatial_lat_max">50.116</att>
+    <att name="geospatial_lat_min">50.116</att>
+    <att name="geospatial_lon_max">-125.222</att>
+    <att name="geospatial_lon_min">-125.222</att>
+    <att name="geospatial_vertical_min">1</att>
+    <att name="geospatial_vertical_max">1</att>
+    <att name="institution">Hakai Institute</att>
+    <att name="instrument">SUPERCO2,SBE 45,Burke-o-Lator pCO2/TCO2 analyzer</att>
+    <att name="keywords">North Pacific Ocean,Surface measurement,Northern Salish Sea,Sea Surface Temperature,Sea Surface Practical Salinity,Discrete measurement,Quadra Island,seaSurfaceSalinity,Ocean Acidification,Continuous measurement,seaSurfaceTemperature,Practical Salinity,inorganicCarbon,British Columbia coast,CO2</att>
+    <att name="summary">This dataset includes continuous sea surface measurements of partial pressure of carbon dioxide (pCO2), sea surface temperature and salinity collected from Hakai Institute Quadra Island Field Station in Hyacinthe Bay, British Columbia, Canada. Quadra Island, at the northern terminus of the Salish Sea, has been a site for shore-based and high-resolution measurement of surface seawater CO2 content since December 2014. Measurements of in situ temperature, salinity, and CO2 partial pressure are made near-continuously on seawater drawn from a sample line with an intake 50 m from shore and a depth of 1 m in Hyacinthe Bay on the eastern side of Quadra Island. The effort to collect these data are part of the Hakai Institute's directive to advance the understanding of carbon cycling in northeast Pacific coastal settings with specific emphasis on ocean acidification.</att>
+    <att name="title">High-Resolution Record of Surface Seawater Carbon Dioxide (CO2) Content Collected from Hakai Institute Quadra Island Field Station in Hyacinthe Bay, British Columbia, Canada </att>
+    <att name="subsetVariables">station_id</att>
     <att name="cdm_data_type">TimeSeries</att>
     <att name="cdm_timeseries_variables">station</att>
-    <att name="infoUrl">https://www.hakai.org</att>
   </addAttributes>
   <dataVariable>
     <sourceName>measurementTime</sourceName>
