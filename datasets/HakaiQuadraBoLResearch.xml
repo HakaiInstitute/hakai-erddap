@@ -36,17 +36,16 @@
         <att name="contributor_name">Wiley Evans</att>
         <att name="contributor_role">pointOfContact</att>
         <att name="date_created">2014-12-19</att>
-        <att name="date_revised">2021-03-09</att>
         <att name="geospatial_lat_max">50.116</att>
         <att name="geospatial_lat_min">50.116</att>
         <att name="geospatial_lon_max">-125.222</att>
         <att name="geospatial_lon_min">-125.222</att>
         <att name="geospatial_vertical_max">2.0</att>
-        <att name="instrument">SBE 45,SUPERCO2,Burke-o-Lator pCO2/TCO2 analyzer,CTD-Diver</att>
-        <att name="keywords">Discrete measurement,seaSurfaceTemperature,North Pacific Ocean,Northern Salish Sea,Surface measurement,Quadra Island,British Columbia coast,seaSurfaceSalinity,inorganicCarbon,Continuous measurement</att>
-        <att name="platform">Quadra Island Field Station</att>
+        <att name="institution">Hakai Institute</att>
+        <att name="instrument">CTD-Divers,SUPERCO2,SBE 45,Burke-o-Lator pCO2/TCO2 analyzer</att>
+        <att name="keywords">North Pacific Ocean,Surface measurement,Northern Salish Sea,Sea Surface Temperature,Sea Surface Practical Salinity,Discrete measurement,Quadra Island,seaSurfaceSalinity,Ocean Acidification,Continuous measurement,seaSurfaceTemperature,Practical Salinity,inorganicCarbon,British Columbia coast,CO2</att>
         <att name="summary">This dataset includes continuous sea surface measurements of partial pressure of carbon dioxide (pCO2), sea surface temperature and salinity collected from Hakai Institute Quadra Island Field Station in Hyacinthe Bay, British Columbia, Canada. Quadra Island, at the northern terminus of the Salish Sea, has been a site for shore-based and high-resolution measurement of surface seawater CO2 content since December 2014. Measurements of in situ temperature, salinity, and CO2 partial pressure are made near-continuously on seawater drawn from a sample line with an intake 50 m from shore and a depth of 1 m in Hyacinthe Bay on the eastern side of Quadra Island. The effort to collect these data are part of the Hakai Institute's directive to advance the understanding of carbon cycling in northeast Pacific coastal settings with specific emphasis on ocean acidification.</att>
-        <att name="title">High-resolution record of surface seawater carbon dioxide (CO2) content collected from Hakai Institute Quadra Island Field Station in Hyacinthe Bay, British Columbia, Canada</att>
+        <att name="title">Real-Time Provisional High-Resolution Record of Surface Seawater Carbon Dioxide (CO2) Content Collected from Hakai Institute Quadra Island Field Station in Hyacinthe Bay, British Columbia, Canada </att>
     </addAttributes>
     <dataVariable>
         <sourceName>='QuadraBoL'</sourceName>

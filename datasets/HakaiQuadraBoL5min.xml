@@ -53,6 +53,9 @@
     <dataType>double</dataType>
     <addAttributes>
       <att name="description">Fixed latitude of the site</att>
+      <att name="long_name">Latitude</att>
+      <att name="standard_name">latitude</att>
+      <att name="units">degrees_north</att>
     </addAttributes>
   </dataVariable>
 
@@ -63,6 +66,9 @@
     <dataType>double</dataType>
     <addAttributes>
       <att name="description">Fixed longitude of the site</att>
+      <att name="long_name">Longitude</att>
+      <att name="standard_name">longitude</att>
+      <att name="units">degrees_east</att>
     </addAttributes>
   </dataVariable>
 

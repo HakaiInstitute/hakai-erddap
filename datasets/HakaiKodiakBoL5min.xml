@@ -19,8 +19,8 @@
 
 
     <att name="site_id">Kodiak Burke-o-Lator</att>
-    <att name="title">Burke-o-Lator at Kodiak </att>
-    <att name="summary">The Burke-o-Lator (BoL) pCO2/TCO2 analyzer measures carbon dioxide partial pressure (pCO2) and total dissolved inorganic carbon (TCO2) both continuously from a flow-through seawater stream and from seawater collected in discrete samples. The BoL is paired with a SBE 45 Thermosalinograph to measure seawater temperature and salinity.</att>
+    <att name="title">Real-Time Provisional High-Resolution Record of Surface Seawater Carbon Dioxide (CO2) Content Collected from Kodiak, Alaska, USA</att>
+    <att name="summary">This dataset includes continuous sea surface measurements of partial pressure of carbon dioxide (pCO2), sea surface temperature and salinity collected from Kodiak, Alaska, USA. The Burke-o-Lator (BoL) pCO2/TCO2 analyzer measures carbon dioxide partial pressure (pCO2) and total dissolved inorganic carbon (TCO2) both continuously from a flow-through seawater stream and from seawater collected in discrete samples. The BoL is paired with a SBE 45 Thermosalinograph to measure seawater temperature and salinity.</att>
     <att name="site_description">The Kodiak Laboratory resides in the Kodiak Fisheries Research Center owned by the Kodiak Island Borough</att>
     <att name="elevation">1</att>
     <att name="measurement_interval">5 minute</att>
@@ -54,6 +54,9 @@
     <dataType>double</dataType>
     <addAttributes>
       <att name="description">Fixed latitude of the site</att>
+      <att name="long_name">Latitude</att>
+      <att name="standard_name">latitude</att>
+      <att name="units">degrees_north</att>
     </addAttributes>
   </dataVariable>
 
@@ -64,6 +67,9 @@
     <dataType>double</dataType>
     <addAttributes>
       <att name="description">Fixed longitude of the site</att>
+      <att name="long_name">Longitude</att>
+      <att name="standard_name">longitude</att>
+      <att name="units">degrees_east</att>
     </addAttributes>
   </dataVariable>
 
