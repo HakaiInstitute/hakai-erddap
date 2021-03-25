@@ -381,39 +381,6 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>depth_qartod_flag</sourceName>
-        <destinationName>depth_UQL</destinationName>
-        <dataType>byte</dataType>
-        <!-- sourceAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Depth UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Depth UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-            <att name="colorBarMaximum" type="double">10.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="missing_value" type="byte">2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>depth_flag_description</sourceName>
-        <destinationName>depth_flag_description</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Depth Flag Description</att>
-            <att name="standard_name">quality_flag</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>pressure</sourceName>
         <destinationName>pressure</destinationName>
         <dataType>int</dataType>
@@ -431,39 +398,6 @@
             <att name="_FillValue" type="int">2147483647</att>
             <att name="colorBarMaximum" type="double">700.0</att>
             <att name="colorBarMinimum" type="double">0.0</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>pressure_qartod_flag</sourceName>
-        <destinationName>pressure_UQL</destinationName>
-        <dataType>byte</dataType>
-        <!-- sourceAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Pressure UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Pressure UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-            <att name="colorBarMaximum" type="double">10.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="missing_value" type="byte">2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>pressure_flag_description</sourceName>
-        <destinationName>pressure_flag_description</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Pressure Flag Description</att>
-            <att name="standard_name">quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -485,38 +419,6 @@
             <att name="units">mS cm-1</att>
             <att name="colorBarMaximum" type="double">40.0</att>
             <att name="colorBarMinimum" type="double">15.0</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>conductivity_qartod_flag</sourceName>
-        <destinationName>conductivity_UQL</destinationName>
-        <dataType>byte</dataType>
-        <!-- sourceAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Conductivity UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Conductivity UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-            <att name="colorBarMaximum" type="double">10.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="missing_value" type="byte">2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>conductivity_flag_description</sourceName>
-        <destinationName>conductivity_flag_description</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Conductivity Flag Description</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -543,39 +445,6 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>temperature_qartod_flag</sourceName>
-        <destinationName>temperature_UQL</destinationName>
-        <dataType>byte</dataType>
-        <!-- sourceAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Temperature UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Temperature UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-            <att name="colorBarMaximum" type="double">10.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="missing_value" type="byte">2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>temperature_flag_description</sourceName>
-        <destinationName>temperature_flag_description</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Temperature Flag Description</att>
-            <att name="standard_name">quality_flag</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>salinity</sourceName>
         <destinationName>salinity</destinationName>
         <dataType>double</dataType>
@@ -598,39 +467,6 @@
             <att name="colorBarMinimum" type="double">20.0</att>
         </addAttributes>
     </dataVariable>
-    <dataVariable>
-        <sourceName>salinity_qartod_flag</sourceName>
-        <destinationName>salinity_UQL</destinationName>
-        <dataType>byte</dataType>
-        <!-- sourceAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Salinity UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Salinity UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-            <att name="colorBarMaximum" type="double">10.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="missing_value" type="byte">2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>salinity_flag_description</sourceName>
-        <destinationName>salinity_flag_description</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Salinity Flag Description</att>
-            <att name="standard_name">quality_flag</att>s
-        </addAttributes>
-    </dataVariable> 
     <dataVariable>
         <sourceName>spec_cond</sourceName>
         <destinationName>spec_cond</destinationName>
@@ -663,39 +499,6 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>dissolved_oxygen_ml_l_qartod_flag</sourceName>
-        <destinationName>dissolved_oxygen_ml_l_UQL</destinationName>
-        <dataType>byte</dataType>
-        <!-- sourceAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Dissolved_oxygen_ml_l UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Dissolved_oxygen_ml_l UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-            <att name="colorBarMaximum" type="double">10.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="missing_value" type="byte">2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>dissolved_oxygen_ml_l_flag_description</sourceName>
-        <destinationName>dissolved_oxygen_ml_l_flag_description</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Dissolved Oxygen Ml L Flag Description</att>
-            <att name="standard_name">quality_flag</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>rinko_do_ml_l</sourceName>
         <destinationName>rinko_do_ml_l</destinationName>
         <dataType>double</dataType>
@@ -717,38 +520,6 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>rinko_do_ml_l_qartod_flag</sourceName>
-        <destinationName>rinko_do_ml_l_UQL</destinationName>
-        <dataType>byte</dataType>
-        <!-- sourceAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Rinko_do_ml_l UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Rinko_do_ml_l UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-            <att name="colorBarMaximum" type="double">10.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="missing_value" type="byte">2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>rinko_do_ml_l_flag_description</sourceName>
-        <destinationName>rinko_do_ml_l_flag_description</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Rinko Do Ml L Flag Description</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>dissolved_oxygen_percent</sourceName>
         <destinationName>dissolved_oxygen_percent</destinationName>
         <dataType>String</dataType>
@@ -760,39 +531,6 @@
             <att name="long_name">Dissolved Oxygen Percent</att>
             <att name="colorBarMaximum" type="double">120.0</att>
             <att name="colorBarMinimum" type="double">0.0</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>dissolved_oxygen_percent_qartod_flag</sourceName>
-        <destinationName>dissolved_oxygen_percent_UQL</destinationName>
-        <dataType>byte</dataType>
-        <!-- sourceAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Dissolved_oxygen_percent UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Dissolved_oxygen_percent UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-            <att name="colorBarMaximum" type="double">10.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="missing_value" type="byte">2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>dissolved_oxygen_percent_flag_description</sourceName>
-        <destinationName>dissolved_oxygen_percent_flag_description</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Dissolved Oxygen Percent Flag Description</att>
-            <att name="standard_name">quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -817,39 +555,6 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>flc_qartod_flag</sourceName>
-        <destinationName>flc_UQL</destinationName>
-        <dataType>byte</dataType>
-        <!-- sourceAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Flc UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Flc UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-            <att name="colorBarMaximum" type="double">10.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="missing_value" type="byte">2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>flc_flag_description</sourceName>
-        <destinationName>flc_flag_description</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Flc Flag Description</att>
-            <att name="standard_name">quality_flag</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>turbidity</sourceName>
         <destinationName>turbidity</destinationName>
         <dataType>double</dataType>
@@ -868,39 +573,6 @@
             <att name="units">FTU</att>
             <att name="colorBarMaximum" type="double">30.0</att>
             <att name="colorBarMinimum" type="double">0.0</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>turbidity_qartod_flag</sourceName>
-        <destinationName>turbidity_UQL</destinationName>
-        <dataType>byte</dataType>
-        <!-- sourceAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Turbidity UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Turbidity UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-            <att name="colorBarMaximum" type="double">10.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="missing_value" type="byte">2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>turbidity_flag_description</sourceName>
-        <destinationName>turbidity_flag_description</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Turbidity Flag Description</att>
-            <att name="standard_name">quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -925,38 +597,6 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>par_qartod_flag</sourceName>
-        <destinationName>par_UQL</destinationName>
-        <dataType>byte</dataType>
-        <!-- sourceAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Par UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Par UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-            <att name="colorBarMaximum" type="double">10.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="missing_value" type="byte">2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>par_flag_description</sourceName>
-        <destinationName>par_flag_description</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Par Flag Description</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>c_star_at</sourceName>
         <destinationName>c_star_at</destinationName>
         <dataType>double</dataType>
@@ -975,39 +615,6 @@
             <att name="units">m-1</att>
             <att name="colorBarMaximum" type="double">3.0</att>
             <att name="colorBarMinimum" type="double">0.0</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>c_star_at_qartod_flag</sourceName>
-        <destinationName>c_star_at_UQL</destinationName>
-        <dataType>byte</dataType>
-        <!-- sourceAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">C_star_at UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Beam Attenuation UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-            <att name="colorBarMaximum" type="double">10.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="missing_value" type="byte">2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>c_star_at_flag_description</sourceName>
-        <destinationName>c_star_at_flag_description</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Beam Attenutation Flag Description</att>
-            <att name="standard_name">quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
