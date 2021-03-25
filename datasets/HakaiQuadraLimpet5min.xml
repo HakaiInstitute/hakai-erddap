@@ -12,11 +12,11 @@
 
     <att name="keywords">oxygen, subSurfaceSalinity, subSurfaceTemperature</att>
     <att name="keywords_fra">oxygène, salinité sous la surface, température sous la surface</att>
-    <att name="title_fra">Observatoire du fond marin de la baie Hyacinthe en Colombie-Britannique</att>
-    <att name="summary_fra">Le Limpet fournit des données en temps réel sur la température de l'océan, la conductivité et l'oxygène dissous des eaux au large de l'île Quadra.</att>
+    <att name="title_fra">Données en temp réelle et provisoire de l'ibservatoire du fond marin de l'Institut Hakai dans la baie Hyacinthe, île Quadra, Colombie-Britannique, Canada </att>
+    <att name="summary_fra">La limpet fournit des données en temps réel sur la température de l'océan, la conductivité et l'oxygène dissous pour les eaux au large de l'île Quadra.</att>
 
     <att name="site_id">Quadra Limpet</att>
-    <att name="title">Hyacinthe Bay, BC Seafloor Observatory</att>
+    <att name="title">Provisional Real-Time Hakai Seafloor Observatory in Hyacinthe Bay, Quadra Island, British Columbia, Canada</att>
     <att name="summary">The limpet provides real-time data on ocean temperature, conductivity, and dissolved oxygen for the waters off Quadra Island.</att>
     <att name="elevation">-20</att>
     <att name="measurement_interval">5 minute</att>
