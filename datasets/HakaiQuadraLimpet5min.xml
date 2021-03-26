@@ -259,7 +259,7 @@
     <destinationName>WaterSalinity_Avg</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">sea_water_salinity</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
       <att name="sensor_type">SBE 37-SMP-ODO</att>
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">SalinityQuadraLimpet_Avg</att>

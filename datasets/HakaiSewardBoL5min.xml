@@ -162,8 +162,10 @@
     <dataType>int</dataType>
     <addAttributes>
       <att name="long_name">pCO2 UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -250,8 +252,10 @@
     <dataType>int</dataType>
     <addAttributes>
       <att name="long_name">TCO2 UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -342,9 +346,11 @@
     <destinationName>TSG_T_UQL</destinationName>
     <dataType>int</dataType>
     <addAttributes>
-      <att name="long_name">Water temperature UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="long_name">Water temperature UNESCO Q level</att>      
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -365,7 +371,7 @@
     <destinationName>TSG_S_Med</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">sea_water_salinity</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Med</att>
@@ -378,7 +384,7 @@
     <destinationName>TSG_S_Avg</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">sea_water_salinity</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Avg</att>
@@ -391,7 +397,7 @@
     <destinationName>TSG_S_Min</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">sea_water_salinity</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Min</att>
@@ -404,7 +410,7 @@
     <destinationName>TSG_S_Max</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">sea_water_salinity</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Max</att>
@@ -417,7 +423,7 @@
     <destinationName>TSG_S_Std</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">sea_water_salinity</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Std</att>
@@ -431,8 +437,10 @@
     <dataType>int</dataType>
     <addAttributes>
       <att name="long_name">Salinity UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -519,8 +527,10 @@
     <dataType>int</dataType>
     <addAttributes>
       <att name="long_name">TA UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -602,8 +612,10 @@
     <dataType>int</dataType>
     <addAttributes>
       <att name="long_name">Ω arag UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -695,8 +707,10 @@
     <dataType>int</dataType>
     <addAttributes>
       <att name="long_name">pH_T UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 

@@ -42,7 +42,7 @@
     <att name="keywords">North Pacific Ocean,Surface measurement,Northern Salish Sea,Sea Surface Temperature,Sea Surface Practical Salinity,Discrete measurement,Quadra Island,seaSurfaceSalinity,Ocean Acidification,Continuous measurement,seaSurfaceTemperature,Practical Salinity,inorganicCarbon,British Columbia coast,CO2</att>
     <att name="summary">This dataset includes continuous sea surface measurements of partial pressure of carbon dioxide (pCO2), sea surface temperature and salinity collected from Hakai Institute Quadra Island Field Station in Hyacinthe Bay, British Columbia, Canada. Quadra Island, at the northern terminus of the Salish Sea, has been a site for shore-based and high-resolution measurement of surface seawater CO2 content since December 2014. Measurements of in situ temperature, salinity, and CO2 partial pressure are made near-continuously on seawater drawn from a sample line with an intake 50 m from shore and a depth of 1 m in Hyacinthe Bay on the eastern side of Quadra Island. The effort to collect these data are part of the Hakai Institute's directive to advance the understanding of carbon cycling in northeast Pacific coastal settings with specific emphasis on ocean acidification.</att>
     <att name="title">High-Resolution Record of Surface Seawater Carbon Dioxide (CO2) Content Collected from Hakai Institute Quadra Island Field Station in Hyacinthe Bay, British Columbia, Canada </att>
-    <att name="subsetVariables">station_id</att>
+    <att name="subsetVariables">station</att>
     <att name="cdm_data_type">TimeSeries</att>
     <att name="cdm_timeseries_variables">station</att>
   </addAttributes>
@@ -373,7 +373,7 @@
     <destinationName>TSG_S_Med</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">sea_water_salinity</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Med</att>
@@ -386,7 +386,7 @@
     <destinationName>TSG_S_Avg</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">sea_water_salinity</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Avg</att>
@@ -399,7 +399,7 @@
     <destinationName>TSG_S_Min</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">sea_water_salinity</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Min</att>
@@ -412,7 +412,7 @@
     <destinationName>TSG_S_Max</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">sea_water_salinity</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Max</att>
@@ -425,7 +425,7 @@
     <destinationName>TSG_S_Std</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">sea_water_salinity</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Std</att>

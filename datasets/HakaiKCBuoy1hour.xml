@@ -324,7 +324,7 @@
     <destinationName>StationAirPressure</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">air_pressure</att>
+      <att name="standard_name">surface_air_pressure</att>
       <att name="long_name">StationAirPressure</att>
       <att name="units">hPa</att>
       <att name="height">3</att>
@@ -337,7 +337,7 @@
     <destinationName>StationAirPressure_Avg</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">air_pressure</att>
+      <att name="standard_name">surface_air_pressure</att>
       <att name="long_name">StationAirPressure_Avg</att>
       <att name="units">hPa</att>
       <att name="height">3</att>
@@ -350,7 +350,7 @@
     <destinationName>StationAirPressure_Min</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">air_pressure</att>
+      <att name="standard_name">surface_air_pressure</att>
       <att name="long_name">StationAirPressure_Min</att>
       <att name="units">hPa</att>
       <att name="height">3</att>
@@ -363,7 +363,7 @@
     <destinationName>StationAirPressure_Max</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">air_pressure</att>
+      <att name="standard_name">surface_air_pressure</att>
       <att name="long_name">StationAirPressure_Max</att>
       <att name="units">hPa</att>
       <att name="height">3</att>
@@ -376,7 +376,7 @@
     <destinationName>StationAirPressure_Std</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">air_pressure</att>
+      <att name="standard_name">surface_air_pressure</att>
       <att name="long_name">StationAirPressure_Std</att>
       <att name="units">hPa</att>
       <att name="height">3</att>

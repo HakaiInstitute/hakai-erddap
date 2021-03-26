@@ -362,7 +362,7 @@
     <destinationName>TSG_S_Med</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">sea_water_salinity</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Med</att>
@@ -375,7 +375,7 @@
     <destinationName>TSG_S_Avg</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">sea_water_salinity</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Avg</att>
@@ -388,7 +388,7 @@
     <destinationName>TSG_S_Min</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">sea_water_salinity</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Min</att>
@@ -401,7 +401,7 @@
     <destinationName>TSG_S_Max</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">sea_water_salinity</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Max</att>
@@ -414,7 +414,7 @@
     <destinationName>TSG_S_Std</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">sea_water_salinity</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Std</att>
