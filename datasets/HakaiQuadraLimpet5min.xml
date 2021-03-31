@@ -38,6 +38,7 @@
     <addAttributes>
       <att name="standard_name">time</att>
       <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes comment: time correspond to the end of the interval)</att>
     </addAttributes>
   </dataVariable>
 
@@ -83,6 +84,8 @@
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">TWtrQuadraLimpet_Avg</att>
       <att name="units">deg C</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">WaterTemp_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -97,6 +100,8 @@
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">TWtrQuadraLimpet_Std</att>
       <att name="units">deg C</att>
+      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">WaterTemp_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -107,7 +112,9 @@
     <dataType>String</dataType>
     <addAttributes>
       <att name="long_name">TWtrQuadraLimpet Q flags</att>
-      <att name="units">Quality flags</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -122,6 +129,8 @@
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">ConductivityQuadraLimpet_Avg</att>
       <att name="units">S/m</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">WaterEC_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -136,6 +145,8 @@
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">ConductivityQuadraLimpet_Std</att>
       <att name="units">S/m</att>
+      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">WaterEC_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -146,7 +157,10 @@
     <dataType>String</dataType>
     <addAttributes>
       <att name="long_name">ConductivityQuadraLimpet Q flags</att>
-      <att name="units">Quality flags</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -161,6 +175,8 @@
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">PressureQuadraLimpet_Avg</att>
       <att name="units">decibar</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">WaterPressure_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -175,6 +191,8 @@
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">PressureQuadraLimpet_Std</att>
       <att name="units">decibar</att>
+      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">WaterPressure_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -185,7 +203,9 @@
     <dataType>String</dataType>
     <addAttributes>
       <att name="long_name">PressureQuadraLimpet Q flags</att>
-      <att name="units">Quality flags</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -200,6 +220,8 @@
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">DepthQuadraLimpet_Avg</att>
       <att name="units">m</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">WaterDepth_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -210,7 +232,9 @@
     <dataType>String</dataType>
     <addAttributes>
       <att name="long_name">DepthQuadraLimpet Q flags</att>
-      <att name="units">Quality flags</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -225,6 +249,8 @@
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">O2ConcentrationQuadraLimpet_Avg</att>
       <att name="units">ml/L</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">WaterOxygen_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -239,6 +265,8 @@
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">O2ConcentrationQuadraLimpet_Std</att>
       <att name="units">ml/L</att>
+      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">WaterOxygen_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -249,7 +277,10 @@
     <dataType>String</dataType>
     <addAttributes>
       <att name="long_name">O2ConcentrationQuadraLimpet Q flags</att>
-      <att name="units">Quality flags</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -263,6 +294,8 @@
       <att name="sensor_type">SBE 37-SMP-ODO</att>
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">SalinityQuadraLimpet_Avg</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">WaterSalinity_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -273,7 +306,9 @@
     <dataType>String</dataType>
     <addAttributes>
       <att name="long_name">SalinityQuadraLimpet Q flags</att>
-      <att name="units">Quality flags</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -287,6 +322,8 @@
       <att name="sensor_description">Wet Labs Fluorometer (WetStar)</att>
       <att name="long_name">ChlorophyllLimpet_Avg</att>
       <att name="units">μg/l</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">Chlorophyll_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -297,7 +334,9 @@
     <dataType>String</dataType>
     <addAttributes>
       <att name="long_name">ChlorophyllLimpet Q flags</att>
-      <att name="units">Quality flags</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 
