@@ -4,3 +4,4 @@ notforrepo
 .ipynb*
 datasets.xml
 *.ignore
+.ignore_historical
