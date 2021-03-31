@@ -1,467 +1,1038 @@
-<dataset type="EDDTableFromDatabase" datasetID="HakaiCTDProvisional">
-  <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
-  <driverName>org.postgresql.Driver</driverName>
-  <schemaName>erddap</schemaName>
-  <tableName>"HakaiCTDProvisional"</tableName>
 
-  <!-- <iso19115File>/xml/HakaiCTDQU39_iso19115.xml</iso19115File> -->
+<dataset type="EDDTableFromMultidimNcFiles" datasetID="HakaiWaterPropertiesInstrumentProfileProvisional" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/HakaiWaterPropertiesInstrumentProfileProvisional/</fileDir>
+    <fileNameRegex>.*\.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <standardizeWhat>0</standardizeWhat>
+    <removeMVRows>true</removeMVRows>
+    <sortFilesBySourceNames></sortFilesBySourceNames>
+    <fileTableInMemory>true</fileTableInMemory>
+    <accessibleViaFiles>false</accessibleViaFiles>
 
-  <addAttributes>
-    <att name="language">en</att>
-    <att name="id">HakaiCTDProvisional</att>
-    <att name="geospatial_vertical_max">700</att>
-    <att name="geospatial_vertical_min">0</att>
+    <!-- <iso19115File>/xml/HakaiCTDQU39_iso19115.xml</iso19115File> -->
 
-    <att name="title">Hakai provisional CTD plus auxilliary profile data</att>
-    <att name="summary">These are temperature, conductivity, pressure, oxygen, fluorescence, PAR, and turbidity data collected from 2012 to present by the Hakai Institute in waters surrounding Calvert Island, Johnstone Strait and Quadra Island. Data are fully processed according to RBR and SBE guides (see ... documentation) and derived variables (salinity and density) have been calculated. Data were collected by the Hakai Oceanography Program, the Hakai nearshore program and the Hakai juvenile salmon program. Provisional QA/QC following the QARTOD steps (see ... documentation) have been done.</att>
-    <att name="institution">Hakai Institute</att>
-    <att name="creator_url">https://www.hakai.org/</att>
-    <att name="publisher_email">data@hakai.org</att>
-    <att name="publisher_name">Hakai Institiute</att>
-    <att name="publisher_url">https://www.hakai.org/</att>
-    <att name="cdm_data_type">TimeSeries</att>
-    <att name="cdm_timeseries_variables">station</att>
-    <att name="infoUrl">https://www.hakai.org</att>
-    <att name="subsetVariables">station,latitude,longitude</att>
-  </addAttributes>
-  <dataVariable>
-    <sourceName>measurementTime</sourceName>
-    <destinationName>time</destinationName>
-    <dataType>String</dataType>
     <addAttributes>
-      <att name="standard_name">time</att>
-      <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        <att name="language">en</att>
+        <att name="id">HakaiCTDProvisional</att>
+        <att name="acknowledgment">Hakai Field Technicians, Research and IT groups</att>
+        <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
+        <att name="institution">Hakai Institute</att>
+        <att name="creator_url">https://www.hakai.org/</att>
+        <att name="publisher_email">data@hakai.org</att>
+        <att name="publisher_name">Hakai Institiute</att>
+        <att name="publisher_url">https://www.hakai.org/</att>
+        <att name="infoUrl">https://www.hakai.org</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="keywords_vocabulary">GCMD Science Keywords</att>
+        <att name="license">Creative Commons Attribution 4.0</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+        <att name="cdm_timeseries_variables">station,latitude,longitude</att>
+        <att name="contributor_name">Jennifer Jackson</att>
+        <att name="contributor_role">principalInvestigator</att>
+        <att name="date_created">2012-06-01</att>
+        <att name="geospatial_bounds">-128.5,52.27 -127.4,52.21 -127.2,51.66 -125.6,51.13 -124.8,50.96 -124.1,50.43 -124.7,49.98 -124.9,49.80 -126.7,50.45 -128.1,51.37 -128.4,51.69 -128.5,52.27</att>
+        <att name="geospatial_vertical_max">700.0</att>
+        <att name="geospatial_vertical_min">1.0</att>
+        <att name="institution">Hakai Institute</att>
+        <att name="instrument">66061,1907674,18032,18066,65679,80217,1907467</att>
+        <att name="keywords">Calvert Island,Quadra Island,subSurfaceSalinity,coastal zone,PAR,turbidity,fluorescence,salinity,Strait of Georgia,subSurfaceTemperature,Johnstone Strait,Queen Charlotte Sound,oxygen,photosynthetically active radiation,transmissometer</att>
+        <att name="summary">Temperature, conductivity, dissolved oxygen, fluorescence, photosynthetic active radiation, and turbidity data collected from 2012 to present by the Hakai Institute in waters surrounding Calvert Island, Johnstone Strait, and Quadra Island areas. This dataset presents data collected by oceanographic profiler instruments (RBR XR-620, RBR Concerto, RBR Maestro, and Seabird SBE 19plus v2) which have been automatically processed by following respective manufacturer's guidelines (see Hakai Water Properties Profile Processing and QA/QC Procedure Manual). The provisional processed data is then quality controlled by applying a series of tests that are following the QARTOD standards and more tests specific to the Hakai Institute data (see Hakai Water Properties Profile Processing and QA/QC Procedure Manual). The research dataset provides a subset of the provisional dataset which has been manually reviewed and judged good for science quality level. Data were collected by the Hakai Institute Oceanography Program, the Nearshore Program, and the Juvenile Salmon Program.</att>
+        <att name="title">Hakai Water Properties Vertical Profiles Measured by Oceanographic Profilers, Provisional</att>
+        <att name="subsetVariables">cruise, vessel, bottle_drop, device_model, device_sn, device_firmware, work_area, direction_flag, conductivity_UQL,  temperature_UQL, depth_UQL, pressure_UQL, flc_UQL, turbidity_UQL, salinity_UQL, spec_cond, dissolved_oxygen_ml_l_UQL, rinko_do_ml_l_UQL, dissolved_oxygen_percent_UQL, c_star_at_UQL, hakai_id, station</att>
+        <att name="cdm_data_type">TimeSeriesProfile</att>
+        <att name="cdm_profile_variables">hakai_id</att>
     </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>latitude</sourceName>
-    <destinationName>latitude</destinationName>
-    <dataType>double</dataType>
-    <addAttributes>
-      <att name="description">Fixed latitude of the site</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>longitude</sourceName>
-    <destinationName>longitude</destinationName>
-    <dataType>double</dataType>
-    <addAttributes>
-      <att name="description">Fixed longitude of the site</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>station</sourceName>
-    <destinationName>station</destinationName>
-    <dataType>String</dataType>
-    <addAttributes>
-      <att name="ioos_category">Location</att>
-      <att name="cf_role">timeseries_id</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>depth</sourceName>
-    <destinationName>depth</destinationName>
-    <dataType>double</dataType>
-    <addAttributes>
-      <att name="long_name">Depth</att>
-      <att name="standard_name">depth</att>
-      <att name="units">m</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>depth_flags</sourceName>
-    <destinationName>depth_flags</destinationName>
-    <dataType>String</dataType>
-    <addAttributes>
-      <att name="long_name">Depth Q Flags</att>
-      <att name="units">Quality flags</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>depth_UQL</sourceName>
-    <destinationName>depth_UQL</destinationName>
-    <dataType>int</dataType>
-    <addAttributes>
-      <att name="long_name">Depth UNESCO Q Level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>c_star_at</sourceName>
-    <destinationName>beam_attenuation</destinationName>
-    <dataType>double</dataType>
-    <addAttributes>
-      <att name="long_name">Beam Attenuation (650nm)</att>
-      <att name="standard_name">volume_beam_attenuation_coefficient_of_radiative_flux_in_sea_water_corrected_for_pure_water_attenuance</att>
-      <att name="units">1/m</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>c_star_at_flags</sourceName>
-    <destinationName>beam_attenuation_flags</destinationName>
-    <dataType>String</dataType>
-    <addAttributes>
-      <att name="long_name">Beam Attenuation Q Flags</att>
-      <att name="units">Quality flags</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>c_star_at_UQL</sourceName>
-    <destinationName>beam_attenuation_UQL</destinationName>
-    <dataType>int</dataType>
-    <addAttributes>
-      <att name="long_name">Beam Attenuation UNESCO Q Level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>conductivity</sourceName>
-    <destinationName>conductivity</destinationName>
-    <dataType>double</dataType>
-    <addAttributes>
-      <att name="long_name">Conductivity</att>
-      <att name="standard_name">sea_water_electrical_conductivity</att>
-      <att name="units">mS/cm</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>conductivity_flags</sourceName>
-    <destinationName>conductivity_flags</destinationName>
-    <dataType>String</dataType>
-    <addAttributes>
-      <att name="long_name">Conductivity Q Flags</att>
-      <att name="units">Quality flags</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>conductivity_UQL</sourceName>
-    <destinationName>conductivity_UQL</destinationName>
-    <dataType>int</dataType>
-    <addAttributes>
-      <att name="long_name">Conductivity UNESCO Q Level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>descent_rate</sourceName>
-    <destinationName>descent_rate</destinationName>
-    <dataType>double</dataType>
-    <addAttributes>
-      <att name="long_name">Descent Rate</att>
-      <att name="standard_name">platform_speed_wrt_sea_water</att>
-      <att name="units">m/s</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>dissolved_oxygen_ml_l</sourceName>
-    <destinationName>dissolved_oxygen_ml_l</destinationName>
-    <dataType>double</dataType>
-    <addAttributes>
-      <att name="long_name">Dissolved Oxygen</att>
-      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
-      <att name="units">mL/L</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>dissolved_oxygen_ml_l_flags</sourceName>
-    <destinationName>dissolved_oxygen_ml_l_flags</destinationName>
-    <dataType>String</dataType>
-    <addAttributes>
-      <att name="long_name">Dissolved Oxygen Q Flags</att>
-      <att name="units">Quality flags</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>dissolved_oxygen_ml_l_UQL</sourceName>
-    <destinationName>dissolved_oxygen_ml_l_UQL</destinationName>
-    <dataType>int</dataType>
-    <addAttributes>
-      <att name="long_name">Dissolved Oxygen UNESCO Q Level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>flc</sourceName>
-    <destinationName>fluorometry_chlorophyll</destinationName>
-    <dataType>double</dataType>
-    <addAttributes>
-      <att name="long_name">Fluorometry Chlorophyll</att>
-      <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
-      <att name="units">ug/L</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>flc_flags</sourceName>
-    <destinationName>fluorometry_chlorophyll_flags</destinationName>
-    <dataType>String</dataType>
-    <addAttributes>
-      <att name="long_name">Fluorometry Chlorophyll Q Flags</att>
-      <att name="units">Quality flags</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>flc_UQL</sourceName>
-    <destinationName>fluorometry_chlorophyll_UQL</destinationName>
-    <dataType>int</dataType>
-    <addAttributes>
-      <att name="long_name">Fluorometry UNESCO Q Level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>par_flags</sourceName>
-    <destinationName>par_flags</destinationName>
-    <dataType>String</dataType>
-    <addAttributes>
-      <att name="long_name">PAR Q Flags</att>
-      <att name="units">Quality flags</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>par_UQL</sourceName>
-    <destinationName>par_UQL</destinationName>
-    <dataType>int</dataType>
-    <addAttributes>
-      <att name="long_name">PAR UNESCO Q Level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>par</sourceName>
-    <destinationName>photosynthetically_active_radiation</destinationName>
-    <dataType>double</dataType>
-    <addAttributes>
-      <att name="long_name">Photosynthetically Active Radiation</att>
-      <att name="standard_name">downwelling_photosynthetic_photon_spherical_irradiance_in_sea_water</att>
-      <att name="units">umol m-2 s-1</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>pressure</sourceName>
-    <destinationName>pressure</destinationName>
-    <dataType>double</dataType>
-    <addAttributes>
-      <att name="long_name">Sea Pressure</att>
-      <att name="standard_name">sea_water_pressure</att>
-      <att name="units">dBar</att>
-      <att name="sensor_description">Corrected for atmospheric pressure</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>pressure_flags</sourceName>
-    <destinationName>pressure_flags</destinationName>
-    <dataType>String</dataType>
-    <addAttributes>
-      <att name="long_name">Sea Pressure Q Flags</att>
-      <att name="units">Quality flags</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>pressure_UQL</sourceName>
-    <destinationName>pressure_UQL</destinationName>
-    <dataType>int</dataType>
-    <addAttributes>
-      <att name="long_name">Sea Pressure UNESCO Q Level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>rinko_do_ml_l</sourceName>
-    <destinationName>rinko_dissolved_oxygen_ml_l</destinationName>
-    <dataType>double</dataType>
-    <addAttributes>
-      <att name="long_name">Dissolved Oxygen (Seabird Rinko)</att>
-      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
-      <att name="units">mL/L</att>
-      <att name="sensor_description">Some Seabird data has secondary dissolved oxygen data from an auxilary Rinko sensor in addition to the SBE 43 oxygen sensor. Not to be confused with the standard primary Rinko sensor on RBR instruments.</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>rinko_do_ml_l_flags</sourceName>
-    <destinationName>rinko_dissolved_oxygen_ml_l_flags</destinationName>
-    <dataType>String</dataType>
-    <addAttributes>
-      <att name="long_name">Dissolved Oxygen (Seabird Rinko) Q Flags</att>
-      <att name="units">Quality flags</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>rinko_do_ml_l_UQL</sourceName>
-    <destinationName>rinko_dissolved_oxygen_ml_l_UQL</destinationName>
-    <dataType>int</dataType>
-    <addAttributes>
-      <att name="long_name">Dissolved Oxygen (Seabird Rinko) UNESCO Q Level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>salinity</sourceName>
-    <destinationName>salinity</destinationName>
-    <dataType>double</dataType>
-    <addAttributes>
-      <att name="long_name">Salinity</att>
-      <att name="standard_name">sea_water_practical_salinity</att>
-      <att name="units">PSU</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>salinity_flags</sourceName>
-    <destinationName>salinity_flags</destinationName>
-    <dataType>String</dataType>
-    <addAttributes>
-      <att name="long_name">Salinity Q Flags</att>
-      <att name="units">Quality flags</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>salinity_UQL</sourceName>
-    <destinationName>salinity_UQL</destinationName>
-    <dataType>int</dataType>
-    <addAttributes>
-      <att name="long_name">Salinity UNESCO Q Level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>temperature</sourceName>
-    <destinationName>temperature</destinationName>
-    <dataType>double</dataType>
-    <addAttributes>
-      <att name="long_name">Temperature</att>
-      <att name="standard_name">sea_water_temperature</att>
-      <att name="units">deg C</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>temperature_flags</sourceName>
-    <destinationName>temperature_flags</destinationName>
-    <dataType>String</dataType>
-    <addAttributes>
-      <att name="long_name">Temperature Q Flags</att>
-      <att name="units">Quality flags</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>temperature_UQL</sourceName>
-    <destinationName>temperature_UQL</destinationName>
-    <dataType>int</dataType>
-    <addAttributes>
-      <att name="long_name">Temperature  UNESCO Q Level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>turbidity</sourceName>
-    <destinationName>turbidity</destinationName>
-    <dataType>double</dataType>
-    <addAttributes>
-      <att name="long_name">Turbidity</att>
-      <att name="standard_name">sea_water_turbidity</att>
-      <att name="units">FTU</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>turbidity_flags</sourceName>
-    <destinationName>turbidity_flags</destinationName>
-    <dataType>String</dataType>
-    <addAttributes>
-      <att name="long_name">Turbidity Q Flags</att>
-      <att name="units">Quality flags</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>turbidity_UQL</sourceName>
-    <destinationName>turbidity_UQL</destinationName>
-    <dataType>int</dataType>
-    <addAttributes>
-      <att name="long_name">Turbidity UNESCO Q Level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
-    </addAttributes>
-  </dataVariable>
-
+    <dataVariable>
+        <sourceName>work_area</sourceName>
+        <destinationName>work_area</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Work Area</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>cruise</sourceName>
+        <destinationName>cruise</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Cruise</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>hakai_id</sourceName>
+        <destinationName>hakai_id</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="cf_role">profile_id</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Hakai ID</att>
+            <att name="cf_role">profile_id</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>vessel</sourceName>
+        <destinationName>vessel</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Vessel</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>operators</sourceName>
+        <destinationName>operators</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Operators</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>cast_comments</sourceName>
+        <destinationName>comments</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Comments</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>device_model</sourceName>
+        <destinationName>device_model</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Device Model</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>device_sn</sourceName>
+        <destinationName>device_sn</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Device Serial Number</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>device_firmware</sourceName>
+        <destinationName>device_firmware</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Device Firmware</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>bottle_drop</sourceName>
+        <destinationName>bottle_drop</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Bottle Drop</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>station</sourceName>
+        <destinationName>station</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="cf_role">timeseries_id</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Station</att>
+            <att name="cf_role">timeseries_id</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>latitude_station</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="long_name">Latitude</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>longitude_station</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="long_name">Longitude</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>latitude</sourceName>
+        <destinationName>precise_latitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="long_name">Latitude</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>longitude</sourceName>
+        <destinationName>precise_longitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="long_name">Longitude</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>start_dt</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>long</dataType>
+        <!-- sourceAttributes>
+            <att name="calendar">proleptic_gregorian</att>
+            <att name="timezone">UTC</att>
+            <att name="units">seconds since 1970-01-01T00:00:00+00:00</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="long">9223372036854775807</att>
+            <att name="long_name">Profile Start Time</att>
+            <att name="source_name">Profile Start Time</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>bottom_dt</sourceName>
+        <destinationName>bottom_date_time</destinationName>
+        <dataType>long</dataType>
+        <!-- sourceAttributes>
+            <att name="calendar">proleptic_gregorian</att>
+            <att name="timezone">UTC</att>
+            <att name="units">seconds since 1970-01-01T00:00:00+00:00</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="long">9223372036854775807</att>
+            <att name="long_name">Profile Bottom Time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>end_dt</sourceName>
+        <destinationName>end_date_time</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Profile End Time</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>measurement_dt</sourceName>
+        <destinationName>measurement_dt</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="calendar">proleptic_gregorian</att>
+            <att name="timezone">UTC</att>
+            <att name="units">seconds since 1970-01-01T00:00:00+00:00</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Precise Measurement Time</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>bottom_depth</sourceName>
+        <destinationName>bottom_depth</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Bottom Depth</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>target_depth</sourceName>
+        <destinationName>target_depth</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="int">2147483647</att>
+            <att name="long_name">Target Depth</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>drop_speed</sourceName>
+        <destinationName>drop_speed</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Drop Speed</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>direction_flag</sourceName>
+        <destinationName>direction_flag</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Direction Flag</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>descent_rate</sourceName>
+        <destinationName>descent_rate</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="long_name">Profiling Speed</att>
+            <att name="standard_name">platform_speed_wrt_sea_water</att>
+            <att name="units">m/s</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="long_name">Profiling Speed</att>
+            <att name="standard_name">platform_speed_wrt_sea_water</att>
+            <att name="units">m s-1</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>depth</sourceName>
+        <destinationName>depth</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">depth_UQL</att>
+            <att name="long_name">Depth</att>
+            <att name="standard_name">depth</att>
+            <att name="units">m</att>
+            <att name="colorBarMaximum" type="double">8000.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="colorBarPalette">TopographyDepth</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>depth_qartod_flag</sourceName>
+        <destinationName>depth_UQL</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Depth UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Depth UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="missing_value" type="byte">2</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>depth_flag_description</sourceName>
+        <destinationName>depth_flag_description</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Depth Flag Description</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>pressure</sourceName>
+        <destinationName>pressure</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="ancillary_variables">pressure_UQL</att>
+            <att name="long_name">Sea Water Pressure</att>
+            <att name="standard_name">sea_water_pressure</att>
+            <att name="units">dBar</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ancillary_variables">pressure_UQL</att>
+            <att name="long_name">Sea Water Pressure</att>
+            <att name="standard_name">sea_water_pressure</att>
+            <att name="units">dBar</att>
+            <att name="_FillValue" type="int">2147483647</att>
+            <att name="colorBarMaximum" type="double">700.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>pressure_qartod_flag</sourceName>
+        <destinationName>pressure_UQL</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Pressure UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Pressure UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="missing_value" type="byte">2</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>pressure_flag_description</sourceName>
+        <destinationName>pressure_flag_description</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Pressure Flag Description</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>conductivity</sourceName>
+        <destinationName>conductivity</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">conductivity_UQL</att>
+            <att name="long_name">Sea Water Conductivity</att>
+            <att name="standard_name">sea_water_electrical_conductivity</att>
+            <att name="units">mS/cm</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">conductivity_UQL</att>
+            <att name="long_name">Sea Water Conductivity</att>
+            <att name="standard_name">sea_water_electrical_conductivity</att>
+            <att name="units">mS cm-1</att>
+            <att name="colorBarMaximum" type="double">40.0</att>
+            <att name="colorBarMinimum" type="double">15.0</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>conductivity_qartod_flag</sourceName>
+        <destinationName>conductivity_UQL</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Conductivity UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Conductivity UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="missing_value" type="byte">2</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>conductivity_flag_description</sourceName>
+        <destinationName>conductivity_flag_description</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Conductivity Flag Description</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>temperature</sourceName>
+        <destinationName>temperature</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">temperature_UQL</att>
+            <att name="long_name">Sea Water Temperature</att>
+            <att name="scale">ITS-90</att>
+            <att name="standard_name">sea_water_temperature</att>
+            <att name="units">deg C</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">temperature_UQL</att>
+            <att name="long_name">Sea Water Temperature</att>
+            <att name="scale">ITS-90</att>
+            <att name="standard_name">sea_water_temperature</att>
+            <att name="units">deg C</att>
+            <att name="colorBarMaximum" type="double">15.0</att>
+            <att name="colorBarMinimum" type="double">5.0</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>temperature_qartod_flag</sourceName>
+        <destinationName>temperature_UQL</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Temperature UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Temperature UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="missing_value" type="byte">2</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>temperature_flag_description</sourceName>
+        <destinationName>temperature_flag_description</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Temperature Flag Description</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>salinity</sourceName>
+        <destinationName>salinity</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">salinity_UQL</att>
+            <att name="long_name">Practical Salinity</att>
+            <att name="scale">PSS-78</att>
+            <att name="standard_name">sea_water_practical_salinity</att>
+            <att name="units">PSU</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">salinity_UQL</att>
+            <att name="long_name">Practical Salinity</att>
+            <att name="scale">PSS-78</att>
+            <att name="standard_name">sea_water_practical_salinity</att>
+            <att name="units">PSU</att>
+            <att name="colorBarMaximum" type="double">33.0</att>
+            <att name="colorBarMinimum" type="double">20.0</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>salinity_qartod_flag</sourceName>
+        <destinationName>salinity_UQL</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Salinity UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Salinity UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="missing_value" type="byte">2</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>salinity_flag_description</sourceName>
+        <destinationName>salinity_flag_description</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Salinity Flag Description</att>
+        </addAttributes>
+    </dataVariable> 
+    <dataVariable>
+        <sourceName>spec_cond</sourceName>
+        <destinationName>spec_cond</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Specific Conductance</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>dissolved_oxygen_ml_l</sourceName>
+        <destinationName>dissolved_oxygen_ml_l</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">dissolved_oxygen_ml_l_UQL</att>
+            <att name="long_name">Dissolved Oxygen Concentration</att>
+            <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+            <att name="units">mL/L</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">dissolved_oxygen_ml_l_UQL</att>
+            <att name="long_name">Dissolved Oxygen Concentration</att>
+            <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+            <att name="units">mL L-1</att>
+            <att name="colorBarMaximum" type="double">12.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>dissolved_oxygen_ml_l_qartod_flag</sourceName>
+        <destinationName>dissolved_oxygen_ml_l_UQL</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Dissolved_oxygen_ml_l UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Dissolved_oxygen_ml_l UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="missing_value" type="byte">2</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>dissolved_oxygen_ml_l_flag_description</sourceName>
+        <destinationName>dissolved_oxygen_ml_l_flag_description</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Dissolved Oxygen Ml L Flag Description</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>rinko_do_ml_l</sourceName>
+        <destinationName>rinko_do_ml_l</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">rinko_do_ml_l_UQL</att>
+            <att name="long_name">Secondary Dissolved Oxygen Concentration</att>
+            <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+            <att name="units">mL/L</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">rinko_do_ml_l_UQL</att>
+            <att name="long_name">Secondary Dissolved Oxygen Concentration</att>
+            <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+            <att name="units">mL L-1</att>
+            <att name="colorBarMaximum" type="double">12.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>rinko_do_ml_l_qartod_flag</sourceName>
+        <destinationName>rinko_do_ml_l_UQL</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Rinko_do_ml_l UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Rinko_do_ml_l UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="missing_value" type="byte">2</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>rinko_do_ml_l_flag_description</sourceName>
+        <destinationName>rinko_do_ml_l_flag_description</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Rinko Do Ml L Flag Description</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>dissolved_oxygen_percent</sourceName>
+        <destinationName>dissolved_oxygen_percent</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="ancillary_variables">dissolved_oxygen_percent_UQL</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ancillary_variables">dissolved_oxygen_percent_UQL</att>
+            <att name="long_name">Dissolved Oxygen Percent</att>
+            <att name="colorBarMaximum" type="double">120.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>dissolved_oxygen_percent_qartod_flag</sourceName>
+        <destinationName>dissolved_oxygen_percent_UQL</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Dissolved_oxygen_percent UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="long_name">Dissolved_oxygen_percent UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="missing_value" type="byte">2</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>dissolved_oxygen_percent_flag_description</sourceName>
+        <destinationName>dissolved_oxygen_percent_flag_description</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Dissolved Oxygen Percent Flag Description</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>flc</sourceName>
+        <destinationName>flc</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">flc_UQL</att>
+            <att name="long_name">Chlorophyll-a Concentration</att>
+            <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
+            <att name="units">ug/L</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">flc_UQL</att>
+            <att name="long_name">Chlorophyll-a Concentration</att>
+            <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
+            <att name="units">ug L-1</att>
+            <att name="colorBarMaximum" type="double">30.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>flc_qartod_flag</sourceName>
+        <destinationName>flc_UQL</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Flc UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Flc UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="missing_value" type="byte">2</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>flc_flag_description</sourceName>
+        <destinationName>flc_flag_description</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Flc Flag Description</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>turbidity</sourceName>
+        <destinationName>turbidity</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">turbidity_UQL</att>
+            <att name="long_name">Turbidity</att>
+            <att name="standard_name">sea_water_turbidity</att>
+            <att name="units">FTU</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">turbidity_UQL</att>
+            <att name="long_name">Turbidity</att>
+            <att name="standard_name">sea_water_turbidity</att>
+            <att name="units">FTU</att>
+            <att name="colorBarMaximum" type="double">30.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>turbidity_qartod_flag</sourceName>
+        <destinationName>turbidity_UQL</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Turbidity UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Turbidity UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="missing_value" type="byte">2</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>turbidity_flag_description</sourceName>
+        <destinationName>turbidity_flag_description</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Turbidity Flag Description</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>par</sourceName>
+        <destinationName>par</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">par_UQL</att>
+            <att name="long_name">Photosynthetically Active Radiation</att>
+            <att name="standard_name">downwelling_photosynthetic_photon_spherical_irradiance_in_sea_water</att>
+            <att name="units">umol m-2 s-1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">par_UQL</att>
+            <att name="long_name">Photosynthetically Active Radiation</att>
+            <att name="standard_name">downwelling_photosynthetic_photon_spherical_irradiance_in_sea_water</att>
+            <att name="units">umol m-2 s-1</att>
+            <att name="colorBarMaximum" type="double">10000.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>par_qartod_flag</sourceName>
+        <destinationName>par_UQL</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Par UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Par UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="missing_value" type="byte">2</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>par_flag_description</sourceName>
+        <destinationName>par_flag_description</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Par Flag Description</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>c_star_at</sourceName>
+        <destinationName>c_star_at</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">c_star_at_UQL</att>
+            <att name="long_name">Beam Attenuation</att>
+            <att name="standard_name">volume_beam_attenuation_coefficient_of_radiative_flux_in_sea_water_corrected_for_pure_water_attenuance</att>
+            <att name="units">1/m</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">c_star_at_UQL</att>
+            <att name="long_name">Beam Attenuation</att>
+            <att name="standard_name">volume_beam_attenuation_coefficient_of_radiative_flux_in_sea_water_corrected_for_pure_water_attenuance</att>
+            <att name="units">m-1</att>
+            <att name="colorBarMaximum" type="double">3.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>c_star_at_qartod_flag</sourceName>
+        <destinationName>c_star_at_UQL</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">C_star_at UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Beam Attenuation UNESCO Q Level</att>
+            <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="missing_value" type="byte">2</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>c_star_at_flag_description</sourceName>
+        <destinationName>c_star_at_flag_description</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Beam Attenutation Flag Description</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ph</sourceName>
+        <destinationName>ph</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="long_name">pH</att>
+            <att name="units">-log[H+]</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">pH</att>
+            <att name="standard_name">sea_water_ph_reported_on_total_scale</att>
+            <att name="units">-log[H+]</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>sos_un</sourceName>
+        <destinationName>sos_un</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Speed of Sound</att>
+            <att name="units">m s-1</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>backscatter_beta</sourceName>
+        <destinationName>backscatter_beta</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Backscatter</att>
+            <att name="units">m-1</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>cdom_ppb</sourceName>
+        <destinationName>cdom_ppb</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Carbon Dissolved Organic Matter</att>
+            <att name="units">ppb</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>oxygen_voltage</sourceName>
+        <destinationName>oxygen_voltage</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="long_name">Oxygen Sensor Raw Voltage</att>
+            <att name="units">Volts</att>
+        </addAttributes>
+    </dataVariable>
 </dataset>
