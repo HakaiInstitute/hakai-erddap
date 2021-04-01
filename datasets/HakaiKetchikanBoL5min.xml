@@ -9,26 +9,10 @@
   <addAttributes>
     <att name="language">eng</att>
     <att name="id">HakaiKetchikanBoL5min</att>
-
-    <att name="keywords">inorganicCarbon, subSurfaceTemperature, subSurfaceSalinity</att>
-    <att name="keywords_fra">carbone inorganique, température sous la surface, salinité sous la surface</att>
-    <att name="title_fra">Données du Burke-o-Lator à l'écloserie de mollusques de Ketchican en Alaska</att>
-    <att name="summary_fra">L'analyseur Burke-o-Lator (BoL) pCO2 / TCO2 mesure en continu la pression partielle du dioxyde de carbone (pCO2) et le carbone inorganique total dissous (TCO2) dans un flux d'eau de mer continu et des échantillons discrets. Le BoL est associé à un thermosalinographe SBE 45 qui mesure la température et la salinité de l'eau de mer.</att>
-
-    <att name="geospatial_vertical_min">4</att>
-    <att name="geospatial_vertical_max">4</att>
-
     <att name="site_id">Ketchikan Burke-o-Lator</att>
-    <att name="title">Burke-o-Lator at Ketchican Shellfish Hatchery in Alaska</att>
-    <att name="summary">The Burke-o-Lator (BoL) pCO2/TCO2 analyzer measures carbon dioxide partial pressure (pCO2) and total dissolved inorganic carbon (TCO2) both continuously from a flow-through seawater stream and from seawater collected in discrete samples. The BoL is paired with a SBE 45 Thermosalinograph to measure seawater temperature and salinity.</att>
     <att name="site_description">Ketchican Shellfish Hatchery</att>
-    <att name="elevation">1</att>
     <att name="measurement_interval">5 minute</att>
     <att name="institution">UAF Ocean Acidification Research Center, Hakai Institute, OceansAlaska</att>
-    <att name="contributor_name">Wiley Evans</att>
-    <att name="contributor_role">Primary Investigator</att>
-    <att name="creator_name">Wiley Evans</att>
-    <att name="creator_email">wiley.evans@hakai.org</att>
     <att name="creator_url">https://www.hakai.org/</att>
     <att name="publisher_email">data@hakai.org</att>
     <att name="publisher_name">Hakai Institiute</att>
@@ -36,6 +20,20 @@
     <att name="cdm_data_type">TimeSeries</att>
     <att name="cdm_timeseries_variables">station</att>
     <att name="infoUrl">https://www.hakai.org</att>
+    <att name="contributor_name">Wiley Evans</att>
+    <att name="contributor_role">pointOfContact</att>
+    <att name="date_created">2019-09-14</att>
+    <att name="geospatial_lat_max">55.315</att>
+    <att name="geospatial_lat_min">55.315</att>
+    <att name="geospatial_lon_max">-131.5954</att>
+    <att name="geospatial_lon_min">-131.5954</att>
+    <att name="geospatial_vertical_max">4.0</att>
+    <att name="geospatial_vertical_min">4.0</att>
+    <att name="institution">Hakai Institute, UAF Ocean Acidification Research Center,OceansAlaska </att>
+    <att name="instrument">SBE 45,Burke-o-Lator pCO2/TCO2 analyzer</att>
+    <att name="keywords">Sea Surface Practical Salinity,seaSurfaceTemperature,Practical Salinity,Alaska,Ocean Acidification,Discrete measurement,Northern Salish Sea,seaSurfaceSalinity,Surface measurement,inorganicCarbon,Sea Surface Temperature,Continuous measurement,Sitka Tribe,CO2</att>
+    <att name="summary">This dataset includes continuous sea surface measurements of partial pressure of carbon dioxide (pCO2), sea surface temperature, and salinity collected from the Ketchikan Shellfish Hatchery, Alaska, USA. The Burke-o-Lator (BoL) pCO2/TCO2 analyzer measures carbon dioxide partial pressure (pCO2) and total dissolved inorganic carbon (TCO2) both continuously from a flow-through seawater stream and from seawater collected in discrete samples. The BoL is paired with a SBE 45 Thermosalinograph to measure seawater temperature and salinity.</att>
+    <att name="title">Real-Time Provisional High-Resolution Record of Surface Seawater Carbon Dioxide (CO2) Content Collected from the Ketchikan Shellfish Hatchery, Alaska, USA</att>
   </addAttributes>
   <dataVariable>
     <sourceName>measurementTime</sourceName>
@@ -44,6 +42,7 @@
     <addAttributes>
       <att name="standard_name">time</att>
       <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes comment: time correspond to the end of the interval)</att>
     </addAttributes>
   </dataVariable>
 
@@ -54,6 +53,9 @@
     <dataType>double</dataType>
     <addAttributes>
       <att name="description">Fixed latitude of the site</att>
+      <att name="long_name">Latitude</att>
+      <att name="standard_name">latitude</att>
+      <att name="units">degrees_north</att>
     </addAttributes>
   </dataVariable>
 
@@ -64,6 +66,9 @@
     <dataType>double</dataType>
     <addAttributes>
       <att name="description">Fixed longitude of the site</att>
+      <att name="long_name">Longitude</att>
+      <att name="standard_name">longitude</att>
+      <att name="units">degrees_east</att>
     </addAttributes>
   </dataVariable>
 
@@ -89,6 +94,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">pCO2_Med</att>
       <att name="units">μatm</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">pCO2_uatm_UQL,pCO2_uatm_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -103,6 +110,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">pCO2_Avg</att>
       <att name="units">μatm</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">pCO2_uatm_UQL,pCO2_uatm_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -117,6 +126,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">pCO2_Min</att>
       <att name="units">μatm</att>
+      <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">pCO2_uatm_UQL,pCO2_uatm_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -131,6 +142,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">pCO2_Max</att>
       <att name="units">μatm</att>
+      <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">pCO2_uatm_UQL,pCO2_uatm_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -145,6 +158,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">pCO2_Std</att>
       <att name="units">μatm</att>
+      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">pCO2_uatm_UQL,pCO2_uatm_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -155,8 +170,10 @@
     <dataType>int</dataType>
     <addAttributes>
       <att name="long_name">pCO2 UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -181,6 +198,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TCO2_Med</att>
       <att name="units">μmol/kg</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">calcTCO2_UQL,calcTCO2_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -194,6 +213,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TCO2_Avg</att>
       <att name="units">μmol/kg</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">calcTCO2_UQL,calcTCO2_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -207,6 +228,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TCO2_Min</att>
       <att name="units">μmol/kg</att>
+      <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">calcTCO2_UQL,calcTCO2_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -220,6 +243,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TCO2_Max</att>
       <att name="units">μmol/kg</att>
+      <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">calcTCO2_UQL,calcTCO2_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -233,6 +258,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TCO2_Std</att>
       <att name="units">μmol/kg</att>
+      <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">calcTCO2_UQL,calcTCO2_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -243,8 +270,10 @@
     <dataType>int</dataType>
     <addAttributes>
       <att name="long_name">TCO2 UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -270,6 +299,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Water temperature_Med</att>
       <att name="units">deg C</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">TSG_T_UQL,TSG_T_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -284,6 +315,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Water temperature_Avg</att>
       <att name="units">deg C</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">TSG_T_UQL,TSG_T_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -298,6 +331,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Water temperature_Min</att>
       <att name="units">deg C</att>
+      <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">TSG_T_UQL,TSG_T_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -312,6 +347,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Water temperature_Max</att>
       <att name="units">deg C</att>
+      <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">TSG_T_UQL,TSG_T_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -326,6 +363,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Water temperature_Std</att>
       <att name="units">deg C</att>
+      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">TSG_T_UQL,TSG_T_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -336,8 +375,10 @@
     <dataType>int</dataType>
     <addAttributes>
       <att name="long_name">Water temperature UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -358,10 +399,12 @@
     <destinationName>TSG_S_Med</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">sea_water_salinity</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Med</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">TSG_S_UQL,TSG_S_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -371,10 +414,12 @@
     <destinationName>TSG_S_Avg</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">sea_water_salinity</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Avg</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">TSG_S_UQL,TSG_S_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -384,10 +429,12 @@
     <destinationName>TSG_S_Min</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">sea_water_salinity</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Min</att>
+      <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">TSG_S_UQL,TSG_S_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -397,10 +444,12 @@
     <destinationName>TSG_S_Max</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">sea_water_salinity</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Max</att>
+      <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">TSG_S_UQL,TSG_S_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -410,10 +459,12 @@
     <destinationName>TSG_S_Std</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">sea_water_salinity</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Std</att>
+      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">TSG_S_UQL,TSG_S_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -424,8 +475,10 @@
     <dataType>int</dataType>
     <addAttributes>
       <att name="long_name">Salinity UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -450,6 +503,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TA_Med</att>
       <att name="units">μmol/kg</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">AlkS_flags,AlkS_UQL</att>
     </addAttributes>
   </dataVariable>
 
@@ -463,6 +518,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TA_Avg</att>
       <att name="units">μmol/kg</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">AlkS_flags,AlkS_UQL</att>
     </addAttributes>
   </dataVariable>
 
@@ -476,6 +533,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TA_Min</att>
       <att name="units">μmol/kg</att>
+      <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">AlkS_flags,AlkS_UQL</att>
     </addAttributes>
   </dataVariable>
 
@@ -489,6 +548,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TA_Max</att>
       <att name="units">μmol/kg</att>
+      <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">AlkS_flags,AlkS_UQL</att>
     </addAttributes>
   </dataVariable>
 
@@ -502,6 +563,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TA_Std</att>
       <att name="units">μmol/kg</att>
+      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">AlkS_flags,AlkS_UQL</att>
     </addAttributes>
   </dataVariable>
 
@@ -512,8 +575,10 @@
     <dataType>int</dataType>
     <addAttributes>
       <att name="long_name">TA UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -537,6 +602,8 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Ω arag_Med</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">calcOmega_UQL,calcOmega_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -549,6 +616,8 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Ω arag_Avg</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">calcOmega_UQL,calcOmega_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -561,6 +630,8 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Ω arag_Min</att>
+      <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">calcOmega_UQL,calcOmega_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -573,6 +644,8 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Ω arag_Max</att>
+      <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">calcOmega_UQL,calcOmega_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -585,6 +658,8 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Ω arag_Std</att>
+      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">calcOmega_UQL,calcOmega_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -595,8 +670,10 @@
     <dataType>int</dataType>
     <addAttributes>
       <att name="long_name">Ω arag UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -622,6 +699,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">pH_T_Med</att>
       <att name="units">total scale</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">calcpH_UQL,calcpH_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -636,6 +715,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">pH_T_Avg</att>
       <att name="units">total scale</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">calcpH_UQL,calcpH_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -650,6 +731,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">pH_T_Min</att>
       <att name="units">total scale</att>
+      <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">calcpH_UQL,calcpH_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -664,6 +747,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">pH_T_Max</att>
       <att name="units">total scale</att>
+      <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">calcpH_UQL,calcpH_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -678,6 +763,8 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">pH_T_Std</att>
       <att name="units">total scale</att>
+      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">calcpH_UQL,calcpH_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -688,8 +775,10 @@
     <dataType>int</dataType>
     <addAttributes>
       <att name="long_name">pH_T UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 
