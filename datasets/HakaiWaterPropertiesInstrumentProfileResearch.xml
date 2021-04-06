@@ -1,4 +1,4 @@
-<dataset type="EDDTableFromMultidimNcFiles" datasetID="HakaiCTDProvisional" active="true">
+<dataset type="EDDTableFromMultidimNcFiles" datasetID="HakaiWaterPropertiesInstrumentProfileResearch" active="true">
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <updateEveryNMillis>10000</updateEveryNMillis>
     <fileDir>/datasets/HakaiWaterPropertiesInstrumentProfileResearch/</fileDir>
