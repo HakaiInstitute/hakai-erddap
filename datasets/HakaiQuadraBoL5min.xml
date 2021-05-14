@@ -85,7 +85,7 @@
 
 
   <dataVariable>
-    <sourceName>="Quadra Burke-o-Lator"</sourceName>
+    <sourceName>=Quadra Burke-o-Lator</sourceName>
     <destinationName>station</destinationName>
     <dataType>String</dataType>
     <addAttributes>
