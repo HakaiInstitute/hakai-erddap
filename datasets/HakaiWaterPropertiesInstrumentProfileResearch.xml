@@ -222,7 +222,7 @@
     </dataVariable>
     <dataVariable>
         <sourceName>latitude</sourceName>
-        <destinationName>precice_latitude</destinationName>
+        <destinationName>precise_latitude</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
             <att name="_FillValue" type="double">NaN</att>
