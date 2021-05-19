@@ -1,8 +1,9 @@
+
 <dataset type="EDDTableFromDatabase" datasetID="HakaiNutrientSampleResearch" active="true">
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
     <schemaName>erddap</schemaName>
-    <tableName>HakaiNutrientSampleResearch</tableName>
+    <tableName>"HakaiNutrientSampleResearch"</tableName>
     <!-- sourceAttributes>
     </sourceAttributes -->
     <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
@@ -23,6 +24,7 @@
         <att name="title">Data from a local source.</att>
         <att name="cdm_profile_variables">time,precise_latitude, precise_longitude</att>
         <att name="cdm_timeseries_variables">work_area,organization,latitude,longitude,site_id</att>
+        <att name="subsetVariables">work_area,organiation,survey,site_id,collection_method,filtered,filter_type,volume,nh4__flag,no2_no3_um_flag,po4_flag,sio2_flag,analyzing_lab,metadata_qc_flag,quality_level</att>
     </addAttributes>
     <dataVariable>
         <sourceName>work_area</sourceName>
@@ -169,7 +171,35 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>=var ptd=row.columnFloat("pressure_transducer_depth"); return ptd=NaN? row.columnFloat("line_out_depth") : ptd;</sourceName>
+        <sourceName>collected</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="cf_role">profile_id</att>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">Collection Time</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>preserved</sourceName>
+        <destinationName>preserved</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">Preservation Time</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+            <att name="_FillValue">NaN</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>depth</sourceName>
         <destinationName>depth</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
@@ -239,47 +269,6 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>installed</sourceName>
-        <destinationName>installed</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="ioos_category">Time</att>
-            <att name="long_name">Installed</att>
-            <att name="standard_name">time</att>
-            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>collected</sourceName>
-        <destinationName>time</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="cf_role">profile_id</att>
-            <att name="ioos_category">Time</att>
-            <att name="long_name">Collection Time</att>
-            <att name="standard_name">time</att>
-            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>preserved</sourceName>
-        <destinationName>preserved</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="ioos_category">Time</att>
-            <att name="long_name">Preservation Time</att>
-            <att name="standard_name">time</att>
-            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
-            <att name="_FillValue">NaN</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>lab_technician</sourceName>
         <destinationName>lab_technician</destinationName>
         <dataType>String</dataType>
@@ -306,6 +295,17 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
+        <sourceName>nh4__flag</sourceName>
+        <destinationName>nh4_flag</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Quality</att>
+            <att name="long_name">Nh4  Flag</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
         <sourceName>no2_no3_um</sourceName>
         <destinationName>no2_no3_um</destinationName>
         <dataType>double</dataType>
@@ -318,6 +318,17 @@
             <att name="long_name">Mole Concentration Of Nitrate In Sea Water</att>
             <att name="standard_name">mole_concentration_of_nitrate_in_sea_water</att>
             <att name="units">uM</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>no2_no3_flag</sourceName>
+        <destinationName>no2_no3_flag</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Quality</att>
+            <att name="long_name">No2 No3 Flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -334,6 +345,17 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
+        <sourceName>po4_flag</sourceName>
+        <destinationName>po4_flag</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Quality</att>
+            <att name="long_name">PO4 Flag</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
         <sourceName>sio2</sourceName>
         <destinationName>sio2</destinationName>
         <dataType>double</dataType>
@@ -347,39 +369,6 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>nh4__flag</sourceName>
-        <destinationName>nh4_flag</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="ioos_category">Quality</att>
-            <att name="long_name">Nh4  Flag</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>no2_no3_flag</sourceName>
-        <destinationName>no2_no3_flag</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="ioos_category">Quality</att>
-            <att name="long_name">No2 No3 Flag</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>po4_flag</sourceName>
-        <destinationName>po4_flag</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="ioos_category">Quality</att>
-            <att name="long_name">Po4 Flag</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>sio2_flag</sourceName>
         <destinationName>sio2_flag</destinationName>
         <dataType>String</dataType>
@@ -390,6 +379,9 @@
             <att name="long_name">Sio2 Flag</att>
         </addAttributes>
     </dataVariable>
+
+
+
     <dataVariable>
         <sourceName>analyzing_lab</sourceName>
         <destinationName>analyzing_lab</destinationName>
