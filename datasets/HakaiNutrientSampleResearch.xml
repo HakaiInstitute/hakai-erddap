@@ -21,7 +21,7 @@
         <att name="sourceUrl">(local database)</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
         <att name="summary">Data from a local source.</att>
-        <att name="title">Data from a local source.</att>
+        <att name="title">Hakai Oceanography Nutrient Samples, Research</att>
         <att name="cdm_profile_variables">time,precise_latitude, precise_longitude</att>
         <att name="cdm_timeseries_variables">work_area,organization,latitude,longitude,site_id</att>
         <att name="subsetVariables">work_area,organization,survey,site_id,project_specific_id,source,collection_method,filtered,filter_type,volume,nh4_flag,no2_no3_flag,po4_flag,sio2_flag,analyzing_lab,metadata_qc_flag,quality_level</att>
