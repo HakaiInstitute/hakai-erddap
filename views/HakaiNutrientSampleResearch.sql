@@ -66,5 +66,11 @@ SELECT action,
     quality_log
 FROM eims.output_nutrients
 WHERE organization = 'HAKAI'
-    AND quality_level = 'Principal Investigator'
+    AND quality_level in  ('Principal Investigator','Technicianmr')
+    AND site_id in ('QU39')
+    AND (
+        no2_no3_flag in ('AV', 'BDL')
+        AND po4_flag in ('AV', 'BDL')
+        AND sio2_flag in ('AV', 'BDL')
+    ) 
 ORDER BY "collected" DESC;
