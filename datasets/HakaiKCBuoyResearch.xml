@@ -3,17 +3,17 @@
 	<reloadEveryNMinutes>10080</reloadEveryNMinutes>
 	<updateEveryNMillis>10000</updateEveryNMillis>
 	<fileDir>/datasets/HakaiKCBuoyResearch/</fileDir>
-	<fileNameRegex>.*\.csv</fileNameRegex>
+	<fileNameRegex>.*transformed\.csv</fileNameRegex>
 	<recursive>false</recursive>
 	<pathRegex>.*</pathRegex>
 	<metadataFrom>last</metadataFrom>
 	<standardizeWhat>0</standardizeWhat>
 	<charset>UTF-8</charset>
 	<columnSeparator>,</columnSeparator>
-	<columnNamesRow>7</columnNamesRow>
-	<firstDataRow>8</firstDataRow>
-	<sortedColumnSourceName>Date</sortedColumnSourceName>
-	<sortFilesBySourceNames>Date</sortFilesBySourceNames>
+	<columnNamesRow>1</columnNamesRow>
+	<firstDataRow>2</firstDataRow>
+	<sortedColumnSourceName>time</sortedColumnSourceName>
+	<sortFilesBySourceNames>time</sortFilesBySourceNames>
 	<fileTableInMemory>false</fileTableInMemory>
 	<accessibleViaFiles>true</accessibleViaFiles>
 	<!-- sourceAttributes>
@@ -91,33 +91,7 @@
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
-		<sourceName>Date</sourceName>
-		<destinationName>Date</destinationName>
-		<dataType>String</dataType>
-		<!-- sourceAttributes>
-		</sourceAttributes -->
-		<addAttributes>
-			<att name="long_name">Date</att>
-			<att name="source_name">Date</att>
-			<att name="time_precision">1970-01-01</att>
-			<att name="units">yyyy-MM-dd</att>
-		</addAttributes>
-	</dataVariable>
-	<dataVariable>
-		<sourceName>Time UTC</sourceName>
-		<destinationName>TimeOfDay</destinationName>
-		<dataType>String</dataType>
-		<!-- sourceAttributes>
-		</sourceAttributes -->
-		<addAttributes>
-			<att name="long_name">Time of the day</att>
-			<att name="units">H:m</att>
-			<att name="timezone">'UTC'</att>
-		</addAttributes>
-	</dataVariable>
-	<dataVariable>
-		<sourceName>=Calendar2.parseToEpochSeconds(row.columnString("Date") + "T" + 
-			row.columnString("Time UTC") + "Z", "M/d/yyyy'T'H:m'Z'")</sourceName>
+		<sourceName>time</sourceName>
 		<destinationName>time</destinationName>
 		<dataType>String</dataType>
 		<!-- sourceAttributes>
@@ -125,7 +99,7 @@
 		<addAttributes>
 			<att name="long_name">Date Time</att>
 			<att name="standard_name">time</att>
-			<att name="units">seconds since 1970-01-01T00:00:00Z</att>
+			<att name="units">yyyy-MM-dd H:m:s</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
