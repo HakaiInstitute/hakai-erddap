@@ -3,7 +3,7 @@
 	<reloadEveryNMinutes>10080</reloadEveryNMinutes>
 	<updateEveryNMillis>10000</updateEveryNMillis>
 	<fileDir>/datasets/HakaiKCBuoyResearch/</fileDir>
-	<fileNameRegex>.*\transformed.csv</fileNameRegex>
+	<fileNameRegex>.*transformed\.csv</fileNameRegex>
 	<recursive>false</recursive>
 	<pathRegex>.*</pathRegex>
 	<metadataFrom>last</metadataFrom>
@@ -12,8 +12,8 @@
 	<columnSeparator>,</columnSeparator>
 	<columnNamesRow>1</columnNamesRow>
 	<firstDataRow>2</firstDataRow>
-	<sortedColumnSourceName>Date</sortedColumnSourceName>
-	<sortFilesBySourceNames>Date</sortFilesBySourceNames>
+	<sortedColumnSourceName>time</sortedColumnSourceName>
+	<sortFilesBySourceNames>time</sortFilesBySourceNames>
 	<fileTableInMemory>false</fileTableInMemory>
 	<accessibleViaFiles>true</accessibleViaFiles>
 	<!-- sourceAttributes>
@@ -99,7 +99,7 @@
 		<addAttributes>
 			<att name="long_name">Date Time</att>
 			<att name="standard_name">time</att>
-			<att name="units">seconds since 1970-01-01T00:00:00Z</att>
+			<att name="units">yyyy-MM-dd H:m:s</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
