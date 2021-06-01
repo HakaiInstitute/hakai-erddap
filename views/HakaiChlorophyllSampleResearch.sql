@@ -1,5 +1,5 @@
-DROP VIEW IF EXISTS erddap."HakaiChlorophyllSampleResearch";
-CREATE OR REPLACE VIEW erddap."HakaiChlorophyllSampleResearch" AS
+DROP TABLE IF EXISTS erddap."HakaiChlorophyllSampleResearch";
+CREATE TABLE IF NOT EXISTS erddap."HakaiChlorophyllSampleResearch" AS
 SELECT "work_area",
     "organization",
     "survey",
@@ -12,7 +12,7 @@ SELECT "work_area",
     "pressure_transducer_depth",
     "collected",
     -- phaeo
-    -- There are a few cases where the view has duplicate records, [1] takes the first
+    -- There are a few cases where records have multiple nil
     (array_remove(array_agg(phaeo_20um), Null)) [1]::NUMERIC phaeo_20um,
     (array_remove(array_agg(phaeo_3um), Null)) [1]::NUMERIC phaeo_3um,
     (array_remove(array_agg(phaeo_gf_f), Null)) [1]::NUMERIC phaeo_gf_f,
