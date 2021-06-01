@@ -80,7 +80,7 @@ FROM (
                 END
             ) chla_bulk_gf_f
         FROM eims.output_chlorophyll
-        WHERE collected > '2018-09-05'
+        WHERE collected > '2018-05-04'
             AND quality_level in ('Principal Investigator', 'Technicianmr')
             and (
                 chla_flag in ('AV')
