@@ -26,6 +26,11 @@ SELECT "work_area",
     (array_remove(array_agg(chla_bulk_gf_f), Null)) [1]::NUMERIC chla_bulk_gf_f
 FROM (
         select *,
+            (
+                CASE 
+                    WHEN pressure_transducer_depth IS NULL THEN line_out_depth
+                    ELSE pressure_transducer_depth
+            ) depth,
             -- phaeo
             (
                 CASE
