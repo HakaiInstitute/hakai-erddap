@@ -188,6 +188,10 @@
         <addAttributes>
             <att name="long_name">2um to 20um Concentration Of Phaeopigments In Sea Water</att>
             <att name="units">ug/L</att>
+            <att name="sdn_parameter_urn">SDN:P01::SPHAFLPG</att>
+            <att name="sdn_parameter_name">	Concentration of phaeopigments {pheopigments} per unit volume of the water body [particulate 2-20um phase] by filtration, acetone extraction and fluorometry</att>
+            <att name="sdn_uom_urn">SDN:P06::UGPL</att>
+            <att name="sdn_uom_name">Micrograms per litre</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -197,7 +201,7 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">Smaller than 2um Concentration Of Phaeopigments In Sea Water</att>
+            <att name="long_name">GF/F size to 2um(3um) size Concentration Of Phaeopigments In Sea Water</att>
             <att name="units">ug/L</att>
         </addAttributes>
     </dataVariable>
@@ -210,6 +214,10 @@
         <addAttributes>
             <att name="long_name">Bulk Concentration Of Phaeopigments In Sea Water</att>
             <att name="units">ug/L</att>
+            <att name="sdn_parameter_urn">SDN:P01::PHSDFLP1</att>
+            <att name="sdn_parameter_name">Concentration standard deviation of phaeopigments {pheopigments} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and fluorometry</att>
+            <att name="sdn_uom_urn">SDN:P06::UGPL</att>
+            <att name="sdn_uom_name">Micrograms per litre</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -222,7 +230,11 @@
             <att name="colorBarMaximum" type="double">30.0</att>
             <att name="colorBarMinimum" type="double">0</att>
             <att name="long_name">>20um Concentration Of Chlorophyll In Sea Water</att>
-            <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
+            <att name="standard_name">mass_concentration_of_microphytoplankton_expressed_as_chlorophyll_in_sea_water</att>
+            <att name="sdn_parameter_urn">SDN:P01::SCHLFLPQ</att>
+            <att name="sdn_parameter_name">Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate >20um phase] by filtration, acetone extraction and fluorometry</att>
+            <att name="sdn_uom_urn">SDN:P06::UGPL</att>
+            <att name="sdn_uom_name">Micrograms per litre</att>
             <att name="units">ug/L</att>
         </addAttributes>
     </dataVariable>
@@ -236,8 +248,12 @@
             <att name="colorBarMaximum" type="double">30.0</att>
             <att name="colorBarMinimum" type="double">0</att>
             <att name="long_name">"2um to 20um Concentration Of Chlorophyll In Sea Water"</att>
-            <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
+            <att name="standard_name">mass_concentration_of_nanophytoplankton_expressed_as_chlorophyll_in_sea_water</att>
             <att name="units">ug/L</att>
+            <att name="sdn_parameter_urn">SDN:P01::SCHDSDPG</att>
+            <att name="sdn_parameter_name">Concentration standard deviation of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate 2-20um phase] by filtration, acetone extraction and fluorometry</att>
+            <att name="sdn_uom_urn">SDN:P06::UGPL</att>
+            <att name="sdn_uom_name">Micrograms per litre</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -250,8 +266,12 @@
             <att name="colorBarMaximum" type="double">30.0</att>
             <att name="colorBarMinimum" type="double">0</att>
             <att name="long_name">3um to 20um Concentration Of Chlorophyll In Sea Water</att>
-            <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
+            <att name="standard_name">mass_concentration_of_nanophytoplankton_expressed_as_chlorophyll_in_sea_water</att>
             <att name="units">ug/L</att>
+            <att name="sdn_parameter_urn">SDN:P01::</att>
+            <att name="sdn_parameter_name"></att>
+            <att name="sdn_uom_urn">SDN:P06::UGPL</att>
+            <att name="sdn_uom_name">Micrograms per litre</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -263,9 +283,13 @@
         <addAttributes>
             <att name="colorBarMaximum" type="double">30.0</att>
             <att name="colorBarMinimum" type="double">0</att>
-            <att name="long_name"> Smaller than 3um Concentration Of Chlorophyll In Sea Water</att>
-            <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
+            <att name="long_name"> GF/F to 3um(2um)  Concentration Of Chlorophyll In Sea Water</att>
+            <att name="standard_name">mass_concentration_of_picophytoplankton_expressed_as_chlorophyll_in_sea_water</att>
             <att name="units">ug/L</att>
+            <att name="sdn_parameter_urn">SDN:P01::</att>
+            <att name="sdn_parameter_name"></att>
+            <att name="sdn_uom_urn">SDN:P06::UGPL</att>
+            <att name="sdn_uom_name">Micrograms per litre</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -278,8 +302,12 @@
             <att name="colorBarMaximum" type="double">30.0</att>
             <att name="colorBarMinimum" type="double">0</att>
             <att name="long_name">Bulk Concentration Of Chlorophyll In Sea Water</att>
-            <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
+            <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
             <att name="units">ug/L</att>
+            <att name="sdn_parameter_urn">SDN:P01::CPHLFLP1</att>
+            <att name="sdn_parameter_name">Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and fluorometry</att>
+            <att name="sdn_uom_urn">SDN:P06::UGPL</att>
+            <att name="sdn_uom_name">Micrograms per litre</att>
         </addAttributes>
     </dataVariable>
 </dataset>
