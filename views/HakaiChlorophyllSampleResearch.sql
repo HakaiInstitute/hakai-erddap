@@ -30,6 +30,7 @@ FROM (
                 CASE 
                     WHEN pressure_transducer_depth IS NULL THEN line_out_depth
                     ELSE pressure_transducer_depth
+                END
             ) depth,
             -- phaeo
             (
