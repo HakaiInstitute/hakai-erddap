@@ -24,7 +24,7 @@ SELECT "work_area",
     (array_remove(array_agg(chla_3um), Null)) [1]::NUMERIC chla_3um,
     (array_remove(array_agg(chla_2um), Null)) [1]::NUMERIC chla_2um,
     (array_remove(array_agg(chla_gf_f), Null)) [1]::NUMERIC chla_gf_f,
-    (array_remove(array_agg(chla_bulk_gf_f), Null)) [1]::NUMERIC chla_bulk_gf_f
+    (array_remove(array_agg(chla_bulk_gf_f), Null)) [1]::NUMERIC chla_bulk_gf_f,
     -- phaeo_flag
     (array_remove(array_agg(phaeo_20um_flag), Null)) [1]::TEXT phaeo_20um_flag,
     (array_remove(array_agg(phaeo_3um_flag), Null)) [1]::TEXT phaeo_3um_flag,
