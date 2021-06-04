@@ -1,5 +1,12 @@
 DROP TABLE IF EXISTS erddap."HakaiChlorophyllSampleProvisional";
 CREATE TABLE IF NOT EXISTS erddap."HakaiChlorophyllSampleProvisional" AS
+SELECT 
+*,
+(case when subquery2.chla_3um is not null then subquery2.chla_gf_f else null end) chla_3um_gf_f,
+(case when subquery2.chla_2um is not null then subquery2.chla_gf_f else null end) chla_2um_gf_f,
+(case when subquery2.chla_2um is not null then subquery2.chla_gf_f_flag else null end) chla_2um_gf_f_flag,
+(case when subquery2.chla_2um is not null then subquery2.chla_gf_f_flag else null end) chla_2um_gf_f_flag
+ from (
 SELECT "work_area",
     "organization",
     "survey",
@@ -149,7 +156,7 @@ FROM (
             ) chla_gf_f_flag,
             (
                 CASE
-                    WHEN filter_type = 'Bulk GF/F' THEN chla
+                    WHEN filter_type = 'Bulk GF/F' THEN chla_flag
                 END
             ) chla_bulk_gf_f_flag
         FROM eims.output_chlorophyll
@@ -166,4 +173,5 @@ group by (
         "line_out_depth",
         "pressure_transducer_depth",
         "collected"
-    );
+    ) 
+) as subquery2;

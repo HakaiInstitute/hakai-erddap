@@ -1,5 +1,10 @@
 DROP TABLE IF EXISTS erddap."HakaiChlorophyllSampleResearch";
 CREATE TABLE IF NOT EXISTS erddap."HakaiChlorophyllSampleResearch" AS
+select 
+*,
+(case when subquery2.chla_3um is not null then subquery2.chla_gf_f else null end) chla_3um_gf_f,
+(case when subquery2.chla_2um is not null then subquery2.chla_gf_f else null end) chla_2um_gf_f
+ from (
 SELECT "work_area",
     "organization",
     "survey",
@@ -53,7 +58,6 @@ FROM (
                 CASE
                     WHEN filter_type = 'GF/F' THEN phaeo
                 END
-            
             ) phaeo_gf_f,
             (
                 CASE
@@ -106,4 +110,5 @@ group by (
         "line_out_depth",
         "pressure_transducer_depth",
         "collected"
-    );
+    ) 
+) as subquery2;
