@@ -1,5 +1,10 @@
 DROP TABLE IF EXISTS erddap."HakaiChlorophyllSampleResearch";
 CREATE TABLE IF NOT EXISTS erddap."HakaiChlorophyllSampleResearch" AS
+select 
+*,
+(case when subquery2.chla_3um is not null then subquery2.chla_gf_f else null end) chla_3um_gf_f,
+(case when subquery2.chla_2um is not null then subquery2.chla_gf_f else null end) chla_2um_gf_f
+ from (
 SELECT "work_area",
     "organization",
     "survey",
@@ -8,6 +13,7 @@ SELECT "work_area",
     "long",
     "gather_lat",
     "gather_long",
+    (array_remove(array_agg(depth), Null)) [1]::NUMERIC depth,
     "line_out_depth",
     "pressure_transducer_depth",
     "collected",
@@ -26,6 +32,12 @@ SELECT "work_area",
     (array_remove(array_agg(chla_bulk_gf_f), Null)) [1]::NUMERIC chla_bulk_gf_f
 FROM (
         select *,
+            (
+                CASE 
+                    WHEN pressure_transducer_depth IS NULL THEN line_out_depth
+                    ELSE pressure_transducer_depth
+                END
+            ) depth,
             -- phaeo
             (
                 CASE
@@ -46,7 +58,6 @@ FROM (
                 CASE
                     WHEN filter_type = 'GF/F' THEN phaeo
                 END
-            
             ) phaeo_gf_f,
             (
                 CASE
@@ -99,4 +110,5 @@ group by (
         "line_out_depth",
         "pressure_transducer_depth",
         "collected"
-    );
+    ) 
+) as subquery2;
