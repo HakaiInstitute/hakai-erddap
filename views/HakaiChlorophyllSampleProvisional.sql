@@ -5,7 +5,11 @@ SELECT
 (case when subquery2.chla_3um is not null then subquery2.chla_gf_f else null end) chla_3um_gf_f,
 (case when subquery2.chla_2um is not null then subquery2.chla_gf_f else null end) chla_2um_gf_f,
 (case when subquery2.chla_2um is not null then subquery2.chla_gf_f_flag else null end) chla_2um_gf_f_flag,
-(case when subquery2.chla_3um is not null then subquery2.chla_gf_f_flag else null end) chla_3um_gf_f_flag
+(case when subquery2.chla_3um is not null then subquery2.chla_gf_f_flag else null end) chla_3um_gf_f_flag,
+(case when subquery2.phaeo_3um is not null then subquery2.phaeo_gf_f else null end) phaeo_3um_gf_f,
+(case when subquery2.phaeo_2um is not null then subquery2.phaeo_gf_f else null end) phaeo_2um_gf_f,
+(case when subquery2.phaeo_2um is not null then subquery2.phaeo_gf_f_flag else null end) phaeo_2um_gf_f_flag,
+(case when subquery2.phaeo_3um is not null then subquery2.phaeo_gf_f_flag else null end) phaeo_3um_gf_f_flag
  from (
 SELECT "work_area",
     "organization",
