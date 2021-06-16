@@ -1,6 +1,14 @@
 -- DROP VIEW erddap."HakaiQU5_MooringProvisional"
 CREATE OR REPLACE VIEW erddap."HakaiQU5_MooringProvisional" AS (
         SELECT t."measurementTime",
+        	t."QU5_Mooring:AirTemp_Avg" as airtemp_avg,
+        	t."QU5_Mooring:AirTemp_Max" as airtemp_max,
+        	t."QU5_Mooring:AirTemp_Med" as airtemp_med,
+        	t."QU5_Mooring:AirTemp_Min" as airtemp_min,
+        	t."QU5_Mooring:AirTemp_QC"  as airtemp_qc,
+        	t."QU5_Mooring:AirTemp_QL"  as airtemp_ql,
+        	t."QU5_Mooring:AirTemp_Std" as airtemp_std,
+        	t."QU5_Mooring:AirTemp_UQL" as airtemp_uql,
             m.*
         FROM sn."QU5_Mooring:5minuteSamples" t
             CROSS JOIN LATERAL (
