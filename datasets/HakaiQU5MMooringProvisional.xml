@@ -97,6 +97,79 @@
             <att name="units">m</att>
         </addAttributes>
     </dataVariable>
+
+    
+    <dataVariable>
+        <sourceName>air_temp_avg</sourceName>
+        <destinationName>air_temp_avg</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Average Air Temperature</att>
+            <att name="units">degree_Celsius</att>
+            <att name="standard_name">air_temperature</att>
+            <att name="ancillary_data">air_temp_ql,air_temp_qc,air_temp_uql</att>
+            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>air_temp_max</sourceName>
+        <destinationName>air_temp_max</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Maximum Air Temperature</att>
+            <att name="units">degree_Celsius</att>
+            <att name="standard_name">air_temperature</att>
+            <att name="ancillary_data">air_temp_ql,air_temp_qc,air_temp_uql</att>
+            <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>air_temp_min</sourceName>
+        <destinationName>air_temp_min</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Minimum Air Temperature</att>
+            <att name="units">degree_Celsius</att>
+            <att name="standard_name">air_temperature</att>
+            <att name="ancillary_data">air_temp_ql,air_temp_qc,air_temp_uql</att>
+            <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>air_temp_std</sourceName>
+        <destinationName>air_temp_min</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Minimum Air Standard Deviation</att>
+            <att name="units">degree_Celsius</att>
+            <att name="standard_name">air_temperature</att>
+            <att name="ancillary_data">air_temp_ql,air_temp_qc,air_temp_uql</att>
+            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>air_temp_uql</sourceName>
+        <destinationName>air_temp_uql</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Air Temperature UNESCO Quality Level</att>
+            <att name="ioos_category">Quality</att>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="missing_value" type="int">2</att>
+        </addAttributes>
+    </dataVariable>
+
     <dataVariable>
         <sourceName>watertemp_avg</sourceName>
         <destinationName>watertemp_avg</destinationName>
@@ -168,28 +241,6 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>watertemp_ql</sourceName>
-        <destinationName>watertemp_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="ioos_category">Quality</att>
-            <att name="long_name">Watertemp Ql</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>watertemp_qc</sourceName>
-        <destinationName>watertemp_qc</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="ioos_category">Quality</att>
-            <att name="long_name">Watertemp Qc</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>watertemp_uql</sourceName>
         <destinationName>watertemp_uql</destinationName>
         <dataType>int</dataType>
@@ -204,7 +255,6 @@
             <att name="standard_name">aggregate_quality_flag</att>
             <att name="colorBarMaximum" type="double">10.0</att>
             <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="missing_value" type="byte">2</att>
         </addAttributes>
     </dataVariable>
 </dataset>
