@@ -186,8 +186,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>phaeo_3um</sourceName>
-        <destinationName>phaeo_3um</destinationName>
+        <sourceName>phaeo_3_20um</sourceName>
+        <destinationName>phaeo_3_20um</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -201,8 +201,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>phaeo_2um</sourceName>
-        <destinationName>phaeo_2um</destinationName>
+        <sourceName>phaeo_2_20um</sourceName>
+        <destinationName>phaeo_2_20um</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -216,8 +216,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>phaeo_2um_gf_f</sourceName>
-        <destinationName>phaeo_2um_gf_f</destinationName>
+        <sourceName>phaeo_gff_2um</sourceName>
+        <destinationName>phaeo_gff_2um</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -231,8 +231,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>phaeo_3um_gf_f</sourceName>
-        <destinationName>phaeo_3um_gf_f</destinationName>
+        <sourceName>phaeo_gff_3um</sourceName>
+        <destinationName>phaeo_gff_3um</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -246,8 +246,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>phaeo_bulk_gf_f</sourceName>
-        <destinationName>phaeo_bulk_gf_f</destinationName>
+        <sourceName>phaeo_bulk_gff</sourceName>
+        <destinationName>phaeo_bulk_gff</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -279,8 +279,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>chla_2um</sourceName>
-        <destinationName>chla_2um</destinationName>
+        <sourceName>chla_2_20um</sourceName>
+        <destinationName>chla_2_20um</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -297,8 +297,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>chla_3um</sourceName>
-        <destinationName>chla_3um</destinationName>
+        <sourceName>chla_3_20um</sourceName>
+        <destinationName>chla_3_20um</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -315,8 +315,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>chla_2um_gf_f</sourceName>
-        <destinationName>chla_2um_gf_f</destinationName>
+        <sourceName>chla_gff_2um</sourceName>
+        <destinationName>chla_gff_2um</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -333,8 +333,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>chla_3um_gf_f</sourceName>
-        <destinationName>chla_3um_gf_f</destinationName>
+        <sourceName>chla_gff_3um</sourceName>
+        <destinationName>chla_gff_3um</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -351,8 +351,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>chla_bulk_gf_f</sourceName>
-        <destinationName>chla_bulk_gf_f</destinationName>
+        <sourceName>chla_bulk_gff</sourceName>
+        <destinationName>chla_bulk_gff</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
