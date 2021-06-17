@@ -183,6 +183,7 @@
             <att name="sdn_parameter_name">	Concentration of phaeopigments {pheopigments} per unit volume of the water body [particulate >20um phase] by filtration, acetone extraction and fluorometry</att>
             <att name="sdn_uom_urn">SDN:P06::UGPL</att>
             <att name="sdn_uom_name">Micrograms per litre</att>
+            <att name="ancillary_data">phaeo_20um_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -200,8 +201,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>phaeo_3um</sourceName>
-        <destinationName>phaeo_3um</destinationName>
+        <sourceName>phaeo_3_20um</sourceName>
+        <destinationName>phaeo_3_20um</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -212,11 +213,12 @@
             <att name="sdn_parameter_name">	Concentration of phaeopigments {pheopigments} per unit volume of the water body [particulate 3-20um phase] by filtration, acetone extraction and fluorometry</att>
             <att name="sdn_uom_urn">SDN:P06::UGPL</att>
             <att name="sdn_uom_name">Micrograms per litre</att>
+            <att name="ancillary_data">phaeo_3_20um_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>phaeo_3um_flag</sourceName>
-        <destinationName>phaeo_3um_flag</destinationName>
+        <sourceName>phaeo_3_20um_flag</sourceName>
+        <destinationName>phaeo_3_20um_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -229,8 +231,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>phaeo_2um</sourceName>
-        <destinationName>phaeo_2um</destinationName>
+        <sourceName>phaeo_2_20um</sourceName>
+        <destinationName>phaeo_2_20um</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -241,11 +243,12 @@
             <att name="sdn_parameter_name">	Concentration of phaeopigments {pheopigments} per unit volume of the water body [particulate 2-20um phase] by filtration, acetone extraction and fluorometry</att>
             <att name="sdn_uom_urn">SDN:P06::UGPL</att>
             <att name="sdn_uom_name">Micrograms per litre</att>
+            <att name="ancillary_data">phaeo_2_20um_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>phaeo_2um_flag</sourceName>
-        <destinationName>phaeo_2um_flag</destinationName>
+        <sourceName>phaeo_2_20um_flag</sourceName>
+        <destinationName>phaeo_2_20um_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -258,8 +261,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>phaeo_2um_gf_f</sourceName>
-        <destinationName>phaeo_2um_gf_f</destinationName>
+        <sourceName>phaeo_gff_2um</sourceName>
+        <destinationName>phaeo_gff_2um</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -270,11 +273,12 @@
             <att name="sdn_parameter_name">	Concentration of phaeopigments {pheopigments} per unit volume of the water body [particulate GF/F-2um phase] by filtration, acetone extraction and fluorometry</att>
             <att name="sdn_uom_urn">SDN:P06::UGPL</att>
             <att name="sdn_uom_name">Micrograms per litre</att>
+            <att name="ancillary_data">phaeo_gff_2um_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>phaeo_2um_gf_f_flag</sourceName>
-        <destinationName>phaeo_2um_gf_f_flag</destinationName>
+        <sourceName>phaeo_gff_2um_flag</sourceName>
+        <destinationName>phaeo_gff_2um_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -287,8 +291,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>phaeo_3um_gf_f</sourceName>
-        <destinationName>phaeo_3um_gf_f</destinationName>
+        <sourceName>phaeo_gff_3um</sourceName>
+        <destinationName>phaeo_gff_3um</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -299,11 +303,12 @@
             <att name="sdn_parameter_name">	Concentration of phaeopigments {pheopigments} per unit volume of the water body [particulate GF/F-3um phase] by filtration, acetone extraction and fluorometry</att>
             <att name="sdn_uom_urn">SDN:P06::UGPL</att>
             <att name="sdn_uom_name">Micrograms per litre</att>
+            <att name="ancillary_data">phaeo_gff_3um_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>phaeo_3um_gf_f_flag</sourceName>
-        <destinationName>phaeo_3um_gf_f_flag</destinationName>
+        <sourceName>phaeo_gff_3um_flag</sourceName>
+        <destinationName>phaeo_gff_3um_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -316,8 +321,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>phaeo_bulk_gf_f</sourceName>
-        <destinationName>phaeo_bulk_gf_f</destinationName>
+        <sourceName>phaeo_bulk_gff</sourceName>
+        <destinationName>phaeo_bulk_gff</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -328,11 +333,12 @@
             <att name="sdn_parameter_name">Concentration standard deviation of phaeopigments {pheopigments} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and fluorometry</att>
             <att name="sdn_uom_urn">SDN:P06::UGPL</att>
             <att name="sdn_uom_name">Micrograms per litre</att>
+            <att name="ancillary_data">phaeo_bulk_gff_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>phaeo_bulk_gf_f_flag</sourceName>
-        <destinationName>phaeo_bulk_gf_f_flag</destinationName>
+        <sourceName>phaeo_bulk_gff_flag</sourceName>
+        <destinationName>phaeo_bulk_gff_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -360,6 +366,7 @@
             <att name="sdn_uom_urn">SDN:P06::UGPL</att>
             <att name="sdn_uom_name">Micrograms per litre</att>
             <att name="units">ug/L</att>
+            <att name="ancillary_data">chla_20um_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -377,8 +384,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>chla_2um</sourceName>
-        <destinationName>chla_2um</destinationName>
+        <sourceName>chla_2_20um</sourceName>
+        <destinationName>chla_2_20um</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -392,11 +399,12 @@
             <att name="sdn_parameter_name">Concentration standard deviation of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate 2-20um phase] by filtration, acetone extraction and fluorometry</att>
             <att name="sdn_uom_urn">SDN:P06::UGPL</att>
             <att name="sdn_uom_name">Micrograms per litre</att>
+            <att name="ancillary_data">chla_2_20um_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>chla_2um_flag</sourceName>
-        <destinationName>chla_2um_flag</destinationName>
+        <sourceName>chla_2_20um_flag</sourceName>
+        <destinationName>chla_2_20um_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -409,8 +417,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>chla_3um</sourceName>
-        <destinationName>chla_3um</destinationName>
+        <sourceName>chla_3_20um</sourceName>
+        <destinationName>chla_3_20um</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -424,11 +432,12 @@
             <att name="sdn_parameter_name">Concentration standard deviation of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate GF/F-3um phase] by filtration, acetone extraction and fluorometry</att>
             <att name="sdn_uom_urn">SDN:P06::UGPL</att>
             <att name="sdn_uom_name">Micrograms per litre</att>
+            <att name="ancillary_data">chla_3_20um_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>chla_3um_flag</sourceName>
-        <destinationName>chla_3um_flag</destinationName>
+        <sourceName>chla_3_20um_flag</sourceName>
+        <destinationName>chla_3_20um_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -441,8 +450,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>chla_2um_gf_f</sourceName>
-        <destinationName>chla_2um_gf_f</destinationName>
+        <sourceName>chla_gff_2um</sourceName>
+        <destinationName>chla_gff_2um</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -456,6 +465,7 @@
             <att name="sdn_parameter_name">Concentration standard deviation of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate GF/F-2um phase] by filtration, acetone extraction and fluorometry</att>
             <att name="sdn_uom_urn">SDN:P06::UGPL</att>
             <att name="sdn_uom_name">Micrograms per litre</att>
+            <att name="ancillary_data">chla_gff_2um_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -473,8 +483,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>chla_3um_gf_f</sourceName>
-        <destinationName>chla_3um_gf_f</destinationName>
+        <sourceName>chla_gff_3um</sourceName>
+        <destinationName>chla_gff_3um</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -488,6 +498,7 @@
             <att name="sdn_parameter_name"></att>
             <att name="sdn_uom_urn">SDN:P06::UGPL</att>
             <att name="sdn_uom_name">Micrograms per litre</att>
+            <att name="ancillary_data">chla_gff_3um_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -505,8 +516,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>chla_bulk_gf_f</sourceName>
-        <destinationName>chla_bulk_gf_f</destinationName>
+        <sourceName>chla_bulk_gff</sourceName>
+        <destinationName>chla_bulk_gff</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -520,11 +531,12 @@
             <att name="sdn_parameter_name">Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and fluorometry</att>
             <att name="sdn_uom_urn">SDN:P06::UGPL</att>
             <att name="sdn_uom_name">Micrograms per litre</att>
+            <att name="ancillary_data">chla_bulk_gff_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>chla_bulk_gf_f_flag</sourceName>
-        <destinationName>chla_bulk_gf_f_flag</destinationName>
+        <sourceName>chla_bulk_gff_flag</sourceName>
+        <destinationName>chla_bulk_gff_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
