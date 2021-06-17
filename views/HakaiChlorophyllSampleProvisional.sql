@@ -2,14 +2,14 @@ DROP TABLE IF EXISTS erddap."HakaiChlorophyllSampleProvisional";
 CREATE TABLE IF NOT EXISTS erddap."HakaiChlorophyllSampleProvisional" AS
 SELECT 
 *,
-(case when subquery2.chla_3um is not null then subquery2.chla_gf_f else null end) chla_3um_gf_f,
-(case when subquery2.chla_2um is not null then subquery2.chla_gf_f else null end) chla_2um_gf_f,
-(case when subquery2.chla_2um is not null then subquery2.chla_gf_f_flag else null end) chla_2um_gf_f_flag,
-(case when subquery2.chla_3um is not null then subquery2.chla_gf_f_flag else null end) chla_3um_gf_f_flag,
-(case when subquery2.phaeo_3um is not null then subquery2.phaeo_gf_f else null end) phaeo_3um_gf_f,
-(case when subquery2.phaeo_2um is not null then subquery2.phaeo_gf_f else null end) phaeo_2um_gf_f,
-(case when subquery2.phaeo_2um is not null then subquery2.phaeo_gf_f_flag else null end) phaeo_2um_gf_f_flag,
-(case when subquery2.phaeo_3um is not null then subquery2.phaeo_gf_f_flag else null end) phaeo_3um_gf_f_flag
+(case when subquery2.chla_3_20um is not null then subquery2.chla_gff else null end) chla_gff_3um,
+(case when subquery2.chla_2_20um is not null then subquery2.chla_gff else null end) chla_gff_2um,
+(case when subquery2.chla_2_20um is not null then subquery2.chla_gff_flag else null end) chla_gff_2um_flag,
+(case when subquery2.chla_3_20um is not null then subquery2.chla_gff_flag else null end) chla_gff_3um_flag,
+(case when subquery2.phaeo_3_20um is not null then subquery2.phaeo_gff else null end) phaeo_gff_3um,
+(case when subquery2.phaeo_2_20um is not null then subquery2.phaeo_gff else null end) phaeo_gff_2um,
+(case when subquery2.phaeo_2_20um is not null then subquery2.phaeo_gff_flag else null end) phaeo_gff_2um_flag,
+(case when subquery2.phaeo_3_20um is not null then subquery2.phaeo_gff_flag else null end) phaeo_gff_3um_flag
  from (
 SELECT "work_area",
     "organization",
@@ -26,28 +26,28 @@ SELECT "work_area",
     -- phaeo
     -- There are a few cases where records have multiple nil
     (array_remove(array_agg(phaeo_20um), Null)) [1]::NUMERIC phaeo_20um,
-    (array_remove(array_agg(phaeo_3um), Null)) [1]::NUMERIC phaeo_3um,
-    (array_remove(array_agg(phaeo_2um), Null)) [1]::NUMERIC phaeo_2um,
-    (array_remove(array_agg(phaeo_gf_f), Null)) [1]::NUMERIC phaeo_gf_f,
-    (array_remove(array_agg(phaeo_bulk_gf_f), Null)) [1]::NUMERIC phaeo_bulk_gf_f,
+    (array_remove(array_agg(phaeo_3_20um), Null)) [1]::NUMERIC phaeo_3_20um,
+    (array_remove(array_agg(phaeo_2_20um), Null)) [1]::NUMERIC phaeo_2_20um,
+    (array_remove(array_agg(phaeo_gff), Null)) [1]::NUMERIC phaeo_gff,
+    (array_remove(array_agg(phaeo_bulk_gff), Null)) [1]::NUMERIC phaeo_bulk_gff,
     -- chla
     (array_remove(array_agg(chla_20um), Null)) [1]::NUMERIC chla_20um,
-    (array_remove(array_agg(chla_3um), Null)) [1]::NUMERIC chla_3um,
-    (array_remove(array_agg(chla_2um), Null)) [1]::NUMERIC chla_2um,
-    (array_remove(array_agg(chla_gf_f), Null)) [1]::NUMERIC chla_gf_f,
-    (array_remove(array_agg(chla_bulk_gf_f), Null)) [1]::NUMERIC chla_bulk_gf_f,
+    (array_remove(array_agg(chla_3_20um), Null)) [1]::NUMERIC chla_3_20um,
+    (array_remove(array_agg(chla_2_20um), Null)) [1]::NUMERIC chla_2_20um,
+    (array_remove(array_agg(chla_gff), Null)) [1]::NUMERIC chla_gff,
+    (array_remove(array_agg(chla_bulk_gff), Null)) [1]::NUMERIC chla_bulk_gff,
     -- phaeo_flag
     (array_remove(array_agg(phaeo_20um_flag), Null)) [1]::TEXT phaeo_20um_flag,
-    (array_remove(array_agg(phaeo_3um_flag), Null)) [1]::TEXT phaeo_3um_flag,
-    (array_remove(array_agg(phaeo_2um_flag), Null)) [1]::TEXT phaeo_2um_flag,
-    (array_remove(array_agg(phaeo_gf_f_flag), Null)) [1]::TEXT phaeo_gf_f_flag,
-    (array_remove(array_agg(phaeo_bulk_gf_f_flag), Null)) [1]::TEXT phaeo_bulk_gf_f_flag,
+    (array_remove(array_agg(phaeo_3_20um_flag), Null)) [1]::TEXT phaeo_3_20um_flag,
+    (array_remove(array_agg(phaeo_2_20um_flag), Null)) [1]::TEXT phaeo_2_20um_flag,
+    (array_remove(array_agg(phaeo_gff_flag), Null)) [1]::TEXT phaeo_gff_flag,
+    (array_remove(array_agg(phaeo_bulk_gff_flag), Null)) [1]::TEXT phaeo_bulk_gff_flag,
     -- chla
     (array_remove(array_agg(chla_20um_flag), Null)) [1]::TEXT chla_20um_flag,
-    (array_remove(array_agg(chla_3um_flag), Null)) [1]::TEXT chla_3um_flag,
-    (array_remove(array_agg(chla_2um_flag), Null)) [1]::TEXT chla_2um_flag,
-    (array_remove(array_agg(chla_gf_f_flag), Null)) [1]::TEXT chla_gf_f_flag,
-    (array_remove(array_agg(chla_bulk_gf_f_flag), Null)) [1]::TEXT chla_bulk_gf_f_flag
+    (array_remove(array_agg(chla_3_20um_flag), Null)) [1]::TEXT chla_3_20um_flag,
+    (array_remove(array_agg(chla_2_20um_flag), Null)) [1]::TEXT chla_2_20um_flag,
+    (array_remove(array_agg(chla_gff_flag), Null)) [1]::TEXT chla_gff_flag,
+    (array_remove(array_agg(chla_bulk_gff_flag), Null)) [1]::TEXT chla_bulk_gff_flag
 
 FROM (
         select *,
@@ -67,23 +67,23 @@ FROM (
                 CASE
                     WHEN filter_type = '3um' THEN phaeo
                 END
-            ) phaeo_3um,
+            ) phaeo_3_20um,
             (
                 CASE
                     WHEN filter_type = '2um' THEN phaeo
                 END
-            ) phaeo_2um,
+            ) phaeo_2_20um,
             (
                 CASE
                     WHEN filter_type = 'GF/F' THEN phaeo
                 END
             
-            ) phaeo_gf_f,
+            ) phaeo_gff,
             (
                 CASE
                     WHEN filter_type = 'Bulk GF/F' THEN phaeo
                 END
-            ) phaeo_bulk_gf_f,
+            ) phaeo_bulk_gff,
             -- phaeo_flag
             (
                 CASE
@@ -94,23 +94,23 @@ FROM (
                 CASE
                     WHEN filter_type = '3um' THEN phaeo_flag
                 END
-            ) phaeo_3um_flag,
+            ) phaeo_3_20um_flag,
             (
                 CASE
                     WHEN filter_type = '2um' THEN phaeo_flag
                 END
-            ) phaeo_2um_flag,
+            ) phaeo_2_20um_flag,
             (
                 CASE
                     WHEN filter_type = 'GF/F' THEN phaeo_flag
                 END
             
-            ) phaeo_gf_f_flag,
+            ) phaeo_gff_flag,
             (
                 CASE
                     WHEN filter_type = 'Bulk GF/F' THEN phaeo
                 END
-            ) phaeo_bulk_gf_f_flag,
+            ) phaeo_bulk_gff_flag,
             -- chla
             (
                 CASE
@@ -121,22 +121,22 @@ FROM (
                 CASE
                     WHEN filter_type = '3um' THEN chla
                 END
-            ) chla_3um,
+            ) chla_3_20um,
             (
                 CASE
                     WHEN filter_type = '2um' THEN chla
                 END
-            ) chla_2um,
+            ) chla_2_20um,
             (
                 CASE
                     WHEN filter_type = 'GF/F' THEN chla
                 END
-            ) chla_gf_f,
+            ) chla_gff,
             (
                 CASE
                     WHEN filter_type = 'GF/F' THEN chla
                 END
-            ) chla_bulk_gf_f,
+            ) chla_bulk_gff,
             -- chla_flag
             (
                 CASE
@@ -147,22 +147,22 @@ FROM (
                 CASE
                     WHEN filter_type = '3um' THEN chla_flag
                 END
-            ) chla_3um_flag,
+            ) chla_3_20um_flag,
             (
                 CASE
                     WHEN filter_type = '2um' THEN chla_flag
                 END
-            ) chla_2um_flag,
+            ) chla_2_20um_flag,
             (
                 CASE
                     WHEN filter_type = 'GF/F' THEN chla_flag
                 END
-            ) chla_gf_f_flag,
+            ) chla_gff_flag,
             (
                 CASE
                     WHEN filter_type = 'Bulk GF/F' THEN chla_flag
                 END
-            ) chla_bulk_gf_f_flag
+            ) chla_bulk_gff_flag
         FROM eims.output_chlorophyll
     ) subquery
 group by (
