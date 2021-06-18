@@ -1,3 +1,4 @@
+
 <dataset type="EDDTableFromDatabase" datasetID="HakaiPruthDockProvisional" active="true">
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
@@ -17,7 +18,7 @@
         <att name="creator_type">person</att>
         <att name="infoUrl">hakai.org</att>
         <att name="institution">Hakai Institute</att>
-        <att name="keywords">1hour, air, amp, amps, atmosphere, atmospheric, available, average, batt, beach, cond, data, delta, density, depth, dir, direction, dock, earth, Earth Science &gt; Atmosphere &gt; Atmospheric Winds &gt; Surface Winds, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Salinity, enclosure, hakai, height, hours, institute, kid, kwh, level, local, lvl, max, measurement, med, min, minute, ocean, oceans, output, panel, par, par5, photosynthetically, pls, practical, precipitation, pressure, profiler, pruth, 1hourrain, pruthdock_1hourrain_qc, pruthdock_1hourrain_ql, pruthdock_1hourrain_uql, pruthdock_airtemp, pruthdock_airtemp2, pruthdock_airtemp2_avg, pruthdock_airtemp2_qc, pruthdock_airtemp2_ql, pruthdock_airtemp2_std, pruthdock_airtemp2_uql, pruthdock_airtemp_avg, pruthdock_airtemp_qc, pruthdock_airtemp_ql, pruthdock_airtemp_std, pruthdock_airtemp_uql, pruthdock_battvolt_avg, pruthdock_enclosuretemp_avg, pruthdock_kidamphours_avg, pruthdock_kidbattsoc, pruthdock_kidbatttemp_avg, pruthdock_kidbattvolt_avg, pruthdock_kidkwh_avg, pruthdock_kidoutputwatts_avg, pruthdock_kidpvvolt_avg, pruthdock_paneltemp_avg, pruthdock_par, pruthdock_par5minutetotal, pruthdock_par5minutetotal_qc, pruthdock_par5minutetotal_ql, pruthdock_par5minutetotal_uql, pruthdock_par_avg, pruthdock_par_qc, pruthdock_par_ql, pruthdock_par_std, pruthdock_par_uql, pruthdock_pls_cond, pruthdock_pls_cond_avg, pruthdock_pls_cond_max, pruthdock_pls_cond_min, pruthdock_pls_cond_qc, pruthdock_pls_cond_ql, pruthdock_pls_cond_std, pruthdock_pls_cond_uql, pruthdock_pls_lvl, pruthdock_pls_lvl_avg, pruthdock_pls_lvl_max, pruthdock_pls_lvl_min, pruthdock_pls_lvl_qc, pruthdock_pls_lvl_ql, pruthdock_pls_lvl_std, pruthdock_pls_lvl_uql, pruthdock_pls_salinity, pruthdock_pls_salinity_avg, pruthdock_pls_salinity_max, pruthdock_pls_salinity_min, pruthdock_pls_salinity_qc, pruthdock_pls_salinity_ql, pruthdock_pls_salinity_std, pruthdock_pls_salinity_uql, pruthdock_pls_tds, pruthdock_pls_tds_avg, pruthdock_pls_tds_max, pruthdock_pls_tds_min, pruthdock_pls_tds_qc, pruthdock_pls_tds_ql, pruthdock_pls_tds_std, pruthdock_pls_tds_uql, pruthdock_pls_temp, pruthdock_pls_temp_avg, pruthdock_pls_temp_max, pruthdock_pls_temp_min, pruthdock_pls_temp_qc, pruthdock_pls_temp_ql, pruthdock_pls_temp_std, pruthdock_pls_temp_uql, pruthdock_rain, pruthdock_rain_qc, pruthdock_rain_ql, pruthdock_rain_uql, pruthdock_rh, pruthdock_rh_avg, pruthdock_rh_qc, pruthdock_rh_ql, pruthdock_rh_std, pruthdock_rh_uql, pruthdock_sealevelairpressure, pruthdock_sealevelairpressure_avg, pruthdock_sealevelairpressure_qc, pruthdock_sealevelairpressure_ql, pruthdock_sealevelairpressure_std, pruthdock_sealevelairpressure_uql, pruthdock_solarrad, pruthdock_solarrad5minutetotal, pruthdock_solarrad5minutetotal_qc, pruthdock_solarrad5minutetotal_ql, pruthdock_solarrad5minutetotal_uql, pruthdock_solarrad_avg, pruthdock_solarrad_qc, pruthdock_solarrad_ql, pruthdock_solarrad_std, pruthdock_solarrad_uql, pruthdock_stationairpressure, pruthdock_stationairpressure_avg, pruthdock_stationairpressure_qc, pruthdock_stationairpressure_ql, pruthdock_stationairpressure_std, pruthdock_stationairpressure_uql, pruthdock_tideheight_avg, pruthdock_tideheight_med, pruthdock_tideheight_qc, pruthdock_tideheight_ql, pruthdock_tideheight_uql, pruthdock_tideheightdelta_avg, pruthdock_tideheightdelta_qc, pruthdock_tideheightdelta_ql, pruthdock_tideheightdelta_uql, pruthdock_tideheightpls_avg, pruthdock_tideheightpls_qc, pruthdock_tideheightpls_ql, pruthdock_tideheightpls_uql, pruthdock_uvrad, pruthdock_uvrad5minutetotal, pruthdock_uvrad5minutetotal_qc, pruthdock_uvrad5minutetotal_ql, pruthdock_uvrad5minutetotal_uql, pruthdock_uvrad_avg, pruthdock_uvrad_qc, pruthdock_uvrad_ql, pruthdock_uvrad_std, pruthdock_uvrad_uql, pruthdock_vegapuls_height_avg, pruthdock_vegapuls_height_med, pruthdock_vegapuls_height_qc, pruthdock_vegapuls_height_ql, pruthdock_vegapuls_height_std, pruthdock_vegapuls_height_uql, pruthdock_wbjramphrremaining, pruthdock_wbjrcurrent_avg, pruthdock_westbeachamps_avg, pruthdock_westbeachpanelt_avg, pruthdock_westbeachvolt_avg, pruthdock_winddir_avg, pruthdock_winddir_qc, pruthdock_winddir_ql, pruthdock_winddir_std, pruthdock_winddir_uql, pruthdock_windspd_avg, pruthdock_windspd_qc, pruthdock_windspd_ql, pruthdock_windspd_std, pruthdock_windspd_uql, puls, pvvolt, rad, rad5, radiation, rain, rainfall, remaining, salinity, salinity-temperature-depth, science, sea, sea_water_practical_salinity, seawater, soc, solar, source, spd, station, std, surface, tds, temp2, temperature, tide, time, total, uql, uvrad, uvrad5, vega, volt, water, watts, wbjramp, wbjrcurrent, west, wind, wind_from_direction, winds</att>
+        <att name="keywords">1hour, air, amp, amps, atmosphere, atmospheric, available, average, batt, beach, cond, data, delta, density, depth, dir, direction, dock, earth, Earth Science &gt; Atmosphere &gt; Atmospheric Winds &gt; Surface Winds, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Salinity, enclosure, hakai, height, hours, institute, kid, kwh, level, local, lvl, max, measurement, med, min, minute, ocean, oceans, output, panel, par, par5, photosynthetically, pls, practical, precipitation, pressure, profiler, pruth, 1hourrain, pruthdock_1hourrain_flag, pruthdock_1hourrain_uql, pruthdock_airtemp, pruthdock_airtemp2, pruthdock_airtemp2_avg, pruthdock_airtemp2_flag, pruthdock_airtemp2_std, pruthdock_airtemp2_uql, pruthdock_airtemp_avg, pruthdock_airtemp_flag, pruthdock_airtemp_std, pruthdock_airtemp_uql, pruthdock_battvolt_avg, pruthdock_enclosuretemp_avg, pruthdock_kidamphours_avg, pruthdock_kidbattsoc, pruthdock_kidbatttemp_avg, pruthdock_kidbattvolt_avg, pruthdock_kidkwh_avg, pruthdock_kidoutputwatts_avg, pruthdock_kidpvvolt_avg, pruthdock_paneltemp_avg, pruthdock_par, pruthdock_par5minutetotal, pruthdock_par5minutetotal_flag, pruthdock_par5minutetotal_uql, pruthdock_par_avg, pruthdock_par_flag, pruthdock_par_std, pruthdock_par_uql, pruthdock_pls_cond, pruthdock_pls_cond_avg, pruthdock_pls_cond_max, pruthdock_pls_cond_min, pruthdock_pls_cond_flag, pruthdock_pls_cond_std, pruthdock_pls_cond_uql, pruthdock_pls_lvl, pruthdock_pls_lvl_avg, pruthdock_pls_lvl_max, pruthdock_pls_lvl_min, pruthdock_pls_lvl_flag, pruthdock_pls_lvl_std, pruthdock_pls_lvl_uql, pruthdock_pls_salinity, pruthdock_pls_salinity_avg, pruthdock_pls_salinity_max, pruthdock_pls_salinity_min, pruthdock_pls_salinity_flag, pruthdock_pls_salinity_std, pruthdock_pls_salinity_uql, pruthdock_pls_tds, pruthdock_pls_tds_avg, pruthdock_pls_tds_max, pruthdock_pls_tds_min, pruthdock_pls_tds_flag, pruthdock_pls_tds_std, pruthdock_pls_tds_uql, pruthdock_pls_temp, pruthdock_pls_temp_avg, pruthdock_pls_temp_max, pruthdock_pls_temp_min, pruthdock_pls_temp_flag, pruthdock_pls_temp_std, pruthdock_pls_temp_uql, pruthdock_rain, pruthdock_rain_flag, pruthdock_rain_uql, pruthdock_rh, pruthdock_rh_avg, pruthdock_rh_flag, pruthdock_rh_std, pruthdock_rh_uql, pruthdock_sealevelairpressure, pruthdock_sealevelairpressure_avg, pruthdock_sealevelairpressure_flag, pruthdock_sealevelairpressure_std, pruthdock_sealevelairpressure_uql, pruthdock_solarrad, pruthdock_solarrad5minutetotal, pruthdock_solarrad5minutetotal_flag, pruthdock_solarrad5minutetotal_uql, pruthdock_solarrad_avg, pruthdock_solarrad_flag, pruthdock_solarrad_std, pruthdock_solarrad_uql, pruthdock_stationairpressure, pruthdock_stationairpressure_avg, pruthdock_stationairpressure_flag, pruthdock_stationairpressure_std, pruthdock_stationairpressure_uql, pruthdock_tideheight_avg, pruthdock_tideheight_med, pruthdock_tideheight_flag, pruthdock_tideheight_uql, pruthdock_tideheightdelta_avg, pruthdock_tideheightdelta_flag, pruthdock_tideheightdelta_uql, pruthdock_tideheightpls_avg, pruthdock_tideheightpls_flag, pruthdock_tideheightpls_uql, pruthdock_uvrad, pruthdock_uvrad5minutetotal, pruthdock_uvrad5minutetotal_flag, pruthdock_uvrad5minutetotal_uql, pruthdock_uvrad_avg, pruthdock_uvrad_flag, pruthdock_uvrad_std, pruthdock_uvrad_uql, pruthdock_vegapuls_height_avg, pruthdock_vegapuls_height_med, pruthdock_vegapuls_height_flag, pruthdock_vegapuls_height_std, pruthdock_vegapuls_height_uql, pruthdock_wbjramphrremaining, pruthdock_wbjrcurrent_avg, pruthdock_westbeachamps_avg, pruthdock_westbeachpanelt_avg, pruthdock_westbeachvolt_avg, pruthdock_winddir_avg, pruthdock_winddir_flag, pruthdock_winddir_std, pruthdock_winddir_uql, pruthdock_windspd_avg, pruthdock_windspd_flag, pruthdock_windspd_std, pruthdock_windspd_uql, puls, pvvolt, rad, rad5, radiation, rain, rainfall, remaining, salinity, salinity-temperature-depth, science, sea, sea_water_practical_salinity, seawater, soc, solar, source, spd, station, std, surface, tds, temp2, temperature, tide, time, total, uql, uvrad, uvrad5, vega, volt, water, watts, wbjramp, wbjrcurrent, west, wind, wind_from_direction, winds</att>
         <att name="keywords_vocabulary">GCMD Science Keywords</att>
         <att name="license">[standard]</att>
         <att name="sourceUrl">(local database)</att>
@@ -76,18 +77,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:WindSpd_QL</sourceName>
-        <destinationName>windspd_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Wind Spd QL</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:WindSpd_QC</sourceName>
-        <destinationName>windspd_qc</destinationName>
+        <destinationName>windspd_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -119,7 +110,7 @@
             <att name="long_name">Wind Speed Avg</att>
             <att name="units">m/s</att>
             <att name="standard_name">wind_speed</att>
-            <att name="ancillary_data">windspd_ql,windspd_qc,windspd_uql</att>
+            <att name="ancillary_data">windspd_flag,windspd_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -133,26 +124,13 @@
             <att name="long_name">Wind Speed STD</att>
             <att name="units">m/s</att>
             <att name="standard_name">wind_speed</att>
-            <att name="ancillary_data">windspd_ql,windspd_qc,windspd_uql</att>
+            <att name="ancillary_data">windspd_flag,windspd_uql</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:WindDir_QL</sourceName>
-        <destinationName>winddir_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="colorBarMaximum" type="double">360.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="long_name">Wind From Direction</att>
-            <att name="standard_name">wind_from_direction</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:WindDir_QC</sourceName>
-        <destinationName>winddir_qc</destinationName>
+        <destinationName>winddir_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -186,7 +164,7 @@
             <att name="long_name">Wind From Direction Average</att>
             <att name="units">degree</att>
             <att name="standard_name">wind_from_direction</att>
-            <att name="ancillary_data">winddir_ql,winddir_qc,winddir_uql</att>
+            <att name="ancillary_data">winddir_flag,winddir_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -202,24 +180,13 @@
             <att name="long_name">Wind From Direction STD</att>
             <att name="units">degree</att>
             <att name="standard_name">wind_from_direction</att>
-            <att name="ancillary_data">winddir_ql,winddir_qc,winddir_uql</att>
+            <att name="ancillary_data">winddir_flag,winddir_uql</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:RH_QL</sourceName>
-        <destinationName>rh_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">RH QL</att>
-            
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:RH_QC</sourceName>
-        <destinationName>rh_qc</destinationName>
+        <destinationName>rh_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -261,7 +228,7 @@
             <att name="long_name">Relative Humidity Average</att>
             <att name="units">%</att>
             <att name="standard_name">relative_humidity</att>
-            <att name="ancillary_data">rh_ql,rh_qc,rh_uql</att>
+            <att name="ancillary_data">rh_flag,rh_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -275,23 +242,13 @@
             <att name="long_name">Relative Humidity STD</att>
             <att name="units">%</att>
             <att name="standard_name">relative_humidity</att>
-            <att name="ancillary_data">rh_ql,rh_qc,rh_uql</att>
+            <att name="ancillary_data">rh_flag,rh_uql</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:AirTemp_QL</sourceName>
-        <destinationName>airtemp_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Air Temp QL</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:AirTemp_QC</sourceName>
-        <destinationName>airtemp_qc</destinationName>
+        <destinationName>airtemp_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -323,7 +280,7 @@
             <att name="long_name">Air Temperature</att>
             <att name="units">degrees_celsius</att>
             <att name="standard_name">air_temperature</att>
-            <att name="ancillary_data">airtemp_ql,airtemp_qc,airtemp_uql</att>
+            <att name="ancillary_data">airtemp_flag,airtemp_uql</att>
             <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -337,7 +294,7 @@
             <att name="long_name">Air Temperature Average</att>
             <att name="units">degrees_celsius</att>
             <att name="standard_name">air_temperature</att>
-            <att name="ancillary_data">airtemp_ql,airtemp_qc,airtemp_uql</att>
+            <att name="ancillary_data">airtemp_flag,airtemp_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -351,23 +308,13 @@
             <att name="long_name">Air Temperature STD</att>
             <att name="units">degrees_celsius</att>
             <att name="standard_name">air_temperature</att>
-            <att name="ancillary_data">airtemp_ql,airtemp_qc,airtemp_uql</att>
+            <att name="ancillary_data">airtemp_flag,airtemp_uql</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:AirTemp2_QL</sourceName>
-        <destinationName>airtemp2_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Air Temp2 QL</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:AirTemp2_QC</sourceName>
-        <destinationName>airtemp2_qc</destinationName>
+        <destinationName>airtemp2_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -399,7 +346,7 @@
             <att name="long_name">Secondary Air Temperature</att>
             <att name="units">degrees_celsius</att>
             <att name="standard_name">air_temperature</att>
-            <att name="ancillary_data">airtemp2_ql,airtemp2_qc,airtemp2_uql</att>
+            <att name="ancillary_data">airtemp2_flag,airtemp2_uql</att>
             <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -413,7 +360,7 @@
             <att name="long_name">Secondary Air Temperature Average</att>
             <att name="units">degrees_celsius</att>
             <att name="standard_name">air_temperature</att>
-            <att name="ancillary_data">airtemp2_ql,airtemp2_qc,airtemp2_uql</att>
+            <att name="ancillary_data">airtemp2_flag,airtemp2_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -427,23 +374,13 @@
             <att name="long_name">Secondary Air Temperature STD</att>
             <att name="units">degrees_celsius</att>
             <att name="standard_name">air_temperature</att>
-            <att name="ancillary_data">airtemp2_ql,airtemp2_qc,airtemp2_uql</att>
+            <att name="ancillary_data">airtemp2_flag,airtemp2_uql</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:StationAirPressure_QL</sourceName>
-        <destinationName>stationairpressure_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Station Air Pressure QL</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:StationAirPressure_QC</sourceName>
-        <destinationName>stationairpressure_qc</destinationName>
+        <destinationName>stationairpressure_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -475,7 +412,7 @@
             <att name="long_name">Station Air Pressure</att>
             <att name="units">hPa</att>
             <att name="standard_name">air_pressure</att>
-            <att name="ancillary_data">stationairpressure_ql,stationairpressure_qc,stationairpressure_uql</att>
+            <att name="ancillary_data">stationairpressure_flag,stationairpressure_uql</att>
             <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -489,7 +426,7 @@
             <att name="long_name">Station Air Pressure Average</att>
             <att name="units">hPa</att>
             <att name="standard_name">air_pressure</att>
-            <att name="ancillary_data">stationairpressure_ql,stationairpressure_qc,stationairpressure_uql</att>
+            <att name="ancillary_data">stationairpressure_flag,stationairpressure_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -503,23 +440,13 @@
             <att name="long_name">Station Air Pressure STD</att>
             <att name="units">hPa</att>
             <att name="standard_name">air_pressure</att>
-            <att name="ancillary_data">stationairpressure_ql,stationairpressure_qc,stationairpressure_uql</att>
+            <att name="ancillary_data">stationairpressure_flag,stationairpressure_uql</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:SeaLevelAirPressure_QL</sourceName>
-        <destinationName>sealevelairpressure_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Sea Level Air Pressure QL</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:SeaLevelAirPressure_QC</sourceName>
-        <destinationName>sealevelairpressure_qc</destinationName>
+        <destinationName>sealevelairpressure_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -551,7 +478,7 @@
             <att name="long_name">Sea Level Air Pressure</att>
             <att name="units">hPa</att>
             <att name="standard_name">air_pressure_at_mean_sea_level</att>
-            <att name="ancillary_data">sealevelairpressure_ql,sealevelairpressure_qc,sealevelairpressure_uql</att>
+            <att name="ancillary_data">sealevelairpressure_flag,sealevelairpressure_uql</att>
             <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -565,7 +492,7 @@
             <att name="long_name">Sea Level Air Pressure Average</att>
             <att name="units">hPa</att>
             <att name="standard_name">air_pressure_at_mean_sea_level</att>
-            <att name="ancillary_data">sealevelairpressure_ql,sealevelairpressure_qc,sealevelairpressure_uql</att>
+            <att name="ancillary_data">sealevelairpressure_flag,sealevelairpressure_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -579,23 +506,13 @@
             <att name="long_name">Sea Level Air Pressure STD</att>
             <att name="units">hPa</att>
             <att name="standard_name">air_pressure_at_mean_sea_level</att>
-            <att name="ancillary_data">sealevelairpressure_ql,sealevelairpressure_qc,sealevelairpressure_uql</att>
+            <att name="ancillary_data">sealevelairpressure_flag,sealevelairpressure_uql</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:UVRad5MinuteTotal_QL</sourceName>
-        <destinationName>uvrad5minutetotal_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">UVRad5 Minute Total QL</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:UVRad5MinuteTotal_QC</sourceName>
-        <destinationName>uvrad5minutetotal_qc</destinationName>
+        <destinationName>uvrad5minutetotal_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -628,23 +545,13 @@
             <att name="long_name">Cumulative UV Radiation</att>
             <att name="units"></att>
             <att name="standard_name"></att>
-            <att name="ancillary_data">uvrad5minutetotal_ql,uvrad5minutetotal_qc,uvrad5minutetotal_uql</att>
+            <att name="ancillary_data">uvrad5minutetotal_flag,uvrad5minutetotal_uql</att>
             <att name="cell_methods">time: sum (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:SolarRad_QL</sourceName>
-        <destinationName>solarrad_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Solar Rad QL</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:SolarRad_QC</sourceName>
-        <destinationName>solarrad_qc</destinationName>
+        <destinationName>solarrad_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -676,7 +583,7 @@
             <att name="long_name">Solar Radiation</att>
             <att name="units"></att>
             <att name="standard_name"></att>
-            <att name="ancillary_data">solarrad_ql,solarrad_qc,solarrad_uql</att>
+            <att name="ancillary_data">solarrad_flag,solarrad_uql</att>
             <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -690,7 +597,7 @@
             <att name="long_name">Solar Radiation Average</att>
             <att name="units"></att>
             <att name="standard_name"></att>
-            <att name="ancillary_data">solarrad_ql,solarrad_qc,solarrad_uql</att>
+            <att name="ancillary_data">solarrad_flag,solarrad_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -704,23 +611,13 @@
             <att name="long_name">Solar Radiation STD</att>
             <att name="units"></att>
             <att name="standard_name"></att>
-            <att name="ancillary_data">solarrad_ql,solarrad_qc,solarrad_uql</att>
+            <att name="ancillary_data">solarrad_flag,solarrad_uql</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:SolarRad5MinuteTotal_QL</sourceName>
-        <destinationName>solarrad5minutetotal_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Solar Rad5 Minute Total QL</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:SolarRad5MinuteTotal_QC</sourceName>
-        <destinationName>solarrad5minutetotal_qc</destinationName>
+        <destinationName>solarrad5minutetotal_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -752,23 +649,13 @@
             <att name="long_name">Cumulative Solar Radiation</att>
             <att name="units"></att>
             <att name="standard_name"></att>
-            <att name="ancillary_data">solarrad5minutetotal_ql,solarrad5minutetotal_qc,solarrad5minutetotal_uql</att>
+            <att name="ancillary_data">solarrad5minutetotal_flag,solarrad5minutetotal_uql</att>
             <att name="cell_methods">time: sum (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:PAR_QL</sourceName>
-        <destinationName>par_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PAR QL</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:PAR_QC</sourceName>
-        <destinationName>par_qc</destinationName>
+        <destinationName>par_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -800,7 +687,7 @@
             <att name="long_name">Photosynthetic Active Radiation</att>
             <att name="units">mol/m2</att>
             <att name="standard_name">surface_downwelling_photosynthetic_photon_flux_in_air</att>
-            <att name="ancillary_data">par_ql,par_qc,par_uql</att>
+            <att name="ancillary_data">par_flag,par_uql</att>
             <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -814,7 +701,7 @@
             <att name="long_name">Photosynthetic Active Radiation Average</att>
             <att name="units">mol/m2</att>
             <att name="standard_name">surface_downwelling_photosynthetic_photon_flux_in_air</att>
-            <att name="ancillary_data">par_ql,par_qc,par_uql</att>
+            <att name="ancillary_data">par_flag,par_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -828,23 +715,13 @@
             <att name="long_name">Photosynthetic Active Radiation STD</att>
             <att name="units">mol/m2</att>
             <att name="standard_name">surface_downwelling_photosynthetic_photon_flux_in_air</att>
-            <att name="ancillary_data">par_ql,par_qc,par_uql</att>
+            <att name="ancillary_data">par_flag,par_uql</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:PAR5MinuteTotal_QL</sourceName>
-        <destinationName>par5minutetotal_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PAR5 Minute Total QL</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:PAR5MinuteTotal_QC</sourceName>
-        <destinationName>par5minutetotal_qc</destinationName>
+        <destinationName>par5minutetotal_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -876,23 +753,13 @@
             <att name="long_name">Cumulative Photosynthetic Active Radiation</att>
             <att name="units">mol/m2</att>
             <att name="standard_name">surface_downwelling_photosynthetic_photon_flux_in_air</att>
-            <att name="ancillary_data">par_ql,par_qc,par_uql</att>
+            <att name="ancillary_data">par_flag,par_uql</att>
             <att name="cell_methods">time: sum (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:UVRad_QL</sourceName>
-        <destinationName>uvrad_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">UVRad QL</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:UVRad_QC</sourceName>
-        <destinationName>uvrad_qc</destinationName>
+        <destinationName>uvrad_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -924,7 +791,7 @@
             <att name="long_name">UV Radiation</att>
             <att name="units">W/m2</att>
             <att name="standard_name">surface_downwelling_shortwave_flux_in_air</att>
-            <att name="ancillary_data">uvrad_ql,uvrad_qc,uvrad_uql</att>
+            <att name="ancillary_data">uvrad_flag,uvrad_uql</att>
             <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -938,7 +805,7 @@
             <att name="long_name">UV Radiation Mean</att>
             <att name="units">W/m2</att>
             <att name="standard_name">surface_downwelling_shortwave_flux_in_air</att>
-            <att name="ancillary_data">uvrad_ql,uvrad_qc,uvrad_uql</att>
+            <att name="ancillary_data">uvrad_flag,uvrad_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -952,23 +819,13 @@
             <att name="long_name">UV Radiation STD</att>
             <att name="units">W/m2</att>
             <att name="standard_name">surface_downwelling_shortwave_flux_in_air</att>
-            <att name="ancillary_data">uvrad_ql,uvrad_qc,uvrad_uql</att>
+            <att name="ancillary_data">uvrad_flag,uvrad_uql</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:Rain_QL</sourceName>
-        <destinationName>rain_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Rain QL</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:Rain_QC</sourceName>
-        <destinationName>rain_qc</destinationName>
+        <destinationName>rain_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -1000,23 +857,13 @@
             <att name="long_name">Rain</att>
             <att name="units">mm</att>
             <att name="standard_name"></att>
-            <att name="ancillary_data">rain_ql,rain_qc,rain_uql</att>
+            <att name="ancillary_data">rain_flag,rain_uql</att>
             <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:1hourRain_QL</sourceName>
-        <destinationName>hourlyrain_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">1hour Rain QL</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:1hourRain_QC</sourceName>
-        <destinationName>hourlyrain_qc</destinationName>
+        <destinationName>hourlyrain_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -1048,23 +895,13 @@
             <att name="long_name">1hour Cumulative Rain</att>
             <att name="units">mm</att>
             <att name="standard_name"></att>
-            <att name="ancillary_data">1hourrain_ql,1hourrain_qc,1hourrain_uql</att>
+            <att name="ancillary_data">1hourrain_flag,1hourrain_uql</att>
             <att name="cell_methods">time: sum (interval: 60.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:VegaPuls_Height_QL</sourceName>
-        <destinationName>vegapuls_height_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Vega Puls Height QL</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:VegaPuls_Height_QC</sourceName>
-        <destinationName>vegapuls_height_qc</destinationName>
+        <destinationName>vegapuls_height_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -1096,7 +933,7 @@
             <att name="long_name">Vega Pulse Height Med</att>
             <att name="units">m</att>
             <att name="standard_name"></att>
-            <att name="ancillary_data">vegapuls_height_ql,vegapuls_height_qc,vegapuls_height_uql</att>
+            <att name="ancillary_data">vegapuls_height_flag,vegapuls_height_uql</att>
             <att name="cell_methods">time: median (interval: 5.0 minutes)</att>            
         </addAttributes>
     </dataVariable>
@@ -1110,7 +947,7 @@
             <att name="long_name">Vega Pulse Height Avg</att>
             <att name="units">m</att>
             <att name="standard_name"></att>
-            <att name="ancillary_data">vegapuls_height_ql,vegapuls_height_qc,vegapuls_height_uql</att>
+            <att name="ancillary_data">vegapuls_height_flag,vegapuls_height_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>   
         </addAttributes>
     </dataVariable>
@@ -1125,23 +962,13 @@
             <att name="long_name">Vega Pulse Height STD</att>
             <att name="units">m</att>
             <att name="standard_name"></att>
-            <att name="ancillary_data">vegapuls_height_ql,vegapuls_height_qc,vegapuls_height_uql</att>
+            <att name="ancillary_data">vegapuls_height_flag,vegapuls_height_uql</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>   
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:TideHeight_QL</sourceName>
-        <destinationName>tideheight_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Tide Height QL</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:TideHeight_QC</sourceName>
-        <destinationName>tideheight_qc</destinationName>
+        <destinationName>tideheight_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -1173,7 +1000,7 @@
             <att name="long_name">Tide Height Median</att>
             <att name="units">m</att>
             <att name="standard_name">sea_surface_height_above_(mean_sea_level)</att>
-            <att name="ancillary_data">tideheight_ql,tideheight_qc,tideheight_uql</att>
+            <att name="ancillary_data">tideheight_flag,tideheight_uql</att>
             <att name="cell_methods">time: median (interval: 5.0 minutes)</att>   
         </addAttributes>
     </dataVariable>
@@ -1187,23 +1014,13 @@
             <att name="long_name">Tide Height Average</att>
             <att name="units">m</att>
             <att name="standard_name">sea_surface_height_above_(mean_sea_level)</att>
-            <att name="ancillary_data">tideheight_ql,tideheight_qc,tideheight_uql</att>
+            <att name="ancillary_data">tideheight_flag,tideheight_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>  
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:TideHeightPLS_QL</sourceName>
-        <destinationName>tideheightpls_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Tide Height PLS QL</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:TideHeightPLS_QC</sourceName>
-        <destinationName>tideheightpls_qc</destinationName>
+        <destinationName>tideheightpls_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -1240,18 +1057,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:TideHeightDelta_QL</sourceName>
-        <destinationName>tideheightdelta_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Tide Height Delta QL</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:TideHeightDelta_QC</sourceName>
-        <destinationName>tideheightdelta_qc</destinationName>
+        <destinationName>tideheightdelta_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -1284,20 +1091,9 @@
         </addAttributes>
     </dataVariable>
 
-
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Lvl_QL</sourceName>
-        <destinationName>pls_lvl_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS Lvl QL</att>
-        </addAttributes>
-    </dataVariable>
     <dataVariable>
         <sourceName>PruthDock:PLS_Lvl_QC</sourceName>
-        <destinationName>pls_lvl_qc</destinationName>
+        <destinationName>pls_lvl_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -1370,18 +1166,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:PLS_Temp_QL</sourceName>
-        <destinationName>pls_temp_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS Temp QL</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:PLS_Temp_QC</sourceName>
-        <destinationName>pls_temp_qc</destinationName>
+        <destinationName>pls_temp_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -1454,18 +1240,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:PLS_Cond_QL</sourceName>
-        <destinationName>pls_cond_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Sea Water Conductivity QL</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:PLS_Cond_QC</sourceName>
-        <destinationName>pls_cond_qc</destinationName>
+        <destinationName>pls_cond_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -1540,22 +1316,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:PLS_Salinity_QL</sourceName>
-        <destinationName>pls_salinity_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="colorBarMaximum" type="double">37.0</att>
-            <att name="colorBarMinimum" type="double">32.0</att>
-            <att name="long_name">Sea Water Practical Salinity</att>
-            <att name="standard_name">sea_water_practical_salinity</att>
-            <att name="units">PSU</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:PLS_Salinity_QC</sourceName>
-        <destinationName>pls_salinity_qc</destinationName>
+        <destinationName>pls_salinity_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -1647,18 +1409,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:PLS_TDS_QL</sourceName>
-        <destinationName>pls_tds_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS TDS QL</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>PruthDock:PLS_TDS_QC</sourceName>
-        <destinationName>pls_tds_qc</destinationName>
+        <destinationName>pls_tds_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
