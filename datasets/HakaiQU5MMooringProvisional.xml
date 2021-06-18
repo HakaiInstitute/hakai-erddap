@@ -114,20 +114,6 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>air_temp_max</sourceName>
-        <destinationName>air_temp_max</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Maximum Air Temperature</att>
-            <att name="units">degree_Celsius</att>
-            <att name="standard_name">air_temperature</att>
-            <att name="ancillary_data">air_temp_ql,air_temp_qc,air_temp_uql</att>
-            <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>air_temp_min</sourceName>
         <destinationName>air_temp_min</destinationName>
         <dataType>double</dataType>
@@ -142,8 +128,22 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
+        <sourceName>air_temp_max</sourceName>
+        <destinationName>air_temp_max</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Maximum Air Temperature</att>
+            <att name="units">degree_Celsius</att>
+            <att name="standard_name">air_temperature</att>
+            <att name="ancillary_data">air_temp_ql,air_temp_qc,air_temp_uql</att>
+            <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
         <sourceName>air_temp_std</sourceName>
-        <destinationName>air_temp_min</destinationName>
+        <destinationName>air_temp_std</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
