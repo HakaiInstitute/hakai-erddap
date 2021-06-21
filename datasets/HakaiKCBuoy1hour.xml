@@ -836,7 +836,6 @@
     <destinationName>Latitude_Med</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">latitude</att>
       <att name="long_name">LatKCBuoy_Med</att>
       <att name="units">degrees_north</att>
       <att name="_CoordinateAxisType">Lat</att>
@@ -851,7 +850,6 @@
     <destinationName>Latitude_Avg</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">latitude</att>
       <att name="long_name">LatKCBuoy_Avg</att>
       <att name="units">degrees_north</att>
       <att name="_CoordinateAxisType">Lat</att>
@@ -866,7 +864,6 @@
     <destinationName>Latitude_Min</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">latitude</att>
       <att name="long_name">LatKCBuoy_Min</att>
       <att name="units">degrees_north</att>
       <att name="_CoordinateAxisType">Lat</att>
@@ -881,7 +878,6 @@
     <destinationName>Latitude_Max</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">latitude</att>
       <att name="long_name">LatKCBuoy_Max</att>
       <att name="units">degrees_north</att>
       <att name="_CoordinateAxisType">Lat</att>
@@ -911,7 +907,6 @@
     <destinationName>Longitude_Med</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">longitude</att>
       <att name="long_name">LonKCBuoy_Med</att>
       <att name="units">degrees_east</att>
       <att name="_CoordinateAxisType">Lon</att>
@@ -926,7 +921,6 @@
     <destinationName>Longitude_Avg</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">longitude</att>
       <att name="long_name">LonKCBuoy_Avg</att>
       <att name="units">degrees_east</att>
       <att name="_CoordinateAxisType">Lon</att>
@@ -941,7 +935,6 @@
     <destinationName>Longitude_Min</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">longitude</att>
       <att name="long_name">LonKCBuoy_Min</att>
       <att name="units">degrees_east</att>
       <att name="_CoordinateAxisType">Lon</att>
@@ -956,7 +949,6 @@
     <destinationName>Longitude_Max</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">longitude</att>
       <att name="long_name">LonKCBuoy_Max</att>
       <att name="units">degrees_east</att>
       <att name="_CoordinateAxisType">Lon</att>
