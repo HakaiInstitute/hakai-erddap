@@ -140,9 +140,11 @@
     <destinationName>WindSpd_UQL</destinationName>
     <dataType>int</dataType>
     <addAttributes>
-      <att name="long_name">WindSpdKCBuoy UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="long_name">WindSpdKCBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="int">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -152,7 +154,7 @@
     <destinationName>WindSpd_flags</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="long_name">WindSpdKCBuoy Q flags</att>
+      <att name="long_name">WindSpdKCBuoy Flag</att>
       <att name="units">Quality flags</att>
     </addAttributes>
   </dataVariable>
@@ -188,9 +190,12 @@
     <destinationName>WindDir_UQL</destinationName>
     <dataType>int</dataType>
     <addAttributes>
-      <att name="long_name">WindDirKCBuoy UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="long_name">WindDirKCBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="int">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
 
@@ -200,8 +205,9 @@
     <destinationName>WindDir_flags</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="long_name">WindDirKCBuoy Q flags</att>
+      <att name="long_name">WindDirKCBuoy Flag</att>
       <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
 
@@ -275,9 +281,12 @@
     <destinationName>AirTemp_UQL</destinationName>
     <dataType>int</dataType>
     <addAttributes>
-      <att name="long_name">TAirKCBuoy UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="long_name">TAirKCBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="int">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
 
@@ -287,8 +296,9 @@
     <destinationName>AirTemp_flags</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="long_name">TAirKCBuoy Q flags</att>
+      <att name="long_name">TAirKCBuoy Flag</att>
       <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
 
@@ -363,9 +373,12 @@
     <destinationName>StationAirPressure_UQL</destinationName>
     <dataType>int</dataType>
     <addAttributes>
-      <att name="long_name">StationAirPressure UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="long_name">StationAirPressure UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="int">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
 
@@ -375,8 +388,9 @@
     <destinationName>StationAirPressure_flags</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="long_name">StationAirPressure Q flags</att>
+      <att name="long_name">StationAirPressure Flag</att>
       <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
 
@@ -471,9 +485,12 @@
     <destinationName>WaterTemp_UQL</destinationName>
     <dataType>int</dataType>
     <addAttributes>
-      <att name="long_name">TWtrKCBuoy UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="long_name">TWtrKCBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="int">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
 
@@ -483,8 +500,9 @@
     <destinationName>WaterTemp_flags</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="long_name">TWtrKCBuoy Q flags</att>
+      <att name="long_name">TWtrKCBuoy Flag</att>
       <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
 
@@ -572,9 +590,12 @@
     <destinationName>WaterConductivity_UQL</destinationName>
     <dataType>int</dataType>
     <addAttributes>
-      <att name="long_name">ConductivityKCBuoy UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="long_name">ConductivityKCBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="int">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
 
@@ -584,8 +605,9 @@
     <destinationName>WaterConductivity_flags</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="long_name">ConductivityKCBuoy Q flags</att>
+      <att name="long_name">ConductivityKCBuoy Flag</att>
       <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
 
@@ -673,9 +695,12 @@
     <destinationName>WaterPressure_UQL</destinationName>
     <dataType>int</dataType>
     <addAttributes>
-      <att name="long_name">PressureKCBuoy UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="long_name">PressureKCBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="int">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
 
@@ -685,8 +710,9 @@
     <destinationName>WaterPressure_flags</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="long_name">PressureKCBuoy Q flags</att>
+      <att name="long_name">PressureKCBuoy Flag</att>
       <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
 
@@ -768,9 +794,12 @@
     <destinationName>WaterSalinity_UQL</destinationName>
     <dataType>int</dataType>
     <addAttributes>
-      <att name="long_name">SalinityKCBuoy UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="long_name">SalinityKCBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="int">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
 
@@ -780,8 +809,9 @@
     <destinationName>WaterSalinity_flags</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="long_name">SalinityKCBuoy Q flags</att>
+      <att name="long_name">SalinityKCBuoy Flag</att>
       <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
 
@@ -954,9 +984,12 @@
     <destinationName>sw_xCO2_UQL</destinationName>
     <dataType>int</dataType>
     <addAttributes>
-      <att name="long_name">Seawater xCO2 UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="long_name">Seawater xCO2 UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="int">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
 
@@ -966,8 +999,9 @@
     <destinationName>sw_xCO2_flags</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="long_name">Seawater xCO2 Q flags</att>
+      <att name="long_name">Seawater xCO2 Flag</att>
       <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
 
@@ -990,9 +1024,12 @@
     <destinationName>atm_xCO2_UQL</destinationName>
     <dataType>int</dataType>
     <addAttributes>
-      <att name="long_name">Atmospheric xCO2 UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="long_name">Atmospheric xCO2 UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="int">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
 
@@ -1002,8 +1039,9 @@
     <destinationName>atm_xCO2_flags</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="long_name">Atmospheric xCO2 Q flags</att>
+      <att name="long_name">Atmospheric xCO2 Flag</att>
       <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
 
