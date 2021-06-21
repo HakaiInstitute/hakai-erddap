@@ -27,6 +27,8 @@
         <att name="title">Pruth Dock, Calvert Island, BC Tide and Weather Station Provisional</att>
         <att name='cdm_data_type'>Timeseries</att>
         <att name='cdm_timeseries_variables'>station_id,latitude,longitude</att>
+
+        <att name="subsetVariables">station_id,latitude,longitude,windspd_uql,winddir_uql,rh_uql,airtemp_uql,airtemp2_uql,stationairpressure_uql,sealevelairpressure_uql,uvrad5minutetotal_uql,solarrad_uql,solarrad5minutetotal_uql,par_uql,par5minutetotal_uql,uvrad_uql,rain_uql,hourlyrain_uql,vegapuls_height_uql,tideheight_uql,tideheightpls_uql,tideheightdelta_uql,pls_lvl_uql,pls_temp_uql,pls_cond_uql,pls_salinity_uql,pls_tds_uql</att>
     </addAttributes>
     
     <dataVariable>
@@ -98,6 +100,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -150,6 +153,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -206,6 +210,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -268,6 +273,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -334,6 +340,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -400,6 +407,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -466,6 +474,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -532,6 +541,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -571,6 +581,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -637,6 +648,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -675,6 +687,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -741,6 +754,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -779,6 +793,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -845,6 +860,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -883,6 +899,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -921,6 +938,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -988,6 +1006,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -1040,6 +1059,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -1078,6 +1098,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -1113,6 +1134,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -1187,6 +1209,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -1261,6 +1284,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -1336,6 +1360,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -1430,6 +1455,7 @@
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="int">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
