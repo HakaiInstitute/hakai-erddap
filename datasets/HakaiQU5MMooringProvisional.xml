@@ -32,6 +32,7 @@
         <att name="cdm_data_type">TimeSeriesProfile</att>
         <att name="cdm_profile_variables">time</att>
         <att name="cdm_timeseries_variables">station,latitude,longitude,depth</att>
+        <att name="subsetVariables">station,latitude,longitude,depth,airtemp_uql,watertemp_uql</att>
     </addAttributes>
     <dataVariable>
         <sourceName>=QU5M</sourceName>
@@ -97,11 +98,9 @@
             <att name="units">m</att>
         </addAttributes>
     </dataVariable>
-
-    
     <dataVariable>
-        <sourceName>air_temp_avg</sourceName>
-        <destinationName>air_temp_avg</destinationName>
+        <sourceName>airtemp_avg</sourceName>
+        <destinationName>airtemp</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -109,55 +108,12 @@
             <att name="long_name">Average Air Temperature</att>
             <att name="units">degree_Celsius</att>
             <att name="standard_name">air_temperature</att>
-            <att name="ancillary_data">air_temp_ql,air_temp_qc,air_temp_uql</att>
-            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+            <att name="ancillary_data">airtemp_qc,airtemp_uql</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>air_temp_min</sourceName>
-        <destinationName>air_temp_min</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Minimum Air Temperature</att>
-            <att name="units">degree_Celsius</att>
-            <att name="standard_name">air_temperature</att>
-            <att name="ancillary_data">air_temp_ql,air_temp_qc,air_temp_uql</att>
-            <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>air_temp_max</sourceName>
-        <destinationName>air_temp_max</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Maximum Air Temperature</att>
-            <att name="units">degree_Celsius</att>
-            <att name="standard_name">air_temperature</att>
-            <att name="ancillary_data">air_temp_ql,air_temp_qc,air_temp_uql</att>
-            <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>air_temp_std</sourceName>
-        <destinationName>air_temp_std</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Minimum Air Standard Deviation</att>
-            <att name="units">degree_Celsius</att>
-            <att name="standard_name">air_temperature</att>
-            <att name="ancillary_data">air_temp_ql,air_temp_qc,air_temp_uql</att>
-            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>air_temp_uql</sourceName>
-        <destinationName>air_temp_uql</destinationName>
+        <sourceName>airtemp_uql</sourceName>
+        <destinationName>airtemp_uql</destinationName>
         <dataType>int</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -169,10 +125,20 @@
             <att name="missing_value" type="int">2</att>
         </addAttributes>
     </dataVariable>
-
+    <dataVariable>
+        <sourceName>airtemp_qc</sourceName>
+        <destinationName>airtemp_qc</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Air Temperature Quality Level Flag</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
     <dataVariable>
         <sourceName>watertemp_avg</sourceName>
-        <destinationName>watertemp_avg</destinationName>
+        <destinationName>watertemp</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -180,64 +146,7 @@
             <att name="long_name">Average Water Temperature</att>
             <att name="units">degree_Celsius</att>
             <att name="standard_name">sea_water_temperature</att>
-            <att name="ancillary_data">watertemp_ql,watertemp_qc,watertemp_uql</att>
-            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>watertemp_med</sourceName>
-        <destinationName>watertemp_med</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Median Water Temperature</att>
-            <att name="units">degree_Celsius</att>
-            <att name="standard_name">sea_water_temperature</att>
-            <att name="ancillary_data">watertemp_ql,watertemp_qc,watertemp_uql</att>
-            <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>watertemp_min</sourceName>
-        <destinationName>watertemp_min</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Min. Water Temperature</att>
-            <att name="units">degree_Celsius</att>
-            <att name="standard_name">sea_water_temperature</att>
-            <att name="ancillary_data">watertemp_ql,watertemp_qc,watertemp_uql</att>
-            <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>watertemp_max</sourceName>
-        <destinationName>watertemp_max</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Max. Water Temperature</att>
-            <att name="units">degree_Celsius</att>
-            <att name="standard_name">sea_water_temperature</att>
-            <att name="ancillary_data">watertemp_ql,watertemp_qc,watertemp_uql</att>
-            <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>watertemp_std</sourceName>
-        <destinationName>watertemp_std</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Std. Water Temperature</att>
-            <att name="units">degree_Celsius</att>
-            <att name="standard_name">sea_water_temperature</att>
-            <att name="ancillary_data">watertemp_ql,watertemp_qc,watertemp_uql</att>
-            <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
+            <att name="ancillary_data">watertemp_qc,watertemp_uql</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -257,4 +166,15 @@
             <att name="colorBarMinimum" type="double">0.0</att>
         </addAttributes>
     </dataVariable>
-</dataset>
+    <dataVariable>
+        <sourceName>watertemp_qc</sourceName>
+        <destinationName>watertemp_qc</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Water Temperature Quality Level Flag</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>        
