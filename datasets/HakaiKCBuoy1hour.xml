@@ -929,6 +929,113 @@
 
 
   <dataVariable>
+    <sourceName>KCBuoy:Fluorometer</sourceName>
+    <destinationName>Fluorometer</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird FLS</att>
+      <att name="long_name">Fluorescence</att>
+      <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
+      <att name="units">ug/L</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">Fluorometer_UQL,Fluorometer_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Fluorometer_Med</sourceName>
+    <destinationName>Fluorometer_Med</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird FLS</att>
+      <att name="long_name">Fluorescence Median</att>
+      <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
+      <att name="units">ug/L</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">Fluorometer_UQL,Fluorometer_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Fluorometer_Avg</sourceName>
+    <destinationName>Fluorometer_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird FLS</att>
+      <att name="long_name">Fluorescence Mean</att>
+      <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
+      <att name="units">ug/L</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">Fluorometer_UQL,Fluorometer_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Fluorometer_Min</sourceName>
+    <destinationName>Fluorometer_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird FLS</att>
+      <att name="long_name">Fluorescence Minimum</att>
+      <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
+      <att name="units">ug/L</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">Fluorometer_UQL,Fluorometer_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Fluorometer_Max</sourceName>
+    <destinationName>Fluorometer_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird FLS</att>
+      <att name="long_name">Fluorescence Maximum</att>
+      <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
+      <att name="units">ug/L</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">Fluorometer_UQL,Fluorometer_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Fluorometer_UQL</sourceName>
+    <destinationName>Fluorometer_UQL</destinationName>
+    <dataType>int</dataType>
+    <addAttributes>
+      <att name="long_name">Fluorescence UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="int">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Fluorometer_QC</sourceName>
+    <destinationName>Fluorometer_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">Fluorescence Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
     <sourceName>KCBuoy:Latitude</sourceName>
     <destinationName>preciseLat</destinationName>
     <dataType>double</dataType>
