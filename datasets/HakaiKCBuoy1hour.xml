@@ -42,6 +42,19 @@
     <att name="summary">Kwakshua Channel, located near Fitz Hugh Sound on the central coast of British Columbia, has been a site for moored, high-resolution measurements of surface seawater and marine boundary layer CO2 content since May 2018. Measurements of in situ temperature, salinity, seawater and atmospheric CO2 partial pressure are made using a Battelle Seaology (MApCO2) System. The effort to collect these data are part of the Hakai Institute’s directive to advance the understanding of carbon cycling in northeast Pacific coastal settings with specific emphasis on ocean acidification. This data contribution consists of measurements since May 1, 2018.</att>
     <att name="title">Real-Time Provisional Surface Seawater and Marine Boundary Layer CO2 Observations made from the Kwakshua Channel (KC) Buoy on the central coast of British Columbia</att>
   </addAttributes>
+
+  
+  <dataVariable>
+    <sourceName>=KCBuoy</sourceName>
+    <destinationName>station</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="ioos_category">Location</att>
+      <att name="cf_role">timeseries_id</att>
+    </addAttributes>
+  </dataVariable>
+
+
   <dataVariable>
     <sourceName>measurementTime</sourceName>
     <destinationName>time</destinationName>
@@ -72,16 +85,6 @@
     </addAttributes>
   </dataVariable>
 
-
-  <dataVariable>
-    <sourceName>=KCBuoy</sourceName>
-    <destinationName>station</destinationName>
-    <dataType>String</dataType>
-    <addAttributes>
-      <att name="ioos_category">Location</att>
-      <att name="cf_role">timeseries_id</att>
-    </addAttributes>
-  </dataVariable>
 
   <dataVariable>
     <sourceName>KCBuoy:WindSpd_Avg</sourceName>
