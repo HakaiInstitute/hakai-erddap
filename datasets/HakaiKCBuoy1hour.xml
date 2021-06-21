@@ -83,30 +83,6 @@
     </addAttributes>
   </dataVariable>
 
-
-  <dataVariable>
-    <sourceName>KCBuoy:WindSpd_UQL</sourceName>
-    <destinationName>WindSpd_UQL</destinationName>
-    <dataType>int</dataType>
-    <addAttributes>
-      <att name="long_name">WindSpdKCBuoy UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>KCBuoy:WindSpd_QC</sourceName>
-    <destinationName>WindSpd_flags</destinationName>
-    <dataType>String</dataType>
-    <addAttributes>
-      <att name="long_name">WindSpdKCBuoy Q flags</att>
-      <att name="units">Quality flags</att>
-    </addAttributes>
-  </dataVariable>
-
-
   <dataVariable>
     <sourceName>KCBuoy:WindSpd_Avg</sourceName>
     <destinationName>WindSpd_Avg</destinationName>
@@ -160,11 +136,11 @@
 
 
   <dataVariable>
-    <sourceName>KCBuoy:WindDir_UQL</sourceName>
-    <destinationName>WindDir_UQL</destinationName>
+    <sourceName>KCBuoy:WindSpd_UQL</sourceName>
+    <destinationName>WindSpd_UQL</destinationName>
     <dataType>int</dataType>
     <addAttributes>
-      <att name="long_name">WindDirKCBuoy UNESCO Q level</att>
+      <att name="long_name">WindSpdKCBuoy UNESCO Q level</att>
       <att name="units">UNESCO QC</att>
       <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
     </addAttributes>
@@ -172,11 +148,11 @@
 
 
   <dataVariable>
-    <sourceName>KCBuoy:WindDir_QC</sourceName>
-    <destinationName>WindDir_flags</destinationName>
+    <sourceName>KCBuoy:WindSpd_QC</sourceName>
+    <destinationName>WindSpd_flags</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="long_name">WindDirKCBuoy Q flags</att>
+      <att name="long_name">WindSpdKCBuoy Q flags</att>
       <att name="units">Quality flags</att>
     </addAttributes>
   </dataVariable>
@@ -207,13 +183,12 @@
     </addAttributes>
   </dataVariable>
 
-
   <dataVariable>
-    <sourceName>KCBuoy:AirTemp_UQL</sourceName>
-    <destinationName>AirTemp_UQL</destinationName>
+    <sourceName>KCBuoy:WindDir_UQL</sourceName>
+    <destinationName>WindDir_UQL</destinationName>
     <dataType>int</dataType>
     <addAttributes>
-      <att name="long_name">TAirKCBuoy UNESCO Q level</att>
+      <att name="long_name">WindDirKCBuoy UNESCO Q level</att>
       <att name="units">UNESCO QC</att>
       <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
     </addAttributes>
@@ -221,11 +196,11 @@
 
 
   <dataVariable>
-    <sourceName>KCBuoy:AirTemp_QC</sourceName>
-    <destinationName>AirTemp_flags</destinationName>
+    <sourceName>KCBuoy:WindDir_QC</sourceName>
+    <destinationName>WindDir_flags</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="long_name">TAirKCBuoy Q flags</att>
+      <att name="long_name">WindDirKCBuoy Q flags</att>
       <att name="units">Quality flags</att>
     </addAttributes>
   </dataVariable>
@@ -295,13 +270,12 @@
     </addAttributes>
   </dataVariable>
 
-
   <dataVariable>
-    <sourceName>KCBuoy:StationAirPressure_UQL</sourceName>
-    <destinationName>StationAirPressure_UQL</destinationName>
+    <sourceName>KCBuoy:AirTemp_UQL</sourceName>
+    <destinationName>AirTemp_UQL</destinationName>
     <dataType>int</dataType>
     <addAttributes>
-      <att name="long_name">StationAirPressure UNESCO Q level</att>
+      <att name="long_name">TAirKCBuoy UNESCO Q level</att>
       <att name="units">UNESCO QC</att>
       <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
     </addAttributes>
@@ -309,11 +283,11 @@
 
 
   <dataVariable>
-    <sourceName>KCBuoy:StationAirPressure_QC</sourceName>
-    <destinationName>StationAirPressure_flags</destinationName>
+    <sourceName>KCBuoy:AirTemp_QC</sourceName>
+    <destinationName>AirTemp_flags</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="long_name">StationAirPressure Q flags</att>
+      <att name="long_name">TAirKCBuoy Q flags</att>
       <att name="units">Quality flags</att>
     </addAttributes>
   </dataVariable>
@@ -385,11 +359,11 @@
 
 
   <dataVariable>
-    <sourceName>KCBuoy:WaterTemp_UQL</sourceName>
-    <destinationName>WaterTemp_UQL</destinationName>
+    <sourceName>KCBuoy:StationAirPressure_UQL</sourceName>
+    <destinationName>StationAirPressure_UQL</destinationName>
     <dataType>int</dataType>
     <addAttributes>
-      <att name="long_name">TWtrKCBuoy UNESCO Q level</att>
+      <att name="long_name">StationAirPressure UNESCO Q level</att>
       <att name="units">UNESCO QC</att>
       <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
     </addAttributes>
@@ -397,11 +371,11 @@
 
 
   <dataVariable>
-    <sourceName>KCBuoy:WaterTemp_QC</sourceName>
-    <destinationName>WaterTemp_flags</destinationName>
+    <sourceName>KCBuoy:StationAirPressure_QC</sourceName>
+    <destinationName>StationAirPressure_flags</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="long_name">TWtrKCBuoy Q flags</att>
+      <att name="long_name">StationAirPressure Q flags</att>
       <att name="units">Quality flags</att>
     </addAttributes>
   </dataVariable>
@@ -491,12 +465,13 @@
   </dataVariable>
 
 
+  
   <dataVariable>
-    <sourceName>KCBuoy:WaterConductivity_UQL</sourceName>
-    <destinationName>WaterConductivity_UQL</destinationName>
+    <sourceName>KCBuoy:WaterTemp_UQL</sourceName>
+    <destinationName>WaterTemp_UQL</destinationName>
     <dataType>int</dataType>
     <addAttributes>
-      <att name="long_name">ConductivityKCBuoy UNESCO Q level</att>
+      <att name="long_name">TWtrKCBuoy UNESCO Q level</att>
       <att name="units">UNESCO QC</att>
       <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
     </addAttributes>
@@ -504,11 +479,11 @@
 
 
   <dataVariable>
-    <sourceName>KCBuoy:WaterConductivity_QC</sourceName>
-    <destinationName>WaterConductivity_flags</destinationName>
+    <sourceName>KCBuoy:WaterTemp_QC</sourceName>
+    <destinationName>WaterTemp_flags</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="long_name">ConductivityKCBuoy Q flags</att>
+      <att name="long_name">TWtrKCBuoy Q flags</att>
       <att name="units">Quality flags</att>
     </addAttributes>
   </dataVariable>
@@ -593,11 +568,11 @@
 
 
   <dataVariable>
-    <sourceName>KCBuoy:WaterPressure_UQL</sourceName>
-    <destinationName>WaterPressure_UQL</destinationName>
+    <sourceName>KCBuoy:WaterConductivity_UQL</sourceName>
+    <destinationName>WaterConductivity_UQL</destinationName>
     <dataType>int</dataType>
     <addAttributes>
-      <att name="long_name">PressureKCBuoy UNESCO Q level</att>
+      <att name="long_name">ConductivityKCBuoy UNESCO Q level</att>
       <att name="units">UNESCO QC</att>
       <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
     </addAttributes>
@@ -605,11 +580,11 @@
 
 
   <dataVariable>
-    <sourceName>KCBuoy:WaterPressure_QC</sourceName>
-    <destinationName>WaterPressure_flags</destinationName>
+    <sourceName>KCBuoy:WaterConductivity_QC</sourceName>
+    <destinationName>WaterConductivity_flags</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="long_name">PressureKCBuoy Q flags</att>
+      <att name="long_name">ConductivityKCBuoy Q flags</att>
       <att name="units">Quality flags</att>
     </addAttributes>
   </dataVariable>
@@ -694,11 +669,11 @@
 
 
   <dataVariable>
-    <sourceName>KCBuoy:WaterSalinity_UQL</sourceName>
-    <destinationName>WaterSalinity_UQL</destinationName>
+    <sourceName>KCBuoy:WaterPressure_UQL</sourceName>
+    <destinationName>WaterPressure_UQL</destinationName>
     <dataType>int</dataType>
     <addAttributes>
-      <att name="long_name">SalinityKCBuoy UNESCO Q level</att>
+      <att name="long_name">PressureKCBuoy UNESCO Q level</att>
       <att name="units">UNESCO QC</att>
       <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
     </addAttributes>
@@ -706,11 +681,11 @@
 
 
   <dataVariable>
-    <sourceName>KCBuoy:WaterSalinity_QC</sourceName>
-    <destinationName>WaterSalinity_flags</destinationName>
+    <sourceName>KCBuoy:WaterPressure_QC</sourceName>
+    <destinationName>WaterPressure_flags</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="long_name">SalinityKCBuoy Q flags</att>
+      <att name="long_name">PressureKCBuoy Q flags</att>
       <att name="units">Quality flags</att>
     </addAttributes>
   </dataVariable>
@@ -784,6 +759,29 @@
       <att name="sensor_type">SBE16</att>
       <att name="long_name">SalinityKCBuoy_Std</att>
       <att name="depth">0.5</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterSalinity_UQL</sourceName>
+    <destinationName>WaterSalinity_UQL</destinationName>
+    <dataType>int</dataType>
+    <addAttributes>
+      <att name="long_name">SalinityKCBuoy UNESCO Q level</att>
+      <att name="units">UNESCO QC</att>
+      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterSalinity_QC</sourceName>
+    <destinationName>WaterSalinity_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">SalinityKCBuoy Q flags</att>
+      <att name="units">Quality flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -939,6 +937,19 @@
 
 
   <dataVariable>
+    <sourceName>KCSeaology:sw_xCO2</sourceName>
+    <destinationName>sw_xCO2</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seaology</att>
+      <att name="long_name">Seawater xCO2</att>
+      <att name="units">ppm</att>
+      <att name="depth">0.5</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
     <sourceName>KCSeaology:sw_xCO2_UQL</sourceName>
     <destinationName>sw_xCO2_UQL</destinationName>
     <dataType>int</dataType>
@@ -962,14 +973,14 @@
 
 
   <dataVariable>
-    <sourceName>KCSeaology:sw_xCO2</sourceName>
-    <destinationName>sw_xCO2</destinationName>
+    <sourceName>KCSeaology:atm_xCO2</sourceName>
+    <destinationName>atm_xCO2</destinationName>
     <dataType>double</dataType>
     <addAttributes>
       <att name="sensor_type">Seaology</att>
-      <att name="long_name">Seawater xCO2</att>
+      <att name="long_name">Atmospheric xCO2</att>
       <att name="units">ppm</att>
-      <att name="depth">0.5</att>
+      <att name="height">1</att>
     </addAttributes>
   </dataVariable>
 
@@ -993,19 +1004,6 @@
     <addAttributes>
       <att name="long_name">Atmospheric xCO2 Q flags</att>
       <att name="units">Quality flags</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>KCSeaology:atm_xCO2</sourceName>
-    <destinationName>atm_xCO2</destinationName>
-    <dataType>double</dataType>
-    <addAttributes>
-      <att name="sensor_type">Seaology</att>
-      <att name="long_name">Atmospheric xCO2</att>
-      <att name="units">ppm</att>
-      <att name="height">1</att>
     </addAttributes>
   </dataVariable>
 
