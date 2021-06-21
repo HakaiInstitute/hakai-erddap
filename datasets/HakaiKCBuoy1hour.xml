@@ -108,6 +108,7 @@
       <att name="long_name">WindSpdKCBuoy_Min</att>
       <att name="units">m/s</att>
       <att name="height">3</att>
+      <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -121,6 +122,7 @@
       <att name="long_name">WindSpdKCBuoy_Max</att>
       <att name="units">m/s</att>
       <att name="height">3</att>
+      <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -134,6 +136,7 @@
       <att name="long_name">WindSpdKCBuoy_Std</att>
       <att name="units">m/s</att>
       <att name="height">3</att>
+      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -172,6 +175,7 @@
       <att name="long_name">WindDirKCBuoy_Avg</att>
       <att name="units">degrees</att>
       <att name="height">3</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -185,6 +189,7 @@
       <att name="long_name">WindDirKCBuoy_Std</att>
       <att name="units">degrees</att>
       <att name="height">3</att>
+      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -224,6 +229,7 @@
       <att name="long_name">TAirKCBuoy</att>
       <att name="units">deg C</att>
       <att name="height">3</att>
+      <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -237,6 +243,7 @@
       <att name="long_name">TAirKCBuoy_Med</att>
       <att name="units">deg C</att>
       <att name="height">3</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -250,6 +257,7 @@
       <att name="long_name">TAirKCBuoy_Avg</att>
       <att name="units">deg C</att>
       <att name="height">3</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -263,6 +271,7 @@
       <att name="long_name">TAirKCBuoy_Min</att>
       <att name="units">deg C</att>
       <att name="height">3</att>
+      <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -276,6 +285,7 @@
       <att name="long_name">TAirKCBuoy_Max</att>
       <att name="units">deg C</att>
       <att name="height">3</att>
+      <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -315,6 +325,7 @@
       <att name="long_name">StationAirPressure</att>
       <att name="units">hPa</att>
       <att name="height">3</att>
+      <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -328,6 +339,7 @@
       <att name="long_name">StationAirPressure_Avg</att>
       <att name="units">hPa</att>
       <att name="height">3</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -341,6 +353,7 @@
       <att name="long_name">StationAirPressure_Min</att>
       <att name="units">hPa</att>
       <att name="height">3</att>
+      <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -354,6 +367,7 @@
       <att name="long_name">StationAirPressure_Max</att>
       <att name="units">hPa</att>
       <att name="height">3</att>
+      <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -367,6 +381,7 @@
       <att name="long_name">StationAirPressure_Std</att>
       <att name="units">hPa</att>
       <att name="height">3</att>
+      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -408,6 +423,7 @@
       <att name="long_name">TWtrKCBuoy</att>
       <att name="units">Deg C</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -422,6 +438,7 @@
       <att name="long_name">TWtrKCBuoy_Med</att>
       <att name="units">Deg C</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -436,6 +453,7 @@
       <att name="long_name">TWtrKCBuoy_Avg</att>
       <att name="units">Deg C</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -450,6 +468,7 @@
       <att name="long_name">TWtrKCBuoy_Min</att>
       <att name="units">Deg C</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -464,6 +483,7 @@
       <att name="long_name">TWtrKCBuoy_Max</att>
       <att name="units">Deg C</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -478,6 +498,7 @@
       <att name="long_name">TWtrKCBuoy_Std</att>
       <att name="units">Deg C</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -519,6 +540,7 @@
       <att name="long_name">ConductivityKCBuoy</att>
       <att name="units">S/m</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -532,6 +554,7 @@
       <att name="long_name">ConductivityKCBuoy_Med</att>
       <att name="units">S/m</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -545,6 +568,7 @@
       <att name="long_name">ConductivityKCBuoy_Avg</att>
       <att name="units">S/m</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -558,6 +582,7 @@
       <att name="long_name">ConductivityKCBuoy_Min</att>
       <att name="units">S/m</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -571,6 +596,7 @@
       <att name="long_name">ConductivityKCBuoy_Max</att>
       <att name="units">S/m</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -584,6 +610,7 @@
       <att name="long_name">ConductivityKCBuoy_Std</att>
       <att name="units">S/m</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -624,6 +651,7 @@
       <att name="long_name">PressureKCBuoy</att>
       <att name="units">dbar</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -637,6 +665,7 @@
       <att name="long_name">PressureKCBuoy_Med</att>
       <att name="units">dbar</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -650,6 +679,7 @@
       <att name="long_name">PressureKCBuoy_Avg</att>
       <att name="units">dbar</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -663,6 +693,7 @@
       <att name="long_name">PressureKCBuoy_Min</att>
       <att name="units">dbar</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -676,6 +707,7 @@
       <att name="long_name">PressureKCBuoy_Max</att>
       <att name="units">dbar</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -689,6 +721,7 @@
       <att name="long_name">PressureKCBuoy_Std</att>
       <att name="units">dbar</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -728,6 +761,7 @@
       <att name="sensor_type">SBE16</att>
       <att name="long_name">SalinityKCBuoy</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -740,6 +774,7 @@
       <att name="sensor_type">SBE16</att>
       <att name="long_name">SalinityKCBuoy_Med</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -752,6 +787,7 @@
       <att name="sensor_type">SBE16</att>
       <att name="long_name">SalinityKCBuoy_Avg</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -764,6 +800,7 @@
       <att name="sensor_type">SBE16</att>
       <att name="long_name">SalinityKCBuoy_Min</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -776,6 +813,7 @@
       <att name="sensor_type">SBE16</att>
       <att name="long_name">SalinityKCBuoy_Max</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -788,6 +826,7 @@
       <att name="sensor_type">SBE16</att>
       <att name="long_name">SalinityKCBuoy_Std</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -821,7 +860,7 @@
 
   <dataVariable>
     <sourceName>KCBuoy:Latitude</sourceName>
-    <destinationName>Latitude</destinationName>
+    <destinationName>preciseLat</destinationName>
     <dataType>double</dataType>
     <addAttributes>
       <att name="standard_name">latitude</att>
@@ -836,7 +875,7 @@
 
   <dataVariable>
     <sourceName>KCBuoy:Latitude_Med</sourceName>
-    <destinationName>Latitude_Med</destinationName>
+    <destinationName>preciseLat_Med</destinationName>
     <dataType>double</dataType>
     <addAttributes>
       <att name="long_name">LatKCBuoy_Med</att>
@@ -844,13 +883,14 @@
       <att name="_CoordinateAxisType">Lat</att>
       <att name="axis">Y</att>
       <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
 
   <dataVariable>
     <sourceName>KCBuoy:Latitude_Avg</sourceName>
-    <destinationName>Latitude_Avg</destinationName>
+    <destinationName>preciseLat_Avg</destinationName>
     <dataType>double</dataType>
     <addAttributes>
       <att name="long_name">LatKCBuoy_Avg</att>
@@ -858,13 +898,14 @@
       <att name="_CoordinateAxisType">Lat</att>
       <att name="axis">Y</att>
       <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
 
   <dataVariable>
     <sourceName>KCBuoy:Latitude_Min</sourceName>
-    <destinationName>Latitude_Min</destinationName>
+    <destinationName>preciseLat_Min</destinationName>
     <dataType>double</dataType>
     <addAttributes>
       <att name="long_name">LatKCBuoy_Min</att>
@@ -872,13 +913,14 @@
       <att name="_CoordinateAxisType">Lat</att>
       <att name="axis">Y</att>
       <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
 
   <dataVariable>
     <sourceName>KCBuoy:Latitude_Max</sourceName>
-    <destinationName>Latitude_Max</destinationName>
+    <destinationName>preciseLat_Max</destinationName>
     <dataType>double</dataType>
     <addAttributes>
       <att name="long_name">LatKCBuoy_Max</att>
@@ -886,13 +928,14 @@
       <att name="_CoordinateAxisType">Lat</att>
       <att name="axis">Y</att>
       <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
 
   <dataVariable>
     <sourceName>KCBuoy:Longitude</sourceName>
-    <destinationName>Longitude</destinationName>
+    <destinationName>preciseLong</destinationName>
     <dataType>double</dataType>
     <addAttributes>
       <att name="standard_name">longitude</att>
@@ -901,13 +944,14 @@
       <att name="_CoordinateAxisType">Lon</att>
       <att name="axis">X</att>
       <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
 
   <dataVariable>
     <sourceName>KCBuoy:Longitude_Med</sourceName>
-    <destinationName>Longitude_Med</destinationName>
+    <destinationName>preciseLong_Med</destinationName>
     <dataType>double</dataType>
     <addAttributes>
       <att name="long_name">LonKCBuoy_Med</att>
@@ -915,13 +959,14 @@
       <att name="_CoordinateAxisType">Lon</att>
       <att name="axis">X</att>
       <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
 
   <dataVariable>
     <sourceName>KCBuoy:Longitude_Avg</sourceName>
-    <destinationName>Longitude_Avg</destinationName>
+    <destinationName>preciseLong_Avg</destinationName>
     <dataType>double</dataType>
     <addAttributes>
       <att name="long_name">LonKCBuoy_Avg</att>
@@ -929,13 +974,14 @@
       <att name="_CoordinateAxisType">Lon</att>
       <att name="axis">X</att>
       <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
 
   <dataVariable>
     <sourceName>KCBuoy:Longitude_Min</sourceName>
-    <destinationName>Longitude_Min</destinationName>
+    <destinationName>preciseLong_Min</destinationName>
     <dataType>double</dataType>
     <addAttributes>
       <att name="long_name">LonKCBuoy_Min</att>
@@ -943,13 +989,14 @@
       <att name="_CoordinateAxisType">Lon</att>
       <att name="axis">X</att>
       <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
 
   <dataVariable>
     <sourceName>KCBuoy:Longitude_Max</sourceName>
-    <destinationName>Longitude_Max</destinationName>
+    <destinationName>preciseLong_Max</destinationName>
     <dataType>double</dataType>
     <addAttributes>
       <att name="long_name">LonKCBuoy_Max</att>
@@ -957,6 +1004,7 @@
       <att name="_CoordinateAxisType">Lon</att>
       <att name="axis">X</att>
       <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -970,6 +1018,7 @@
       <att name="long_name">Seawater xCO2</att>
       <att name="units">ppm</att>
       <att name="depth">0.5</att>
+      <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
@@ -1010,6 +1059,7 @@
       <att name="long_name">Atmospheric xCO2</att>
       <att name="units">ppm</att>
       <att name="height">1</att>
+      <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
 
