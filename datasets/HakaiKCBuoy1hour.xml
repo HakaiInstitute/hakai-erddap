@@ -929,6 +929,113 @@
 
 
   <dataVariable>
+    <sourceName>KCBuoy:OxygenConcentration</sourceName>
+    <destinationName>Oxygen_Concentration</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird SBE 63</att>
+      <att name="long_name">Oxygen Concentration</att>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+      <att name="units">mL/L</att>
+      <att name="depth">0.5</att>
+      <att name="ancillary_data">Oxygen_Concentration_UQL,Oxygen_Concentration_flags</att>
+      <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:OxygenConcentration_Med</sourceName>
+    <destinationName>Oxygen_Concentration_Med</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird SBE 63</att>
+      <att name="long_name">Oxygen Concentration Median</att>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+      <att name="units">mL/L</att>
+      <att name="depth">0.5</att>
+      <att name="ancillary_data">Oxygen_Concentration_UQL,Oxygen_Concentration_flags</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:OxygenConcentration_Avg</sourceName>
+    <destinationName>Oxygen_Concentration_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird SBE 63</att>
+      <att name="long_name">Oxygen Concentration Mean</att>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+      <att name="units">mL/L</att>
+      <att name="depth">0.5</att>
+      <att name="ancillary_data">Oxygen_Concentration_UQL,Oxygen_Concentration_flags</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:OxygenConcentration_Min</sourceName>
+    <destinationName>Oxygen_Concentration_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird SBE 63</att>
+      <att name="long_name">Oxygen Concentration Minimum</att>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+      <att name="units">mL/L</att>
+      <att name="depth">0.5</att>
+      <att name="ancillary_data">Oxygen_Concentration_UQL,Oxygen_Concentration_flags</att>
+      <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:OxygenConcentration_Max</sourceName>
+    <destinationName>Oxygen_Concentration_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird SBE 63</att>
+      <att name="long_name">Oxygen Concentration Maximum</att>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+      <att name="units">mL/L</att>
+      <att name="depth">0.5</att>
+      <att name="ancillary_data">Oxygen_Concentration_UQL,Oxygen_Concentration_flags</att>
+      <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:OxygenConcentration_UQL</sourceName>
+    <destinationName>Oxygen_Concentration_UQL</destinationName>
+    <dataType>int</dataType>
+    <addAttributes>
+      <att name="long_name">Oxygen Concentration UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="int">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:OxygenConcentration_QC</sourceName>
+    <destinationName>Oxygen_Concentration_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">Oxygen Concentration Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
     <sourceName>KCBuoy:Fluorometer</sourceName>
     <destinationName>Fluorometer</destinationName>
     <dataType>double</dataType>
