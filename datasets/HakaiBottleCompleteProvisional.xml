@@ -33,7 +33,7 @@
         <att name="standard_name_vocabulary">CF Standard Name Table v55</att>
         <att name="subsetVariables">organization, work_area, site_id, event_pk, time, bottle_profile_id</att>
         <att name="summary">Combined Sample data with Conductivity, Temperature, Depth (CTD) Profile data</att>
-        <att name="title">Hakai Complete Bottle Data</att>
+        <att name="title">Hakai Bottle Data Complete Provisional</att>
     </addAttributes>
     <dataVariable>
         <sourceName>bottle_profile_id</sourceName>

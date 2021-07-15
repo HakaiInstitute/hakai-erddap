@@ -30,7 +30,7 @@
         <att name="sourceUrl">(local files)</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v55</att>
         <att name="summary">Bottle Data Complete Dataset. Hakai Institute data from a local source.</att>
-        <att name="title">Bottle Data Complete Dataset</att>
+        <att name="title">Hakai Bottle Data Reduced Provisional</att>
     </addAttributes>
     <dataVariable>
         <sourceName>bottle_profile_id</sourceName>
