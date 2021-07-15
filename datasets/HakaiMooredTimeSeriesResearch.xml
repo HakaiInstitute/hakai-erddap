@@ -38,7 +38,7 @@
 		<att name="license">[standard]</att>
 		<att name="sourceUrl">(local files)</att>
 		<att name="standard_name_vocabulary">CF Standard Name Table v55</att>
-		<att name="subsetVariables">file_name,SBE_FLAG, station, depth_qartod_gross_range_test, depth_qartod_aggregate, PRESPR01_qartod_gross_range_test, PRESPR01_qartod_flat_line_test, PRESPR01_qartod_rate_of_change_test, PRESPR01_qartod_aggregate, TEMPS901_qartod_gross_range_test, TEMPS901_qartod_rate_of_change_test, CNDCST01_qartod_gross_range_test, CNDCST01_qartod_flat_line_test, PSALST01_qartod_gross_range_test, PSALST01_qartod_flat_line_test, DOXYZZ01_qartod_gross_range_test, DOXYZZ01_qartod_rate_of_change_test</att>
+		<att name="subsetVariables">file_name, station</att>
 		<att name="summary">Hakai Mooring CTD Time Series.</att>
 		<att name="title">Hakai Mooring CTD Time Series</att>
 		<att name="cdm_timeseries_variables">file_name,latitude,longitude,station</att>
