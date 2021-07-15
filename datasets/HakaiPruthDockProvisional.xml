@@ -1010,7 +1010,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:TideHeight_Med</sourceName>
+        <sourceName>=PruthDock:TideHeight_Med-2.769</sourceName>
         <destinationName>tideheight_med</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
@@ -1018,13 +1018,13 @@
         <addAttributes>
             <att name="long_name">Tide Height Median</att>
             <att name="units">m</att>
-            <att name="standard_name">sea_surface_height_above_(mean_sea_level)</att>
+            <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
             <att name="ancillary_data">tideheight_flag,tideheight_uql</att>
-            <att name="cell_methods">time: median (interval: 5.0 minutes)</att>   
+            <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:TideHeight_Avg</sourceName>
+        <sourceName>=PruthDock:TideHeight_Avg-2.769</sourceName>
         <destinationName>tideheight_avg</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
@@ -1032,9 +1032,9 @@
         <addAttributes>
             <att name="long_name">Tide Height Average</att>
             <att name="units">m</att>
-            <att name="standard_name">sea_surface_height_above_(mean_sea_level)</att>
+            <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
             <att name="ancillary_data">tideheight_flag,tideheight_uql</att>
-            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>  
+            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -1138,43 +1138,59 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:PLS_Lvl</sourceName>
+        <sourceName>=PruthDock:PLS_Lvl-4.989</sourceName>
         <destinationName>pls_lvl</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">PLS Lvl</att>
+            <att name="units">m</att>
+            <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
+            <att name="ancillary_data">pls_lvl_uql,pls_lvl_flag</att>
+            <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:PLS_Lvl_Avg</sourceName>
+        <sourceName>=PruthDock:PLS_Lvl_Avg-4.989</sourceName>
         <destinationName>pls_lvl_avg</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">PLS Lvl Avg</att>
+            <att name="units">m</att>
+            <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
+            <att name="ancillary_data">pls_lvl_uql,pls_lvl_flag</att>
+            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:PLS_Lvl_Min</sourceName>
+        <sourceName>=PruthDock:PLS_Lvl_Min-4.989</sourceName>
         <destinationName>pls_lvl_min</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">PLS Lvl Min</att>
+            <att name="units">m</att>
+            <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
+            <att name="ancillary_data">pls_lvl_uql,pls_lvl_flag</att>
+            <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:PLS_Lvl_Max</sourceName>
+        <sourceName>=PruthDock:PLS_Lvl_Max-4.989</sourceName>
         <destinationName>pls_lvl_max</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">PLS Lvl Max</att>
+            <att name="units">m</att>
+            <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
+            <att name="ancillary_data">pls_lvl_uql,pls_lvl_flag</att>
+            <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -1185,10 +1201,10 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">PLS Lvl Std</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Temp_QC</sourceName>
+            <att name="units">m</att>
+            <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
+            <att name="ancillary_data">pls_lvl_uql,pls_lvl_flag</att>
+            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         <destinationName>pls_temp_flag</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
