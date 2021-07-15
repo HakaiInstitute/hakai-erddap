@@ -1,4 +1,3 @@
-
 <dataset type="EDDTableFromDatabase" datasetID="HakaiPruthDockProvisional" active="true">
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
@@ -30,7 +29,7 @@
 
         <att name="subsetVariables">station_id,latitude,longitude,windspd_uql,winddir_uql,rh_uql,airtemp_uql,airtemp2_uql,stationairpressure_uql,sealevelairpressure_uql,uvrad5minutetotal_uql,solarrad_uql,solarrad5minutetotal_uql,par_uql,par5minutetotal_uql,uvrad_uql,rain_uql,hourlyrain_uql,vegapuls_height_uql,tideheight_uql,tideheightpls_uql,tideheightdelta_uql,pls_lvl_uql,pls_temp_uql,pls_cond_uql,pls_salinity_uql,pls_tds_uql</att>
     </addAttributes>
-    
+
     <dataVariable>
         <sourceName>=PruthDock</sourceName>
         <destinationName>station_id</destinationName>
@@ -966,7 +965,7 @@
             <att name="units">m</att>
             <att name="standard_name"></att>
             <att name="ancillary_data">vegapuls_height_flag,vegapuls_height_uql</att>
-            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>   
+            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -981,7 +980,7 @@
             <att name="units">m</att>
             <att name="standard_name"></att>
             <att name="ancillary_data">vegapuls_height_flag,vegapuls_height_uql</att>
-            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>   
+            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
