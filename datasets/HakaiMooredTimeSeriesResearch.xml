@@ -1,7 +1,7 @@
 <dataset type="EDDTableFromMultidimNcFiles" datasetID="HakaiMooredTimeSeriesResearch" active="true">
 	<reloadEveryNMinutes>10080</reloadEveryNMinutes>
 	<updateEveryNMillis>10000</updateEveryNMillis>
-	<fileDir>/datasets/HakaiMooredTimeSeries/</fileDir>
+	<fileDir>/datasets/HakaiMooredTimeSeriesResearch/</fileDir>
 	<fileNameRegex>.*L1\.nc</fileNameRegex>
 	<recursive>true</recursive>
 	<pathRegex>.*</pathRegex>
