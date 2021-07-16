@@ -1,4 +1,3 @@
-
 <dataset type="EDDTableFromDatabase" datasetID="HakaiPruthDockProvisional" active="true">
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
@@ -30,7 +29,7 @@
 
         <att name="subsetVariables">station_id,latitude,longitude,windspd_uql,winddir_uql,rh_uql,airtemp_uql,airtemp2_uql,stationairpressure_uql,sealevelairpressure_uql,uvrad5minutetotal_uql,solarrad_uql,solarrad5minutetotal_uql,par_uql,par5minutetotal_uql,uvrad_uql,rain_uql,hourlyrain_uql,vegapuls_height_uql,tideheight_uql,tideheightpls_uql,tideheightdelta_uql,pls_lvl_uql,pls_temp_uql,pls_cond_uql,pls_salinity_uql,pls_tds_uql</att>
     </addAttributes>
-    
+
     <dataVariable>
         <sourceName>=PruthDock</sourceName>
         <destinationName>station_id</destinationName>
@@ -952,7 +951,7 @@
             <att name="units">m</att>
             <att name="standard_name"></att>
             <att name="ancillary_data">vegapuls_height_flag,vegapuls_height_uql</att>
-            <att name="cell_methods">time: median (interval: 5.0 minutes)</att>            
+            <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -966,7 +965,7 @@
             <att name="units">m</att>
             <att name="standard_name"></att>
             <att name="ancillary_data">vegapuls_height_flag,vegapuls_height_uql</att>
-            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>   
+            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -981,7 +980,7 @@
             <att name="units">m</att>
             <att name="standard_name"></att>
             <att name="ancillary_data">vegapuls_height_flag,vegapuls_height_uql</att>
-            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>   
+            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -1010,7 +1009,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:TideHeight_Med</sourceName>
+        <sourceName>=PruthDock:TideHeight_Med-2.769</sourceName>
         <destinationName>tideheight_med</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
@@ -1018,13 +1017,13 @@
         <addAttributes>
             <att name="long_name">Tide Height Median</att>
             <att name="units">m</att>
-            <att name="standard_name">sea_surface_height_above_(mean_sea_level)</att>
+            <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
             <att name="ancillary_data">tideheight_flag,tideheight_uql</att>
-            <att name="cell_methods">time: median (interval: 5.0 minutes)</att>   
+            <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:TideHeight_Avg</sourceName>
+        <sourceName>=PruthDock:TideHeight_Avg-2.769</sourceName>
         <destinationName>tideheight_avg</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
@@ -1032,9 +1031,9 @@
         <addAttributes>
             <att name="long_name">Tide Height Average</att>
             <att name="units">m</att>
-            <att name="standard_name">sea_surface_height_above_(mean_sea_level)</att>
+            <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
             <att name="ancillary_data">tideheight_flag,tideheight_uql</att>
-            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>  
+            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -1119,7 +1118,7 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">PLS Lvl QC</att>
+            <att name="long_name">Secondary Tide Gauge Level QC</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -1129,7 +1128,7 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">PLS Lvl UNESCO Quality Level</att>
+            <att name="long_name">Secondary Tide Gauge Level UNESCO Quality Level</att>
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
@@ -1138,43 +1137,59 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:PLS_Lvl</sourceName>
+        <sourceName>=PruthDock:PLS_Lvl-4.989</sourceName>
         <destinationName>pls_lvl</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">PLS Lvl</att>
+            <att name="long_name">Secondary Tide Gauge Level Lvl</att>
+            <att name="units">m</att>
+            <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
+            <att name="ancillary_data">pls_lvl_uql,pls_lvl_flag</att>
+            <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:PLS_Lvl_Avg</sourceName>
+        <sourceName>=PruthDock:PLS_Lvl_Avg-4.989</sourceName>
         <destinationName>pls_lvl_avg</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">PLS Lvl Avg</att>
+            <att name="long_name">Secondary Tide Gauge Level Avg</att>
+            <att name="units">m</att>
+            <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
+            <att name="ancillary_data">pls_lvl_uql,pls_lvl_flag</att>
+            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:PLS_Lvl_Min</sourceName>
+        <sourceName>=PruthDock:PLS_Lvl_Min-4.989</sourceName>
         <destinationName>pls_lvl_min</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">PLS Lvl Min</att>
+            <att name="long_name">Secondary Tide Gauge Level Min</att>
+            <att name="units">m</att>
+            <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
+            <att name="ancillary_data">pls_lvl_uql,pls_lvl_flag</att>
+            <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:PLS_Lvl_Max</sourceName>
+        <sourceName>=PruthDock:PLS_Lvl_Max-4.989</sourceName>
         <destinationName>pls_lvl_max</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">PLS Lvl Max</att>
+            <att name="long_name">Secondary Tide Gauge Level Max</att>
+            <att name="units">m</att>
+            <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
+            <att name="ancillary_data">pls_lvl_uql,pls_lvl_flag</att>
+            <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -1184,328 +1199,11 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">PLS Lvl Std</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Temp_QC</sourceName>
-        <destinationName>pls_temp_flag</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS Temp QC</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Temp_UQL</sourceName>
-        <destinationName>pls_temp_uql</destinationName>
-        <dataType>int</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS Temp UNESCO Quality Level</att>
-            <att name="ioos_category">Quality</att>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Temp</sourceName>
-        <destinationName>pls_temp</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS Temp</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Temp_Avg</sourceName>
-        <destinationName>pls_temp_avg</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS Temp Avg</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Temp_Min</sourceName>
-        <destinationName>pls_temp_min</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS Temp Min</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Temp_Max</sourceName>
-        <destinationName>pls_temp_max</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Sea Water Temperature Max</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Temp_Std</sourceName>
-        <destinationName>pls_temp_std</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS Temp Std</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Cond_QC</sourceName>
-        <destinationName>pls_cond_flag</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS Cond QC</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Cond_UQL</sourceName>
-        <destinationName>pls_cond_uql</destinationName>
-        <dataType>int</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS Cond UNESCO Quality Level</att>
-            <att name="ioos_category">Quality</att>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Cond</sourceName>
-        <destinationName>pls_cond</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS Cond</att>
-            <att name="units">uS/cm</att>
-            <att name="standard_name">sea_water_conductivity</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Cond_Avg</sourceName>
-        <destinationName>pls_cond_avg</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS Cond Avg</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Cond_Min</sourceName>
-        <destinationName>pls_cond_min</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS Cond Min</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Cond_Max</sourceName>
-        <destinationName>pls_cond_max</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS Cond Max</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Cond_Std</sourceName>
-        <destinationName>pls_cond_std</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS Cond Std</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Salinity_QC</sourceName>
-        <destinationName>pls_salinity_flag</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS Salinity QC</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Salinity_UQL</sourceName>
-        <destinationName>pls_salinity_uql</destinationName>
-        <dataType>int</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="ioos_category">Quality</att>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Salinity</sourceName>
-        <destinationName>pls_salinity</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="colorBarMaximum" type="double">37.0</att>
-            <att name="colorBarMinimum" type="double">32.0</att>
-            <att name="long_name">Sea Water Practical Salinity</att>
-            <att name="standard_name">sea_water_practical_salinity</att>
-            <att name="units">PSU</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Salinity_Avg</sourceName>
-        <destinationName>pls_salinity_avg</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="colorBarMaximum" type="double">37.0</att>
-            <att name="colorBarMinimum" type="double">32.0</att>
-            <att name="long_name">Sea Water Practical Salinity</att>
-            <att name="standard_name">sea_water_practical_salinity</att>
-            <att name="units">PSU</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Salinity_Min</sourceName>
-        <destinationName>pls_salinity_min</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="colorBarMaximum" type="double">37.0</att>
-            <att name="colorBarMinimum" type="double">32.0</att>
-            <att name="long_name">Sea Water Practical Salinity</att>
-            <att name="standard_name">sea_water_practical_salinity</att>
-            <att name="units">PSU</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Salinity_Max</sourceName>
-        <destinationName>pls_salinity_max</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="colorBarMaximum" type="double">37.0</att>
-            <att name="colorBarMinimum" type="double">32.0</att>
-            <att name="long_name">Sea Water Practical Salinity</att>
-            <att name="standard_name">sea_water_practical_salinity</att>
-            <att name="units">PSU</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_Salinity_Std</sourceName>
-        <destinationName>pls_salinity_std</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="colorBarMaximum" type="double">37.0</att>
-            <att name="colorBarMinimum" type="double">32.0</att>
-            <att name="long_name">Sea Water Practical Salinity</att>
-            <att name="standard_name">sea_water_practical_salinity</att>
-            <att name="units">PSU</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_TDS_QC</sourceName>
-        <destinationName>pls_tds_flag</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS TDS QC</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_TDS_UQL</sourceName>
-        <destinationName>pls_tds_uql</destinationName>
-        <dataType>int</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS TDS UNESCO Quality Level</att>
-            <att name="ioos_category">Quality</att>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_TDS</sourceName>
-        <destinationName>pls_tds</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS TDS</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_TDS_Avg</sourceName>
-        <destinationName>pls_tds_avg</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS TDS Avg</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_TDS_Min</sourceName>
-        <destinationName>pls_tds_min</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS TDS Min</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_TDS_Max</sourceName>
-        <destinationName>pls_tds_max</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS TDS Max</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>PruthDock:PLS_TDS_Std</sourceName>
-        <destinationName>pls_tds_std</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">PLS TDS Std</att>
+            <att name="long_name">Secondary Tide Gauge Level Std</att>
+            <att name="units">m</att>
+            <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
+            <att name="ancillary_data">pls_lvl_uql,pls_lvl_flag</att>
+            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
 </dataset>
