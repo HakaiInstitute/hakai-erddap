@@ -951,7 +951,7 @@
             <att name="units">m</att>
             <att name="standard_name"></att>
             <att name="ancillary_data">vegapuls_height_flag,vegapuls_height_uql</att>
-            <att name="cell_methods">time: median (interval: 5.0 minutes)</att>            
+            <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -1118,7 +1118,7 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">PLS Lvl QC</att>
+            <att name="long_name">Secondary Tide Gauge Level QC</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -1128,7 +1128,7 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">PLS Lvl UNESCO Quality Level</att>
+            <att name="long_name">Secondary Tide Gauge Level UNESCO Quality Level</att>
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
@@ -1143,7 +1143,7 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">PLS Lvl</att>
+            <att name="long_name">Secondary Tide Gauge Level Lvl</att>
             <att name="units">m</att>
             <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
             <att name="ancillary_data">pls_lvl_uql,pls_lvl_flag</att>
@@ -1157,7 +1157,7 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">PLS Lvl Avg</att>
+            <att name="long_name">Secondary Tide Gauge Level Avg</att>
             <att name="units">m</att>
             <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
             <att name="ancillary_data">pls_lvl_uql,pls_lvl_flag</att>
@@ -1171,7 +1171,7 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">PLS Lvl Min</att>
+            <att name="long_name">Secondary Tide Gauge Level Min</att>
             <att name="units">m</att>
             <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
             <att name="ancillary_data">pls_lvl_uql,pls_lvl_flag</att>
@@ -1185,7 +1185,7 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">PLS Lvl Max</att>
+            <att name="long_name">Secondary Tide Gauge Level Max</att>
             <att name="units">m</att>
             <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
             <att name="ancillary_data">pls_lvl_uql,pls_lvl_flag</att>
@@ -1199,7 +1199,7 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">PLS Lvl Std</att>
+            <att name="long_name">Secondary Tide Gauge Level Std</att>
             <att name="units">m</att>
             <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
             <att name="ancillary_data">pls_lvl_uql,pls_lvl_flag</att>
