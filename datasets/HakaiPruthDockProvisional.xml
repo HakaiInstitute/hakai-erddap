@@ -27,7 +27,7 @@
         <att name='cdm_data_type'>Timeseries</att>
         <att name='cdm_timeseries_variables'>station_id,latitude,longitude</att>
 
-        <att name="subsetVariables">station_id,latitude,longitude,windspd_uql,winddir_uql,rh_uql,airtemp_uql,airtemp2_uql,stationairpressure_uql,sealevelairpressure_uql,uvrad5minutetotal_uql,solarrad_uql,solarrad5minutetotal_uql,par_uql,par5minutetotal_uql,uvrad_uql,rain_uql,hourlyrain_uql,vegapuls_height_uql,tideheight_uql,tideheightpls_uql,tideheightdelta_uql,pls_lvl_uql</att>
+        <att name="subsetVariables">station_id,latitude,longitude,windspd_uql,winddir_uql,rh_uql,airtemp_uql,airtemp2_uql,stationairpressure_uql,sealevelairpressure_uql,uvrad5minutetotal_uql,solarrad_uql,solarrad5minutetotal_uql,par_uql,par5minutetotal_uql,uvrad_uql,rain_uql,hourlyrain_uql,tideheight_uql,tideheightdelta_uql</att>
     </addAttributes>
 
     <dataVariable>
