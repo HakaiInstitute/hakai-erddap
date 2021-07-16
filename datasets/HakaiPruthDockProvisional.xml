@@ -941,7 +941,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>=PruthDock:TideHeight_Med-2.769</sourceName>
+        <sourceName>=row.columnFloat(PruthDock:TideHeight_Med)-2.769</sourceName>
         <destinationName>tideheight_med</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
@@ -955,7 +955,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>=PruthDock:TideHeight_Avg-2.769</sourceName>
+        <sourceName>=row.columnFloat(PruthDock:TideHeight_Avg)-2.769</sourceName>
         <destinationName>tideheight_avg</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
@@ -994,17 +994,17 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>PruthDock:TideHeightPLS_Avg</sourceName>
+        <sourceName>=row.columnFloat(PruthDock:TideHeightPLS_Avg)-2.742</sourceName>
         <destinationName>tideheightpls_avg</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">Tide Height PLS Avg</att>
-            <att name="ioos_category">Quality</att>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="long_name">Seconday Tide Height PLS Avg</att>
+            <att name="units">m</att>
+            <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
+            <att name="ancillary_data">tideheightpls_uql,tideheightpls_flag</att>
+            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
