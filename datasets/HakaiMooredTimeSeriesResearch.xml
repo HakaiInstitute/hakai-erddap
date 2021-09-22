@@ -2,7 +2,7 @@
 	<reloadEveryNMinutes>10080</reloadEveryNMinutes>
 	<updateEveryNMillis>10000</updateEveryNMillis>
 	<fileDir>/datasets/HakaiMooredTimeSeriesResearch/</fileDir>
-	<fileNameRegex>.*L1a_flagged\.nc</fileNameRegex>
+	<fileNameRegex>.*L1a\_flagged\.nc</fileNameRegex>
 	<recursive>true</recursive>
 	<pathRegex>.*</pathRegex>
 	<metadataFrom>last</metadataFrom>
