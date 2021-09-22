@@ -2,7 +2,7 @@
 	<reloadEveryNMinutes>10080</reloadEveryNMinutes>
 	<updateEveryNMillis>10000</updateEveryNMillis>
 	<fileDir>/datasets/HakaiMooredTimeSeriesResearch/</fileDir>
-	<fileNameRegex>.*L1\.nc</fileNameRegex>
+	<fileNameRegex>.*L1a_flagged\.nc</fileNameRegex>
 	<recursive>true</recursive>
 	<pathRegex>.*</pathRegex>
 	<metadataFrom>last</metadataFrom>
@@ -103,13 +103,7 @@
 		<addAttributes>
 			<att name="_FillValue" type="double">NaN</att>
 			<att name="calendar">proleptic_gregorian</att>
-			<att name="id" type="int">1</att>
 			<att name="long_name">Instrument Time</att>
-			<att name="missing_value" type="double">-9.99E-29</att>
-			<att name="name">time</att>
-			<att name="SBE_long_name">Time, Instrument [seconds]</att>
-			<att name="SBE_short_name">timeK</att>
-			<att name="span">634684801</att>
 			<att name="units">seconds since 2000-01-01</att>
 			<att name="standard_name">time</att>
 			<att name="units">seconds since 2000-01-01T00:00:00Z</att>
@@ -121,19 +115,9 @@
 		<dataType>double</dataType>
 		<addAttributes>
 			<att name="_FillValue" type="double">NaN</att>
-			<att name="ancillary_variables">depth_qartod_gross_range_test depth_qartod_aggregate</att>
-			<att name="id" type="int">9</att>
 			<att name="long_name">Depth</att>
-			<att name="missing_value" type="double">-9.99E-29</att>
-			<att name="name">depth</att>
-			<att name="SBE_long_name">Depth [salt water, m], lat = 0.00</att>
-			<att name="SBE_short_name">depSM</att>
-			<att name="span">-0.105</att>
 			<att name="standard_name">depth</att>
 			<att name="units">m</att>
-			<att name="colorBarMaximum" type="double">8000.0</att>
-			<att name="colorBarMinimum" type="double">-8000.0</att>
-			<att name="colorBarPalette">TopographyDepth</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -142,18 +126,9 @@
 		<dataType>double</dataType>
 		<addAttributes>
 			<att name="_FillValue" type="double">NaN</att>
-			<att name="ancillary_variables">TEMPS901_qartod_rate_of_change_test TEMPS901_qartod_gross_range_test TEMPS901_qartod_flat_line_test TEMPS901_qartod_aggregate TEMPS901_qartod_spike_test</att>
-			<att name="id" type="int">3</att>
 			<att name="long_name">Sea Water Temperature</att>
-			<att name="missing_value" type="double">-9.99E-29</att>
-			<att name="name">TEMPS901</att>
-			<att name="SBE_long_name">Temperature [ITS-90, deg C]</att>
-			<att name="SBE_short_name">tv290C</att>
-			<att name="span">6.0274</att>
 			<att name="standard_name">sea_water_temperature</att>
 			<att name="units">degC [ITS-90]</att>
-			<att name="colorBarMaximum" type="double">32.0</att>
-			<att name="colorBarMinimum" type="double">0.0</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -162,17 +137,9 @@
 		<dataType>double</dataType>
 		<addAttributes>
 			<att name="_FillValue" type="double">NaN</att>
-			<att name="ancillary_variables">PSALST01_qartod_rate_of_change_test PSALST01_qartod_spike_test PSALST01_qartod_aggregate PSALST01_qartod_flat_line_test PSALST01_qartod_gross_range_test</att>
-			<att name="id" type="int">4</att>
 			<att name="long_name">Practical Salinity</att>
-			<att name="missing_value" type="double">-9.99E-29</att>
-			<att name="name">PSALST01</att>
-			<att name="SBE_long_name">Salinity, Practical [PSU]</att>
-			<att name="SBE_short_name">sal00</att>
-			<att name="span">0.0034</att>
 			<att name="standard_name">sea_water_practical_salinity</att>
-			<att name="colorBarMaximum" type="double">37.0</att>
-			<att name="colorBarMinimum" type="double">32.0</att>
+			<att name="units">1e-3</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -181,34 +148,9 @@
 		<dataType>double</dataType>
 		<addAttributes>
 			<att name="_FillValue" type="double">NaN</att>
-			<att name="ancillary_variables">PRESPR01_qartod_aggregate PRESPR01_qartod_gross_range_test PRESPR01_qartod_flat_line_test PRESPR01_qartod_spike_test PRESPR01_qartod_rate_of_change_test</att>
-			<att name="id" type="int">5</att>
 			<att name="long_name">Sea Water Pressure</att>
-			<att name="missing_value" type="double">-9.99E-29</att>
-			<att name="name">PRESPR01</att>
-			<att name="SBE_long_name">Pressure, Strain Gauge [db]</att>
-			<att name="SBE_short_name">prdM</att>
-			<att name="span">-0.106</att>
 			<att name="standard_name">sea_water_pressure</att>
 			<att name="units">dBar</att>
-			<att name="colorBarMaximum" type="double">5000.0</att>
-			<att name="colorBarMinimum" type="double">0.0</att>
-		</addAttributes>
-	</dataVariable>
-	<dataVariable>
-		<sourceName>OXYSAT</sourceName>
-		<destinationName>OXYSAT</destinationName>
-		<dataType>double</dataType>
-		<addAttributes>
-			<att name="_FillValue" type="double">NaN</att>
-			<att name="id" type="int">6</att>
-			<att name="long_name">Oxygen Saturation Concentration, Garcia &amp; Gordon</att>
-			<att name="missing_value" type="double">-9.99E-29</att>
-			<att name="name">OXYSAT</att>
-			<att name="SBE_long_name">Oxygen Saturation, Garcia &amp; Gordon [ml/l]</att>
-			<att name="SBE_short_name">oxsolML/L</att>
-			<att name="span">5.84155</att>
-			<att name="units">mL/L</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -217,15 +159,7 @@
 		<dataType>double</dataType>
 		<addAttributes>
 			<att name="_FillValue" type="double">NaN</att>
-			<att name="ancillary_variables">DOXYZZ01_qartod_rate_of_change_test DOXYZZ01_qartod_spike_test DOXYZZ01_qartod_flat_line_test DOXYZZ01_qartod_gross_range_test DOXYZZ01_qartod_aggregate</att>
-			<att name="id" type="int">7</att>
-			<att name="instrument">SBE63</att>
 			<att name="long_name">Dissolved Oxygen Concentration</att>
-			<att name="missing_value" type="double">-9.99E-29</att>
-			<att name="name">DOXYZZ01</att>
-			<att name="SBE_long_name">Oxygen, SBE 63 [ml/l]</att>
-			<att name="SBE_short_name">sbeopoxML/L</att>
-			<att name="span">1.555</att>
 			<att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
 			<att name="units">mL/L</att>
 		</addAttributes>
@@ -236,14 +170,10 @@
 		<dataType>double</dataType>
 		<addAttributes>
 			<att name="_FillValue" type="double">NaN</att>
-			<att name="id" type="int">8</att>
 			<att name="instrument">SBE63</att>
 			<att name="long_name">Oxygen Sensor Foil Temperature</att>
-			<att name="missing_value" type="double">-9.99E-29</att>
-			<att name="name">SBE63TEMP</att>
-			<att name="SBE_long_name">Oxygen Temperature, SBE 63 [ITS-90, deg C]</att>
-			<att name="SBE_short_name">sbeoxTC</att>
-			<att name="units">degree_C</att>
+			<att name="units">degC</att>
+			<att name="standard_name">temperature_of_sensor_for_oxygen_in_sea_water</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -252,14 +182,7 @@
 		<dataType>double</dataType>
 		<addAttributes>
 			<att name="_FillValue" type="double">NaN</att>
-			<att name="ancillary_variables">CNDCST01_qartod_aggregate CNDCST01_qartod_rate_of_change_test CNDCST01_qartod_flat_line_test CNDCST01_qartod_spike_test CNDCST01_qartod_gross_range_test</att>
-			<att name="id" type="int">10</att>
 			<att name="long_name">Sea Water Conductivity</att>
-			<att name="missing_value" type="double">-9.99E-29</att>
-			<att name="name">CNDCST01</att>
-			<att name="SBE_long_name">Conductivity [mS/cm]</att>
-			<att name="SBE_short_name">cond0mS/cm</att>
-			<att name="span">0.000211</att>
 			<att name="standard_name">sea_water_conductivity</att>
 			<att name="units">mS/cm</att>
 		</addAttributes>
