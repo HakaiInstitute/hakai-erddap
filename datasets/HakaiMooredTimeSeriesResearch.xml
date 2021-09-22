@@ -44,7 +44,7 @@
 		<att name="cdm_timeseries_variables">file_name,latitude,longitude,station</att>
 	</addAttributes>
 	<dataVariable>
-		<sourceName>file_name</sourceName>
+		<sourceName>file_id</sourceName>
 		<destinationName>file_name</destinationName>
 		<dataType>String</dataType>
 		<!-- sourceAttributes>
@@ -52,6 +52,26 @@
 		<addAttributes>
 			<att name="cf_role">timeseries_id</att>
 			<att name="long_name">File Name</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>instrument_model</sourceName>
+		<destinationName>instrument_model</destinationName>
+		<dataType>String</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Instrument Model</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>instrument_serial</sourceName>
+		<destinationName>instrument_serial</destinationName>
+		<dataType>String</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Instrument Serial</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
