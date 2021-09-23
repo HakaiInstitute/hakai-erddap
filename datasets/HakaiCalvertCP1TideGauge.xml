@@ -61,7 +61,7 @@ Derive depth from corrected sea water pressure.
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>=RBRSoloD SN</sourceName>
+        <sourceName>=RBRSoloD SN079156</sourceName>
         <destinationName>instrument</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
