@@ -1,0 +1,140 @@
+<dataset type="EDDTableFromNcFiles" datasetID="HakaiCalvertCP1TideGauge" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/HakaiCalvertCP1TideGauge/</fileDir>
+    <fileNameRegex>.*L1\.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <sortedColumnSourceName>time</sortedColumnSourceName>
+    <sortFilesBySourceNames>time</sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <accessibleViaFiles>true</accessibleViaFiles>
+    <!-- sourceAttributes>
+        <att name="history">Extract RBR Solo data with Ruskin software
+Retrieve Atmospheric Pressure measured from Hakai&#39;s Pruth Dock Weather Station.
+Convert Atmospheric pressure to dBar.
+Substract atmospheric pressure from measured sea water pressure.
+Derive depth from corrected sea water pressure.
+    Generated a water_level variable centered around the mean sea level.</att>
+        <att name="instrument">RBRsolo</att>
+        <att name="instrument_calibration">{&quot;1&quot;: {&quot;name&quot;: &quot;Pressure&quot;, &quot;calibration&quot;: &quot;35.32503 1933.8774 91.36211 -12.728503&quot;, &quot;units&quot;: &quot;dbar (dbar)&quot;, &quot;rangingMode&quot;: &quot;None&quot;}}</att>
+        <att name="instrument_firmware">3.270</att>
+        <att name="instrument_serial">079156</att>
+        <att name="organization">Hakai Institute</att>
+        <att name="original_header">{&quot;header_info&quot;: {}, &quot;Model&quot;: &quot;RBRsolo&quot;, &quot;Firmware&quot;: &quot;3.270&quot;, &quot;Serial&quot;: &quot;079156&quot;, &quot;HostVersion&quot;: &quot;(Ruskin version number - 2.10.4)&quot;, &quot;LoggerTime&quot;: &quot;29-Aug-2020 23:06:10.664&quot;, &quot;LoggingStartTime&quot;: &quot;12-Feb-2020 21:20:00.000&quot;, &quot;LoggingEndTime&quot;: &quot;31-Dec-2099 00:00:00.000&quot;, &quot;LoggingSamplingPeriod&quot;: &quot;00:01:15&quot;, &quot;NumberOfChannels&quot;: &quot;1&quot;, &quot;Channel&quot;: {&quot;1&quot;: {&quot;name&quot;: &quot;Pressure&quot;, &quot;calibration&quot;: &quot;35.32503 1933.8774 91.36211 -12.728503&quot;, &quot;units&quot;: &quot;dbar (dbar)&quot;, &quot;rangingMode&quot;: &quot;None&quot;}}, &quot;Event&quot;: {&quot;1&quot;: {&quot;time&quot;: &quot;12-Feb-2020 21:20:00.000&quot;, &quot;sample&quot;: &quot;1&quot;, &quot;type&quot;: &quot;Time synchronization marker&quot;}, &quot;2&quot;: {&quot;time&quot;: &quot;29-Aug-2020 23:05:46.000&quot;, &quot;sample&quot;: &quot;229334&quot;, &quot;type&quot;: &quot;User stopped the deployment&quot;}}, &quot;NumberOfSamples&quot;: 229333}</att>
+        <att name="summary">This dataset present a time series of water level measurements made by an RBR Solo pressure sensor deployed by the Hakai Institute near the Calvert Island Research Station in the coastal region of Choke Pass. </att>
+        <att name="title">Seabed Pressure time series from a Pressure Tide Gauge Instrument</att>
+    </sourceAttributes -->
+    <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
+        <att name="cdm_timeseries_variables">station_id, longitude, latitude</att>
+        <att name="subsetVariables">station_id, longitude, latitude</att>
+    -->
+    <addAttributes>
+        <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
+        <att name="infoUrl">hakai.org</att>
+        <att name="institution">Hakai Institute</att>
+        <att name="keywords">above, air, air_pressure, atmosphere, atmospheric, corrected, data, depth, dock, dpth01, earth, Earth Science &gt; Atmosphere &gt; Atmospheric Pressure &gt; Atmospheric Pressure Measurements, Earth Science &gt; Atmosphere &gt; Atmospheric Pressure &gt; Sea Level Pressure, Earth Science &gt; Atmosphere &gt; Atmospheric Pressure &gt; Static Pressure, Earth Science &gt; Oceans &gt; Ocean Pressure &gt; Sea Level Pressure, Earth Science &gt; Oceans &gt; Ocean Pressure &gt; Water Pressure, gauge, height, height_above_mean_sea_level, instrument, latitude, level, longitude, mean, measurements, ocean, oceans, pres08, pres20, pressure, pruth, PruthTideHeightAvg, science, sea, Sea_Pressure, sea_water_pressure, sea_water_pressure_at_sea_water_surface, seabed, seawater, series, static, StationAirPressure, StationAirPressure_dbar, surface, tide, time, time series, water, water_height</att>
+        <att name="keywords_vocabulary">GCMD Science Keywords</att>
+        <att name="license">[standard]</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v55</att>
+        <att name="summary">This dataset present a time series of water level measurements made by an RBR Solo pressure sensor deployed by the Hakai Institute near the Calvert Island Research Station in the coastal region of Choke Pass. Sea Pressure collected by the instrument just above the sea bed was then corrected to substract the atmospheric pressure based on the Hakai Pruth Dock Weather Station. The resulting sea pressure was then converted to a depth with the Gibbs Sea Water TEOS-10 toolbox and substracted by the mean water level measured at the location.</att>
+        <att name="instrument">RBR SoloD SN</att>
+        <att name="cdm_data_type">TimeSeries</att>
+        <att name="cdm_timeseries_variables">station,instrument,latitude,longitude</att>
+        <att name="subsetVariables">station,instrument</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>=CP01</sourceName>
+        <destinationName>station</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="long_name">Latitude</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degree_north</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="cf_role">timeseries_id</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>=RBRSoloD SN</sourceName>
+        <destinationName>instrument</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="long_name">Latitude</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degree_north</att>
+        </sourceAttributes -->
+        <addAttributes></addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>latitude</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="long_name">Latitude</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degree_north</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="missing_value" type="double">NaN</att>
+            <att name="units">degrees_north</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>longitude</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="long_name">Longitude</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degree_east</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="missing_value" type="double">NaN</att>
+            <att name="units">degrees_east</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>time</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>long</dataType>
+        <!-- sourceAttributes>
+            <att name="calendar">proleptic_gregorian</att>
+            <att name="units">minutes since 2020-01-01 08:00:00</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Time</att>
+            <att name="standard_name">time</att>
+            <att name="units">minutes since 2020-01-01T08:00:00Z</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>water_height</sourceName>
+        <destinationName>water_height</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="long_name">Water Level Above Mean Sea Level</att>
+            <att name="standard_name">height_above_mean_sea_level</att>
+            <att name="units">m</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="missing_value" type="double">NaN</att>
+            <att name="long_name">Water Level Above Mean Sea Level</att>
+            <att name="standard_name">height_above_mean_sea_level</att>
+            <att name="units">m</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
