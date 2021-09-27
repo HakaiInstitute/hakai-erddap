@@ -186,18 +186,6 @@
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
-		<sourceName>SBE63TEMP</sourceName>
-		<destinationName>SBE63TEMP</destinationName>
-		<dataType>double</dataType>
-		<addAttributes>
-			<att name="_FillValue" type="double">NaN</att>
-			<att name="instrument">SBE63</att>
-			<att name="long_name">Oxygen Sensor Foil Temperature</att>
-			<att name="units">degC</att>
-			<att name="standard_name">temperature_of_sensor_for_oxygen_in_sea_water</att>
-		</addAttributes>
-	</dataVariable>
-	<dataVariable>
 		<sourceName>CNDCST01</sourceName>
 		<destinationName>CNDCST01</destinationName>
 		<dataType>double</dataType>
