@@ -65,7 +65,7 @@
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
-		<sourceName>instrument_serial</sourceName>
+		<sourceName>instrument_serialnumber</sourceName>
 		<destinationName>instrument_serial</destinationName>
 		<dataType>String</dataType>
 		<!-- sourceAttributes>
