@@ -42,6 +42,7 @@
 		<att name="summary">Hakai Mooring CTD Time Series.</att>
 		<att name="title">Hakai Mooring CTD Time Series</att>
 		<att name="cdm_timeseries_variables">file_name,latitude,longitude,station</att>
+		<att name="subsetVariables">file_id,instrument_model,instrument_serialnumber,station</att>
 	</addAttributes>
 	<dataVariable>
 		<sourceName>file_id</sourceName>
