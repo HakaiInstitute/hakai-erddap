@@ -38,10 +38,10 @@
 		<att name="license">[standard]</att>
 		<att name="sourceUrl">(local files)</att>
 		<att name="standard_name_vocabulary">CF Standard Name Table v55</att>
-		<att name="subsetVariables">file_name, station</att>
 		<att name="summary">Hakai Mooring CTD Time Series.</att>
 		<att name="title">Hakai Mooring CTD Time Series</att>
 		<att name="cdm_timeseries_variables">file_name,latitude,longitude,station</att>
+		<att name="subsetVariables">file_id,instrument_model,instrument_serialnumber,station</att>
 	</addAttributes>
 	<dataVariable>
 		<sourceName>file_id</sourceName>
@@ -182,18 +182,6 @@
 			<att name="long_name">Dissolved Oxygen Concentration</att>
 			<att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
 			<att name="units">mL/L</att>
-		</addAttributes>
-	</dataVariable>
-	<dataVariable>
-		<sourceName>SBE63TEMP</sourceName>
-		<destinationName>SBE63TEMP</destinationName>
-		<dataType>double</dataType>
-		<addAttributes>
-			<att name="_FillValue" type="double">NaN</att>
-			<att name="instrument">SBE63</att>
-			<att name="long_name">Oxygen Sensor Foil Temperature</att>
-			<att name="units">degC</att>
-			<att name="standard_name">temperature_of_sensor_for_oxygen_in_sea_water</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
