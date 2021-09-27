@@ -38,7 +38,6 @@
 		<att name="license">[standard]</att>
 		<att name="sourceUrl">(local files)</att>
 		<att name="standard_name_vocabulary">CF Standard Name Table v55</att>
-		<att name="subsetVariables">file_name, station</att>
 		<att name="summary">Hakai Mooring CTD Time Series.</att>
 		<att name="title">Hakai Mooring CTD Time Series</att>
 		<att name="cdm_timeseries_variables">file_name,latitude,longitude,station</att>
