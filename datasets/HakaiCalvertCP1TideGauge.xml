@@ -40,6 +40,7 @@ Derive depth from corrected sea water pressure.
         <att name="license">[standard]</att>
         <att name="sourceUrl">(local files)</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v55</att>
+        <att name="title">Water Level measured from a Pressure Tide Gauge Instrument Deployed in Choke Pass on Calvert Island Research</att>
         <att name="summary">This dataset present a time series of water level measurements made by an RBR Solo pressure sensor deployed by the Hakai Institute near the Calvert Island Research Station in the coastal region of Choke Pass. Sea Pressure collected by the instrument just above the sea bed was then corrected to substract the atmospheric pressure based on the Hakai Pruth Dock Weather Station. The resulting sea pressure was then converted to a depth with the Gibbs Sea Water TEOS-10 toolbox and substracted by the mean water level measured at the location.</att>
         <att name="instrument">RBR SoloD SN</att>
         <att name="cdm_data_type">TimeSeries</att>
@@ -118,6 +119,23 @@ Derive depth from corrected sea water pressure.
             <att name="long_name">Time</att>
             <att name="standard_name">time</att>
             <att name="units">minutes since 2020-01-01T08:00:00Z</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>depth</sourceName>
+        <destinationName>instrument_depth</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="long_name">Instrument Depth</att>
+            <att name="standard_name">depth</att>
+            <att name="units">m</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="long_name">Instrument Depth</att>
+            <att name="standard_name">sea_floor_depth_below_sea_surface</att>
+            <att name="units">m</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
