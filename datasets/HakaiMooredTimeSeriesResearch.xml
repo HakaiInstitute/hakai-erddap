@@ -42,6 +42,27 @@
 		<att name="title">Hakai Mooring CTD Time Series</att>
 		<att name="cdm_timeseries_variables">file_name,latitude,longitude,station</att>
 		<att name="subsetVariables">file_id,instrument_model,instrument_serialnumber,station</att>
+
+		<att name="contributor_name">Jessy Barrette,Jennifer Jackson</att>
+		<att name="contributor_role">custodian,owner</att>
+		<att name="creator_email">jennifer.jackson@hakai.org</att>
+		<att name="creator_name">Jennifer Jackson</att>
+		<att name="creator_type">person</att>
+		<att name="date_created">2020-02-11</att>
+		<att name="geospatial_lat_max">51.601505</att>
+		<att name="geospatial_lat_min">51.601505</att>
+		<att name="geospatial_lon_max">-127.531247</att>
+		<att name="geospatial_lon_min">-127.531247</att>
+		<att name="geospatial_vertical_max">260.0</att>
+		<att name="geospatial_vertical_min">90.0</att>
+		<att name="institution">Hakai Institute</att>
+		<att name="keywords">mooring,water temperature,subSurfaceSalinity,subSurfaceTemperature,dissolved oxygen,oxygen,pressure,conductivity,salinity</att>
+		<att name="publisher_email">info@hakai.org</att>
+		<att name="publisher_institution">Hakai Institute</att>
+		<att name="publisher_name">Jessy Barrette</att>
+		<att name="publisher_url">hakai.org</att>
+		<att name="summary">This datasets present a collection of water properties measurements (Temperature, Conductivity, Dissolved Oxygen, Salinity) collected by high accuracy instruments as part of the mooring program of the Hakai Institute. The data is first compared to the profiles collected nearby during the deployment. Instrument clock is corrected to reduce clock drift, data is reduced to consider only data collected within the water, automated QCing is applied to detect spikes and potentially bad data which is then manually revised.</att>
+		<att name="title">Hakai Mooring Water Properties Timeseries Research</att>
 	</addAttributes>
 	<dataVariable>
 		<sourceName>file_id</sourceName>
