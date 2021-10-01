@@ -41,7 +41,7 @@
 		<att name="summary">Hakai Mooring CTD Time Series.</att>
 		<att name="title">Hakai Mooring CTD Time Series</att>
 		<att name="cdm_timeseries_variables">file_name,latitude,longitude,station</att>
-		<att name="subsetVariables">file_id,instrument_model,instrument_serialnumber,station</att>
+		<att name="subsetVariables">file_name,instrument_model,instrument_serialnumber,station</att>
 
 		<att name="contributor_name">Jessy Barrette,Jennifer Jackson</att>
 		<att name="contributor_role">custodian,owner</att>
