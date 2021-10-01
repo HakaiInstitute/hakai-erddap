@@ -61,6 +61,14 @@
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
+		<sourceName>station</sourceName>
+		<destinationName>station</destinationName>
+		<dataType>String</dataType>
+		<addAttributes>
+			<att name="long_name">Station</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
 		<sourceName>time</sourceName>
 		<destinationName>time</destinationName>
 		<dataType>long</dataType>
