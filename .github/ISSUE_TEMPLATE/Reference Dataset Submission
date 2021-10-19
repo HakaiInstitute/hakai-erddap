@@ -1,0 +1,26 @@
+# Hakai Dataset Submission 
+
+Reference Static Datasets are used as a refenrence for a scientific parper. Those datasets consist generally of an aggregation of different already existing datasets to which some corrections and transformations were applied.
+
+Related examples include:
+
+- [Hakai Oceanography Nutrient Research Dataset](https://cioos-siooc.github.io/metadata-entry-form/#/en/hakai/tV5qE0aUgaOjSVmgPgiZ6MyHuSy1/-Ma5RGdWbo_pLXJX3Sbg) (DRAFT, not yet published)
+- [Marine CO2 system variability along the Inside Passage of the Pacific Northwest coast of North America determined from an Alaskan ferry](https://catalogue.hakai.org/dataset/ca-cioos_0e9e7d85-5378-4295-a38c-fb79b09609d9).  This dataset is specific to a research paper by Wiley and is referenced by this DOI: https://doi.org/10.21966/m0es-7520
+
+Below are listed all the different steps related to the initial submission of a dataset. 
+
+A more detailed written and visual description of every step is available respectively 
+[here](https://docs.google.com/document/d/1QMU0skj7kWbxuS_cVUNkTYZSeqpa1lVsK7WJvC4hMyA/edit?usp=sharing) and [here](https://lucid.app/lucidchart/invitations/accept/ae8530a5-4a8f-435e-b17a-60aab0773f2f). 
+
+# Submission steps
+## Initial Submission (Data Administrator)
+- [ ] Draft a metadata record using the [Hakai metadata entry form](https://cioos-siooc.github.io/metadata-entry-form/#/en/hakai)
+
+##  Online Dataset Creation (Data Integrator)
+- [ ] Make data files and extra information available in a new GitHub repository or open Google Drive Folder
+
+## Dataset Review (Data Administrator)
+- [ ] Review data and metadata and approve for publishing
+
+## Dataset Completion (Data Integrator)
+- [ ] COMPLETED
