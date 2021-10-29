@@ -1,0 +1,219 @@
+<dataset type="EDDTableFromMultidimNcFiles" datasetID="HakaiMooredTimeSeriesResearch" active="true">
+	<reloadEveryNMinutes>10080</reloadEveryNMinutes>
+	<updateEveryNMillis>10000</updateEveryNMillis>
+	<fileDir>/datasets/HakaiMooredTimeSeriesResearch/</fileDir>
+	<fileNameRegex>.*L1b\_flagged\.nc</fileNameRegex>
+	<recursive>true</recursive>
+	<pathRegex>.*</pathRegex>
+	<metadataFrom>last</metadataFrom>
+	<standardizeWhat>0</standardizeWhat>
+	<removeMVRows>true</removeMVRows>
+	<sortFilesBySourceNames></sortFilesBySourceNames>
+	<fileTableInMemory>false</fileTableInMemory>
+	<accessibleViaFiles>true</accessibleViaFiles>
+	<!-- sourceAttributes>
+		<att name="bad_flag">-9.990e-29</att>
+		<att name="DATE_CREATION">20201111143635</att>
+		<att name="file_type">ascii</att>
+		<att name="filename">Hakai_Seabird-CTD+DO-SBE37 SMP-ODO-SN21328_Calvert-DFO3_20200211-20200828.cnv</att>
+		<att name="history">Created by cnv2nc (seabird)</att>
+		<att name="instrument_type">CTD-ODO</att>
+		<att name="md5">e100031e659a9e4d73eeeff1cfe821ad</att>
+		<att name="nquan">12</att>
+		<att name="nvalues">57721</att>
+		<att name="sbe_model">37SMP-ODO-SDI12</att>
+		<att name="start_time">Feb 10 2020 21:20:01 [Instrument&#39;s time stamp, first data scan]</att>
+	</sourceAttributes -->
+	<!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
+		<att name="cdm_timeseries_variables">station_id, longitude, latitude</att>
+		<att name="subsetVariables">station_id, longitude, latitude</att>
+	-->
+	<addAttributes>
+		<att name="cdm_data_type">TimeSeries</att>
+		<att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
+		<att name="infoUrl">hakai.org</att>
+		<att name="institution">Hakai Institute</att>
+		<att name="keywords">aggregate, aggregate_quality_flag, change, chemistry, CNDCST01, CNDCST01_qartod_aggregate, CNDCST01_qartod_flat_line_test, CNDCST01_qartod_gross_range_test, CNDCST01_qartod_rate_of_change_test, CNDCST01_qartod_spike_test, concentration, conductivity, data, density, depth, depth_qartod_aggregate, depth_qartod_gross_range_test, dissolved, DOXYZZ01, DOXYZZ01_qartod_aggregate, DOXYZZ01_qartod_flat_line_test, DOXYZZ01_qartod_gross_range_test, DOXYZZ01_qartod_rate_of_change_test, DOXYZZ01_qartod_spike_test, earth, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Oxygen, Earth Science &gt; Oceans &gt; Ocean Pressure &gt; Water Pressure, Earth Science &gt; Oceans &gt; Ocean Temperature &gt; Water Temperature, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Salinity, elapsed, flag, flat, flat_line_test_quality_flag, foil, fraction, garcia, gordon, gross, gross_range_test_quality_flag, instrument, latitude, line, local, longitude, number, O2, ocean, oceans, oxygen, OXYSAT, practical, PRESPR01, PRESPR01_qartod_aggregate, PRESPR01_qartod_flat_line_test, PRESPR01_qartod_gross_range_test, PRESPR01_qartod_rate_of_change_test, PRESPR01_qartod_spike_test, pressure, processing, PSALST01, PSALST01_qartod_aggregate, PSALST01_qartod_flat_line_test, PSALST01_qartod_gross_range_test, PSALST01_qartod_rate_of_change_test, PSALST01_qartod_spike_test, quality, range, rate, rate_of_change_test_quality_flag, record, salinity, saturation, sbe, SBE63TEMP, SBE_FLAG, scan, science, sea, sea_water_conductivity, sea_water_practical_salinity, sea_water_pressure, sea_water_temperature, seawater, sensor, since, source, spike, spike_test_quality_flag, start, station, temperature, TEMPS901, TEMPS901_qartod_aggregate, TEMPS901_qartod_flat_line_test, TEMPS901_qartod_gross_range_test, TEMPS901_qartod_rate_of_change_test, TEMPS901_qartod_spike_test, test, time, timeS, volume, volume_fraction_of_oxygen_in_sea_water, water</att>
+		<att name="keywords_vocabulary">GCMD Science Keywords</att>
+		<att name="license">[standard]</att>
+		<att name="sourceUrl">(local files)</att>
+		<att name="standard_name_vocabulary">CF Standard Name Table v55</att>
+		<att name="summary">Hakai Mooring CTD Time Series.</att>
+		<att name="title">Hakai Mooring CTD Time Series</att>
+		<att name="cdm_timeseries_variables">file_name,latitude,longitude,station</att>
+		<att name="subsetVariables">file_name,instrument_model,instrument_serialnumber,station</att>
+
+		<att name="contributor_name">Jessy Barrette,Jennifer Jackson</att>
+		<att name="contributor_role">custodian,owner</att>
+		<att name="creator_email">jennifer.jackson@hakai.org</att>
+		<att name="creator_name">Jennifer Jackson</att>
+		<att name="creator_type">person</att>
+		<att name="date_created">2020-02-11</att>
+		<att name="geospatial_lat_max">51.601505</att>
+		<att name="geospatial_lat_min">51.601505</att>
+		<att name="geospatial_lon_max">-127.531247</att>
+		<att name="geospatial_lon_min">-127.531247</att>
+		<att name="geospatial_vertical_max">260.0</att>
+		<att name="geospatial_vertical_min">90.0</att>
+		<att name="institution">Hakai Institute</att>
+		<att name="keywords">mooring,water temperature,subSurfaceSalinity,subSurfaceTemperature,dissolved oxygen,oxygen,pressure,conductivity,salinity</att>
+		<att name="publisher_email">info@hakai.org</att>
+		<att name="publisher_institution">Hakai Institute</att>
+		<att name="publisher_name">Jessy Barrette</att>
+		<att name="publisher_url">hakai.org</att>
+		<att name="summary">This datasets present a collection of water properties measurements (Temperature, Conductivity, Dissolved Oxygen, Salinity) collected by high accuracy instruments as part of the mooring program of the Hakai Institute. The data is first compared to the profiles collected nearby during the deployment. Instrument clock is corrected to reduce clock drift, data is reduced to consider only data collected within the water, automated QCing is applied to detect spikes and potentially bad data which is then manually revised.</att>
+		<att name="title">Hakai Mooring Water Properties Timeseries Research</att>
+	</addAttributes>
+	<dataVariable>
+		<sourceName>file_id</sourceName>
+		<destinationName>file_name</destinationName>
+		<dataType>String</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="cf_role">timeseries_id</att>
+			<att name="long_name">File Name</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>instrument_model</sourceName>
+		<destinationName>instrument_model</destinationName>
+		<dataType>String</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Instrument Model</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>instrument_serialnumber</sourceName>
+		<destinationName>instrument_serialnumber</destinationName>
+		<dataType>String</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Instrument Serial</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>station</sourceName>
+		<destinationName>station</destinationName>
+		<dataType>String</dataType>
+		<!-- sourceAttributes>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="long_name">Station</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>latitude</sourceName>
+		<destinationName>latitude</destinationName>
+		<dataType>double</dataType>
+		<!-- sourceAttributes>
+			<att name="_FillValue" type="double">NaN</att>
+			<att name="units">degrees North</att>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="colorBarMaximum" type="double">90.0</att>
+			<att name="colorBarMinimum" type="double">-90.0</att>
+			<att name="long_name">Latitude</att>
+			<att name="standard_name">latitude</att>
+			<att name="units">degrees_north</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>longitude</sourceName>
+		<destinationName>longitude</destinationName>
+		<dataType>double</dataType>
+		<!-- sourceAttributes>
+			<att name="_FillValue" type="double">NaN</att>
+			<att name="units">degrees East</att>
+		</sourceAttributes -->
+		<addAttributes>
+			<att name="colorBarMaximum" type="double">180.0</att>
+			<att name="colorBarMinimum" type="double">-180.0</att>
+			<att name="long_name">Longitude</att>
+			<att name="standard_name">longitude</att>
+			<att name="units">degrees_east</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>time</sourceName>
+		<destinationName>time</destinationName>
+		<dataType>double</dataType>
+		<addAttributes>
+			<att name="_FillValue" type="double">NaN</att>
+			<att name="calendar">proleptic_gregorian</att>
+			<att name="long_name">Instrument Time</att>
+			<att name="units">seconds since 2000-01-01</att>
+			<att name="standard_name">time</att>
+			<att name="units">seconds since 2000-01-01T00:00:00Z</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>depth</sourceName>
+		<destinationName>depth</destinationName>
+		<dataType>double</dataType>
+		<addAttributes>
+			<att name="_FillValue" type="double">NaN</att>
+			<att name="long_name">Depth</att>
+			<att name="standard_name">depth</att>
+			<att name="units">m</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>TEMPS901</sourceName>
+		<destinationName>TEMPS901</destinationName>
+		<dataType>double</dataType>
+		<addAttributes>
+			<att name="_FillValue" type="double">NaN</att>
+			<att name="long_name">Sea Water Temperature</att>
+			<att name="standard_name">sea_water_temperature</att>
+			<att name="units">degC [ITS-90]</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>PSALST01</sourceName>
+		<destinationName>PSALST01</destinationName>
+		<dataType>double</dataType>
+		<addAttributes>
+			<att name="_FillValue" type="double">NaN</att>
+			<att name="long_name">Practical Salinity</att>
+			<att name="standard_name">sea_water_practical_salinity</att>
+			<att name="units">1e-3</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>PRESPR01</sourceName>
+		<destinationName>PRESPR01</destinationName>
+		<dataType>double</dataType>
+		<addAttributes>
+			<att name="_FillValue" type="double">NaN</att>
+			<att name="long_name">Sea Water Pressure</att>
+			<att name="standard_name">sea_water_pressure</att>
+			<att name="units">dBar</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>DOXYZZ01</sourceName>
+		<destinationName>DOXYZZ01</destinationName>
+		<dataType>double</dataType>
+		<addAttributes>
+			<att name="_FillValue" type="double">NaN</att>
+			<att name="long_name">Dissolved Oxygen Concentration</att>
+			<att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+			<att name="units">mL/L</att>
+		</addAttributes>
+	</dataVariable>
+	<dataVariable>
+		<sourceName>CNDCST01</sourceName>
+		<destinationName>CNDCST01</destinationName>
+		<dataType>double</dataType>
+		<addAttributes>
+			<att name="_FillValue" type="double">NaN</att>
+			<att name="long_name">Sea Water Conductivity</att>
+			<att name="standard_name">sea_water_conductivity</att>
+			<att name="units">mS/cm</att>
+		</addAttributes>
+	</dataVariable>
+</dataset>
