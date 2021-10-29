@@ -136,7 +136,7 @@ FROM
     ) chla_gff,
     (
         CASE
-            WHEN filter_type = 'GF/F' THEN chla
+            WHEN filter_type = 'Bulk GF/F' THEN chla
         END
     ) chla_bulk_gff,
     -- chla_flag
