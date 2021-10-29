@@ -166,6 +166,10 @@ FROM
         END
     ) chla_bulk_gff_flag
 FROM eims.output_chlorophyll
+where (
+chla is not null 
+or phaeo is not null
+)
     )
 subquery
 group by
