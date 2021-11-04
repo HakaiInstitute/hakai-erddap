@@ -98,8 +98,9 @@ FROM eims.output_chlorophyll
 WHERE collected > '2018-05-04'
     AND quality_level in ('Principal Investigator', 'Technicianmr')
     and (
-                chla_flag in ('AV')
+    chla_flag in ('AV')
     AND phaeo_flag in ('AV')
+    AND site_id in ('BU4','DFO2','DFO5','FZH01','KC10','KN3','KWY01','PRUTH','QCS01','QU29','QU38','QU39','QU43','TO2','TO5')
             )
     )
 subquery
