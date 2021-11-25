@@ -22,7 +22,7 @@
 		<att name="publisher_email">info@hakai.org</att>
 		<att name="cdm_data_type">TimeSeriesProfile</att>
 		<att name="cdm_timeseries_variables">filename,instrument_model,instrument_serial_number,station,latitude,longitude,ALATZZ01,ALONZZ01</att>
-		<att name="cdm_profile_variables">time,instrument_depth,ELTMEP01,PTCHGP01,HEADCM01,ROLLGP01,PRESPR01,PRESPR01_QC,SVELCV01,DTUT8601</att>
+		<att name="cdm_profile_variables">time,instrument_depth,ELTMEP01,PTCHGP01,HEADCM01,ROLLGP01,PRESPR01,PRESPR01_QC,SVELCV01,DTUT8601,PPSAADCP</att>
 		<att name="Conventions">CF-1.8, COARDS, ACDD-1.3</att>
 		<att name="date_modified">2020-10-09T13:41:01Z</att>
 		<att name="infoUrl">hakai.org</att>
@@ -118,17 +118,6 @@
 			<att name="_FillValue" type="double">NaN</att>
 			<att name="long_name">bin_distances_from_ADCP_transducer_along_measurement_axis</att>
 			<att name="units">m</att>
-		</addAttributes>
-	</dataVariable>
-	<dataVariable>
-		<sourceName>instrument_depth</sourceName>
-		<destinationName>instrument_depth</destinationName>
-		<dataType>double</dataType>
-		<addAttributes>
-			<att name="_FillValue" type="double">NaN</att>
-			<att name="units">m</att>
-			<att name="long_name">Instrument Depth</att>
-			<att name="missing_value" type="double">NaN</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
