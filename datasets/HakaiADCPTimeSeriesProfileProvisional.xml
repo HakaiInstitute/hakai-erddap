@@ -21,8 +21,8 @@
 		<att name="naming_authority">BODC, MEDS, CF v72</att>
 		<att name="publisher_email">info@hakai.org</att>
 		<att name="cdm_data_type">TimeSeriesProfile</att>
-		<att name="cdm_timeseries_variables">filename, instrument_serial_number,latitude, longitude</att>
-		<att name="cdm_profile_variables">time</att>
+		<att name="cdm_timeseries_variables">filename,instrument_model,instrument_serial_number,station,latitude,longitude,ALATZZ01,ALONZZ01</att>
+		<att name="cdm_profile_variables">time,instrument_depth,ELTMEP01,PTCHGP01,HEADCM01,ROLLGP01,PRESPR01,PRESPR01_QC,SVELCV01,DTUT8601</att>
 		<att name="Conventions">CF-1.8, COARDS, ACDD-1.3</att>
 		<att name="date_modified">2020-10-09T13:41:01Z</att>
 		<att name="infoUrl">hakai.org</att>
@@ -31,7 +31,7 @@
 		<att name="license">[standard]</att>
 		<att name="sourceUrl">(local files)</att>
 		<att name="standard_name_vocabulary">CF Standard Name Table v55</att>
-		<att name="subsetVariables">filename, instrument_serial_number, instrument_model,latitude, longitude</att>
+		<att name="subsetVariables">filename, instrument_serial_number, instrument_model,station,latitude, longitude</att>
 		<att name="title">Hakai ADCP Mooring Time Series Provisional</att>
 		<att name="summary">This datasets present a collection of Acoustic Doppler Current Profiler (ADCP) datasets collected by the Hakai Institute and/or other organizations within the Institute study regions of Quadra and Calvert islands. Collected raw data was automatically processed by applying a rotation to align with the geographical north, crop time series to consider data collected in water, detect surface based on pressure and backscatter data and flag above/near surface data.</att>
 	</addAttributes>
