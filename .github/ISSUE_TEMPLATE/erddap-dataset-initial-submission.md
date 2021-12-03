@@ -30,7 +30,7 @@ A more detailed written and visual description of every step is available respec
 - [ ] ERDDAP Dataset Documentation 
 - [ ] ERDDAP Test Locally 
 - [ ] Add Dataset to Development Branch
-- [ ] ERDDAP Global Attributes are matching the Metadata Record associated field
+- [ ] ERDDAP Global Attributes are matching the Metadata Record associated fields (see Metadata Form ERDDAP Snippet) 
 
 ## Dataset Review (Data Administrator)
 - [ ] Dataset Development Branch Revision (Reviewer Label)
