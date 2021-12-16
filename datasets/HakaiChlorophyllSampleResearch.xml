@@ -14,7 +14,7 @@
     -->
     <addAttributes>
         <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
-        <att name="infoUrl">hakai.org</att>
+        <att name="infoUrl">https://www.doi.org/10.21966/wsvt-ew96</att>
         <att name="keywords_vocabulary">GCMD Science Keywords</att>
         <att name="license">[standard]</att>
         <att name="sourceUrl">(local database)</att>
