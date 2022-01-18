@@ -1,4 +1,4 @@
--- CREATE OR REPLACE VIEW erddap."HakaiKCBuoy1hour" AS
+CREATE OR REPLACE VIEW erddap."HakaiKCBuoy1hour" AS
 SELECT "measurementTime",
     "KCBuoy:WindSpd_QL",
     "KCBuoy:WindSpd_QC",
