@@ -48,7 +48,7 @@
         <att name="title">High-Resolution Record of Surface Seawater Carbon Dioxide (CO2) Content Collected from Hakai Institute Quadra Island Field Station in Hyacinthe Bay, British Columbia, Canada </att>
     </addAttributes>
     <dataVariable>
-        <sourceName>='QuadraBoL'</sourceName>
+        <sourceName>=QuadraBoL</sourceName>
         <destinationName>station_id</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
