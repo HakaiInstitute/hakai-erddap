@@ -77,7 +77,7 @@
 
 
   <dataVariable>
-    <sourceName>=Seward Burke-o-Lator</sourceName>
+    <sourceName>="Seward Burke-o-Lator"</sourceName>
     <destinationName>station</destinationName>
     <dataType>String</dataType>
     <addAttributes>
@@ -377,7 +377,7 @@
     <destinationName>TSG_T_UQL</destinationName>
     <dataType>int</dataType>
     <addAttributes>
-      <att name="long_name">Water temperature UNESCO Q level</att>      
+      <att name="long_name">Water temperature UNESCO Q level</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="standard_name">aggregate_quality_flag</att>

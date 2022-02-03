@@ -48,7 +48,7 @@ Derive depth from corrected sea water pressure.
         <att name="subsetVariables">station,instrument</att>
     </addAttributes>
     <dataVariable>
-        <sourceName>=CP01</sourceName>
+        <sourceName>="CP01"</sourceName>
         <destinationName>station</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
@@ -62,7 +62,7 @@ Derive depth from corrected sea water pressure.
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>=RBRSoloD SN079156</sourceName>
+        <sourceName>="RBRSoloD SN079156"</sourceName>
         <destinationName>instrument</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>

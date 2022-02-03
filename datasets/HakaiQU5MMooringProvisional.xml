@@ -35,7 +35,7 @@
         <att name="subsetVariables">station,latitude,longitude,depth,airtemp_uql,watertemp_uql</att>
     </addAttributes>
     <dataVariable>
-        <sourceName>=QU5M</sourceName>
+        <sourceName>="QU5M"</sourceName>
         <destinationName>station</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>

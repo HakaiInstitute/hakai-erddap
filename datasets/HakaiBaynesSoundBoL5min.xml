@@ -78,7 +78,7 @@
 
 
   <dataVariable>
-    <sourceName>=Baynes Sound Burke-o-Lator</sourceName>
+    <sourceName>="Baynes Sound Burke-o-Lator"</sourceName>
     <destinationName>station</destinationName>
     <dataType>String</dataType>
     <addAttributes>

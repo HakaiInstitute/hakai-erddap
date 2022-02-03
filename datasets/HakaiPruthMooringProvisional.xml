@@ -34,7 +34,7 @@
         <att name="cdm_timeseries_variables">station,latitude,longitude,depth</att>
     </addAttributes>
     <dataVariable>
-        <sourceName>=Pruth</sourceName>
+        <sourceName>="Pruth"</sourceName>
         <destinationName>station</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
