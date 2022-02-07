@@ -170,13 +170,13 @@
   <dataVariable>
     <sourceName>SewardBoL:pCO2_uatm_UQL</sourceName>
     <destinationName>pCO2_uatm_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">pCO2 UNESCO Q level</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="standard_name">aggregate_quality_flag</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -270,13 +270,13 @@
   <dataVariable>
     <sourceName>SewardBoL:calcTCO2_UQL</sourceName>
     <destinationName>calcTCO2_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">TCO2 UNESCO Q level</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="standard_name">aggregate_quality_flag</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -375,13 +375,13 @@
   <dataVariable>
     <sourceName>SewardBoL:TSG_T_UQL</sourceName>
     <destinationName>TSG_T_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">Water temperature UNESCO Q level</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="standard_name">aggregate_quality_flag</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -475,13 +475,13 @@
   <dataVariable>
     <sourceName>SewardBoL:TSG_S_UQL</sourceName>
     <destinationName>TSG_S_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">Salinity UNESCO Q level</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="standard_name">aggregate_quality_flag</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -575,13 +575,13 @@
   <dataVariable>
     <sourceName>SewardBoL:AlkS_UQL</sourceName>
     <destinationName>AlkS_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">TA UNESCO Q level</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="standard_name">aggregate_quality_flag</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -670,13 +670,13 @@
   <dataVariable>
     <sourceName>SewardBoL:calcOmega_UQL</sourceName>
     <destinationName>calcOmega_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">Ω arag UNESCO Q level</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="standard_name">aggregate_quality_flag</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -775,13 +775,13 @@
   <dataVariable>
     <sourceName>SewardBoL:calcpH_UQL</sourceName>
     <destinationName>calcpH_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">pH_T UNESCO Q level</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="standard_name">aggregate_quality_flag</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 

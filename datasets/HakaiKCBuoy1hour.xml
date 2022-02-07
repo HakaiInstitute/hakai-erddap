@@ -107,11 +107,13 @@
   <dataVariable>
     <sourceName>KCBuoy:WindSpd_UQL</sourceName>
     <destinationName>WindSpd_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">WindSpdKCBuoy UNESCO Q level</att>
-      <att name="units">UNESCO QC</att>
-      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -189,13 +191,13 @@
   <dataVariable>
     <sourceName>KCBuoy:WindSpd_UQL</sourceName>
     <destinationName>WindSpd_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">WindSpdKCBuoy UNESCO Flag</att>
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -243,13 +245,13 @@
   <dataVariable>
     <sourceName>KCBuoy:WindDir_UQL</sourceName>
     <destinationName>WindDir_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">WindDirKCBuoy UNESCO Flag</att>
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
       <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
@@ -344,13 +346,13 @@
   <dataVariable>
     <sourceName>KCBuoy:AirTemp_UQL</sourceName>
     <destinationName>AirTemp_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">TAirKCBuoy UNESCO Flag</att>
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
       <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
@@ -446,13 +448,13 @@
   <dataVariable>
     <sourceName>KCBuoy:StationAirPressure_UQL</sourceName>
     <destinationName>StationAirPressure_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">StationAirPressure UNESCO Flag</att>
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
       <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
@@ -569,13 +571,13 @@
   <dataVariable>
     <sourceName>KCBuoy:WaterTemp_UQL</sourceName>
     <destinationName>WaterTemp_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">TWtrKCBuoy UNESCO Flag</att>
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
       <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
@@ -692,13 +694,13 @@
   <dataVariable>
     <sourceName>KCBuoy:WaterConductivity_UQL</sourceName>
     <destinationName>WaterConductivity_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">ConductivityKCBuoy UNESCO Flag</att>
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
       <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
@@ -821,7 +823,7 @@
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
       <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
@@ -938,13 +940,13 @@
   <dataVariable>
     <sourceName>KCBuoy:WaterSalinity_UQL</sourceName>
     <destinationName>WaterSalinity_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">SalinityKCBuoy UNESCO Flag</att>
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
       <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
@@ -1045,13 +1047,13 @@
   <dataVariable>
     <sourceName>KCBuoy:OxygenConcentration_UQL</sourceName>
     <destinationName>Oxygen_Concentration_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">Oxygen Concentration UNESCO Flag</att>
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
       <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
@@ -1152,13 +1154,13 @@
   <dataVariable>
     <sourceName>KCBuoy:Fluorometer_UQL</sourceName>
     <destinationName>Fluorometer_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">Fluorescence UNESCO Flag</att>
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
       <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
@@ -1344,13 +1346,13 @@
   <dataVariable>
     <sourceName>KCSeaology:sw_xCO2_UQL</sourceName>
     <destinationName>sw_xCO2_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">Seawater xCO2 UNESCO Flag</att>
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
       <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>
@@ -1392,7 +1394,7 @@
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
       <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
   </dataVariable>

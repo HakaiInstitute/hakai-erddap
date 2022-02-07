@@ -101,7 +101,7 @@
     <dataVariable>
         <sourceName>PruthDock:WindSpd_UQL</sourceName>
         <destinationName>windspd_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -109,7 +109,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -154,7 +154,7 @@
     <dataVariable>
         <sourceName>PruthDock:WindDir_UQL</sourceName>
         <destinationName>winddir_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -162,7 +162,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -211,7 +211,7 @@
     <dataVariable>
         <sourceName>PruthDock:RH_UQL</sourceName>
         <destinationName>rh_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -219,7 +219,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -274,7 +274,7 @@
     <dataVariable>
         <sourceName>PruthDock:AirTemp_UQL</sourceName>
         <destinationName>airtemp_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -282,7 +282,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -341,7 +341,7 @@
     <dataVariable>
         <sourceName>PruthDock:StationAirPressure_UQL</sourceName>
         <destinationName>stationairpressure_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -349,7 +349,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -408,7 +408,7 @@
     <dataVariable>
         <sourceName>PruthDock:SeaLevelAirPressure_UQL</sourceName>
         <destinationName>sealevelairpressure_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -416,7 +416,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -475,7 +475,7 @@
     <dataVariable>
         <sourceName>PruthDock:UVRad5MinuteTotal_UQL</sourceName>
         <destinationName>uvrad5minutetotal_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -483,7 +483,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -515,7 +515,7 @@
     <dataVariable>
         <sourceName>PruthDock:SolarRad_UQL</sourceName>
         <destinationName>solarrad_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -523,7 +523,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -582,7 +582,7 @@
     <dataVariable>
         <sourceName>PruthDock:SolarRad5MinuteTotal_UQL</sourceName>
         <destinationName>solarrad5minutetotal_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -590,7 +590,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -621,7 +621,7 @@
     <dataVariable>
         <sourceName>PruthDock:PAR_UQL</sourceName>
         <destinationName>par_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -629,7 +629,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -688,7 +688,7 @@
     <dataVariable>
         <sourceName>PruthDock:PAR5MinuteTotal_UQL</sourceName>
         <destinationName>par5minutetotal_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -696,7 +696,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -727,7 +727,7 @@
     <dataVariable>
         <sourceName>PruthDock:UVRad_UQL</sourceName>
         <destinationName>uvrad_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -735,7 +735,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -794,7 +794,7 @@
     <dataVariable>
         <sourceName>PruthDock:Rain_UQL</sourceName>
         <destinationName>rain_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -802,7 +802,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -833,7 +833,7 @@
     <dataVariable>
         <sourceName>PruthDock:1hourRain_UQL</sourceName>
         <destinationName>hourlyrain_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -841,7 +841,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -872,7 +872,7 @@
     <dataVariable>
         <sourceName>PruthDock:TideHeight_UQL</sourceName>
         <destinationName>tideheight_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -880,7 +880,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -925,7 +925,7 @@
     <dataVariable>
         <sourceName>PruthDock:TideHeightPLS_UQL</sourceName>
         <destinationName>tideheightpls_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -933,7 +933,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -964,7 +964,7 @@
     <dataVariable>
         <sourceName>PruthDock:TideHeightDelta_UQL</sourceName>
         <destinationName>tideheightdelta_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -972,7 +972,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>

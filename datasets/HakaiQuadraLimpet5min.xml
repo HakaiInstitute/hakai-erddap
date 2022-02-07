@@ -109,12 +109,12 @@
   <dataVariable>
     <sourceName>QuadraLimpet:WaterTemp_QC</sourceName>
     <destinationName>WaterTemp_flags</destinationName>
-    <dataType>String</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">TWtrQuadraLimpet Q flags</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="standard_name">aggregate_quality_flag</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -160,7 +160,7 @@
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="standard_name">aggregate_quality_flag</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -200,7 +200,7 @@
   <dataVariable>
     <sourceName>QuadraLimpet:WaterPressure_QC</sourceName>
     <destinationName>WaterPressure_flags</destinationName>
-    <dataType>String</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">PressureQuadraLimpet Q flags</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
@@ -229,12 +229,12 @@
   <dataVariable>
     <sourceName>QuadraLimpet:WaterDepth_QC</sourceName>
     <destinationName>WaterDepth_flags</destinationName>
-    <dataType>String</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">DepthQuadraLimpet Q flags</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="standard_name">aggregate_quality_flag</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -274,13 +274,13 @@
   <dataVariable>
     <sourceName>QuadraLimpet:WaterOxygen_QC</sourceName>
     <destinationName>WaterOxygen_flags</destinationName>
-    <dataType>String</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">O2ConcentrationQuadraLimpet Q flags</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="standard_name">aggregate_quality_flag</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -303,12 +303,12 @@
   <dataVariable>
     <sourceName>QuadraLimpet:WaterSalinity_QC</sourceName>
     <destinationName>WaterSalinity_flags</destinationName>
-    <dataType>String</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">SalinityQuadraLimpet Q flags</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="standard_name">aggregate_quality_flag</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -331,12 +331,12 @@
   <dataVariable>
     <sourceName>QuadraLimpet:Chlorophyll_QC</sourceName>
     <destinationName>Chlorophyll_flags</destinationName>
-    <dataType>String</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">ChlorophyllLimpet Q flags</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="standard_name">aggregate_quality_flag</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 

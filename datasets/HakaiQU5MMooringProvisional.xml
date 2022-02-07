@@ -85,7 +85,7 @@
     <dataVariable>
         <sourceName>depth</sourceName>
         <destinationName>depth</destinationName>
-        <dataType>int</dataType>
+        <dataType>float</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -114,7 +114,7 @@
     <dataVariable>
         <sourceName>airtemp_uql</sourceName>
         <destinationName>airtemp_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -152,7 +152,7 @@
     <dataVariable>
         <sourceName>watertemp_uql</sourceName>
         <destinationName>watertemp_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
