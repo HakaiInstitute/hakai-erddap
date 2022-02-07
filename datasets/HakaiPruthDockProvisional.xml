@@ -42,7 +42,7 @@
     </addAttributes>
 
     <dataVariable>
-        <sourceName>=PruthDock</sourceName>
+        <sourceName>="PruthDock"</sourceName>
         <destinationName>station_id</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>

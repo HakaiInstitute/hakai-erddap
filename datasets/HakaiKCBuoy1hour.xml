@@ -94,6 +94,40 @@
 
 
   <dataVariable>
+    <sourceName>="KCBuoy"</sourceName>
+    <destinationName>station</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="ioos_category">Location</att>
+      <att name="cf_role">timeseries_id</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WindSpd_UQL</sourceName>
+    <destinationName>WindSpd_UQL</destinationName>
+    <dataType>int</dataType>
+    <addAttributes>
+      <att name="long_name">WindSpdKCBuoy UNESCO Q level</att>
+      <att name="units">UNESCO QC</att>
+      <att name="comments">1 = Pass, 2 = Not evaluated, 3 = Suspect or Of High Interest, 4 = Fail, 9 = Missing data</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WindSpd_QC</sourceName>
+    <destinationName>WindSpd_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">WindSpdKCBuoy Q flags</att>
+      <att name="units">Quality flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
     <sourceName>KCBuoy:WindSpd_Avg</sourceName>
     <destinationName>WindSpd_Avg</destinationName>
     <dataType>double</dataType>

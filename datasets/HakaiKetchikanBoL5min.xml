@@ -74,7 +74,7 @@
 
 
   <dataVariable>
-    <sourceName>=Ketchikan Burke-o-Lator</sourceName>
+    <sourceName>="Ketchikan Burke-o-Lator"</sourceName>
     <destinationName>station</destinationName>
     <dataType>String</dataType>
     <addAttributes>

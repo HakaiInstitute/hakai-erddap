@@ -1,4 +1,3 @@
-
 <dataset type="EDDTableFromAsciiFiles" datasetID="HakaiQuadraBoLResearch" active="true">
     <iso19115File>https://pac-dev1.cioos.org/dev/metadata/pacific/high_resolution_record_of_surf_a6f6c.xml</iso19115File>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
@@ -48,7 +47,7 @@
         <att name="title">High-Resolution Record of Surface Seawater Carbon Dioxide (CO2) Content Collected from Hakai Institute Quadra Island Field Station in Hyacinthe Bay, British Columbia, Canada </att>
     </addAttributes>
     <dataVariable>
-        <sourceName>=QuadraBoL</sourceName>
+        <sourceName>="QuadraBoL"</sourceName>
         <destinationName>station_id</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
