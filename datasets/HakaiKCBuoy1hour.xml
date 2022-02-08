@@ -102,7 +102,7 @@
       <att name="long_name">WindSpdKCBuoy_Avg</att>
       <att name="units">m/s</att>
       <att name="height">3</att>
-      <att name="ancillary_data">WindSpd_UQL,WindSpd_flags</att>
+      <att name="ancillary_data">WindSpd_UQL WindSpd_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -117,7 +117,7 @@
       <att name="units">m/s</att>
       <att name="height">3</att>
       <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WindSpd_UQL,WindSpd_flags</att>
+      <att name="ancillary_data">WindSpd_UQL WindSpd_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -132,7 +132,7 @@
       <att name="units">m/s</att>
       <att name="height">3</att>
       <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WindSpd_UQL,WindSpd_flags</att>
+      <att name="ancillary_data">WindSpd_UQL WindSpd_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -147,7 +147,7 @@
       <att name="units">m/s</att>
       <att name="height">3</att>
       <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WindSpd_UQL,WindSpd_flags</att>
+      <att name="ancillary_data">WindSpd_UQL WindSpd_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -187,7 +187,7 @@
       <att name="units">degrees</att>
       <att name="height">3</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WindDir_UQL,WindDir_flags</att>
+      <att name="ancillary_data">WindDir_UQL WindDir_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -202,7 +202,7 @@
       <att name="units">degrees</att>
       <att name="height">3</att>
       <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WindDir_UQL,WindDir_flags</att>
+      <att name="ancillary_data">WindDir_UQL WindDir_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -243,7 +243,7 @@
       <att name="units">deg C</att>
       <att name="height">3</att>
       <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">AirTemp_UQL,AirTemp_flags</att>
+      <att name="ancillary_data">AirTemp_UQL AirTemp_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -258,7 +258,7 @@
       <att name="units">deg C</att>
       <att name="height">3</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">AirTemp_UQL,AirTemp_flags</att>
+      <att name="ancillary_data">AirTemp_UQL AirTemp_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -273,7 +273,7 @@
       <att name="units">deg C</att>
       <att name="height">3</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">AirTemp_UQL,AirTemp_flags</att>
+      <att name="ancillary_data">AirTemp_UQL AirTemp_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -288,7 +288,7 @@
       <att name="units">deg C</att>
       <att name="height">3</att>
       <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">AirTemp_UQL,AirTemp_flags</att>
+      <att name="ancillary_data">AirTemp_UQL AirTemp_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -303,7 +303,7 @@
       <att name="units">deg C</att>
       <att name="height">3</att>
       <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">AirTemp_UQL,AirTemp_flags</att>
+      <att name="ancillary_data">AirTemp_UQL AirTemp_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -344,7 +344,7 @@
       <att name="units">hPa</att>
       <att name="height">3</att>
       <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">StationAirPressure_UQL,StationAirPressure_flags</att>
+      <att name="ancillary_data">StationAirPressure_UQL StationAirPressure_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -359,7 +359,7 @@
       <att name="units">hPa</att>
       <att name="height">3</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">StationAirPressure_UQL,StationAirPressure_flags</att>
+      <att name="ancillary_data">StationAirPressure_UQL StationAirPressure_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -374,7 +374,7 @@
       <att name="units">hPa</att>
       <att name="height">3</att>
       <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">StationAirPressure_UQL,StationAirPressure_flags</att>
+      <att name="ancillary_data">StationAirPressure_UQL StationAirPressure_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -389,7 +389,7 @@
       <att name="units">hPa</att>
       <att name="height">3</att>
       <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">StationAirPressure_UQL,StationAirPressure_flags</att>
+      <att name="ancillary_data">StationAirPressure_UQL StationAirPressure_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -404,7 +404,7 @@
       <att name="units">hPa</att>
       <att name="height">3</att>
       <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">StationAirPressure_UQL,StationAirPressure_flags</att>
+      <att name="ancillary_data">StationAirPressure_UQL StationAirPressure_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -447,7 +447,7 @@
       <att name="units">Deg C</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterTemp_UQL,WaterTemp_flags</att>
+      <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -463,7 +463,7 @@
       <att name="units">Deg C</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterTemp_UQL,WaterTemp_flags</att>
+      <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -479,7 +479,7 @@
       <att name="units">Deg C</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterTemp_UQL,WaterTemp_flags</att>
+      <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -495,7 +495,7 @@
       <att name="units">Deg C</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterTemp_UQL,WaterTemp_flags</att>
+      <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -511,7 +511,7 @@
       <att name="units">Deg C</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterTemp_UQL,WaterTemp_flags</att>
+      <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -527,7 +527,7 @@
       <att name="units">Deg C</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterTemp_UQL,WaterTemp_flags</att>
+      <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -569,7 +569,7 @@
       <att name="units">S/m</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterConductivity_UQL,WaterConductivity_flags</att>
+      <att name="ancillary_data">WaterConductivity_UQL WaterConductivity_flags</att>
       <att name="standard_name">sea_water_conductivity</att>
     </addAttributes>
   </dataVariable>
@@ -585,7 +585,7 @@
       <att name="units">S/m</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterConductivity_UQL,WaterConductivity_flags</att>
+      <att name="ancillary_data">WaterConductivity_UQL WaterConductivity_flags</att>
       <att name="standard_name">sea_water_conductivity</att>
     </addAttributes>
   </dataVariable>
@@ -601,7 +601,7 @@
       <att name="units">S/m</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterConductivity_UQL,WaterConductivity_flags</att>
+      <att name="ancillary_data">WaterConductivity_UQL WaterConductivity_flags</att>
       <att name="standard_name">sea_water_conductivity</att>
     </addAttributes>
   </dataVariable>
@@ -617,7 +617,7 @@
       <att name="units">S/m</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterConductivity_UQL,WaterConductivity_flags</att>
+      <att name="ancillary_data">WaterConductivity_UQL WaterConductivity_flags</att>
       <att name="standard_name">sea_water_conductivity</att>
     </addAttributes>
   </dataVariable>
@@ -633,7 +633,7 @@
       <att name="units">S/m</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterConductivity_UQL,WaterConductivity_flags</att>
+      <att name="ancillary_data">WaterConductivity_UQL WaterConductivity_flags</att>
       <att name="standard_name">sea_water_conductivity</att>
     </addAttributes>
   </dataVariable>
@@ -649,7 +649,7 @@
       <att name="units">S/m</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterConductivity_UQL,WaterConductivity_flags</att>
+      <att name="ancillary_data">WaterConductivity_UQL WaterConductivity_flags</att>
       <att name="standard_name">sea_water_conductivity</att>
     </addAttributes>
   </dataVariable>
@@ -692,7 +692,7 @@
       <att name="units">dbar</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterPressure_UQL,WaterPressure_flags</att>
+      <att name="ancillary_data">WaterPressure_UQL WaterPressure_flags</att>
       <att name="standard_name">sea_water_pressure</att>
     </addAttributes>
   </dataVariable>
@@ -708,7 +708,7 @@
       <att name="units">dbar</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterPressure_UQL,WaterPressure_flags</att>
+      <att name="ancillary_data">WaterPressure_UQL WaterPressure_flags</att>
       <att name="standard_name">sea_water_pressure</att>
     </addAttributes>
   </dataVariable>
@@ -724,7 +724,7 @@
       <att name="units">dbar</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterPressure_UQL,WaterPressure_flags</att>
+      <att name="ancillary_data">WaterPressure_UQL WaterPressure_flags</att>
       <att name="standard_name">sea_water_pressure</att>
     </addAttributes>
   </dataVariable>
@@ -740,7 +740,7 @@
       <att name="units">dbar</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterPressure_UQL,WaterPressure_flags</att>
+      <att name="ancillary_data">WaterPressure_UQL WaterPressure_flags</att>
       <att name="standard_name">sea_water_pressure</att>
     </addAttributes>
   </dataVariable>
@@ -756,7 +756,7 @@
       <att name="units">dbar</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterPressure_UQL,WaterPressure_flags</att>
+      <att name="ancillary_data">WaterPressure_UQL WaterPressure_flags</att>
       <att name="standard_name">sea_water_pressure</att>
     </addAttributes>
   </dataVariable>
@@ -772,7 +772,7 @@
       <att name="units">dbar</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterPressure_UQL,WaterPressure_flags</att>
+      <att name="ancillary_data">WaterPressure_UQL WaterPressure_flags</att>
       <att name="standard_name">sea_water_pressure</att>
     </addAttributes>
   </dataVariable>
@@ -814,7 +814,7 @@
       <att name="long_name">SalinityKCBuoy</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterSalinity_UQL,WaterSalinity_flags</att>
+      <att name="ancillary_data">WaterSalinity_UQL WaterSalinity_flags</att>
       <att name="standard_name">sea_surface_practical_salinity</att>
       <att name="units">1e-3</att>
     </addAttributes>
@@ -830,7 +830,7 @@
       <att name="long_name">SalinityKCBuoy_Med</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterSalinity_UQL,WaterSalinity_flags</att>
+      <att name="ancillary_data">WaterSalinity_UQL WaterSalinity_flags</att>
       <att name="standard_name">sea_surface_practical_salinity</att>
       <att name="units">1e-3</att>
     </addAttributes>
@@ -846,7 +846,7 @@
       <att name="long_name">SalinityKCBuoy_Avg</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterSalinity_UQL,WaterSalinity_flags</att>
+      <att name="ancillary_data">WaterSalinity_UQL WaterSalinity_flags</att>
       <att name="standard_name">sea_surface_practical_salinity</att>
       <att name="units">1e-3</att>
     </addAttributes>
@@ -862,7 +862,7 @@
       <att name="long_name">SalinityKCBuoy_Min</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterSalinity_UQL,WaterSalinity_flags</att>
+      <att name="ancillary_data">WaterSalinity_UQL WaterSalinity_flags</att>
       <att name="standard_name">sea_surface_practical_salinity</att>
       <att name="units">1e-3</att>
     </addAttributes>
@@ -878,7 +878,7 @@
       <att name="long_name">SalinityKCBuoy_Max</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterSalinity_UQL,WaterSalinity_flags</att>
+      <att name="ancillary_data">WaterSalinity_UQL WaterSalinity_flags</att>
       <att name="standard_name">sea_surface_practical_salinity</att>
       <att name="units">1e-3</att>
     </addAttributes>
@@ -894,7 +894,7 @@
       <att name="long_name">SalinityKCBuoy_Std</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">WaterSalinity_UQL,WaterSalinity_flags</att>
+      <att name="ancillary_data">WaterSalinity_UQL WaterSalinity_flags</att>
       <att name="standard_name">sea_surface_practical_salinity</att>
       <att name="units">1e-3</att>
     </addAttributes>
@@ -938,7 +938,7 @@
       <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
       <att name="units">mL/L</att>
       <att name="depth">0.5</att>
-      <att name="ancillary_data">Oxygen_Concentration_UQL,Oxygen_Concentration_flags</att>
+      <att name="ancillary_data">Oxygen_Concentration_UQL Oxygen_Concentration_flags</att>
       <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
@@ -954,7 +954,7 @@
       <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
       <att name="units">mL/L</att>
       <att name="depth">0.5</att>
-      <att name="ancillary_data">Oxygen_Concentration_UQL,Oxygen_Concentration_flags</att>
+      <att name="ancillary_data">Oxygen_Concentration_UQL Oxygen_Concentration_flags</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
@@ -970,7 +970,7 @@
       <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
       <att name="units">mL/L</att>
       <att name="depth">0.5</att>
-      <att name="ancillary_data">Oxygen_Concentration_UQL,Oxygen_Concentration_flags</att>
+      <att name="ancillary_data">Oxygen_Concentration_UQL Oxygen_Concentration_flags</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
@@ -986,7 +986,7 @@
       <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
       <att name="units">mL/L</att>
       <att name="depth">0.5</att>
-      <att name="ancillary_data">Oxygen_Concentration_UQL,Oxygen_Concentration_flags</att>
+      <att name="ancillary_data">Oxygen_Concentration_UQL Oxygen_Concentration_flags</att>
       <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
@@ -1002,7 +1002,7 @@
       <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
       <att name="units">mL/L</att>
       <att name="depth">0.5</att>
-      <att name="ancillary_data">Oxygen_Concentration_UQL,Oxygen_Concentration_flags</att>
+      <att name="ancillary_data">Oxygen_Concentration_UQL Oxygen_Concentration_flags</att>
       <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
     </addAttributes>
   </dataVariable>
@@ -1046,7 +1046,7 @@
       <att name="units">ug/L</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">Fluorometer_UQL,Fluorometer_flags</att>
+      <att name="ancillary_data">Fluorometer_UQL Fluorometer_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -1062,7 +1062,7 @@
       <att name="units">ug/L</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">Fluorometer_UQL,Fluorometer_flags</att>
+      <att name="ancillary_data">Fluorometer_UQL Fluorometer_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -1078,7 +1078,7 @@
       <att name="units">ug/L</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">Fluorometer_UQL,Fluorometer_flags</att>
+      <att name="ancillary_data">Fluorometer_UQL Fluorometer_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -1094,7 +1094,7 @@
       <att name="units">ug/L</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">Fluorometer_UQL,Fluorometer_flags</att>
+      <att name="ancillary_data">Fluorometer_UQL Fluorometer_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -1110,7 +1110,7 @@
       <att name="units">ug/L</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">Fluorometer_UQL,Fluorometer_flags</att>
+      <att name="ancillary_data">Fluorometer_UQL Fluorometer_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -1302,7 +1302,7 @@
       <att name="units">ppm</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">sw_xCO2_UQL,sw_xCO2_flags</att>
+      <att name="ancillary_data">sw_xCO2_UQL sw_xCO2_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -1344,7 +1344,7 @@
       <att name="units">ppm</att>
       <att name="height">1</att>
       <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">atm_xCO2_UQL,atm_xCO_flags</att>
+      <att name="ancillary_data">atm_xCO2_UQL atm_xCO_flags</att>
     </addAttributes>
   </dataVariable>
 

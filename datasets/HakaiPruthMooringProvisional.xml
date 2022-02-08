@@ -108,7 +108,7 @@
             <att name="long_name">Average Water Temperature</att>
             <att name="units">degree_Celsius</att>
             <att name="standard_name">sea_water_temperature</att>
-            <att name="ancillary_data">watertemp_qc,watertemp_uql</att>
+            <att name="ancillary_data">watertemp_qc watertemp_uql</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
