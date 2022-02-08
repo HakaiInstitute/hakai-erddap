@@ -105,31 +105,6 @@
 
 
   <dataVariable>
-    <sourceName>KCBuoy:WindSpd_UQL</sourceName>
-    <destinationName>WindSpd_UQL</destinationName>
-    <dataType>byte</dataType>
-    <addAttributes>
-      <att name="long_name">WindSpdKCBuoy UNESCO Q level</att>
-      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-      <att name="flag_values" type="byteList">1 2 3 4 9</att>
-      <att name="standard_name">aggregate_quality_flag</att>
-      <att name="missing_value" type="byte">2</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>KCBuoy:WindSpd_QC</sourceName>
-    <destinationName>WindSpd_flags</destinationName>
-    <dataType>String</dataType>
-    <addAttributes>
-      <att name="long_name">WindSpdKCBuoy Q flags</att>
-      <att name="units">Quality flags</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
     <sourceName>KCBuoy:WindSpd_Avg</sourceName>
     <destinationName>WindSpd_Avg</destinationName>
     <dataType>double</dataType>
