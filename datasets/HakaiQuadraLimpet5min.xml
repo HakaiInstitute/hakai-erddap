@@ -85,7 +85,7 @@
       <att name="long_name">TWtrQuadraLimpet_Avg</att>
       <att name="units">deg C</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">WaterTemp_flags,WaterTemp_UQL</att>
+      <att name="ancillary_variables">WaterTemp_flags WaterTemp_UQL</att>
     </addAttributes>
   </dataVariable>
 
@@ -101,7 +101,7 @@
       <att name="long_name">TWtrQuadraLimpet_Std</att>
       <att name="units">deg C</att>
       <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">WaterTemp_flags,WaterTemp_UQL</att>
+      <att name="ancillary_variables">WaterTemp_flags WaterTemp_UQL</att>
     </addAttributes>
   </dataVariable>
 
@@ -140,7 +140,7 @@
       <att name="long_name">ConductivityQuadraLimpet_Avg</att>
       <att name="units">S/m</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">WaterEC_flags,WaterEC_UQL</att>
+      <att name="ancillary_variables">WaterEC_flags WaterEC_UQL</att>
     </addAttributes>
   </dataVariable>
 
@@ -156,7 +156,7 @@
       <att name="long_name">ConductivityQuadraLimpet_Std</att>
       <att name="units">S/m</att>
       <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">WaterEC_flags,WaterEC_UQL</att>
+      <att name="ancillary_variables">WaterEC_flags WaterEC_UQL</att>
     </addAttributes>
   </dataVariable>
 
@@ -195,7 +195,7 @@
       <att name="long_name">PressureQuadraLimpet_Avg</att>
       <att name="units">decibar</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">WaterPressure_flags,WaterPressure_UQL</att>
+      <att name="ancillary_variables">WaterPressure_flags WaterPressure_UQL</att>
     </addAttributes>
   </dataVariable>
 
@@ -211,7 +211,7 @@
       <att name="long_name">PressureQuadraLimpet_Std</att>
       <att name="units">decibar</att>
       <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">WaterPressure_flags,WaterPressure_UQL</att>
+      <att name="ancillary_variables">WaterPressure_flags WaterPressure_UQL</att>
     </addAttributes>
   </dataVariable>
 
@@ -250,7 +250,7 @@
       <att name="long_name">DepthQuadraLimpet_Avg</att>
       <att name="units">m</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">WaterDepth_flags,WaterDepth_UQL</att>
+      <att name="ancillary_variables">WaterDepth_flags WaterDepth_UQL</att>
     </addAttributes>
   </dataVariable>
 
@@ -289,7 +289,7 @@
       <att name="long_name">O2ConcentrationQuadraLimpet_Avg</att>
       <att name="units">ml/L</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">WaterOxygen_flags,WaterOxygen_UQL</att>
+      <att name="ancillary_variables">WaterOxygen_flags WaterOxygen_UQL</att>
     </addAttributes>
   </dataVariable>
 
@@ -343,7 +343,7 @@
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">SalinityQuadraLimpet_Avg</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">WaterSalinity_flags,WaterSalinity_UQL</att>
+      <att name="ancillary_variables">WaterSalinity_flags WaterSalinity_UQL</att>
     </addAttributes>
   </dataVariable>
 
@@ -381,7 +381,7 @@
       <att name="long_name">ChlorophyllLimpet_Avg</att>
       <att name="units">μg/l</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">Chlorophyll_flags,Chlorophyll_UQL</att>
+      <att name="ancillary_variables">Chlorophyll_flags Chlorophyll_UQL</att>
     </addAttributes>
   </dataVariable>
 
