@@ -94,17 +94,6 @@
 
 
   <dataVariable>
-    <sourceName>="KCBuoy"</sourceName>
-    <destinationName>station</destinationName>
-    <dataType>String</dataType>
-    <addAttributes>
-      <att name="ioos_category">Location</att>
-      <att name="cf_role">timeseries_id</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
     <sourceName>KCBuoy:WindSpd_Avg</sourceName>
     <destinationName>WindSpd_Avg</destinationName>
     <dataType>double</dataType>
