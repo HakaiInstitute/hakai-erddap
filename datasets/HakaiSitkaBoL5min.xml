@@ -97,7 +97,7 @@
       <att name="long_name">pCO2_Med</att>
       <att name="units">μatm</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">pCO2_uatm_UQL,pCO2_uatm_flags</att>
+      <att name="ancillary_variables">pCO2_uatm_UQL pCO2_uatm_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -113,7 +113,7 @@
       <att name="long_name">pCO2_Avg</att>
       <att name="units">μatm</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">pCO2_uatm_UQL,pCO2_uatm_flags</att>
+      <att name="ancillary_variables">pCO2_uatm_UQL pCO2_uatm_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -129,7 +129,7 @@
       <att name="long_name">pCO2_Min</att>
       <att name="units">μatm</att>
       <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">pCO2_uatm_UQL,pCO2_uatm_flags</att>
+      <att name="ancillary_variables">pCO2_uatm_UQL pCO2_uatm_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -145,7 +145,7 @@
       <att name="long_name">pCO2_Max</att>
       <att name="units">μatm</att>
       <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">pCO2_uatm_UQL,pCO2_uatm_flags</att>
+      <att name="ancillary_variables">pCO2_uatm_UQL pCO2_uatm_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -161,7 +161,7 @@
       <att name="long_name">pCO2_Std</att>
       <att name="units">μatm</att>
       <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">pCO2_uatm_UQL,pCO2_uatm_flags</att>
+      <att name="ancillary_variables">pCO2_uatm_UQL pCO2_uatm_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -169,13 +169,13 @@
   <dataVariable>
     <sourceName>SitkaBoL:pCO2_uatm_UQL</sourceName>
     <destinationName>pCO2_uatm_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">pCO2 UNESCO Q level</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="standard_name">aggregate_quality_flag</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -201,7 +201,7 @@
       <att name="long_name">TCO2_Med</att>
       <att name="units">μmol/kg</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">calcTCO2_UQL,calcTCO2_flags</att>
+      <att name="ancillary_variables">calcTCO2_UQL calcTCO2_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -216,7 +216,7 @@
       <att name="long_name">TCO2_Avg</att>
       <att name="units">μmol/kg</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">calcTCO2_UQL,calcTCO2_flags</att>
+      <att name="ancillary_variables">calcTCO2_UQL calcTCO2_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -231,7 +231,7 @@
       <att name="long_name">TCO2_Min</att>
       <att name="units">μmol/kg</att>
       <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">calcTCO2_UQL,calcTCO2_flags</att>
+      <att name="ancillary_variables">calcTCO2_UQL calcTCO2_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -246,7 +246,7 @@
       <att name="long_name">TCO2_Max</att>
       <att name="units">μmol/kg</att>
       <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">calcTCO2_UQL,calcTCO2_flags</att>
+      <att name="ancillary_variables">calcTCO2_UQL calcTCO2_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -261,7 +261,7 @@
       <att name="long_name">TCO2_Std</att>
       <att name="units">μmol/kg</att>
       <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">calcTCO2_UQL,calcTCO2_flags</att>
+      <att name="ancillary_variables">calcTCO2_UQL calcTCO2_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -269,13 +269,13 @@
   <dataVariable>
     <sourceName>SitkaBoL:calcTCO2_UQL</sourceName>
     <destinationName>calcTCO2_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">TCO2 UNESCO Q level</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="standard_name">aggregate_quality_flag</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -302,7 +302,7 @@
       <att name="long_name">Water temperature_Med</att>
       <att name="units">deg C</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">TSG_T_UQL,TSG_T_flags</att>
+      <att name="ancillary_variables">TSG_T_UQL TSG_T_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -318,7 +318,7 @@
       <att name="long_name">Water temperature_Avg</att>
       <att name="units">deg C</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">TSG_T_UQL,TSG_T_flags</att>
+      <att name="ancillary_variables">TSG_T_UQL TSG_T_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -334,7 +334,7 @@
       <att name="long_name">Water temperature_Min</att>
       <att name="units">deg C</att>
       <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">TSG_T_UQL,TSG_T_flags</att>
+      <att name="ancillary_variables">TSG_T_UQL TSG_T_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -350,7 +350,7 @@
       <att name="long_name">Water temperature_Max</att>
       <att name="units">deg C</att>
       <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">TSG_T_UQL,TSG_T_flags</att>
+      <att name="ancillary_variables">TSG_T_UQL TSG_T_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -366,7 +366,7 @@
       <att name="long_name">Water temperature_Std</att>
       <att name="units">deg C</att>
       <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">TSG_T_UQL,TSG_T_flags</att>
+      <att name="ancillary_variables">TSG_T_UQL TSG_T_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -374,13 +374,13 @@
   <dataVariable>
     <sourceName>SitkaBoL:TSG_T_UQL</sourceName>
     <destinationName>TSG_T_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">Water temperature UNESCO Q level</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="standard_name">aggregate_quality_flag</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -406,7 +406,7 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Med</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">TSG_S_UQL,TSG_S_flags</att>
+      <att name="ancillary_variables">TSG_S_UQL TSG_S_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -421,7 +421,7 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Avg</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">TSG_S_UQL,TSG_S_flags</att>
+      <att name="ancillary_variables">TSG_S_UQL TSG_S_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -436,7 +436,7 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Min</att>
       <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">TSG_S_UQL,TSG_S_flags</att>
+      <att name="ancillary_variables">TSG_S_UQL TSG_S_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -451,7 +451,7 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Max</att>
       <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">TSG_S_UQL,TSG_S_flags</att>
+      <att name="ancillary_variables">TSG_S_UQL TSG_S_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -466,7 +466,7 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Std</att>
       <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">TSG_S_UQL,TSG_S_flags</att>
+      <att name="ancillary_variables">TSG_S_UQL TSG_S_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -474,13 +474,13 @@
   <dataVariable>
     <sourceName>SitkaBoL:TSG_S_UQL</sourceName>
     <destinationName>TSG_S_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">Salinity UNESCO Q level</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="standard_name">aggregate_quality_flag</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -506,7 +506,7 @@
       <att name="long_name">TA_Med</att>
       <att name="units">μmol/kg</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">AlkS_UQL,AlkS_flags</att>
+      <att name="ancillary_variables">AlkS_UQL AlkS_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -521,7 +521,7 @@
       <att name="long_name">TA_Avg</att>
       <att name="units">μmol/kg</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">AlkS_UQL,AlkS_flags</att>
+      <att name="ancillary_variables">AlkS_UQL AlkS_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -536,7 +536,7 @@
       <att name="long_name">TA_Min</att>
       <att name="units">μmol/kg</att>
       <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">AlkS_UQL,AlkS_flags</att>
+      <att name="ancillary_variables">AlkS_UQL AlkS_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -551,7 +551,7 @@
       <att name="long_name">TA_Max</att>
       <att name="units">μmol/kg</att>
       <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">AlkS_UQL,AlkS_flags</att>
+      <att name="ancillary_variables">AlkS_UQL AlkS_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -566,7 +566,7 @@
       <att name="long_name">TA_Std</att>
       <att name="units">μmol/kg</att>
       <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">AlkS_UQL,AlkS_flags</att>
+      <att name="ancillary_variables">AlkS_UQL AlkS_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -574,13 +574,13 @@
   <dataVariable>
     <sourceName>SitkaBoL:AlkS_UQL</sourceName>
     <destinationName>AlkS_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">TA UNESCO Q level</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="standard_name">aggregate_quality_flag</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -605,7 +605,7 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Ω arag_Med</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">calcOmega_UQL,calcOmega_flags</att>
+      <att name="ancillary_variables">calcOmega_UQL calcOmega_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -619,7 +619,7 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Ω arag_Avg</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">calcOmega_UQL,calcOmega_flags</att>
+      <att name="ancillary_variables">calcOmega_UQL calcOmega_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -633,7 +633,7 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Ω arag_Min</att>
       <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">calcOmega_UQL,calcOmega_flags</att>
+      <att name="ancillary_variables">calcOmega_UQL calcOmega_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -647,7 +647,7 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Ω arag_Max</att>
       <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">calcOmega_UQL,calcOmega_flags</att>
+      <att name="ancillary_variables">calcOmega_UQL calcOmega_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -661,7 +661,7 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Ω arag_Std</att>
       <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">calcOmega_UQL,calcOmega_flags</att>
+      <att name="ancillary_variables">calcOmega_UQL calcOmega_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -669,13 +669,13 @@
   <dataVariable>
     <sourceName>SitkaBoL:calcOmega_UQL</sourceName>
     <destinationName>calcOmega_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">Ω arag UNESCO Q level</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="standard_name">aggregate_quality_flag</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 
@@ -702,7 +702,7 @@
       <att name="long_name">pH_T_Med</att>
       <att name="units">total scale</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">calcpH_UQL,calcpH_flags</att>
+      <att name="ancillary_variables">calcpH_UQL calcpH_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -718,7 +718,7 @@
       <att name="long_name">pH_T_Avg</att>
       <att name="units">total scale</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">calcpH_UQL,calcpH_flags</att>
+      <att name="ancillary_variables">calcpH_UQL calcpH_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -734,7 +734,7 @@
       <att name="long_name">pH_T_Min</att>
       <att name="units">total scale</att>
       <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">calcpH_UQL,calcpH_flags</att>
+      <att name="ancillary_variables">calcpH_UQL calcpH_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -750,7 +750,7 @@
       <att name="long_name">pH_T_Max</att>
       <att name="units">total scale</att>
       <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">calcpH_UQL,calcpH_flags</att>
+      <att name="ancillary_variables">calcpH_UQL calcpH_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -766,7 +766,7 @@
       <att name="long_name">pH_T_Std</att>
       <att name="units">total scale</att>
       <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">calcpH_UQL,calcpH_flags</att>
+      <att name="ancillary_variables">calcpH_UQL calcpH_flags</att>
     </addAttributes>
   </dataVariable>
 
@@ -774,13 +774,13 @@
   <dataVariable>
     <sourceName>SitkaBoL:calcpH_UQL</sourceName>
     <destinationName>calcpH_UQL</destinationName>
-    <dataType>int</dataType>
+    <dataType>byte</dataType>
     <addAttributes>
       <att name="long_name">pH_T UNESCO Q level</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="standard_name">aggregate_quality_flag</att>
-      <att name="missing_value" type="int">2</att>
+      <att name="missing_value" type="byte">2</att>
     </addAttributes>
   </dataVariable>
 

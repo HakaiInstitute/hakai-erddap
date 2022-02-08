@@ -101,7 +101,7 @@
     <dataVariable>
         <sourceName>PruthDock:WindSpd_UQL</sourceName>
         <destinationName>windspd_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -109,7 +109,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -123,7 +123,7 @@
             <att name="long_name">Wind Speed Avg</att>
             <att name="units">m/s</att>
             <att name="standard_name">wind_speed</att>
-            <att name="ancillary_data">windspd_flag,windspd_uql</att>
+            <att name="ancillary_data">windspd_flag windspd_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -137,7 +137,7 @@
             <att name="long_name">Wind Speed STD</att>
             <att name="units">m/s</att>
             <att name="standard_name">wind_speed</att>
-            <att name="ancillary_data">windspd_flag,windspd_uql</att>
+            <att name="ancillary_data">windspd_flag windspd_uql</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -154,7 +154,7 @@
     <dataVariable>
         <sourceName>PruthDock:WindDir_UQL</sourceName>
         <destinationName>winddir_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -162,7 +162,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -178,7 +178,7 @@
             <att name="long_name">Wind From Direction Average</att>
             <att name="units">degree</att>
             <att name="standard_name">wind_from_direction</att>
-            <att name="ancillary_data">winddir_flag,winddir_uql</att>
+            <att name="ancillary_data">winddir_flag winddir_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -194,7 +194,7 @@
             <att name="long_name">Wind From Direction STD</att>
             <att name="units">degree</att>
             <att name="standard_name">wind_from_direction</att>
-            <att name="ancillary_data">winddir_flag,winddir_uql</att>
+            <att name="ancillary_data">winddir_flag winddir_uql</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -211,7 +211,7 @@
     <dataVariable>
         <sourceName>PruthDock:RH_UQL</sourceName>
         <destinationName>rh_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -219,7 +219,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -243,7 +243,7 @@
             <att name="long_name">Relative Humidity Average</att>
             <att name="units">%</att>
             <att name="standard_name">relative_humidity</att>
-            <att name="ancillary_data">rh_flag,rh_uql</att>
+            <att name="ancillary_data">rh_flag rh_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -257,7 +257,7 @@
             <att name="long_name">Relative Humidity STD</att>
             <att name="units">%</att>
             <att name="standard_name">relative_humidity</att>
-            <att name="ancillary_data">rh_flag,rh_uql</att>
+            <att name="ancillary_data">rh_flag rh_uql</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -274,7 +274,7 @@
     <dataVariable>
         <sourceName>PruthDock:AirTemp_UQL</sourceName>
         <destinationName>airtemp_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -282,7 +282,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -296,7 +296,7 @@
             <att name="long_name">Air Temperature</att>
             <att name="units">degrees_celsius</att>
             <att name="standard_name">air_temperature</att>
-            <att name="ancillary_data">airtemp_flag,airtemp_uql</att>
+            <att name="ancillary_data">airtemp_flag airtemp_uql</att>
             <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -310,7 +310,7 @@
             <att name="long_name">Air Temperature Average</att>
             <att name="units">degrees_celsius</att>
             <att name="standard_name">air_temperature</att>
-            <att name="ancillary_data">airtemp_flag,airtemp_uql</att>
+            <att name="ancillary_data">airtemp_flag airtemp_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -324,7 +324,7 @@
             <att name="long_name">Air Temperature STD</att>
             <att name="units">degrees_celsius</att>
             <att name="standard_name">air_temperature</att>
-            <att name="ancillary_data">airtemp_flag,airtemp_uql</att>
+            <att name="ancillary_data">airtemp_flag airtemp_uql</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -341,7 +341,7 @@
     <dataVariable>
         <sourceName>PruthDock:StationAirPressure_UQL</sourceName>
         <destinationName>stationairpressure_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -349,7 +349,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -363,7 +363,7 @@
             <att name="long_name">Station Air Pressure</att>
             <att name="units">hPa</att>
             <att name="standard_name">air_pressure</att>
-            <att name="ancillary_data">stationairpressure_flag,stationairpressure_uql</att>
+            <att name="ancillary_data">stationairpressure_flag stationairpressure_uql</att>
             <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -377,7 +377,7 @@
             <att name="long_name">Station Air Pressure Average</att>
             <att name="units">hPa</att>
             <att name="standard_name">air_pressure</att>
-            <att name="ancillary_data">stationairpressure_flag,stationairpressure_uql</att>
+            <att name="ancillary_data">stationairpressure_flag stationairpressure_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -391,7 +391,7 @@
             <att name="long_name">Station Air Pressure STD</att>
             <att name="units">hPa</att>
             <att name="standard_name">air_pressure</att>
-            <att name="ancillary_data">stationairpressure_flag,stationairpressure_uql</att>
+            <att name="ancillary_data">stationairpressure_flag stationairpressure_uql</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -408,7 +408,7 @@
     <dataVariable>
         <sourceName>PruthDock:SeaLevelAirPressure_UQL</sourceName>
         <destinationName>sealevelairpressure_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -416,7 +416,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -430,7 +430,7 @@
             <att name="long_name">Sea Level Air Pressure</att>
             <att name="units">hPa</att>
             <att name="standard_name">air_pressure_at_mean_sea_level</att>
-            <att name="ancillary_data">sealevelairpressure_flag,sealevelairpressure_uql</att>
+            <att name="ancillary_data">sealevelairpressure_flag sealevelairpressure_uql</att>
             <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -444,7 +444,7 @@
             <att name="long_name">Sea Level Air Pressure Average</att>
             <att name="units">hPa</att>
             <att name="standard_name">air_pressure_at_mean_sea_level</att>
-            <att name="ancillary_data">sealevelairpressure_flag,sealevelairpressure_uql</att>
+            <att name="ancillary_data">sealevelairpressure_flag sealevelairpressure_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -458,7 +458,7 @@
             <att name="long_name">Sea Level Air Pressure STD</att>
             <att name="units">hPa</att>
             <att name="standard_name">air_pressure_at_mean_sea_level</att>
-            <att name="ancillary_data">sealevelairpressure_flag,sealevelairpressure_uql</att>
+            <att name="ancillary_data">sealevelairpressure_flag sealevelairpressure_uql</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -475,7 +475,7 @@
     <dataVariable>
         <sourceName>PruthDock:UVRad5MinuteTotal_UQL</sourceName>
         <destinationName>uvrad5minutetotal_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -483,7 +483,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -498,7 +498,7 @@
             <att name="long_name">Cumulative UV Radiation</att>
             <att name="units"></att>
             <att name="standard_name"></att>
-            <att name="ancillary_data">uvrad5minutetotal_flag,uvrad5minutetotal_uql</att>
+            <att name="ancillary_data">uvrad5minutetotal_flag uvrad5minutetotal_uql</att>
             <att name="cell_methods">time: sum (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -515,7 +515,7 @@
     <dataVariable>
         <sourceName>PruthDock:SolarRad_UQL</sourceName>
         <destinationName>solarrad_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -523,7 +523,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -537,7 +537,7 @@
             <att name="long_name">Solar Radiation</att>
             <att name="units"></att>
             <att name="standard_name"></att>
-            <att name="ancillary_data">solarrad_flag,solarrad_uql</att>
+            <att name="ancillary_data">solarrad_flag solarrad_uql</att>
             <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -551,7 +551,7 @@
             <att name="long_name">Solar Radiation Average</att>
             <att name="units"></att>
             <att name="standard_name"></att>
-            <att name="ancillary_data">solarrad_flag,solarrad_uql</att>
+            <att name="ancillary_data">solarrad_flag solarrad_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -565,7 +565,7 @@
             <att name="long_name">Solar Radiation STD</att>
             <att name="units"></att>
             <att name="standard_name"></att>
-            <att name="ancillary_data">solarrad_flag,solarrad_uql</att>
+            <att name="ancillary_data">solarrad_flag solarrad_uql</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -582,7 +582,7 @@
     <dataVariable>
         <sourceName>PruthDock:SolarRad5MinuteTotal_UQL</sourceName>
         <destinationName>solarrad5minutetotal_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -590,7 +590,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -604,7 +604,7 @@
             <att name="long_name">Cumulative Solar Radiation</att>
             <att name="units"></att>
             <att name="standard_name"></att>
-            <att name="ancillary_data">solarrad5minutetotal_flag,solarrad5minutetotal_uql</att>
+            <att name="ancillary_data">solarrad5minutetotal_flag solarrad5minutetotal_uql</att>
             <att name="cell_methods">time: sum (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -621,7 +621,7 @@
     <dataVariable>
         <sourceName>PruthDock:PAR_UQL</sourceName>
         <destinationName>par_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -629,7 +629,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -643,7 +643,7 @@
             <att name="long_name">Photosynthetic Active Radiation</att>
             <att name="units">mol/m2</att>
             <att name="standard_name">surface_downwelling_photosynthetic_photon_flux_in_air</att>
-            <att name="ancillary_data">par_flag,par_uql</att>
+            <att name="ancillary_data">par_flag par_uql</att>
             <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -657,7 +657,7 @@
             <att name="long_name">Photosynthetic Active Radiation Average</att>
             <att name="units">mol/m2</att>
             <att name="standard_name">surface_downwelling_photosynthetic_photon_flux_in_air</att>
-            <att name="ancillary_data">par_flag,par_uql</att>
+            <att name="ancillary_data">par_flag par_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -671,7 +671,7 @@
             <att name="long_name">Photosynthetic Active Radiation STD</att>
             <att name="units">mol/m2</att>
             <att name="standard_name">surface_downwelling_photosynthetic_photon_flux_in_air</att>
-            <att name="ancillary_data">par_flag,par_uql</att>
+            <att name="ancillary_data">par_flag par_uql</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -688,7 +688,7 @@
     <dataVariable>
         <sourceName>PruthDock:PAR5MinuteTotal_UQL</sourceName>
         <destinationName>par5minutetotal_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -696,7 +696,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -710,7 +710,7 @@
             <att name="long_name">Cumulative Photosynthetic Active Radiation</att>
             <att name="units">mol/m2</att>
             <att name="standard_name">surface_downwelling_photosynthetic_photon_flux_in_air</att>
-            <att name="ancillary_data">par_flag,par_uql</att>
+            <att name="ancillary_data">par_flag par_uql</att>
             <att name="cell_methods">time: sum (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -727,7 +727,7 @@
     <dataVariable>
         <sourceName>PruthDock:UVRad_UQL</sourceName>
         <destinationName>uvrad_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -735,7 +735,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -749,7 +749,7 @@
             <att name="long_name">UV Radiation</att>
             <att name="units">W/m2</att>
             <att name="standard_name">surface_downwelling_shortwave_flux_in_air</att>
-            <att name="ancillary_data">uvrad_flag,uvrad_uql</att>
+            <att name="ancillary_data">uvrad_flag uvrad_uql</att>
             <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -763,7 +763,7 @@
             <att name="long_name">UV Radiation Mean</att>
             <att name="units">W/m2</att>
             <att name="standard_name">surface_downwelling_shortwave_flux_in_air</att>
-            <att name="ancillary_data">uvrad_flag,uvrad_uql</att>
+            <att name="ancillary_data">uvrad_flag uvrad_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -777,7 +777,7 @@
             <att name="long_name">UV Radiation STD</att>
             <att name="units">W/m2</att>
             <att name="standard_name">surface_downwelling_shortwave_flux_in_air</att>
-            <att name="ancillary_data">uvrad_flag,uvrad_uql</att>
+            <att name="ancillary_data">uvrad_flag uvrad_uql</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -794,7 +794,7 @@
     <dataVariable>
         <sourceName>PruthDock:Rain_UQL</sourceName>
         <destinationName>rain_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -802,7 +802,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -816,7 +816,7 @@
             <att name="long_name">Rain</att>
             <att name="units">mm</att>
             <att name="standard_name"></att>
-            <att name="ancillary_data">rain_flag,rain_uql</att>
+            <att name="ancillary_data">rain_flag rain_uql</att>
             <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -833,7 +833,7 @@
     <dataVariable>
         <sourceName>PruthDock:1hourRain_UQL</sourceName>
         <destinationName>hourlyrain_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -841,7 +841,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -855,7 +855,7 @@
             <att name="long_name">1hour Cumulative Rain</att>
             <att name="units">mm</att>
             <att name="standard_name"></att>
-            <att name="ancillary_data">1hourrain_flag,1hourrain_uql</att>
+            <att name="ancillary_data">1hourrain_flag 1hourrain_uql</att>
             <att name="cell_methods">time: sum (interval: 60.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -872,7 +872,7 @@
     <dataVariable>
         <sourceName>PruthDock:TideHeight_UQL</sourceName>
         <destinationName>tideheight_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -880,7 +880,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -894,7 +894,7 @@
             <att name="long_name">Tide Height Median</att>
             <att name="units">m</att>
             <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
-            <att name="ancillary_data">tideheight_flag,tideheight_uql</att>
+            <att name="ancillary_data">tideheight_flag tideheight_uql</att>
             <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -908,7 +908,7 @@
             <att name="long_name">Tide Height Average</att>
             <att name="units">m</att>
             <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
-            <att name="ancillary_data">tideheight_flag,tideheight_uql</att>
+            <att name="ancillary_data">tideheight_flag tideheight_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -925,7 +925,7 @@
     <dataVariable>
         <sourceName>PruthDock:TideHeightPLS_UQL</sourceName>
         <destinationName>tideheightpls_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -933,7 +933,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -947,7 +947,7 @@
             <att name="long_name">Seconday Tide Height PLS Avg</att>
             <att name="units">m</att>
             <att name="standard_name">sea_surface_height_above_mean_sea_level</att>
-            <att name="ancillary_data">tideheightpls_uql,tideheightpls_flag</att>
+            <att name="ancillary_data">tideheightpls_uql tideheightpls_flag</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -964,7 +964,7 @@
     <dataVariable>
         <sourceName>PruthDock:TideHeightDelta_UQL</sourceName>
         <destinationName>tideheightdelta_uql</destinationName>
-        <dataType>int</dataType>
+        <dataType>byte</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
@@ -972,7 +972,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="missing_value" type="int">2</att>
+            <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
@@ -985,7 +985,7 @@
         <addAttributes>
             <att name="long_name">Tide Height Delta Avg</att>
             <att name="units">m</att>
-            <att name="ancillary_data">tideheightdelta_uql,tideheightdelta_flag</att>
+            <att name="ancillary_data">tideheightdelta_uql tideheightdelta_flag</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>

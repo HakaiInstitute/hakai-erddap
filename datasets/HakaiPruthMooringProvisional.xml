@@ -32,6 +32,7 @@
         <att name="cdm_data_type">TimeSeriesProfile</att>
         <att name="cdm_profile_variables">time</att>
         <att name="cdm_timeseries_variables">station,latitude,longitude,depth</att>
+        <att name="subsetVariables">station,latitude,longitude,watertemp_uql</att>
     </addAttributes>
     <dataVariable>
         <sourceName>="Pruth"</sourceName>
@@ -99,7 +100,7 @@
     </dataVariable>
     <dataVariable>
         <sourceName>watertemp_avg</sourceName>
-        <destinationName>watertemp_avg</destinationName>
+        <destinationName>watertemp</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -107,75 +108,7 @@
             <att name="long_name">Average Water Temperature</att>
             <att name="units">degree_Celsius</att>
             <att name="standard_name">sea_water_temperature</att>
-            <att name="ancillary_data">watertemp_ql,watertemp_qc,watertemp_uql</att>
-            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>watertemp_med</sourceName>
-        <destinationName>watertemp_med</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Median Water Temperature</att>
-            <att name="units">degree_Celsius</att>
-            <att name="standard_name">sea_water_temperature</att>
-            <att name="ancillary_data">watertemp_ql,watertemp_qc,watertemp_uql</att>
-            <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>watertemp_min</sourceName>
-        <destinationName>watertemp_min</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Min. Water Temperature</att>
-            <att name="units">degree_Celsius</att>
-            <att name="standard_name">sea_water_temperature</att>
-            <att name="ancillary_data">watertemp_ql,watertemp_qc,watertemp_uql</att>
-            <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>watertemp_max</sourceName>
-        <destinationName>watertemp_max</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Max. Water Temperature</att>
-            <att name="units">degree_Celsius</att>
-            <att name="standard_name">sea_water_temperature</att>
-            <att name="ancillary_data">watertemp_ql,watertemp_qc,watertemp_uql</att>
-            <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>watertemp_std</sourceName>
-        <destinationName>watertemp_std</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Std. Water Temperature</att>
-            <att name="units">degree_Celsius</att>
-            <att name="standard_name">sea_water_temperature</att>
-            <att name="ancillary_data">watertemp_ql,watertemp_qc,watertemp_uql</att>
-            <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>watertemp_ql</sourceName>
-        <destinationName>watertemp_ql</destinationName>
-        <dataType>short</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="ioos_category">Quality</att>
-            <att name="long_name">Watertemp Ql</att>
+            <att name="ancillary_data">watertemp_qc watertemp_uql</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
