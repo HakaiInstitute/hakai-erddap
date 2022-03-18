@@ -24,7 +24,7 @@
         <att name="geospatial_lon_min">-128.0853667</att>
         <att name="geospatial_vertical_max">60.0</att>
         <att name="institution">Hakai Institute</att>
-        <att name="infoUrl">hakai.org</att>
+        <att name="infoUrl">https://www.hakai.org</att>
         <att name="instrument">Tidbits v2</att>
         <att name="keywords">seaSurfaceTemperature,subSurfaceTemperature,low-cost,pruth,Provisional Dataset,Calvert Island,temperature,mooring</att>
         <att name="summary">The Pruth Bay mooring is a surface mooring deployed in a shallow coastal environment near the Hakai Institute Calvert Island field station. The mooring is a test platform were low-cost oceanographic instrumentation is deployed at different depths to record sea water temperatures at an accuracy of 0.2 degrees Celsius. The temperature sensors are attached to an auxiliary line suspended from the surface buoy and along the main anchor line. Instruments are distributed tighter near the surface to better capture the higher vertical variability near the surface. This dataset present the provisional dataset which has been automatically QCed and flagged. </att>

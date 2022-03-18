@@ -20,7 +20,7 @@
     <att name="publisher_url">https://www.hakai.org/</att>
 
     <att name="infoUrl">https://www.hakai.org</att>
-    <att name="creator_url">hakai.org</att>
+    <att name="creator_url">https://www.hakai.org</att>
     <att name="creator_email">data at hakai.org</att>
     <att name="contributor_name">Wiley Evans</att>
     <att name="contributor_role">Primary Investigator</att>

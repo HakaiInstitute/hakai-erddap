@@ -33,7 +33,7 @@ Derive depth from corrected sea water pressure.
     -->
     <addAttributes>
         <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
-        <att name="infoUrl">hakai.org</att>
+        <att name="infoUrl">https://www.hakai.org</att>
         <att name="institution">Hakai Institute</att>
         <att name="keywords">above, air, air_pressure, atmosphere, atmospheric, corrected, data, depth, dock, dpth01, earth, Earth Science &gt; Atmosphere &gt; Atmospheric Pressure &gt; Atmospheric Pressure Measurements, Earth Science &gt; Atmosphere &gt; Atmospheric Pressure &gt; Sea Level Pressure, Earth Science &gt; Atmosphere &gt; Atmospheric Pressure &gt; Static Pressure, Earth Science &gt; Oceans &gt; Ocean Pressure &gt; Sea Level Pressure, Earth Science &gt; Oceans &gt; Ocean Pressure &gt; Water Pressure, gauge, height, height_above_mean_sea_level, instrument, latitude, level, longitude, mean, measurements, ocean, oceans, pres08, pres20, pressure, pruth, PruthTideHeightAvg, science, sea, Sea_Pressure, sea_water_pressure, sea_water_pressure_at_sea_water_surface, seabed, seawater, series, static, StationAirPressure, StationAirPressure_dbar, surface, tide, time, time series, water, water_height</att>
         <att name="keywords_vocabulary">GCMD Science Keywords</att>

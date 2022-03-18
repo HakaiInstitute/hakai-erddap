@@ -1,4 +1,3 @@
-
 <dataset type="EDDTableFromDatabase" datasetID="HakaiNutrientSampleResearch" active="true">
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
@@ -13,7 +12,7 @@
     <addAttributes>
         <att name="cdm_data_type">TimeSeriesProfile</att>
         <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
-        <att name="infoUrl">hakai.org</att>
+        <att name="infoUrl">https://www.hakai.org</att>
         <att name="institution">Hakai Institute</att>
         <att name="keywords">action, ammonia, ammonium, analyzed, analyzing, analyzing_lab, area, bout, chemistry, collected, collection, collection_method, comments, concentration, data, date, depth, dissolved, dissolved nutrients, earth, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Ammonia, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Nitrate, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Phosphate, event, event_pk, filter, filter_type, filtered, flag, gather, gather_lat, gather_long, hakai, hakai_id, identifier, installed, is_replicate, lab, lab_technician, latitude, level, line, line_out_depth, local, log, long, longitude, mass, mass_concentration_of_phosphate_in_sea_water, metadata, metadata_qc_flag, method, mole, mole_concentration_of_ammonium_in_sea_water, mole_concentration_of_nitrate_in_sea_water, n02, nh4, nh4_flag, nh4nunfl, nh4nunfl_flag, nitrate, nitrite, no2, no2_no3_flag, no2_no3_ugl, no2_no3_um, no2_no3_units, no3, no3nfilt, no3nfilt_flag, no3nunfl, no3nunfl_flag, nutrients, ocean, oceans, organization, out, phosphate, po4, po4_flag, po4pfilt, po4pfilt_flag, po4punfl, po4punfl_flag, preserved, pressure, pressure_transducer_depth, project, project_specific_id, quality, quality_level, quality_log, replicate, row, row_flag, sampling, sampling_bout, science, sea, seawater, sio2, sio2_flag, site, site_id, source, specific, srp, srp_flag, survey, tdn, tdn_flag, tdp, tdp_flag, technician, time, tn_flag, tp_flag, transducer, type, units, volume, water, work, work_area</att>
         <att name="keywords_vocabulary">GCMD Science Keywords</att>
@@ -379,7 +378,6 @@
             <att name="long_name">Sio2 Flag</att>
         </addAttributes>
     </dataVariable>
-
 
 
     <dataVariable>
