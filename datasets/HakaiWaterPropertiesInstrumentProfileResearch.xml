@@ -25,7 +25,7 @@
         <att name="geospatial_vertical_max" type="double">251.668</att>
         <att name="geospatial_vertical_min" type="double">0.991</att>
         <att name="id">01907674_2020-06-17T17:22:06Z</att>
-        <att name="infoUrl">hakai.org</att>
+        <att name="infoUrl">https://www.hakai.org</att>
         <att name="institution">Hakai Institute</att>
         <att name="instrument">SBE19plus SN01907674 Firmware2.5.2</att>
         <att name="keywords">conductivity,temperature,salinity,depth,pressure,dissolved oxygen</att>
