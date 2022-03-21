@@ -7,6 +7,7 @@
   <iso19115File>/xml/HakaiQuadraBoL5min_iso19115.xml</iso19115File>
 
   <addAttributes>
+    <att name="cde_ingest">false</att>
     <att name="language">eng</att>
     <att name="id">HakaiQuadraBoL5min</att>
 
