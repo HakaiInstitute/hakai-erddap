@@ -8,6 +8,7 @@
   <iso19115File>/xml/HakaiBaynesSoundBoL5min_iso19115.xml</iso19115File>
 
   <addAttributes>
+    <att name="cde_ingest">false</att>
     <att name="language">eng</att>
     <att name="id">HakaiBaynesSoundBoL5min</att>
     <att name="site_id">Baynes Sound Burke-o-Lator</att>
