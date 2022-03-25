@@ -167,8 +167,13 @@ FROM
     ) chla_bulk_gff_flag
 FROM eims.output_chlorophyll
 where (
-chla is not null 
-or phaeo is not null
+	(
+		chla is not null 
+		or phaeo is not NULL
+	) AND (
+	chla_flag NOT IN ('SVD') AND
+	phaeo_flag NOT IN ('SVD')
+	)
 )
     )
 subquery
