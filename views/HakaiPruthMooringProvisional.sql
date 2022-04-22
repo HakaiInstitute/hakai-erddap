@@ -1,8 +1,8 @@
-DROP VIEW erddap."HakaiPruthMMooringProvisional"
+DROP VIEW erddap."HakaiPruthMooringProvisional"
 CREATE OR REPLACE VIEW erddap."HakaiPruthMooringProvisional" AS (
 	SELECT 
 		depth,
-		measurement_time,
+		measurement_time AS "measurementTime",
 		water_temp_ql as watertemp_ql,
 		water_temp_qc AS watertemp_qc,
 		water_temp_uql AS watertemp_uql,
