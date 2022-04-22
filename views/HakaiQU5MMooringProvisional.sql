@@ -2,7 +2,7 @@ DROP VIEW erddap."HakaiQU5MMooringProvisional"
 CREATE OR REPLACE VIEW erddap."HakaiQU5MMooringProvisional" AS (
 	SELECT 
 		COALESCE(water.depth, air.depth) as depth,
-		COALESCE(water.measurement_time, air.measurement_time) as measurement_time,
+		COALESCE(water.measurement_time, air.measurement_time) as "measurementTime",
 		water.water_temp_ql as watertemp_ql,
 		water.water_temp_qc AS watertemp_qc,
 		water.water_temp_uql AS watertemp_uql,
