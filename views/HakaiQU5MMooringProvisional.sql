@@ -1,4 +1,4 @@
-DROP VIEW erddap."HakaiQU5MMooringProvisional"
+DROP VIEW IF EXISTS erddap."HakaiQU5MMooringProvisional";
 CREATE OR REPLACE VIEW erddap."HakaiQU5MMooringProvisional" AS (
 	SELECT 
 		COALESCE(water.depth, air.depth) as depth,
