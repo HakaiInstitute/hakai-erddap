@@ -18,7 +18,7 @@
     <att name="creator_email">wiley.evans@hakai.org</att>
     <att name="creator_url">https://www.hakai.org/</att>
     <att name="publisher_email">data@hakai.org</att>
-    <att name="publisher_name">Hakai Institiute</att>
+    <att name="publisher_name">Hakai Institute</att>
     <att name="publisher_url">https://www.hakai.org/</att>
     <att name="cdm_data_type">TimeSeries</att>
     <att name="cdm_timeseries_variables">station</att>
