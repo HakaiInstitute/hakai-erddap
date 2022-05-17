@@ -63,7 +63,7 @@
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
-		<sourceName>Latitude</sourceName>
+		<sourceName>=51.65</sourceName>
 		<destinationName>latitude</destinationName>
 		<dataType>float</dataType>
 		<!-- sourceAttributes>
@@ -77,7 +77,7 @@
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
-		<sourceName>Longitude</sourceName>
+		<sourceName>=-127.966</sourceName>
 		<destinationName>longitude</destinationName>
 		<dataType>float</dataType>
 		<!-- sourceAttributes>
