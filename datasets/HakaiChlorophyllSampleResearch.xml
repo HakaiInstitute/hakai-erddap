@@ -43,6 +43,8 @@
         <att name="doi">10.21966/wsvt-ew96</att>
         <att name="id">10.21966/wsvt-ew96</att>
         <att name="naming_authority">org.doi</att>
+        <att name="platform">self-propelled small boat</att>
+        <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
     </addAttributes>
     <dataVariable>
         <sourceName>work_area</sourceName>

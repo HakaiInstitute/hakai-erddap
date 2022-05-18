@@ -30,6 +30,8 @@
     <att name="infoUrl">https://www.hakai.org</att>
     <att name="geospatial_vertical_min">20</att>
     <att name="geospatial_vertical_max">20</att>
+    <att name="platform">fixed benthic node</att>
+    <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
   </addAttributes>
   <dataVariable>
     <sourceName>measurementTime</sourceName>

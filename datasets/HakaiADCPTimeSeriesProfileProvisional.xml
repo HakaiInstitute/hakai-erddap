@@ -38,6 +38,8 @@
 		<att name="subsetVariables">filename, instrument_serial_number, instrument_model,station,latitude, longitude</att>
 		<att name="summary">This dataset presents a collection of all the Acoustic Doppler Current Profiler (ADCP) instruments deployed by the Hakai Institute and the University of Victoria in the different study areas of the Hakai Institute near Calvert Island along the central coast of British Columbia and Quadra Island in Northern Strait of Georgia. Most of the data come from the coastal region around Calvert Island starting from February 2019. For all deployments, the instruments were deployed on a seabed bottom frame and lowered to the seabed in an upward-looking configuration. All instruments are RDI Workhorse instruments of different frequencies.</att>
 		<att name="title">Hakai Institute British Columbia Central Coast Fixed Platform Acoustic Doppler Current Profiler Time Series Provisional</att>
+		<att name="platform">fixed benthic node</att>
+		<att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
 	</addAttributes>
 	<dataVariable>
 		<sourceName>filename</sourceName>
