@@ -46,7 +46,7 @@ Derive depth from corrected sea water pressure.
         <att name="cdm_data_type">TimeSeries</att>
         <att name="cdm_timeseries_variables">station,instrument,latitude,longitude</att>
         <att name="subsetVariables">station,instrument</att>
-        <att name="platform">coastal structure</att>
+        <att name="platform">fixed benthic node</att>
         <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
     </addAttributes>
     <dataVariable>
