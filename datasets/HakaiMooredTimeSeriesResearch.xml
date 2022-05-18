@@ -55,6 +55,8 @@
 		<att name="publisher_url">https://www.hakai.org</att>
 		<att name="summary">This datasets present a collection of water properties measurements (Temperature, Conductivity, Dissolved Oxygen, Salinity) collected by high accuracy instruments as part of the mooring program of the Hakai Institute. The data is first compared to the profiles collected nearby during the deployment. Instrument clock is corrected to reduce clock drift, data is reduced to consider only data collected within the water, automated QCing is applied to detect spikes and potentially bad data which is then manually revised.</att>
 		<att name="title">Hakai Mooring Water Properties Timeseries Research</att>
+		<att name="platform">subsurface mooring</att>
+		<att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
 	</addAttributes>
 	<dataVariable>
 		<sourceName>file_id</sourceName>
