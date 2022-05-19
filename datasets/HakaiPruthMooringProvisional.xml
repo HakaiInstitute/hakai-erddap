@@ -33,6 +33,8 @@
         <att name="cdm_profile_variables">time</att>
         <att name="cdm_timeseries_variables">station,latitude,longitude,depth</att>
         <att name="subsetVariables">station,latitude,longitude,watertemp_uql</att>
+        <att name="platform">mooring</att>
+        <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
     </addAttributes>
     <dataVariable>
         <sourceName>="Pruth"</sourceName>

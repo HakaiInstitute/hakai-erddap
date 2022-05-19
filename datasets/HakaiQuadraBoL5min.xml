@@ -46,6 +46,8 @@
     <att name="subsetVariables">station</att>
     <att name="cdm_data_type">TimeSeries</att>
     <att name="cdm_timeseries_variables">station</att>
+    <att name="platform">coastal structure</att>
+    <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
   </addAttributes>
   <dataVariable>
     <sourceName>measurementTime</sourceName>

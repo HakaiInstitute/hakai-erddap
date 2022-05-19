@@ -39,6 +39,8 @@
         <att name="publisher_url">https://www.hakai.org</att>
         <att name="summary">The Hakai Institute maintains a weather and tide station on the main dock of its remote station located on Calvert Island within Pruth Bay. The weather station measures the air temperature, wind speed and direction, humidity, atmospheric pressure, UV radiation, solar radiation, PAR, and precipitation since July 2014. In June 2018, a tide station was installed to measure the water level within the bay. The station is a combination of a primary radar sensor mounted below the dock above the water and a secondary vented pressure sensor mounted within the water 2m below the lowest tides.</att>
         <att name="title">Pruth Dock, Calvert Island Tide and Weather Station Provisional</att>
+        <att name="platform">coastal structure</att>
+        <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
     </addAttributes>
 
     <dataVariable>
