@@ -26,6 +26,7 @@
         <att name="title">Seaspan Royal Surface Underway Super CO2 with weather data</att>
         <att name="cdm_trajectory_variables">platform_name</att>
         <att name="collected_beginning_date">none</att>
+        <att name="platform">vessel of opportunity</att>
     </addAttributes>
     <dataVariable>
         <sourceName>="Seaspan Royal"</sourceName>
