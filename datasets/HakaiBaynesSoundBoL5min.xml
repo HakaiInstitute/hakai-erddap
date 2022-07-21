@@ -38,7 +38,8 @@
     <att name="keywords">seaSurfaceTemperature,Discrete measurement,Continuous measurement,Ocean Acidification,Sea Surface Temperature,CO2,inorganicCarbon,Sea Surface Practical Salinity,Surface measurement,seaSurfaceSalinity,Practical Salinity</att>
     <att name="summary">This dataset includes continuous sea surface measurements of partial pressure of carbon dioxide (pCO2), sea surface temperature and salinity collected from the Fanny Bay Oysters, British Columbia, Canada. The Burke-o-Lator (BoL) pCO2/TCO2 analyzer measures carbon dioxide partial pressure (pCO2) and total dissolved inorganic carbon (TCO2) both continuously from a flow-through seawater stream and from seawater collected in discrete samples. The BoL is paired with a SBE 45 Thermosalinograph to measure seawater temperature and salinity.</att>
     <att name="title">Real-Time Provisional High-Resolution Record of Surface Seawater Carbon Dioxide (CO2) Content Collected from Fanny Bay Oysters, British Columbia, Canada</att>
-
+    <att name="platform">coastal structure</att>
+    <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
   </addAttributes>
   <dataVariable>
     <sourceName>measurementTime</sourceName>
