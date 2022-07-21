@@ -1,3 +1,5 @@
+<user username="jessy.barrette@hakai.org" roles="admin"/>
+<user username="wiley.evans@hakai.org" roles="oa"/>
 <dataset type="EDDTableFromNcFiles" datasetID="HakaiSeaspanRoyalSuperCO2Provisional" active="true">
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <updateEveryNMillis>10000</updateEveryNMillis>
@@ -10,6 +12,7 @@
     <sortedColumnSourceName>time</sortedColumnSourceName>
     <sortFilesBySourceNames>time</sortFilesBySourceNames>
     <fileTableInMemory>false</fileTableInMemory>
+    <accessibleTo>admin,oa</accessibleTo>
     <addAttributes>
         <att name="_NCProperties">null</att>
         <att name="cdm_data_type">trajectory</att>
