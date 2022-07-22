@@ -1,7 +1,7 @@
 <dataset type="EDDTableFromNcFiles" datasetID="HakaiSeaspanRoyalNMEA" active="true">
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <updateEveryNMillis>10000</updateEveryNMillis>
-    <fileDir>/datasets/seaspan_royal/processed/nmea/</fileDir>
+    <fileDir>/datasets/HakaiSeaspanRoyalSuperCO2Provisional/processed/nmea/</fileDir>
     <fileNameRegex>seaspan_nmea_.*\.nc</fileNameRegex>
     <recursive>true</recursive>
     <pathRegex>.*</pathRegex>
