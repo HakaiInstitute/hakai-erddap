@@ -1,4 +1,4 @@
-<dataset type="EDDTableFromNcFiles" datasetID="HakaiSeaspanRoyalSuperCO2Provisional" active="true">
+<dataset type="EDDTableFromNcFiles" datasetID="HakaiSeaspanRoyalSuperCO2Provisional_merged" active="true">
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <updateEveryNMillis>10000</updateEveryNMillis>
     <fileDir>/datasets/HakaiSeaspanRoyalSuperCO2Provisional/super_co2/</fileDir>
@@ -29,7 +29,7 @@
         <att name="platform">vessel of opportunity</att>
     </addAttributes>
     <dataVariable>
-        <sourceName>=Seaspan Royal</sourceName>
+        <sourceName>="Seaspan Royal"</sourceName>
         <destinationName>platform_name</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
@@ -558,4 +558,6 @@
             <att name="missing_value" type="double">NaN</att>
         </addAttributes>
     </dataVariable>
+
+
 </dataset>
