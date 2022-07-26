@@ -63,7 +63,7 @@
         <sourceName>=Calendar2.parseToEpochSeconds(row.columnString("Date") + "T" + 
             row.columnString("Time") + "Z", "yyyyMMdd'T'HHmmss'Z'")</sourceName>
         <destinationName>time</destinationName>
-        <dataType>String</dataType>
+        <dataType>float</dataType>
         <!-- sourceAttributes>
             <att name="calendar">proleptic_gregorian</att>
             <att name="units">seconds since 2022-06-13 17:11:54</att>
