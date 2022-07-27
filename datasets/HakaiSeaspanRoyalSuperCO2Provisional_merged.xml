@@ -29,7 +29,7 @@
         <att name="platform">vessel of opportunity</att>
     </addAttributes>
     <dataVariable>
-        <sourceName>=Seaspan Royal</sourceName>
+        <sourceName>="Seaspan Royal"</sourceName>
         <destinationName>platform_name</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
