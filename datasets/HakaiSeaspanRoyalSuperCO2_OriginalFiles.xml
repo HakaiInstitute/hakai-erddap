@@ -35,7 +35,7 @@
         <att name="title">SeaspanRoyal SuperCO2 original data</att>
     </addAttributes>
     <dataVariable>
-        <sourceName>="Seaspan Royal"</sourceName>
+        <sourceName>=Seaspan Royal</sourceName>
         <destinationName>platform_name</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
