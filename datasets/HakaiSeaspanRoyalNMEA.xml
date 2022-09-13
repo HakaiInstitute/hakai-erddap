@@ -1,8 +1,8 @@
-<dataset type="EDDTableFromNcFiles" datasetID="HakaiSeaspanRoyalSuperCO2Provisional" active="true">
+<dataset type="EDDTableFromNcFiles" datasetID="HakaiSeaspanRoyalNMEA" active="true">
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <updateEveryNMillis>10000</updateEveryNMillis>
-    <fileDir>/datasets/HakaiSeaspanRoyalSuperCO2Provisional/super_co2/</fileDir>
-    <fileNameRegex>nmea_super_co2.*\.nc</fileNameRegex>
+    <fileDir>/datasets/HakaiSeaspanRoyalSuperCO2Provisional/processed/nmea/</fileDir>
+    <fileNameRegex>seaspan_nmea_.*\.nc</fileNameRegex>
     <recursive>true</recursive>
     <pathRegex>.*</pathRegex>
     <metadataFrom>last</metadataFrom>
@@ -23,13 +23,13 @@
         <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
         <att name="subsetVariables">platform_name</att>
         <att name="summary">This is a preliminary dataset.</att>
-        <att name="title">Seaspan Royal Surface Underway Super CO2 with weather data</att>
+        <att name="title">Seaspan Royal Surface Underway NMEA data</att>
         <att name="cdm_trajectory_variables">platform_name</att>
         <att name="collected_beginning_date">none</att>
         <att name="platform">vessel of opportunity</att>
     </addAttributes>
     <dataVariable>
-        <sourceName>=Seaspan Royal</sourceName>
+        <sourceName>="Seaspan Royal"</sourceName>
         <destinationName>platform_name</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
@@ -207,7 +207,7 @@
     </sourceAttributes -->
         <addAttributes>
             <att name="colorBarMaximum" type="double">15.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="colorBarMinimum" type="double">0</att>
             <att name="missing_value" type="double">NaN</att>
             <att name="units">knots</att>
         </addAttributes>
@@ -222,7 +222,7 @@
     </sourceAttributes -->
         <addAttributes>
             <att name="colorBarMaximum" type="double">360.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="colorBarMinimum" type="double">0</att>
             <att name="missing_value" type="double">NaN</att>
             <att name="units">degrees</att>
         </addAttributes>
@@ -264,298 +264,11 @@
     </sourceAttributes -->
         <addAttributes>
             <att name="colorBarMaximum" type="double">360.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="colorBarMinimum" type="double">0</att>
             <att name="long_name">Wind From Direction</att>
             <att name="missing_value" type="double">NaN</att>
             <att name="standard_name">wind_from_direction</att>
             <att name="units">degrees</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>CO2_ppm</sourceName>
-        <destinationName>CO2_ppm</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="missing_value" type="double">NaN</att>
-            <att name="long_name">Raw CO2 mole Fractions in Dry Air</att>
-            <att name="units">ppm</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>CO2_abs</sourceName>
-        <destinationName>CO2_abs</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="missing_value" type="double">NaN</att>
-            <att name="long_name">Raw CO2 Absorbance</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>H2O_ppt_mass</sourceName>
-        <destinationName>H2O_ppt_mass</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Raw H2O Channel Mole Fractions in Dry Air</att>
-            <att name="missing_value" type="double">NaN</att>
-            <att name="units">ppm</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>H2Oabs</sourceName>
-        <destinationName>H2Oabs</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Raw H2O Channel Absorbance</att>
-            <att name="missing_value" type="double">NaN</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>Cell_T</sourceName>
-        <destinationName>Cell_T</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Cell T</att>
-            <att name="missing_value" type="double">NaN</att>
-            <att name="long_name">Cell Temperature</att>
-            <att name="units">deg C</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>Cell_P</sourceName>
-        <destinationName>Cell_P</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Cell Pressure</att>
-            <att name="missing_value" type="double">NaN</att>
-            <att name="units">mbar</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>820pwr</sourceName>
-        <destinationName>a_820pwr</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">820PWR</att>
-            <att name="missing_value" type="double">NaN</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>Fluke_Temp</sourceName>
-        <destinationName>Fluke_Temp</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Fluke Temperature</att>
-            <att name="units">deg C</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>Press_kPa</sourceName>
-        <destinationName>Press_kPa</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Pressure</att>
-            <att name="missing_value" type="double">NaN</att>
-            <att name="units">kPa</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>SB63_T</sourceName>
-        <destinationName>SB63_T</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Oxygen Sensor Temperature</att>
-            <att name="units">deg C</att>
-            <att name="standard_name">temperature_of_sensor_for_oxygen_in_sea_water</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>SB63_O2</sourceName>
-        <destinationName>SB63_O2</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Dissolved oxygen Concentration</att>
-            <att name="units">mL/L</att>
-            <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>SB63_RawP</sourceName>
-        <destinationName>SB63_RawP</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">SB63 Raw Phase</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>SB63_RawTV</sourceName>
-        <destinationName>SB63_RawTV</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">SB63 Raw Temperature Voltage</att>
-            <att name="units">Volt</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>Press_V</sourceName>
-        <destinationName>Press_V</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Pressure Voltage</att>
-            <att name="missing_value" type="double">NaN</att>
-            <att name="units">Volt</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>IO1</sourceName>
-        <destinationName>IO1</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">IO1</att>
-            <att name="missing_value" type="double">NaN</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>IO2</sourceName>
-        <destinationName>IO2</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">IO2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>IO3</sourceName>
-        <destinationName>IO3</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">IO3</att>
-            <att name="missing_value" type="double">NaN</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>Valve1pos</sourceName>
-        <destinationName>Valve1pos</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Valve1pos</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>StandardVal</sourceName>
-        <destinationName>StandardVal</destinationName>
-        <dataType>long</dataType>
-        <!-- sourceAttributes>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="_FillValue" type="long">9223372036854775807</att>
-            <att name="long_name">Standard Val</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>TSG_T</sourceName>
-        <destinationName>TSG_T</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">TSG Temperature</att>
-            <att name="units">deg C</att>
-            <att name="standard_name">sea_surface_temperature</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>TSG_Cond</sourceName>
-        <destinationName>TSG_Cond</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">TSG Conductivity</att>
-            <att name="missing_value" type="double">NaN</att>
-            <att name="units">S/m</att>
-            <att name="standard_name">sea_water_electrical_conductivity</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>TSG_Sal</sourceName>
-        <destinationName>TSG_Sal</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">TSG Salinity</att>
-            <att name="missing_value" type="double">NaN</att>
-            <att name="units">1e-3</att>
-            <att name="scale">PSS-78</att>
-            <att name="standard_name">sea_surface_salinity</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>Remote_Therm</sourceName>
-        <destinationName>Remote_Therm</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        <att name="_FillValue" type="double">NaN</att>
-    </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Remote Therm</att>
-            <att name="missing_value" type="double">NaN</att>
         </addAttributes>
     </dataVariable>
 </dataset>

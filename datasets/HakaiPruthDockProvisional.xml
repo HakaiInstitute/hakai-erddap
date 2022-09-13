@@ -1,7 +1,7 @@
 <dataset type="EDDTableFromDatabase" datasetID="HakaiPruthDockProvisional" active="true">
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
-    <schemaName>erddap</schemaName>
+    <schemaName>sn</schemaName>
     <tableName>"PruthDock:5minuteSamples"</tableName>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <!-- sourceAttributes>
