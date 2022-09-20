@@ -31,6 +31,7 @@
     <att name="geospatial_vertical_min">-11</att>
     <att name="platform">land/onshore structure</att>
     <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
+    <att name="standard_name_vocabulary">CF Standard Name Table v77</att>
   </addAttributes>
   <dataVariable>
     <sourceName>measurementTime</sourceName>
@@ -83,7 +84,7 @@
       <att name="sensor_type">HC2S3</att>
       <att name="sensor_description">Temperature and Relative Humidity Probe</att>
       <att name="long_name">TAirQuadra1_Avg</att>
-      <att name="units">deg C</att>
+      <att name="units">degree_Celsius</att>
     </addAttributes>
   </dataVariable>
 
@@ -97,7 +98,7 @@
       <att name="sensor_type">HC2S3</att>
       <att name="sensor_description">Temperature and Relative Humidity Probe</att>
       <att name="long_name">TAirQuadra1_Std</att>
-      <att name="units">deg C</att>
+      <att name="units">degree_Celsius</att>
     </addAttributes>
   </dataVariable>
 
@@ -122,7 +123,7 @@
       <att name="sensor_type">109</att>
       <att name="sensor_description">Temperature Probe</att>
       <att name="long_name">TAirQuadra2_Avg</att>
-      <att name="units">deg C</att>
+      <att name="units">degree_Celsius</att>
     </addAttributes>
   </dataVariable>
 
@@ -136,7 +137,7 @@
       <att name="sensor_type">109</att>
       <att name="sensor_description">Temperature Probe</att>
       <att name="long_name">TAirQuadra2_Std</att>
-      <att name="units">deg C</att>
+      <att name="units">degree_Celsius</att>
     </addAttributes>
   </dataVariable>
 
