@@ -149,7 +149,7 @@
       <att name="long_name">WindSpdKCBuoy_Std</att>
       <att name="units">m/s</att>
       <att name="height">3</att>
-      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_data">WindSpd_UQL WindSpd_flags</att>
     </addAttributes>
   </dataVariable>
@@ -204,7 +204,7 @@
       <att name="long_name">WindDirKCBuoy_Std</att>
       <att name="units">degrees</att>
       <att name="height">3</att>
-      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_data">WindDir_UQL WindDir_flags</att>
     </addAttributes>
   </dataVariable>
@@ -406,7 +406,7 @@
       <att name="long_name">StationAirPressure_Std</att>
       <att name="units">hPa</att>
       <att name="height">3</att>
-      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_data">StationAirPressure_UQL StationAirPressure_flags</att>
     </addAttributes>
   </dataVariable>
@@ -529,7 +529,7 @@
       <att name="long_name">TWtrKCBuoy_Std</att>
       <att name="units">Deg C</att>
       <att name="depth">0.5</att>
-      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
     </addAttributes>
   </dataVariable>
@@ -651,7 +651,7 @@
       <att name="long_name">ConductivityKCBuoy_Std</att>
       <att name="units">S/m</att>
       <att name="depth">0.5</att>
-      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_data">WaterConductivity_UQL WaterConductivity_flags</att>
       <att name="standard_name">sea_water_conductivity</att>
     </addAttributes>
@@ -774,7 +774,7 @@
       <att name="long_name">PressureKCBuoy_Std</att>
       <att name="units">dbar</att>
       <att name="depth">0.5</att>
-      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_data">WaterPressure_UQL WaterPressure_flags</att>
       <att name="standard_name">sea_water_pressure</att>
     </addAttributes>
@@ -896,7 +896,7 @@
       <att name="sensor_type">SBE16</att>
       <att name="long_name">SalinityKCBuoy_Std</att>
       <att name="depth">0.5</att>
-      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_data">WaterSalinity_UQL WaterSalinity_flags</att>
       <att name="standard_name">sea_surface_practical_salinity</att>
       <att name="units">1e-3</att>
