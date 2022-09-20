@@ -369,8 +369,8 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Water temperature_Std</att>
-      <att name="units">deg C</att>
-      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="units">degree_Celsius</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">TSG_T_UQL TSG_T_flags</att>
     </addAttributes>
   </dataVariable>
