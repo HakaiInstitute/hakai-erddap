@@ -32,6 +32,7 @@
     <att name="geospatial_vertical_max">20</att>
     <att name="platform">fixed benthic node</att>
     <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
+    <att name="standard_name_vocabulary">CF Standard Name Table v77</att>
   </addAttributes>
   <dataVariable>
     <sourceName>measurementTime</sourceName>
@@ -85,7 +86,7 @@
       <att name="sensor_type">SBE 37-SMP-ODO</att>
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">TWtrQuadraLimpet_Avg</att>
-      <att name="units">deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">WaterTemp_flags WaterTemp_UQL</att>
     </addAttributes>
@@ -101,8 +102,8 @@
       <att name="sensor_type">SBE 37-SMP-ODO</att>
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">TWtrQuadraLimpet_Std</att>
-      <att name="units">deg C</att>
-      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="units">degree_Celsius</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">WaterTemp_flags WaterTemp_UQL</att>
     </addAttributes>
   </dataVariable>
@@ -157,7 +158,7 @@
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">ConductivityQuadraLimpet_Std</att>
       <att name="units">S/m</att>
-      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">WaterEC_flags WaterEC_UQL</att>
     </addAttributes>
   </dataVariable>
@@ -212,7 +213,7 @@
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">PressureQuadraLimpet_Std</att>
       <att name="units">decibar</att>
-      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">WaterPressure_flags WaterPressure_UQL</att>
     </addAttributes>
   </dataVariable>
@@ -285,7 +286,7 @@
     <destinationName>WaterOxygen_Avg</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">volume_concentration_of_dissolved_oxygen_in_sea_water</att>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
       <att name="sensor_type">SBE 37-SMP-ODO</att>
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">O2ConcentrationQuadraLimpet_Avg</att>
@@ -301,12 +302,12 @@
     <destinationName>WaterOxygen_Std</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">volume_concentration_of_dissolved_oxygen_in_sea_water</att>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
       <att name="sensor_type">SBE 37-SMP-ODO</att>
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">O2ConcentrationQuadraLimpet_Std</att>
       <att name="units">ml/L</att>
-      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">WaterOxygen_flags</att>
     </addAttributes>
   </dataVariable>

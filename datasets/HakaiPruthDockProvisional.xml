@@ -21,7 +21,7 @@
         <att name="keywords_vocabulary">GCMD Science Keywords,CIOOS EOVS</att>
         <att name="license">[standard]</att>
         <att name="sourceUrl">(local database)</att>
-        <att name="standard_name_vocabulary">CF Standard Name Table v55</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v77</att>
         <att name="summary">The Hakai Institute maintains a weather station and tidal station at their remote research facility at the Pruth Dock on Calvert Island. The weather station measure atmospheric conditions above sea level at around 5-10m above sea level. The tide station consist of two separate measurement of the water level with a primary sensor being a radar sensor looking from and above with a millimeter accucary (VegaPuls 62) and a secondary under water pressure gauge sensor with ability to measure temperature and conductivity (OTT PLS-C).</att>
         <att name="title">Pruth Dock, Calvert Island, BC Tide and Weather Station Provisional</att>
         <att name='cdm_data_type'>Timeseries</att>
@@ -140,7 +140,7 @@
             <att name="units">m/s</att>
             <att name="standard_name">wind_speed</att>
             <att name="ancillary_data">windspd_flag windspd_uql</att>
-            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+            <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -197,7 +197,7 @@
             <att name="units">degree</att>
             <att name="standard_name">wind_from_direction</att>
             <att name="ancillary_data">winddir_flag winddir_uql</att>
-            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+            <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -260,7 +260,7 @@
             <att name="units">%</att>
             <att name="standard_name">relative_humidity</att>
             <att name="ancillary_data">rh_flag rh_uql</att>
-            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+            <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -327,7 +327,7 @@
             <att name="units">degrees_celsius</att>
             <att name="standard_name">air_temperature</att>
             <att name="ancillary_data">airtemp_flag airtemp_uql</att>
-            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+            <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -394,7 +394,7 @@
             <att name="units">hPa</att>
             <att name="standard_name">air_pressure</att>
             <att name="ancillary_data">stationairpressure_flag stationairpressure_uql</att>
-            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+            <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -461,7 +461,7 @@
             <att name="units">hPa</att>
             <att name="standard_name">air_pressure_at_mean_sea_level</att>
             <att name="ancillary_data">sealevelairpressure_flag sealevelairpressure_uql</att>
-            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+            <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -568,7 +568,7 @@
             <att name="units"></att>
             <att name="standard_name"></att>
             <att name="ancillary_data">solarrad_flag solarrad_uql</att>
-            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+            <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -643,7 +643,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Photosynthetic Active Radiation</att>
-            <att name="units">mol/m2</att>
+            <att name="units">mol m-2 s-1</att>
             <att name="standard_name">surface_downwelling_photosynthetic_photon_flux_in_air</att>
             <att name="ancillary_data">par_flag par_uql</att>
             <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
@@ -657,7 +657,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Photosynthetic Active Radiation Average</att>
-            <att name="units">mol/m2</att>
+            <att name="units">mol m-2 s-1</att>
             <att name="standard_name">surface_downwelling_photosynthetic_photon_flux_in_air</att>
             <att name="ancillary_data">par_flag par_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
@@ -671,10 +671,10 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Photosynthetic Active Radiation STD</att>
-            <att name="units">mol/m2</att>
+            <att name="units">mol m-2 s-1</att>
             <att name="standard_name">surface_downwelling_photosynthetic_photon_flux_in_air</att>
             <att name="ancillary_data">par_flag par_uql</att>
-            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+            <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -710,7 +710,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Cumulative Photosynthetic Active Radiation</att>
-            <att name="units">mol/m2</att>
+            <att name="units">mol m-2 s-1</att>
             <att name="standard_name">surface_downwelling_photosynthetic_photon_flux_in_air</att>
             <att name="ancillary_data">par_flag par_uql</att>
             <att name="cell_methods">time: sum (interval: 5.0 minutes)</att>
@@ -780,7 +780,7 @@
             <att name="units">W/m2</att>
             <att name="standard_name">surface_downwelling_shortwave_flux_in_air</att>
             <att name="ancillary_data">uvrad_flag uvrad_uql</att>
-            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+            <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>

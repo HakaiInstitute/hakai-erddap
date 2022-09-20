@@ -30,7 +30,7 @@
     <att name="infoUrl">https://www.hakai.org</att>
     <att name="license">Creative Commons Attribution 4.0 (CC-BY-4.0)</att>
     <att name="sourceUrl">https://www.nodc.noaa.gov/ocads/data/0208638.xml</att>
-    <att name="standard_name_vocabulary">CF Standard Name Table v55</att>
+    <att name="standard_name_vocabulary">CF Standard Name Table v77</att>
     <att name="date_created">2014-12-19</att>
     <att name="geospatial_lat_max">50.116</att>
     <att name="geospatial_lat_min">50.116</att>
@@ -172,7 +172,7 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">pCO2_Std</att>
       <att name="units">μatm</att>
-      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">pCO2_uatm_UQL,pCO2_uatm_flags</att>
     </addAttributes>
   </dataVariable>
@@ -272,7 +272,7 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TCO2_Std</att>
       <att name="units">μmol/kg</att>
-      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">calcTCO2_UQL,calcTCO2_flags</att>
     </addAttributes>
   </dataVariable>
@@ -312,7 +312,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Water temperature_Med</att>
-      <att name="units">deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">TSG_T_UQL,TSG_T_flags</att>
     </addAttributes>
@@ -328,7 +328,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Water temperature_Avg</att>
-      <att name="units">deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">TSG_T_UQL,TSG_T_flags</att>
     </addAttributes>
@@ -344,7 +344,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Water temperature_Min</att>
-      <att name="units">deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">TSG_T_UQL,TSG_T_flags</att>
     </addAttributes>
@@ -360,7 +360,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Water temperature_Max</att>
-      <att name="units">deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">TSG_T_UQL,TSG_T_flags</att>
     </addAttributes>
@@ -376,8 +376,8 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Water temperature_Std</att>
-      <att name="units">deg C</att>
-      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="units">degree_Celsius</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">TSG_T_UQL,TSG_T_flags</att>
     </addAttributes>
   </dataVariable>
@@ -477,7 +477,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Salinity_Std</att>
-      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">TSG_S_UQL,TSG_S_flags</att>
     </addAttributes>
   </dataVariable>
@@ -577,7 +577,7 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TA_Std</att>
       <att name="units">μmol/kg</att>
-      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">AlkS_UQL,AlkS_flags</att>
     </addAttributes>
   </dataVariable>
@@ -672,7 +672,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Ω arag_Std</att>
-      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">calcOmega_UQL,calcOmega_flags</att>
     </addAttributes>
   </dataVariable>
@@ -777,7 +777,7 @@
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">pH_T_Std</att>
       <att name="units">total scale</att>
-      <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">pCO2_uacalcpH_UQLtm_UQL,calcpH_UQL</att>
     </addAttributes>
   </dataVariable>
