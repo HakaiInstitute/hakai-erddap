@@ -286,7 +286,7 @@
     <destinationName>WaterOxygen_Avg</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">volume_concentration_of_dissolved_oxygen_in_sea_water</att>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
       <att name="sensor_type">SBE 37-SMP-ODO</att>
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">O2ConcentrationQuadraLimpet_Avg</att>
@@ -302,7 +302,7 @@
     <destinationName>WaterOxygen_Std</destinationName>
     <dataType>double</dataType>
     <addAttributes>
-      <att name="standard_name">volume_concentration_of_dissolved_oxygen_in_sea_water</att>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
       <att name="sensor_type">SBE 37-SMP-ODO</att>
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">O2ConcentrationQuadraLimpet_Std</att>
