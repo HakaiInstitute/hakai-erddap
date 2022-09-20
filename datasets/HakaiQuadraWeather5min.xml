@@ -31,6 +31,7 @@
     <att name="geospatial_vertical_min">-11</att>
     <att name="platform">land/onshore structure</att>
     <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
+    <att name="standard_name_vocabulary">CF Standard Name Table v77</att>
   </addAttributes>
   <dataVariable>
     <sourceName>measurementTime</sourceName>

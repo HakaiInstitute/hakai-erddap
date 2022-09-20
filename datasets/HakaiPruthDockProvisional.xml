@@ -21,7 +21,7 @@
         <att name="keywords_vocabulary">GCMD Science Keywords,CIOOS EOVS</att>
         <att name="license">[standard]</att>
         <att name="sourceUrl">(local database)</att>
-        <att name="standard_name_vocabulary">CF Standard Name Table v55</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v77</att>
         <att name="summary">The Hakai Institute maintains a weather station and tidal station at their remote research facility at the Pruth Dock on Calvert Island. The weather station measure atmospheric conditions above sea level at around 5-10m above sea level. The tide station consist of two separate measurement of the water level with a primary sensor being a radar sensor looking from and above with a millimeter accucary (VegaPuls 62) and a secondary under water pressure gauge sensor with ability to measure temperature and conductivity (OTT PLS-C).</att>
         <att name="title">Pruth Dock, Calvert Island, BC Tide and Weather Station Provisional</att>
         <att name='cdm_data_type'>Timeseries</att>

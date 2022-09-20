@@ -30,7 +30,7 @@
         <att name="infoUrl">https://www.hakai.org</att>
         <att name="license">Creative Commons Attribution 4.0 (CC-BY-4.0)</att>
         <att name="sourceUrl">https://www.nodc.noaa.gov/ocads/data/0208638.xml</att>
-        <att name="standard_name_vocabulary">CF Standard Name Table v55</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v77</att>
         <att name="subsetVariables">station_id</att>
         <att name="contributor_name">Wiley Evans</att>
         <att name="contributor_role">pointOfContact</att>

@@ -30,7 +30,7 @@
     <att name="infoUrl">https://www.hakai.org</att>
     <att name="license">Creative Commons Attribution 4.0 (CC-BY-4.0)</att>
     <att name="sourceUrl">https://www.nodc.noaa.gov/ocads/data/0208638.xml</att>
-    <att name="standard_name_vocabulary">CF Standard Name Table v55</att>
+    <att name="standard_name_vocabulary">CF Standard Name Table v77</att>
     <att name="date_created">2014-12-19</att>
     <att name="geospatial_lat_max">50.116</att>
     <att name="geospatial_lat_min">50.116</att>

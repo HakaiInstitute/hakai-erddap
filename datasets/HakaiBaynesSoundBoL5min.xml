@@ -40,6 +40,7 @@
     <att name="title">Real-Time Provisional High-Resolution Record of Surface Seawater Carbon Dioxide (CO2) Content Collected from Fanny Bay Oysters, British Columbia, Canada</att>
     <att name="platform">coastal structure</att>
     <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
+    <att name="standard_name_vocabulary">CF Standard Name Table v77</att>
   </addAttributes>
   <dataVariable>
     <sourceName>measurementTime</sourceName>

@@ -33,7 +33,7 @@
 		<att name="infoUrl">https://www.hakai.org</att>
 		<att name="license">[standard]</att>
 		<att name="sourceUrl">(local files)</att>
-		<att name="standard_name_vocabulary">CF Standard Name Table v55</att>
+		<att name="standard_name_vocabulary">CF Standard Name Table v77</att>
 		<att name="subsetVariables">vessel_id,Type_code</att>
 		<att name="keywords">salinity,Comlumbia Ferry,Alaska,conductivity,partial pressure,seaSurfaceSalinity,inorganicCarbon,pco2,carbone,oxygen,Alaska Marine Highway,seaSurfaceTemperature,temperature</att>
 		<att name="platform">Alaska Marine Highway System M/V Columbia</att>
