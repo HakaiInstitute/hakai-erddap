@@ -643,7 +643,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Photosynthetic Active Radiation</att>
-            <att name="units">mol/m2</att>
+            <att name="units">mol m-2 s-1</att>
             <att name="standard_name">surface_downwelling_photosynthetic_photon_flux_in_air</att>
             <att name="ancillary_data">par_flag par_uql</att>
             <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
@@ -657,7 +657,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Photosynthetic Active Radiation Average</att>
-            <att name="units">mol/m2</att>
+            <att name="units">mol m-2 s-1</att>
             <att name="standard_name">surface_downwelling_photosynthetic_photon_flux_in_air</att>
             <att name="ancillary_data">par_flag par_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
@@ -671,10 +671,10 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Photosynthetic Active Radiation STD</att>
-            <att name="units">mol/m2</att>
+            <att name="units">mol m-2 s-1</att>
             <att name="standard_name">surface_downwelling_photosynthetic_photon_flux_in_air</att>
             <att name="ancillary_data">par_flag par_uql</att>
-            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+            <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -710,7 +710,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Cumulative Photosynthetic Active Radiation</att>
-            <att name="units">mol/m2</att>
+            <att name="units">mol m-2 s-1</att>
             <att name="standard_name">surface_downwelling_photosynthetic_photon_flux_in_air</att>
             <att name="ancillary_data">par_flag par_uql</att>
             <att name="cell_methods">time: sum (interval: 5.0 minutes)</att>

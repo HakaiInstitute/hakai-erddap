@@ -86,7 +86,7 @@
       <att name="sensor_type">SBE 37-SMP-ODO</att>
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">TWtrQuadraLimpet_Avg</att>
-      <att name="units">deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">WaterTemp_flags WaterTemp_UQL</att>
     </addAttributes>
@@ -102,7 +102,7 @@
       <att name="sensor_type">SBE 37-SMP-ODO</att>
       <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
       <att name="long_name">TWtrQuadraLimpet_Std</att>
-      <att name="units">deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">WaterTemp_flags WaterTemp_UQL</att>
     </addAttributes>

@@ -305,7 +305,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Water temperature_Med</att>
-      <att name="units">deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">TSG_T_UQL TSG_T_flags</att>
     </addAttributes>
@@ -321,7 +321,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Water temperature_Avg</att>
-      <att name="units">deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">TSG_T_UQL TSG_T_flags</att>
     </addAttributes>
@@ -337,7 +337,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Water temperature_Min</att>
-      <att name="units">deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">TSG_T_UQL TSG_T_flags</att>
     </addAttributes>
@@ -353,7 +353,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">Water temperature_Max</att>
-      <att name="units">deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">TSG_T_UQL TSG_T_flags</att>
     </addAttributes>

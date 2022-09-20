@@ -164,7 +164,7 @@
 		</sourceAttributes -->
 		<addAttributes>
 			<att name="long_name">Equ Temp (deg C)</att>
-			<att name="units">deg C</att>
+			<att name="units">degree_Celsius</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -229,7 +229,7 @@
 		</sourceAttributes -->
 		<addAttributes>
 			<att name="long_name">LICOR Cell Temperature</att>
-			<att name="units">deg C</att>
+			<att name="units">degree_Celsius</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -338,7 +338,7 @@
 		</sourceAttributes -->
 		<addAttributes>
 			<att name="long_name">Temperature at which Condenser is set</att>
-			<att name="units">deg C</att>
+			<att name="units">degree_Celsius</att>
 			<att name="description">Temperature at which condenser is set. Used to aid in removing water vapor from the gas stream.</att>
 		</addAttributes>
 	</dataVariable>
@@ -350,7 +350,7 @@
 		</sourceAttributes -->
 		<addAttributes>
 			<att name="long_name">Dry Box Temperature</att>
-			<att name="units">deg C</att>
+			<att name="units">degree_Celsius</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -398,7 +398,7 @@
 		</sourceAttributes -->
 		<addAttributes>
 			<att name="long_name">Oxygen Sensor Temperature</att>
-			<att name="units">deg C</att>
+			<att name="units">degree_Celsius</att>
 			<att name="standard_name">temperature_of_sensor_for_oxygen_in_sea_water</att>
 		</addAttributes>
 	</dataVariable>
@@ -481,7 +481,7 @@
 		<addAttributes>
 			<att name="_FillValue" type="float">NaN</att>
 			<att name="long_name">Sea Water Temperature</att>
-			<att name="units">deg C</att>
+			<att name="units">degree_Celsius</att>
 			<att name="standard_name">sea_surface_temperature</att>
 			<att name="instrument">SBE 45 MicroTSG</att>
 		</addAttributes>
@@ -526,7 +526,7 @@
 		<addAttributes>
 			<att name="_FillValue" type="float">NaN</att>
 			<att name="long_name">Water Intake Temperature</att>
-			<att name="units">deg C</att>
+			<att name="units">degree_Celsius</att>
 			<att name="instrument">SBE 38</att>
 			<att name="standard_name">sea_surface_temperature</att>
 			<att name="description">Surface temperature in degrees Celsius from the SBE 38 Digital Oceanographic Thermometer.</att>

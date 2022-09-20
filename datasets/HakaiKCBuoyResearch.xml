@@ -201,7 +201,7 @@
 		</sourceAttributes -->
 		<addAttributes>
 			<att name="long_name">Licor Temperature</att>
-			<att name="units">deg C</att>
+			<att name="units">degree_Celsius</att>
 			<att name="description">Temperature of the Infrared Licor 820 in degrees Celsius.</att>
 		</addAttributes>
 	</dataVariable>
@@ -226,7 +226,7 @@
 			<att name="_FillValue" type="float">-999.0</att>
 			<att name="long_name">Sea Surface Temperature</att>
 			<att name="standard_name">sea_surface_temperature</att>
-			<att name="units">deg C</att>
+			<att name="units">degree_Celsius</att>
 			<att name="description">Sea Surface Temperature</att>
 			<att name="ancillary_variables">TS_QF</att>
 		</addAttributes>

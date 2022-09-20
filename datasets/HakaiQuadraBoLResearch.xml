@@ -226,7 +226,7 @@
             <att name="_FillValue" type="float">NaN</att>
             <att name="long_name">SBE56 T (deg C)</att>
             <att name="standard_name">sea_water_temperature</att>
-            <att name="units">deg C</att>
+            <att name="units">degree_Celsius</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -251,7 +251,7 @@
         <addAttributes>
             <att name="_FillValue" type="float">NaN</att>
             <att name="long_name">Diver CTD8975 T (deg C)</att>
-            <att name="units">deg C</att>
+            <att name="units">degree_Celsius</att>
             <att name="standard_name">sea_water_temperature </att>
         </addAttributes>
     </dataVariable>
@@ -290,7 +290,7 @@
         <addAttributes>
             <att name="_FillValue" type="float">NaN</att>
             <att name="long_name">Diver CTD8967 T (deg C)</att>
-            <att name="units">deg C</att>
+            <att name="units">degree_Celsius</att>
             <att name="standard_name">sea_water_temperature </att>
         </addAttributes>
     </dataVariable>
@@ -316,7 +316,7 @@
         <addAttributes>
             <att name="_FillValue" type="float">NaN</att>
             <att name="long_name">SBE 37 T (deg C)</att>
-            <att name="units">deg C</att>
+            <att name="units">degree_Celsius</att>
             <att name="standard_name">sea_water_temperature </att>
         </addAttributes>
     </dataVariable>
@@ -343,7 +343,7 @@
         <addAttributes>
             <att name="_FillValue" type="float">NaN</att>
             <att name="long_name">Sea Surface Temperature</att>
-            <att name="units">deg C</att>
+            <att name="units">degree_Celsius</att>
             <att name="standard_name">sea_surface_temperature</att>
         </addAttributes>
     </dataVariable>

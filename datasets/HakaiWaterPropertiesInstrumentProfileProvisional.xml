@@ -501,7 +501,7 @@
             <att name="long_name">Sea Water Temperature</att>
             <att name="scale">ITS-90</att>
             <att name="standard_name">sea_water_temperature</att>
-            <att name="units">deg C</att>
+            <att name="units">degree_Celsius</att>
         </sourceAttributes -->
         <addAttributes>
             <att name="_FillValue" type="double">NaN</att>
@@ -509,7 +509,7 @@
             <att name="long_name">Sea Water Temperature</att>
             <att name="scale">ITS-90</att>
             <att name="standard_name">sea_water_temperature</att>
-            <att name="units">deg C</att>
+            <att name="units">degree_Celsius</att>
             <att name="colorBarMaximum" type="double">15.0</att>
             <att name="colorBarMinimum" type="double">5.0</att>
         </addAttributes>

@@ -243,7 +243,7 @@
     <addAttributes>
       <att name="standard_name">air_temperature</att>
       <att name="long_name">TAirKCBuoy</att>
-      <att name="units">deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="height">3</att>
       <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
       <att name="ancillary_data">AirTemp_UQL AirTemp_flags</att>
@@ -258,7 +258,7 @@
     <addAttributes>
       <att name="standard_name">air_temperature</att>
       <att name="long_name">TAirKCBuoy_Med</att>
-      <att name="units">deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="height">3</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
       <att name="ancillary_data">AirTemp_UQL AirTemp_flags</att>
@@ -273,7 +273,7 @@
     <addAttributes>
       <att name="standard_name">air_temperature</att>
       <att name="long_name">TAirKCBuoy_Avg</att>
-      <att name="units">deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="height">3</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
       <att name="ancillary_data">AirTemp_UQL AirTemp_flags</att>
@@ -288,7 +288,7 @@
     <addAttributes>
       <att name="standard_name">air_temperature</att>
       <att name="long_name">TAirKCBuoy_Min</att>
-      <att name="units">deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="height">3</att>
       <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
       <att name="ancillary_data">AirTemp_UQL AirTemp_flags</att>
@@ -303,7 +303,7 @@
     <addAttributes>
       <att name="standard_name">air_temperature</att>
       <att name="long_name">TAirKCBuoy_Max</att>
-      <att name="units">deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="height">3</att>
       <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
       <att name="ancillary_data">AirTemp_UQL AirTemp_flags</att>
@@ -447,7 +447,7 @@
       <att name="standard_name">sea_water_temperature</att>
       <att name="sensor_type">SBE16</att>
       <att name="long_name">TWtrKCBuoy</att>
-      <att name="units">Deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: last (interval: 5.0 minutes)</att>
       <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
@@ -463,7 +463,7 @@
       <att name="standard_name">sea_water_temperature</att>
       <att name="sensor_type">SBE16</att>
       <att name="long_name">TWtrKCBuoy_Med</att>
-      <att name="units">Deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
       <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
@@ -479,7 +479,7 @@
       <att name="standard_name">sea_water_temperature</att>
       <att name="sensor_type">SBE16</att>
       <att name="long_name">TWtrKCBuoy_Avg</att>
-      <att name="units">Deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
       <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
@@ -495,7 +495,7 @@
       <att name="standard_name">sea_water_temperature</att>
       <att name="sensor_type">SBE16</att>
       <att name="long_name">TWtrKCBuoy_Min</att>
-      <att name="units">Deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
       <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
@@ -511,7 +511,7 @@
       <att name="standard_name">sea_water_temperature</att>
       <att name="sensor_type">SBE16</att>
       <att name="long_name">TWtrKCBuoy_Max</att>
-      <att name="units">Deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
       <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
@@ -527,7 +527,7 @@
       <att name="standard_name">sea_water_temperature</att>
       <att name="sensor_type">SBE16</att>
       <att name="long_name">TWtrKCBuoy_Std</att>
-      <att name="units">Deg C</att>
+      <att name="units">degree_Celsius</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
