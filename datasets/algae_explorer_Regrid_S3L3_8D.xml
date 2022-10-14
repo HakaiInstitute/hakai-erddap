@@ -8,6 +8,7 @@
     <metadataFrom>last</metadataFrom>
     <matchAxisNDigits>20</matchAxisNDigits>
     <fileTableInMemory>false</fileTableInMemory>
+    <accessibleViaWMS>true</accessibleViaWMS>
     <!-- sourceAttributes>
         <att name="Conventions">CF-1.4</att>
         <att name="created_by">R, packages ncdf4 and raster (version 3.4-5)</att>
