@@ -1,0 +1,78 @@
+<dataset type="EDDGridFromNcFiles" datasetID="algae_explorer_Regrid_S3L3_8D" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/algae_explorer/</fileDir>
+    <fileNameRegex>Regrid_S3L3_data_.*\.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <matchAxisNDigits>20</matchAxisNDigits>
+    <fileTableInMemory>false</fileTableInMemory>
+    <!-- sourceAttributes>
+        <att name="Conventions">CF-1.4</att>
+        <att name="created_by">R, packages ncdf4 and raster (version 3.4-5)</att>
+        <att name="date">2021-03-03 15:27:50</att>
+    </sourceAttributes -->
+    <addAttributes>
+        <att name="cdm_data_type">Grid</att>
+        <att name="Conventions">CF-1.6, COARDS, ACDD-1.3</att>
+        <att name="infoUrl">???</att>
+        <att name="institution">Hakai Institute</att>
+        <att name="keywords">chemistry, Chla_intp, chlorophyll, concentration, concentration_of_chlorophyll_in_sea_water, data, earth, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Chlorophyll, local, ocean, oceans, science, sea, seawater, source, water</att>
+        <att name="keywords_vocabulary">GCMD Science Keywords</att>
+        <att name="license">[standard]</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+        <att name="summary">Data from a local source.</att>
+        <att name="title">Algae Explorer S3L3 8D regridded chl-a</att>
+    </addAttributes>
+    <axisVariable>
+        <sourceName>***fileName,timeFormat=yyyyMMdd,Regrid_S3L3_data_(\d{8})_8D.*,1</sourceName>
+        <destinationName>time</destinationName>
+        <addAttributes>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </addAttributes>
+    </axisVariable>
+    <axisVariable>
+        <sourceName>lat</sourceName>
+        <destinationName>latitude</destinationName>
+        <!-- sourceAttributes>
+            <att name="long_name">lat</att>
+            <att name="units">degrees_north</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="standard_name">latitude</att>
+        </addAttributes>
+    </axisVariable>
+    <axisVariable>
+        <sourceName>lon</sourceName>
+        <destinationName>longitude</destinationName>
+        <!-- sourceAttributes>
+            <att name="long_name">lon</att>
+            <att name="units">degrees_east</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="standard_name">longitude</att>
+        </addAttributes>
+    </axisVariable>
+    <dataVariable>
+        <sourceName>Chla_intp</sourceName>
+        <destinationName>Chla_intp</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="float">-3.4E38</att>
+            <att name="grid_mapping">crs</att>
+            <att name="max" type="double">26.201705932617188</att>
+            <att name="min" type="double">0.15683428943157196</att>
+            <att name="proj4">+proj=longlat +datum=WGS84 +no_defs</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">30.0</att>
+            <att name="colorBarMinimum" type="double">0.03</att>
+            <att name="colorBarScale">Log</att>
+            <att name="grid_mapping">null</att>
+            <att name="long_name">Concentration Of Chlorophyll In Sea Water</att>
+            <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
