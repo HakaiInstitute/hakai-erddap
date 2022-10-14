@@ -536,7 +536,7 @@ FROM
         FROM
             sn_sa.sa_wolf_beach_fish_raw
     ) AS data
-    INNER JOIN sn_sa.station_metadata sm ON sm.station = data.station
+    INNER JOIN sn_sa.system_station_metadata sm ON sm.station = data.station
     AND sm.commissioned_time < data.measurement_time
     AND (
         sm.decommissioned_time > data.measurement_time
