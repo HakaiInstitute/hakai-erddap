@@ -28,7 +28,7 @@
         <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
     </addAttributes>
     <dataVariable>
-        <sourceName>=station</sourceName>
+        <sourceName>station</sourceName>
         <destinationName>station</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
@@ -38,7 +38,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>=latitude</sourceName>
+        <sourceName>latitude</sourceName>
         <destinationName>latitude</destinationName>
         <dataType>double</dataType>
         <addAttributes>
@@ -49,7 +49,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>=longitude</sourceName>
+        <sourceName>longitude</sourceName>
         <destinationName>longitude</destinationName>
         <dataType>double</dataType>
         <addAttributes>
@@ -62,7 +62,7 @@
     <dataVariable>
         <sourceName>measurement_time</sourceName>
         <destinationName>time</destinationName>
-        <dataType>double</dataType>
+        <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
