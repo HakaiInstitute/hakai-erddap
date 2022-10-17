@@ -1,0 +1,184 @@
+<dataset type="EDDGridFromNcFiles" datasetID="algae_explorer_l3m_day" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/algae_explorer/</fileDir>
+    <fileNameRegex>L3m_.*_DAY_00\.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <matchAxisNDigits>20</matchAxisNDigits>
+    <fileTableInMemory>false</fileTableInMemory>
+    <!-- sourceAttributes>
+        <att name="contact">service@globcolour.info</att>
+        <att name="Conventions">CF-1.4</att>
+        <att name="copyright">Copyright ACRI-ST - GlobColour. GlobColour has been originally funded by ESA with data from ESA, NASA, NOAA and GeoEye. This reprocessing version has received funding from the European Community s Seventh Framework Programme ([FP7/2007-2013]) under grant agreement n. 282723 [OSS2015 project].</att>
+        <att name="DPM_reference">GC-UD-ACRI-PUG</att>
+        <att name="duration_time">PT103084S</att>
+        <att name="earth_radius" type="double">6378.137</att>
+        <att name="easternmost_longitude" type="float">-139.875</att>
+        <att name="end_time">20200104T053204Z</att>
+        <att name="grid_type">Equirectangular</att>
+        <att name="history">20210428T030823Z: globcolour_l3_extract.sh -institution ACRI -infile /mount/dmz29/prod_data/globcolour/data_v201912/GLOB/merged/day/2020/01/03/L3m_20200103__GLOB_4_GSM-MODVIR_CHL1_DAY_00.nc -outdir /mount/dmz28/www/hermes/ftp/209935756 -projwin -140 60 -121 47 -outsitename 209935756</att>
+        <att name="input_files">A2020003013000.L2_LAC_OC.nc,A2020003013500.L2_LAC_OC.nc,A2020003014000.L2_LAC_OC.nc,A2020003014500.L2_LAC_OC.nc,A2020003015000.L2_LAC_OC.nc,A2020003015500.L2_LAC_OC.nc,A2020003020000.L2_LAC_OC.nc,A2020003020500.L2_LAC_OC.nc,A2020003030500.L2_LAC_OC.nc,A2020003031000.L2_LAC_OC.nc,A2020003031500.L2_LAC_OC.nc,A2020003032000.L2_LAC_OC.nc,A2020003032500.L2_LAC_OC.nc,A2020003033000.L2_LAC_OC.nc,A2020003033500.L2_LAC_OC.nc,A2020003034000.L2_LAC_OC.nc,A2020003044500.L2_LAC_OC.nc,A2020003045000.L2_LAC_OC.nc,A2020003045500.L2_LAC_OC.nc,A2020003050000.L2_LAC_OC.nc,A2020003050500.L2_LAC_OC.nc,A2020003051000.L2_LAC_OC.nc,A2020003051500.L2_LAC_OC.nc,A2020003052000.L2_LAC_OC.nc,A2020003062500.L2_LAC_OC.nc,A2020003063000.L2_LAC_OC.nc,A2020003063500.L2_LAC_OC.nc,A2020003064000.L2_LAC_OC.nc,A2020003064500.L2_LAC_OC.nc,A2020003065000.L2_LAC_OC.nc,A2020003065500.L2_LAC_OC.nc,A2020003080500.L2_LAC_OC.nc,A2020003081000.L2_LAC_OC.nc,A2020003081500.L2_LAC_OC.nc,A2020003082000.L2_LAC_OC.nc,A2020003082500.L2_LAC_OC.nc,A2020003083000.L2_LAC_OC.nc,A2020003083500.L2_LAC_OC.nc,A2020003084000.L2_LAC_OC.nc,A2020003094500.L2_LAC_OC.nc,A2020003095000.L2_LAC_OC.nc,A2020003095500.L2_LAC_OC.nc,A2020003100000.L2_LAC_OC.nc,A2020003100500.L2_LAC_OC.nc,A2020003101000.L2_LAC_OC.nc,A2020003101500.L2_LAC_OC.nc,A2020003112500.L2_LAC_OC.nc,A2020003113000.L2_LAC_OC.nc,A2020003113500.L2_LAC_OC.nc,A2020003114000.L2_LAC_OC.nc,A2020003115000.L2_LAC_OC.nc,A2020003115500.L2_LAC_OC.nc,A2020003130500.L2_LAC_OC.nc,A2020003131000.L2_LAC_OC.nc,A2020003131500.L2_LAC_OC.nc,A2020003132000.L2_LAC_OC.nc,A2020003133000.L2_LAC_OC.nc,A2020003133500.L2_LAC_OC.nc,A2020003144000.L2_LAC_OC.nc,A2020003144500.L2_LAC_OC.nc,A2020003145000.L2_LAC_OC.nc,A2020003145500.L2_LAC_OC.nc,A2020003150000.L2_LAC_OC.nc,A2020003150500.L2_LAC_OC.nc,A2020003151000.L2_LAC_OC.nc,A2020003151500.L2_LAC_OC.nc,A2020003162000.L2_LAC_OC.nc,A2020003162500.L2_LAC_OC.nc,A2020003163000.L2_LAC_OC.nc,A2020003163500.L2_LAC_OC.nc,A2020003164000.L2_LAC_OC.nc,A2020003164500.L2_LAC_OC.nc,A2020003165000.L2_LAC_OC.nc,A2020003165500.L2_LAC_OC.nc,A2020003175500.L2_LAC_OC.nc,A2020003180000.L2_LAC_OC.nc,A2020003180500.L2_LAC_OC.nc,A2020003181000.L2_LAC_OC.nc,A2020003181500.L2_LAC_OC.nc,A2020003182000.L2_LAC_OC.nc,A2020003182500.L2_LAC_OC.nc,A2020003183000.L2_LAC_OC.nc,A2020003193500.L2_LAC_OC.nc,A2020003194000.L2_LAC_OC.nc,A2020003194500.L2_LAC_OC.nc,A2020003195000.L2_LAC_OC.nc,A2020003195500.L2_LAC_OC.nc,A2020003200000.L2_LAC_OC.nc,A2020003200500.L2_LAC_OC.nc,A2020003211500.L2_LAC_OC.nc,A2020003212000.L2_LAC_OC.nc,A2020003212500.L2_LAC_OC.nc,A2020003213000.L2_LAC_OC.nc,A2020003213500.L2_LAC_OC.nc,A2020003214000.L2_LAC_OC.nc,A2020003214500.L2_LAC_OC.nc,A2020003215000.L2_LAC_OC.nc,A2020003225500.L2_LAC_OC.nc,A2020003230000.L2_LAC_OC.nc,A2020003230500.L2_LAC_OC.nc,A2020003231000.L2_LAC_OC.nc,A2020003231500.L2_LAC_OC.nc,A2020003232000.L2_LAC_OC.nc,A2020003232500.L2_LAC_OC.nc,A2020003233000.L2_LAC_OC.nc,A2020004003000.L2_LAC_OC.nc,A2020004003500.L2_LAC_OC.nc,A2020004004000.L2_LAC_OC.nc,A2020004004500.L2_LAC_OC.nc,A2020004005000.L2_LAC_OC.nc,A2020004005500.L2_LAC_OC.nc,A2020004010000.L2_LAC_OC.nc,A2020004010500.L2_LAC_OC.nc,A2020004021000.L2_LAC_OC.nc,A2020004021500.L2_LAC_OC.nc,A2020004022000.L2_LAC_OC.nc,A2020004022500.L2_LAC_OC.nc,A2020004035000.L2_LAC_OC.nc,A2020004035500.L2_LAC_OC.nc,A2020004052500.L2_LAC_OC.nc,A2020004053000.L2_LAC_OC.nc,V2020003005400.L2_SNPP_OC.nc,V2020003010000.L2_SNPP_OC.nc,V2020003010600.L2_SNPP_OC.nc,V2020003011200.L2_SNPP_OC.nc,V2020003011800.L2_SNPP_OC.nc,V2020003022400.L2_SNPP_OC.nc,V2020003023000.L2_SNPP_OC.nc,V2020003023600.L2_SNPP_OC.nc,V2020003024200.L2_SNPP_OC.nc,V2020003024800.L2_SNPP_OC.nc,V2020003025400.L2_SNPP_OC.nc,V2020003030000.L2_SNPP_OC.nc,V2020003040600.L2_SNPP_OC.nc,V2020003041200.L2_SNPP_OC.nc,V2020003041800.L2_SNPP_OC.nc,V2020003042400.L2_SNPP_OC.nc,V2020003043000.L2_SNPP_OC.nc,V2020003043600.L2_SNPP_OC.nc,V2020003044200.L2_SNPP_OC.nc,V2020003054200.L2_SNPP_OC.nc,V2020003054800.L2_SNPP_OC.nc,V2020003055400.L2_SNPP_OC.nc,V2020003060000.L2_SNPP_OC.nc,V2020003060600.L2_SNPP_OC.nc,V2020003061200.L2_SNPP_OC.nc,V2020003072400.L2_SNPP_OC.nc,V2020003073000.L2_SNPP_OC.nc,V2020003073600.L2_SNPP_OC.nc,V2020003074200.L2_SNPP_OC.nc,V2020003074800.L2_SNPP_OC.nc,V2020003075400.L2_SNPP_OC.nc,V2020003080000.L2_SNPP_OC.nc,V2020003091200.L2_SNPP_OC.nc,V2020003091800.L2_SNPP_OC.nc,V2020003092400.L2_SNPP_OC.nc,V2020003093000.L2_SNPP_OC.nc,V2020003093600.L2_SNPP_OC.nc,V2020003094200.L2_SNPP_OC.nc,V2020003094800.L2_SNPP_OC.nc,V2020003105400.L2_SNPP_OC.nc,V2020003110000.L2_SNPP_OC.nc,V2020003110600.L2_SNPP_OC.nc,V2020003111200.L2_SNPP_OC.nc,V2020003111800.L2_SNPP_OC.nc,V2020003112400.L2_SNPP_OC.nc,V2020003123000.L2_SNPP_OC.nc,V2020003123600.L2_SNPP_OC.nc,V2020003124200.L2_SNPP_OC.nc,V2020003124800.L2_SNPP_OC.nc,V2020003125400.L2_SNPP_OC.nc,V2020003130600.L2_SNPP_OC.nc,V2020003141800.L2_SNPP_OC.nc,V2020003142400.L2_SNPP_OC.nc,V2020003143000.L2_SNPP_OC.nc,V2020003143600.L2_SNPP_OC.nc,V2020003144200.L2_SNPP_OC.nc,V2020003144800.L2_SNPP_OC.nc,V2020003155400.L2_SNPP_OC.nc,V2020003160000.L2_SNPP_OC.nc,V2020003160600.L2_SNPP_OC.nc,V2020003161200.L2_SNPP_OC.nc,V2020003161800.L2_SNPP_OC.nc,V2020003162400.L2_SNPP_OC.nc,V2020003163000.L2_SNPP_OC.nc,V2020003173600.L2_SNPP_OC.nc,V2020003174200.L2_SNPP_OC.nc,V2020003174800.L2_SNPP_OC.nc,V2020003175400.L2_SNPP_OC.nc,V2020003180000.L2_SNPP_OC.nc,V2020003180600.L2_SNPP_OC.nc,V2020003181200.L2_SNPP_OC.nc,V2020003191800.L2_SNPP_OC.nc,V2020003192400.L2_SNPP_OC.nc,V2020003193000.L2_SNPP_OC.nc,V2020003193600.L2_SNPP_OC.nc,V2020003194200.L2_SNPP_OC.nc,V2020003194800.L2_SNPP_OC.nc,V2020003210000.L2_SNPP_OC.nc,V2020003210600.L2_SNPP_OC.nc,V2020003211200.L2_SNPP_OC.nc,V2020003211800.L2_SNPP_OC.nc,V2020003212400.L2_SNPP_OC.nc,V2020003213000.L2_SNPP_OC.nc,V2020003213600.L2_SNPP_OC.nc,V2020003224200.L2_SNPP_OC.nc,V2020003224800.L2_SNPP_OC.nc,V2020003225400.L2_SNPP_OC.nc,V2020003230000.L2_SNPP_OC.nc,V2020003230600.L2_SNPP_OC.nc,V2020003231200.L2_SNPP_OC.nc,V2020003231800.L2_SNPP_OC.nc,V2020004002400.L2_SNPP_OC.nc,V2020004003000.L2_SNPP_OC.nc,V2020004003600.L2_SNPP_OC.nc,V2020004004200.L2_SNPP_OC.nc,V2020004004800.L2_SNPP_OC.nc,V2020004005400.L2_SNPP_OC.nc,V2020004010000.L2_SNPP_OC.nc,V2020004020000.L2_SNPP_OC.nc,V2020004020600.L2_SNPP_OC.nc,V2020004021200.L2_SNPP_OC.nc,V2020004021800.L2_SNPP_OC.nc,V2020004034200.L2_SNPP_OC.nc,V2020004034800.L2_SNPP_OC.nc,V2020004052400.L2_SNPP_OC.nc</att>
+        <att name="input_files_reprocessings">2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.1,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0,2018.0</att>
+        <att name="institution">ACRI</att>
+        <att name="IODD_reference">GC-UD-ACRI-PUG</att>
+        <att name="lat_step" type="float">0.041666668</att>
+        <att name="lon_step" type="float">0.041666668</att>
+        <att name="max_east_grid" type="float">-121.0</att>
+        <att name="max_north_grid" type="float">60.041664</att>
+        <att name="max_south_grid" type="float">47.0</att>
+        <att name="max_west_grid" type="float">-140.04167</att>
+        <att name="nb_bins" type="int">143354</att>
+        <att name="nb_equ_bins" type="int">458</att>
+        <att name="nb_grid_bins" type="int">143354</att>
+        <att name="nb_valid_bins" type="int">11</att>
+        <att name="netcdf_version">4.3.3.1 of Jul  8 2016 18:15:50 $</att>
+        <att name="northernmost_latitude" type="float">47.166664</att>
+        <att name="parameter">Chlorophyll concentration</att>
+        <att name="parameter_algo_list">GSM method</att>
+        <att name="parameter_code">CHL1</att>
+        <att name="pct_bins" type="float">100.0</att>
+        <att name="pct_valid_bins" type="float">0.0076733124</att>
+        <att name="period_duration_day">P1D</att>
+        <att name="period_end_day">20200103</att>
+        <att name="period_start_day">20200103</att>
+        <att name="processing_time">20210428T030823Z</att>
+        <att name="product_level" type="short">3</att>
+        <att name="product_name">L3m_20200103__209935756_4_GSM-MODVIR_CHL1_DAY_00.nc</att>
+        <att name="product_type">day</att>
+        <att name="product_version">2018.4</att>
+        <att name="publication">Maritorena, S. and Siegel, D.A. 2005. Consistent Merging of Satellite Ocean Colour Data Sets Using a Bio-Optical Model. Remote Sensing of Environment, 94, 4, 429-440.        Maritorena S., O. Hembise Fanton d Andon, A. Mangin, and D.A. Siegel. 2010. Merged Satellite Ocean Color Data Products Using a Bio-Optical Model: Characteristics, Benefits and Issues. Remote Sensing of Environment, 114, 8: 1791-1804.</att>
+        <att name="references">http://www.globcolour.info</att>
+        <att name="registration" type="int">5</att>
+        <att name="sensor">Garver-Siegel-Maritorena</att>
+        <att name="sensor_name">GSM</att>
+        <att name="sensor_name_list">MOD,VIR</att>
+        <att name="site_name">209935756</att>
+        <att name="software_name">globcolour_l3_extract</att>
+        <att name="software_version">2018.4</att>
+        <att name="southernmost_latitude" type="float">46.999996</att>
+        <att name="spatial_resolution" type="float">4.6383123</att>
+        <att name="start_time">20200103T005401Z</att>
+        <att name="title">GlobColour daily merged MODIS/VIIRSN product</att>
+        <att name="westernmost_longitude" type="float">-140.04167</att>
+    </sourceAttributes -->
+    <addAttributes>
+        <att name="cdm_data_type">Grid</att>
+        <att name="Conventions">CF-1.6, COARDS, ACDD-1.3</att>
+        <att name="creator_email">service@globcolour.info</att>
+        <att name="creator_name">ACRI</att>
+        <att name="creator_type">institution</att>
+        <att name="creator_url">http://www.globcolour.info</att>
+        <att name="easternmost_longitude">null</att>
+        <att name="end_time">null</att>
+        <att name="infoUrl">http://www.globcolour.info</att>
+        <att name="input_files">null</att>
+        <att name="keywords">acri, binned, chemistry, CHL1_error, CHL1_flags, CHL1_mean, chlorophyll, concentration, daily, data, day, earth, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Chlorophyll, error, estimation, flags, globcolour, imager, imager/radiometer, imaging, infrared, mass, mass_concentration_of_chlorophyll_a_in_sea_water, mean, merged, moderate, modis, national, npp, ocean, oceans, orbiting, partnership, pixels, polar, polar-orbiting, product, radiometer, resolution, science, sea, seawater, spectroradiometer, suite, suite/suomi-npp, suomi, viirs, viirs-n, viirsn, visible, water</att>
+        <att name="keywords_vocabulary">GCMD Science Keywords</att>
+        <att name="license">[standard]</att>
+        <att name="northernmost_latitude">null</att>
+        <att name="parameter">null</att>
+        <att name="period_end_day">null</att>
+        <att name="period_start_day">null</att>
+        <att name="southernmost_latitude">null</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+        <att name="start_time">null</att>
+        <att name="summary">GlobColour daily merged Moderate Resolution Imaging Spectroradiometer (MODIS)/Visible and Infrared Imager/Radiometer Suite/Suomi-NPP (VIIRSN) product</att>
+        <att name="title">Algae explorer L3m*Day data</att>
+        <att name="westernmost_longitude">null</att>
+    </addAttributes>
+    <axisVariable>
+        <sourceName>***fileName,timeFormat=yyyyMMdd,L3m_(\d{8})_.*,1</sourceName>
+        <destinationName>time</destinationName>
+        <addAttributes>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </addAttributes>
+    </axisVariable>
+    <axisVariable>
+        <sourceName>lat</sourceName>
+        <destinationName>latitude</destinationName>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">313</att>
+            <att name="axis">Y</att>
+            <att name="long_name">latitude</att>
+            <att name="units">degrees_north</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="long_name">Latitude</att>
+            <att name="standard_name">latitude</att>
+        </addAttributes>
+    </axisVariable>
+    <axisVariable>
+        <sourceName>lon</sourceName>
+        <destinationName>longitude</destinationName>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="int">458</att>
+            <att name="axis">X</att>
+            <att name="long_name">longitude</att>
+            <att name="units">degrees_east</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="long_name">Longitude</att>
+            <att name="standard_name">longitude</att>
+        </addAttributes>
+    </axisVariable>
+    <dataVariable>
+        <sourceName>CHL1_mean</sourceName>
+        <destinationName>CHL1_mean</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="intList">256 256</att>
+            <att name="_FillValue" type="float">-999.0</att>
+            <att name="long_name">Chlorophyll concentration - Mean of the binned pixels</att>
+            <att name="pct_characterised_error" type="float">43.31</att>
+            <att name="standard_name">mass_concentration_of_chlorophyll_a_in_sea_water</att>
+            <att name="units">mg/m3</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">30.0</att>
+            <att name="colorBarMinimum" type="double">0.03</att>
+            <att name="colorBarScale">Log</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>CHL1_flags</sourceName>
+        <destinationName>CHL1_flags</destinationName>
+        <dataType>short</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="intList">256 256</att>
+            <att name="_FillValue" type="short">0</att>
+            <att name="flag_masks" type="shortList">1 2 8 256 512 8192 -32768 16384 4096 4 57 57 57 57 200 200 200 200 3072 3072 3072</att>
+            <att name="flag_meanings">NO_MEASUREMENT INVALID LAND TURBID ICE SEAWIFS MERIS MODIS VIIRS_N OLCI_A CLOUD_0_5 CLOUD_5_25 CLOUD_25_50 CLOUD_50_100 DEPTH_0_30 DEPTH_30_200 DEPTH_200_1000 DEPTH_1000_MORE OLIGOTROPHIC MESOTROPHIC EUTROPHIC</att>
+            <att name="flag_values" type="shortList">1 2 8 256 512 8192 -32768 16384 4096 4 0 16 32 48 0 64 128 192 1024 2048 3072</att>
+            <att name="long_name">Chlorophyll concentration - Flags</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">4000.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>CHL1_error</sourceName>
+        <destinationName>CHL1_error</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="intList">256 256</att>
+            <att name="_FillValue" type="short">-32768</att>
+            <att name="long_name">Chlorophyll concentration - Error estimation</att>
+            <att name="scale_factor" type="float">0.01</att>
+            <att name="units">&#37;</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">5.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="units">percent</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
