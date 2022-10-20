@@ -38,6 +38,22 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
+        <sourceName>source_file</sourceName>
+        <destinationName>source_file</destinationName>
+        <dataType>String</dataType>
+        <addAttributes>
+            <att name="long_name">Source File</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>instrument_sn</sourceName>
+        <destinationName>instrument_sn</destinationName>
+        <dataType>String</dataType>
+        <addAttributes>
+            <att name="long_name">Instrument Serial Number</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
         <sourceName>latitude</sourceName>
         <destinationName>latitude</destinationName>
         <dataType>double</dataType>

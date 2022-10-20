@@ -2,6 +2,7 @@ CREATE
 OR REPLACE VIEW erddap."HakaiNearShoreStandAloneRaw" AS
 SELECT
     sm.*,
+    data.source_file,
     data.instrument_sn,
     data.measurement_time,
     data.depth,
