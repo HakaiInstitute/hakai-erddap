@@ -23,7 +23,7 @@
         <att name="title">Hakai Nearshore temperature and light instensity loggers</att>
         <att name="cdm_data_type">Timeseries</att>
         <att name="cdm_timeseries_variables">station,latitude,longitude</att>
-        <att name="subsetVariables">station,latitude,longitude,water_temp_uql,light_intensity_uql</att>
+        <att name="subsetVariables">station,instrument_sn,water_temp_uql,light_intensity_uql</att>
         <att name="platform">mooring</att>
         <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
     </addAttributes>
