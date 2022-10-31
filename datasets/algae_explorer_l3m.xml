@@ -82,7 +82,7 @@
         <att name="period_end_day">null</att>
         <att name="period_start_day">null</att>
         <att name="southernmost_latitude">null</att>
-        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
         <att name="start_time">null</att>
         <att name="summary">GlobColour daily merged Moderate Resolution Imaging Spectroradiometer (MODIS)/Visible and Infrared Imager/Radiometer Suite/Suomi-NPP (VIIRSN) product</att>
         <att name="title">Algae explorer L3m*Day data</att>

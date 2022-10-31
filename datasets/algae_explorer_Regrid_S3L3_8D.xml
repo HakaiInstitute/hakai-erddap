@@ -22,7 +22,7 @@
         <att name="keywords">chemistry, Chla_intp, chlorophyll, concentration, concentration_of_chlorophyll_in_sea_water, data, earth, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Chlorophyll, local, ocean, oceans, science, sea, seawater, source, water</att>
         <att name="keywords_vocabulary">GCMD Science Keywords</att>
         <att name="license">[standard]</att>
-        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
         <att name="summary">Data from a local source.</att>
         <att name="title">Algae Explorer S3L3 8D regridded chl-a</att>
     </addAttributes>

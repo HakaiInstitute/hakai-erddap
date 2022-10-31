@@ -44,7 +44,7 @@
     <att name="subsetVariables">station,latitude,longitude,WindSpd_UQL,WindDir_UQL,AirTemp_UQL,StationAirPressure_UQL,WaterTemp_UQL,WaterConductivity_UQL,WaterPressure_UQL,WaterSalinity_UQL,Fluorometer_UQL,sw_xCO2_UQL,atm_xCO2_UQL</att>
     <att name="platform">moored surface buoy</att>
     <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
-    <att name="standard_name_vocabulary">CF Standard Name Table v77</att>
+    <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
   </addAttributes>
 
 

@@ -26,7 +26,7 @@
     <att name="date_created">2019-09-14</att>
     <att name="platform">coastal structure</att>
     <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
-    <att name="standard_name_vocabulary">CF Standard Name Table v77</att>
+    <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
     <att name="creator_email">wiley.evans@hakai.org</att>
     <att name="creator_name">Wiley Evans</att>
     <att name="creator_url">https://www.hakai.org/</att>

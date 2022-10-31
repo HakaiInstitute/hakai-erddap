@@ -32,7 +32,7 @@
 		<att name="keywords_vocabulary">GCMD Science Keywords</att>
 		<att name="license">Creative Commons Attribution 4.0 (CC-BY-4.0)</att>
 		<att name="sourceUrl">https://www.nodc.noaa.gov/ocads/data/0208810.xml</att>
-		<att name="standard_name_vocabulary">CF Standard Name Table v77</att>
+		<att name="standard_name_vocabulary">CF Standard Name Table v79</att>
 		<att name="subsetVariables">Mooring_Name, CO2_Air_QF, CO2_SW_QF</att>
 		<att name="contributor_name">Wiley Evans</att>
 		<att name="contributor_role">pointOfContact</att>

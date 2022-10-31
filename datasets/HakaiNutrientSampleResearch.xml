@@ -18,7 +18,7 @@
         <att name="keywords_vocabulary">GCMD Science Keywords</att>
         <att name="license">[standard]</att>
         <att name="sourceUrl">(local database)</att>
-        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
         <att name="summary">Data from a local source.</att>
         <att name="title">Hakai Oceanography Nutrient Samples, Research</att>
         <att name="cdm_profile_variables">time,precise_latitude, precise_longitude</att>

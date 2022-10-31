@@ -25,7 +25,7 @@
         <att name="institution">Hakai Institute</att>
         <att name="keywords">chl, chl_conc_counts, chl_conc_mean, chl_conc_p50, chl_conc_sigma, chlorophyll, conc, counts, data, local, logchl, logchl_counts, logchl_mean, logchl_p50, logchl_sigma, mean, num, num_obs, num_passes, obs, observations, p50, passes, rw1020, Rw1020_p50, rw400, Rw400_p50, rw412, Rw412_p50, rw443, Rw443_p50, rw490, Rw490_p50, rw510, Rw510_p50, rw560, Rw560_p50, rw620, Rw620_p50, rw665, Rw665_p50, rw681, Rw681_p50, rw709, Rw709_p50, rw754, Rw754_p50, rw779, Rw779_p50, rw865, Rw865_p50, sigma, source, spm, SPM_counts, SPM_mean, SPM_p50, SPM_sigma</att>
         <att name="license">[standard]</att>
-        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
         <att name="start_date">null</att>
         <att name="stop_date">null</att>
         <att name="summary">Data from a local source.</att>
