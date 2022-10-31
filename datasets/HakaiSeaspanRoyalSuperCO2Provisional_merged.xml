@@ -332,7 +332,7 @@
             <att name="long_name">Cell T</att>
             <att name="missing_value" type="double">NaN</att>
             <att name="long_name">Cell Temperature</att>
-            <att name="units">deg C</att>
+            <att name="units">deg_C</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -369,7 +369,7 @@
     </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Fluke Temperature</att>
-            <att name="units">deg C</att>
+            <att name="units">deg_C</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -394,7 +394,7 @@
     </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Oxygen Sensor Temperature</att>
-            <att name="units">deg C</att>
+            <att name="units">deg_C</att>
             <att name="standard_name">temperature_of_sensor_for_oxygen_in_sea_water</att>
         </addAttributes>
     </dataVariable>
@@ -513,7 +513,7 @@
     </sourceAttributes -->
         <addAttributes>
             <att name="long_name">TSG Temperature</att>
-            <att name="units">deg C</att>
+            <att name="units">deg_C</att>
             <att name="standard_name">sea_surface_temperature</att>
         </addAttributes>
     </dataVariable>
