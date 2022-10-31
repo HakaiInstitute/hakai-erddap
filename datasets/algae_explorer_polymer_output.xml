@@ -23,7 +23,7 @@
         <att name="institution">Hakai Institute</att>
         <att name="keywords">bitmask, bitmask_count, chl, chl_conc, chl_conc_count, chlorophyll, conc, coordinate, count, data, else, exp10, latitude, latitude_count, local, logchl, logchl_count, longitude, longitude_count, nan, source, spm, SPM_count, then</att>
         <att name="license">[standard]</att>
-        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
         <att name="summary">Data from a local source.</att>
         <att name="title">Algae Explorer Polymer Mosaic Output.</att>
     </addAttributes>

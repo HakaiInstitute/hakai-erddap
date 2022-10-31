@@ -30,7 +30,7 @@
         <att name="keywords_vocabulary">GCMD Science Keywords</att>
         <att name="license">[standard]</att>
         <att name="sourceUrl">(local files)</att>
-        <att name="standard_name_vocabulary">CF Standard Name Table v55</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
         <att name="subsetVariables">organization, work_area, site_id, event_pk, time, bottle_profile_id</att>
         <att name="summary">Combined Sample data with Conductivity, Temperature, Depth (CTD) Profile data</att>
         <att name="title">Hakai Bottle Data Complete Provisional</att>
