@@ -250,6 +250,9 @@
 			<att name="colorBarMinimum" type="double">0.0</att>
 			<att name="long_name">LCEWAP01 QC</att>
 			<att name="missing_value" type="double">NaN</att>
+			<att name="standard_name">quality_flag</att>
+			<att name="flag_meanings">no_quality_control good_value probably_good_value probably_bad_value bad_value changed_value value_below_detection value_in_excess interpolated_value missing_value</att>
+			<att name="flag_values" type="intList">0 1 2 3 4 5 6 7 8 9</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -261,6 +264,9 @@
 			<att name="colorBarMinimum" type="double">0.0</att>
 			<att name="long_name">LCNSAP01 QC</att>
 			<att name="missing_value" type="double">NaN</att>
+			<att name="standard_name">quality_flag</att>
+			<att name="flag_meanings">no_quality_control good_value probably_good_value probably_bad_value bad_value changed_value value_below_detection value_in_excess interpolated_value missing_value</att>
+			<att name="flag_values" type="intList">0 1 2 3 4 5 6 7 8 9</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -272,6 +278,9 @@
 			<att name="colorBarMinimum" type="double">0.0</att>
 			<att name="long_name">LRZAAP01 QC</att>
 			<att name="missing_value" type="double">NaN</att>
+			<att name="standard_name">quality_flag</att>
+			<att name="flag_meanings">no_quality_control good_value probably_good_value probably_bad_value bad_value changed_value value_below_detection value_in_excess interpolated_value missing_value</att>
+			<att name="flag_values" type="intList">0 1 2 3 4 5 6 7 8 9</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -566,6 +575,8 @@
 			<att name="standard_name">sea_water_pressure</att>
 			<att name="units">dbar</att>
 			<att name="references">BODC SeaDataNet</att>
+			<att name="flag_meanings">null</att>
+			<att name="flag_values">null</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -575,8 +586,9 @@
 		<addAttributes>
 			<att name="_FillValue" type="long">0</att>
 			<att name="comment">Quality flag resulting from cleaning of the beginning and end of the dataset and identification of negative pressure values</att>
-			<att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
-			<att name="flag_values" type="intList">1 2 3 4 9</att>
+			<att name="flag_meanings">no_quality_control good_value probably_good_value probably_bad_value bad_value changed_value value_below_detection value_in_excess interpolated_value missing_value</att>
+			<att name="flag_values" type="intList">0 1 2 3 4 5 6 7 8 9</att>
+			<att name="standard_name">quality_flag</att>
 			<att name="long_name">quality flag for PRESPR01</att>
 			<att name="references">BODC SeaDataNet</att>
 		</addAttributes>
