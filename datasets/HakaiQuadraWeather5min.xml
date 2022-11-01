@@ -329,7 +329,7 @@
       <att name="sensor_type">PQS1</att>
       <att name="sensor_description">PAR Quantum sensor</att>
       <att name="long_name">PAR_Avg</att>
-      <att name="units">μmol/s.m2</att>
+      <att name="units">umol s-1 m-2</att>
     </addAttributes>
   </dataVariable>
 
@@ -343,7 +343,7 @@
       <att name="sensor_type">PQS1</att>
       <att name="sensor_description">PAR Quantum sensor</att>
       <att name="long_name">PAR_Std</att>
-      <att name="units">μmol/s.m2</att>
+      <att name="units">umol s-1 m-2</att>
     </addAttributes>
   </dataVariable>
 

@@ -124,6 +124,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="units">null</att>
             <att name="missing_value" type="byte">2</att>
         </addAttributes>
     </dataVariable>
@@ -161,6 +162,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="units">null</att>
             <att name="long_name">Water Temperature UNESCO Q Level</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>

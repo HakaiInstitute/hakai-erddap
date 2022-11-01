@@ -113,6 +113,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">null</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -166,6 +167,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">null</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -223,6 +225,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">null</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -286,6 +289,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">null</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -299,7 +303,7 @@
             <att name="units">degrees_celsius</att>
             <att name="standard_name">air_temperature</att>
             <att name="ancillary_data">airtemp_flag airtemp_uql</att>
-            <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
+            <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -353,6 +357,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">null</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -366,7 +371,7 @@
             <att name="units">hPa</att>
             <att name="standard_name">air_pressure</att>
             <att name="ancillary_data">stationairpressure_flag stationairpressure_uql</att>
-            <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
+            <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -420,6 +425,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">null</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -433,7 +439,7 @@
             <att name="units">hPa</att>
             <att name="standard_name">air_pressure_at_mean_sea_level</att>
             <att name="ancillary_data">sealevelairpressure_flag sealevelairpressure_uql</att>
-            <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
+            <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -487,6 +493,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">null</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -527,6 +534,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">null</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -540,7 +548,7 @@
             <att name="units"></att>
             <att name="standard_name"></att>
             <att name="ancillary_data">solarrad_flag solarrad_uql</att>
-            <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
+            <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -594,6 +602,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">null</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -633,6 +642,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">null</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -646,7 +656,7 @@
             <att name="units">mol m-2 s-1</att>
             <att name="standard_name">surface_downwelling_photosynthetic_photon_flux_in_air</att>
             <att name="ancillary_data">par_flag par_uql</att>
-            <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
+            <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -700,6 +710,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">null</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -739,6 +750,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">null</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -752,7 +764,7 @@
             <att name="units">W/m2</att>
             <att name="standard_name">surface_downwelling_shortwave_flux_in_air</att>
             <att name="ancillary_data">uvrad_flag uvrad_uql</att>
-            <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
+            <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -806,6 +818,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">null</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -819,7 +832,7 @@
             <att name="units">mm</att>
             <att name="standard_name"></att>
             <att name="ancillary_data">rain_flag rain_uql</att>
-            <att name="cell_methods">time: first (interval: 5.0 minutes)</att>
+            <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -845,6 +858,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">null</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -884,6 +898,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">null</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -935,6 +950,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">null</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -973,6 +989,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">null</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
