@@ -163,7 +163,8 @@
 			<att name="_FillValue" type="double">NaN</att>
 			<att name="long_name">Sea Water Temperature</att>
 			<att name="standard_name">sea_water_temperature</att>
-			<att name="units">degC [ITS-90]</att>
+			<att name="units">degC</att>
+			<att name="scale">ITS-90</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -206,7 +207,7 @@
 		<addAttributes>
 			<att name="_FillValue" type="double">NaN</att>
 			<att name="long_name">Sea Water Conductivity</att>
-			<att name="standard_name">sea_water_conductivity</att>
+			<att name="standard_name">sea_water_electrical_conductivity</att>
 			<att name="units">mS/cm</att>
 		</addAttributes>
 	</dataVariable>

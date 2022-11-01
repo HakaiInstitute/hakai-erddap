@@ -147,8 +147,8 @@
 			<att name="_FillValue" type="float">9.9999999E14</att>
 			<att name="ancillary_variables">LCEWAP01_QC</att>
 			<att name="comment">Quality flag resulting from cleaning of the beginning and end of the dataset</att>
-			<att name="flag_meanings">no_quality_control</att>
-			<att name="flag_values" type="intList">0 1 2 3 4 5 6 7 8 9</att>
+			<att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+			<att name="flag_values" type="intList">1 2 3 4 9</att>
 			<att name="generic_name">u</att>
 			<att name="legacy_GF3_code">SDN:GF3::EWCT</att>
 			<att name="long_name">eastward_sea_water_velocity</att>
@@ -174,8 +174,8 @@
 			<att name="_FillValue" type="float">9.9999999E14</att>
 			<att name="ancillary_variables">LCNSAP01_QC</att>
 			<att name="comment">Quality flag resulting from cleaning of the beginning and end of the dataset</att>
-			<att name="flag_meanings">no_quality_control</att>
-			<att name="flag_values" type="intList">0 1 2 3 4 5 6 7 8 9</att>
+			<att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+			<att name="flag_values" type="intList">1 2 3 4 9</att>
 			<att name="generic_name">v</att>
 			<att name="legacy_GF3_code">SDN:GF3::NSCT</att>
 			<att name="long_name">northward_sea_water_velocity</att>
@@ -202,8 +202,8 @@
 			<att name="_FillValue" type="float">9.9999999E14</att>
 			<att name="ancillary_variables">LRZAAP01_QC</att>
 			<att name="comment">Quality flag resulting from cleaning of the beginning and end of the dataset</att>
-			<att name="flag_meanings">no_quality_control</att>
-			<att name="flag_values" type="intList">0 1 2 3 4 5 6 7 8 9</att>
+			<att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+			<att name="flag_values" type="intList">1 2 3 4 9</att>
 			<att name="generic_name">w</att>
 			<att name="legacy_GF3_code">SDN:GF3::VCSP</att>
 			<att name="long_name">upward_sea_water_velocity</att>
@@ -557,8 +557,6 @@
 			<att name="_FillValue" type="float">9.9999999E14</att>
 			<att name="ancillary_variables">PRESPR01_QC</att>
 			<att name="comment">Quality flag indicates negative pressure values in the time series</att>
-			<att name="flag_meanings">no_quality_control</att>
-			<att name="flag_values" type="intList">0 1 2 3 4 5 6 7 8 9</att>
 			<att name="legacy_GF3_code">SDN:GF3::PRES</att>
 			<att name="long_name">pressure</att>
 			<att name="sdn_parameter_name">Pressure (spatial co-ordinate) exerted by the water body by profiling pressure sensor and corrected to read zero at sea level</att>
@@ -573,12 +571,12 @@
 	<dataVariable>
 		<sourceName>PRESPR01_QC</sourceName>
 		<destinationName>PRESPR01_QC</destinationName>
-		<dataType>long</dataType>
+		<dataType>int</dataType>
 		<addAttributes>
 			<att name="_FillValue" type="long">0</att>
 			<att name="comment">Quality flag resulting from cleaning of the beginning and end of the dataset and identification of negative pressure values</att>
-			<att name="flag_meanings">no_quality_control</att>
-			<att name="flag_values" type="intList">0 1 2 3 4 5 6 7 8 9</att>
+			<att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+			<att name="flag_values" type="intList">1 2 3 4 9</att>
 			<att name="long_name">quality flag for PRESPR01</att>
 			<att name="references">BODC SeaDataNet</att>
 		</addAttributes>
