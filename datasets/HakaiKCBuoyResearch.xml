@@ -125,6 +125,7 @@
 		<!-- sourceAttributes>
 		</sourceAttributes -->
 		<addAttributes>
+			<att name="units">null</att>
 			<att name="long_name">CO2 SW QF</att>
 			<att name="description">Flag for xCO2 SW (wet)</att>
 			<att name="standard_name">quality_flag</att>
@@ -163,6 +164,7 @@
 		<!-- sourceAttributes>
 		</sourceAttributes -->
 		<addAttributes>
+			<att name="units">null</att>
 			<att name="long_name">CO2 Air QF</att>
 			<att name="description">Quality Flag for xCO2 Air (wet)</att>
 			<att name="standard_name">quality_flag</att>
@@ -228,7 +230,6 @@
 			<att name="standard_name">sea_surface_temperature</att>
 			<att name="units">degree_Celsius</att>
 			<att name="description">Sea Surface Temperature</att>
-			<att name="ancillary_variables">TS_QF</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -241,8 +242,8 @@
 			<att name="colorBarMaximum" type="double">37.0</att>
 			<att name="colorBarMinimum" type="double">32.0</att>
 			<att name="long_name">Sea Water Practical Salinity</att>
-			<att name="standard_name">sea_surface_practical_salinity</att>
-			<att name="units">PSU</att>
+			<att name="standard_name">sea_water_practical_salinity</att>
+			<att name="units">1E-3</att>
 			<att name="description">Sea Surface Salinity</att>
 		</addAttributes>
 	</dataVariable>
