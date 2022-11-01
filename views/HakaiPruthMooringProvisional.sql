@@ -1,4 +1,4 @@
-DROP VIEW erddap."HakaiPruthMooringProvisional"
+DROP VIEW IF EXISTS erddap."HakaiPruthMooringProvisional";
 CREATE OR REPLACE VIEW erddap."HakaiPruthMooringProvisional" AS (
 	SELECT 
 		depth,
