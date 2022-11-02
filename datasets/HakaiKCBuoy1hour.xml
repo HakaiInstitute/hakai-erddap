@@ -160,7 +160,7 @@
     <destinationName>WindSpd_UQL</destinationName>
     <dataType>byte</dataType>
     <addAttributes>
-      <att name="units">null</att>
+      <att name="units">1</att>
       <att name="long_name">WindSpdKCBuoy UNESCO Flag</att>
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
@@ -215,7 +215,7 @@
     <destinationName>WindDir_UQL</destinationName>
     <dataType>byte</dataType>
     <addAttributes>
-      <att name="units">null</att>
+      <att name="units">1</att>
       <att name="long_name">WindDirKCBuoy UNESCO Flag</att>
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
@@ -317,7 +317,7 @@
     <destinationName>AirTemp_UQL</destinationName>
     <dataType>byte</dataType>
     <addAttributes>
-      <att name="units">null</att>
+      <att name="units">1</att>
       <att name="long_name">TAirKCBuoy UNESCO Flag</att>
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
@@ -420,7 +420,7 @@
     <destinationName>StationAirPressure_UQL</destinationName>
     <dataType>byte</dataType>
     <addAttributes>
-      <att name="units">null</att>
+      <att name="units">1</att>
       <att name="long_name">StationAirPressure UNESCO Flag</att>
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
@@ -544,7 +544,7 @@
     <destinationName>WaterTemp_UQL</destinationName>
     <dataType>byte</dataType>
     <addAttributes>
-      <att name="units">null</att>
+      <att name="units">1</att>
       <att name="long_name">TWtrKCBuoy UNESCO Flag</att>
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
@@ -668,7 +668,7 @@
     <destinationName>WaterConductivity_UQL</destinationName>
     <dataType>byte</dataType>
     <addAttributes>
-      <att name="units">null</att>
+      <att name="units">1</att>
       <att name="long_name">ConductivityKCBuoy UNESCO Flag</att>
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
@@ -792,7 +792,7 @@
     <destinationName>WaterPressure_UQL</destinationName>
     <dataType>int</dataType>
     <addAttributes>
-      <att name="units">null</att>
+      <att name="units">1</att>
       <att name="long_name">PressureKCBuoy UNESCO Flag</att>
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
@@ -931,7 +931,7 @@
     <destinationName>WaterSalinity_flags</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="units">null</att>
+      <att name="units">1</att>
       <att name="long_name">SalinityKCBuoy Flag</att>
       <att name="units">Quality flags</att>
       <att name="standard_name">aggregate_quality_flag</att>
@@ -1024,7 +1024,7 @@
     <destinationName>Oxygen_Concentration_UQL</destinationName>
     <dataType>byte</dataType>
     <addAttributes>
-      <att name="units">null</att>
+      <att name="units">1</att>
       <att name="long_name">Oxygen Concentration UNESCO Flag</att>
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
@@ -1132,7 +1132,7 @@
     <destinationName>Fluorometer_UQL</destinationName>
     <dataType>byte</dataType>
     <addAttributes>
-      <att name="units">null</att>
+      <att name="units">1</att>
       <att name="long_name">Fluorescence UNESCO Flag</att>
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
@@ -1325,7 +1325,7 @@
     <destinationName>sw_xCO2_UQL</destinationName>
     <dataType>byte</dataType>
     <addAttributes>
-      <att name="units">null</att>
+      <att name="units">1</att>
       <att name="long_name">Seawater xCO2 UNESCO Flag</att>
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
@@ -1368,7 +1368,7 @@
     <destinationName>atm_xCO2_UQL</destinationName>
     <dataType>int</dataType>
     <addAttributes>
-      <att name="units">null</att>
+      <att name="units">1</att>
       <att name="long_name">Atmospheric xCO2 UNESCO Flag</att>
       <att name="ioos_category">Quality</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>

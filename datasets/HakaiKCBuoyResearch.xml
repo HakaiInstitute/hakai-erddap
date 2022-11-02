@@ -129,6 +129,7 @@
 			<att name="long_name">CO2 SW QF</att>
 			<att name="description">Flag for xCO2 SW (wet)</att>
 			<att name="standard_name">quality_flag</att>
+			<att name="units">1</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -168,6 +169,7 @@
 			<att name="long_name">CO2 Air QF</att>
 			<att name="description">Quality Flag for xCO2 Air (wet)</att>
 			<att name="standard_name">quality_flag</att>
+			<att name="units">1</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
