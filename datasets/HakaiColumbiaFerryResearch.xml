@@ -374,7 +374,7 @@
 		</sourceAttributes -->
 		<addAttributes>
 			<att name="long_name">Raw Oxygen Concentration</att>
-			<att name="units">uM</att>
+			<att name="units">umol/L</att>
 			<att name="description">Raw dissolved oxygen measurement from the Aanderaa 4330F in micro-mole per liter.</att>
 		</addAttributes>
 	</dataVariable>

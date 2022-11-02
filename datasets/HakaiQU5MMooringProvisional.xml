@@ -81,7 +81,6 @@
             <att name="standard_name">time</att>
             <att name="units">seconds since 1970-01-01T00:00:00Z</att>
             <att name="cf_role">profile_id</att>
-            <att name="cell_methods">time: point (interval: 5.0 minutes comment: time correspond to the end of the interval)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -110,7 +109,8 @@
             <att name="long_name">Average Air Temperature</att>
             <att name="units">degree_Celsius</att>
             <att name="standard_name">air_temperature</att>
-            <att name="ancillary_data">airtemp_qc,airtemp_uql</att>
+            <att name="ancillary_data">airtemp_qc airtemp_uql</att>
+            <att name="cell_methods">time: mean (interval: 5.0 minutes comment: time correspond to the end of the interval)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -124,7 +124,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
             <att name="missing_value" type="byte">2</att>
         </addAttributes>
     </dataVariable>
@@ -149,7 +149,8 @@
             <att name="long_name">Average Water Temperature</att>
             <att name="units">degree_Celsius</att>
             <att name="standard_name">sea_water_temperature</att>
-            <att name="ancillary_data">watertemp_qc,watertemp_uql</att>
+            <att name="ancillary_data">watertemp_qc watertemp_uql</att>
+            <att name="cell_methods">time: mean (interval: 5.0 minutes comment: time correspond to the end of the interval)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -162,7 +163,7 @@
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
             <att name="long_name">Water Temperature UNESCO Q Level</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
