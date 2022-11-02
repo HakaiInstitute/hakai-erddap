@@ -113,7 +113,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -167,7 +167,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -225,7 +225,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -289,7 +289,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -357,7 +357,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -425,7 +425,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -493,7 +493,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -534,7 +534,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -602,7 +602,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -642,7 +642,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -710,7 +710,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -750,7 +750,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -818,7 +818,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -858,7 +858,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -898,7 +898,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -950,7 +950,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -989,7 +989,7 @@
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
             <att name="missing_value" type="byte">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>

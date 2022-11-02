@@ -361,7 +361,7 @@
         <!-- sourceAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-<att name="units">null</att>
+<att name="units">1</att>
             <att name="long_name">Depth UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -369,7 +369,7 @@
         <addAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
             <att name="long_name">Depth UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -415,7 +415,7 @@
         <!-- sourceAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-<att name="units">null</att>
+<att name="units">1</att>
             <att name="long_name">Pressure UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -423,7 +423,7 @@
         <addAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
             <att name="long_name">Pressure UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -470,7 +470,7 @@
         <!-- sourceAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-<att name="units">null</att>
+<att name="units">1</att>
             <att name="long_name">Conductivity UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -478,7 +478,7 @@
         <addAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
             <att name="long_name">Conductivity UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -527,7 +527,7 @@
         <!-- sourceAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-<att name="units">null</att>
+<att name="units">1</att>
             <att name="long_name">Temperature UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -535,7 +535,7 @@
         <addAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
             <att name="long_name">Temperature UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -584,7 +584,7 @@
         <!-- sourceAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-<att name="units">null</att>
+<att name="units">1</att>
             <att name="long_name">Salinity UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -592,7 +592,7 @@
         <addAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
             <att name="long_name">Salinity UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -639,7 +639,7 @@
         <!-- sourceAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-<att name="units">null</att>
+<att name="units">1</att>
             <att name="long_name">Dissolved_oxygen_ml_l UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -647,7 +647,7 @@
         <addAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
             <att name="long_name">Dissolved_oxygen_ml_l UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -694,7 +694,7 @@
         <!-- sourceAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-<att name="units">null</att>
+<att name="units">1</att>
             <att name="long_name">Rinko_do_ml_l UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -702,7 +702,7 @@
         <addAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
             <att name="long_name">Rinko_do_ml_l UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -749,7 +749,7 @@
         <!-- sourceAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-<att name="units">null</att>
+<att name="units">1</att>
             <att name="long_name">Flc UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -757,7 +757,7 @@
         <addAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
             <att name="long_name">Flc UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -804,7 +804,7 @@
         <!-- sourceAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-<att name="units">null</att>
+<att name="units">1</att>
             <att name="long_name">Turbidity UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -812,7 +812,7 @@
         <addAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
             <att name="long_name">Turbidity UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -859,7 +859,7 @@
         <!-- sourceAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-<att name="units">null</att>
+<att name="units">1</att>
             <att name="long_name">Par UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -867,7 +867,7 @@
         <addAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
             <att name="long_name">Par UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -914,7 +914,7 @@
         <!-- sourceAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-<att name="units">null</att>
+<att name="units">1</att>
             <att name="long_name">C_star_at UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -922,7 +922,7 @@
         <addAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
             <att name="long_name">Beam Attenuation UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -963,7 +963,7 @@
         <!-- sourceAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-<att name="units">null</att>
+<att name="units">1</att>
             <att name="long_name">C_star_at UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -971,7 +971,7 @@
         <addAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
             <att name="long_name">pH UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -1010,7 +1010,7 @@
         <addAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
             <att name="long_name">Beam Attenuation UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
@@ -1049,7 +1049,7 @@
         <addAttributes>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="units">null</att>
+            <att name="units">1</att>
             <att name="long_name">CDOM UNESCO Q Level</att>
             <att name="missing_value" type="int">2</att>
             <att name="standard_name">aggregate_quality_flag</att>
