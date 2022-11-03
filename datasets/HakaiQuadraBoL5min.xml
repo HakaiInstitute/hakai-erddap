@@ -720,7 +720,7 @@
       <att name="long_name">pH_T_Med</att>
       <att name="units">total scale</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">pCO2_uacalcpH_UQLtm_UQL calcpH_UQL</att>
+      <att name="ancillary_variables">pCO2_uacalcpH_UQL tm_UQL calcpH_UQL</att>
     </addAttributes>
   </dataVariable>
 
@@ -736,7 +736,7 @@
       <att name="long_name">pH_T_Avg</att>
       <att name="units">total scale</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">pCO2_uacalcpH_UQLtm_UQL calcpH_UQL</att>
+      <att name="ancillary_variables">pCO2_uacalcpH_UQL tm_UQL calcpH_UQL</att>
     </addAttributes>
   </dataVariable>
 
@@ -752,7 +752,7 @@
       <att name="long_name">pH_T_Min</att>
       <att name="units">total scale</att>
       <att name="cell_methods">time: mininum (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">pCO2_uacalcpH_UQLtm_UQL calcpH_UQL</att>
+      <att name="ancillary_variables">pCO2_uacalcpH_UQL tm_UQL calcpH_UQL</att>
     </addAttributes>
   </dataVariable>
 
@@ -768,7 +768,7 @@
       <att name="long_name">pH_T_Max</att>
       <att name="units">total scale</att>
       <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">pCO2_uacalcpH_UQLtm_UQL calcpH_UQL</att>
+      <att name="ancillary_variables">pCO2_uacalcpH_UQL tm_UQL calcpH_UQL</att>
     </addAttributes>
   </dataVariable>
 
@@ -784,7 +784,7 @@
       <att name="long_name">pH_T_Std</att>
       <att name="units">total scale</att>
       <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
-      <att name="ancillary_variables">pCO2_uacalcpH_UQLtm_UQL calcpH_UQL</att>
+      <att name="ancillary_variables">pCO2_uacalcpH_UQL tm_UQL calcpH_UQL</att>
     </addAttributes>
   </dataVariable>
 
