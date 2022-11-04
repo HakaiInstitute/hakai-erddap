@@ -414,6 +414,7 @@
       <att name="long_name">Salinity_Med</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">TSG_S_UQL TSG_S_flags</att>
+      <att name="units">degC</att>
     </addAttributes>
   </dataVariable>
 
@@ -429,6 +430,7 @@
       <att name="long_name">Salinity_Avg</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">TSG_S_UQL TSG_S_flags</att>
+      <att name="units">degC</att>
     </addAttributes>
   </dataVariable>
 
@@ -444,6 +446,7 @@
       <att name="long_name">Salinity_Min</att>
       <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">TSG_S_UQL TSG_S_flags</att>
+      <att name="units">degC</att>
     </addAttributes>
   </dataVariable>
 
@@ -459,6 +462,7 @@
       <att name="long_name">Salinity_Max</att>
       <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">TSG_S_UQL TSG_S_flags</att>
+      <att name="units">degC</att>
     </addAttributes>
   </dataVariable>
 
@@ -474,6 +478,7 @@
       <att name="long_name">Salinity_Std</att>
       <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">TSG_S_UQL TSG_S_flags</att>
+      <att name="units">degC</att>
     </addAttributes>
   </dataVariable>
 
