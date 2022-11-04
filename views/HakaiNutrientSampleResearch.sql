@@ -1,6 +1,7 @@
-DROP TABLE IF EXISTS erddap."HakaiNutrientSampleResearch";
-CREATE TABLE erddap."HakaiNutrientSampleResearch" AS
-SELECT action,
+CREATE
+OR REPLACE TABLE erddap."HakaiNutrientSampleResearch" AS
+SELECT
+    action,
     event_pk,
     rn,
     is_replicate,
@@ -18,7 +19,12 @@ SELECT action,
     gather_lat,
     gather_long,
     collection_method,
-    (case when pressure_transducer_depth is null then line_out_depth else pressure_transducer_depth end) depth,
+    (
+        case
+            when pressure_transducer_depth is null then line_out_depth
+            else pressure_transducer_depth
+        end
+    ) depth,
     line_out_depth,
     pressure_transducer_depth,
     filtered,
@@ -65,13 +71,16 @@ SELECT action,
     quality_level,
     comments,
     quality_log
-FROM eims.output_nutrients
-WHERE organization = 'HAKAI'
-    AND quality_level in  ('Principal Investigator','Technicianmr')
+FROM
+    eims.output_nutrients
+WHERE
+    organization = 'HAKAI'
+    AND quality_level in ('Principal Investigator', 'Technicianmr')
     AND site_id in ('QU39')
     AND (
         no2_no3_flag in ('AV', 'BDL')
         AND po4_flag in ('AV', 'BDL')
         AND sio2_flag in ('AV', 'BDL')
-    ) 
-ORDER BY "collected" DESC;
+    )
+ORDER BY
+    "collected" DESC;
