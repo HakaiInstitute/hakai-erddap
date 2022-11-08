@@ -1,4 +1,3 @@
-begin;
 DROP TABLE IF EXISTS erddap."HakaiChlorophyllSampleProvisional";
 
 CREATE TABLE erddap."HakaiChlorophyllSampleProvisional" AS
@@ -239,4 +238,3 @@ from
                 "collected"
             )
     ) as subquery2;
-    rollback;
