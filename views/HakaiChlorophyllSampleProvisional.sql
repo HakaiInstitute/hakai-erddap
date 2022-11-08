@@ -1,5 +1,5 @@
 CREATE
-OR REPLACE VIEW erddap."HakaiChlorophyllSampleProvisional" AS
+OR REPLACE TABLE IF NOT EXISTS erddap."HakaiChlorophyllSampleProvisional" AS
 SELECT
     *,
     (
