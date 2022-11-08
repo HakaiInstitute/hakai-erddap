@@ -1,5 +1,5 @@
 CREATE
-OR REPLACE TABLE erddap."HakaiCTDProvisional" AS
+OR REPLACE VIEW erddap."HakaiCTDProvisional" AS
 SELECT
     d.measurement_dt AS "measurementTime",
     d.ctd_cast_pk,
