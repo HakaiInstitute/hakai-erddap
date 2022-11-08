@@ -1,5 +1,6 @@
-CREATE
-OR REPLACE TABLE IF NOT EXISTS erddap."HakaiChlorophyllSampleResearch" AS
+DROP TABLE IF EXISTS erddap."HakaiChlorophyllSampleResearch";
+
+CREATE TABLE erddap."HakaiChlorophyllSampleResearch" AS
 select
     *,
     (

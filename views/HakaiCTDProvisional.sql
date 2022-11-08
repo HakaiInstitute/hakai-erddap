@@ -1,5 +1,6 @@
-CREATE
-OR REPLACE TABLE erddap."HakaiCTDProvisional" AS
+DROP TABLE IF EXISTS erddap."HakaiCTDProvisional";
+
+CREATE TABLE erddap."HakaiCTDProvisional" AS
 SELECT
     d.measurement_dt AS "measurementTime",
     d.ctd_cast_pk,
