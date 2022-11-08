@@ -1,5 +1,6 @@
-CREATE
-OR REPLACE TABLE erddap."HakaiNutrientSampleResearch" AS
+DROP TABLE IF EXISTS erddap."HakaiNutrientSampleResearch";
+
+CREATE TABLE erddap."HakaiNutrientSampleResearch" AS
 SELECT
     action,
     event_pk,

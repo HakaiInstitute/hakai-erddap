@@ -1,5 +1,7 @@
-CREATE
-OR REPLACE TABLE IF NOT EXISTS erddap."HakaiChlorophyllSampleProvisional" AS
+begin;
+DROP TABLE IF EXISTS erddap."HakaiChlorophyllSampleProvisional";
+
+CREATE TABLE erddap."HakaiChlorophyllSampleProvisional" AS
 SELECT
     *,
     (
@@ -237,3 +239,4 @@ from
                 "collected"
             )
     ) as subquery2;
+    rollback;
