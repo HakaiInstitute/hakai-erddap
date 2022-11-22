@@ -3,19 +3,18 @@
 	<reloadEveryNMinutes>10080</reloadEveryNMinutes>
 	<updateEveryNMillis>10000</updateEveryNMillis>
 	<fileDir>/datasets/HakaiKCBuoyResearch/</fileDir>
-	<fileNameRegex>.*transformed\.csv</fileNameRegex>
+	<fileNameRegex>.*\d\d\d\d\.csv</fileNameRegex>
 	<recursive>false</recursive>
 	<pathRegex>.*</pathRegex>
 	<metadataFrom>last</metadataFrom>
 	<standardizeWhat>0</standardizeWhat>
 	<charset>UTF-8</charset>
 	<columnSeparator>,</columnSeparator>
-	<columnNamesRow>1</columnNamesRow>
-	<firstDataRow>2</firstDataRow>
-	<sortedColumnSourceName>time</sortedColumnSourceName>
-	<sortFilesBySourceNames>time</sortFilesBySourceNames>
+	<columnNamesRow>7</columnNamesRow>
+	<firstDataRow>8</firstDataRow>
 	<fileTableInMemory>false</fileTableInMemory>
 	<accessibleViaFiles>true</accessibleViaFiles>
+	<cacheFromUrl>https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0208810/</cacheFromUrl>
 	<!-- sourceAttributes>
 	</sourceAttributes -->
 	<!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
@@ -93,15 +92,15 @@
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
-		<sourceName>time</sourceName>
+		<sourceName>=Calendar2.parseToEpochSeconds(row.columnString("Date") + "T" + row.columnString("Time UTC") + "Z", "mm/DD/yyyy'T'H:mm'Z'")</sourceName>
 		<destinationName>time</destinationName>
-		<dataType>String</dataType>
+		<dataType>double</dataType>
 		<!-- sourceAttributes>
 		</sourceAttributes -->
 		<addAttributes>
 			<att name="long_name">Date Time</att>
 			<att name="standard_name">time</att>
-			<att name="units">yyyy-MM-dd H:m:s</att>
+			<att name="units">seconds since 1970-01-01</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
@@ -277,7 +276,7 @@
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
-		<sourceName>fCO2 SW sat uatm</sourceName>
+		<sourceName>fCO2 SW (sat) uatm</sourceName>
 		<destinationName>fCO2_SW_sat</destinationName>
 		<dataType>float</dataType>
 		<!-- sourceAttributes>
@@ -291,7 +290,7 @@
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
-		<sourceName>fCO2 Air sat uatm</sourceName>
+		<sourceName>fCO2 Air (sat) uatm</sourceName>
 		<destinationName>fCO2_Air_sat</destinationName>
 		<dataType>float</dataType>
 		<!-- sourceAttributes>
@@ -317,7 +316,7 @@
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
-		<sourceName>pCO2 SW sat uatm</sourceName>
+		<sourceName>pCO2 SW (sat) uatm</sourceName>
 		<destinationName>pCO2_SW_sat</destinationName>
 		<dataType>float</dataType>
 		<!-- sourceAttributes>
@@ -331,7 +330,7 @@
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
-		<sourceName>pCO2 Air sat uatm</sourceName>
+		<sourceName>pCO2 Air (sat) uatm</sourceName>
 		<destinationName>pCO2_Air_sat</destinationName>
 		<dataType>float</dataType>
 		<!-- sourceAttributes>
