@@ -3,19 +3,20 @@
 	<reloadEveryNMinutes>10080</reloadEveryNMinutes>
 	<updateEveryNMillis>10000</updateEveryNMillis>
 	<fileDir>/datasets/HakaiColumbiaFerryResearch/</fileDir>
-	<fileNameRegex>.*QCed\.zip</fileNameRegex>
+	<fileNameRegex>.*\.csv</fileNameRegex>
 	<recursive>true</recursive>
 	<pathRegex>.*</pathRegex>
 	<metadataFrom>last</metadataFrom>
 	<standardizeWhat>0</standardizeWhat>
 	<charset>UTF-8</charset>
-	<columnSeparator>&#9;</columnSeparator>
+	<columnSeparator>,</columnSeparator>
 	<columnNamesRow>7</columnNamesRow>
 	<firstDataRow>8</firstDataRow>
 	<sortedColumnSourceName></sortedColumnSourceName>
 	<sortFilesBySourceNames></sortFilesBySourceNames>
 	<fileTableInMemory>false</fileTableInMemory>
 	<accessibleViaFiles>true</accessibleViaFiles>
+	<cacheFromUrl>https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0209049/</cacheFromUrl>
 	<!-- sourceAttributes>
 	</sourceAttributes -->
 	<!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
@@ -75,23 +76,22 @@
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
-		<sourceName>Date and time (yyyy-mm-dd hh:mm:ss)</sourceName>
+		<sourceName>=Calendar2.parseToEpochSeconds(row.columnString("Date and time (yyyy-mm-dd hh:mm:ss)"), "M/d/Y H:mm") + 63113852000.0 + 224800</sourceName>
 		<destinationName>time</destinationName>
-		<dataType>String</dataType>
+		<dataType>double</dataType>
 		<!-- sourceAttributes>
 		</sourceAttributes -->
 		<addAttributes>
-			<att name="long_name">Date And Time (yyyy-mm-dd Hh:mm:ss)</att>
+			<att name="long_name">Date And Time</att>
 			<att name="source_name">Date and time (yyyy-mm-dd hh:mm:ss)</att>
 			<att name="standard_name">time</att>
-			<att name="time_precision">1970-01-01T00:00:00Z</att>
-			<att name="units">yyyy-MM-dd&#39; &#39;HH:mm:ss</att>
+			<att name="units">seconds since 1970-01-01</att>
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
 		<sourceName>PC Date (ddmmyy)</sourceName>
 		<destinationName>PC_Date</destinationName>
-		<dataType>int</dataType>
+		<dataType>String</dataType>
 		<!-- sourceAttributes>
 		</sourceAttributes -->
 		<addAttributes>
@@ -101,7 +101,7 @@
 	<dataVariable>
 		<sourceName>PC time (hhmmss)</sourceName>
 		<destinationName>PC_time</destinationName>
-		<dataType>int</dataType>
+		<dataType>String</dataType>
 		<!-- sourceAttributes>
 		</sourceAttributes -->
 		<addAttributes>
@@ -111,7 +111,7 @@
 	<dataVariable>
 		<sourceName>GPS date (ddmmyy)</sourceName>
 		<destinationName>GPS_date</destinationName>
-		<dataType>int</dataType>
+		<dataType>String</dataType>
 		<!-- sourceAttributes>
 		</sourceAttributes -->
 		<addAttributes>
@@ -121,7 +121,7 @@
 	<dataVariable>
 		<sourceName>GPS time (hhmmss)</sourceName>
 		<destinationName>GPS_time</destinationName>
-		<dataType>int</dataType>
+		<dataType>String</dataType>
 		<!-- sourceAttributes>
 		</sourceAttributes -->
 		<addAttributes>
