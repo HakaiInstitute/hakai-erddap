@@ -16,6 +16,7 @@
     <sortFilesBySourceNames></sortFilesBySourceNames>
     <fileTableInMemory>false</fileTableInMemory>
     <accessibleViaFiles>true</accessibleViaFiles>
+    <cacheFromUrl>https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0208638/</cacheFromUrl>
     <addAttributes>
         <att name="cdm_data_type">TimeSeries</att>
         <att name="cdm_timeseries_variables">station_id, latitude, longitude</att>
@@ -124,7 +125,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>TSG_T (deg C)</sourceName>
+        <sourceName>TSG-T (deg C)</sourceName>
         <destinationName>TSG_T</destinationName>
         <dataType>float</dataType>
         <!-- sourceAttributes>
@@ -140,7 +141,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>TSG_S (PSS-78)</sourceName>
+        <sourceName>TSG-S (PSS-78)</sourceName>
         <destinationName>TSG_S</destinationName>
         <dataType>float</dataType>
         <!-- sourceAttributes>
@@ -231,14 +232,14 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>DiverCTD9875_Pressure (standard atm pressure removed, mbar)</sourceName>
+        <sourceName>"DiverCTD9875_Pressure (standard atm pressure removed, mbar)"</sourceName>
         <destinationName>DiverCTD9875_Pressure</destinationName>
         <dataType>float</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
             <att name="_FillValue" type="float">NaN</att>
-            <att name="long_name">Diver CTD9875 Pressure (standard Atm Pressure Removed, Mbar)</att>
+            <att name="long_name">Diver CTD9875 Pressure (standard Atm Pressure Removed, mbar)</att>
             <att name="units">mbar</att>
             <att name="standard_name">sea_water_pressure_due_to_sea_water </att>
         </addAttributes>
@@ -443,4 +444,4 @@
             <att name="long_name">Revelle Factor (Waters Et Al Constants)</att>
         </addAttributes>
     </dataVariable>
-</dataset>    
+</dataset>
