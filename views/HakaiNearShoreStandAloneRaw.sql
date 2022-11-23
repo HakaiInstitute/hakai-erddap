@@ -139,19 +139,19 @@ FROM
         SELECT
             *
         FROM
-            sn_sa.sa_foggy_cove_high_pyropia_raw
+            sn_sa.sa_foggy_cove_pyropia_high_raw
         UNION
         ALL
         SELECT
             *
         FROM
-            sn_sa.sa_foggy_cove_low_pyropia_raw
+            sn_sa.sa_foggy_cove_pyropia_low_raw
         UNION
         ALL
         SELECT
             *
         FROM
-            sn_sa.sa_foggy_cove_mid_pyropia_raw
+            sn_sa.sa_foggy_cove_pyropia_mid_raw
         UNION
         ALL
         SELECT
