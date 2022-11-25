@@ -1,14 +1,9 @@
-<dataset type="EDDTableFromMultidimNcFiles" datasetID="HakaiWaterPropertiesInstrumentProfileResearch" active="true">
+<dataset type="EDDTableFromDatabase" datasetID="HakaiWaterPropertiesInstrumentProfileResearch" active="true">
+    <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
+    <driverName>org.postgresql.Driver</driverName>
+    <schemaName>ctd</schemaName>
+    <tableName>"ctd_post_qc_data"</tableName>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
-    <updateEveryNMillis>10000</updateEveryNMillis>
-    <fileDir>/datasets/HakaiWaterPropertiesInstrumentProfileResearch/</fileDir>
-    <fileNameRegex>.*\.nc</fileNameRegex>
-    <recursive>true</recursive>
-    <pathRegex>.*</pathRegex>
-    <standardizeWhat>0</standardizeWhat>
-    <removeMVRows>true</removeMVRows>
-    <sortFilesBySourceNames></sortFilesBySourceNames>
-    <fileTableInMemory>true</fileTableInMemory>
     <!-- sourceAttributes>
         <att name="acknowledgment">Hakai Field Technicians, research and IT groups</att>
         <att name="cdm_data_type">TimeSeriesProfile</att>
@@ -61,7 +56,7 @@
         <att name="keywords_vocabulary">GCMD Science Keywords</att>
         <att name="license">Creative Commons Attribution 4.0</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
-        <att name="subsetVariables">cruise, vessel, bottle_drop, device_model, device_sn, device_firmware, work_area, direction_flag, hakai_id, station</att>
+        <att name="subsetVariables">work_area,cruise, station,vessel, device_model, device_sn</att>
         <att name="cdm_data_type">TimeSeriesProfile</att>
         <att name="cdm_profile_variables">hakai_id</att>
         <att name="cdm_timeseries_variables">station,latitude,longitude</att>
@@ -133,7 +128,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>comments</sourceName>
+        <sourceName>cast_comments</sourceName>
         <destinationName>comments</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
@@ -173,16 +168,6 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>bottle_drop</sourceName>
-        <destinationName>bottle_drop</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Bottle Drop</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>station</sourceName>
         <destinationName>station</destinationName>
         <dataType>String</dataType>
@@ -195,7 +180,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>latitude_station</sourceName>
+        <sourceName>station_latitude</sourceName>
         <destinationName>latitude</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
@@ -211,7 +196,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>longitude_station</sourceName>
+        <sourceName>station_longitude</sourceName>
         <destinationName>longitude</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
@@ -670,19 +655,6 @@
         <addAttributes>
             <att name="long_name">Carbon Dissolved Organic Matter</att>
             <att name="units">ppb</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>oxygen_voltage</sourceName>
-        <destinationName>oxygen_voltage</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-            <att name="_FillValue" type="double">NaN</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="_FillValue" type="double">NaN</att>
-            <att name="long_name">Oxygen Sensor Raw Voltage</att>
-            <att name="units">Volts</att>
         </addAttributes>
     </dataVariable>
 </dataset>
