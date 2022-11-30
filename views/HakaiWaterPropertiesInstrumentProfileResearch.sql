@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS erddap.HakaiWaterPropertiesInstrumentProfileResearch;
+DROP TABLE IF EXISTS erddap."HakaiWaterPropertiesInstrumentProfileResearch";
 
-CREATE TABLE erddap.HakaiWaterPropertiesInstrumentProfileResearch AS
+CREATE TABLE erddap."HakaiWaterPropertiesInstrumentProfileResearch" AS
 SELECT
     *
 FROM
@@ -16,4 +16,8 @@ WHERE
     AND d.work_area in ('CALVERT', 'QUADRA', 'JOHNSTONE STRAIT')
     AND d.cruise NOT IN ('CEDAR COAST', 'HER')
 ORDER BY
-    d.measurement_dt DESC
+    d.work_area,
+    d.station,
+    d.start_dt,
+    d.direction_flag,
+    d.pressure DESC;
