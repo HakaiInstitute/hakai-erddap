@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS erddap.hakai_ctd_provisional;
+DROP TABLE IF EXISTS erddap.HakaiWaterPropertiesInstrumentProfileProvisional;
 
-CREATE TABLE erddap.hakai_ctd_provisional AS
+CREATE TABLE erddap.HakaiWaterPropertiesInstrumentProfileProvisional AS
 SELECT
     *
 FROM
