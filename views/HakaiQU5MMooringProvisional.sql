@@ -10,15 +10,13 @@ OR REPLACE VIEW erddap."HakaiQU5MMooringProvisional" AS (
 		water.water_temp_avg AS watertemp_avg,
 		water.water_temp_min AS watertemp_min,
 		water.water_temp_max AS watertemp_max,
-		water.water_temp_std AS watertemp_std,
 		air.air_temp_ql AS airtemp_ql,
 		air.air_temp_qc AS airtemp_qc,
 		air.air_temp_uql AS airtemp_uql,
 		air.air_temp_med AS airtemp_med,
 		air.air_temp_avg AS airtemp_avg,
 		air.air_temp_min AS airtemp_min,
-		air.air_temp_max AS airtemp_max,
-		air.air_temp_std AS airtemp_std
+		air.air_temp_max AS airtemp_max
 	FROM
 		(
 			SELECT
@@ -114,8 +112,7 @@ OR REPLACE VIEW erddap."HakaiQU5MMooringProvisional" AS (
 				air_temp_med,
 				air_temp_avg,
 				air_temp_min,
-				air_temp_max,
-				air_temp_std
+				air_temp_max
 			FROM
 				sn.qu5_mooring_air_5minute air
 		) air ON water.DEPTH = air.DEPTH
