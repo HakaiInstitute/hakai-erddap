@@ -9,8 +9,7 @@ OR REPLACE VIEW erddap."HakaiPruthMooringProvisional" AS (
 		water_temp_med AS watertemp_med,
 		water_temp_avg AS watertemp_avg,
 		water_temp_min AS watertemp_min,
-		water_temp_max AS watertemp_max,
-		water_temp_std AS watertemp_std
+		water_temp_max AS watertemp_max
 	FROM
 		(
 			SELECT
