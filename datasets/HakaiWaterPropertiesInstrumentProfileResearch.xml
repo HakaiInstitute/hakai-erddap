@@ -2,7 +2,7 @@
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
     <schemaName>erddap</schemaName>
-    <tableName>"hakai_ctd_research"</tableName>
+    <tableName>"HakaiWaterPropertiesInstrumentProfileResearch"</tableName>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <!-- sourceAttributes>
         <att name="acknowledgment">Hakai Field Technicians, research and IT groups</att>
