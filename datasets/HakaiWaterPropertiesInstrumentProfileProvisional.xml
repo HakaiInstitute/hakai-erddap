@@ -1,9 +1,15 @@
-<dataset type="EDDTableFromDatabase" datasetID="HakaiWaterPropertiesInstrumentProfileProvisional" active="true">
-    <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
-    <driverName>org.postgresql.Driver</driverName>
-    <schemaName>erddap</schemaName>
-    <tableName>"HakaiWaterPropertiesInstrumentProfileProvisional"</tableName>
+<dataset type="EDDTableFromMultidimNcFiles" datasetID="HakaiWaterPropertiesInstrumentProfileProvisional" active="true">
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/HakaiWaterPropertiesInstrumentProfileProvisional/</fileDir>
+    <fileNameRegex>.*\.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <standardizeWhat>0</standardizeWhat>
+    <removeMVRows>true</removeMVRows>
+    <sortFilesBySourceNames></sortFilesBySourceNames>
+    <fileTableInMemory>true</fileTableInMemory>
+    <accessibleViaFiles>false</accessibleViaFiles>
 
     <!-- <iso19115File>/xml/HakaiCTDQU39_iso19115.xml</iso19115File> -->
 
@@ -34,7 +40,7 @@
         <att name="keywords">Calvert Island,Quadra Island,subSurfaceSalinity,coastal zone,PAR,turbidity,fluorescence,salinity,Strait of Georgia,subSurfaceTemperature,Johnstone Strait,Queen Charlotte Sound,oxygen,photosynthetically active radiation,transmissometer</att>
         <att name="summary">Temperature, conductivity, dissolved oxygen, fluorescence, photosynthetic active radiation, and turbidity data collected from 2012 to present by the Hakai Institute in waters surrounding Calvert Island, Johnstone Strait, and Quadra Island areas. This dataset presents data collected by oceanographic profiler instruments (RBR XR-620, RBR Concerto, RBR Maestro, and Seabird SBE 19plus v2) which have been automatically processed by following respective manufacturer's guidelines (see Hakai Water Properties Profile Processing and QA/QC Procedure Manual). The provisional processed data are then quality controlled by applying a series of tests that are following the QARTOD standards and more tests specific to the Hakai Institute data (see Hakai Water Properties Profile Processing and QA/QC Procedure Manual). The research dataset provides a subset of the provisional dataset which has been manually reviewed and judged good for science quality level. Data were collected by the Hakai Institute Oceanography Program, the Nearshore Program, and the Juvenile Salmon Program.</att>
         <att name="title">Hakai Water Properties Vertical Profiles Measured by Oceanographic Profilers, Provisional</att>
-        <att name="subsetVariables">work_area,cruise, station,vessel, device_model, device_sn</att>
+        <att name="subsetVariables">cruise, vessel, bottle_drop, device_model, device_sn, device_firmware, work_area, direction_flag, conductivity_UQL,  temperature_UQL, depth_UQL, pressure_UQL, flc_UQL, turbidity_UQL, salinity_UQL, dissolved_oxygen_ml_l_UQL, rinko_do_ml_l_UQL, c_star_at_UQL,hakai_id,station,ph_UQL,cdom_ppb_UQL,backscatter_beta_UQL</att>
         <att name="cdm_data_type">TimeSeriesProfile</att>
         <att name="cdm_profile_variables">hakai_id</att>
         <att name="platform">self-propelled small boat</att>
@@ -130,6 +136,16 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Device Firmware</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>bottle_drop</sourceName>
+        <destinationName>bottle_drop</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Bottle Drop</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -1025,7 +1041,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>cdom_ppb_flag_level_1</sourceName>
+        <sourceName>ccdom_ppb_flag_level_1</sourceName>
         <destinationName>cdom_ppb_UQL</destinationName>
         <dataType>byte</dataType>
         <!-- sourceAttributes>
