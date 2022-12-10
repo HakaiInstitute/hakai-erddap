@@ -1,8 +1,7 @@
-<dataset type="EDDTableFromAsciiFiles" datasetID="HakaiQuadraBoLResearch" active="true">
-    <iso19115File>https://pac-dev1.cioos.org/dev/metadata/pacific/high_resolution_record_of_surf_a6f6c.xml</iso19115File>
+<dataset type="EDDTableFromAsciiFiles" datasetID="HakaiKetchikanBoLResearch" active="true">
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <updateEveryNMillis>10000</updateEveryNMillis>
-    <fileDir>/datasets/HakaiQuadraBoLResearch/</fileDir>
+    <fileDir>/datasets/HakaiKetchikanBoLResearch/</fileDir>
     <fileNameRegex>.*\.csv</fileNameRegex>
     <recursive>false</recursive>
     <pathRegex>.*</pathRegex>
@@ -16,7 +15,7 @@
     <sortFilesBySourceNames></sortFilesBySourceNames>
     <fileTableInMemory>false</fileTableInMemory>
     <accessibleViaFiles>true</accessibleViaFiles>
-    <cacheFromUrl>https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0208638/</cacheFromUrl>
+    <cacheFromUrl>https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0246099/</cacheFromUrl>
     <addAttributes>
         <att name="cdm_data_type">TimeSeries</att>
         <att name="cdm_timeseries_variables">station_id, latitude, longitude</att>
@@ -45,12 +44,12 @@
         <att name="instrument">CTD-Divers,SUPERCO2,SBE 45,Burke-o-Lator pCO2/TCO2 analyzer</att>
         <att name="keywords">North Pacific Ocean,Surface measurement,Northern Salish Sea,Sea Surface Temperature,Sea Surface Practical Salinity,Discrete measurement,Quadra Island,seaSurfaceSalinity,Ocean Acidification,Continuous measurement,seaSurfaceTemperature,Practical Salinity,inorganicCarbon,British Columbia coast,CO2</att>
         <att name="summary">This dataset includes continuous sea surface measurements of partial pressure of carbon dioxide (pCO2), sea surface temperature and salinity collected from Hakai Institute Quadra Island Field Station in Hyacinthe Bay, British Columbia, Canada. Quadra Island, at the northern terminus of the Salish Sea, has been a site for shore-based and high-resolution measurement of surface seawater CO2 content since December 2014. Measurements of in situ temperature, salinity, and CO2 partial pressure are made near-continuously on seawater drawn from a sample line with an intake 50 m from shore and a depth of 1 m in Hyacinthe Bay on the eastern side of Quadra Island. The effort to collect these data are part of the Hakai Institute's directive to advance the understanding of carbon cycling in northeast Pacific coastal settings with specific emphasis on ocean acidification.</att>
-        <att name="title">High-Resolution Record of Surface Seawater Carbon Dioxide (CO2) Content Collected from Hakai Institute Quadra Island Field Station in Hyacinthe Bay, British Columbia, Canada </att>
+        <att name="title">High-resolution record of surface seawater CO2 content from the OceansAlaska Shellfish Hatchery in Ketchikan, Alaska, USA</att>
         <att name="platform">coastal structure</att>
         <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
     </addAttributes>
     <dataVariable>
-        <sourceName>="QuadraBoL"</sourceName>
+        <sourceName>='KetchikanBoL'</sourceName>
         <destinationName>station_id</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
@@ -156,21 +155,6 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>pCO2 (uatm)</sourceName>
-        <destinationName>pCO2</destinationName>
-        <dataType>float</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="_FillValue" type="float">-999.0</att>
-            <att name="long_name">Partial Pressure of Carbon Dioxide in Sea Water</att>
-            <att name="sensor_description">Burke-o-Lator</att>
-            <att name="sensor_type">BoL</att>
-            <att name="units">uatm</att>
-            <att name="standard_name">partial_pressure_of_carbon_dioxide_in_sea_water</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>corrected xCO2 (ppm)</sourceName>
         <destinationName>corrected_xCO2</destinationName>
         <dataType>float</dataType>
@@ -219,126 +203,33 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>SBE56_T (deg C)</sourceName>
-        <destinationName>SBE56_T</destinationName>
+        <sourceName>SAMI_T (deg C)</sourceName>
+        <destinationName>SAMI_T</destinationName>
         <dataType>float</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
             <att name="_FillValue" type="float">NaN</att>
-            <att name="long_name">SBE56 T (deg C)</att>
+            <att name="long_name">SAMI T (deg C)</att>
             <att name="standard_name">sea_water_temperature</att>
             <att name="units">degree_Celsius</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>"DiverCTD9875_Pressure (standard atm pressure removed, mbar)"</sourceName>
-        <destinationName>DiverCTD9875_Pressure</destinationName>
+        <sourceName>SAMI_TA (umol/kg)</sourceName>
+        <destinationName>SAMI_TA</destinationName>
         <dataType>float</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
             <att name="_FillValue" type="float">NaN</att>
-            <att name="long_name">Diver CTD9875 Pressure (standard Atm Pressure Removed, mbar)</att>
-            <att name="units">mbar</att>
-            <att name="standard_name">sea_water_pressure_due_to_sea_water </att>
+            <att name="long_name">SAMI TA (umol/kg)</att>
+            <att name="units">umol/kg</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>DiverCTD8975_T (deg C)</sourceName>
-        <destinationName>DiverCTD8975_T</destinationName>
-        <dataType>float</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="_FillValue" type="float">NaN</att>
-            <att name="long_name">Diver CTD8975 T (deg C)</att>
-            <att name="units">degree_Celsius</att>
-            <att name="standard_name">sea_water_temperature </att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>DiverCTD8975_S (PSS-78)</sourceName>
-        <destinationName>DiverCTD8975_S</destinationName>
-        <dataType>float</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="_FillValue" type="float">NaN</att>
-            <att name="long_name">Diver CTD8975 S (PSS-78)</att>
-            <att name="units">PSS-78</att>
-            <att name="standard_name">sea_water_practical_salinity </att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>DiverCTD8967_Pressure (standard atm pressure removed, mbar)</sourceName>
-        <destinationName>DiverCTD8967_Pressure</destinationName>
-        <dataType>float</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="_FillValue" type="float">NaN</att>
-            <att name="long_name">Diver CTD8967 Pressure (standard Atm Pressure Removed, Mbar)</att>
-            <att name="units">mbar</att>
-            <att name="standard_name">sea_water_pressure_due_to_sea_water </att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>DiverCTD8967_T (deg C)</sourceName>
-        <destinationName>DiverCTD8967_T</destinationName>
-        <dataType>float</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="_FillValue" type="float">NaN</att>
-            <att name="long_name">Diver CTD8967 T (deg C)</att>
-            <att name="units">degree_Celsius</att>
-            <att name="standard_name">sea_water_temperature </att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>DiverCTD8967_S (PSS-78)</sourceName>
-        <destinationName>DiverCTD8967_S</destinationName>
-        <dataType>float</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="_FillValue" type="float">NaN</att>
-            <att name="long_name">Diver CTD8967 S (PSS-78)</att>
-            <att name="units">PSS-78</att>
-            <att name="standard_name">sea_water_practical_salinity </att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>SBE 37 T (deg C)</sourceName>
-        <destinationName>SBE_37_T</destinationName>
-        <dataType>float</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="_FillValue" type="float">NaN</att>
-            <att name="long_name">SBE 37 T (deg C)</att>
-            <att name="units">degree_Celsius</att>
-            <att name="standard_name">sea_water_temperature </att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>SBE 37 S (PSS-78)</sourceName>
-        <destinationName>SBE_37_S</destinationName>
-        <dataType>float</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="_FillValue" type="float">NaN</att>
-            <att name="long_name">SBE 37 S (PSS-78)</att>
-            <att name="standard_name">sea_surface_practical_salinity</att>
-            <att name="units">PSS-78</att>
-            <att name="standard_name">sea_water_practical_salinity </att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>SST (TSG-T minus mean delta-T_</sourceName>
-        <destinationName>SST_TSG_T_minus_mean_delta_T</destinationName>
+        <sourceName>SST (deg C)</sourceName>
+        <destinationName>SST</destinationName>
         <dataType>float</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -374,7 +265,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>TA (umol/kg; from Evans et al., 2019 relationship)</sourceName>
+        <sourceName>TA (umol/kg; from Evans et al., 2015)</sourceName>
         <destinationName>TA</destinationName>
         <dataType>float</dataType>
         <!-- sourceAttributes>
