@@ -5,7 +5,7 @@
     <tableName>"HakaiWaterPropertiesInstrumentProfileProvisional"</tableName>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <defaultGraphQuery>longitude%2Clatitude%2Ctime&amp;time&gt;=now-1month</defaultGraphQuery>
-    <defaultDataQuery>&amp;time&gt;=now-1month</defaultGraphQuery>
+    <defaultDataQuery>&amp;time&gt;=now-1month</defaultDataQuery>
 
     <!-- <iso19115File>/xml/HakaiCTDQU39_iso19115.xml</iso19115File> -->
 
