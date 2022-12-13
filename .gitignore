@@ -5,3 +5,4 @@ notforrepo
 datasets.xml
 *.ignore
 .ignore_historical
+.DS_Store
