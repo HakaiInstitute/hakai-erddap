@@ -8,6 +8,7 @@
     <metadataFrom>last</metadataFrom>
     <matchAxisNDigits>20</matchAxisNDigits>
     <fileTableInMemory>false</fileTableInMemory>
+    <accessibleViaWMS>true</accessibleViaWMS>
     <!-- sourceAttributes>
         <att name="contact">service@globcolour.info</att>
         <att name="Conventions">CF-1.4</att>
