@@ -1054,8 +1054,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>cdom_flag</sourceName>
-        <destinationName>cdom_description</destinationName>
+        <sourceName>cdom_ppb_flag</sourceName>
+        <destinationName>cdom_flag_description</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
