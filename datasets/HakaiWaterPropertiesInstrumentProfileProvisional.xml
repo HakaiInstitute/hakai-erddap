@@ -133,6 +133,17 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
+        <sourceName>cast_processing_stage</sourceName>
+        <destinationName>cast_processing_stage</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="cf_role">timeseries_id</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Processing Stage</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
         <sourceName>station</sourceName>
         <destinationName>station</destinationName>
         <dataType>String</dataType>
