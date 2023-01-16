@@ -125,7 +125,7 @@
   <dataVariable>
     <sourceName>QuadraLimpet:WaterTemp_QC</sourceName>
     <destinationName>WaterTemp_flags</destinationName>
-    <dataType>byte</dataType>
+    <dataType>String</dataType>
     <addAttributes>
       <att name="long_name">Sea Water Temperature Quality Flags</att>
     </addAttributes>
@@ -235,7 +235,7 @@
   <dataVariable>
     <sourceName>QuadraLimpet:WaterPressure_QC</sourceName>
     <destinationName>WaterPressure_flags</destinationName>
-    <dataType>byte</dataType>
+    <dataType>String</dataType>
     <addAttributes>
       <att name="long_name">Sea Water Pressure Quality Flags</att>
     </addAttributes>
@@ -274,7 +274,7 @@
   <dataVariable>
     <sourceName>QuadraLimpet:WaterDepth_QC</sourceName>
     <destinationName>WaterDepth_flags</destinationName>
-    <dataType>byte</dataType>
+    <dataType>String</dataType>
     <addAttributes>
       <att name="long_name">Depth Quality Flags</att>
     </addAttributes>
@@ -367,7 +367,7 @@
   <dataVariable>
     <sourceName>QuadraLimpet:WaterSalinity_QC</sourceName>
     <destinationName>WaterSalinity_flags</destinationName>
-    <dataType>byte</dataType>
+    <dataType>String</dataType>
     <addAttributes>
       <att name="long_name">Water Salinity Quality Flags</att>
     </addAttributes>
@@ -405,7 +405,7 @@
   <dataVariable>
     <sourceName>QuadraLimpet:Chlorophyll_QC</sourceName>
     <destinationName>Chlorophyll_flags</destinationName>
-    <dataType>byte</dataType>
+    <dataType>String</dataType>
     <addAttributes>
       <att name="long_name">Chlorophyll Quality Flags</att>
     </addAttributes>
