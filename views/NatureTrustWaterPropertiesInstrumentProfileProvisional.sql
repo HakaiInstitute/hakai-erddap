@@ -13,7 +13,7 @@ WHERE
     AND d.status IS NULL
     AND d.measurement_dt IS NOT NULL
     AND d.direction_flag :: text = 'd' :: text
-    AND d.organization = 'HAKAI'
+    AND d.organization = 'NATURE TRUST'
     AND d.cruise NOT IN ('CEDAR COAST', 'HER')
 ORDER BY
     d.work_area,
