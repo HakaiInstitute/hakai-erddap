@@ -5,7 +5,7 @@
     <driverName>org.postgresql.Driver</driverName>
     <catalogName>hakai</catalogName>
     <schemaName>erddap</schemaName>
-    <tableName>"HakaiWatershedsStreamStations"</tableName>
+    <tableName>"HakaiWatershedsWeatherStations"</tableName>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <!-- sourceAttributes>
     </sourceAttributes -->
@@ -139,6 +139,12 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Rh Uql</att>
+            <att name="ioos_category">Quality</att>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="missing_value" type="byte">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -166,6 +172,7 @@
             <att name="long_name">Rh Avg</att>
             <att name="standard_name">relative_humidity</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+            <att name="units">%</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -179,6 +186,7 @@
             <att name="long_name">RH STD</att>
             <att name="standard_name">relative_humidity</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+            <att name="units">%</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -212,6 +220,12 @@
         <addAttributes>
             <att name="ioos_category">Temperature</att>
             <att name="long_name">Air Temp Uql</att>
+            <att name="ioos_category">Quality</att>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="missing_value" type="byte">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -287,6 +301,12 @@
         <addAttributes>
             <att name="ioos_category">Temperature</att>
             <att name="long_name">Air Temp2 Uql</att>
+            <att name="ioos_category">Quality</att>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="missing_value" type="byte">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -362,6 +382,12 @@
         <addAttributes>
             <att name="ioos_category">Wind</att>
             <att name="long_name">Wind Spd Uql</att>
+            <att name="ioos_category">Quality</att>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="missing_value" type="byte">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -429,6 +455,12 @@
             <att name="ioos_category">Wind</att>
             <att name="long_name">Wind From Direction</att>
             <att name="standard_name">wind_from_direction</att>
+            <att name="ioos_category">Quality</att>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="missing_value" type="byte">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -492,6 +524,12 @@
         <addAttributes>
             <att name="ioos_category">Meteorology</att>
             <att name="long_name">Rain Uql</att>
+            <att name="ioos_category">Quality</att>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="missing_value" type="byte">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -537,6 +575,12 @@
         <addAttributes>
             <att name="ioos_category">Meteorology</att>
             <att name="long_name">One Hour Rain Uql</att>
+            <att name="ioos_category">Quality</att>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="missing_value" type="byte">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -582,6 +626,12 @@
         <addAttributes>
             <att name="ioos_category">Ice Distribution</att>
             <att name="long_name">Snow Depth Tc Uql</att>
+            <att name="ioos_category">Quality</att>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="missing_value" type="byte">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -594,6 +644,7 @@
             <att name="ioos_category">Ice Distribution</att>
             <att name="long_name">Snow Depth Tc</att>
             <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+            <att name="units">m</att>
         </addAttributes>
     </dataVariable>
 </dataset>
