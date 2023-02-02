@@ -3,8 +3,6 @@
 <dataset type="EDDTableFromDatabase" datasetID="HakaiWatershedsWeatherStations" active="true">
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
-    <connectionProperty name="user">hakai_erddap_user</connectionProperty>
-    <connectionProperty name="password">abL13dUk</connectionProperty>
     <catalogName>hakai</catalogName>
     <schemaName>erddap</schemaName>
     <tableName>"HakaiWatershedsStreamStations"</tableName>
@@ -153,6 +151,8 @@
             <att name="ioos_category">Unknown</att>
             <att name="long_name">RH</att>
             <att name="standard_name">relative_humidity</att>
+            <att name="units">%</att>
+            <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -165,6 +165,7 @@
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Rh Avg</att>
             <att name="standard_name">relative_humidity</att>
+            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -177,6 +178,7 @@
             <att name="ioos_category">Unknown</att>
             <att name="long_name">RH STD</att>
             <att name="standard_name">relative_humidity</att>
+            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -223,6 +225,7 @@
             <att name="long_name">Air Temp</att>
             <att name="standard_name">air_temperature</att>
             <att name="units">degree_celsius</att>
+            <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -236,6 +239,7 @@
             <att name="long_name">Air Temp Avg</att>
             <att name="standard_name">air_temperature</att>
             <att name="units">degree_celsius</att>
+            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -249,6 +253,7 @@
             <att name="long_name">Air Temp Std</att>
             <att name="standard_name">air_temperature</att>
             <att name="units">degree_celsius</att>
+            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -295,6 +300,7 @@
             <att name="long_name">Air Temp2</att>
             <att name="standard_name">air_temperature</att>
             <att name="units">degree_celsius</att>
+            <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -308,6 +314,7 @@
             <att name="long_name">Air Temp2 Avg</att>
             <att name="standard_name">air_temperature</att>
             <att name="units">degree_celsius</att>
+            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -321,6 +328,7 @@
             <att name="long_name">Air Temp2 Std</att>
             <att name="standard_name">air_temperature</att>
             <att name="units">degree_celsius</att>
+            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -367,6 +375,7 @@
             <att name="long_name">Wind Spd Avg</att>
             <att name="standard_name">wind_speed</att>
             <att name="units">m/s</att>
+            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -380,6 +389,7 @@
             <att name="long_name">Wind Spd Std</att>
             <att name="standard_name">wind_speed</att>
             <att name="units">m/s</att>
+            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -433,6 +443,7 @@
             <att name="ioos_category">Wind</att>
             <att name="long_name">Wind From Direction</att>
             <att name="standard_name">wind_from_direction</att>
+            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -447,6 +458,7 @@
             <att name="ioos_category">Wind</att>
             <att name="long_name">Wind From Direction</att>
             <att name="standard_name">wind_from_direction</att>
+            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -491,6 +503,7 @@
         <addAttributes>
             <att name="ioos_category">Meteorology</att>
             <att name="long_name">Rain</att>
+            <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -535,6 +548,7 @@
         <addAttributes>
             <att name="ioos_category">Meteorology</att>
             <att name="long_name">One Hour Rain</att>
+            <att name="cell_methods">time: sum (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -579,6 +593,7 @@
         <addAttributes>
             <att name="ioos_category">Ice Distribution</att>
             <att name="long_name">Snow Depth Tc</att>
+            <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
 </dataset>

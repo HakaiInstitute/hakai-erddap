@@ -3,8 +3,6 @@
 <dataset type="EDDTableFromDatabase" datasetID="HakaiWatershedsStreamStations" active="true">
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
-    <connectionProperty name="user">hakai_erddap_user</connectionProperty>
-    <connectionProperty name="password">abL13dUk</connectionProperty>
     <catalogName>hakai</catalogName>
     <schemaName>erddap</schemaName>
     <tableName>"HakaiWatershedsStreamStations"</tableName>
@@ -140,6 +138,12 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Pls Lvl Uql</att>
+            <att name="ioos_category">Quality</att>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="missing_value" type="byte">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -151,6 +155,7 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">PLS LVL</att>
+            <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -162,6 +167,8 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Pls Lvl Avg</att>
+            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+            <att name="units">m</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -173,6 +180,8 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Pls Lvl Min</att>
+            <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
+            <att name="units">m</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -184,6 +193,8 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Pls Lvl Max</att>
+            <att name="cell_methods">time: ax (interval: 5.0 minutes)</att>
+            <att name="units">m</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -195,6 +206,8 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">PLS LVL STD</att>
+            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
+            <att name="units">m</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -228,6 +241,12 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Pls Temp Uql</att>
+            <att name="ioos_category">Quality</att>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="missing_value" type="byte">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -240,6 +259,7 @@
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Pls Temp</att>
             <att name="units">degrees_celsius</att>
+            <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -252,6 +272,7 @@
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Pls Temp Avg</att>
             <att name="units">degrees_celsius</att>
+            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -264,6 +285,7 @@
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Pls Temp Min</att>
             <att name="units">degrees_celsius</att>
+            <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -276,6 +298,7 @@
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Pls Temp Max</att>
             <att name="units">degrees_celsius</att>
+            <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -287,6 +310,7 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Pls Temp Std</att>
+            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -320,6 +344,12 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Discharge Rate Uql</att>
+            <att name="ioos_category">Quality</att>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="missing_value" type="byte">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -331,6 +361,8 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Discharge Rate</att>
+            <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+            <att name="units">m^3/s</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -342,6 +374,8 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Discharge Rate Min</att>
+            <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
+            <att name="units">m^3/s</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -353,6 +387,8 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Discharge Rate Max</att>
+            <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
+            <att name="units">m^3/s</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -386,6 +422,12 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Discharge Volume Uql</att>
+            <att name="ioos_category">Quality</att>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="missing_value" type="byte">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -397,6 +439,8 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Discharge Volume</att>
+            <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+            <att name="units">m^3</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -408,6 +452,8 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Discharge Volume Min</att>
+            <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
+            <att name="units">m^3</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -419,6 +465,8 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Discharge Volume Max</att>
+            <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
+            <att name="units">m^3</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -451,7 +499,13 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="ioos_category">Unknown</att>
-            <att name="long_name">Turbidity Uql</att>
+            <att name="long_name">Turbidity QUARTOD Flag</att>
+            <att name="ioos_category">Quality</att>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="missing_value" type="byte">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -462,7 +516,9 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="ioos_category">Unknown</att>
-            <att name="long_name">Turbidity Med</att>
+            <att name="long_name">Turbidity Median</att>
+            <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+            <att name="standard_name">sea_water_turbidity</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -474,6 +530,8 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Turbidity Avg</att>
+            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+            <att name="standard_name">sea_water_turbidity</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -507,6 +565,12 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Turbidity Ntu Uql</att>
+            <att name="ioos_category">Quality</att>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="missing_value" type="byte">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -518,6 +582,9 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Turbidity Ntu Med</att>
+            <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+            <att name="standard_name">sea_water_turbidity</att>
+            <att name="units">NTU</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -529,6 +596,9 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Turbidity Ntu Avg</att>
+            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+            <att name="standard_name">sea_water_turbidity</att>
+            <att name="units">NTU</att>
         </addAttributes>
     </dataVariable>
 </dataset>
