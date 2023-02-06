@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS erddap."HakaiWaterPropertiesInstrumentProfileResearch";
+DROP TABLE IF EXISTS erddap."ParksCanadaWaterPropertiesInstrumentProfileResearch";
 
-CREATE TABLE erddap."HakaiWaterPropertiesInstrumentProfileResearch" AS
+CREATE TABLE erddap."ParksCanadaWaterPropertiesInstrumentProfileResearch" AS
 SELECT
     *
 FROM
@@ -11,10 +11,8 @@ WHERE
     )
     AND d.status IS NULL
     AND d.measurement_dt IS NOT NULL
-    and d.depth is null
     AND d.direction_flag :: text = 'd' :: text
-    AND d.organization = 'HAKAI'
-    AND d.cruise NOT IN ('CEDAR COAST', 'HER')
+    AND d.organization = 'PARKS CANADA'
 ORDER BY
     d.work_area,
     d.station,
