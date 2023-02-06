@@ -84,25 +84,25 @@ SELECT
     discharge_volume,
     discharge_volume_min,
     discharge_volume_max,
-    turbidity_ql,
-    turbidity_qc,
-    turbidity_uql,
-    turbidity_med,
-    turbidity_avg,
-    turbidity_ntu_ql,
-    turbidity_ntu_qc,
-    turbidity_ntu_uql,
-    turbidity_ntu_med,
-    turbidity_ntu_avg,
+    null as turbidity_ql,
+    null as turbidity_qc,
+    null as turbidity_uql,
+    null as turbidity_med,
+    null as turbidity_avg,
+    null as turbidity_ntu_ql,
+    null as turbidity_ntu_qc,
+    null as turbidity_ntu_uql,
+    null as turbidity_ntu_med,
+    null as turbidity_ntu_avg
 FROM
     sn.ssn693us_5minute ssn693us
 UNION
 ALL
 SELECT
-    'SSN703US' as station,
-    51.646612 as latitude,
-    -128.025715 as longitude,
-    40 as elevation,
+    'SSN693US' as station,
+    51.645 as latitude,
+    -127.9977778 as longitude,
+    51 as elevation,
     measurement_time,
     record,
     pls_lvl_ql,
@@ -133,22 +133,22 @@ SELECT
     discharge_volume,
     discharge_volume_min,
     discharge_volume_max,
-    turbidity_ql,
-    turbidity_qc,
-    turbidity_uql,
-    turbidity_med,
-    turbidity_avg,
-    turbidity_ntu_ql,
-    turbidity_ntu_qc,
-    turbidity_ntu_uql,
-    turbidity_ntu_med,
-    turbidity_ntu_avg,
+    null as turbidity_ql,
+    null as turbidity_qc,
+    null as turbidity_uql,
+    null as turbidity_med,
+    null as turbidity_avg,
+    null as turbidity_ntu_ql,
+    null as turbidity_ntu_qc,
+    null as turbidity_ntu_uql,
+    null as turbidity_ntu_med,
+    null as turbidity_ntu_avg
 FROM
     sn.ssn693us_5minute ssn693us
 UNION
 ALL
 SELECT
-    'WSN703' as station,
+    'SSN703US' as station,
     51.64333333 as latitude,
     -128.0227778 as longitude,
     42 as elevation,
@@ -191,9 +191,9 @@ SELECT
     turbidity_ntu_qc,
     turbidity_ntu_uql,
     turbidity_ntu_med,
-    turbidity_ntu_avg,
+    turbidity_ntu_avg
 FROM
-    sn.wsn703_5minute wsn703
+    sn.ssn703us_5minute ssn703us
 UNION
 ALL
 SELECT
@@ -240,9 +240,9 @@ SELECT
     turbidity_ntu_qc,
     turbidity_ntu_uql,
     turbidity_ntu_med,
-    turbidity_ntu_avg,
+    turbidity_ntu_avg
 FROM
-    sn.ssn708us_5minute ssn708us
+    sn.ssn708_5minute ssn708
 UNION
 ALL
 SELECT
@@ -289,7 +289,7 @@ SELECT
     turbidity_ntu_qc,
     turbidity_ntu_uql,
     turbidity_ntu_med,
-    turbidity_ntu_avg,
+    turbidity_ntu_avg
 FROM
     sn.ssn844us_5minute ssn844us
 UNION
@@ -338,6 +338,6 @@ SELECT
     turbidity_ntu_qc,
     turbidity_ntu_uql,
     turbidity_ntu_med,
-    turbidity_ntu_avg,
+    turbidity_ntu_avg
 FROM
     sn.ssn1015us_5minute ssn1015us;
