@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesInstrumentProfileProvisional";
+DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesInstrumentVerticalProfileProvisional";
 
-CREATE TABLE erddap."NatureTrustWaterPropertiesInstrumentProfileProvisional" as
+CREATE TABLE erddap."NatureTrustWaterPropertiesInstrumentVerticalProfileProvisional" as
 SELECT
     *
 FROM
