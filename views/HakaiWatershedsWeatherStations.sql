@@ -1,5 +1,5 @@
 CREATE
-OR REPLACE VIEW erddap.HakaiWatershedsStreamStations AS
+OR REPLACE VIEW erddap.HakaiWatershedsWeatherStations AS
 SELECT
     *
 FROM
