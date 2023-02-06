@@ -7,13 +7,13 @@ FROM
     ctd.ctd_post_qc_data d
 WHERE
     (
-        d.cast_processing_stage >= '8_binAvg' :: ctd.processing_stage
-        OR d.cast_processing_stage >= '8_rbr_processed' :: ctd.processing_stage
+        d.cast_processing_stage >= '10_qc_pi' :: ctd.processing_stage
     )
     AND d.status IS NULL
     AND d.measurement_dt IS NOT NULL
+    and d.depth is null
     AND d.direction_flag :: text = 'd' :: text
-    AND d.work_area in ('CALVERT', 'QUADRA', 'JOHNSTONE STRAIT')
+    AND d.organization = 'HAKAI'
     AND d.cruise NOT IN ('CEDAR COAST', 'HER')
 ORDER BY
     d.work_area,
