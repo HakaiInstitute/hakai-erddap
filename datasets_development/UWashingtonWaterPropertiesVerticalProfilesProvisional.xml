@@ -17,11 +17,12 @@
         <att name="cdm_timeseries_variables">station,latitude,longitude</att>
         <att name="institution">University of Washington</att>
         <att name="title">University of Washington Clayoquot Water Properties Profiles Measured by Oceanographic Profilers, Provisional</att>
-        <att name="subsetVariables">cruise, vessel, bottle_drop, device_model, device_sn, device_firmware, work_area, direction_flag, conductivity_UQL,  temperature_UQL, depth_UQL, pressure_UQL, flc_UQL, turbidity_UQL, salinity_UQL, dissolved_oxygen_ml_l_UQL, rinko_do_ml_l_UQL, c_star_at_UQL,hakai_id,station,ph_UQL,cdom_ppb_UQL,backscatter_beta_UQL</att>
+        <att name="subsetVariables">cruise, vessel, device_model, device_sn, device_firmware, work_area, direction_flag, conductivity_UQL,  temperature_UQL, depth_UQL, pressure_UQL, flc_UQL, turbidity_UQL, salinity_UQL, dissolved_oxygen_ml_l_UQL, rinko_do_ml_l_UQL, c_star_at_UQL,hakai_id,station,ph_UQL,cdom_ppb_UQL,backscatter_beta_UQL</att>
         <att name="cdm_data_type">TimeSeriesProfile</att>
         <att name="cdm_profile_variables">hakai_id</att>
         <att name="platform">self-propelled small boat</att>
         <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
+        <att name="summary">CTD Profile dataset summary</att>
     </addAttributes>
     <dataVariable>
         <sourceName>work_area</sourceName>
@@ -113,16 +114,6 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Device Firmware</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>bottle_drop</sourceName>
-        <destinationName>bottle_drop</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Bottle Drop</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -993,7 +984,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>ccdom_ppb_flag_level_1</sourceName>
+        <sourceName>cdom_ppb_flag_level_1</sourceName>
         <destinationName>cdom_ppb_UQL</destinationName>
         <dataType>byte</dataType>
         <!-- sourceAttributes>
