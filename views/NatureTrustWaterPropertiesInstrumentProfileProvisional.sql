@@ -1,23 +1,18 @@
-DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesInstrumentProfileResearch";
+DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesInstrumentProfileProvisional";
 
-CREATE TABLE erddap."NatureTrustWaterPropertiesInstrumentProfileResearch" AS
+CREATE TABLE erddap."NatureTrustWaterPropertiesInstrumentProfileProvisional" as
 SELECT
     *
 FROM
-    ctd.ctd_post_qc_data d
+    ctd.ctd_file_cast_data d
 WHERE
     (
-        d.cast_processing_stage >= '10_qc_pi' :: ctd.processing_stage
+        d.cast_processing_stage >= '8_binAvg' :: ctd.processing_stage
+        OR d.cast_processing_stage >= '8_rbr_processed' :: ctd.processing_stage
     )
     AND d.status IS NULL
     AND d.measurement_dt IS NOT NULL
-    AND (
-        d.direction_flag :: text = 'd' :: text
-        or (
-            d.cast_type :: text = 'Static'
-            and d.direction_flag :: text = 's'
-        )
-    )
+    AND d.direction_flag :: text = 'd' :: text
     AND d.organization = 'NATURE TRUST'
 ORDER BY
     d.work_area,
