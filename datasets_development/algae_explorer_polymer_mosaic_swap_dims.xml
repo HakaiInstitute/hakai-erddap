@@ -1,0 +1,262 @@
+<dataset type="EDDGridFromNcFiles" datasetID="algae_explorer_polymer_swap_dims" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/algae_explorer/</fileDir>
+    <fileNameRegex>polymer_mosaic_output_swap_dims\.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <matchAxisNDigits>20</matchAxisNDigits>
+    <fileTableInMemory>false</fileTableInMemory>
+    <accessibleViaWMS>true</accessibleViaWMS>
+    <!-- sourceAttributes>
+        <att name="Conventions">CF-1.4</att>
+        <att name="metadata_profile">beam</att>
+        <att name="metadata_version">0.5</att>
+        <att name="product_type">BEAM_MOSAIC</att>
+        <att name="TileSize">489:382</att>
+    </sourceAttributes -->
+    <addAttributes>
+        <att name="cdm_data_type">Grid</att>
+        <att name="Conventions">CF-1.6, COARDS, ACDD-1.3</att>
+        <att name="infoUrl">???</att>
+        <att name="institution">Hakai Institute</att>
+        <att name="keywords">bitmask, bitmask_count, chl, chl_conc, chl_conc_count, chlorophyll, conc, coordinate, count, data, else, exp10, latitude, latitude_count, local, logchl, logchl_count, longitude, longitude_count, nan, source, spm, SPM_count, then</att>
+        <att name="license">[standard]</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
+        <att name="summary">Data from a local source.</att>
+        <att name="title">Algae Explorer Polymer Mosaic Output with swap dimensions</att>
+    </addAttributes>
+    <axisVariable>
+        <sourceName>new_latitude</sourceName>
+        <destinationName>latitude</destinationName>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="intList">489 382</att>
+            <att name="long_name">latitude coordinate</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Latitude</att>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+        </addAttributes>
+    </axisVariable>
+    <axisVariable>
+        <sourceName>new_longitude</sourceName>
+        <destinationName>longitude</destinationName>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="intList">489 382</att>
+            <att name="long_name">longitude coordinate</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Longitude</att>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+        </addAttributes>
+
+    </axisVariable>
+    <dataVariable>
+        <sourceName>bitmask</sourceName>
+        <destinationName>bitmask</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="intList">489 382</att>
+            <att name="coordinates">lat lon</att>
+            <att name="long_name">bitmask</att>
+            <att name="valid_pixel_expression">bitmask_count &gt; 0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>bitmask_count</sourceName>
+        <destinationName>bitmask_count</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="intList">489 382</att>
+            <att name="coordinates">lat lon</att>
+            <att name="long_name">Count of bitmask</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="_FillValue" type="int">2147483647</att>
+            <att name="colorBarMaximum" type="double">100.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>latitude</sourceName>
+        <destinationName>original_latitude</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="intList">489 382</att>
+            <att name="coordinates">lat lon</att>
+            <att name="long_name">Count of latitude</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">100.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>latitude_count</sourceName>
+        <destinationName>latitude_count</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="intList">489 382</att>
+            <att name="coordinates">lat lon</att>
+            <att name="long_name">Count of latitude</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="_FillValue" type="int">2147483647</att>
+            <att name="colorBarMaximum" type="double">100.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>longitude</sourceName>
+        <destinationName>original_longitude</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="intList">489 382</att>
+            <att name="coordinates">lat lon</att>
+            <att name="long_name">Count of longitude</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="colorBarMaximum" type="double">100.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>longitude_count</sourceName>
+        <destinationName>longitude_count</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="intList">489 382</att>
+            <att name="coordinates">lat lon</att>
+            <att name="long_name">Count of longitude</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="_FillValue" type="int">2147483647</att>
+            <att name="colorBarMaximum" type="double">100.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>logchl</sourceName>
+        <destinationName>logchl</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="intList">489 382</att>
+            <att name="coordinates">lat lon</att>
+            <att name="long_name">logchl</att>
+            <att name="valid_pixel_expression">logchl_count &gt; 0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>logchl_count</sourceName>
+        <destinationName>logchl_count</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="intList">489 382</att>
+            <att name="coordinates">lat lon</att>
+            <att name="long_name">Count of logchl</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="_FillValue" type="int">2147483647</att>
+            <att name="colorBarMaximum" type="double">100.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>chl_conc</sourceName>
+        <destinationName>chl_conc</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="intList">489 382</att>
+            <att name="coordinates">lat lon</att>
+            <att name="long_name">if logchl&gt;=1.602 then NaN else exp10(logchl)</att>
+            <att name="valid_pixel_expression">chl_conc_count &gt; 0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">0</att>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>chl_conc_count</sourceName>
+        <destinationName>chl_conc_count</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="intList">489 382</att>
+            <att name="coordinates">lat lon</att>
+            <att name="long_name">Count of chl_conc</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="_FillValue" type="int">2147483647</att>
+            <att name="colorBarMaximum" type="double">100.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SPM</sourceName>
+        <destinationName>SPM</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="intList">489 382</att>
+            <att name="coordinates">lat lon</att>
+            <att name="long_name">SPM</att>
+            <att name="valid_pixel_expression">SPM_count &gt; 0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SPM_count</sourceName>
+        <destinationName>SPM_count</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="intList">489 382</att>
+            <att name="coordinates">lat lon</att>
+            <att name="long_name">Count of SPM</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="_FillValue" type="int">2147483647</att>
+            <att name="colorBarMaximum" type="double">100.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
