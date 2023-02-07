@@ -1,11 +1,11 @@
 <!-- NOTE! Since database tables don't have any metadata, you must add metadata
   below, notably 'units' for each of the dataVariables. -->
-<dataset type="EDDTableFromDatabase" datasetID="HakaiWatershedsWeatherStations" active="true">
+<dataset type="EDDTableFromDatabase" datasetID="HakaiWatershedsWeatherStationsResearch" active="true">
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
     <catalogName>hakai</catalogName>
     <schemaName>erddap</schemaName>
-    <tableName>"HakaiWatershedsWeatherStations"</tableName>
+    <tableName>"HakaiWatershedsWeatherStationsResearch"</tableName>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <!-- sourceAttributes>
     </sourceAttributes -->
@@ -26,7 +26,7 @@
         <att name="sourceUrl">(local database)</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
         <att name="summary">Data from a local source.</att>
-        <att name="title">Hakai Watersheds Weather Stations Timeseries</att>
+        <att name="title">Hakai Watersheds Weather Stations Timeseries Research</att>
     </addAttributes>
     <dataVariable>
         <sourceName>station</sourceName>
@@ -593,6 +593,58 @@
             <att name="ioos_category">Meteorology</att>
             <att name="long_name">One Hour Rain</att>
             <att name="cell_methods">time: sum (interval: 5.0 minutes)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>snow_depth_ql</sourceName>
+        <destinationName>snow_depth_ql</destinationName>
+        <dataType>short</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Ice Distribution</att>
+            <att name="long_name">Snow Depth Ql</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>snow_depth_qc</sourceName>
+        <destinationName>snow_depth_qc</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Quality</att>
+            <att name="long_name">Snow Depth Qc</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>snow_depth_uql</sourceName>
+        <destinationName>snow_depth_uql</destinationName>
+        <dataType>short</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Ice Distribution</att>
+            <att name="long_name">Snow Depth Uql</att>
+            <att name="ioos_category">Quality</att>
+            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="missing_value" type="byte">2</att>
+            <att name="standard_name">aggregate_quality_flag</att>
+            <att name="units">1</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>snow_depth</sourceName>
+        <destinationName>snow_depth</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Ice Distribution</att>
+            <att name="long_name">Snow Depth</att>
+            <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+            <att name="units">m</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>

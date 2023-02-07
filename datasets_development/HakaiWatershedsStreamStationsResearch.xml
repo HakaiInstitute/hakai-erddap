@@ -1,11 +1,11 @@
 <!-- NOTE! Since database tables don't have any metadata, you must add metadata
   below, notably 'units' for each of the dataVariables. -->
-<dataset type="EDDTableFromDatabase" datasetID="HakaiWatershedsStreamStations" active="true">
+<dataset type="EDDTableFromDatabase" datasetID="HakaiWatershedsStreamStationsResearch" active="true">
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
     <catalogName>hakai</catalogName>
     <schemaName>erddap</schemaName>
-    <tableName>"HakaiWatershedsStreamStations"</tableName>
+    <tableName>"HakaiWatershedsStreamStationsResearch"</tableName>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <!-- sourceAttributes>
     </sourceAttributes -->
@@ -25,7 +25,7 @@
         <att name="sourceUrl">(local database)</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
         <att name="summary">Data from a local source.</att>
-        <att name="title">Hakai Watersheds Stream Stations Timeseries</att>
+        <att name="title">Hakai Watersheds Stream Stations Timeseries Research</att>
     </addAttributes>
     <dataVariable>
         <sourceName>station</sourceName>
