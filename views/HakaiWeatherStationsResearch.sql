@@ -1,5 +1,5 @@
 CREATE
-OR REPLACE VIEW erddap."HakaiWatershedsWeatherStationsResearch" as
+OR REPLACE VIEW erddap."HakaiWeatherStationsResearch" as
 SELECT
     station,
     latitude,
