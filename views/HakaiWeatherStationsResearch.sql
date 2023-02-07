@@ -154,7 +154,7 @@ SELECT
         else snow_depth_tc
     END as snow_depth_tc
 FROM
-    erddap."HakaiWatershedsWeatherStations"
+    erddap."HakaiWeatherStations"
 WHERE
     wind_spd_ql >= 2
     or wind_dir_ql >= 2
