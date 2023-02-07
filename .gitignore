@@ -6,3 +6,4 @@ datasets.xml
 *.ignore
 .ignore_historical
 .DS_Store
+datasets_local/**
