@@ -592,7 +592,7 @@
         <addAttributes>
             <att name="ioos_category">Meteorology</att>
             <att name="long_name">One Hour Rain</att>
-            <att name="cell_methods">time: sum (interval: 5.0 minutes)</att>
+            <att name="cell_methods">time: sum (interval: 1 hour)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -645,6 +645,7 @@
             <att name="long_name">Snow Depth</att>
             <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
             <att name="units">m</att>
+            <att name="standard_name">thickness_of_snowfall_amount</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -695,8 +696,9 @@
         <addAttributes>
             <att name="ioos_category">Ice Distribution</att>
             <att name="long_name">Snow Depth Tc</att>
-            <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+            <att name="cell_methods">time: sum (interval: 1 year)</att>
             <att name="units">m</att>
+            <att name="standard_name">thickness_of_snowfall_amount</att>
         </addAttributes>
     </dataVariable>
 </dataset>
