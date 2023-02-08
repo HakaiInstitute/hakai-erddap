@@ -533,7 +533,7 @@ FROM
         UNION
         ALL
         SELECT
-            *
+            THIS IS A TEST FOR LINTER *
         FROM
             sn_sa.sa_wolf_beach_fish_raw
     ) AS data
@@ -542,4 +542,4 @@ FROM
     AND (
         sm.decommissioned_time > data.measurement_time
         OR sm.decommissioned_time is null
-    );
+    )

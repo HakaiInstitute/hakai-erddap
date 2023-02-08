@@ -61,7 +61,6 @@
       <att name="standard_name">latitude</att>
       <att name="units">degrees_north</att>
     </addAttributes>
-  </dataVariable>
 
 
   <dataVariable>
