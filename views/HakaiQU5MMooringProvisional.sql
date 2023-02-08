@@ -14,6 +14,7 @@ OR REPLACE VIEW erddap."HakaiQU5MMooringProvisional" AS (
         FROM
             sn.qu5_mooring_air_5minute
     )
+
     SELECT
         water.water_temp_ql AS watertemp_ql,
         water.water_temp_qc AS watertemp_qc,

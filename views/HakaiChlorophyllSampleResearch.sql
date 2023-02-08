@@ -76,7 +76,7 @@ FROM
                 SELECT
                     *,
                     (
-                        COALESCE(pressure_transducer_depth, line_out_depth)
+                        coalesce(pressure_transducer_depth, line_out_depth)
                     ) AS depth,
                     -- phaeo
                     (
