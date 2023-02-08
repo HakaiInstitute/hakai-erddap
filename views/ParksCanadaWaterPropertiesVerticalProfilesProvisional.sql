@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS erddap."ParksCanadaWaterPropertiesVerticalProfilesProvisional";
 
-CREATE TABLE erddap."ParksCanadaWaterPropertiesVerticalProfilesProvisional" as
+CREATE TABLE erddap."ParksCanadaWaterPropertiesVerticalProfilesProvisional" AS
 SELECT
     *
 FROM

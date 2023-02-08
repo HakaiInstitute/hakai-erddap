@@ -1,5 +1,7 @@
-CREATE OR REPLACE VIEW erddap."HakaiQuadraWeather5min" AS
-SELECT "measurementTime",
+CREATE
+OR REPLACE VIEW erddap."HakaiQuadraWeather5min" AS
+SELECT
+    "measurementTime",
     "Quadra:WindSpd_QL",
     "Quadra:WindSpd_QC",
     "Quadra:WindSpd_UQL",
@@ -66,6 +68,9 @@ SELECT "measurementTime",
     "Quadra:EnclosureTemp_Avg",
     "Quadra:PanelTemp_Avg",
     "Quadra:BattVolt_Avg"
-FROM sn."Quadra:5minuteSamples"
-WHERE "measurementTime" > (now() - '60 days'::interval)
-ORDER BY "measurementTime" DESC;
+FROM
+    sn."Quadra:5minuteSamples"
+WHERE
+    "measurementTime" > (NOW() - '60 days' :: INTERVAL)
+ORDER BY
+    "measurementTime" DESC;

@@ -1,5 +1,7 @@
-CREATE OR REPLACE VIEW erddap."HakaiKCBuoy1hour" AS
-SELECT "measurementTime",
+CREATE
+OR REPLACE VIEW erddap."HakaiKCBuoy1hour" AS
+SELECT
+    "measurementTime",
     "KCBuoy:WindSpd_QL",
     "KCBuoy:WindSpd_QC",
     "KCBuoy:WindSpd_UQL",
@@ -146,6 +148,9 @@ SELECT "measurementTime",
     "KCSeaology:equilPumpOffRH",
     "KCSeaology:airPumpOffO2",
     "KCSeaology:airPumpOffRH"
-FROM sn."KCBuoyCombined:1hourSamples"
-WHERE "KCBuoyCombined:1hourSamples"."measurementTime" > (now() - '60 days'::interval)
-ORDER BY "KCBuoyCombined:1hourSamples"."measurementTime" DESC;
+FROM
+    sn."KCBuoyCombined:1hourSamples"
+WHERE
+    "KCBuoyCombined:1hourSamples"."measurementTime" > (NOW() - '60 days' :: INTERVAL)
+ORDER BY
+    "KCBuoyCombined:1hourSamples"."measurementTime" DESC;

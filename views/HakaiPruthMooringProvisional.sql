@@ -3,7 +3,7 @@ OR REPLACE VIEW erddap."HakaiPruthMooringProvisional" AS (
 	SELECT
 		depth,
 		measurement_time AS "measurementTime",
-		water_temp_ql as watertemp_ql,
+		water_temp_ql AS watertemp_ql,
 		water_temp_qc AS watertemp_qc,
 		water_temp_uql AS watertemp_uql,
 		water_temp_med AS watertemp_med,

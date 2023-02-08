@@ -1,5 +1,7 @@
-CREATE OR REPLACE VIEW erddap."HakaiKetchikanBoL5min" AS
-SELECT "measurementTime",
+CREATE
+OR REPLACE VIEW erddap."HakaiKetchikanBoL5min" AS
+SELECT
+    "measurementTime",
     "KetchikanBoL:pCO2_uatm_QL",
     "KetchikanBoL:pCO2_uatm_QC",
     "KetchikanBoL:pCO2_uatm_UQL",
@@ -56,6 +58,9 @@ SELECT "measurementTime",
     "KetchikanBoL:calcpH_Min",
     "KetchikanBoL:calcpH_Max",
     "KetchikanBoL:calcpH_Std"
-FROM sn."KetchikanBoL:5minuteSamples"
-WHERE "measurementTime" > (now() - '60 days'::interval)
-ORDER BY "measurementTime" DESC;
+FROM
+    sn."KetchikanBoL:5minuteSamples"
+WHERE
+    "measurementTime" > (NOW() - '60 days' :: INTERVAL)
+ORDER BY
+    "measurementTime" DESC;

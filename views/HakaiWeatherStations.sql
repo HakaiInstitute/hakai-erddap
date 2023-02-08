@@ -1,10 +1,10 @@
 CREATE
 OR REPLACE VIEW erddap."HakaiWeatherStations" AS
 SELECT
-    'WSN693_703' as station,
-    51.61058333 as latitude,
-    -127.9870833 as longitude,
-    449 as elevation,
+    'WSN693_703' AS station,
+    51.61058333 AS latitude,
+    -127.9870833 AS longitude,
+    449 AS elevation,
     measurement_time,
     record,
     wind_spd_ql,
@@ -56,10 +56,10 @@ FROM
 UNION
 ALL
 SELECT
-    'WSN626' as station,
-    51.62624 as latitude,
-    -128.10178 as longitude,
-    78 as elevation,
+    'WSN626' AS station,
+    51.62624 AS latitude,
+    -128.10178 AS longitude,
+    78 AS elevation,
     measurement_time,
     record,
     wind_spd_ql,
@@ -98,23 +98,23 @@ SELECT
     one_hour_rain_qc,
     one_hour_rain_uql,
     one_hour_rain,
-    null as snow_depth_ql,
-    null as snow_depth_qc,
-    null as snow_depth_uql,
-    null as snow_depth,
-    null as snow_depth_tc_ql,
-    null as snow_depth_tc_qc,
-    null as snow_depth_tc_uql,
-    null as snow_depth_tc
+    NULL AS snow_depth_ql,
+    NULL AS snow_depth_qc,
+    NULL AS snow_depth_uql,
+    NULL AS snow_depth,
+    NULL AS snow_depth_tc_ql,
+    NULL AS snow_depth_tc_qc,
+    NULL AS snow_depth_tc_uql,
+    NULL AS snow_depth_tc
 FROM
     sn.wsn626_5minute wsn626
-union
+UNION
 ALL
 SELECT
-    'SSN693PWR' as station,
-    51.64416667 as latitude,
-    -127.997778 as longitude,
-    51 as elevation,
+    'SSN693PWR' AS station,
+    51.64416667 AS latitude,
+    -127.997778 AS longitude,
+    51 AS elevation,
     measurement_time,
     record,
     wind_spd_ql,
@@ -153,35 +153,35 @@ SELECT
     one_hour_rain_qc,
     one_hour_rain_uql,
     one_hour_rain,
-    null as snow_depth_ql,
-    null as snow_depth_qc,
-    null as snow_depth_uql,
-    null as snow_depth,
-    null as snow_depth_tc_ql,
-    null as snow_depth_tc_qc,
-    null as snow_depth_tc_uql,
-    null as snow_depth_tc
+    NULL AS snow_depth_ql,
+    NULL AS snow_depth_qc,
+    NULL AS snow_depth_uql,
+    NULL AS snow_depth,
+    NULL AS snow_depth_tc_ql,
+    NULL AS snow_depth_tc_qc,
+    NULL AS snow_depth_tc_uql,
+    NULL AS snow_depth_tc
 FROM
     sn.ssn693pwr_5minute ssn693pwr
 UNION
 ALL
 SELECT
-    'WSN703' as station,
-    51.64333333 as latitude,
-    -128.0227778 as longitude,
-    42 as elevation,
+    'WSN703' AS station,
+    51.64333333 AS latitude,
+    -128.0227778 AS longitude,
+    42 AS elevation,
     measurement_time,
     record,
-    null as wind_spd_ql,
-    null as wind_spd_qc,
-    null as wind_spd_uql,
-    null as wind_spd_avg,
-    null as wind_spd_std,
-    null as wind_dir_ql,
-    null as wind_dir_qc,
-    null as wind_dir_uql,
-    null as wind_dir_avg,
-    null as wind_dir_std,
+    NULL AS wind_spd_ql,
+    NULL AS wind_spd_qc,
+    NULL AS wind_spd_uql,
+    NULL AS wind_spd_avg,
+    NULL AS wind_spd_std,
+    NULL AS wind_dir_ql,
+    NULL AS wind_dir_qc,
+    NULL AS wind_dir_uql,
+    NULL AS wind_dir_avg,
+    NULL AS wind_dir_std,
     rh_ql,
     rh_qc,
     rh_uql,
@@ -208,23 +208,23 @@ SELECT
     one_hour_rain_qc,
     one_hour_rain_uql,
     one_hour_rain,
-    null as snow_depth_ql,
-    null as snow_depth_qc,
-    null as snow_depth_uql,
-    null as snow_depth,
-    null as snow_depth_tc_ql,
-    null as snow_depth_tc_qc,
-    null as snow_depth_tc_uql,
-    null as snow_depth_tc
+    NULL AS snow_depth_ql,
+    NULL AS snow_depth_qc,
+    NULL AS snow_depth_uql,
+    NULL AS snow_depth,
+    NULL AS snow_depth_tc_ql,
+    NULL AS snow_depth_tc_qc,
+    NULL AS snow_depth_tc_uql,
+    NULL AS snow_depth_tc
 FROM
     sn.wsn703_5minute wsn703us
 UNION
 ALL
 SELECT
-    'WSN703_708' as station,
-    51.62218889 as latitude,
-    -128.05065 as longitude,
-    289 as elevation,
+    'WSN703_708' AS station,
+    51.62218889 AS latitude,
+    -128.05065 AS longitude,
+    289 AS elevation,
     measurement_time,
     record,
     wind_spd_ql,
@@ -276,22 +276,22 @@ FROM
 UNION
 ALL
 SELECT
-    'SSN708US' as station,
-    51.648561 as latitude,
-    -128.06835 as longitude,
-    12 as elevation,
+    'SSN708US' AS station,
+    51.648561 AS latitude,
+    -128.06835 AS longitude,
+    12 AS elevation,
     measurement_time,
     record,
-    null as wind_spd_ql,
-    null as wind_spd_qc,
-    null as wind_spd_uql,
-    null as wind_spd_avg,
-    null as wind_spd_std,
-    null as wind_dir_ql,
-    null as wind_dir_qc,
-    null as wind_dir_uql,
-    null as wind_dir_avg,
-    null as wind_dir_std,
+    NULL AS wind_spd_ql,
+    NULL AS wind_spd_qc,
+    NULL AS wind_spd_uql,
+    NULL AS wind_spd_avg,
+    NULL AS wind_spd_std,
+    NULL AS wind_dir_ql,
+    NULL AS wind_dir_qc,
+    NULL AS wind_dir_uql,
+    NULL AS wind_dir_avg,
+    NULL AS wind_dir_std,
     rh_ql,
     rh_qc,
     rh_uql,
@@ -318,35 +318,35 @@ SELECT
     one_hour_rain_qc,
     one_hour_rain_uql,
     one_hour_rain,
-    null as snow_depth_ql,
-    null as snow_depth_qc,
-    null as snow_depth_uql,
-    null as snow_depth,
-    null as snow_depth_tc_ql,
-    null as snow_depth_tc_qc,
-    null as snow_depth_tc_uql,
-    null as snow_depth_tc
+    NULL AS snow_depth_ql,
+    NULL AS snow_depth_qc,
+    NULL AS snow_depth_uql,
+    NULL AS snow_depth,
+    NULL AS snow_depth_tc_ql,
+    NULL AS snow_depth_tc_qc,
+    NULL AS snow_depth_tc_uql,
+    NULL AS snow_depth_tc
 FROM
     sn.ssn708_5minute ssn708
-union
+UNION
 ALL
 SELECT
-    'SSN819PWR' as station,
-    51.66194444 as latitude,
-    -128.0419444 as longitude,
-    79 as elevation,
+    'SSN819PWR' AS station,
+    51.66194444 AS latitude,
+    -128.0419444 AS longitude,
+    79 AS elevation,
     measurement_time,
     record,
-    null as wind_spd_ql,
-    null as wind_spd_qc,
-    null as wind_spd_uql,
-    null as wind_spd_avg,
-    null as wind_spd_std,
-    null as wind_dir_ql,
-    null as wind_dir_qc,
-    null as wind_dir_uql,
-    null as wind_dir_avg,
-    null as wind_dir_std,
+    NULL AS wind_spd_ql,
+    NULL AS wind_spd_qc,
+    NULL AS wind_spd_uql,
+    NULL AS wind_spd_avg,
+    NULL AS wind_spd_std,
+    NULL AS wind_dir_ql,
+    NULL AS wind_dir_qc,
+    NULL AS wind_dir_uql,
+    NULL AS wind_dir_avg,
+    NULL AS wind_dir_std,
     rh_ql,
     rh_qc,
     rh_uql,
@@ -373,23 +373,23 @@ SELECT
     one_hour_rain_qc,
     one_hour_rain_uql,
     one_hour_rain,
-    null as snow_depth_ql,
-    null as snow_depth_qc,
-    null as snow_depth_uql,
-    null as snow_depth,
-    null as snow_depth_tc_ql,
-    null as snow_depth_tc_qc,
-    null as snow_depth_tc_uql,
-    null as snow_depth_tc
+    NULL AS snow_depth_ql,
+    NULL AS snow_depth_qc,
+    NULL AS snow_depth_uql,
+    NULL AS snow_depth,
+    NULL AS snow_depth_tc_ql,
+    NULL AS snow_depth_tc_qc,
+    NULL AS snow_depth_tc_uql,
+    NULL AS snow_depth_tc
 FROM
     sn.ssn819pwr_5minute ssn819pwr
-union
-all
+UNION
+ALL
 SELECT
-    'WSN819_1015' as station,
-    51.68265278 as latitude,
-    -128.043325 as longitude,
-    331 as elevation,
+    'WSN819_1015' AS station,
+    51.68265278 AS latitude,
+    -128.043325 AS longitude,
+    331 AS elevation,
     measurement_time,
     record,
     wind_spd_ql,
@@ -438,25 +438,25 @@ SELECT
     snow_depth_tc
 FROM
     sn.wsn819_1015_5minute wsn819_1015
-union
+UNION
 ALL
 SELECT
-    'WSN844' as station,
-    51.6613889 as latitude,
-    -127.9975 as longitude,
-    90 as elevation,
+    'WSN844' AS station,
+    51.6613889 AS latitude,
+    -127.9975 AS longitude,
+    90 AS elevation,
     measurement_time,
     record,
-    null as wind_spd_ql,
-    null as wind_spd_qc,
-    null as wind_spd_uql,
-    null as wind_spd_avg,
-    null as wind_spd_std,
-    null as wind_dir_ql,
-    null as wind_dir_qc,
-    null as wind_dir_uql,
-    null as wind_dir_avg,
-    null as wind_dir_std,
+    NULL AS wind_spd_ql,
+    NULL AS wind_spd_qc,
+    NULL AS wind_spd_uql,
+    NULL AS wind_spd_avg,
+    NULL AS wind_spd_std,
+    NULL AS wind_dir_ql,
+    NULL AS wind_dir_qc,
+    NULL AS wind_dir_uql,
+    NULL AS wind_dir_avg,
+    NULL AS wind_dir_std,
     rh_ql,
     rh_qc,
     rh_uql,
@@ -483,35 +483,35 @@ SELECT
     one_hour_rain_qc,
     one_hour_rain_uql,
     one_hour_rain,
-    null as snow_depth_ql,
-    null as snow_depth_qc,
-    null as snow_depth_uql,
-    null as snow_depth,
-    null as snow_depth_tc_ql,
-    null as snow_depth_tc_qc,
-    null as snow_depth_tc_uql,
-    null as snow_depth_tc
+    NULL AS snow_depth_ql,
+    NULL AS snow_depth_qc,
+    NULL AS snow_depth_uql,
+    NULL AS snow_depth,
+    NULL AS snow_depth_tc_ql,
+    NULL AS snow_depth_tc_qc,
+    NULL AS snow_depth_tc_uql,
+    NULL AS snow_depth_tc
 FROM
     sn.wsn844_5minute wsn844
-union
+UNION
 ALL
 SELECT
-    'SSN1015US' as station,
-    51.69055556 as latitude,
-    -128.0652778 as longitude,
-    17 as elevation,
+    'SSN1015US' AS station,
+    51.69055556 AS latitude,
+    -128.0652778 AS longitude,
+    17 AS elevation,
     measurement_time,
     record,
-    null as wind_spd_ql,
-    null as wind_spd_qc,
-    null as wind_spd_uql,
-    null as wind_spd_avg,
-    null as wind_spd_std,
-    null as wind_dir_ql,
-    null as wind_dir_qc,
-    null as wind_dir_uql,
-    null as wind_dir_avg,
-    null as wind_dir_std,
+    NULL AS wind_spd_ql,
+    NULL AS wind_spd_qc,
+    NULL AS wind_spd_uql,
+    NULL AS wind_spd_avg,
+    NULL AS wind_spd_std,
+    NULL AS wind_dir_ql,
+    NULL AS wind_dir_qc,
+    NULL AS wind_dir_uql,
+    NULL AS wind_dir_avg,
+    NULL AS wind_dir_std,
     rh_ql,
     rh_qc,
     rh_uql,
@@ -538,23 +538,23 @@ SELECT
     one_hour_rain_qc,
     one_hour_rain_uql,
     one_hour_rain,
-    null as snow_depth_ql,
-    null as snow_depth_qc,
-    null as snow_depth_uql,
-    null as snow_depth,
-    null as snow_depth_tc_ql,
-    null as snow_depth_tc_qc,
-    null as snow_depth_tc_uql,
-    null as snow_depth_tc
+    NULL AS snow_depth_ql,
+    NULL AS snow_depth_qc,
+    NULL AS snow_depth_uql,
+    NULL AS snow_depth,
+    NULL AS snow_depth_tc_ql,
+    NULL AS snow_depth_tc_qc,
+    NULL AS snow_depth_tc_uql,
+    NULL AS snow_depth_tc
 FROM
     sn.ssn1015us_5minute ssn1015us
-union
-all
+UNION
+ALL
 SELECT
-    'hecate' as station,
-    51.682567 as latitude,
-    -128.022783 as longitude,
-    477 as elevation,
+    'hecate' AS station,
+    51.682567 AS latitude,
+    -128.022783 AS longitude,
+    477 AS elevation,
     measurement_time,
     record,
     wind_spd_ql,
@@ -603,13 +603,13 @@ SELECT
     snow_depth_tc
 FROM
     sn.hecate_5minute hecate
-union
-all
+UNION
+ALL
 SELECT
-    'buxton_east' as station,
-    51.589936 as latitude,
-    -127.975236 as longitude,
-    740 as elevation,
+    'buxton_east' AS station,
+    51.589936 AS latitude,
+    -127.975236 AS longitude,
+    740 AS elevation,
     measurement_time,
     record,
     wind_spd_ql,
@@ -658,13 +658,13 @@ SELECT
     snow_depth_tc
 FROM
     sn.buxton_east_5minute buxton_east
-union
+UNION
 ALL
 SELECT
-    'buxton' as station,
-    51.60491 as latitude,
-    -128.017822 as longitude,
-    672 as elevation,
+    'buxton' AS station,
+    51.60491 AS latitude,
+    -128.017822 AS longitude,
+    672 AS elevation,
     measurement_time,
     record,
     wind_spd_ql,
@@ -695,31 +695,31 @@ SELECT
     air_temp2,
     air_temp2_avg,
     air_temp2_std,
-    null as rain_ql,
-    null as rain_qc,
-    null as rain_uql,
-    null as rain,
-    null as one_hour_rain_ql,
-    null as one_hour_rain_qc,
-    null as one_hour_rain_uql,
-    null as one_hour_rain,
-    null as snow_depth_ql,
-    null as snow_depth_qc,
-    null as snow_depth_uql,
-    null as snow_depth,
-    null as snow_depth_tc_ql,
-    null as snow_depth_tc_qc,
-    null as snow_depth_tc_uql,
-    null as snow_depth_tc
+    NULL AS rain_ql,
+    NULL AS rain_qc,
+    NULL AS rain_uql,
+    NULL AS rain,
+    NULL AS one_hour_rain_ql,
+    NULL AS one_hour_rain_qc,
+    NULL AS one_hour_rain_uql,
+    NULL AS one_hour_rain,
+    NULL AS snow_depth_ql,
+    NULL AS snow_depth_qc,
+    NULL AS snow_depth_uql,
+    NULL AS snow_depth,
+    NULL AS snow_depth_tc_ql,
+    NULL AS snow_depth_tc_qc,
+    NULL AS snow_depth_tc_uql,
+    NULL AS snow_depth_tc
 FROM
     sn.buxton_5minute buxton
-union
+UNION
 ALL
 SELECT
-    'ref_stn' as station,
-    51.65195 as latitude,
-    -128.1287 as longitude,
-    43 as elevation,
+    'ref_stn' AS station,
+    51.65195 AS latitude,
+    -128.1287 AS longitude,
+    43 AS elevation,
     measurement_time,
     record,
     wind_spd_ql,
@@ -768,13 +768,13 @@ SELECT
     snow_depth_tc
 FROM
     sn.ref_stn_5minute ref_stn
-union
-all
+UNION
+ALL
 SELECT
-    'lookout' as station,
-    51.6475 as latitude,
-    -128.143183 as longitude,
-    63 as elevation,
+    'lookout' AS station,
+    51.6475 AS latitude,
+    -128.143183 AS longitude,
+    63 AS elevation,
     measurement_time,
     record,
     wind_spd_ql,
@@ -809,27 +809,27 @@ SELECT
     rain_qc,
     rain_uql,
     rain,
-    null as one_hour_rain_ql,
-    null as one_hour_rain_qc,
-    null as one_hour_rain_uql,
-    null as one_hour_rain,
-    null as snow_depth_ql,
-    null as snow_depth_qc,
-    null as snow_depth_uql,
-    null as snow_depth,
-    null as snow_depth_tc_ql,
-    null as snow_depth_tc_qc,
-    null as snow_depth_tc_uql,
-    null as snow_depth_tc
+    NULL AS one_hour_rain_ql,
+    NULL AS one_hour_rain_qc,
+    NULL AS one_hour_rain_uql,
+    NULL AS one_hour_rain,
+    NULL AS snow_depth_ql,
+    NULL AS snow_depth_qc,
+    NULL AS snow_depth_uql,
+    NULL AS snow_depth,
+    NULL AS snow_depth_tc_ql,
+    NULL AS snow_depth_tc_qc,
+    NULL AS snow_depth_tc_uql,
+    NULL AS snow_depth_tc
 FROM
     sn.lookout_5minute lookout
-union
+UNION
 ALL
 SELECT
-    'ethel' as station,
-    51.548443 as latitude,
-    -127.531748 as longitude,
-    3 as elevation,
+    'ethel' AS station,
+    51.548443 AS latitude,
+    -127.531748 AS longitude,
+    3 AS elevation,
     measurement_time,
     record,
     wind_spd_ql,
@@ -868,23 +868,23 @@ SELECT
     one_hour_rain_qc,
     one_hour_rain_uql,
     one_hour_rain,
-    null as snow_depth_ql,
-    null as snow_depth_qc,
-    null as snow_depth_uql,
-    null as snow_depth,
-    null as snow_depth_tc_ql,
-    null as snow_depth_tc_qc,
-    null as snow_depth_tc_uql,
-    null as snow_depth_tc
+    NULL AS snow_depth_ql,
+    NULL AS snow_depth_qc,
+    NULL AS snow_depth_uql,
+    NULL AS snow_depth,
+    NULL AS snow_depth_tc_ql,
+    NULL AS snow_depth_tc_qc,
+    NULL AS snow_depth_tc_uql,
+    NULL AS snow_depth_tc
 FROM
     sn.ethel_5minute ethel
-union
+UNION
 ALL
 SELECT
-    'quadra' as station,
-    50.1162556 as latitude,
-    -125.2221111 as longitude,
-    11 as elevation,
+    'quadra' AS station,
+    50.1162556 AS latitude,
+    -125.2221111 AS longitude,
+    11 AS elevation,
     measurement_time,
     record,
     wind_spd_ql,
@@ -923,13 +923,13 @@ SELECT
     one_hour_rain_qc,
     one_hour_rain_uql,
     one_hour_rain,
-    null as snow_depth_ql,
-    null as snow_depth_qc,
-    null as snow_depth_uql,
-    null as snow_depth,
-    null as snow_depth_tc_ql,
-    null as snow_depth_tc_qc,
-    null as snow_depth_tc_uql,
-    null as snow_depth_tc
+    NULL AS snow_depth_ql,
+    NULL AS snow_depth_qc,
+    NULL AS snow_depth_uql,
+    NULL AS snow_depth,
+    NULL AS snow_depth_tc_ql,
+    NULL AS snow_depth_tc_qc,
+    NULL AS snow_depth_tc_uql,
+    NULL AS snow_depth_tc
 FROM
     sn.quadra_5minute quadra;

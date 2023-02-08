@@ -1,10 +1,10 @@
 CREATE
 OR REPLACE VIEW erddap."HakaiWatershedsStreamStations" AS
 SELECT
-    'SSN626US' as station,
-    51.64081 as latitude,
-    -128.12065 as longitude,
-    8 as elevation,
+    'SSN626US' AS station,
+    51.64081 AS latitude,
+    -128.12065 AS longitude,
+    8 AS elevation,
     measurement_time,
     record,
     pls_lvl_ql,
@@ -50,10 +50,10 @@ FROM
 UNION
 ALL
 SELECT
-    'SSN693US' as station,
-    51.645 as latitude,
-    -127.9977778 as longitude,
-    51 as elevation,
+    'SSN693US' AS station,
+    51.645 AS latitude,
+    -127.9977778 AS longitude,
+    51 AS elevation,
     measurement_time,
     record,
     pls_lvl_ql,
@@ -84,25 +84,25 @@ SELECT
     discharge_volume,
     discharge_volume_min,
     discharge_volume_max,
-    null as turbidity_ql,
-    null as turbidity_qc,
-    null as turbidity_uql,
-    null as turbidity_med,
-    null as turbidity_avg,
-    null as turbidity_ntu_ql,
-    null as turbidity_ntu_qc,
-    null as turbidity_ntu_uql,
-    null as turbidity_ntu_med,
-    null as turbidity_ntu_avg
+    NULL AS turbidity_ql,
+    NULL AS turbidity_qc,
+    NULL AS turbidity_uql,
+    NULL AS turbidity_med,
+    NULL AS turbidity_avg,
+    NULL AS turbidity_ntu_ql,
+    NULL AS turbidity_ntu_qc,
+    NULL AS turbidity_ntu_uql,
+    NULL AS turbidity_ntu_med,
+    NULL AS turbidity_ntu_avg
 FROM
     sn.ssn693us_5minute ssn693us
 UNION
 ALL
 SELECT
-    'SSN693US' as station,
-    51.645 as latitude,
-    -127.9977778 as longitude,
-    51 as elevation,
+    'SSN693US' AS station,
+    51.645 AS latitude,
+    -127.9977778 AS longitude,
+    51 AS elevation,
     measurement_time,
     record,
     pls_lvl_ql,
@@ -133,25 +133,25 @@ SELECT
     discharge_volume,
     discharge_volume_min,
     discharge_volume_max,
-    null as turbidity_ql,
-    null as turbidity_qc,
-    null as turbidity_uql,
-    null as turbidity_med,
-    null as turbidity_avg,
-    null as turbidity_ntu_ql,
-    null as turbidity_ntu_qc,
-    null as turbidity_ntu_uql,
-    null as turbidity_ntu_med,
-    null as turbidity_ntu_avg
+    NULL AS turbidity_ql,
+    NULL AS turbidity_qc,
+    NULL AS turbidity_uql,
+    NULL AS turbidity_med,
+    NULL AS turbidity_avg,
+    NULL AS turbidity_ntu_ql,
+    NULL AS turbidity_ntu_qc,
+    NULL AS turbidity_ntu_uql,
+    NULL AS turbidity_ntu_med,
+    NULL AS turbidity_ntu_avg
 FROM
     sn.ssn693us_5minute ssn693us
 UNION
 ALL
 SELECT
-    'SSN703US' as station,
-    51.64333333 as latitude,
-    -128.0227778 as longitude,
-    42 as elevation,
+    'SSN703US' AS station,
+    51.64333333 AS latitude,
+    -128.0227778 AS longitude,
+    42 AS elevation,
     measurement_time,
     record,
     pls_lvl_ql,
@@ -197,10 +197,10 @@ FROM
 UNION
 ALL
 SELECT
-    'SSN708US' as station,
-    51.648561 as latitude,
-    -128.06835 as longitude,
-    12 as elevation,
+    'SSN708US' AS station,
+    51.648561 AS latitude,
+    -128.06835 AS longitude,
+    12 AS elevation,
     measurement_time,
     record,
     pls_lvl_ql,
@@ -246,10 +246,10 @@ FROM
 UNION
 ALL
 SELECT
-    'SSN844US' as station,
-    51.66083333 as latitude,
-    -128.0025 as longitude,
-    35 as elevation,
+    'SSN844US' AS station,
+    51.66083333 AS latitude,
+    -128.0025 AS longitude,
+    35 AS elevation,
     measurement_time,
     record,
     pls_lvl_ql,
@@ -295,10 +295,10 @@ FROM
 UNION
 ALL
 SELECT
-    'SSN1015US' as station,
-    51.69055556 as latitude,
-    -128.0652778 as longitude,
-    17 as elevation,
+    'SSN1015US' AS station,
+    51.69055556 AS latitude,
+    -128.0652778 AS longitude,
+    17 AS elevation,
     measurement_time,
     record,
     pls_lvl_ql,

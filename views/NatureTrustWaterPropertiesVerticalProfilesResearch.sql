@@ -13,9 +13,9 @@ WHERE
     AND d.measurement_dt IS NOT NULL
     AND (
         d.direction_flag :: text = 'd' :: text
-        or (
+        OR (
             d.cast_type :: text = 'Static'
-            and d.direction_flag :: text = 's'
+            AND d.direction_flag :: text = 's'
         )
     )
     AND d.organization = 'NATURE TRUST'

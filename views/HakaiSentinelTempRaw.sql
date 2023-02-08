@@ -93,5 +93,5 @@ FROM
     AND sm.commissioned_time < data.measurement_time
     AND (
         sm.decommissioned_time > data.measurement_time
-        OR sm.decommissioned_time is null
+        OR sm.decommissioned_time IS NULL
     );

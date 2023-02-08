@@ -11,7 +11,7 @@ WHERE
     )
     AND d.status IS NULL
     AND d.measurement_dt IS NOT NULL
-    and d.depth is null
+    AND d.depth IS NULL
     AND d.direction_flag :: text = 'd' :: text
     AND d.organization = 'HAKAI'
     AND d.cruise NOT IN ('CEDAR COAST', 'HER')

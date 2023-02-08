@@ -1,5 +1,7 @@
-CREATE OR REPLACE VIEW erddap."HakaiPruthDockProvisional" AS
-SELECT "PruthDock:5minuteSamples"."measurementTime",
+CREATE
+OR REPLACE VIEW erddap."HakaiPruthDockProvisional" AS
+SELECT
+    "PruthDock:5minuteSamples"."measurementTime",
     "PruthDock:5minuteSamples"."PruthDock:WindSpd_QL",
     "PruthDock:5minuteSamples"."PruthDock:WindSpd_QC",
     "PruthDock:5minuteSamples"."PruthDock:WindSpd_UQL",
@@ -152,6 +154,9 @@ SELECT "PruthDock:5minuteSamples"."measurementTime",
     "PruthDock:5minuteSamples"."PruthDock:WestBeachVolt_Avg",
     "PruthDock:5minuteSamples"."PruthDock:WestBeachAmps_Avg",
     "PruthDock:5minuteSamples"."PruthDock:WestBeachPanelT_Avg"
-FROM sn."PruthDock:5minuteSamples"
-WHERE "PruthDock:5minuteSamples"."measurementTime" > (now() - '60 days'::interval)
-ORDER BY "PruthDock:5minuteSamples"."measurementTime" DESC;
+FROM
+    sn."PruthDock:5minuteSamples"
+WHERE
+    "PruthDock:5minuteSamples"."measurementTime" > (NOW() - '60 days' :: INTERVAL)
+ORDER BY
+    "PruthDock:5minuteSamples"."measurementTime" DESC;

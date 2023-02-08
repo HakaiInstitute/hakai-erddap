@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS erddap."HakaiWaterPropertiesInstrumentProfileProvisional";
 
-CREATE TABLE erddap."HakaiWaterPropertiesInstrumentProfileProvisional" as
+CREATE TABLE erddap."HakaiWaterPropertiesInstrumentProfileProvisional" AS
 SELECT
     *
 FROM

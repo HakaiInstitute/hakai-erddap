@@ -1,33 +1,33 @@
 DROP TABLE IF EXISTS erddap."HakaiChlorophyllSampleResearch";
 
 CREATE TABLE erddap."HakaiChlorophyllSampleResearch" AS
-select
+SELECT
     *,
     (
-        case
-            when subquery2.chla_3_20um is not null then subquery2.chla_gff
-            else null
-        end
+        CASE
+            WHEN subquery2.chla_3_20um IS NOT NULL THEN subquery2.chla_gff
+            ELSE NULL
+        END
     ) chla_gff_3um,
     (
-        case
-            when subquery2.chla_2_20um is not null then subquery2.chla_gff
-            else null
-        end
+        CASE
+            WHEN subquery2.chla_2_20um IS NOT NULL THEN subquery2.chla_gff
+            ELSE NULL
+        END
     ) chla_gff_2um,
     (
-        case
-            when subquery2.phaeo_3_20um is not null then subquery2.phaeo_gff
-            else null
-        end
+        CASE
+            WHEN subquery2.phaeo_3_20um IS NOT NULL THEN subquery2.phaeo_gff
+            ELSE NULL
+        END
     ) phaeo_gff_3um,
     (
-        case
-            when subquery2.phaeo_2_20um is not null then subquery2.phaeo_gff
-            else null
-        end
+        CASE
+            WHEN subquery2.phaeo_2_20um IS NOT NULL THEN subquery2.phaeo_gff
+            ELSE NULL
+        END
     ) phaeo_gff_2um
-from
+FROM
     (
         SELECT
             "work_area",
@@ -38,26 +38,26 @@ from
             "long",
             "gather_lat",
             "gather_long",
-            (array_remove(array_agg(depth), Null)) [1] :: NUMERIC depth,
+            (array_remove(array_agg(depth), NULL)) [1] :: NUMERIC depth,
             "line_out_depth",
             "pressure_transducer_depth",
             "collected",
             -- phaeo
             -- There are a few cases where records have multiple nil
-            (array_remove(array_agg(phaeo_20um), Null)) [1] :: NUMERIC phaeo_20um,
-            (array_remove(array_agg(phaeo_3_20um), Null)) [1] :: NUMERIC phaeo_3_20um,
-            (array_remove(array_agg(phaeo_2_20um), Null)) [1] :: NUMERIC phaeo_2_20um,
-            (array_remove(array_agg(phaeo_gff), Null)) [1] :: NUMERIC phaeo_gff,
-            (array_remove(array_agg(phaeo_bulk_gff), Null)) [1] :: NUMERIC phaeo_bulk_gff,
+            (array_remove(array_agg(phaeo_20um), NULL)) [1] :: NUMERIC phaeo_20um,
+            (array_remove(array_agg(phaeo_3_20um), NULL)) [1] :: NUMERIC phaeo_3_20um,
+            (array_remove(array_agg(phaeo_2_20um), NULL)) [1] :: NUMERIC phaeo_2_20um,
+            (array_remove(array_agg(phaeo_gff), NULL)) [1] :: NUMERIC phaeo_gff,
+            (array_remove(array_agg(phaeo_bulk_gff), NULL)) [1] :: NUMERIC phaeo_bulk_gff,
             -- chla
-            (array_remove(array_agg(chla_20um), Null)) [1] :: NUMERIC chla_20um,
-            (array_remove(array_agg(chla_3_20um), Null)) [1] :: NUMERIC chla_3_20um,
-            (array_remove(array_agg(chla_2_20um), Null)) [1] :: NUMERIC chla_2_20um,
-            (array_remove(array_agg(chla_gff), Null)) [1] :: NUMERIC chla_gff,
-            (array_remove(array_agg(chla_bulk_gff), Null)) [1] :: NUMERIC chla_bulk_gff
+            (array_remove(array_agg(chla_20um), NULL)) [1] :: NUMERIC chla_20um,
+            (array_remove(array_agg(chla_3_20um), NULL)) [1] :: NUMERIC chla_3_20um,
+            (array_remove(array_agg(chla_2_20um), NULL)) [1] :: NUMERIC chla_2_20um,
+            (array_remove(array_agg(chla_gff), NULL)) [1] :: NUMERIC chla_gff,
+            (array_remove(array_agg(chla_bulk_gff), NULL)) [1] :: NUMERIC chla_bulk_gff
         FROM
             (
-                select
+                SELECT
                     *,
                     (
                         CASE
@@ -121,11 +121,11 @@ from
                     eims.output_chlorophyll
                 WHERE
                     collected > '2018-05-04'
-                    AND quality_level in ('Principal Investigator', 'Technicianmr')
-                    and (
-                        chla_flag in ('AV')
-                        AND phaeo_flag in ('AV')
-                        AND site_id in (
+                    AND quality_level IN ('Principal Investigator', 'Technicianmr')
+                    AND (
+                        chla_flag IN ('AV')
+                        AND phaeo_flag IN ('AV')
+                        AND site_id IN (
                             'BU4',
                             'DFO2',
                             'DFO5',
@@ -144,7 +144,7 @@ from
                         )
                     )
             ) subquery
-        group by
+        GROUP BY
             (
                 "work_area",
                 "organization",
@@ -158,4 +158,4 @@ from
                 "pressure_transducer_depth",
                 "collected"
             )
-    ) as subquery2;
+    ) AS subquery2;

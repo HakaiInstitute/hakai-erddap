@@ -1,5 +1,7 @@
-CREATE OR REPLACE VIEW erddap."HakaiSewardBoL5min" AS
-SELECT "measurementTime",
+CREATE
+OR REPLACE VIEW erddap."HakaiSewardBoL5min" AS
+SELECT
+    "measurementTime",
     "SewardBoL:pCO2_uatm_QL",
     "SewardBoL:pCO2_uatm_QC",
     "SewardBoL:pCO2_uatm_UQL",
@@ -56,6 +58,9 @@ SELECT "measurementTime",
     "SewardBoL:calcpH_Min",
     "SewardBoL:calcpH_Max",
     "SewardBoL:calcpH_Std"
-FROM sn."SewardBoL:5minuteSamples"
-WHERE "measurementTime" > (now() - '60 days'::interval)
-ORDER BY "measurementTime" DESC;
+FROM
+    sn."SewardBoL:5minuteSamples"
+WHERE
+    "measurementTime" > (NOW() - '60 days' :: INTERVAL)
+ORDER BY
+    "measurementTime" DESC;
