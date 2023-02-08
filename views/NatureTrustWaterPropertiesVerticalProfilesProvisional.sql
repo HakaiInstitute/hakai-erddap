@@ -12,7 +12,13 @@ WHERE
     )
     AND d.status IS NULL
     AND d.measurement_dt IS NOT NULL
-    AND d.direction_flag :: text = 'd' :: text
+    AND (
+        d.direction_flag :: text = 'd' :: text
+        or (
+            d.cast_type :: text = 'Static'
+            and d.direction_flag :: text = 's'
+        )
+    )
     AND d.organization = 'NATURE TRUST'
 ORDER BY
     d.work_area,

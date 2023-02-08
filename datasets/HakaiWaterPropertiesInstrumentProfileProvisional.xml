@@ -941,7 +941,7 @@
     <dataVariable>
         <sourceName>ph</sourceName>
         <destinationName>ph</destinationName>
-        <dataType>String</dataType>
+        <dataType>double</dataType>
         <!-- sourceAttributes>
             <att name="long_name">pH</att>
             <att name="units">-log[H+]</att>

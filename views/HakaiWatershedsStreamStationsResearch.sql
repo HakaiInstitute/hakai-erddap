@@ -172,4 +172,4 @@ WHERE
     or pls_temp_ql = 2
     or discharge_rate_ql = 2
     or discharge_volume_ql = 2
-    or turbidity_ql = 2
+    or turbidity_ql = 2;

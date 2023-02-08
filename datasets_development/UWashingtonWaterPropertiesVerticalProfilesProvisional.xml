@@ -17,7 +17,7 @@
         <att name="cdm_timeseries_variables">station,latitude,longitude</att>
         <att name="institution">University of Washington</att>
         <att name="title">University of Washington Clayoquot Water Properties Profiles Measured by Oceanographic Profilers, Provisional</att>
-        <att name="subsetVariables">cruise, vessel, device_model, device_sn, device_firmware, work_area, direction_flag, conductivity_UQL,  temperature_UQL, depth_UQL, pressure_UQL, flc_UQL, turbidity_UQL, salinity_UQL, dissolved_oxygen_ml_l_UQL, rinko_do_ml_l_UQL, c_star_at_UQL,hakai_id,station,ph_UQL,cdom_ppb_UQL,backscatter_beta_UQL</att>
+        <att name="subsetVariables">cruise, vessel, device_model, device_sn, device_firmware, work_area, direction_flag,hakai_id,station</att>
         <att name="cdm_data_type">TimeSeriesProfile</att>
         <att name="cdm_profile_variables">hakai_id</att>
         <att name="platform">self-propelled small boat</att>
@@ -623,59 +623,6 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>rinko_do_ml_l</sourceName>
-        <destinationName>rinko_do_ml_l</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-            <att name="_FillValue" type="double">NaN</att>
-            <att name="ancillary_variables">rinko_do_ml_l_UQL</att>
-            <att name="long_name">Secondary Dissolved Oxygen Concentration</att>
-            <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
-            <att name="units">mL/L</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="_FillValue" type="double">NaN</att>
-            <att name="ancillary_variables">rinko_do_ml_l_UQL</att>
-            <att name="long_name">Secondary Dissolved Oxygen Concentration</att>
-            <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
-            <att name="units">mL L-1</att>
-            <att name="colorBarMaximum" type="double">12.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>rinko_do_ml_l_flag_level_1</sourceName>
-        <destinationName>rinko_do_ml_l_UQL</destinationName>
-        <dataType>byte</dataType>
-        <!-- sourceAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Rinko_do_ml_l UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Rinko_do_ml_l UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-            <att name="colorBarMaximum" type="double">10.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="missing_value" type="byte">2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>rinko_do_ml_l_flag</sourceName>
-        <destinationName>rinko_do_ml_l_flag_description</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Rinko Do Ml L Flag Description</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>flc</sourceName>
         <destinationName>flc</destinationName>
         <dataType>double</dataType>
@@ -885,129 +832,6 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Beam Attenutation Flag Description</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>ph</sourceName>
-        <destinationName>ph</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-            <att name="long_name">pH</att>
-            <att name="units">-log[H+]</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">pH</att>
-            <att name="standard_name">sea_water_ph_reported_on_total_scale</att>
-            <att name="units">-log[H+]</att>
-        </addAttributes>
-    </dataVariable>
-
-    <dataVariable>
-        <sourceName>ph_flag_level_1</sourceName>
-        <destinationName>ph_UQL</destinationName>
-        <dataType>byte</dataType>
-        <!-- sourceAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">C_star_at UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">pH UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-            <att name="colorBarMaximum" type="double">10.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="missing_value" type="byte">2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>ph_flag</sourceName>
-        <destinationName>cph_flag_description</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">pH Flag Description</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>backscatter_beta</sourceName>
-        <destinationName>backscatter_beta</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Backscatter</att>
-            <att name="units">m-1</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>backscatter_beta_flag_level_1</sourceName>
-        <destinationName>backscatter_beta_UQL</destinationName>
-        <dataType>byte</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">Beam Attenuation UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-            <att name="colorBarMaximum" type="double">10.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="missing_value" type="byte">2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>backscatter_beta_flag</sourceName>
-        <destinationName>backscatter_beta_flag_description</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Beam Attenutation Flag Description</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>cdom_ppb</sourceName>
-        <destinationName>cdom_ppb</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Carbon Dissolved Organic Matter</att>
-            <att name="units">ppb</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>cdom_ppb_flag_level_1</sourceName>
-        <destinationName>cdom_ppb_UQL</destinationName>
-        <dataType>byte</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-            <att name="flag_values" type="byteList">1 2 3 4 9</att>
-            <att name="long_name">CDOM UNESCO Q Level</att>
-            <att name="missing_value" type="int">2</att>
-            <att name="standard_name">aggregate_quality_flag</att>
-            <att name="colorBarMaximum" type="double">10.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="missing_value" type="byte">2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>cdom_flag</sourceName>
-        <destinationName>cdom_description</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">CDOM Flag Description</att>
         </addAttributes>
     </dataVariable>
 </dataset>

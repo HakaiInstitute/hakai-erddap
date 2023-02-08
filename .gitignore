@@ -7,3 +7,5 @@ datasets.xml
 .ignore_historical
 .DS_Store
 datasets_local/**
+update-erddap.sh
+merge-datasets.sh
