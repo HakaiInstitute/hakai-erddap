@@ -46,7 +46,7 @@ SELECT
     turbidity_ntu_med,
     turbidity_ntu_avg
 FROM
-    sn.ssn626us_5minute ssn626us
+    sn.ssn626us_5minute
 UNION
 ALL
 SELECT
@@ -95,7 +95,7 @@ SELECT
     NULL AS turbidity_ntu_med,
     NULL AS turbidity_ntu_avg
 FROM
-    sn.ssn693us_5minute ssn693us
+    sn.ssn693us_5minute
 UNION
 ALL
 SELECT
@@ -144,7 +144,7 @@ SELECT
     NULL AS turbidity_ntu_med,
     NULL AS turbidity_ntu_avg
 FROM
-    sn.ssn693us_5minute ssn693us
+    sn.ssn693us_5minute
 UNION
 ALL
 SELECT
@@ -193,7 +193,7 @@ SELECT
     turbidity_ntu_med,
     turbidity_ntu_avg
 FROM
-    sn.ssn703us_5minute ssn703us
+    sn.ssn703us_5minute
 UNION
 ALL
 SELECT
@@ -242,7 +242,7 @@ SELECT
     turbidity_ntu_med,
     turbidity_ntu_avg
 FROM
-    sn.ssn708_5minute ssn708
+    sn.ssn708_5minute
 UNION
 ALL
 SELECT
@@ -291,7 +291,7 @@ SELECT
     turbidity_ntu_med,
     turbidity_ntu_avg
 FROM
-    sn.ssn844us_5minute ssn844us
+    sn.ssn844us_5minute
 UNION
 ALL
 SELECT
@@ -340,4 +340,4 @@ SELECT
     turbidity_ntu_med,
     turbidity_ntu_avg
 FROM
-    sn.ssn1015us_5minute ssn1015us;
+    sn.ssn1015us_5minute;

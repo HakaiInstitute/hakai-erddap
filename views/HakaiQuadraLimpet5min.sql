@@ -67,6 +67,6 @@ SELECT
 FROM
     sn."QuadraLimpet:5minuteSamples"
 WHERE
-    "measurementTime" > (NOW() - '60 days' :: INTERVAL)
+    "measurementTime" > (NOW() - '60 days'::INTERVAL)
 ORDER BY
     "measurementTime" DESC;

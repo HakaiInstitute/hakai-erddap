@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS erddap."HakaiNutrientSampleResearch";
 
 CREATE TABLE erddap."HakaiNutrientSampleResearch" AS
 SELECT
-    ACTION,
+    action,
     event_pk,
     rn,
     is_replicate,
@@ -20,12 +20,6 @@ SELECT
     gather_lat,
     gather_long,
     collection_method,
-    (
-        CASE
-            WHEN pressure_transducer_depth IS NULL THEN line_out_depth
-            ELSE pressure_transducer_depth
-        END
-    ) depth,
     line_out_depth,
     pressure_transducer_depth,
     filtered,
@@ -71,7 +65,10 @@ SELECT
     metadata_qc_flag,
     quality_level,
     comments,
-    quality_log
+    quality_log,
+    (
+        COALESCE(pressure_transducer_depth, line_out_depth)
+    ) AS depth
 FROM
     eims.output_nutrients
 WHERE

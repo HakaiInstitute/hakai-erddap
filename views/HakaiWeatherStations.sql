@@ -52,7 +52,7 @@ SELECT
     snow_depth_tc_uql,
     snow_depth_tc
 FROM
-    sn.wsn693_703_5minute wsn693_703
+    sn.wsn693_703_5minute
 UNION
 ALL
 SELECT
@@ -107,7 +107,7 @@ SELECT
     NULL AS snow_depth_tc_uql,
     NULL AS snow_depth_tc
 FROM
-    sn.wsn626_5minute wsn626
+    sn.wsn626_5minute
 UNION
 ALL
 SELECT
@@ -162,7 +162,7 @@ SELECT
     NULL AS snow_depth_tc_uql,
     NULL AS snow_depth_tc
 FROM
-    sn.ssn693pwr_5minute ssn693pwr
+    sn.ssn693pwr_5minute
 UNION
 ALL
 SELECT
@@ -217,7 +217,7 @@ SELECT
     NULL AS snow_depth_tc_uql,
     NULL AS snow_depth_tc
 FROM
-    sn.wsn703_5minute wsn703us
+    sn.wsn703_5minute
 UNION
 ALL
 SELECT
@@ -272,7 +272,7 @@ SELECT
     snow_depth_tc_uql,
     snow_depth_tc
 FROM
-    sn.wsn703_708_5minute wsn703_708
+    sn.wsn703_708_5minute
 UNION
 ALL
 SELECT
@@ -327,7 +327,7 @@ SELECT
     NULL AS snow_depth_tc_uql,
     NULL AS snow_depth_tc
 FROM
-    sn.ssn708_5minute ssn708
+    sn.ssn708_5minute
 UNION
 ALL
 SELECT
@@ -382,7 +382,7 @@ SELECT
     NULL AS snow_depth_tc_uql,
     NULL AS snow_depth_tc
 FROM
-    sn.ssn819pwr_5minute ssn819pwr
+    sn.ssn819pwr_5minute
 UNION
 ALL
 SELECT
@@ -437,7 +437,7 @@ SELECT
     snow_depth_tc_uql,
     snow_depth_tc
 FROM
-    sn.wsn819_1015_5minute wsn819_1015
+    sn.wsn819_1015_5minute
 UNION
 ALL
 SELECT
@@ -492,7 +492,7 @@ SELECT
     NULL AS snow_depth_tc_uql,
     NULL AS snow_depth_tc
 FROM
-    sn.wsn844_5minute wsn844
+    sn.wsn844_5minute
 UNION
 ALL
 SELECT
@@ -547,7 +547,7 @@ SELECT
     NULL AS snow_depth_tc_uql,
     NULL AS snow_depth_tc
 FROM
-    sn.ssn1015us_5minute ssn1015us
+    sn.ssn1015us_5minute
 UNION
 ALL
 SELECT
@@ -602,7 +602,7 @@ SELECT
     snow_depth_tc_uql,
     snow_depth_tc
 FROM
-    sn.hecate_5minute hecate
+    sn.hecate_5minute
 UNION
 ALL
 SELECT
@@ -657,7 +657,7 @@ SELECT
     snow_depth_tc_uql,
     snow_depth_tc
 FROM
-    sn.buxton_east_5minute buxton_east
+    sn.buxton_east_5minute
 UNION
 ALL
 SELECT
@@ -712,7 +712,7 @@ SELECT
     NULL AS snow_depth_tc_uql,
     NULL AS snow_depth_tc
 FROM
-    sn.buxton_5minute buxton
+    sn.buxton_5minute
 UNION
 ALL
 SELECT
@@ -767,7 +767,7 @@ SELECT
     snow_depth_tc_uql,
     snow_depth_tc
 FROM
-    sn.ref_stn_5minute ref_stn
+    sn.ref_stn_5minute
 UNION
 ALL
 SELECT
@@ -822,7 +822,7 @@ SELECT
     NULL AS snow_depth_tc_uql,
     NULL AS snow_depth_tc
 FROM
-    sn.lookout_5minute lookout
+    sn.lookout_5minute
 UNION
 ALL
 SELECT
@@ -877,7 +877,7 @@ SELECT
     NULL AS snow_depth_tc_uql,
     NULL AS snow_depth_tc
 FROM
-    sn.ethel_5minute ethel
+    sn.ethel_5minute
 UNION
 ALL
 SELECT
@@ -932,4 +932,4 @@ SELECT
     NULL AS snow_depth_tc_uql,
     NULL AS snow_depth_tc
 FROM
-    sn.quadra_5minute quadra;
+    sn.quadra_5minute;

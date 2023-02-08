@@ -157,6 +157,8 @@ SELECT
 FROM
     sn."PruthDock:5minuteSamples"
 WHERE
-    "PruthDock:5minuteSamples"."measurementTime" > (NOW() - '60 days' :: INTERVAL)
+    "PruthDock:5minuteSamples"."measurementTime" > (
+        NOW() - '60 days'::INTERVAL
+    )
 ORDER BY
     "PruthDock:5minuteSamples"."measurementTime" DESC;
