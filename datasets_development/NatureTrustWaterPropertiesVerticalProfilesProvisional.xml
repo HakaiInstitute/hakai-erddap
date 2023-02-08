@@ -17,7 +17,7 @@
         <att name="cdm_timeseries_variables">station,latitude,longitude</att>
         <att name="institution">Nature Trust</att>
         <att name="title">Nature Trust Water Properties Profiles Measured by Oceanographic Profilers, Provisional</att>
-        <att name="subsetVariables">cruise, vessel, device_model, device_sn, device_firmware, work_area, direction_flag, conductivity_UQL,  temperature_UQL, depth_UQL, pressure_UQL, flc_UQL, turbidity_UQL, salinity_UQL, dissolved_oxygen_ml_l_UQL, rinko_do_ml_l_UQL, c_star_at_UQL,hakai_id,station,ph_UQL,cdom_ppb_UQL,backscatter_beta_UQL</att>
+        <att name="subsetVariables">cruise, vessel, device_model, device_sn, device_firmware, work_area, direction_flag,hakai_id,station</att>
         <att name="cdm_data_type">TimeSeriesProfile</att>
         <att name="cdm_profile_variables">hakai_id</att>
         <att name="platform">self-propelled small boat</att>
