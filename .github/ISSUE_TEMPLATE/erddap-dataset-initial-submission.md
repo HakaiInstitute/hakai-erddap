@@ -7,11 +7,10 @@ assignees: JessyBarrette
 
 ---
 
-# Hakai Dataset Submission 
+## Hakai Dataset Submission
 Below are listed all the different steps related to the initial submission of a dataset.
 
-A more detailed written and visual description of every step is available respectively 
-[here](https://docs.google.com/document/d/1QMU0skj7kWbxuS_cVUNkTYZSeqpa1lVsK7WJvC4hMyA/edit?usp=sharing) and [here](https://lucid.app/lucidchart/invitations/accept/ae8530a5-4a8f-435e-b17a-60aab0773f2f).
+A more detailed written and visual description of every step is available respectively [here](https://docs.google.com/document/d/1QMU0skj7kWbxuS_cVUNkTYZSeqpa1lVsK7WJvC4hMyA/edit?usp=sharing) and [here](https://lucid.app/lucidchart/invitations/accept/ae8530a5-4a8f-435e-b17a-60aab0773f2f).
 
 ## Submission steps
 ### Initial Submission (Data Administrator)
