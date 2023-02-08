@@ -20,10 +20,10 @@ A more detailed written and visual description of every step is available respec
 
 ### ERDDAP Dataset Creation (Data Integrator)
 - [ ] Dataset Transformation  (Format label)
-    - :green_circle: Format Compatible
-    - :yellow_circle: Format Minor Revisions
-    - :orange_circle: Format Major Revisions
-    - :red_circle:  Format Incompatible/Missing Information
+  - :green_circle: Format Compatible
+  - :yellow_circle: Format Minor Revisions
+  - :orange_circle: Format Major Revisions
+  - :red_circle:  Format Incompatible/Missing Information
 - [ ] Near Real-time Data Integration
 - [ ] QARTOD Integration
 - [ ] ERDDAP Integration
@@ -34,9 +34,9 @@ A more detailed written and visual description of every step is available respec
 
 ### Dataset Review (Data Administrator)
 - [ ] Dataset Development Branch Revision (Reviewer Label)
-    - :green_circle: Reviewer Approved
-    - :yellow_circle: Reviewer Minor Revisions
-    - :orange_circle: Reviewer Major Revisions
+  - :green_circle: Reviewer Approved
+  - :yellow_circle: Reviewer Minor Revisions
+  - :orange_circle: Reviewer Major Revisions
 
 ### Dataset Completion (Data Integrator)
 #### ERDDAP
