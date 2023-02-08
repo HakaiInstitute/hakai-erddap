@@ -177,7 +177,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>station_latitude</sourceName>
+        <sourceName>latitude</sourceName>
         <destinationName>latitude</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
@@ -193,38 +193,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>station_longitude</sourceName>
-        <destinationName>longitude</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-            <att name="_FillValue" type="double">NaN</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="colorBarMaximum" type="double">180.0</att>
-            <att name="colorBarMinimum" type="double">-180.0</att>
-            <att name="long_name">Longitude</att>
-            <att name="standard_name">longitude</att>
-            <att name="units">degrees_east</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>latitude</sourceName>
-        <destinationName>precise_latitude</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-            <att name="_FillValue" type="double">NaN</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="colorBarMaximum" type="double">90.0</att>
-            <att name="colorBarMinimum" type="double">-90.0</att>
-            <att name="long_name">Latitude</att>
-            <att name="standard_name">latitude</att>
-            <att name="units">degrees_north</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>longitude</sourceName>
-        <destinationName>precise_longitude</destinationName>
+        <destinationName>longitude</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
             <att name="_FillValue" type="double">NaN</att>
@@ -458,16 +428,6 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>spec_cond</sourceName>
-        <destinationName>spec_cond</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Specific Conductance</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>dissolved_oxygen_ml_l</sourceName>
         <destinationName>dissolved_oxygen_ml_l</destinationName>
         <dataType>double</dataType>
@@ -485,41 +445,6 @@
             <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
             <att name="units">mL L-1</att>
             <att name="colorBarMaximum" type="double">12.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>rinko_do_ml_l</sourceName>
-        <destinationName>rinko_do_ml_l</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-            <att name="_FillValue" type="double">NaN</att>
-            <att name="ancillary_variables">null</att>
-            <att name="long_name">Secondary Dissolved Oxygen Concentration</att>
-            <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
-            <att name="units">mL/L</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="_FillValue" type="double">NaN</att>
-            <att name="ancillary_variables">null</att>
-            <att name="long_name">Secondary Dissolved Oxygen Concentration</att>
-            <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
-            <att name="units">mL L-1</att>
-            <att name="colorBarMaximum" type="double">12.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>dissolved_oxygen_percent</sourceName>
-        <destinationName>dissolved_oxygen_percent</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-            <att name="ancillary_variables">null</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="ancillary_variables">null</att>
-            <att name="long_name">Dissolved Oxygen Percent</att>
-            <att name="colorBarMaximum" type="double">120.0</att>
             <att name="colorBarMinimum" type="double">0.0</att>
         </addAttributes>
     </dataVariable>
@@ -542,116 +467,6 @@
             <att name="units">ug L-1</att>
             <att name="colorBarMaximum" type="double">30.0</att>
             <att name="colorBarMinimum" type="double">0.0</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>turbidity</sourceName>
-        <destinationName>turbidity</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-            <att name="_FillValue" type="double">NaN</att>
-            <att name="ancillary_variables">null</att>
-            <att name="long_name">Turbidity</att>
-            <att name="standard_name">sea_water_turbidity</att>
-            <att name="units">FTU</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="_FillValue" type="double">NaN</att>
-            <att name="ancillary_variables">null</att>
-            <att name="long_name">Turbidity</att>
-            <att name="standard_name">sea_water_turbidity</att>
-            <att name="units">FTU</att>
-            <att name="colorBarMaximum" type="double">30.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>par</sourceName>
-        <destinationName>par</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-            <att name="_FillValue" type="double">NaN</att>
-            <att name="ancillary_variables">null</att>
-            <att name="long_name">Photosynthetically Active Radiation</att>
-            <att name="standard_name">downwelling_photosynthetic_photon_spherical_irradiance_in_sea_water</att>
-            <att name="units">umol m-2 s-1</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="_FillValue" type="double">NaN</att>
-            <att name="ancillary_variables">null</att>
-            <att name="long_name">Photosynthetically Active Radiation</att>
-            <att name="standard_name">downwelling_photosynthetic_photon_spherical_irradiance_in_sea_water</att>
-            <att name="units">umol m-2 s-1</att>
-            <att name="colorBarMaximum" type="double">10000.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>c_star_at</sourceName>
-        <destinationName>c_star_at</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-            <att name="_FillValue" type="double">NaN</att>
-            <att name="ancillary_variables">null</att>
-            <att name="long_name">Beam Attenuation</att>
-            <att name="standard_name">volume_beam_attenuation_coefficient_of_radiative_flux_in_sea_water_corrected_for_pure_water_attenuance</att>
-            <att name="units">1/m</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="_FillValue" type="double">NaN</att>
-            <att name="ancillary_variables">null</att>
-            <att name="long_name">Beam Attenuation</att>
-            <att name="standard_name">volume_beam_attenuation_coefficient_of_radiative_flux_in_sea_water_corrected_for_pure_water_attenuance</att>
-            <att name="units">m-1</att>
-            <att name="colorBarMaximum" type="double">3.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>ph</sourceName>
-        <destinationName>ph</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-            <att name="long_name">pH</att>
-            <att name="units">-log[H+]</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">pH</att>
-            <att name="standard_name">sea_water_ph_reported_on_total_scale</att>
-            <att name="units">-log[H+]</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>sos_un</sourceName>
-        <destinationName>sos_un</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Speed of Sound</att>
-            <att name="units">m s-1</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>backscatter_beta</sourceName>
-        <destinationName>backscatter_beta</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Backscatter</att>
-            <att name="units">m-1</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>cdom_ppb</sourceName>
-        <destinationName>cdom_ppb</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="long_name">Carbon Dissolved Organic Matter</att>
-            <att name="units">ppb</att>
         </addAttributes>
     </dataVariable>
 </dataset>
