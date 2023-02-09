@@ -1,5 +1,7 @@
-CREATE OR REPLACE VIEW erddap."HakaiQuadraBoL5min" AS
-SELECT "measurementTime",
+CREATE
+OR REPLACE VIEW erddap."HakaiQuadraBoL5min" AS
+SELECT
+    "measurementTime",
     "QuadraBoL:pCO2_uatm_QL",
     "QuadraBoL:pCO2_uatm_QC",
     "QuadraBoL:pCO2_uatm_UQL",
@@ -56,6 +58,9 @@ SELECT "measurementTime",
     "QuadraBoL:calcpH_Min",
     "QuadraBoL:calcpH_Max",
     "QuadraBoL:calcpH_Std"
-FROM sn."QuadraBoL:5minuteSamples"
-WHERE "measurementTime" > (now() - '60 days'::interval)
-ORDER BY "measurementTime" DESC;
+FROM
+    sn."QuadraBoL:5minuteSamples"
+WHERE
+    "measurementTime" > (NOW() - '60 days'::INTERVAL)
+ORDER BY
+    "measurementTime" DESC;

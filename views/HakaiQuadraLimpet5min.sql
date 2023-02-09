@@ -1,5 +1,7 @@
-CREATE OR REPLACE VIEW erddap."HakaiQuadraLimpet5min" AS
-SELECT "measurementTime",
+CREATE
+OR REPLACE VIEW erddap."HakaiQuadraLimpet5min" AS
+SELECT
+    "measurementTime",
     "QuadraLimpet:WaterTemp_QL",
     "QuadraLimpet:WaterTemp_QC",
     "QuadraLimpet:WaterTemp_UQL",
@@ -62,6 +64,9 @@ SELECT "measurementTime",
     "QuadraLimpet:EnclosureTemp_Avg",
     "QuadraLimpet:PanelTemp_Avg",
     "QuadraLimpet:BattVolt_Avg"
-FROM sn."QuadraLimpet:5minuteSamples"
-WHERE "measurementTime" > (now() - '60 days'::interval)
-ORDER BY "measurementTime" DESC;
+FROM
+    sn."QuadraLimpet:5minuteSamples"
+WHERE
+    "measurementTime" > (NOW() - '60 days'::INTERVAL)
+ORDER BY
+    "measurementTime" DESC;

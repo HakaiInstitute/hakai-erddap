@@ -1,5 +1,7 @@
-CREATE OR REPLACE VIEW erddap."HakaiBaynesSoundBoL5min" AS
-SELECT "measurementTime",
+CREATE
+OR REPLACE VIEW erddap."HakaiBaynesSoundBoL5min" AS
+SELECT
+    "measurementTime",
     "BaynesSoundBoL:pCO2_uatm_QL",
     "BaynesSoundBoL:pCO2_uatm_QC",
     "BaynesSoundBoL:pCO2_uatm_UQL",
@@ -64,6 +66,9 @@ SELECT "measurementTime",
     "BaynesSoundBoL:calcOmegaCalcite_Min",
     "BaynesSoundBoL:calcOmegaCalcite_Max",
     "BaynesSoundBoL:calcOmegaCalcite_Std"
-FROM sn."BaynesSoundBoL:5minuteSamples"
-WHERE "measurementTime" > (now() - '60 days'::interval)
-ORDER BY "measurementTime" DESC;
+FROM
+    sn."BaynesSoundBoL:5minuteSamples"
+WHERE
+    "measurementTime" > (NOW() - '60 days'::INTERVAL)
+ORDER BY
+    "measurementTime" DESC;

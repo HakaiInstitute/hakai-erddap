@@ -9,3 +9,4 @@ datasets.xml
 datasets_local/**
 update-erddap.sh
 merge-datasets.sh
+.vscode/settings.json
