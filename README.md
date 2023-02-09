@@ -1,3 +1,5 @@
+[![Lint Code Base](https://github.com/HakaiInstitute/hakai-datasets/actions/workflows/linter.yml/badge.svg)](https://github.com/HakaiInstitute/hakai-datasets/actions/workflows/linter.yml)
+
 # Hakai Datasets
 This repository contains different components needed to produce and maintain the Hakai related datasets on Hakai ERDDAP servers.
 
