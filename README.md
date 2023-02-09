@@ -8,4 +8,11 @@ All datasets made available within the `datasets` folder in the ERDDAP xml forma
 All datasets made available within the `datasets_development` folder in the ERDDAP xml format are made available on the development server.
 
 ## Hakai Database integration
-All views and tables generated from the diferent sql queries made available in the `view` directory are run nightly from the hecate.hakai.org server.
+All views and tables generated from the diferent sql queries made available in the `view` directory are run nightly from the hecate.hakai.org server from the master branch.
+
+All commits to this repository are tested by different linters through a PR or commit to the master branch:
+- python: black, isort
+- sql: sqlfluff
+- markdown
+
+We are using the super-linter library to generate the different automated integration tests.
