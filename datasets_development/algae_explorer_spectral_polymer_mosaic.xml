@@ -1,7 +1,7 @@
-<dataset type="EDDGridFromNcFiles" datasetID="algae_explorer_polymer_output" active="true">
+<dataset type="EDDGridFromNcFiles" datasetID="algae_explorer_spectral_polymer_mosaic" active="true">
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <updateEveryNMillis>10000</updateEveryNMillis>
-    <fileDir>/datasets/algae_explorer/</fileDir>
+    <fileDir>/datasets/algae_explorer/spectralmosaic</fileDir>
     <fileNameRegex>polymer_mosaic_output\.nc</fileNameRegex>
     <recursive>true</recursive>
     <pathRegex>.*</pathRegex>
@@ -28,27 +28,41 @@
         <att name="title">Algae Explorer Polymer Mosaic Output.</att>
     </addAttributes>
     <axisVariable>
+        <sourceName>***pathName,timeFormat=yyyy/MM/dd,/datasets/algae_explorer/spectralmosaic/(\d{4}/\d{2}/\d{2})/polymer_mosaic_output\.nc,1</sourceName>
+        <destinationName>time</destinationName>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Time</att>
+            <att name="standard_name">time</att>
+        </addAttributes>
+    </axisVariable>
+    <axisVariable>
         <sourceName>y</sourceName>
-        <destinationName>y</destinationName>
+        <destinationName>latitude</destinationName>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Latitude</att>
-            <att name="source_name">y</att>
+            <att name="source_name">-0.0013678738172 * y + 59.5</att>
             <att name="standard_name">latitude</att>
             <att name="units">degrees_north</att>
+            <att name="scale_factor" type="float">-0.0013678738172</att>
+            <att name="add_offset" type="float">59.5</att>
         </addAttributes>
     </axisVariable>
     <axisVariable>
         <sourceName>x</sourceName>
-        <destinationName>x</destinationName>
+        <destinationName>longitude</destinationName>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Longitude</att>
-            <att name="source_name">x</att>
+            <att name="source_name"> 0.002694945852 * x - 139</att>
             <att name="standard_name">longitude</att>
             <att name="units">degrees_east</att>
+            <att name="scale_factor" type="float">0.002694945852</att>
+            <att name="add_offset" type="float">-139</att>
         </addAttributes>
     </axisVariable>
     <dataVariable>
@@ -63,8 +77,6 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="_ChunkSizes">null</att>
-            <att name="colorBarMaximum" type="double">150.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
             <att name="coordinates">null</att>
         </addAttributes>
     </dataVariable>
@@ -80,14 +92,12 @@
         <addAttributes>
             <att name="_ChunkSizes">null</att>
             <att name="_FillValue" type="int">2147483647</att>
-            <att name="colorBarMaximum" type="double">100.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
             <att name="coordinates">null</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
         <sourceName>latitude</sourceName>
-        <destinationName>latitude</destinationName>
+        <destinationName>latitude_var</destinationName>
         <dataType>float</dataType>
         <!-- sourceAttributes>
             <att name="_ChunkSizes" type="intList">489 382</att>
@@ -100,8 +110,8 @@
             <att name="colorBarMaximum" type="double">90.0</att>
             <att name="colorBarMinimum" type="double">-90.0</att>
             <att name="coordinates">null</att>
-            <att name="long_name">Latitude</att>
-            <att name="standard_name">latitude</att>
+            <att name="source">latitude</att>
+            <att name="long_name">Original latitude</att>
             <att name="units">degrees_north</att>
         </addAttributes>
     </dataVariable>
@@ -124,7 +134,7 @@
     </dataVariable>
     <dataVariable>
         <sourceName>longitude</sourceName>
-        <destinationName>longitude</destinationName>
+        <destinationName>longitude_var</destinationName>
         <dataType>float</dataType>
         <!-- sourceAttributes>
             <att name="_ChunkSizes" type="intList">489 382</att>
@@ -134,11 +144,9 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="_ChunkSizes">null</att>
-            <att name="colorBarMaximum" type="double">180.0</att>
-            <att name="colorBarMinimum" type="double">-180.0</att>
             <att name="coordinates">null</att>
-            <att name="long_name">Longitude</att>
-            <att name="standard_name">longitude</att>
+            <att name="source">longitude</att>
+            <att name="long_name">Original Longitude</att>
             <att name="units">degrees_east</att>
         </addAttributes>
     </dataVariable>
@@ -154,8 +162,6 @@
         <addAttributes>
             <att name="_ChunkSizes">null</att>
             <att name="_FillValue" type="int">2147483647</att>
-            <att name="colorBarMaximum" type="double">100.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
             <att name="coordinates">null</att>
         </addAttributes>
     </dataVariable>
@@ -186,8 +192,6 @@
         <addAttributes>
             <att name="_ChunkSizes">null</att>
             <att name="_FillValue" type="int">2147483647</att>
-            <att name="colorBarMaximum" type="double">100.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
             <att name="coordinates">null</att>
         </addAttributes>
     </dataVariable>
@@ -218,8 +222,6 @@
         <addAttributes>
             <att name="_ChunkSizes">null</att>
             <att name="_FillValue" type="int">2147483647</att>
-            <att name="colorBarMaximum" type="double">100.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
             <att name="coordinates">null</att>
         </addAttributes>
     </dataVariable>
@@ -250,8 +252,6 @@
         <addAttributes>
             <att name="_ChunkSizes">null</att>
             <att name="_FillValue" type="int">2147483647</att>
-            <att name="colorBarMaximum" type="double">100.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
             <att name="coordinates">null</att>
         </addAttributes>
     </dataVariable>
@@ -267,8 +267,6 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="_ChunkSizes">null</att>
-            <att name="colorBarMaximum" type="double">90.0</att>
-            <att name="colorBarMinimum" type="double">-90.0</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -283,8 +281,6 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="_ChunkSizes">null</att>
-            <att name="colorBarMaximum" type="double">180.0</att>
-            <att name="colorBarMinimum" type="double">-180.0</att>
         </addAttributes>
     </dataVariable>
 </dataset>
