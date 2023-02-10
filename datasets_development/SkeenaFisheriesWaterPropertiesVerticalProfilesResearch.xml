@@ -4,6 +4,7 @@
     <schemaName>erddap</schemaName>
     <tableName>"SkeenaFisheriesWaterPropertiesVerticalProfilesResearch"</tableName>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <orderBy>work_area,station,start_dt,direction_flag,pressure</orderBy>
     <!-- sourceAttributes>
         <att name="acknowledgment">Hakai Field Technicians, research and IT groups</att>
         <att name="cdm_data_type">TimeSeriesProfile</att>

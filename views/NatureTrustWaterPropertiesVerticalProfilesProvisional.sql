@@ -24,4 +24,4 @@ ORDER BY
     ctd.ctd_file_cast_data.station ASC,
     ctd.ctd_file_cast_data.start_dt ASC,
     ctd.ctd_file_cast_data.direction_flag ASC,
-    ctd.ctd_file_cast_data.pressure DESC;
+    ctd.ctd_file_cast_data.pressure ASC;

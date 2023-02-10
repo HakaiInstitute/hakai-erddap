@@ -3,6 +3,7 @@
     <driverName>org.postgresql.Driver</driverName>
     <schemaName>erddap</schemaName>
     <tableName>"UWashingtonWaterPropertiesVerticalProfilesProvisional"</tableName>
+    <orderBy>work_area,station,start_dt,direction_flag,pressure</orderBy>
 
     <!-- <iso19115File>/xml/HakaiCTDQU39_iso19115.xml</iso19115File> -->
 
