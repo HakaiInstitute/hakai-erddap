@@ -17,4 +17,4 @@ ORDER BY
     ctd.ctd_post_qc_data.station ASC,
     ctd.ctd_post_qc_data.start_dt ASC,
     ctd.ctd_post_qc_data.direction_flag ASC,
-    ctd.ctd_post_qc_data.pressure DESC;
+    ctd.ctd_post_qc_data.pressure ASC;
