@@ -10,7 +10,6 @@ WHERE
     )
     AND ctd.ctd_post_qc_data.status IS NULL
     AND ctd.ctd_post_qc_data.measurement_dt IS NOT NULL
-    AND ctd.ctd_post_qc_data.depth IS NULL
     AND ctd.ctd_post_qc_data.direction_flag::text = 'd'::text
     AND ctd.ctd_post_qc_data.organization = 'HAKAI'
     AND ctd.ctd_post_qc_data.cruise NOT IN ('CEDAR COAST', 'HER')
