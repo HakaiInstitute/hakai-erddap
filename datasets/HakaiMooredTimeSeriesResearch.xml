@@ -77,6 +77,22 @@
 		<att name="bad_flag">null</att>
 		<att name="batteryin_voltage_">null</att>
 		<att name="anchor_type">null</att>
+		<att name="conductivity_sn">null</att>
+		<att name="interval">null</att>
+		<att name="region">null</att>
+		<att name="retrieval_time">null</att>
+		<att name="sample_interval">null</att>
+		<att name="scientist">null</att>
+		<att name="serial_number">null</att>
+		<att name="site">null</att>
+		<att name="software_version">null</att>
+		<att name="start_time">null</att>
+		<att name="start_time_comment">null</att>
+		<att name="system_upload_time">null</att>
+		<att name="target_depth">null</att>
+		<att name="target_latitude_">null</att>
+		<att name="target_longitude_">null</att>
+		<att name="temperature_sn">null</att>
 	</addAttributes>
 	<dataVariable>
 		<sourceName>file_id</sourceName>
