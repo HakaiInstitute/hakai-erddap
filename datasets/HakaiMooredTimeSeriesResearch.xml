@@ -57,6 +57,42 @@
 		<att name="title">Hakai Mooring Water Properties Timeseries Research</att>
 		<att name="platform">subsurface mooring</att>
 		<att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
+		<att name="history">null</att>
+		<att name="units">null</att>
+		<att name="nquan">null</att>
+		<att name="nvalues">null</att>
+		<att name="instrument_xml">null</att>
+		<att name="instrument_type">null</att>
+		<att name="instrument_sub_type">null</att>
+		<att name="instrument_manufacturer">null</att>
+		<att name="filename">null</att>
+		<att name="file_type">null</att>
+		<att name="deployment_time">null</att>
+		<att name="deployment_setup">null</att>
+		<att name="datcnv_date">null</att>
+		<att name="datcnv_date_comment">null</att>
+		<att name="datcnv_in">null</att>
+		<att name="datcnv_skipover">null</att>
+		<att name="data_xml">null</att>
+		<att name="bad_flag">null</att>
+		<att name="batteryin_voltage_">null</att>
+		<att name="anchor_type">null</att>
+		<att name="conductivity_sn">null</att>
+		<att name="interval">null</att>
+		<att name="region">null</att>
+		<att name="retrieval_time">null</att>
+		<att name="sample_interval">null</att>
+		<att name="scientist">null</att>
+		<att name="serial_number">null</att>
+		<att name="site">null</att>
+		<att name="software_version">null</att>
+		<att name="start_time">null</att>
+		<att name="start_time_comment">null</att>
+		<att name="system_upload_time">null</att>
+		<att name="target_depth">null</att>
+		<att name="target_latitude_">null</att>
+		<att name="target_longitude_">null</att>
+		<att name="temperature_sn">null</att>
 	</addAttributes>
 	<dataVariable>
 		<sourceName>file_id</sourceName>
