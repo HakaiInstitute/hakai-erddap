@@ -1,7 +1,7 @@
 <dataset type="EDDGridFromNcFiles" datasetID="algae_explorer_spectral_polymer_mosaic" active="true">
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <updateEveryNMillis>10000</updateEveryNMillis>
-    <fileDir>/datasets/algae_explorer/spectralmosaic</fileDir>
+    <fileDir>/algae_explorer/spectralmosaic</fileDir>
     <fileNameRegex>polymer_mosaic_output\.nc</fileNameRegex>
     <recursive>true</recursive>
     <pathRegex>.*</pathRegex>
