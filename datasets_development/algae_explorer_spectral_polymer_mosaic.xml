@@ -1,7 +1,7 @@
 <dataset type="EDDGridFromNcFiles" datasetID="algae_explorer_spectral_polymer_mosaic" active="true">
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <updateEveryNMillis>10000</updateEveryNMillis>
-    <fileDir>/algae_explorer/spectralmosaic</fileDir>
+    <fileDir>/datasets/algae_explorer/spectralmosaic</fileDir>
     <fileNameRegex>polymer_mosaic_output\.nc</fileNameRegex>
     <recursive>true</recursive>
     <pathRegex>.*</pathRegex>
@@ -28,7 +28,7 @@
         <att name="title">Algae Explorer Polymer Mosaic Output.</att>
     </addAttributes>
     <axisVariable>
-        <sourceName>***pathName,timeFormat=yyyy/MM/dd,/datasets/algae_explorer/spectralmosaic/(\d{4}/\d{2}/\d{2})/polymer_mosaic_output\.nc,1</sourceName>
+        <sourceName>***pathName,timeFormat=yyyy/MM/dd,/algae_explorer/spectralmosaic/(\d{4}/\d{2}/\d{2})/polymer_mosaic_output\.nc,1</sourceName>
         <destinationName>time</destinationName>
         <!-- sourceAttributes>
         </sourceAttributes -->
