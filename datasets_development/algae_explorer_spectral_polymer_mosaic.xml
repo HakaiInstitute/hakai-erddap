@@ -108,8 +108,6 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="_ChunkSizes">null</att>
-            <att name="colorBarMaximum" type="double">90.0</att>
-            <att name="colorBarMinimum" type="double">-90.0</att>
             <att name="coordinates">null</att>
             <att name="source">latitude</att>
             <att name="long_name">Original latitude</att>
@@ -129,8 +127,6 @@
         <addAttributes>
             <att name="_ChunkSizes">null</att>
             <att name="_FillValue" type="int">0</att>
-            <att name="colorBarMaximum" type="double">100.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
             <att name="coordinates">null</att>
         </addAttributes>
     </dataVariable>
@@ -182,6 +178,8 @@
             <att name="_ChunkSizes">null</att>
             <att name="coordinates">null</att>
             <att name="_FillValue" type="float">0</att>
+            <att name="colorBarMaximum" type="float">3.0</att>
+            <att name="colorBarMinimum" type="float">0.0</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -213,6 +211,8 @@
             <att name="_ChunkSizes">null</att>
             <att name="coordinates">null</att>
             <att name="_FillValue" type="float">0</att>
+            <att name="colorBarMaximum" type="float">30.0</att>
+            <att name="colorBarMinimum" type="float">0.0</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -244,6 +244,8 @@
             <att name="_ChunkSizes">null</att>
             <att name="coordinates">null</att>
             <att name="_FillValue" type="float">0</att>
+            <att name="colorBarMaximum" type="float">30.0</att>
+            <att name="colorBarMinimum" type="float">0.0</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
