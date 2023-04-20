@@ -28,7 +28,7 @@
         <att name="title">Algae Explorer Polymer Mosaic Output.</att>
     </addAttributes>
     <axisVariable>
-        <sourceName>***pathName,timeFormat=yyyy/MM/dd,/algae_explorer/spectralmosaic/(\d{4}/\d{2}/\d{2})/polymer_mosaic_output\.nc,1</sourceName>
+        <sourceName>***pathName,timeFormat=yyyy/MM/dd,/algae_explorer/5_erddap_data/(\d{4}/\d{2}/\d{2})/polymer_mosaic_output\.nc,1</sourceName>
         <destinationName>time</destinationName>
         <!-- sourceAttributes>
         </sourceAttributes -->
