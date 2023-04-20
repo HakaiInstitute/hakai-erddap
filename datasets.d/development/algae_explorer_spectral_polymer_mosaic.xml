@@ -120,6 +120,7 @@
             <att name="coordinates">null</att>
         </addAttributes>
     </dataVariable>
+    <dataVariable>
         <sourceName>logchl</sourceName>
         <destinationName>logchl</destinationName>
         <dataType>float</dataType>
