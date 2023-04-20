@@ -14,6 +14,8 @@ services:
       - "./erddap/content:/usr/local/tomcat/content/erddap"
       - "./erddap/data:/erddapData"
       - "${DATASETS_DIR:-./datasets}:/datasets"
+      - "./datasets.d.sh:/datasets.d.sh"
+      - "./datasets.d:/datasets.d"
       - "/tmp/:/usr/local/tomcat/temp/"
       - "./datasets.d:/datasets.d:ro"
       - "./init.d:/init.d"
