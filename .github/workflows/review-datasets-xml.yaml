@@ -26,7 +26,7 @@ jobs:
         uses: github/super-linter/slim@v4
         env:
           VALIDATE_ALL_CODEBASE: false
-          DEFAULT_BRANCH: main
+          DEFAULT_BRANCH: master
           VALIDATE_XML: true
           VALIDATE_SQL: true
           VALIDATE_SHELL_SHFMT: true
