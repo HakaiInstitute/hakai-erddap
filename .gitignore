@@ -12,3 +12,5 @@ merge-datasets.sh
 .vscode/settings.json
 .env
 erddap/content/datasets.xml*
+erddap/data/**
+tomcatLogs/**
