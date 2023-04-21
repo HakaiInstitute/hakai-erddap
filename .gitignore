@@ -10,3 +10,4 @@ datasets_local/**
 old-update-erddap.sh
 merge-datasets.sh
 .vscode/settings.json
+.env
