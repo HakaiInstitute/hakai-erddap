@@ -11,7 +11,7 @@ Diagnostic messages are displayed on some HTML pages if displayDiagnosticInfo (a
 Diagnostic messages are always written to the [bigParentDirectory]log.txt file (see below).
 At ERD, we set this to 'all' for development and 'info' for releases.
 -->
-  <logLevel>info</logLevel>
+  <logLevel>all</logLevel>
 
   <!-- warName becomes part of the public url, after baseUrl/.
 This should always be 'erddap'.
@@ -19,7 +19,7 @@ If you want to install a second ERDDAP for testing/development,
 see http://coastwatch.pfeg.noaa.gov/erddap/download/setup.html#secondErddap
 -->
   <warName>erddap</warName>
-  <defaultAccessibleViaFiles>true</defaultAccessibleViaFiles>
+
   <!-- bigParentDirectory is the absolute path on the server (with slash at the end)
 to a directory on a drive with lots of space.
 Create a new directory, outside of the tomcat directory, for this purpose.
@@ -107,7 +107,8 @@ You MUST CHANGE this when you install ERDDAP on your server. For example,
 <baseUrl>http://127.0.0.1:8080</baseUrl>              used for running/testing on your personal computer
 <baseUrl>http://coastwatch.pfeg.noaa.gov</baseUrl>    used for ERD releases (erddap and erddap2)
 -->
-  <baseUrl>http://localhost:8090</baseUrl>
+  <!-- <baseUrl>http://localhost:8082</baseUrl> -->
+  <baseUrl>https://catalogue.hakai.org</baseUrl>
 
   <!-- This is a variant of <baseUrl> which is used when authentication is active and the user is logged in.
   In general, you take the <baseUrl>, change "http" to "https", and change/add ":8443".
@@ -229,7 +230,7 @@ You can replace any of the [standardParts] with your own HTML.
   <!-- ERDDAP automatically generates FGDC and ISO19115 metadata
 for all relevant datasets, using information from the dataset's metadata.
 By default these services are on (true). -->
-  <fgdcActive>false</fgdcActive>
+  <fgdcActive>true</fgdcActive>
   <iso19115Active>true</iso19115Active>
 
   <!-- For the wms examples, pick one of your grid datasets that has longitude and latitude axes.
@@ -284,6 +285,7 @@ You may make this system active ("true", the default value) or not ("false").
   <slideSorterActive>true</slideSorterActive>
 
 
+  <defaultAccessibleViaFiles>true</defaultAccessibleViaFiles>
 
   <!-- Every loadDatasetsNMinutes (see below), files in [bigParentDirectory]cache and
 the public directory which are more than cacheMinutes old will be deleted.
@@ -326,7 +328,7 @@ think that reloading all of the datasets (cumulatively) should take
 This should always be much longer than loadDatasetsMinMinutes.
 The default is 60 minutes.  Some people will set this to longer.
 -->
-  <loadDatasetsMaxMinutes>240</loadDatasetsMaxMinutes>
+  <loadDatasetsMaxMinutes>360</loadDatasetsMaxMinutes>
 
   <!-- If the number of requests between two runs of LoadDatasets exceeds
 unusualActivity, an email is sent to emailEverythingTo.
@@ -461,14 +463,11 @@ the links within the .css file wouldn't switch between http: and https:.
 There doesn't seem to be a way around this other than using inline style
 information.
 -->
-  <startHeadHtml5>
-    <![CDATA[
+  <startHeadHtml5><![CDATA[
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-
 <script>
-     
       // Show an element
       var show = function (elem) {
           elem.style.display = 'block';
@@ -483,14 +482,9 @@ information.
           const datasetID = location.href.split('/').pop().split('.')[0];
           const hostname = location.hostname;
 
-          // Show this link only on dataset pages
-          // Note: This doesn't include the metadata page (yet)
           const reg = new RegExp('/erddap/(table|grid)dap/([^.]+)\.(html|subset|graph)');
 
           const a = document.getElementById('complianceLink');
-
-          // These pages match the url of regular dataset pages. 
-          // Hope there are no datasets named "index"
           const notDatasets = ['allDatasets', 'index']
 
           const showComplianceLink = (reg.test(location.href) && !notDatasets.includes(datasetID))
@@ -511,48 +505,39 @@ information.
       });
   </script>
 <meta charset="UTF-8">
-<title>ERDDAP</title>
-<link rel="shortcut icon" href="/erddap/favicon.ico">
-<link href="/erddap/images/erddap2.css" rel="stylesheet" type="text/css">
+<title>Hakai ERDDAP</title>
+<link rel="shortcut icon" href="https://www.hakai.org/favicon.ico">
+<link href="&erddapUrl;/images/erddap2.css" rel="stylesheet" type="text/css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QNGD640313"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-QNGD640313');
-</script>
 ]]>
   </startHeadHtml5>
 
 
+
   <!-- The standard startBodyHtml -->
-  <startBodyHtml5>
-    <![CDATA[
+  <startBodyHtml5><![CDATA[
 <body>
 <table class="compact nowrap" style="width:100%; background-color:#128CB5;">
   <tr>
-    <td style="text-align:center; width:80px;"><a rel="bookmark" href="/"><img
-      title="CIOOS Pacific" src="https://pac-dev2.cioos.org/images/cioos.png" alt="CIOOS Pacific" style="vertical-align:middle;"></a></td>
+    <td style="text-align:center; width:80px;"><a rel="bookmark" href="&erddapUrl;"><img
+    title="Hakai" src="https://catalogue.hakai.org/images/hakai_logo.svg" alt="Hakai" style="vertical-align:middle;height: 100px;"></a></td>
     <td style="text-align:left; font-size:x-large; color:#FFFFFF; ">
-      <strong>CIOOS Pacific ERDDAP</strong>
+      <strong>ERDDAP</strong>
       <br><small><small><small>Easier access to scientific data</small></small></small>
       </td>
     <td style="text-align:right; font-size:small;">
 <a id="complianceLink" href="" style="display:none">Compliance Results</a>      
-      &loginInfo; &nbsp; &nbsp;
+      &loginInfo; &language; &nbsp; &nbsp;
+      <br>Brought to you by
+    <a title="Hakai" rel="bookmark" href="http://www.hakai.org">Hakai</a>
       </td>
   </tr>
 </table>
-]]>
-  </startBodyHtml5>
+]]>  </startBodyHtml5>
 
   <!-- You can change other things, but please keep "ERDDAP, Version &erddapVersion;" and
      these references to the Disclaimers and Privacy Policy. -->
-  <endBodyHtml5>
-    <![CDATA[
+  <endBodyHtml5><![CDATA[
 <div class="standard_width">
 <br>&nbsp;
 <hr>
@@ -573,6 +558,6 @@ ERDDAP, Version &erddapVersion;
 <p>&nbsp;
 </div>
 </body>
-]]>
-  </endBodyHtml5>
+]]>  </endBodyHtml5>
+
 </erddapSetup>
