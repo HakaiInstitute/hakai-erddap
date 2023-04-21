@@ -11,3 +11,4 @@ old-update-erddap.sh
 merge-datasets.sh
 .vscode/settings.json
 .env
+erddap/content/datasets.xml*
