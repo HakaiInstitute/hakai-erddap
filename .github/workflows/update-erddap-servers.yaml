@@ -23,7 +23,7 @@ jobs:
           key: ${{ secrets.DEV_SERVER_SSH_KEY }}
           script: cd  ~/hakai-datasets/; sh update-erddap.sh --hardFlag
       - name: Update production server
-        if: github.ref_name == 'main'
+        if: github.ref_name == 'master'
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.PROD_SERVER_HOST }}
