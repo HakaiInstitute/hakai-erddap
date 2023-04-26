@@ -1,0 +1,1 @@
+Add local test files within this directory the way they will be available on the production server `/data/erddap_data/`.

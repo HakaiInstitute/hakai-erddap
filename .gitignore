@@ -15,3 +15,5 @@ merge-datasets.sh
 erddap/content/datasets.xml*
 erddap/data/**
 tomcatLogs/**
+datasets/**
+!datasets/README.md
