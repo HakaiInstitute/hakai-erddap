@@ -21,7 +21,7 @@ jobs:
           username: ${{ secrets.DEV_SERVER_USERNAME }}
           passphrase: ${{ secrets.DEV_SERVER_PASSPHRASE }}
           key: ${{ secrets.DEV_SERVER_SSH_KEY }}
-          script: cd  ~/hakai-datasets/; sh update-erddap.sh --hardFlag
+          script: cd  ~/hakai-datasets/; bash update-erddap.sh --hardFlag
       - name: Update production server
         if: github.ref_name == 'master'
         uses: appleboy/ssh-action@master
@@ -30,4 +30,4 @@ jobs:
           username: ${{ secrets.PROD_SERVER_USERNAME }}
           passphrase: ${{ secrets.PROD_SERVER_PASSPHRASE }}
           key: ${{ secrets.PROD_SERVER_SSH_KEY }}
-          script: cd  ~/hakai-datasets/; sh update-erddap.sh --hardFlag
+          script: cd  ~/hakai-datasets/; bash update-erddap.sh --hardFlag
