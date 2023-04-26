@@ -1,3 +1,5 @@
+[![Lint Code Base](https://github.com/HakaiInstitute/hakai-datasets/actions/workflows/linter.yml/badge.svg)](https://github.com/HakaiInstitute/hakai-datasets/actions/workflows/linter.yml)
+
 # Hakai Datasets
 
 [Development Server](http://goose.hakai.org/erddap) [![Update ERDDAP server Sync](https://github.com/HakaiInstitute/hakai-datasets/actions/workflows/update-erddap-servers.yaml/badge.svg?branch=development)](https://github.com/HakaiInstitute/hakai-datasets/actions/workflows/update-erddap-servers.yaml)
