@@ -1,4 +1,3 @@
-image.png
 name: Test ERDDAP views
 on:
   push:
@@ -21,11 +20,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Import DB seed data
-        
+
         env:
           PGHOST: ${secrets.PGHOST}
           PGPORT: ${secrets.PGPORT}
           PGDATABASE: ${secrets.PGDATABASE}
           PGUSER: ${secrets.PGUSER}
           PGPASSWORD: ${secrets.PGPASSWORD}
-        run: (echo "BEGIN:"; cat .views/*.sql; echo "ROLLBACK;") | psql 
+        run: (echo "BEGIN:"; cat .views/*.sql; echo "ROLLBACK;") | psql
