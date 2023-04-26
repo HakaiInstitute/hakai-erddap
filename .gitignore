@@ -7,7 +7,11 @@ datasets.xml
 .ignore_historical
 .DS_Store
 datasets_local/**
-update-erddap.sh
+old-update-erddap.sh
 merge-datasets.sh
 .vscode/settings.json
 .env
+.env
+erddap/content/datasets.xml*
+erddap/data/**
+tomcatLogs/**
