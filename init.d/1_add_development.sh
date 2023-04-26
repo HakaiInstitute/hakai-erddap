@@ -9,7 +9,7 @@
 
 DATASETSD_DIR="${DATASETSD_DIR:-/datasets.d}"
 DATASETSD_OUTPUT_PATH="${DATASETSD_OUTPUT_PATH:-/usr/local/tomcat/content/erddap/datasets.xml}"
-DATASETSD_DIR_DEVELOPMENT="${DATASETSD_DIR_DEVELOPMENT:-1}"
+DATASETSD_DIR_DEVELOPMENT="${DATASETSD_DIR_DEVELOPMENT}"
 DATASETSD_MARK_REMOVED_DATASETS_INACTIVE="${DATASETSD_MARK_REMOVED_DATASETS_INACTIVE:-0}"
 DATASETSD_WRITE_TO_OUTPUT_PATH="${DATASETSD_WRITE_TO_OUTPUT_PATH:-0}"
 DATASETSD_REFRESH_MISSING_DATASETS="${DATASETSD_REFRESH_MISSING_DATASETS:-0}"
@@ -47,7 +47,7 @@ fi
 
 #generate datasets.xml content from constituent datasets fragments in datasets.d directory
 #run dataset fragments through xmlstarlet to remove xml declarations and catch other problems
-if [ $DATASETSD_DIR_DEVELOPMENT ]; then
+if [ $DATASETSD_DIR_DEVELOPMENT -eq 1 ]; then
 DXML=$(echo "<erddapDatasets>$(find ""${DATASETSD_DIR}"" -name '*.xml' -type f -print0 | sort -z | xargs -0 xmlstarlet edit --omit-decl)</erddapDatasets>")
 else
 DXML=$(echo "<erddapDatasets>$(find ""${DATASETSD_DIR}"" -name '*.xml' -type f -print0 -not -path '**/development/*' | sort -z | xargs -0 xmlstarlet edit --omit-decl)</erddapDatasets>")
