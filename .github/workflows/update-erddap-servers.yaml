@@ -21,7 +21,7 @@ jobs:
           username: ${{ secrets.DEV_SERVER_USERNAME }}
           passphrase: ${{ secrets.DEV_SERVER_PASSPHRASE }}
           key: ${{ secrets.DEV_SERVER_SSH_KEY }}
-          script: cd  ~/cioos-pacific-erddap/; sh update-erddap.sh --hardFlag
+          script: cd  ~/hakai-dataset/; sh update-erddap.sh --hardFlag
       - name: Update production server
         if: github.ref_name == 'main'
         uses: appleboy/ssh-action@master
