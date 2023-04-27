@@ -94,8 +94,8 @@ exit 1
 fi
 
 # update datasets.xml
-sudo docker exec $CONTAINER_NAME bash -c "/init.d/1_add_development.sh > /usr/local/tomcat/content/erddap/datasets.xml"
-sudo docker exec $CONTAINER_NAME bash -c "/init.d/2_replace-datasets-secrets.sh"
+sudo docker exec $CONTAINER_NAME bash -c "/datasets.d.sh > /usr/local/tomcat/content/erddap/datasets.xml"
+sudo docker exec $CONTAINER_NAME bash /init.d/replace-datasets-secrets.sh
 
 # Get xml files that were modified[M] or added[A] since the last commit  and generate flag
 DATASETS_IDS=$(git diff --diff-filter=AMCR --name-only --relative=$DATASET_XMLS_DIRS $SHA $NEW_SHA $DATASET_XMLS_DIRS | sed 's:.xml::')
