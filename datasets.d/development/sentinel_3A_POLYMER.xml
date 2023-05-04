@@ -108,7 +108,7 @@ Funding for the SPECTRAL laboratory validation studies and processing automation
             <att name="coordinates">null</att>
             <att name="_FillValue" type="float">0</att>
             <att name="colorBarMaximum" type="float">40.0</att>
-            <att name="colorBarMinimum" type="float">0.0</att>
+            <att name="colorBarMinimum" type="float">0.15</att>
             <att name="colorBarScale">Log</att>
             <att name="colorBarPalette">KT_algae</att>
             <att name="long_name">Chlorophyll-A Concentration</att>
