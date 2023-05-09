@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - development
   workflow_run:
     workflows: [Test datasets.xml and linter]
     types:
@@ -17,7 +16,6 @@ jobs:
       url: https://catalogue.hakai.org/erddap/
     steps:
       - name: Update production server
-        if: github.ref_name == 'master'
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.PROD_SERVER_HOST }}

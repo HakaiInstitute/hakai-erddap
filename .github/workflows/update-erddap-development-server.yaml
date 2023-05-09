@@ -2,7 +2,6 @@ name: Update Development ERDDAP server
 on:
   push:
     branches:
-      - master
       - development
   workflow_run:
     workflows: [Test datasets.xml and linter]
@@ -17,7 +16,6 @@ jobs:
       url: https://goose.hakai.org/erddap/
     steps:
       - name: Update development server
-        if: github.ref_name == 'development'
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.DEV_SERVER_HOST }}
