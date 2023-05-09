@@ -1,0 +1,27 @@
+name: Update Production ERDDAP server
+on:
+  push:
+    branches:
+      - master
+      - development
+  workflow_run:
+    workflows: [Test datasets.xml and linter]
+    types:
+      - completed
+jobs:
+  development-update:
+    name: Update ERDDAP
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://catalogue.hakai.org/erddap/
+    steps:
+      - name: Update production server
+        if: github.ref_name == 'master'
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.PROD_SERVER_HOST }}
+          username: ${{ secrets.PROD_SERVER_USERNAME }}
+          passphrase: ${{ secrets.PROD_SERVER_PASSPHRASE }}
+          key: ${{ secrets.PROD_SERVER_SSH_KEY }}
+          script: cd  ~/hakai-datasets/; bash update-erddap.sh --hardFlag
