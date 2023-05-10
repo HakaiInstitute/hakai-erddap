@@ -1,9 +1,8 @@
-[![Lint Code Base](https://github.com/HakaiInstitute/hakai-datasets/actions/workflows/linter.yml/badge.svg)](https://github.com/HakaiInstitute/hakai-datasets/actions/workflows/linter.yml)
-
 # Hakai Datasets
 
-[Development Server](http://goose.hakai.org/erddap) [![Update ERDDAP server Sync](https://github.com/HakaiInstitute/hakai-datasets/actions/workflows/update-erddap-servers.yaml/badge.svg?branch=development)](https://github.com/HakaiInstitute/hakai-datasets/actions/workflows/update-erddap-servers.yaml)
-[Production Server](http://catalogue.hakai.org/erddap) [![Update ERDDAP server Sync](https://github.com/HakaiInstitute/hakai-datasets/actions/workflows/update-erddap-servers.yaml/badge.svg?branch=master)](https://github.com/HakaiInstitute/hakai-datasets/actions/workflows/update-erddap-servers.yaml)
+[![Test datasets.xml and linter](https://github.com/HakaiInstitute/hakai-datasets/actions/workflows/review-datasets-xml.yaml/badge.svg)](https://github.com/HakaiInstitute/hakai-datasets/actions/workflows/review-datasets-xml.yaml)
+[![Update Development ERDDAP server](https://github.com/HakaiInstitute/hakai-datasets/actions/workflows/update-erddap-development-server.yaml/badge.svg?branch=development)](https://github.com/HakaiInstitute/hakai-datasets/actions/workflows/update-erddap-development-server.yaml)
+[![Update Production ERDDAP server](https://github.com/HakaiInstitute/hakai-datasets/actions/workflows/update-erddap-production-server.yaml/badge.svg?branch=master)](https://github.com/HakaiInstitute/hakai-datasets/actions/workflows/update-erddap-production-server.yaml)
 
 This repository contains different components needed to produce and maintain the Hakai related datasets on Hakai ERDDAP servers.
 Server update status:
