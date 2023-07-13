@@ -216,6 +216,10 @@
             <att name="long_name">SPM Mean</att>
             <att name="units">mg/L</att>
             <att name="cell_method">time: mean (interval: 1 day comments: previous 8 day from present inclusively)</att>
+            <att name="colorBarMaximum" type="float">40.0</att>
+            <att name="colorBarMinimum" type="float">0.15</att>
+            <att name="colorBarScale">Log</att>
+            <att name="colorBarPalette">KT_turbid</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -233,6 +237,10 @@
             <att name="long_name">SPM Sigma</att>
             <att name="units">mg/L</att>
             <att name="cell_method">time: standard deviation (interval: 1 day comments: previous 8 day from present inclusively)</att>
+            <att name="colorBarMaximum" type="float">5.0</att>
+            <att name="colorBarMinimum" type="float">0.0</att>
+            <att name="colorBarScale">Log</att>
+            <att name="colorBarPalette">KT_turbid</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -266,6 +274,10 @@
             <att name="long_name">SPM P50</att>
             <att name="units">mg/L</att>
             <att name="cell_method">time: median (interval: 1 day comments: previous 8 day from present inclusively)</att>
+            <att name="colorBarMaximum" type="float">40.0</att>
+            <att name="colorBarMinimum" type="float">0.15</att>
+            <att name="colorBarScale">Log</att>
+            <att name="colorBarPalette">KT_turbid</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -284,6 +296,10 @@
             <att name="standard_name">mass_concentration_of_chlorophyll_a_in_sea_water</att>
             <att name="units">mg/L</att>
             <att name="cell_method">time: mean (interval: 1 day comments: previous 8 day from present inclusively)</att>
+            <att name="colorBarMaximum" type="float">40.0</att>
+            <att name="colorBarMinimum" type="float">0.15</att>
+            <att name="colorBarScale">Log</att>
+            <att name="colorBarPalette">KT_algae</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -302,6 +318,10 @@
             <att name="standard_name">mass_concentration_of_chlorophyll_a_in_sea_water</att>
             <att name="units">mg/L</att>
             <att name="cell_method">time: standard deviation (interval: 1 day comments: previous 8 day from present inclusively)</att>
+            <att name="colorBarMaximum" type="float">5.0</att>
+            <att name="colorBarMinimum" type="float">0.15</att>
+            <att name="colorBarScale">Log</att>
+            <att name="colorBarPalette">KT_algae</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -336,6 +356,10 @@
             <att name="standard_name">mass_concentration_of_chlorophyll_a_in_sea_water</att>
             <att name="units">mg/L</att>
             <att name="cell_method">time: median (interval: 1 day comments: previous 8 day from present inclusively)</att>
+            <att name="colorBarMaximum" type="float">40.0</att>
+            <att name="colorBarMinimum" type="float">0.15</att>
+            <att name="colorBarScale">Log</att>
+            <att name="colorBarPalette">KT_algae</att>
         </addAttributes>
     </dataVariable>
 </dataset>
