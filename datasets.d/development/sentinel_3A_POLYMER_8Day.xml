@@ -29,7 +29,55 @@
         <att name="stop_date">null</att>
         <att name="summary">Data from a local source.</att>
         <att name="title">Data from a local source.</att>
+        <att name="citation">Costa, M., &amp; Hakai Institute. (2023). Sentinel-3A OLCI Imagery - Automated daily POLYMER processed satellite chlorophyll concentrations for coastal British Columbia and southeast Alaska (Version v1). Hakai Institute.</att>
+        <att name="creator_url">https://www.hakai.org/</att>
+        <att name="creator_institution">Hakai Institute</att>
+        <att name="publisher_institution">Hakai Institute</att>
+        <att name="publisher_url">https://www.hakai.org/</att>
+        <att name="date_created">2023-06-28</att>
+        <att name="geospatial_lat_max">59.5</att>
+        <att name="geospatial_lat_min">47</att>
+        <att name="geospatial_lon_max">-121.5</att>
+        <att name="geospatial_lon_min">-139</att>
+        <att name="geospatial_vertical_min">0</att>
+        <att name="geospatial_vertical_max">5</att>
+        <att name="institution">Spectral Labratory,Hakai Institute</att>
+        <att name="project">Oceanography</att>
+        <att name="product_version">1</att>
+        <att name="license">https://creativecommons.org/licenses/by/4.0</att>
+        <att name="id">d1bef0b7-4d15-4bc1-bf34-faca6352891f</att>
+        <att name="naming_authority">ca.cioos</att>
+        <att name="references">https://doi.org/</att>
+        <att name="keywords">remote sensing,chlorophyll a,phytoplankton,coastal zone,water quality,abundance and biomass</att>
+        <att name="platform">satellite</att>
+        <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
+        <att name="summary">This is an ongoing dataset of automated daily POLYMER processed Sentinel-3A OLCI images of ocean chlorophyll-a concentrations. Sentinel-3A is an oceanography focused European Space Agency (ESA) satellite that is jointly operated with the European Organization for the Exploitation of Meteorological Satellites (EUMSTAT). The system has been operational since April 2016 and was designed to continue the Envisat Medium Resolution Imaging Spectrometer (MERIS) mission. The OLCI is a push-broom radiometer that has a 300m spatial and daily temporal resolution, 21 spectral bands from 400-1200nm, an improved signal-to-noise ratio and an off-nadir swath that is centered to minimize ocean sun glint. These features make the instrument well suited to retrievals of biogeochemical products from optically complex coastal waters.
+
+        Satellite retrievals of biogeochemical products from optically complex coastal regions can have high error and as a result, the performance of OLCI is under continuous review. In British Columbia, the SPECTRAL remote sensing laboratory at the University of Victoria has performed extensive evaluation of atmospheric correction methods to determine the most precise approaches for regional chlorophyll retrievals. Validation of results with in-situ data showed the best results using OLCI Sentinel-3A Level-1 images processed with the POLYnomial based algorithm applied to MERIS (POLYMER) atmospheric correction with the application of the recommended flags including the &quot;Case-2&quot; flag and exclusion of the &quot;Thick Aerosol&quot; flag.  Detailed information on these validations and results are provided in Giannini et al. (2021) and POLYMER in Steinmetz et al. (2016) provided in the accompanying resources.
+
+        Following the derivation of the best approach, the SPECTRAL laboratory in collaboration with the University of Victoria MOD(ularity) Squad, developed an automated system that outputs near real-time (prior day) fully processed OLCI Sentinel 3A chlorophyl imagery for the British Columbia and southeast Alaska coast and offshore waters. In brief, the system: 1) downloads Sentinel-3A Level-1 data from the Sentinel-3 Marine Copernicus Online Data Access (CODA) web service; 2) applies the POLYMER atmospheric correction and flagging and; 3) mosaics the imagery for the study region resulting in fully process level-3 chlorophyll imagery. Details on the development of this system are provided in Jacoby et al. (2019) provided in the accompanying resources.
+
+        In 2022, the Hakai Institute took continued responsibility for the processing pipeline. Since then, the Hakai institute has transferred processing infrastructure from Microsoft Azure to the Amazon Web Service (AWS) and created automated submission of daily fully processed chlorophyll imagery to the Canadian Integrated Ocean Observing System (CIOOS). 
+
+        This product provides the current best known regional OLCI Sentinel-3A chlorophyll retrievals that were shown to have low systematic biases; however, relative percent differences remain high (80-100%) and this should be acknowledged by data users. In addition, error often exists in high turbidity regions (Fraser River plume and fjords) and at times, these pixels were difficult to correct or remove from the imagery and care should be taken when using data from these areas. Finally, there is continued evaluation and improvement of all aspects of the above methods and new methods may provide better retrievals than those provided here.
+
+        Satellite remote sensing has been increasingly used to study surface ocean processes over large areas and high temporal resolutions that would not be achievable using ship based methods. Chlorophyll, as the most widely used measure of phytoplankton biomass, is crucial for understanding phytoplankton which are the base of marine food webs and crucial for ocean biogeochemical cycling. Satellite retrievals of chlorophyll provide the necessary resolution required to understand long term variability under a changing climate.
+
+        Funding for the SPECTRAL laboratory validation studies and processing automation was provided by the UBC/UVic Hakai Coastal Initiative postdoctoral fellowship, NSERC NCE Marine Environmental Observation Prediction And Response (MEOPAR) network, Canadian Space Agency (CSA), Canadian Foundation for Innovation (CFI) and NSERC Discover Grant. 
+
+        The data originators (SPECTRAL remote sensing laboratory) request that users reference Giannini et al. (2021) and Jacoby et al. (2019) if data is used for published research.</att>
+        <att name="title">Sentinel-3A OLCI Imagery - Automated 8 day average POLYMER processed satellite chlorophyll concentrations for coastal British Columbia and southeast Alaska</att>
     </addAttributes>
+    <axisVariable>
+        <sourceName>***pathName,timeFormat=yyyy/MM/dd,/algae_explorer/6_bin8_data/(\d{4}/\d{2}/\d{2})/mosaic_bin8_output\.nc,1</sourceName>
+        <destinationName>time</destinationName>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Time</att>
+            <att name="standard_name">time</att>
+        </addAttributes>
+    </axisVariable>
     <axisVariable>
         <sourceName>lat</sourceName>
         <destinationName>latitude</destinationName>
