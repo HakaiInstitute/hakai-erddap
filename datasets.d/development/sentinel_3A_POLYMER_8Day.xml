@@ -1,0 +1,275 @@
+<dataset type="EDDGridFromNcFiles" datasetID="sentinel_3A_POLYMER_8Day" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/algae_explorer/6_bin8_data/</fileDir>
+    <fileNameRegex>.*\.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <matchAxisNDigits>20</matchAxisNDigits>
+    <fileTableInMemory>false</fileTableInMemory>
+    <!-- sourceAttributes>
+        <att name="Conventions">CF-1.4</att>
+        <att name="metadata_profile">beam</att>
+        <att name="metadata_version">0.5</att>
+        <att name="product_type">BINNED-L3</att>
+        <att name="start_date">25-JUN-2023 00:00:00.000000</att>
+        <att name="stop_date">03-JUL-2023 00:00:00.000000</att>
+        <att name="TileSize">64:64</att>
+    </sourceAttributes -->
+    <addAttributes>
+        <att name="cdm_data_type">Grid</att>
+        <att name="Conventions">CF-1.6, COARDS, ACDD-1.3</att>
+        <att name="infoUrl">???</att>
+        <att name="institution">???</att>
+        <att name="keywords">chl, chl_conc_counts, chl_conc_mean, chl_conc_p50, chl_conc_sigma, chlorophyll, conc, counts, data, local, logchl, logchl_counts, logchl_mean, logchl_p50, logchl_sigma, mean, num, num_obs, num_passes, obs, observations, p50, passes, sigma, source, spm, SPM_counts, SPM_mean, SPM_p50, SPM_sigma</att>
+        <att name="license">[standard]</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+        <att name="start_date">null</att>
+        <att name="stop_date">null</att>
+        <att name="summary">Data from a local source.</att>
+        <att name="title">Data from a local source.</att>
+    </addAttributes>
+    <axisVariable>
+        <sourceName>lat</sourceName>
+        <destinationName>latitude</destinationName>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="uint">4639</att>
+            <att name="long_name">latitude</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+            <att name="valid_max" type="double">59.5000898311175</att>
+            <att name="valid_min" type="double">47.00098814229249</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="long_name">Latitude</att>
+        </addAttributes>
+    </axisVariable>
+    <axisVariable>
+        <sourceName>lon</sourceName>
+        <destinationName>longitude</destinationName>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="uint">6494</att>
+            <att name="long_name">longitude</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+            <att name="valid_max" type="double">-121.50242544017246</att>
+            <att name="valid_min" type="double">-139.00062881782247</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="long_name">Longitude</att>
+        </addAttributes>
+    </axisVariable>
+    <dataVariable>
+        <sourceName>num_obs</sourceName>
+        <destinationName>num_obs</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="uintList">64 64</att>
+            <att name="_FillValue" type="int">-1</att>
+            <att name="coordinates">lat lon</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="long_name">Num Obs</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>num_passes</sourceName>
+        <destinationName>num_passes</destinationName>
+        <dataType>short</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="uintList">64 64</att>
+            <att name="_FillValue" type="short">-1</att>
+            <att name="coordinates">lat lon</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="long_name">Num Passes</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>logchl_mean</sourceName>
+        <destinationName>logchl_mean</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="uintList">64 64</att>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="coordinates">lat lon</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="long_name">Logchl Mean</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>logchl_sigma</sourceName>
+        <destinationName>logchl_sigma</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="uintList">64 64</att>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="coordinates">lat lon</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="long_name">Logchl Sigma</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>logchl_counts</sourceName>
+        <destinationName>logchl_counts</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="uintList">64 64</att>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="coordinates">lat lon</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="long_name">Logchl Counts</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>logchl_p50</sourceName>
+        <destinationName>logchl_p50</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="uintList">64 64</att>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="coordinates">lat lon</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="long_name">Logchl P50</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SPM_mean</sourceName>
+        <destinationName>SPM_mean</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="uintList">64 64</att>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="coordinates">lat lon</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="long_name">SPM Mean</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SPM_sigma</sourceName>
+        <destinationName>SPM_sigma</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="uintList">64 64</att>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="coordinates">lat lon</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="long_name">SPM Sigma</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SPM_counts</sourceName>
+        <destinationName>SPM_counts</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="uintList">64 64</att>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="coordinates">lat lon</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="long_name">SPM Counts</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SPM_p50</sourceName>
+        <destinationName>SPM_p50</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="uintList">64 64</att>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="coordinates">lat lon</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="long_name">SPM P50</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>chl_conc_mean</sourceName>
+        <destinationName>chl_conc_mean</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="uintList">64 64</att>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="coordinates">lat lon</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="long_name">Chl Conc Mean</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>chl_conc_sigma</sourceName>
+        <destinationName>chl_conc_sigma</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="uintList">64 64</att>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="coordinates">lat lon</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="long_name">Chl Conc Sigma</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>chl_conc_counts</sourceName>
+        <destinationName>chl_conc_counts</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="uintList">64 64</att>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="coordinates">lat lon</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="long_name">Chl Conc Counts</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>chl_conc_p50</sourceName>
+        <destinationName>chl_conc_p50</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+            <att name="_ChunkSizes" type="uintList">64 64</att>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="coordinates">lat lon</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_ChunkSizes">null</att>
+            <att name="coordinates">null</att>
+            <att name="long_name">Chl Conc P50</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
