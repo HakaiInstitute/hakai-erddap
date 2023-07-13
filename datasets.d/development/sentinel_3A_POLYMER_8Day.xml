@@ -214,6 +214,8 @@
             <att name="_ChunkSizes">null</att>
             <att name="coordinates">null</att>
             <att name="long_name">SPM Mean</att>
+            <att name="units">mg/L</att>
+            <att name="cell_method">time: mean (interval: 1 day comments: previous 8 day from present inclusively)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -229,6 +231,8 @@
             <att name="_ChunkSizes">null</att>
             <att name="coordinates">null</att>
             <att name="long_name">SPM Sigma</att>
+            <att name="units">mg/L</att>
+            <att name="cell_method">time: standard deviation (interval: 1 day comments: previous 8 day from present inclusively)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -244,6 +248,7 @@
             <att name="_ChunkSizes">null</att>
             <att name="coordinates">null</att>
             <att name="long_name">SPM Counts</att>
+            <att name="cell_method">time: count (interval: 1 day comments: previous 8 day from present inclusively)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -259,6 +264,8 @@
             <att name="_ChunkSizes">null</att>
             <att name="coordinates">null</att>
             <att name="long_name">SPM P50</att>
+            <att name="units">mg/L</att>
+            <att name="cell_method">time: median (interval: 1 day comments: previous 8 day from present inclusively)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -274,6 +281,9 @@
             <att name="_ChunkSizes">null</att>
             <att name="coordinates">null</att>
             <att name="long_name">Chl Conc Mean</att>
+            <att name="standard_name">mass_concentration_of_chlorophyll_a_in_sea_water</att>
+            <att name="units">mg/L</att>
+            <att name="cell_method">time: mean (interval: 1 day comments: previous 8 day from present inclusively)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -289,6 +299,9 @@
             <att name="_ChunkSizes">null</att>
             <att name="coordinates">null</att>
             <att name="long_name">Chl Conc Sigma</att>
+            <att name="standard_name">mass_concentration_of_chlorophyll_a_in_sea_water</att>
+            <att name="units">mg/L</att>
+            <att name="cell_method">time: standard deviation (interval: 1 day comments: previous 8 day from present inclusively)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -304,6 +317,7 @@
             <att name="_ChunkSizes">null</att>
             <att name="coordinates">null</att>
             <att name="long_name">Chl Conc Counts</att>
+            <att name="cell_method">time: count (interval: 1 day comments: previous 8 day from present inclusively)</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -319,6 +333,9 @@
             <att name="_ChunkSizes">null</att>
             <att name="coordinates">null</att>
             <att name="long_name">Chl Conc P50</att>
+            <att name="standard_name">mass_concentration_of_chlorophyll_a_in_sea_water</att>
+            <att name="units">mg/L</att>
+            <att name="cell_method">time: median (interval: 1 day comments: previous 8 day from present inclusively)</att>
         </addAttributes>
     </dataVariable>
 </dataset>
