@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source .env
+
 # PARAMETERS
 APPLY_HARD_FLAG_DIR=false
 MODE='pull'
