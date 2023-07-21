@@ -1,17 +1,18 @@
 DROP TABLE IF EXISTS erddap."HakaiHPLCSampleResearch";
 
 CREATE TABLE erddap."HakaiHPLCSampleResearch" AS
-SELECT
-    *
-    (
-        coalesce(pressure_transducer_depth, line_out_depth)
-    ) AS depth,
+select
+    x.*,
+    (coalesce(pressure_transducer_depth,line_out_depth)) as depth,
+    y.latitude,
+    y.longitude,
+    y.depth as site_depth
 FROM
-    eims.output_hplc
+    eims.output_hplc x
+join eims.output_sites y
+on x.site_id = y.name and x.work_area = y.work_area
 WHERE
-    organization = 'HAKAI'
-    and row_flag = 'Results'
+    x.organization = 'HAKAI'
+    and x.row_flag = 'Results'
     -- AND quality_level IN ('Principal Investigator', 'Technicianmr')
-    -- AND site_id IN ('QU39')
-ORDER BY
-    "collected" DESC, "line_out_depth" ASC;
+    -- AND site_id IN ('QU39');
