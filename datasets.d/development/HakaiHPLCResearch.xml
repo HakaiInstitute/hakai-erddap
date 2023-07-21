@@ -118,6 +118,19 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
+        <sourceName>depth</sourceName>
+        <destinationName>depth</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Depth</att>
+            <att name="standard_name">depth</att>
+            <att name="units">m</att>
+            <att name="source">pressure_transducer_depth if available otherse line_out_depth</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
         <sourceName>collected</sourceName>
         <destinationName>time</destinationName>
         <dataType>double</dataType>

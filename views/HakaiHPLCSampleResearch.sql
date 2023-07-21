@@ -3,6 +3,9 @@ DROP TABLE IF EXISTS erddap."HakaiHPLCSampleResearch";
 CREATE TABLE erddap."HakaiHPLCSampleResearch" AS
 SELECT
     *
+    (
+        coalesce(pressure_transducer_depth, line_out_depth)
+    ) AS depth,
 FROM
     eims.output_hplc
 WHERE
