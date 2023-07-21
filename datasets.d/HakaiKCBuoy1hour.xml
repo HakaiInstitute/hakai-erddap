@@ -1,0 +1,1393 @@
+<dataset type="EDDTableFromDatabase" datasetID="HakaiKCBuoy1hour">
+  <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
+  <driverName>org.postgresql.Driver</driverName>
+  <schemaName>erddap</schemaName>
+  <tableName>"HakaiKCBuoy1hour"</tableName>
+
+  <iso19115File>/xml/HakaiKCBuoy1hour_iso19115.xml</iso19115File>
+
+  <addAttributes>
+    <att name="language">eng</att>
+    <att name="id">HakaiKCBuoy1hour</att>
+
+    <att name="keywords">subSurfaceTemperature, subSurfaceSalinity</att>
+    <att name="keywords_fra">température sous la surface, salinité sous la surface</att>
+    <att name="title_fra">Bouée KC avec un instrument Seology et des capteurs météorologiques</att>
+    <att name="summary_fra">La bouée KC utilise un système Battelle Seaology qui mesure en continu la pression partielle du dioxyde de carbone (pCO2) à la surface de l'océan et la couche limite marine. Ces données sont couplées à des capteurs météorologiques, ainsi qu'à des mesures de température et de salinité à la surface de la mer à l'aide d'un instrument Seabird Electronics 16Plus V2 SeaCAT CT.</att>
+
+    <att name="site_id">KCBuoy</att>
+    <att name="site_description">Seaology buoy with met sensors</att>
+    <att name="elevation">2</att>
+    <att name="measurement_interval">1 hour</att>
+    <att name="creator_url">https://www.hakai.org/</att>
+    <att name="publisher_email">data@hakai.org</att>
+    <att name="publisher_name">Hakai Institute</att>
+    <att name="publisher_url">https://www.hakai.org/</att>
+    <att name="cdm_data_type">TimeSeries</att>
+    <att name="cdm_timeseries_variables">station</att>
+    <att name="infoUrl">https://www.hakai.org</att>
+
+
+    <att name="contributor_role">owner</att>
+    <att name="date_created">2018-05-01</att>
+    <att name="geospatial_lat_max">51.6507</att>
+    <att name="geospatial_lat_min">51.6507</att>
+    <att name="geospatial_lon_max">-127.9697</att>
+    <att name="geospatial_lon_min">-127.9697</att>
+    <att name="geospatial_vertical_max">0.5</att>
+    <att name="geospatial_vertical_min">0.5</att>
+    <att name="institution">Hakai Institute</att>
+    <att name="instrument">SBE 16,Battelle Seaology (MApCO2) System with LI-COR LI-820</att>
+    <att name="keywords">Quadra Island,seaSurfaceSalinity,Continuous measurement,inorganicCarbon,British Columbia coast,seaSurfaceTemperature,North Pacific Ocean,Northern Salish Sea,Surface measurement,Discrete measurement</att>
+    <att name="summary">Kwakshua Channel, located near Fitz Hugh Sound on the central coast of British Columbia, has been a site for moored, high-resolution measurements of surface seawater and marine boundary layer CO2 content since May 2018. Measurements of in situ temperature, salinity, seawater and atmospheric CO2 partial pressure are made using a Battelle Seaology (MApCO2) System. The effort to collect these data are part of the Hakai Institute’s directive to advance the understanding of carbon cycling in northeast Pacific coastal settings with specific emphasis on ocean acidification. This data contribution consists of measurements since May 1, 2018.</att>
+    <att name="title">Real-Time Provisional Surface Seawater and Marine Boundary Layer CO2 Observations made from the Kwakshua Channel (KC) Buoy on the central coast of British Columbia</att>
+    <att name="subsetVariables">station,latitude,longitude,WindSpd_UQL,WindDir_UQL,AirTemp_UQL,StationAirPressure_UQL,WaterTemp_UQL,WaterConductivity_UQL,WaterPressure_UQL,WaterSalinity_UQL,Fluorometer_UQL,sw_xCO2_UQL,atm_xCO2_UQL</att>
+    <att name="platform">moored surface buoy</att>
+    <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
+    <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
+  </addAttributes>
+
+
+  <dataVariable>
+    <sourceName>="KCBuoy"</sourceName>
+    <destinationName>station</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="ioos_category">Location</att>
+      <att name="cf_role">timeseries_id</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>measurementTime</sourceName>
+    <destinationName>time</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="standard_name">time</att>
+      <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>=51.6499</sourceName>
+    <destinationName>latitude</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">latitude</att>
+      <att name="units">degrees_north</att>
+      <att name="long_name">Latitude</att>
+      <att name="description">Fixed latitude of the site</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>=-127.9663</sourceName>
+    <destinationName>longitude</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">longigutde</att>
+      <att name="units">degrees_east</att>
+      <att name="long_name">Longitude</att>
+      <att name="description">Fixed longitude of the site</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WindSpd_Avg</sourceName>
+    <destinationName>WindSpd_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_speed</att>
+      <att name="long_name">WindSpdKCBuoy_Avg</att>
+      <att name="units">m/s</att>
+      <att name="height">3</att>
+      <att name="ancillary_data">WindSpd_UQL WindSpd_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WindSpd_Min</sourceName>
+    <destinationName>WindSpd_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_speed</att>
+      <att name="long_name">WindSpdKCBuoy_Min</att>
+      <att name="units">m/s</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WindSpd_UQL WindSpd_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WindSpd_Max</sourceName>
+    <destinationName>WindSpd_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_speed</att>
+      <att name="long_name">WindSpdKCBuoy_Max</att>
+      <att name="units">m/s</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WindSpd_UQL WindSpd_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WindSpd_Std</sourceName>
+    <destinationName>WindSpd_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_speed</att>
+      <att name="long_name">WindSpdKCBuoy_Std</att>
+      <att name="units">m/s</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WindSpd_UQL WindSpd_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WindSpd_UQL</sourceName>
+    <destinationName>WindSpd_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">WindSpdKCBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WindSpd_QC</sourceName>
+    <destinationName>WindSpd_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">WindSpdKCBuoy Flag</att>
+      <att name="units">Quality flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WindDir_Avg</sourceName>
+    <destinationName>WindDir_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_from_direction</att>
+      <att name="long_name">WindDirKCBuoy_Avg</att>
+      <att name="units">degrees</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WindDir_UQL WindDir_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WindDir_Std</sourceName>
+    <destinationName>WindDir_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_from_direction</att>
+      <att name="long_name">WindDirKCBuoy_Std</att>
+      <att name="units">degrees</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WindDir_UQL WindDir_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+  <dataVariable>
+    <sourceName>KCBuoy:WindDir_UQL</sourceName>
+    <destinationName>WindDir_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">WindDirKCBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WindDir_QC</sourceName>
+    <destinationName>WindDir_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">WindDirKCBuoy Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:AirTemp</sourceName>
+    <destinationName>AirTemp</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">air_temperature</att>
+      <att name="long_name">TAirKCBuoy</att>
+      <att name="units">degree_Celsius</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">AirTemp_UQL AirTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:AirTemp_Med</sourceName>
+    <destinationName>AirTemp_Med</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">air_temperature</att>
+      <att name="long_name">TAirKCBuoy_Med</att>
+      <att name="units">degree_Celsius</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">AirTemp_UQL AirTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:AirTemp_Avg</sourceName>
+    <destinationName>AirTemp_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">air_temperature</att>
+      <att name="long_name">TAirKCBuoy_Avg</att>
+      <att name="units">degree_Celsius</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">AirTemp_UQL AirTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:AirTemp_Min</sourceName>
+    <destinationName>AirTemp_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">air_temperature</att>
+      <att name="long_name">TAirKCBuoy_Min</att>
+      <att name="units">degree_Celsius</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">AirTemp_UQL AirTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:AirTemp_Max</sourceName>
+    <destinationName>AirTemp_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">air_temperature</att>
+      <att name="long_name">TAirKCBuoy_Max</att>
+      <att name="units">degree_Celsius</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">AirTemp_UQL AirTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+  <dataVariable>
+    <sourceName>KCBuoy:AirTemp_UQL</sourceName>
+    <destinationName>AirTemp_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">TAirKCBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:AirTemp_QC</sourceName>
+    <destinationName>AirTemp_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">TAirKCBuoy Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:StationAirPressure</sourceName>
+    <destinationName>StationAirPressure</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">surface_air_pressure</att>
+      <att name="long_name">StationAirPressure</att>
+      <att name="units">hPa</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">StationAirPressure_UQL StationAirPressure_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:StationAirPressure_Avg</sourceName>
+    <destinationName>StationAirPressure_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">surface_air_pressure</att>
+      <att name="long_name">StationAirPressure_Avg</att>
+      <att name="units">hPa</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">StationAirPressure_UQL StationAirPressure_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:StationAirPressure_Min</sourceName>
+    <destinationName>StationAirPressure_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">surface_air_pressure</att>
+      <att name="long_name">StationAirPressure_Min</att>
+      <att name="units">hPa</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">StationAirPressure_UQL StationAirPressure_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:StationAirPressure_Max</sourceName>
+    <destinationName>StationAirPressure_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">surface_air_pressure</att>
+      <att name="long_name">StationAirPressure_Max</att>
+      <att name="units">hPa</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">StationAirPressure_UQL StationAirPressure_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:StationAirPressure_Std</sourceName>
+    <destinationName>StationAirPressure_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">surface_air_pressure</att>
+      <att name="long_name">StationAirPressure_Std</att>
+      <att name="units">hPa</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">StationAirPressure_UQL StationAirPressure_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:StationAirPressure_UQL</sourceName>
+    <destinationName>StationAirPressure_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">StationAirPressure UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:StationAirPressure_QC</sourceName>
+    <destinationName>StationAirPressure_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">StationAirPressure Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterTemp</sourceName>
+    <destinationName>WaterTemp</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">sea_water_temperature</att>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">TWtrKCBuoy</att>
+      <att name="units">degree_Celsius</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterTemp_Med</sourceName>
+    <destinationName>WaterTemp_Med</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">sea_water_temperature</att>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">TWtrKCBuoy_Med</att>
+      <att name="units">degree_Celsius</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterTemp_Avg</sourceName>
+    <destinationName>WaterTemp_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">sea_water_temperature</att>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">TWtrKCBuoy_Avg</att>
+      <att name="units">degree_Celsius</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterTemp_Min</sourceName>
+    <destinationName>WaterTemp_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">sea_water_temperature</att>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">TWtrKCBuoy_Min</att>
+      <att name="units">degree_Celsius</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterTemp_Max</sourceName>
+    <destinationName>WaterTemp_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">sea_water_temperature</att>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">TWtrKCBuoy_Max</att>
+      <att name="units">degree_Celsius</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterTemp_Std</sourceName>
+    <destinationName>WaterTemp_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">sea_water_temperature</att>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">TWtrKCBuoy_Std</att>
+      <att name="units">degree_Celsius</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterTemp_UQL</sourceName>
+    <destinationName>WaterTemp_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">TWtrKCBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterTemp_QC</sourceName>
+    <destinationName>WaterTemp_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">TWtrKCBuoy Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterConductivity</sourceName>
+    <destinationName>WaterConductivity</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">ConductivityKCBuoy</att>
+      <att name="units">S/m</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterConductivity_UQL WaterConductivity_flags</att>
+      <att name="standard_name">sea_water_electrical_conductivity</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterConductivity_Med</sourceName>
+    <destinationName>WaterConductivity_Med</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">ConductivityKCBuoy_Med</att>
+      <att name="units">S/m</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterConductivity_UQL WaterConductivity_flags</att>
+      <att name="standard_name">sea_water_electrical_conductivity</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterConductivity_Avg</sourceName>
+    <destinationName>WaterConductivity_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">ConductivityKCBuoy_Avg</att>
+      <att name="units">S/m</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterConductivity_UQL WaterConductivity_flags</att>
+      <att name="standard_name">sea_water_electrical_conductivity</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterConductivity_Min</sourceName>
+    <destinationName>WaterConductivity_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">ConductivityKCBuoy_Min</att>
+      <att name="units">S/m</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterConductivity_UQL WaterConductivity_flags</att>
+      <att name="standard_name">sea_water_electrical_conductivity</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterConductivity_Max</sourceName>
+    <destinationName>WaterConductivity_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">ConductivityKCBuoy_Max</att>
+      <att name="units">S/m</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterConductivity_UQL WaterConductivity_flags</att>
+      <att name="standard_name">sea_water_electrical_conductivity</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterConductivity_Std</sourceName>
+    <destinationName>WaterConductivity_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">ConductivityKCBuoy_Std</att>
+      <att name="units">S/m</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterConductivity_UQL WaterConductivity_flags</att>
+      <att name="standard_name">sea_water_electrical_conductivity</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterConductivity_UQL</sourceName>
+    <destinationName>WaterConductivity_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">ConductivityKCBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterConductivity_QC</sourceName>
+    <destinationName>WaterConductivity_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">ConductivityKCBuoy Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterPressure</sourceName>
+    <destinationName>WaterPressure</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">PressureKCBuoy</att>
+      <att name="units">dbar</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterPressure_UQL WaterPressure_flags</att>
+      <att name="standard_name">sea_water_pressure</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterPressure_Med</sourceName>
+    <destinationName>WaterPressure_Med</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">PressureKCBuoy_Med</att>
+      <att name="units">dbar</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterPressure_UQL WaterPressure_flags</att>
+      <att name="standard_name">sea_water_pressure</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterPressure_Avg</sourceName>
+    <destinationName>WaterPressure_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">PressureKCBuoy_Avg</att>
+      <att name="units">dbar</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterPressure_UQL WaterPressure_flags</att>
+      <att name="standard_name">sea_water_pressure</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterPressure_Min</sourceName>
+    <destinationName>WaterPressure_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">PressureKCBuoy_Min</att>
+      <att name="units">dbar</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterPressure_UQL WaterPressure_flags</att>
+      <att name="standard_name">sea_water_pressure</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterPressure_Max</sourceName>
+    <destinationName>WaterPressure_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">PressureKCBuoy_Max</att>
+      <att name="units">dbar</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterPressure_UQL WaterPressure_flags</att>
+      <att name="standard_name">sea_water_pressure</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterPressure_Std</sourceName>
+    <destinationName>WaterPressure_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">PressureKCBuoy_Std</att>
+      <att name="units">dbar</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterPressure_UQL WaterPressure_flags</att>
+      <att name="standard_name">sea_water_pressure</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterPressure_UQL</sourceName>
+    <destinationName>WaterPressure_UQL</destinationName>
+    <dataType>int</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">PressureKCBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterPressure_QC</sourceName>
+    <destinationName>WaterPressure_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">PressureKCBuoy Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterSalinity</sourceName>
+    <destinationName>WaterSalinity</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">SalinityKCBuoy</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterSalinity_UQL WaterSalinity_flags</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
+      <att name="units">1e-3</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterSalinity_Med</sourceName>
+    <destinationName>WaterSalinity_Med</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">SalinityKCBuoy_Med</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterSalinity_UQL WaterSalinity_flags</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
+      <att name="units">1e-3</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterSalinity_Avg</sourceName>
+    <destinationName>WaterSalinity_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">SalinityKCBuoy_Avg</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterSalinity_UQL WaterSalinity_flags</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
+      <att name="units">1e-3</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterSalinity_Min</sourceName>
+    <destinationName>WaterSalinity_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">SalinityKCBuoy_Min</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterSalinity_UQL WaterSalinity_flags</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
+      <att name="units">1e-3</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterSalinity_Max</sourceName>
+    <destinationName>WaterSalinity_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">SalinityKCBuoy_Max</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterSalinity_UQL WaterSalinity_flags</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
+      <att name="units">1e-3</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterSalinity_Std</sourceName>
+    <destinationName>WaterSalinity_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">SalinityKCBuoy_Std</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterSalinity_UQL WaterSalinity_flags</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
+      <att name="units">1e-3</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterSalinity_UQL</sourceName>
+    <destinationName>WaterSalinity_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="long_name">SalinityKCBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterSalinity_QC</sourceName>
+    <destinationName>WaterSalinity_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">SalinityKCBuoy Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:OxygenConcentration</sourceName>
+    <destinationName>Oxygen_Concentration</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird SBE 63</att>
+      <att name="long_name">Oxygen Concentration</att>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+      <att name="units">mL/L</att>
+      <att name="depth">0.5</att>
+      <att name="ancillary_data">Oxygen_Concentration_UQL Oxygen_Concentration_flags</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:OxygenConcentration_Med</sourceName>
+    <destinationName>Oxygen_Concentration_Med</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird SBE 63</att>
+      <att name="long_name">Oxygen Concentration Median</att>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+      <att name="units">mL/L</att>
+      <att name="depth">0.5</att>
+      <att name="ancillary_data">Oxygen_Concentration_UQL Oxygen_Concentration_flags</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:OxygenConcentration_Avg</sourceName>
+    <destinationName>Oxygen_Concentration_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird SBE 63</att>
+      <att name="long_name">Oxygen Concentration Mean</att>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+      <att name="units">mL/L</att>
+      <att name="depth">0.5</att>
+      <att name="ancillary_data">Oxygen_Concentration_UQL Oxygen_Concentration_flags</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:OxygenConcentration_Min</sourceName>
+    <destinationName>Oxygen_Concentration_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird SBE 63</att>
+      <att name="long_name">Oxygen Concentration Minimum</att>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+      <att name="units">mL/L</att>
+      <att name="depth">0.5</att>
+      <att name="ancillary_data">Oxygen_Concentration_UQL Oxygen_Concentration_flags</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:OxygenConcentration_Max</sourceName>
+    <destinationName>Oxygen_Concentration_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird SBE 63</att>
+      <att name="long_name">Oxygen Concentration Maximum</att>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+      <att name="units">mL/L</att>
+      <att name="depth">0.5</att>
+      <att name="ancillary_data">Oxygen_Concentration_UQL Oxygen_Concentration_flags</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:OxygenConcentration_UQL</sourceName>
+    <destinationName>Oxygen_Concentration_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">Oxygen Concentration UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:OxygenConcentration_QC</sourceName>
+    <destinationName>Oxygen_Concentration_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">Oxygen Concentration Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Fluorometer</sourceName>
+    <destinationName>Fluorometer</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird FLS</att>
+      <att name="long_name">Fluorescence</att>
+      <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
+      <att name="units">ug/L</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">Fluorometer_UQL Fluorometer_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Fluorometer_Med</sourceName>
+    <destinationName>Fluorometer_Med</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird FLS</att>
+      <att name="long_name">Fluorescence Median</att>
+      <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
+      <att name="units">ug/L</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">Fluorometer_UQL Fluorometer_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Fluorometer_Avg</sourceName>
+    <destinationName>Fluorometer_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird FLS</att>
+      <att name="long_name">Fluorescence Mean</att>
+      <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
+      <att name="units">ug/L</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">Fluorometer_UQL Fluorometer_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Fluorometer_Min</sourceName>
+    <destinationName>Fluorometer_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird FLS</att>
+      <att name="long_name">Fluorescence Minimum</att>
+      <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
+      <att name="units">ug/L</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">Fluorometer_UQL Fluorometer_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Fluorometer_Max</sourceName>
+    <destinationName>Fluorometer_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird FLS</att>
+      <att name="long_name">Fluorescence Maximum</att>
+      <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
+      <att name="units">ug/L</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">Fluorometer_UQL Fluorometer_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Fluorometer_UQL</sourceName>
+    <destinationName>Fluorometer_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">Fluorescence UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Fluorometer_QC</sourceName>
+    <destinationName>Fluorometer_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">Fluorescence Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Latitude</sourceName>
+    <destinationName>preciseLat</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="long_name">LatKCBuoy</att>
+      <att name="units">degrees_north</att>
+      <att name="_CoordinateAxisType">Lat</att>
+      <att name="axis">Y</att>
+      <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Latitude_Med</sourceName>
+    <destinationName>preciseLat_Med</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="long_name">LatKCBuoy_Med</att>
+      <att name="units">degrees_north</att>
+      <att name="_CoordinateAxisType">Lat</att>
+      <att name="axis">Y</att>
+      <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Latitude_Avg</sourceName>
+    <destinationName>preciseLat_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="long_name">LatKCBuoy_Avg</att>
+      <att name="units">degrees_north</att>
+      <att name="_CoordinateAxisType">Lat</att>
+      <att name="axis">Y</att>
+      <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Latitude_Min</sourceName>
+    <destinationName>preciseLat_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="long_name">LatKCBuoy_Min</att>
+      <att name="units">degrees_north</att>
+      <att name="_CoordinateAxisType">Lat</att>
+      <att name="axis">Y</att>
+      <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Latitude_Max</sourceName>
+    <destinationName>preciseLat_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="long_name">LatKCBuoy_Max</att>
+      <att name="units">degrees_north</att>
+      <att name="_CoordinateAxisType">Lat</att>
+      <att name="axis">Y</att>
+      <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Longitude</sourceName>
+    <destinationName>preciseLong</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="long_name">LonKCBuoy</att>
+      <att name="units">degrees_east</att>
+      <att name="_CoordinateAxisType">Lon</att>
+      <att name="axis">X</att>
+      <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Longitude_Med</sourceName>
+    <destinationName>preciseLong_Med</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="long_name">LonKCBuoy_Med</att>
+      <att name="units">degrees_east</att>
+      <att name="_CoordinateAxisType">Lon</att>
+      <att name="axis">X</att>
+      <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Longitude_Avg</sourceName>
+    <destinationName>preciseLong_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="long_name">LonKCBuoy_Avg</att>
+      <att name="units">degrees_east</att>
+      <att name="_CoordinateAxisType">Lon</att>
+      <att name="axis">X</att>
+      <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Longitude_Min</sourceName>
+    <destinationName>preciseLong_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="long_name">LonKCBuoy_Min</att>
+      <att name="units">degrees_east</att>
+      <att name="_CoordinateAxisType">Lon</att>
+      <att name="axis">X</att>
+      <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:Longitude_Max</sourceName>
+    <destinationName>preciseLong_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="long_name">LonKCBuoy_Max</att>
+      <att name="units">degrees_east</att>
+      <att name="_CoordinateAxisType">Lon</att>
+      <att name="axis">X</att>
+      <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCSeaology:sw_xCO2</sourceName>
+    <destinationName>sw_xCO2</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seaology</att>
+      <att name="long_name">Seawater xCO2</att>
+      <att name="units">ppm</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">sw_xCO2_UQL sw_xCO2_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCSeaology:sw_xCO2_UQL</sourceName>
+    <destinationName>sw_xCO2_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">Seawater xCO2 UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCSeaology:sw_xCO2_QC</sourceName>
+    <destinationName>sw_xCO2_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">Seawater xCO2 Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCSeaology:atm_xCO2</sourceName>
+    <destinationName>atm_xCO2</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seaology</att>
+      <att name="long_name">Atmospheric xCO2</att>
+      <att name="units">ppm</att>
+      <att name="height">1</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">atm_xCO2_UQL atm_xCO_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCSeaology:atm_xCO2_UQL</sourceName>
+    <destinationName>atm_xCO2_UQL</destinationName>
+    <dataType>int</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">Atmospheric xCO2 UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCSeaology:atm_xCO2_QC</sourceName>
+    <destinationName>atm_xCO2_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">Atmospheric xCO2 Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+</dataset>   

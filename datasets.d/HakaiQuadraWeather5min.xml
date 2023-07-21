@@ -1,0 +1,375 @@
+<dataset type="EDDTableFromDatabase" datasetID="HakaiQuadraWeather5min">
+  <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
+  <driverName>org.postgresql.Driver</driverName>
+  <schemaName>erddap</schemaName>
+  <tableName>"HakaiQuadraWeather5min"</tableName>
+
+  <iso19115File>/xml/HakaiQuadraWeather5min_iso19115.xml</iso19115File>
+
+  <addAttributes>
+    <att name="language">eng</att>
+    <att name="id">HakaiQuadraWeather5min</att>
+
+
+    <att name="site_id">Quadra</att>
+    <att name="title">Hyacinthe Bay, BC Weather Station</att>
+    <att name="summary">The Quadra Weather station makes continuous standard meteorological measurements.</att>
+    <att name="site_description">Quadra met station</att>
+    <att name="elevation">11</att>
+    <att name="measurement_interval">5 minute</att>
+    <att name="institution">Hakai Institute</att>
+    <att name="creator_url">https://www.hakai.org/</att>
+
+    <att name="publisher_email">data@hakai.org</att>
+    <att name="publisher_name">Hakai Institute</att>
+    <att name="publisher_url">https://www.hakai.org/</att>
+    <att name="cdm_data_type">TimeSeries</att>
+    <att name="cdm_timeseries_variables">station</att>
+    <att name="infoUrl">https://www.hakai.org</att>
+
+    <att name="geospatial_vertical_max">-11</att>
+    <att name="geospatial_vertical_min">-11</att>
+    <att name="platform">land/onshore structure</att>
+    <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
+    <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
+  </addAttributes>
+  <dataVariable>
+    <sourceName>measurementTime</sourceName>
+    <destinationName>time</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="standard_name">time</att>
+      <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>=50.1162556</sourceName>
+    <destinationName>latitude</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="description">Fixed latitude of the site</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>=-125.2221111</sourceName>
+    <destinationName>longitude</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="description">Fixed longitude of the site</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>="Quadra"</sourceName>
+    <destinationName>station</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="ioos_category">Location</att>
+      <att name="cf_role">timeseries_id</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:AirTemp_Avg</sourceName>
+    <destinationName>AirTemp_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">air_temperature</att>
+      <att name="sensor_type">HC2S3</att>
+      <att name="sensor_description">Temperature and Relative Humidity Probe</att>
+      <att name="long_name">TAirQuadra1_Avg</att>
+      <att name="units">degree_Celsius</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:AirTemp_Std</sourceName>
+    <destinationName>AirTemp_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">air_temperature</att>
+      <att name="sensor_type">HC2S3</att>
+      <att name="sensor_description">Temperature and Relative Humidity Probe</att>
+      <att name="long_name">TAirQuadra1_Std</att>
+      <att name="units">degree_Celsius</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:AirTemp_QC</sourceName>
+    <destinationName>AirTemp_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">TAirQuadra1 Q flags</att>
+      <att name="units">Quality flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:AirTemp2_Avg</sourceName>
+    <destinationName>AirTemp2_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">air_temperature</att>
+      <att name="sensor_type">109</att>
+      <att name="sensor_description">Temperature Probe</att>
+      <att name="long_name">TAirQuadra2_Avg</att>
+      <att name="units">degree_Celsius</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:AirTemp2_Std</sourceName>
+    <destinationName>AirTemp2_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">air_temperature</att>
+      <att name="sensor_type">109</att>
+      <att name="sensor_description">Temperature Probe</att>
+      <att name="long_name">TAirQuadra2_Std</att>
+      <att name="units">degree_Celsius</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:AirTemp2_QC</sourceName>
+    <destinationName>AirTemp2_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">TAirQuadra2 Q flags</att>
+      <att name="units">Quality flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:AirPressure_QC</sourceName>
+    <destinationName>AirPressure_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">AirPressure Q flags</att>
+      <att name="units">Quality flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:RH_Avg</sourceName>
+    <destinationName>RH_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">relative_humidity</att>
+      <att name="sensor_type">HC2S3</att>
+      <att name="sensor_description">Temperature and Relative Humidity Probe</att>
+      <att name="long_name">RHQuadra_Avg</att>
+      <att name="units">%</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:RH_Std</sourceName>
+    <destinationName>RH_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">relative_humidity</att>
+      <att name="sensor_type">HC2S3</att>
+      <att name="sensor_description">Temperature and Relative Humidity Probe</att>
+      <att name="long_name">RHQuadra_Std</att>
+      <att name="units">%</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:RH_QC</sourceName>
+    <destinationName>RH_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">RHQuadra Q flags</att>
+      <att name="units">Quality flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:WindSpd_Avg</sourceName>
+    <destinationName>WindSpd_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_speed</att>
+      <att name="sensor_type">05106C-10</att>
+      <att name="sensor_description">Marine Wind Monitor</att>
+      <att name="long_name">WindSpdQuadra_Avg</att>
+      <att name="units">m/s</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:WindSpd_Std</sourceName>
+    <destinationName>WindSpd_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_speed</att>
+      <att name="sensor_type">05106C-10</att>
+      <att name="sensor_description">Marine Wind Monitor</att>
+      <att name="long_name">WindSpdQuadra_Std</att>
+      <att name="units">m/s</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:WindSpd_QC</sourceName>
+    <destinationName>WindSpd_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">WindSpdQuadra Q flags</att>
+      <att name="units">Quality flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:WindDir_Avg</sourceName>
+    <destinationName>WindDir_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_from_direction</att>
+      <att name="sensor_type">05106C-10</att>
+      <att name="sensor_description">Marine Wind Monitor</att>
+      <att name="long_name">WindDirQuadra_Avg</att>
+      <att name="units">degrees</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:WindDir_Std</sourceName>
+    <destinationName>WindDir_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_from_direction</att>
+      <att name="sensor_type">05106C-10</att>
+      <att name="sensor_description">Marine Wind Monitor</att>
+      <att name="long_name">WindDirQuadra_Std</att>
+      <att name="units">degrees</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:WindDir_QC</sourceName>
+    <destinationName>WindDir_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">WindDirQuadra Q flags</att>
+      <att name="units">Quality flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:SolarRad_Avg</sourceName>
+    <destinationName>SolarRad_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">downwelling_shortwave_flux_in_air</att>
+      <att name="sensor_type">CMP3</att>
+      <att name="sensor_description">Pyranometer</att>
+      <att name="long_name">SolarRad_Avg</att>
+      <att name="units">W/m2</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:SolarRad_Std</sourceName>
+    <destinationName>SolarRad_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">downwelling_shortwave_flux_in_air</att>
+      <att name="sensor_type">CMP3</att>
+      <att name="sensor_description">Pyranometer</att>
+      <att name="long_name">SolarRad_Std</att>
+      <att name="units">W/m2</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:SolarRad_QC</sourceName>
+    <destinationName>SolarRad_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">SolarRad Q flags</att>
+      <att name="units">Quality flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:PAR_Avg</sourceName>
+    <destinationName>PAR_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">surface_downwelling_photosynthetic_photon_flux_in_air</att>
+      <att name="sensor_type">PQS1</att>
+      <att name="sensor_description">PAR Quantum sensor</att>
+      <att name="long_name">PAR_Avg</att>
+      <att name="units">umol s-1 m-2</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:PAR_Std</sourceName>
+    <destinationName>PAR_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">surface_downwelling_photosynthetic_photon_flux_in_air</att>
+      <att name="sensor_type">PQS1</att>
+      <att name="sensor_description">PAR Quantum sensor</att>
+      <att name="long_name">PAR_Std</att>
+      <att name="units">umol s-1 m-2</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:PAR_QC</sourceName>
+    <destinationName>PAR_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">PAR Q flags</att>
+      <att name="units">Quality flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>Quadra:Rain</sourceName>
+    <destinationName>Rain</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">rainfall_amount</att>
+      <att name="sensor_type">TB4</att>
+      <att name="sensor_description">Tipping-bucket Rain Gauge</att>
+      <att name="long_name">RainQuadra</att>
+      <att name="units">mm</att>
+    </addAttributes>
+  </dataVariable>
+
+</dataset>

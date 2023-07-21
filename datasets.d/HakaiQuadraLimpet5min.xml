@@ -1,0 +1,414 @@
+<dataset type="EDDTableFromDatabase" datasetID="HakaiQuadraLimpet5min">
+  <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
+  <driverName>org.postgresql.Driver</driverName>
+  <schemaName>erddap</schemaName>
+  <tableName>"HakaiQuadraLimpet5min"</tableName>
+
+  <iso19115File>/xml/HakaiQuadraLimpet5min_iso19115.xml</iso19115File>
+
+  <addAttributes>
+    <att name="language">eng</att>
+    <att name="id">HakaiQuadraLimpet5min</att>
+
+    <att name="keywords">oxygen, subSurfaceSalinity, subSurfaceTemperature</att>
+    <att name="keywords_fra">oxygène, salinité sous la surface, température sous la surface</att>
+    <att name="title_fra">Données en temp réelle et provisoire de l'ibservatoire du fond marin de l'Institut Hakai dans la baie Hyacinthe, île Quadra, Colombie-Britannique, Canada </att>
+    <att name="summary_fra">La limpet fournit des données en temps réel sur la température de l'océan, la conductivité et l'oxygène dissous pour les eaux au large de l'île Quadra.</att>
+
+    <att name="site_id">Quadra Limpet</att>
+    <att name="title">Provisional Real-Time Hakai Seafloor Observatory in Hyacinthe Bay, Quadra Island, British Columbia, Canada</att>
+    <att name="summary">The limpet provides real-time data on ocean temperature, conductivity, and dissolved oxygen for the waters off Quadra Island.</att>
+    <att name="elevation">-20</att>
+    <att name="measurement_interval">5 minute</att>
+    <att name="institution">Hakai Institute</att>
+    <att name="creator_url">https://www.hakai.org/</att>
+    <att name="publisher_email">data@hakai.org</att>
+    <att name="publisher_name">Hakai Institute</att>
+    <att name="publisher_url">https://www.hakai.org/</att>
+    <att name="cdm_data_type">TimeSeries</att>
+    <att name="cdm_timeseries_variables">station</att>
+    <att name="infoUrl">https://www.hakai.org</att>
+    <att name="geospatial_vertical_min">20</att>
+    <att name="geospatial_vertical_max">20</att>
+    <att name="platform">fixed benthic node</att>
+    <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
+    <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
+  </addAttributes>
+  <dataVariable>
+    <sourceName>measurementTime</sourceName>
+    <destinationName>time</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="standard_name">time</att>
+      <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes comment: time correspond to the end of the interval)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>=50.11736</sourceName>
+    <destinationName>latitude</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="description">Fixed latitude of the site</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>=-125.22003</sourceName>
+    <destinationName>longitude</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="description">Fixed longitude of the site</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>="Quadra Limpet"</sourceName>
+    <destinationName>station</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="ioos_category">Location</att>
+      <att name="cf_role">timeseries_id</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterTemp_Avg</sourceName>
+    <destinationName>WaterTemp_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">sea_water_temperature</att>
+      <att name="sensor_type">SBE 37-SMP-ODO</att>
+      <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
+      <att name="long_name">Sea Water Temperature Mean</att>
+      <att name="units">degree_Celsius</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">WaterTemp_flags WaterTemp_UQL</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterTemp_Std</sourceName>
+    <destinationName>WaterTemp_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">sea_water_temperature</att>
+      <att name="sensor_type">SBE 37-SMP-ODO</att>
+      <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
+      <att name="long_name">Sea Water Temperature STD</att>
+      <att name="units">degree_Celsius</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">WaterTemp_flags WaterTemp_UQL</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterTemp_UQL</sourceName>
+    <destinationName>WaterTemp_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="long_name">Water Temperature QARTOD Quality flags</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="byte">2</att>
+    </addAttributes>
+  </dataVariable>
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterTemp_QC</sourceName>
+    <destinationName>WaterTemp_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">Sea Water Temperature Quality Flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterEC_Avg</sourceName>
+    <destinationName>WaterEC_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">sea_water_electrical_conductivity</att>
+      <att name="sensor_type">SBE 37-SMP-ODO</att>
+      <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
+      <att name="long_name">Sea Water Electrical Conductivity Mean</att>
+      <att name="units">S/m</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">WaterEC_flags WaterEC_UQL</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterEC_Std</sourceName>
+    <destinationName>WaterEC_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">sea_water_electrical_conductivity</att>
+      <att name="sensor_type">SBE 37-SMP-ODO</att>
+      <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
+      <att name="long_name">Sea Water Electrical Conductivity STD</att>
+      <att name="units">S/m</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">WaterEC_flags WaterEC_UQL</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterEC_UQL</sourceName>
+    <destinationName>WaterEC_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="long_name">Sea Water Electrical Conductivity QARTOD Quality Flags</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="byte">2</att>
+    </addAttributes>
+  </dataVariable>
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterEC_QC</sourceName>
+    <destinationName>WaterEC_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">Sea Water Electrical Conductivity Quality Flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterPressure_Avg</sourceName>
+    <destinationName>WaterPressure_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">sea_water_pressure</att>
+      <att name="sensor_type">SBE 37-SMP-ODO</att>
+      <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
+      <att name="long_name">Sea Water Pressure Mean</att>
+      <att name="units">decibar</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">WaterPressure_flags WaterPressure_UQL</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterPressure_Std</sourceName>
+    <destinationName>WaterPressure_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">sea_water_pressure</att>
+      <att name="sensor_type">SBE 37-SMP-ODO</att>
+      <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
+      <att name="long_name">Sea Water Pressure STD</att>
+      <att name="units">decibar</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">WaterPressure_flags WaterPressure_UQL</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterPressure_UQL</sourceName>
+    <destinationName>WaterPressure_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="long_name">Sea Water Pressure QARTOD Quality Flags</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="byte">2</att>
+    </addAttributes>
+  </dataVariable>
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterPressure_QC</sourceName>
+    <destinationName>WaterPressure_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">Sea Water Pressure Quality Flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterDepth_Avg</sourceName>
+    <destinationName>WaterDepth_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">depth</att>
+      <att name="sensor_type">SBE 37-SMP-ODO</att>
+      <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
+      <att name="long_name">Depth Mean</att>
+      <att name="units">m</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">WaterDepth_flags WaterDepth_UQL</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterDepth_UQL</sourceName>
+    <destinationName>WaterDepth_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="long_name">Depth QARTOD Quality Flags</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="byte">2</att>
+    </addAttributes>
+  </dataVariable>
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterDepth_QC</sourceName>
+    <destinationName>WaterDepth_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">Depth Quality Flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterOxygen_Avg</sourceName>
+    <destinationName>WaterOxygen_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+      <att name="sensor_type">SBE 37-SMP-ODO</att>
+      <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
+      <att name="long_name">Dissolved Oxygen Concentration Mean</att>
+      <att name="units">ml/L</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">WaterOxygen_flags WaterOxygen_UQL</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterOxygen_Std</sourceName>
+    <destinationName>WaterOxygen_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+      <att name="sensor_type">SBE 37-SMP-ODO</att>
+      <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
+      <att name="long_name">Dissolved Oxygen Concentration STD</att>
+      <att name="units">ml/L</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">WaterOxygen_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterOxygen_UQL</sourceName>
+    <destinationName>WaterOxygen_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="long_name">Water Oxygen QARTOD Quality Flags</att>
+    </addAttributes>
+  </dataVariable>
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterOxygen_QC</sourceName>
+    <destinationName>WaterOxygen_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">Water Oxygen Quality Flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterSalinity_Avg</sourceName>
+    <destinationName>WaterSalinity_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">sea_water_practical_salinity</att>
+      <att name="sensor_type">SBE 37-SMP-ODO</att>
+      <att name="sensor_description">SBE 37-SMP-ODO MicroCAT C-T-ODO (P) Recorder</att>
+      <att name="long_name">Salinity Mean</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">WaterSalinity_flags WaterSalinity_UQL</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterSalinity_UQL</sourceName>
+    <destinationName>WaterSalinity_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="long_name">Salinity QARTOD Quality Flags</att>
+    </addAttributes>
+  </dataVariable>
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:WaterSalinity_QC</sourceName>
+    <destinationName>WaterSalinity_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">Water Salinity Quality Flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:Chlorophyll_Avg</sourceName>
+    <destinationName>Chlorophyll_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Fluorometer</att>
+      <att name="sensor_description">Wet Labs Fluorometer (WetStar)</att>
+      <att name="long_name">Chlorophyll Mean</att>
+      <att name="units">μg/l</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_variables">Chlorophyll_flags Chlorophyll_UQL</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:Chlorophyll_UQL</sourceName>
+    <destinationName>Chlorophyll_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="long_name">Chlorophyll QARTOD Quality Flags</att>
+    </addAttributes>
+  </dataVariable>
+
+  <dataVariable>
+    <sourceName>QuadraLimpet:Chlorophyll_QC</sourceName>
+    <destinationName>Chlorophyll_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">Chlorophyll Quality Flags</att>
+    </addAttributes>
+  </dataVariable>
+
+</dataset>

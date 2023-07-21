@@ -1,0 +1,30 @@
+name: Test ERDDAP views
+on:
+  push:
+    paths:
+      - views/**
+    branch:
+      - development
+      - master
+  pull_request:
+    paths:
+      - views/**
+    branch:
+      - development
+      - master
+jobs:
+  test:
+    name: Test somemodule Go code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Import DB seed data
+
+        env:
+          PGHOST: ${secrets.PGHOST}
+          PGPORT: ${secrets.PGPORT}
+          PGDATABASE: ${secrets.PGDATABASE}
+          PGUSER: ${secrets.PGUSER}
+          PGPASSWORD: ${secrets.PGPASSWORD}
+        run: (echo "BEGIN:"; cat .views/*.sql; echo "ROLLBACK;") | psql

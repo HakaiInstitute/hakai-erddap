@@ -1,0 +1,338 @@
+<dataset type="EDDTableFromAsciiFiles" datasetID="HakaiKetchikanBoLResearch" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/HakaiKetchikanBoLResearch/</fileDir>
+    <fileNameRegex>.*\.csv</fileNameRegex>
+    <recursive>false</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <charset>UTF-8</charset>
+    <columnSeparator>,</columnSeparator>
+    <columnNamesRow>7</columnNamesRow>
+    <firstDataRow>8</firstDataRow>
+    <sortedColumnSourceName></sortedColumnSourceName>
+    <sortFilesBySourceNames></sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <accessibleViaFiles>true</accessibleViaFiles>
+    <cacheFromUrl>https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0246099/</cacheFromUrl>
+    <addAttributes>
+        <att name="cdm_data_type">TimeSeries</att>
+        <att name="cdm_timeseries_variables">station_id, latitude, longitude</att>
+        <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
+        <att name="creator_name">Hakai Institute</att>
+        <att name="creator_url">https://www.hakai.org</att>
+        <att name="creator_email">data at hakai.org</att>
+        <att name="contributor_name">Wiley Evans</att>
+        <att name="contributor_role">Primary Investigator</att>
+        <att name="contributor_email">wiley.evans at hakai.org</att>
+        <att name="institution">Hakai Institute</att>
+        <att name="infoUrl">https://www.hakai.org</att>
+        <att name="license">Creative Commons Attribution 4.0 (CC-BY-4.0)</att>
+        <att name="sourceUrl">https://www.nodc.noaa.gov/ocads/data/0208638.xml</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
+        <att name="subsetVariables">station_id</att>
+        <att name="contributor_name">Wiley Evans</att>
+        <att name="contributor_role">pointOfContact</att>
+        <att name="date_created">2014-12-19</att>
+        <att name="geospatial_lat_max">50.116</att>
+        <att name="geospatial_lat_min">50.116</att>
+        <att name="geospatial_lon_max">-125.222</att>
+        <att name="geospatial_lon_min">-125.222</att>
+        <att name="geospatial_vertical_max">2.0</att>
+        <att name="institution">Hakai Institute</att>
+        <att name="instrument">CTD-Divers,SUPERCO2,SBE 45,Burke-o-Lator pCO2/TCO2 analyzer</att>
+        <att name="keywords">North Pacific Ocean,Surface measurement,Northern Salish Sea,Sea Surface Temperature,Sea Surface Practical Salinity,Discrete measurement,Quadra Island,seaSurfaceSalinity,Ocean Acidification,Continuous measurement,seaSurfaceTemperature,Practical Salinity,inorganicCarbon,British Columbia coast,CO2</att>
+        <att name="summary">This dataset includes continuous sea surface measurements of partial pressure of carbon dioxide (pCO2), sea surface temperature and salinity collected from Hakai Institute Quadra Island Field Station in Hyacinthe Bay, British Columbia, Canada. Quadra Island, at the northern terminus of the Salish Sea, has been a site for shore-based and high-resolution measurement of surface seawater CO2 content since December 2014. Measurements of in situ temperature, salinity, and CO2 partial pressure are made near-continuously on seawater drawn from a sample line with an intake 50 m from shore and a depth of 1 m in Hyacinthe Bay on the eastern side of Quadra Island. The effort to collect these data are part of the Hakai Institute's directive to advance the understanding of carbon cycling in northeast Pacific coastal settings with specific emphasis on ocean acidification.</att>
+        <att name="title">High-resolution record of surface seawater CO2 content from the OceansAlaska Shellfish Hatchery in Ketchikan, Alaska, USA</att>
+        <att name="platform">coastal structure</att>
+        <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>='KetchikanBoL'</sourceName>
+        <destinationName>station_id</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Station</att>
+            <att name="cf_role">timeseries_id</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Yearday</sourceName>
+        <destinationName>Yearday</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Yearday</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Year</sourceName>
+        <destinationName>Year</destinationName>
+        <dataType>short</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Year</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>date and time in GMT (yyyy-mm-dd hh:mm:ss)</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Date Time</att>
+            <att name="source_name">date_time</att>
+            <att name="standard_name">time</att>
+            <att name="time_precision">1970-01-01T00:00:00Z</att>
+            <att name="units">yyyy-MM-dd H:mm</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Latitude (deg N)</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="long_name">Latitude</att>
+            <att name="source_name">Latitude (deg N)</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Longitude (deg E)</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="long_name">Longitude</att>
+            <att name="source_name">Longitude (deg E)</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>TSG-T (deg C)</sourceName>
+        <destinationName>TSG_T</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">-999.0</att>
+            <att name="long_name">Sea Water Temperature</att>
+            <att name="standard_name">sea_surface_temperature</att>
+            <att name="sensor_description">Seabird SBE45</att>
+            <att name="sensor_type">CTD</att>
+            <att name="units">degC</att>
+            <att name="scale">ITS-90</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>TSG-S (PSS-78)</sourceName>
+        <destinationName>TSG_S</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">-999.0</att>
+            <att name="long_name">Sea Water Practical Salinity</att>
+            <att name="standard_name">sea_water_practical_salinity</att>
+            <att name="sensor_description">Seabird SBE45</att>
+            <att name="sensor_type">CTD</att>
+            <att name="units">1E-3</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>corrected xCO2 (ppm)</sourceName>
+        <destinationName>corrected_xCO2</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="long_name">Corrected X CO2 (ppm)</att>
+            <att name="units">ppm</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>equilibrator pressure (kPa)</sourceName>
+        <destinationName>equilibrator_pressure</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="long_name">Equilibrator Pressure (kPa)</att>
+            <att name="units">kPa</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SWpCO2@TSG_T (uatm)</sourceName>
+        <destinationName>SWpCO2_TSG_T</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="long_name">SWp CO2@TSG T (uatm)</att>
+            <att name="units">uatm</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SWfCO2@TSG_T (uatm)</sourceName>
+        <destinationName>SWfCO2_TSG_T</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="long_name">SWf CO2@TSG T (uatm)</att>
+            <att name="units">uatm</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SAMI_T (deg C)</sourceName>
+        <destinationName>SAMI_T</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="long_name">SAMI T (deg C)</att>
+            <att name="standard_name">sea_water_temperature</att>
+            <att name="units">degree_Celsius</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SAMI_TA (umol/kg)</sourceName>
+        <destinationName>SAMI_TA</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="long_name">SAMI TA (umol/kg)</att>
+            <att name="units">umol/kg</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SST (deg C)</sourceName>
+        <destinationName>SST</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="long_name">Sea Surface Temperature</att>
+            <att name="units">degree_Celsius</att>
+            <att name="standard_name">sea_surface_temperature</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SWpCO2@SST (uatm)</sourceName>
+        <destinationName>SWpCO2_SST</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="long_name">SWp CO2@SST (uatm)</att>
+            <att name="units">uatm</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SWfCO2@SST (uatm)</sourceName>
+        <destinationName>SWfCO2_SST</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="long_name">SWf CO2@SST (uatm)</att>
+            <att name="units">uatm</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>TA (umol/kg; from Evans et al., 2015)</sourceName>
+        <destinationName>TA</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="long_name">Total Alkalinity </att>
+            <att name="description">From Evans Et Al., 2019 Relationship</att>
+            <att name="units">umol/kg</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>TCO2 (umol/kg; Waters et al constants)</sourceName>
+        <destinationName>TCO2</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="long_name">TCO2 (umol/kg; Waters Et Al Constants)</att>
+            <att name="units">umol/kg</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>pH_T (total scale; Waters et al constants)</sourceName>
+        <destinationName>pH_T</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="long_name">pH T (total Scale; Waters Et Al Constants)</att>
+            <att name="standard_name">sea_water_ph_reported_on_total_scale</att>
+            <att name="units">1</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Omega_arag (Waters et al constants)</sourceName>
+        <destinationName>Omega_arag</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="long_name">Omega Arag (Waters Et Al Constants)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Omega_calc (Waters et al constants)</sourceName>
+        <destinationName>Omega_calc</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="long_name">Omega Calc (Waters Et Al Constants)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Revelle factor (Waters et al constants)</sourceName>
+        <destinationName>Revelle_factor</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="long_name">Revelle Factor (Waters Et Al Constants)</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
