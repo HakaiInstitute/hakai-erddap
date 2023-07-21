@@ -13,7 +13,7 @@
     <addAttributes>
         <att name="cdm_data_type">TimeSeriesProfile</att>
         <att name="cdm_timeseries_variables">work_area,site_id</att>
-        <att name="cdm_profile_variables">project,survey,source,collected</att>
+        <att name="cdm_profile_variables">project,survey,source,time</att>
         <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
         <att name="infoUrl">???</att>
         <att name="institution">???</att>
