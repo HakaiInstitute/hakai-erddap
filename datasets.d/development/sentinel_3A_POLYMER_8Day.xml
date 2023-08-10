@@ -9,7 +9,7 @@
     <matchAxisNDigits>20</matchAxisNDigits>
     <fileTableInMemory>false</fileTableInMemory>
     <accessibleViaWMS>true</accessibleViaWMS>
-    <defaultGraphQuery>chl_conc_mean[last][0][0:last][0:last]&amp;.draw=surface&amp;.vars=longitude|latitude|chl_conc_mean</defaultGraphQuery>
+    <defaultGraphQuery>chl_conc_mean[last][0][0:last][0:last]&amp;.draw=surface&amp;.vars=longitude|latitude|temp</defaultGraphQuery>
     <!-- sourceAttributes>
         <att name="Conventions">CF-1.4</att>
         <att name="metadata_profile">beam</att>
@@ -226,7 +226,7 @@
             <att name="colorBarMaximum" type="float">40.0</att>
             <att name="colorBarMinimum" type="float">0.15</att>
             <att name="colorBarScale">Log</att>
-            <att name="colorBarPalette">KT_turbid</att>
+            <att name="colorBarPalette">Rainbow2</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -247,7 +247,7 @@
             <att name="colorBarMaximum" type="float">5.0</att>
             <att name="colorBarMinimum" type="float">0.15</att>
             <att name="colorBarScale">Log</att>
-            <att name="colorBarPalette">KT_turbid</att>
+            <att name="colorBarPalette">Rainbow2</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -284,7 +284,7 @@
             <att name="colorBarMaximum" type="float">40.0</att>
             <att name="colorBarMinimum" type="float">0.15</att>
             <att name="colorBarScale">Log</att>
-            <att name="colorBarPalette">KT_turbid</att>
+            <att name="colorBarPalette">Rainbow2</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
