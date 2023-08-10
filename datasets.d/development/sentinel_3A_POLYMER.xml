@@ -140,7 +140,7 @@
             <att name="_ChunkSizes">null</att>
             <att name="coordinates">null</att>
             <att name="_FillValue" type="float">0</att>
-            <att name="colorBarMaximum" type="float">20.0</att>
+            <att name="colorBarMaximum" type="float">50\.0</att>
             <att name="colorBarMinimum" type="float">0.02</att>
             <att name="colorBarScale">Log</att>
             <att name="colorBarPalette">Rainbow2</att>
