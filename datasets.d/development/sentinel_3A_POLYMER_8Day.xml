@@ -305,7 +305,7 @@
             <att name="colorBarMaximum" type="float">40.0</att>
             <att name="colorBarMinimum" type="float">0.15</att>
             <att name="colorBarScale">Log</att>
-            <att name="colorBarPalette">KT_algae</att>
+            <att name="colorBarPalette">KT_haline</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -327,7 +327,7 @@
             <att name="colorBarMaximum" type="float">5.0</att>
             <att name="colorBarMinimum" type="float">0.15</att>
             <att name="colorBarScale">Log</att>
-            <att name="colorBarPalette">KT_algae</att>
+            <att name="colorBarPalette">KT_haline</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -365,7 +365,7 @@
             <att name="colorBarMaximum" type="float">40.0</att>
             <att name="colorBarMinimum" type="float">0.15</att>
             <att name="colorBarScale">Log</att>
-            <att name="colorBarPalette">KT_algae</att>
+            <att name="colorBarPalette">KT_haline</att>
         </addAttributes>
     </dataVariable>
 </dataset>
