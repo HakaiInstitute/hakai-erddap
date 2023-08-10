@@ -9,6 +9,7 @@
     <matchAxisNDigits>20</matchAxisNDigits>
     <fileTableInMemory>false</fileTableInMemory>
     <accessibleViaWMS>true</accessibleViaWMS>
+    <defaultGraphQuery>chl_conc_mean[last][0][0:last][0:last]&amp;.draw=surface&amp;.vars=longitude|latitude|chl_conc_mean</defaultGraphQuery>
     <!-- sourceAttributes>
         <att name="Conventions">CF-1.4</att>
         <att name="metadata_profile">beam</att>
