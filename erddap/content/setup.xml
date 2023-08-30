@@ -504,6 +504,7 @@ information.
 
       });
   </script>
+<script defer data-domain="catalogue.hakai.org/erddap" src="http://plausible.server.hakai.app/js/script.js"></script>
 <meta charset="UTF-8">
 <title>Hakai ERDDAP</title>
 <link rel="shortcut icon" href="https://www.hakai.org/favicon.ico">
