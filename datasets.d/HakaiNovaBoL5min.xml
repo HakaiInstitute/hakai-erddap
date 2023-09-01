@@ -2,9 +2,7 @@
   <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
   <driverName>org.postgresql.Driver</driverName>
   <schemaName>erddap</schemaName>
-  <tableName>"HakaiNovaBol5min"</tableName>
-
-  <iso19115File>/xml/HakaiNovaBol5min_iso19115.xml</iso19115File>
+  <tableName>"HakaiNovaBoL5min"</tableName>
 
   <addAttributes>
     <att name="cde_ingest">false</att>
