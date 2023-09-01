@@ -84,7 +84,7 @@
 
 
   <dataVariable>
-    <sourceName>="Nova Harvest Fisheries Burke-o-Lator"</sourceName>
+    <sourceName>=Nova Harvest Fisheries Burke-o-Lator</sourceName>
     <destinationName>station</destinationName>
     <dataType>String</dataType>
     <addAttributes>
