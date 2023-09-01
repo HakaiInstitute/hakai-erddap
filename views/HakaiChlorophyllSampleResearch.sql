@@ -134,9 +134,7 @@ FROM
                     eims.output_chlorophyll
                 WHERE
                     collected > '2018-05-04'
-                    AND quality_level IN (
-                        'Principal Investigator', 'Technicianmr'
-                    )
+                    AND quality_level = 'Publication'
                     AND (
                         chla_flag IN ('AV')
                         AND phaeo_flag IN ('AV')
