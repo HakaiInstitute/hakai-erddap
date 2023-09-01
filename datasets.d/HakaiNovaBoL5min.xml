@@ -44,6 +44,32 @@
     <att name="cdm_timeseries_variables">station</att>
     <att name="platform">coastal structure</att>
     <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
+
+  <att name="citation">Evans, W., Pocock, K., &amp; Weekes, C. (2023). Real-Time Provisional High-Resolution Record of Surface Seawater Carbon Dioxide (CO2) Content Collected from the Nova Harvest Fisheries of Bamfield, BC Canada (Version v1).</att>
+  <att name="creator_url">hakai.org</att>
+  <att name="creator_institution">Hakai Institute</att>
+  <att name="publisher_institution">Hakai Institute</att>
+  <att name="publisher_url">https://www.hakai.org/</att>
+  <att name="date_created">2023-09-01</att>
+  <att name="geospatial_lat_max">48.83515</att>
+  <att name="geospatial_lat_min">48.83515</att>
+  <att name="geospatial_lon_max">-125.13535</att>
+  <att name="geospatial_lon_min">-125.13535</att>
+  <att name="geospatial_vertical_min">1</att>
+  <att name="geospatial_vertical_max">1</att>
+  <att name="institution">Hakai Institute</att>
+  <att name="project">Oceanography</att>
+  <att name="license">https://creativecommons.org/licenses/by/4.0</att>
+  <att name="instrument">Dakunalytics, LLC - Burke-o-Lator pCO2/TCO2 analyzer - ,Seabird Electronics - SBE 45 - </att>
+  <att name="id">fb5c9e1e-a911-46b7-8c1d-e34215a105ed</att>
+  <att name="naming_authority">ca.cioos</att>
+  <att name="keywords">Continuous measurement,Discrete measurement,Surface measurement,Ocean Acidification,Practical Salinity,Sea Surface Temperature,Sea Surface Practical Salinity,CO2,Alaska</att>
+  <att name="platform">land/onshore structure</att>
+  <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
+  <att name="summary">This dataset includes continuous sea surface measurements of partial pressure of carbon dioxide (pCO2), sea surface temperature and salinity collected from the Nova Harvest Fisheries of Bamfield, BC Canada
+
+The Burke-o-Lator (BoL) pCO2/TCO2 analyzer measures carbon dioxide partial pressure (pCO2) and total dissolved inorganic carbon (TCO2) both continuously from a flow-through seawater stream and from seawater collected in discrete samples. The BoL is paired with a SBE 45 Thermosalinograph to measure seawater temperature and salinity.</att>
+  <att name="title">Real-Time Provisional High-Resolution Record of Surface Seawater Carbon Dioxide (CO2) Content Collected from the Nova Harvest Fisheries of Bamfield, BC Canada</att>
   </addAttributes>
   <dataVariable>
     <sourceName>measurementTime</sourceName>
