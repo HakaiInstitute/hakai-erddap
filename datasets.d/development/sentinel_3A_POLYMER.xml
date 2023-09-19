@@ -120,7 +120,7 @@
             <att name="colorBarMaximum" type="float">40.0</att>
             <att name="colorBarMinimum" type="float">0.15</att>
             <att name="colorBarScale">Log</att>
-            <att name="colorBarPalette">Rainbow2</att>
+            <att name="colorBarPalette">Rainbow</att>
             <att name="long_name">Chlorophyll-A Concentration</att>
             <att name="standard_name">mass_concentration_of_chlorophyll_a_in_sea_water</att>
             <att name="units">mg/m^3</att>
@@ -143,7 +143,7 @@
             <att name="colorBarMaximum" type="float">50.0</att>
             <att name="colorBarMinimum" type="float">0.02</att>
             <att name="colorBarScale">Log</att>
-            <att name="colorBarPalette">Rainbow2</att>
+            <att name="colorBarPalette">Rainbow</att>
             <att name="long_name">Suspended Particulate Matter</att>
             <att name="units">mg/m^3</att>
         </addAttributes>
