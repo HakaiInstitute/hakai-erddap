@@ -32,7 +32,7 @@
     <att name="summary">This dataset includes continuous sea surface measurements of partial pressure of carbon dioxide (pCO2), sea temperature and salinity collected from the Nova Harvest Ltd hatchery in Bamfield BC Canada, also located near the Bamfield Marine Sciences Center which provides seawater to the hatchery.
 
   The Burke-o-Lator (BoL) pCO2/TCO2 analyzer measures carbon dioxide partial pressure (pCO2) and total dissolved inorganic carbon (TCO2) both continuously from a flow-through seawater stream and from seawater collected in discrete samples. The BoL is paired with a SBE 45 Thermosalinograph to measure seawater temperature and salinity.</att>
-    <att name="title">Real-Time Provisional High-Resolution Record of Seawater Carbon Dioxide (CO2) Content Collected from the Nova Harvest Ltd Hatchery in Bamfield BC Canada</att>
+    <att name="title">Real-Time Provisional High-Resolution Record of Seawater Carbon Dioxide Content Collected from the Nova Harvest Ltd Hatchery in Bamfield BC Canada</att>
   </addAttributes>
   <dataVariable>
     <sourceName>measurementTime</sourceName>
