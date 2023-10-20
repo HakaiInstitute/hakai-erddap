@@ -26,13 +26,11 @@
     <att name="instrument">Dakunalytics, LLC - Burke-o-Lator pCO2/TCO2 analyzer - ,Seabird Electronics - SBE 45 - </att>
     <att name="id">fb5c9e1e-a911-46b7-8c1d-e34215a105ed</att>
     <att name="naming_authority">ca.cioos</att>
-    <att name="keywords">Continuous measurement,Discrete measurement,Surface measurement,Ocean Acidification,Practical Salinity,Sea Surface Temperature,Sea Surface Practical Salinity,CO2,Alaska</att>
+    <att name="keywords">Continuous measurement,Discrete measurement,Surface measurement,Ocean Acidification,Practical Salinity,Sea Surface Temperature,Sea Surface Practical Salinity,CO2,Barkley Sound,Trevor Channel</att>
     <att name="platform">land/onshore structure</att>
     <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
-    <att name="summary">This dataset includes continuous sea surface measurements of partial pressure of carbon dioxide (pCO2), sea temperature and salinity collected from the Nova Harvest Ltd hatchery in Bamfield BC Canada, also located near the Bamfield Marine Sciences Center which provides seawater to the hatchery.
-
-  The Burke-o-Lator (BoL) pCO2/TCO2 analyzer measures carbon dioxide partial pressure (pCO2) and total dissolved inorganic carbon (TCO2) both continuously from a flow-through seawater stream and from seawater collected in discrete samples. The BoL is paired with a SBE 45 Thermosalinograph to measure seawater temperature and salinity.</att>
-    <att name="title">Real-Time Provisional High-Resolution Record of Seawater Carbon Dioxide Content Collected from the Nova Harvest Ltd Hatchery in Bamfield BC Canada</att>
+    <att name="summary">This dataset includes measurements of the partial pressure of carbon dioxide (pCO2), temperature, and salinity made on seawater drawn continuously from a 20-m intake at the Bamfield Marine Sciences Centre in Bamfield, BC, Canada. The collection of these data utilizes a Burke-o-Lator (BoL) pCO2/TCO2 analyzer and began August 30, 2023. The Burke-o-Lator (BoL) pCO2/TCO2 analyzer measures carbon dioxide partial pressure (pCO2) and total dissolved inorganic carbon (TCO2) from a flow-through seawater stream and from seawater collected in discrete samples. The BoL is paired with a SBE 45 Thermosalinograph to measure seawater temperature and salinity. These data provide valuable information on patterns in marine carbonate chemistry and ocean acidification within Barkley Sound waters being supplied to the Bamfield Marine Sciences Centre and the Nova Harvest Ltd. shellfish hatchery.</att>
+    <att name="title">Real-Time Provisional High-Resolution Record of Seawater Carbon Dioxide (CO2) Content Collected from the Bamfield Marine Sciences Centre in Bamfield, BC, Canada</att>
   </addAttributes>
   <dataVariable>
     <sourceName>measurementTime</sourceName>
