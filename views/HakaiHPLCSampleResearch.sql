@@ -15,4 +15,5 @@ WHERE
     x.organization = 'HAKAI'
     and x.row_flag = 'Results'
     -- AND quality_level IN ('Principal Investigator', 'Technicianmr')
-    -- AND site_id IN ('QU39');
+    -- AND site_id IN ('QU39')
+;
