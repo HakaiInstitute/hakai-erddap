@@ -3,13 +3,13 @@ on:
   push:
     paths:
       - views/**
-    branch:
+    branches:
       - development
       - master
   pull_request:
     paths:
       - views/**
-    branch:
+    branches:
       - development
       - master
 jobs:
@@ -27,4 +27,12 @@ jobs:
           PGDATABASE: ${secrets.PGDATABASE}
           PGUSER: ${secrets.PGUSER}
           PGPASSWORD: ${secrets.PGPASSWORD}
-        run: (echo "BEGIN:"; cat .views/*.sql; echo "ROLLBACK;") | psql
+        run: |
+          for file in views/*.sql; 
+          do 
+          {
+              psql -c "BEGIN;\n $(cat $file)\n ROLLBACK;\n"; 
+          } || { 
+              echo "::error failed to run $file" 
+          }
+          done
