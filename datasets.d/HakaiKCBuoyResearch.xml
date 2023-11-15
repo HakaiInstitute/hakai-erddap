@@ -14,7 +14,7 @@
 	<firstDataRow>8</firstDataRow>
 	<fileTableInMemory>false</fileTableInMemory>
 	<accessibleViaFiles>true</accessibleViaFiles>
-	<cacheFromUrl>https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0208810/</cacheFromUrl>
+	<!-- <cacheFromUrl>https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0208810/</cacheFromUrl> -->
 	<!-- sourceAttributes>
 	</sourceAttributes -->
 	<!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
@@ -92,7 +92,7 @@
 		</addAttributes>
 	</dataVariable>
 	<dataVariable>
-		<sourceName>=Calendar2.parseToEpochSeconds(row.columnString("Date") + "T" + row.columnString("Time UTC") + "Z", "mm/DD/yyyy'T'H:mm'Z'")</sourceName>
+		<sourceName>=Calendar2.parseToEpochSeconds(row.columnString("Date") + 'T' + row.columnString("Time UTC") + row.columnString("Time") + 'Z', "M/d/yyyy'T'H:mm'Z'")</sourceName>
 		<destinationName>time</destinationName>
 		<dataType>double</dataType>
 		<!-- sourceAttributes>
