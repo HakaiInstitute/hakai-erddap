@@ -28,12 +28,3 @@ services:
           "http://localhost:8080/erddap/index.html"
         ]
       interval: 10s
-  erddap-logs:
-    image: gynter/rsyslog-relp:alpine
-    volumes:
-      - ./erddap/data:/erddapData:ro
-      - ./tomcatLogs:/usr/local/tomcat/logs:ro
-      - ./rsyslog/rsyslog.conf:/etc/rsyslog.conf:ro
-      - ./rsyslog/rsyslog.d:/etc/rsyslog.d:ro
-    depends_on:
-      - erddap
