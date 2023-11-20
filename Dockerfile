@@ -9,7 +9,7 @@ COPY ./datasets.d /datasets.d
 COPY ./init.d /init.d
 # COPY ./tomcatLogs /usr/local/tomcat/logs
 
-ADD /mnt/efs/algex /algae_explorer
-ADD ${DATASETS_DIR:-./datasets} /datasets
+# ADD /mnt/efs/algex /algae_explorer
+# ADD ${DATASETS_DIR:-./datasets} /datasets
 
 EXPOSE ${HOST_PORT}
