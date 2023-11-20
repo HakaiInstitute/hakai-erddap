@@ -12,4 +12,7 @@ COPY ./init.d /init.d
 # ADD /mnt/efs/algex /algae_explorer
 # ADD ${DATASETS_DIR:-./datasets} /datasets
 
+ENTRYPOINT ["/entrypoint.sh"]
+
 EXPOSE ${HOST_PORT}
+CMD ["catalina.sh", "run"]
