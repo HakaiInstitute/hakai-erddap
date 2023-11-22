@@ -1,4 +1,4 @@
-FROM  axiom/docker-erddap:2.23-jdk17-openjdk
+FROM --platform=linux/x86_64 axiom/docker-erddap:2.23-jdk17-openjdk
 
 RUN apt-get update
 RUN apt-get install bash
