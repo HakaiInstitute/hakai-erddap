@@ -518,7 +518,7 @@ information.
   <!-- The standard startBodyHtml -->
   <startBodyHtml5><![CDATA[
 <body>
-<table class="compact nowrap" style="width:100%; background-color:#aa2025;">
+<table class="compact nowrap" style="width:100%; height:150px; background-color:#aa2025;">
   <tr>
     <td style="text-align:center; width:80px;"><a rel="bookmark" href="&erddapUrl;"><img
     title="Hakai" src="&erddapUrl;/images/logo.png" alt="Hakai" style="vertical-align:middle;height: 50px;"></a></td>
@@ -529,7 +529,7 @@ information.
     <td style="text-align:right; font-size:small;">
 <a id="complianceLink" href="" style="display:none">Compliance Results</a>      
       &loginInfo; &language; &nbsp; &nbsp;
-      <br>Brought to you by
+      <br style="color: #FFFFFF;">Brought to you by
     <a title="Hakai" rel="bookmark" href="http://www.hakai.org">Hakai</a>
       </td>
   </tr>
