@@ -8,7 +8,7 @@ COPY ./erddap/content /usr/local/tomcat/content/erddap
 # COPY /tmp/ /usr/local/tomcat/temp/
 
 COPY ./init.d /init.d
-RUN chmod +x /init.d/*
+# RUN chmod +x /init.d/*
 # COPY ./tomcatLogs /usr/local/tomcat/logs
 
 COPY ./datasets.d /datasets.d
