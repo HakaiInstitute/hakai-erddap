@@ -88,7 +88,7 @@ span.warningColor {color:red; }
 
 /* table.commonBGColor and table.erd are widely used for the HTML table style
 with the yellow (currently) background color.  */
-table.commonBGColor {background-color:#ffffcc; }
+table.commonBGColor {background-color:#ffffcc75; }
 
 table.erd {border-collapse:collapse; border:1px solid #bbbbbb; empty-cells:show; }
 table.erd th, table.erd td {padding:2px 4px; border:1px solid #bbbbbb; empty-cells:show;}

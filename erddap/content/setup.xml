@@ -507,7 +507,7 @@ information.
 <script defer file-types="nc,json,txt" data-domain="catalogue.hakai.org/erddap" src="https://plausible.server.hakai.app/js/script.file-downloads.js"></script>
 <meta charset="UTF-8">
 <title>Hakai ERDDAP</title>
-<link rel="shortcut icon" href="https://www.hakai.org/favicon.ico">
+<link rel="shortcut icon" href="&erddapUrl;/images/favicon.ico">
 <link href="&erddapUrl;/images/erddap2.css" rel="stylesheet" type="text/css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ]]>
@@ -518,19 +518,19 @@ information.
   <!-- The standard startBodyHtml -->
   <startBodyHtml5><![CDATA[
 <body>
-<table class="compact nowrap" style="width:100%; background-color:#128CB5;">
+<table class="compact nowrap" style="width:100%; background-color:#aa2025;">
   <tr>
     <td style="text-align:center; width:80px;"><a rel="bookmark" href="&erddapUrl;"><img
-    title="Hakai" src="https://catalogue.hakai.org/images/hakai_logo.svg" alt="Hakai" style="vertical-align:middle;height: 100px;"></a></td>
+    title="Hakai" src="&erddapUrl;/images/logo.png" alt="Hakai" style="vertical-align:middle;height: 60px; padding: 20px;"></a></td>
     <td style="text-align:left; font-size:x-large; color:#FFFFFF; ">
       <strong>ERDDAP</strong>
-      <br><small><small><small>Easier access to scientific data</small></small></small>
+      <br><small><small><small>Easier access to the Hakai Institute data</small></small></small>
       </td>
-    <td style="text-align:right; font-size:small;">
+    <td style="text-align:right; font-size:small; color: #FFFFFF; padding-right:20px;">
 <a id="complianceLink" href="" style="display:none">Compliance Results</a>      
       &loginInfo; &language; &nbsp; &nbsp;
       <br>Brought to you by
-    <a title="Hakai" rel="bookmark" href="http://www.hakai.org">Hakai</a>
+    <a title="Hakai" rel="bookmark" href="http://www.hakai.org" style="color: #FFFFFF">Hakai</a>
       </td>
   </tr>
 </table>
