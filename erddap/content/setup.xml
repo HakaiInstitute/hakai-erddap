@@ -521,7 +521,7 @@ information.
 <table class="compact nowrap" style="width:100%; background-color:#aa2025;">
   <tr>
     <td style="text-align:center; width:80px;"><a rel="bookmark" href="&erddapUrl;"><img
-    title="Hakai" src="&erddapUrl;/images/logo.png" alt="Hakai" style="vertical-align:middle;height: 100px;"></a></td>
+    title="Hakai" src="&erddapUrl;/images/logo.png" alt="Hakai" style="vertical-align:middle;height: 50px;"></a></td>
     <td style="text-align:left; font-size:x-large; color:#FFFFFF; ">
       <strong>ERDDAP</strong>
       <br><small><small><small>Easier access to Hakai data</small></small></small>
