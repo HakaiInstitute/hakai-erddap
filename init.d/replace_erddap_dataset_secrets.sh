@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Path to the datasets.xml file
 file_path="/usr/local/tomcat/content/erddap/datasets.xml"
 
