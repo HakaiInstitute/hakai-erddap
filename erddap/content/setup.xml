@@ -524,13 +524,13 @@ information.
     title="Hakai" src="&erddapUrl;/images/logo.png" alt="Hakai" style="vertical-align:middle;height: 60px; padding: 20px;"></a></td>
     <td style="text-align:left; font-size:x-large; color:#FFFFFF; ">
       <strong>ERDDAP</strong>
-      <br><small><small><small>Easier access to Hakai data</small></small></small>
+      <br><small><small><small>Easier access to the Hakai Institute data</small></small></small>
       </td>
     <td style="text-align:right; font-size:small; color: #FFFFFF; padding-right:20px;">
 <a id="complianceLink" href="" style="display:none">Compliance Results</a>      
       &loginInfo; &language; &nbsp; &nbsp;
       <br>Brought to you by
-    <a title="Hakai" rel="bookmark" href="http://www.hakai.org">Hakai</a>
+    <a title="Hakai" rel="bookmark" href="http://www.hakai.org" style="color: #FFFFFF">Hakai</a>
       </td>
   </tr>
 </table>
