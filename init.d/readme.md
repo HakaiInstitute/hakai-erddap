@@ -1,1 +1,0 @@
-This folder regroups any scripts that are triggered on initialization of the ERDDAP instance
