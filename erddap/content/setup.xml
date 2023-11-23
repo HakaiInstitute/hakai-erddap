@@ -526,10 +526,10 @@ information.
       <strong>ERDDAP</strong>
       <br><small><small><small>Easier access to Hakai data</small></small></small>
       </td>
-    <td style="text-align:right; font-size:small;">
+    <td style="text-align:right; font-size:small; color: #FFFFFF; padding-right:20px;">
 <a id="complianceLink" href="" style="display:none">Compliance Results</a>      
       &loginInfo; &language; &nbsp; &nbsp;
-      <br style="color: #FFFFFF;">Brought to you by
+      <br>Brought to you by
     <a title="Hakai" rel="bookmark" href="http://www.hakai.org">Hakai</a>
       </td>
   </tr>
