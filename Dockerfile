@@ -11,7 +11,7 @@ COPY ./erddap/content /usr/local/tomcat/content/erddap
 # COPY ./init.d /init.d
 # COPY ./tomcatLogs /usr/local/tomcat/logs
 
-# ADD ./datasets.d /datasets.d
+COPY ./datasets.d /datasets.d
 # ADD /mnt/efs/algex /algae_explorer
 # ADD ${DATASETS_DIR:-./datasets} /datasets
 
