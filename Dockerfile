@@ -7,7 +7,7 @@ COPY ./erddap/content /usr/local/tomcat/content/erddap
 # COPY ./erddap/data /erddapData
 # COPY /tmp/ /usr/local/tomcat/temp/
 
-COPY --chown=tomcat:tomcat ./init.d /init.d
+COPY --chmod=+x ./init.d /init.d
 # COPY ./tomcatLogs /usr/local/tomcat/logs
 
 COPY ./datasets.d /datasets.d
