@@ -518,10 +518,10 @@ information.
   <!-- The standard startBodyHtml -->
   <startBodyHtml5><![CDATA[
 <body>
-<table class="compact nowrap" style="width:100%; height:150px; background-color:#aa2025;">
+<table class="compact nowrap" style="width:100%; background-color:#aa2025;">
   <tr>
     <td style="text-align:center; width:80px;"><a rel="bookmark" href="&erddapUrl;"><img
-    title="Hakai" src="&erddapUrl;/images/logo.png" alt="Hakai" style="vertical-align:middle;height: 50px;"></a></td>
+    title="Hakai" src="&erddapUrl;/images/logo.png" alt="Hakai" style="vertical-align:middle;height: 60px; padding: 20px;"></a></td>
     <td style="text-align:left; font-size:x-large; color:#FFFFFF; ">
       <strong>ERDDAP</strong>
       <br><small><small><small>Easier access to Hakai data</small></small></small>
