@@ -17,5 +17,5 @@ COPY ./init.d /init.d
 
 ENTRYPOINT ["/entrypoint.sh"]
 
-EXPOSE ${HOST_PORT}
+EXPOSE 8080
 CMD ["catalina.sh", "run"]
