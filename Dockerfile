@@ -1,7 +1,6 @@
 FROM --platform=linux/x86_64 axiom/docker-erddap:2.23-jdk17-openjdk
 
 RUN apt-get update
-RUN apt-get upgrade
 
 COPY ./erddap/conf/robots.txt /usr/local/tomcat/webapps/ROOT/robots.txt
 COPY ./erddap/content /usr/local/tomcat/content/erddap
