@@ -11,13 +11,14 @@ COPY ./erddap/content /usr/local/tomcat/content/erddap
 # COPY /tmp/ /usr/local/tomcat/temp/
 
 COPY ./init.d /init.d
-RUN chmod +x /init.d/*.sh
+RUN chmod a+x /init.d/*.sh
 # COPY ./tomcatLogs /usr/local/tomcat/logs
 
 COPY ./datasets.d /datasets.d
 # ADD /mnt/efs/algex /algae_explorer
 # ADD ${DATASETS_DIR:-./datasets} /datasets
 
+COPY ./entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 EXPOSE 8080
