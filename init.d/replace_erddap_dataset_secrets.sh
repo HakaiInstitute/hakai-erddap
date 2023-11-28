@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e
+
 # Replace secrets in dataset.xml by their corresponding 
 #  environment variables ERDDAP_SECRET_(.*)
 while read -r e; do
