@@ -1,3 +1,4 @@
+#!/bin/bash
 set -e
 
 # preferable to fire up Tomcat via start-tomcat.sh which will start Tomcat with
