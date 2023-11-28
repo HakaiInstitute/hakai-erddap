@@ -71,7 +71,7 @@ if [ "$1" = 'start-tomcat.sh' ] || [ "$1" = 'catalina.sh' ]; then
       for f in /init.d/*; do
         if [ -x "$f" ]; then
           echo "Executing $f"
-          "sh $f"
+          bash "$f"
         elif [[ $f == *.sh ]]; then
           echo "Sourcing $f (not executable)"
           . "$f"
