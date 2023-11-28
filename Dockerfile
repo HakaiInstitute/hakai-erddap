@@ -18,7 +18,6 @@ COPY ./datasets.d /datasets.d
 # ADD /mnt/efs/algex /algae_explorer
 # ADD ${DATASETS_DIR:-./datasets} /datasets
 
-COPY ./entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 EXPOSE 8080
