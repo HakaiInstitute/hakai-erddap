@@ -1,6 +1,6 @@
 FROM --platform=linux/x86_64 axiom/docker-erddap:2.23-jdk17-openjdk
 
-RUN apt-get update
+RUN apt-get update && apt-get install dos2unix
 
 COPY ./erddap/conf/robots.txt /usr/local/tomcat/webapps/ROOT/robots.txt
 COPY ./erddap/content /usr/local/tomcat/content/erddap
@@ -8,6 +8,9 @@ COPY ./erddap/content /usr/local/tomcat/content/erddap
 # COPY /tmp/ /usr/local/tomcat/temp/
 
 COPY ./init.d /init.d
+RUN chmod a+x /init.d/*.sh
+WORKDIR /init.d
+RUN dos2unix $(ls *.sh) 
 # COPY ./tomcatLogs /usr/local/tomcat/logs
 
 COPY ./datasets.d /datasets.d
