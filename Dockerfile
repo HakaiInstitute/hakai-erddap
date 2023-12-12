@@ -19,5 +19,10 @@ COPY ./datasets.d /datasets.d
 
 ENTRYPOINT ["/entrypoint.sh"]
 
+#healthcheck to check ERDDAP landing page. the check provides the added bonus
+#of triggering ERDDAP initialization before the first user visit
+HEALTHCHECK --interval=10s --timeout=10s --start-period=10s \  
+    CMD curl --fail http://localhost:8080/erddap/index.html || exit 1     
+
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
