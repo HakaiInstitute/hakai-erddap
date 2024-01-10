@@ -28,6 +28,6 @@ jobs:
           LOG_LEVEL: WARN
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Run erddap-checks
-        uses: hakaiinstitute/erddap-checks@0.1.4
+        uses: hakaiinstitute/erddap-checks@dev
         with:
           datasets_xml: datasets.d/**/*.xml
