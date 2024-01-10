@@ -25,5 +25,5 @@ jobs:
           VALIDATE_SHELL_SHFMT: true
           LOG_LEVEL: WARN
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Review dataset.d/*.xml file names = datasetIDs
-        run: sh .github/workflows/test-datasets.d.sh
+      - name: Run erddap-checks
+        uses: hakaiinstitute/erddap-checks
