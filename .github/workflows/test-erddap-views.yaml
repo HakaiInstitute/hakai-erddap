@@ -3,7 +3,7 @@ on:
   push:
     paths:
       - views/**
-    branch:
+    branches:
       - development
       - master
   pull_request:
