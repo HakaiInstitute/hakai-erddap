@@ -4,9 +4,11 @@ on:
     branches:
       - master
       - development
+      - caprover-deploy
     paths:
       - datasets.d/**
       - views/**
+      - .github/workflows/review-datasets.yml
 jobs:
   build:
     runs-on: ubuntu-latest
