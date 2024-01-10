@@ -9,9 +9,10 @@ on:
   pull_request:
     paths:
       - views/**
-    branch:
+    branches:
       - development
       - master
+    
 jobs:
   test:
     name: Test somemodule Go code
