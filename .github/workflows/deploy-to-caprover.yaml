@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Deploy to caprover
 
 on:
   # Runs on pushes targeting the default branch
@@ -30,7 +30,7 @@ jobs:
       - name: Install Caprover CLI
         run: npm install -g caprover
       - name: Tell Caprover server to deploy main
-        run: caprover deploy --caproverUrl https://captain.server.hakai.app --appToken ${{ secrets.CAPROVER_TOKEN_MAIN }} --branch 'master' --appName hakai-ctd-map
+        run: caprover deploy --caproverUrl https://captain.server.hakai.app --appToken ${{ secrets.CAPROVER_TOKEN_MAIN }} --branch 'master' --appName hakai-erddap
   deploy-development:
     if: github.ref == 'refs/heads/development'
     environment:
