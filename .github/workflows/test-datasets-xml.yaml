@@ -24,10 +24,11 @@ jobs:
           DEFAULT_BRANCH: master
           VALIDATE_XML: true
           VALIDATE_SQL: true
+          SQLFLUFF_CONFIG_FILE: .github/workflows/.sqlfluff
           VALIDATE_SHELL_SHFMT: true
           LOG_LEVEL: WARN
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Run erddap-checks
-        uses: hakaiinstitute/erddap-checks@main
+        uses: hakaiinstitute/erddap-deploy/test-datasets-xml@main
         with:
           datasets_xml: datasets.d/**/*.xml

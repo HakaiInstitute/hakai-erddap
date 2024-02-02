@@ -1,0 +1,37 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy to Caprover
+run-name: Deploy to {env.name} environment {env.url}
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: 
+      - master
+      - development
+      - caprover-*
+    paths:
+      - .github/workflows/deploy-to-caprover.yaml
+      - Dockerfile
+      - erddap
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install Caprover CLI
+        run: npm install -g caprover
+      - name: Tell Caprover server to deploy main
+        run: |
+          caprover deploy 
+          --caproverUrl ${{ secrets.CAPROVER_URL }} 
+          --appToken ${{ secrets.CAPROVER_TOKEN }} 
+          --branch ${{ github.head_ref || github.ref_name }}  
+          --appName ${{ secrets.CAPROVER_APP_NAME }}
