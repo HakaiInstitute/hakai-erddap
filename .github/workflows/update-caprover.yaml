@@ -15,4 +15,7 @@ jobs:
         uses: hakaiinstitute/erddap-deploy/update-datasets-xml@main
         with:
           datasets_xml: datasets.d/**/*.xml
+          recursive: ${{ secrets.datasets_xml_recursive || 'false' }}
+          container: srv-captain--${{ secrets.CAPROVER_APP_NAME }}
+
 
