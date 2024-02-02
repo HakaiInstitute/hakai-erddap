@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run erddap-checks
-        uses: hakaiinstitute/erddap-deploy/update-datasets-xml@main
+        uses: hakaiinstitute/erddap-deploy/actions/update@main
         with:
           datasets_xml: datasets.d/**/*.xml
           recursive: ${{ secrets.datasets_xml_recursive || 'false' }}
