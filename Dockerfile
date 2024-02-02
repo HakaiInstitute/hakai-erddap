@@ -1,19 +1,25 @@
 FROM --platform=linux/x86_64 axiom/docker-erddap:2.23-jdk17-openjdk
 
-RUN apt-get update && apt-get install dos2unix
+# Install related packages
+RUN apt-get update 
+RUN apt-get install -y git python3-pip
+RUN pip install git+https://github.com/HakaiInstitute/erddap-deploy.git
 
+# Copy ERDDAP configuration files
 COPY ./erddap/conf/robots.txt /usr/local/tomcat/webapps/ROOT/robots.txt
 COPY ./erddap/content /usr/local/tomcat/content/erddap
 # COPY ./erddap/data /erddapData
 # COPY /tmp/ /usr/local/tomcat/temp/
-
-COPY ./init.d /init.d
-RUN chmod a+x /init.d/*.sh
-WORKDIR /init.d
-RUN dos2unix $(ls *.sh) 
 # COPY ./tomcatLogs /usr/local/tomcat/logs
 
-COPY ./datasets.d /datasets.d
+# Copy repo locally and generate ERDDAP datasets.xml
+COPY . /datasets-repo
+ENV ERDDAP_DATASETS_REPO_DIR=/datasets-repo
+
+RUN erddap_deploy test
+RUN erddap_deploy sync
+
+# Mount data volumes
 # ADD /mnt/efs/algex /algae_explorer
 # ADD ${DATASETS_DIR:-./datasets} /datasets
 
