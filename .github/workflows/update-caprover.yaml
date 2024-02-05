@@ -15,6 +15,9 @@ jobs:
         uses: hakaiinstitute/erddap-deploy/actions/update@main
         with:
           datasets_xml: datasets.d/**/*.xml
+          ssh_host: ${{ secrets.CAPROVER_HOST }}
+          ssh_user: ${{ secrets.CAPROVER_USER }}
+          ssh_key: ${{ secrets.CAPROVER_KEY }}
           recursive: ${{ secrets.datasets_xml_recursive || false }}
           container: srv-captain--${{ secrets.CAPROVER_APP_NAME }}
 
