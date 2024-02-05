@@ -1,5 +1,5 @@
 name: Update ERDDAP datasets.xml
-name-run: Update ${{ vars.NAME }} datasets.xml at ${{ vars.URL }}
+run-name: Update ${{ vars.NAME }} datasets.xml at ${{ vars.URL }}
 on:
   push:
     branches:
