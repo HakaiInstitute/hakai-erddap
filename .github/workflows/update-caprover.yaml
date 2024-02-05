@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: caprover-dev
     steps:
-      - name: Run `erddap-deploy update action` on  ${{ vars.NAME }} at  ${{ vars.URL }}
+      - name: Run `erddap-deploy update action` on  ${{ secrets.CAPROVER_APP_NAME }} at  ${{ vars.URL }}
         uses: hakaiinstitute/erddap-deploy/actions/update@main
         with:
           datasets_xml: datasets.d/**/*.xml
@@ -21,7 +21,7 @@ jobs:
           ssh_key: ${{ secrets.SSH_KEY }}
           ssh_port: ${{ secrets.SSH_PORT }}
           recursive: ${{ secrets.datasets_xml_recursive || false }}
-          container_name: srv-captain--${{ vars.name }}
+          container_name: srv-captain--${{ secrets.CAPROVER_APP_NAME }}
           hard_flag: true
           branch: ${{ github.ref }}
 
