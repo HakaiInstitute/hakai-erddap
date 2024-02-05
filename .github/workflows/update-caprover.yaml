@@ -16,11 +16,11 @@ jobs:
         with:
           datasets_xml: datasets.d/**/*.xml
           ssh_host: ${{ secrets.SSH_HOST }}
-          ssh_user: ${{ secrets.SSH_USER }}
+          ssh_username: ${{ secrets.SSH_USERNAME }}
           ssh_key: ${{ secrets.SSH_KEY }}
           ssh_port: ${{ secrets.SSH_PORT }}
           recursive: ${{ secrets.datasets_xml_recursive || false }}
-          container: srv-captain--${{ secrets.CAPROVER_APP_NAME }}
+          container_name: srv-captain--${{ secrets.CAPROVER_APP_NAME }}
           hard_flag: true
           branch: ${{ github.ref }}
 
