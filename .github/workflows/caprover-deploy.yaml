@@ -13,6 +13,7 @@ on:
       - .github/workflows/deploy-to-caprover.yaml
       - Dockerfile
       - erddap
+  workflow_dispatch:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
