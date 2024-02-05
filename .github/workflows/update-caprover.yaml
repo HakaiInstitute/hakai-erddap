@@ -1,5 +1,5 @@
 name: Update ERDDAP datasets xml
-run-name: Update {env.name} datasets xml {env.url}
+run-name: Update {vars.name} datasets xml on {vars.url}
 on:
   push:
     branches:
@@ -11,7 +11,7 @@ jobs:
     name: Update container datasets-xml 
     runs-on: ubuntu-latest
     steps:
-      - name: Run erddap-checks
+      - name: Run erddap-deploy update action
         uses: hakaiinstitute/erddap-deploy/actions/update@main
         with:
           datasets_xml: datasets.d/**/*.xml
@@ -20,7 +20,7 @@ jobs:
           ssh_key: ${{ secrets.SSH_KEY }}
           ssh_port: ${{ secrets.SSH_PORT }}
           recursive: ${{ secrets.datasets_xml_recursive || false }}
-          container_name: srv-captain--${{ secrets.CAPROVER_APP_NAME }}
+          container_name: srv-captain--${{ vars.name }}
           hard_flag: true
           branch: ${{ github.ref }}
 
