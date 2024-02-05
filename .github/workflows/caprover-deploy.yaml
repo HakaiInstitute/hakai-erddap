@@ -32,5 +32,5 @@ jobs:
           caprover deploy 
           --caproverUrl ${{ secrets.CAPROVER_URL }} 
           --appToken ${{ secrets.CAPROVER_TOKEN }} 
-          --branch ${{ github.head_ref || github.ref_name }}  
+          --branch ${{ github.ref_name }}  
           --appName ${{ secrets.CAPROVER_APP_NAME }}
