@@ -1,5 +1,5 @@
-name: Update ERDDAP datasets xml
-run-name: Update ${{ vars.NAME }} datasets xml on ${{ vars.URL }}
+name: Update ERDDAP datasets.xml
+
 on:
   push:
     branches:
@@ -11,7 +11,7 @@ jobs:
     name: Update container datasets-xml 
     runs-on: ubuntu-latest
     steps:
-      - name: Run erddap-deploy update action
+      - name: Run erddap-deploy update action on  ${{ vars.NAME }} at  ${{ vars.URL }}
         uses: hakaiinstitute/erddap-deploy/actions/update@main
         with:
           datasets_xml: datasets.d/**/*.xml
