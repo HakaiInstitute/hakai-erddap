@@ -1,5 +1,5 @@
 name: Update ERDDAP datasets.xml
-run-name: Update ${{github.repository}} ${{ github.ref_name }} datasets.xml on caprover server
+run-name: Update ${{github.repository}}[${{ github.ref_name }}] datasets.xml on caprover server
 on:
   push:
     branches:
@@ -12,7 +12,7 @@ jobs:
     name: Update container datasets-xml 
     runs-on: ubuntu-latest
     environment: 
-      name: ${{ startsWith(github.ref, 'caprover-') && 'caprover-deploy' || github.ref == 'development' && 'development' || github.ref == 'master' && 'production' }}
+      name: ${{ startsWith(github.ref_name, 'caprover-') && 'caprover-deploy' || github.ref_name == 'development' && 'development' || github.ref_name == 'master' && 'production' }}
       url: ${{ vars.URL }}
 
     steps:
