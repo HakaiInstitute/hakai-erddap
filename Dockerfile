@@ -14,18 +14,23 @@ COPY ./erddap/content /usr/local/tomcat/content/erddap
 # COPY ./tomcatLogs /usr/local/tomcat/logs
 
 # Copy repo locally and generate ERDDAP datasets.xml
-ADD . /datasets-repo
+COPY . /datasets-repo
+COPY .git /datasets-repo/.git
+
+ARG ERDDAP_DATASETS_XML=${ERDDAP_DATASETS_XML}
+ARG ERDDAP_RECURSIVE=${ERDDAP_RECURSIVE}
+
+ENV ERDDAP_DATASETS_XML=${ERDDAP_DATASETS_XML}
+ENV ERDDAP_RECURSIVE=${ERDDAP_RECURSIVE}
 ENV ERDDAP_LOCAL_REPO_PATH=/datasets-repo
-ENV ERDDAP_DATASETS_XML=$ERDDAP_DATASETS_XML
-ENV ERDDAP_RECURSIVE=$ERDDAP_RECURSIVE
 
 RUN echo "ERDDAP_LOCAL_REPO_PATH=$ERDDAP_LOCAL_REPO_PATH"
 RUN echo "ERDDAP_DATASETS_XML=$ERDDAP_DATASETS_XML"
 RUN echo "ERDDAP_RECURSIVE=$ERDDAP_RECURSIVE"
 
 # Deploy ERDDAP datasets.xml
-RUN erddap_deploy --datasets-xml ${ERDDAP_DATASETS_XML} --recursive ${ERDDAP_RECURSIVE} test
-RUN erddap_deploy --datasets-xml ${ERDDAP_DATASETS_XML} --recursive ${ERDDAP_RECURSIVE} sync --local-repo-path ${ERDDAP_LOCAL_REPO_PATH}
+RUN erddap_deploy test
+RUN erddap_deploy sync 
 
 # Mount data volumes
 # ADD /mnt/efs/algex /algae_explorer
