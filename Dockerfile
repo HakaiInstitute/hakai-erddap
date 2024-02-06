@@ -4,7 +4,7 @@ FROM --platform=linux/x86_64 axiom/docker-erddap:2.23-jdk17-openjdk
 RUN apt-get update 
 RUN apt-get install -y git python3-pip
 ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
-RUN pip install git+https://github.com/HakaiInstitute/erddap-deploy.git
+RUN pip install git+https://github.com/HakaiInstitute/erddap-deploy.git@main
 
 # Copy ERDDAP configuration files
 COPY ./erddap/conf/robots.txt /usr/local/tomcat/webapps/ROOT/robots.txt
@@ -19,7 +19,8 @@ ENV ERDDAP_DATASETS_REPO_DIR=/datasets-repo
 ENV ERDDAP_DATASETS_XML=/datasets-repo/datasets.d/**/*.xml
 
 # Deploy ERDDAP datasets.xml
-WORKDIR / 
+ENV ERDDAP_DATASETS_XML=$ERDDAP_DATASETS_XML
+ENV ERDDAP_RECURSIVE=$ERDDAP_RECURSIVE
 RUN erddap_deploy test
 RUN erddap_deploy sync
 
