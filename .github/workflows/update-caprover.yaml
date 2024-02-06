@@ -1,18 +1,22 @@
 name: Update ERDDAP datasets.xml
-run-name: Update ${{ vars.NAME }} datasets.xml at ${{ vars.URL }}
+run-name: Update ${{github.repository}} ${{ github.ref_name }} datasets.xml on caprover server
 on:
   push:
     branches:
       - master
       - development
       - caprover-*
+
 jobs:
   update:
     name: Update container datasets-xml 
     runs-on: ubuntu-latest
-    environment: caprover-dev
+    environment: 
+      name: ${{ startsWith(github.ref, 'caprover-') && 'caprover-deploy' || github.ref == 'development' && 'development' || github.ref == 'master' && 'production' }}
+      url: ${{ vars.URL }}
+
     steps:
-      - name: Run `erddap-deploy update action` on  ${{ secrets.CAPROVER_APP_NAME }} at  ${{ vars.URL }}
+      - name: Run `erddap-deploy update action` on  ${{ vars.NAME }} at  ${{ vars.URL }}
         uses: hakaiinstitute/erddap-deploy/actions/update@main
         with:
           datasets_xml: datasets.d/**/*.xml

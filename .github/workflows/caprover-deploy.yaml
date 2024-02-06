@@ -1,7 +1,6 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy to Caprover
-run-name: Deploy to {env.name} environment {env.url}
-
+name: Caprover Deploy
+run-name: Caprover Deploy ${{github.ref}}
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -27,7 +26,7 @@ jobs:
           node-version: 16
       - name: Install Caprover CLI
         run: npm install -g caprover
-      - name: Tell Caprover server to deploy main
+      - name: Tell ${{ secrets.CAPROVER_URL }} server to deploy ${{ github.ref_name }} on ${{ secrets.CAPROVER_APP_NAME }}
         run: |
           caprover deploy 
           --caproverUrl ${{ secrets.CAPROVER_URL }} 
