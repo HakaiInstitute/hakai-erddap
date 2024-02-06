@@ -15,7 +15,6 @@ COPY ./erddap/content /usr/local/tomcat/content/erddap
 
 # Copy repo locally and generate ERDDAP datasets.xml
 COPY . /datasets-repo
-COPY .git /datasets-repo/.git
 
 ARG ERDDAP_DATASETS_XML=${ERDDAP_DATASETS_XML}
 ARG ERDDAP_RECURSIVE=${ERDDAP_RECURSIVE}
