@@ -21,15 +21,23 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v3
+      - name: Compress repo to a tar file step
+        uses: a7ul/tar-action@v1.1.0
+        id: compress
+        with:
+          command: cvf
+          cwd: .
+          files: .
+          outPath: packaged.tar
       - uses: actions/setup-node@v3
         with:
           node-version: 16
       - name: Install Caprover CLI
         run: npm install -g caprover
-      - name: Tell ${{ secrets.CAPROVER_URL }} server to deploy ${{ github.ref_name }} on ${{ secrets.CAPROVER_APP_NAME }}
+      - name: Deploy ${{ github.ref_name }} on ${{ secrets.CAPROVER_APP_NAME }}
         run: |
           caprover deploy 
           --caproverUrl ${{ secrets.CAPROVER_URL }} 
           --appToken ${{ secrets.CAPROVER_TOKEN }} 
-          --branch ${{ github.ref_name }}  
           --appName ${{ secrets.CAPROVER_APP_NAME }}
+          --tarFile packaged.tar
