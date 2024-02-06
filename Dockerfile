@@ -14,13 +14,16 @@ COPY ./erddap/content /usr/local/tomcat/content/erddap
 # COPY ./tomcatLogs /usr/local/tomcat/logs
 
 # Copy repo locally and generate ERDDAP datasets.xml
-COPY . /datasets-repo
-ENV ERDDAP_DATASETS_REPO_DIR=/datasets-repo
-ENV ERDDAP_DATASETS_XML=/datasets-repo/datasets.d/**/*.xml
-
-# Deploy ERDDAP datasets.xml
+ADD . /datasets-repo
+ENV ERDDAP_LOCAL_REPO_PATH=/datasets-repo
 ENV ERDDAP_DATASETS_XML=$ERDDAP_DATASETS_XML
 ENV ERDDAP_RECURSIVE=$ERDDAP_RECURSIVE
+
+RUN echo "ERDDAP_LOCAL_REPO_PATH=$ERDDAP_LOCAL_REPO_PATH"
+RUN echo "ERDDAP_DATASETS_XML=$ERDDAP_DATASETS_XML"
+RUN echo "ERDDAP_RECURSIVE=$ERDDAP_RECURSIVE"
+
+# Deploy ERDDAP datasets.xml
 RUN erddap_deploy test
 RUN erddap_deploy sync
 
