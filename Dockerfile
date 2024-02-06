@@ -16,8 +16,9 @@ COPY ./erddap/content /usr/local/tomcat/content/erddap
 # Copy repo locally and generate ERDDAP datasets.xml
 COPY . /datasets-repo
 ENV ERDDAP_DATASETS_REPO_DIR=/datasets-repo
+ENV ERDDAP_DATASETS_XML=/datasets-repo/datasets.d/**/*.xml
 
-# RUN erddap_deploy test
+RUN erddap_deploy test
 RUN erddap_deploy sync
 
 # Mount data volumes
