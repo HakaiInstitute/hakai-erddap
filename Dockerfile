@@ -24,8 +24,8 @@ RUN echo "ERDDAP_DATASETS_XML=$ERDDAP_DATASETS_XML"
 RUN echo "ERDDAP_RECURSIVE=$ERDDAP_RECURSIVE"
 
 # Deploy ERDDAP datasets.xml
-RUN erddap_deploy test
-RUN erddap_deploy sync
+RUN erddap_deploy --datasets-xml ${ERDDAP_DATASETS_XML} --recursive ${ERDDAP_RECURSIVE} test
+RUN erddap_deploy --datasets-xml ${ERDDAP_DATASETS_XML} --recursive ${ERDDAP_RECURSIVE} sync --local-repo-path ${ERDDAP_LOCAL_REPO_PATH}
 
 # Mount data volumes
 # ADD /mnt/efs/algex /algae_explorer
