@@ -17,7 +17,7 @@ COPY ./erddap/content /usr/local/tomcat/content/erddap
 COPY . /datasets-repo
 ENV ERDDAP_DATASETS_REPO_DIR=/datasets-repo
 
-RUN erddap_deploy test
+# RUN erddap_deploy test
 RUN erddap_deploy sync
 
 # Mount data volumes
