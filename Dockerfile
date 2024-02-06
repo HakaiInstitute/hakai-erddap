@@ -19,7 +19,6 @@ ENV ERDDAP_DATASETS_REPO_DIR=/datasets-repo
 ENV ERDDAP_DATASETS_XML=/datasets-repo/datasets.d/**/*.xml
 
 # Deploy ERDDAP datasets.xml
-RUN rm -rf /usr/local/tomcat/content/erddap/datasets.xml
 RUN erddap_deploy test
 RUN erddap_deploy sync
 
