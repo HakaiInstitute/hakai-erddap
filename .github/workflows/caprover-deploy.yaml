@@ -25,7 +25,7 @@ jobs:
         uses: a7ul/tar-action@v1.1.0
         id: compress
         with:
-          command: cvf
+          command: c
           cwd: .
           files: .
           outPath: packaged.tar
