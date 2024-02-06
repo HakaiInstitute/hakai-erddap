@@ -19,6 +19,7 @@ ENV ERDDAP_DATASETS_REPO_DIR=/datasets-repo
 ENV ERDDAP_DATASETS_XML=/datasets-repo/datasets.d/**/*.xml
 
 # Deploy ERDDAP datasets.xml
+WORKDIR / 
 RUN erddap_deploy test
 RUN erddap_deploy sync
 
