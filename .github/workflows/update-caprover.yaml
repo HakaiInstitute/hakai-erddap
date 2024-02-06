@@ -12,7 +12,7 @@ jobs:
     name: Update container datasets-xml 
     runs-on: ubuntu-latest
     environment: 
-      name: ${{ startsWith(github.ref_name, 'caprover-') && 'caprover-deploy' || github.ref_name == 'development' && 'development' || github.ref_name == 'master' && 'production' }}
+      name: ${{ startsWith(github.ref_name, 'caprover-') && 'caprover-dev' || github.ref_name == 'development' && 'development' || github.ref_name == 'master' && 'production' }}
       url: ${{ vars.URL }}
 
     steps:
