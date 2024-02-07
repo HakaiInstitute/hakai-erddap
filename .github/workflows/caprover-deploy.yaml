@@ -9,7 +9,7 @@ on:
       - development
       - caprover-*
     paths:
-      - .github/workflows/deploy-to-caprover.yaml
+      - .github/workflows/caprover-deploy.yaml
       - Dockerfile
       - erddap
   workflow_dispatch:
