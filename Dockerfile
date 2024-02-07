@@ -3,24 +3,17 @@ FROM --platform=linux/x86_64 axiom/docker-erddap:2.23-jdk17-openjdk
 # Install related packages
 RUN apt-get update 
 RUN apt-get install -y git python3-pip
-ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 RUN pip install git+https://github.com/HakaiInstitute/erddap-deploy.git@main
 
 # Copy ERDDAP configuration files
 COPY ./erddap/conf/robots.txt /usr/local/tomcat/webapps/ROOT/robots.txt
 COPY ./erddap/content /usr/local/tomcat/content/erddap
-# COPY ./erddap/data /erddapData
-# COPY /tmp/ /usr/local/tomcat/temp/
-# COPY ./tomcatLogs /usr/local/tomcat/logs
+
 
 # Copy repo locally and generate ERDDAP datasets.xml
 ARG ERDDAP_DATASETS_REPO_DIR=${ERDDAP_DATASETS_REPO_DIR:-/datasets-repo}
 COPY . ${ERDDAP_DATASETS_REPO_DIR}
 COPY init.d /init.d
-
-# Mount data volumes
-# ADD /mnt/efs/algex /algae_explorer
-# ADD ${DATASETS_DIR:-./datasets} /datasets
 
 ENTRYPOINT ["/entrypoint.sh"]
 
