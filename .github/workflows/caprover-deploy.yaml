@@ -19,6 +19,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    environment: 
+      name: ${{ startsWith(github.ref_name, 'caprover-') && 'caprover-dev' || github.ref_name == 'development' && 'development' || github.ref_name == 'master' && 'production' }}
+      url: ${{ vars.URL }}
     steps:
       - uses: actions/checkout@v3
       - name: Compress repo to a tar file step
@@ -29,9 +32,8 @@ jobs:
           cwd: .
           files: .
           outPath: packaged.tar
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
+      - name: Compress repo to a tar file step
+        run: tar -cvf packaged.tar .
       - name: Install Caprover CLI
         run: npm install -g caprover
       - name: Deploy ${{ github.ref_name }} on ${{ secrets.CAPROVER_APP_NAME }}
