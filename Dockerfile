@@ -3,7 +3,7 @@ FROM --platform=linux/x86_64 axiom/docker-erddap:2.23-jdk17-openjdk
 # Install related packages
 RUN apt-get update 
 RUN apt-get install -y git python3-pip
-RUN pip install git+https://github.com/HakaiInstitute/erddap-deploy.git@main
+RUN pip install git+https://github.com/HakaiInstitute/erddap-deploy.git@v1.1.0
 
 # Copy ERDDAP configuration files
 COPY ./erddap/conf/robots.txt /usr/local/tomcat/webapps/ROOT/robots.txt
