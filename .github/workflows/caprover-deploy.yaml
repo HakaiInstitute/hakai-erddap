@@ -25,14 +25,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Compress repo to a tar file step
-        uses: a7ul/tar-action@v1.1.0
-        id: compress
-        with:
-          command: c
-          cwd: .
-          files: .
-          outPath: packaged.tar
-      - name: Compress repo to a tar file step
         run: tar -cvf packaged.tar .
       - name: Install Caprover CLI
         run: npm install -g caprover
@@ -40,6 +32,6 @@ jobs:
         run: |
           caprover deploy 
           --caproverUrl ${{ secrets.CAPROVER_URL }} 
+          --caproverApp ${{ secrets.CAPROVER_APP_NAME }}
           --appToken ${{ secrets.CAPROVER_TOKEN }} 
-          --appName ${{ secrets.CAPROVER_APP_NAME }}
           --tarFile packaged.tar
