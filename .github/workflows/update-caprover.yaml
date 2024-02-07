@@ -1,5 +1,5 @@
 name: Update ERDDAP datasets.xml
-run-name: Update ${{github.repository}}[${{ github.ref_name }}] datasets.xml on caprover server
+run-name: Update ${{github.repository}}[${{ github.ref_name }}] datasets.xml on deployment
 on:
   push:
     branches:
@@ -19,14 +19,11 @@ jobs:
       - name: Run `erddap-deploy update action` on  ${{ vars.NAME }} at  ${{ vars.URL }}
         uses: hakaiinstitute/erddap-deploy/actions/update@main
         with:
-          datasets_xml: /datasets-repo/datasets.d/**/*.xml
           ssh_host: ${{ secrets.SSH_HOST }}
           ssh_username: ${{ secrets.SSH_USERNAME }}
           ssh_key: ${{ secrets.SSH_KEY }}
           ssh_port: ${{ secrets.SSH_PORT }}
-          recursive: ${{ secrets.ERDDAP_RECURSIVE || false }}
-          container_name: srv-captain--${{ secrets.CAPROVER_APP_NAME }}
+          container_name: srv-captain--${{ vars.CAPROVER_APP_NAME }}
           hard_flag: true
-          branch: ${{ github.ref }}
 
 

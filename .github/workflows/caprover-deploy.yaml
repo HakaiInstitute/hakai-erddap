@@ -1,6 +1,6 @@
 # Simple workflow for deploying static content to GitHub Pages
 name: Caprover Deploy
-run-name: Caprover Deploy ${{github.ref}}
+run-name: Caprover Deploy ${{ github.ref_name }}
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -28,10 +28,10 @@ jobs:
         run: tar -cvf packaged.tar .
       - name: Install Caprover CLI
         run: npm install -g caprover
-      - name: Deploy ${{ github.ref_name }} on ${{ secrets.CAPROVER_APP_NAME }}
+      - name: Deploy ${{ github.ref_name }} on ${{ vars.URL }}
         run: |
           caprover deploy \
-          --caproverUrl ${{ secrets.CAPROVER_URL }} \
-          --caproverApp ${{ secrets.CAPROVER_APP_NAME }} \
+          --caproverUrl ${{ vars.CAPROVER_URL }} \
+          --caproverApp ${{ vars.CAPROVER_APP_NAME }} \
           --appToken ${{ secrets.CAPROVER_TOKEN }} \
           --tarFile packaged.tar
