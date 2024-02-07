@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Run `erddap-deploy update action` on  ${{ vars.NAME }} at  ${{ vars.URL }}
-        uses: hakaiinstitute/erddap-deploy/actions/update@main
+        uses: hakaiinstitute/erddap-deploy/actions/update@v1
         with:
           ssh_host: ${{ secrets.SSH_HOST }}
           ssh_username: ${{ secrets.SSH_USERNAME }}
