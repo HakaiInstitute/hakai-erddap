@@ -29,6 +29,6 @@ jobs:
           LOG_LEVEL: WARN
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Run erddap_deploy test
-        uses: hakaiinstitute/erddap-deploy/actions/test@v1.1.0
+        uses: hakaiinstitute/erddap-deploy/actions/test@v1
         with:
           datasets_xml: datasets.d/**/*.xml
