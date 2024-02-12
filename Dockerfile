@@ -3,6 +3,8 @@ FROM --platform=linux/x86_64 axiom/docker-erddap:2.23-jdk17-openjdk
 # Install related packages
 RUN apt-get update 
 RUN apt-get install -y git python3-pip
+# do not cache erddap-deploy
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 RUN pip install git+https://github.com/HakaiInstitute/erddap-deploy.git@v1.2.1
 
 # Copy ERDDAP configuration files
