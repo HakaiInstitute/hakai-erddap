@@ -5,7 +5,7 @@ RUN apt-get update
 RUN apt-get install -y git python3-pip
 # do not cache erddap-deploy
 ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
-RUN pip install git+https://github.com/HakaiInstitute/erddap-deploy.git@v1.2.6
+RUN pip install git+https://github.com/HakaiInstitute/erddap-deploy.git@v1.2.8
 
 # Copy ERDDAP configuration files
 COPY ./erddap/conf/robots.txt /usr/local/tomcat/webapps/ROOT/robots.txt
