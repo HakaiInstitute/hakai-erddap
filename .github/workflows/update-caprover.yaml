@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Run `erddap-deploy update action` on  ${{ vars.NAME }} at  ${{ vars.URL }}
-        uses: hakaiinstitute/erddap-deploy/actions/remote/update@v1
+        uses: hakaiinstitute/erddap-deploy/actions/remote/update
         with:
           ssh_host: ${{ secrets.SSH_HOST }}
           ssh_username: ${{ secrets.SSH_USERNAME }}
@@ -27,7 +27,7 @@ jobs:
           hard_flag: true
           repo: https://github.com/HakaiInstitute/hakai-datasets.git/
       - name: Run `erddap-deploy monitor action` on  ${{ vars.NAME }} at  ${{ vars.URL }}
-        uses: hakaiinstitute/erddap-deploy/actions/remote/monitor@v1
+        uses: hakaiinstitute/erddap-deploy/actions/remote/monitor
         with:
           ssh_host: ${{ secrets.SSH_HOST }}
           ssh_username: ${{ secrets.SSH_USERNAME }}
