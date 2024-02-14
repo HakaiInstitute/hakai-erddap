@@ -12,6 +12,7 @@ on:
       - .github/workflows/caprover-deploy.yaml
       - Dockerfile
       - erddap
+      - .github/workflows/*
   workflow_dispatch:
     
 jobs:
