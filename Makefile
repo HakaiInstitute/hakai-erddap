@@ -1,6 +1,6 @@
 include .env
 
-container_name ?= $(or $(CONTAINER_NAME),hakai-erddap-caprover)
+container_name ?= $(or $(CONTAINER_NAME),erddap)
 
 build:
 	docker build -t $(container_name) .
