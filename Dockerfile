@@ -16,7 +16,6 @@ COPY ./erddap/content /usr/local/tomcat/content/erddap
 ARG ERDDAP_DATASETS_REPO_DIR=${ERDDAP_DATASETS_REPO_DIR:-/datasets-repo}
 COPY . ${ERDDAP_DATASETS_REPO_DIR}
 COPY init.d /init.d
-COPY ~/.ssh /root/.ssh
 
 ENTRYPOINT ["/entrypoint.sh"]
 

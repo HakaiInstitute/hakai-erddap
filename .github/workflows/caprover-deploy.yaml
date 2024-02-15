@@ -25,6 +25,8 @@ jobs:
       url: ${{ vars.URL }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Compress repo to a tar file step
         run: tar -cvf packaged.tar .
       - name: Install Caprover CLI
