@@ -26,8 +26,6 @@ jobs:
           container_name: srv-captain--${{ vars.CAPROVER_APP_NAME }}
           hard_flag: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          token_username: ${{ github.actor }}
-          repo: https://github.com/HakaiInstitute/hakai-datasets.git/
       - name: Run `erddap-deploy monitor action` on  ${{ vars.NAME }} at  ${{ vars.URL }}
         uses: hakaiinstitute/erddap-deploy/actions/remote/monitor@main
         with:

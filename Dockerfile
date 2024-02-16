@@ -10,11 +10,6 @@ RUN pip install git+https://github.com/HakaiInstitute/erddap-deploy.git
 # Copy ERDDAP configuration files
 COPY ./erddap/conf/robots.txt /usr/local/tomcat/webapps/ROOT/robots.txt
 COPY ./erddap/content /usr/local/tomcat/content/erddap
-
-
-# Copy repo locally and generate ERDDAP datasets.xml
-ARG ERDDAP_DATASETS_REPO_DIR=${ERDDAP_DATASETS_REPO_DIR:-/datasets-repo}
-COPY . ${ERDDAP_DATASETS_REPO_DIR}
 COPY init.d /init.d
 
 ENTRYPOINT ["/entrypoint.sh"]
