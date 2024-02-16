@@ -1,5 +1,5 @@
-name: Test on repository
-run-name: Test ${{ github.ref_name }}
+name: Test on PR datasets
+run-name: Test PR branch:${{ github.head_ref }} -> ${{ github.base_ref}}
 on:
   pull_request:
     branches:
