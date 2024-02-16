@@ -39,7 +39,9 @@ The present repository is handled via CapRovers Applications. To configure a dep
 
 ### Testing environment
 
-For local development, make a copy of `sample.env` file as `.env`. Update the environment variables to match the deployed parameters. Omit perhaps the email parameters.
+For local development, make a copy of `sample.env` file as `.env`.
+Update the environment variables to match the deployed parameters.
+Omit the email parameters and baseHttpsUrl and baseUrl.
 
 Add test files if needed within the `datasets/` directory.
 
@@ -55,7 +57,7 @@ If successful, you should be able to access your local ERDDAP instance at <http:
 All views and tables generated from the different SQL queries made available in the `view` directory are run nightly from the hecate.hakai.org server from the master branch.
 
 ## Continuous Integration
-All commits to this repository are tested by different linters through a PR or commit to the development and master branches:
+All commits to this repository are tested by different linter through a PR or commit to the development and master branches:
 - python: black, isort
 - sql: sqlfluff
 - markdown
