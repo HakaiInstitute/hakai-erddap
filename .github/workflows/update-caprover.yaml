@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Run `erddap-deploy update action` on  ${{ vars.NAME }} at  ${{ vars.URL }}
-        uses: hakaiinstitute/erddap-deploy/actions/remote/update@main
+        uses: hakaiinstitute/erddap-deploy/sync@main
         with:
           ssh_host: ${{ secrets.SSH_HOST }}
           ssh_username: ${{ secrets.SSH_USERNAME }}
@@ -25,13 +25,6 @@ jobs:
           ssh_port: ${{ secrets.SSH_PORT }}
           container_name: srv-captain--${{ vars.CAPROVER_APP_NAME }}
           hard_flag: true
-      - name: Run `erddap-deploy monitor action` on  ${{ vars.NAME }} at  ${{ vars.URL }}
-        uses: hakaiinstitute/erddap-deploy/actions/remote/monitor@main
-        with:
-          ssh_host: ${{ secrets.SSH_HOST }}
-          ssh_username: ${{ secrets.SSH_USERNAME }}
-          ssh_key: ${{ secrets.SSH_KEY }}
-          ssh_port: ${{ secrets.SSH_PORT }}
-          container_name: srv-captain--${{ vars.CAPROVER_APP_NAME }}
+          monitor: true
 
 
