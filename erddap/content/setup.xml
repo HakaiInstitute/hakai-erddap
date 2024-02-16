@@ -180,12 +180,12 @@ Prevent mass mailing worms from sending mail" is un-checked.
   <!-- Information about the ERDDAP administrator is used for the SOS and WMS servers.
 You MUST CHANGE these to describe your installation.
 -->
-  <adminInstitution>CIOOS Pacific</adminInstitution>
-  <adminInstitutionUrl>https://cioospacific.ca/</adminInstitutionUrl>
-  <adminIndividualName>CIOOS Pacific Group</adminIndividualName>
+  <adminInstitution>CIOOS</adminInstitution>
+  <adminInstitutionUrl>https://cioos.ca/</adminInstitutionUrl>
+  <adminIndividualName>CIOOS</adminIndividualName>
   <adminPosition>IT</adminPosition>
   <adminPhone>555-555-5555</adminPhone>
-  <adminAddress>303-1100 Island Hwy</adminAddress>
+  <adminAddress>303-1100 Island Hwy</adminAddres s>
   <adminCity>Campbell River</adminCity>
   <adminStateOrProvince>BC</adminStateOrProvince>
   <adminPostalCode>V9W 8C7</adminPostalCode>
