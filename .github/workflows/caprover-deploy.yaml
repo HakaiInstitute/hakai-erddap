@@ -10,7 +10,8 @@ on:
       - caprover-*
     paths:
       - Dockerfile
-      - erddap
+      - erddap/*
+      - .github/workflows/*
   workflow_dispatch:
     
 jobs:
