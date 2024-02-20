@@ -17,7 +17,6 @@ services:
       - "./erddap/content:/usr/local/tomcat/content/erddap"
       - "./erddap/data:/erddapData"
       - "${DATASETS_DIR:-./datasets}:/datasets"
-      - ".:/datasets-repo:ro"
       - "./init.d:/init.d"
     healthcheck:
       test:
@@ -25,6 +24,6 @@ services:
           "CMD",
           "curl",
           "-f",
-          "http://localhost:8080/erddap/index.html"
+          "http://localhost:${HOST_PORT}/erddap/index.html"
         ]
       interval: 10s
