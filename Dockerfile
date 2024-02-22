@@ -3,6 +3,7 @@ FROM --platform=linux/x86_64 axiom/docker-erddap:2.23-jdk17-openjdk
 # Install related packages
 RUN apt-get update 
 RUN apt-get install -y git python3-pip
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 RUN pip install git+https://github.com/HakaiInstitute/erddap-deploy.git@v1
 
 ARG HOST_PORT=${HOST_PORT:-8080}
