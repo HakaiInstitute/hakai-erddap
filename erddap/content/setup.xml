@@ -362,8 +362,9 @@ a similar number of pixels wide and high.
   <highResLogoImageFile>noaa_simple.gif</highResLogoImageFile>
   <lowResLogoImageFile>noaa20.gif</lowResLogoImageFile>
   <googleEarthLogoFile>nlogo.gif</googleEarthLogoFile>
-  <!-- <questionMarkImageFile>QuestionMark.jpg</questionMarkImageFile> -->
-
+  <questionMarkImageFile>question-mark-fill.svg</questionMarkImageFile>
+  <rssImageFile>rss.svg</rssImageFile>  
+  <envelopeImageFile>envelope-fill.svg</envelopeImageFile>
   <!-- The font family to be used for all of the text in images.
 "SansSerif" (the default) is always a valid and reasonable option.
 A list of valid font families is printed to the log by the SGT constructor.
