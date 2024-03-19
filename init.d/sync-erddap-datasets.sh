@@ -1,2 +1,5 @@
 #!/bin/bash
-erddap_deploy sync
+
+if [[ -n $ERDDAP_DATASETS_REPO_URL ]]; then
+    erddap_deploy sync
+fi
