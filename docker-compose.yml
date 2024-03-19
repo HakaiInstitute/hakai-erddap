@@ -2,9 +2,7 @@
 version: "2"
 services:
   erddap:
-    build: 
-      context: .
-      dockerfile: Dockerfile
+    image: "axiom/docker-erddap:2.23-jdk17-openjdk"
     restart: always
     container_name: ${CONTAINER_NAME:-erddap}
     platform: linux/x86_64
@@ -18,6 +16,7 @@ services:
       - "./erddap/data:/erddapData"
       - "${DATASETS_DIR:-./datasets}:/datasets"
       - "./init.d:/init.d"
+      - "./datasets.d:/datasets.d"
     healthcheck:
       test:
         [
