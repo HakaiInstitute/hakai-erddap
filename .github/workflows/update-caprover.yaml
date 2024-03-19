@@ -1,5 +1,5 @@
-name: Update ERDDAP datasets.xml
-run-name: Update ${{github.repository}}[${{ github.ref_name }}] datasets.xml on deployment
+name: Synchronize ERDDAP datasets.xml on server deployment
+run-name: Synchronize ${{github.repository}}[${{ github.ref_name }}] datasets.xml on deployment
 on:
   push:
     branches:
