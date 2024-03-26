@@ -239,11 +239,11 @@ The bounding box values are minx,miny,maxx,maxy.
 The default for wmsActive is "true".
 -->
   <wmsActive>true</wmsActive>
-  <wmsSampleDatasetID>erdBAssta5day</wmsSampleDatasetID>
-  <wmsSampleVariable>sst</wmsSampleVariable>
+  <wmsSampleDatasetID>sentinel_3A_POLYMER_8Day</wmsSampleDatasetID>
+  <wmsSampleVariable>chl_conc_mean</wmsSampleVariable>
   <!-- The bounding box values are minLongitude,minLatitude,maxLongitude,maxLatitude.
    Longitude values within -180 to 180, or 0 to 360, are now okay. -->
-  <wmsSampleBBox>0,-75,360,75</wmsSampleBBox>
+  <wmsSampleBBox>45,60,-135,-120</wmsSampleBBox>
 
   <!-- ERDDAP has a service that lets remote users set a flag
 to notify ERDDAP to try to reload a dataset.
