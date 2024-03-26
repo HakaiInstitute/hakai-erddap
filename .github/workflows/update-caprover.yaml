@@ -9,6 +9,7 @@ on:
     paths-ignore:
       - Dockerfile
       - erddap/**/*
+      - init.d/*
 jobs:
   update:
     name: Update container datasets-xml 

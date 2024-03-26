@@ -12,6 +12,7 @@ on:
       - Dockerfile
       - erddap/**/*
       - .github/workflows/*
+      - init.d/*
   workflow_dispatch:
     
 jobs:
