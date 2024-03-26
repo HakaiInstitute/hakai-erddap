@@ -8,7 +8,7 @@ on:
       - caprover-*
     paths-ignore:
       - Dockerfile
-      - erddap
+      - erddap/**/*
 jobs:
   update:
     name: Update container datasets-xml 
