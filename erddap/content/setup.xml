@@ -359,7 +359,7 @@ For SGT graphics, currently, the Files designated below must be png, gif, jpg, o
 If you want to substitute other image files, it is best to make them
 a similar number of pixels wide and high.
 -->
-  <highResLogoImageFile>noaa_simple.gif</highResLogoImageFile>
+  <highResLogoImageFile>logo.png</highResLogoImageFile>
   <lowResLogoImageFile>noaa20.gif</lowResLogoImageFile>
   <googleEarthLogoFile>nlogo.gif</googleEarthLogoFile>
   <questionMarkImageFile>question-mark-fill.svg</questionMarkImageFile>
@@ -442,7 +442,7 @@ This particular ERDDAP installation has oceanographic data
 (starting at "<!DOCTYPE", but not including "</head>")
 for all HTML web pages.
 This may include &erddapUrl;, which is expanded to be [baseUrl]/erddap
-  (or [baseUttpsUrl]/erddap if the user is logged in).
+  (or [baseHttpsUrl]/erddap if the user is logged in).
 If your ERDDAP allows users to log in, all referenced image files, css files,
   etc. must be in [tomcat]/content/erddap/images or a subdirectory
   and must be referenced here with &erddapUrl;/images/[fileName].
@@ -519,22 +519,23 @@ information.
   <!-- The standard startBodyHtml -->
   <startBodyHtml5><![CDATA[
 <body>
-<table class="compact nowrap" style="width:100%; background-color:#aa2025;">
-  <tr>
-    <td style="text-align:center; width:80px;"><a rel="bookmark" href="&erddapUrl;"><img
-    title="Hakai" src="&erddapUrl;/images/logo.png" alt="Hakai" style="vertical-align:middle;height: 60px; padding: 20px;"></a></td>
-    <td style="text-align:left; font-size:x-large; color:#FFFFFF; ">
-      <strong>ERDDAP</strong>
-      <br><small><small><small>Easier access to the Hakai Institute data</small></small></small>
-      </td>
-    <td style="text-align:right; font-size:small; color: #FFFFFF; padding-right:20px;">
-<a id="complianceLink" href="" style="display:none">Compliance Results</a>      
-      &loginInfo; &language; &nbsp; &nbsp;
-      <br>Brought to you by
-    <a title="Hakai" rel="bookmark" href="http://www.hakai.org" style="color: #FFFFFF">Hakai</a>
-      </td>
-  </tr>
-</table>
+<link href="&erddapUrl;/images/erddap2.css" rel="stylesheet" type="text/css">
+<div id="header" class="header"> 
+  <div id="header-title-logo">
+    <div id="header-logo">
+      <a rel="bookmark" href="&erddapUrl;"><img
+      title="Hakai" src="&erddapUrl;/images/logo.png" alt="Hakai"></a>
+    </div>
+    <div id="header-title">
+      <strong>ERDDAP</strong><br>
+      <small><small>Easier access to the Hakai Institute data</small></small>
+    </div>
+  </div>
+  <div id="header-right">
+    <div><a id="complianceLink" href="" style="display:none">Compliance Results</a></div>
+    <div>&loginInfo;&language;</div>
+  </div>
+</div>
 ]]>  </startBodyHtml5>
 
   <!-- You can change other things, but please keep "ERDDAP, Version &erddapVersion;" and
