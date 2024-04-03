@@ -428,12 +428,10 @@ All of the information in [standardShortDescriptionHtml] is also contained in
 -->
   <theShortDescriptionHtml><![CDATA[
 <h1>ERDDAP</h1>
-ERDDAP (the Environmental Research Division's Data Access Program)
+ERDDAP
 is a data server that gives you a simple, consistent way to download
 subsets of scientific datasets in common file formats and make graphs and maps.
-This particular ERDDAP installation has oceanographic data
-(for example, data from satellites and buoys).
-
+This particular ERDDAP installation has data from the Hakai Institute and associated organizations.
 [standardShortDescriptionHtml]
 
 ]]>  </theShortDescriptionHtml>
