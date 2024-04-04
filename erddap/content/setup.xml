@@ -76,7 +76,7 @@ See the info at http://coastwatch.pfeg.noaa.gov/erddap/download/setup.html#secur
 Currently, the options are: "" (logins not supported, the default), "custom", "openid".
 Note that openid login doesn't work when testing with localhost (https://127.0.0.1:8443).
 -->
-  <authentication>custom</authentication>
+  <authentication></authentication>
 
   <!-- This specifies how you have stored passwords in the roles tags in datasets.xml.
 If you aren't storing any passwords this is irrelevant.
@@ -86,7 +86,7 @@ You should only use "plaintext" or "MD5" if you need to match values stored
 that way in an external password database.
 See the info at http://coastwatch.pfeg.noaa.gov/erddap/download/setup.html#security
 -->
-  <passwordEncoding>plaintext</passwordEncoding>
+  <passwordEncoding>UEPMD5</passwordEncoding>
 
   <!-- This determines whether datasets that the user doesn't currently have access to
 (because he isn't logged in or because his roles don't allow access)
