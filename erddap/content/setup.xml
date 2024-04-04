@@ -531,7 +531,7 @@ information.
   </div>
   <div id="header-right">
     <div><a id="complianceLink" href="" style="display:none">Compliance Results</a></div>
-    <div>&loginInfo;&language;</div>
+    <div>&loginInfo;<br>&language;</div>
   </div>
 </div>
 ]]>  </startBodyHtml5>
