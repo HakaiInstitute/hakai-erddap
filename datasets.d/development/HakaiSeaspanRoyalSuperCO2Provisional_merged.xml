@@ -10,6 +10,7 @@
     <sortedColumnSourceName>time</sortedColumnSourceName>
     <sortFilesBySourceNames>time</sortFilesBySourceNames>
     <fileTableInMemory>false</fileTableInMemory>
+    <accessibleTo>development</accessibleTo>
     <addAttributes>
         <att name="_NCProperties">null</att>
         <att name="cdm_data_type">trajectory</att>
