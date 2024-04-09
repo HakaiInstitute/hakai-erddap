@@ -9,7 +9,7 @@ on:
       - development
       - caprover-*
     paths:
-      - Dockerfile
+      - Dockerfile-Caprover
       - erddap/**/*
       - .github/workflows/*
       - init.d/*
