@@ -15,7 +15,7 @@ services:
       - "./erddap/content:/usr/local/tomcat/content/erddap"
       - "./erddap/data:/erddapData"
       - "${DATASETS_DIR:-./datasets}:/datasets"
-      - "./init.d:/init.d"
+      # - "./init.d:/init.d"
       - "./datasets.d:/datasets.d"
     healthcheck:
       test:
