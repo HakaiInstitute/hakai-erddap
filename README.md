@@ -20,6 +20,8 @@ The present repository is handled via CapRovers Applications. To configure a dep
   - Copy sample.env environment variables within `App. Configs` -> `Environment Variables` section and define the different parameters accordingly
   - Define `Persistent Directories`:
     - `/erddapData/` or defined `bigParentDirectory` environment variable
+    - `/datasets/` map to the local path on the server the file datasets are mounted
+    - `/algae_explorer` mapped to the directory on the server where the `algae explorer` files are mounted
 - Generate SSH key for GitHub CI
 - Add public key to  ` ~/.ssh/authorized_keys` within remote server
 - Define Environment on GitHub
