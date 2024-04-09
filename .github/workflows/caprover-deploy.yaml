@@ -1,5 +1,4 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Caprover Deploy
+name: Caprover Deploy 
 run-name: Caprover Deploy branch:${{ github.ref_name }}
 on:
   # Runs on pushes targeting the default branch
