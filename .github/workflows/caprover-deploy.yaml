@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     environment: 
-      name: ${{ startsWith(github.ref_name, 'caprover-') && 'development' || github.ref_name == 'development' && 'development' || github.ref_name == 'master' && 'production' }}
+      name: ${{ startsWith(github.ref_name, 'caprover-deploy') && 'development' || github.ref_name == 'development' && 'development' || github.ref_name == 'master' && 'production'  || github.ref_name == 'caprover-production' &&  'production' || 'production' }}
       url: ${{ vars.URL }}
     steps:
       - uses: actions/checkout@v4
