@@ -22,7 +22,7 @@ SELECT
     "KCBuoy:AirTemp_Avg",
     "KCBuoy:AirTemp_Min",
     "KCBuoy:AirTemp_Max",
-    "KCBuoy:StationAirPressure_QL"
+    "KCBuoy:StationAirPressure_QL",
     "KCBuoy:StationAirPressure_QC",
     "KCBuoy:StationAirPressure_UQL",
     "KCBuoy:StationAirPressure",
