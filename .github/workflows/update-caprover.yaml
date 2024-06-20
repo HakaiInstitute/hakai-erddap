@@ -29,5 +29,6 @@ jobs:
           container_name: srv-captain--${{ vars.CAPROVER_APP_NAME }}
           hard_flag: true
           monitor: true
+          sudo: true
 
 
