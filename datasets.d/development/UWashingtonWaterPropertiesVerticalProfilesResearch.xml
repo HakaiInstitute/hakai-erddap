@@ -1,4 +1,4 @@
-<dataset type="EDDTableFromDatabase" datasetID="UWashingtonWaterPropertiesVerticalProfilesResearch" active="true">
+<dataset type="EDDTableFromDatabase" datasetID="UWashingtonWaterPropertiesVerticalProfilesResearch" active="false">
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
     <schemaName>erddap</schemaName>
