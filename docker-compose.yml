@@ -15,7 +15,11 @@ services:
       - "./erddap/content:/usr/local/tomcat/content/erddap"
       - "./erddap/data:/erddapData"
       - "${DATASETS_DIR:-./datasets}:/datasets"
-      # - "./init.d:/init.d"
+      - "/tmp/:/usr/local/tomcat/temp/"
+      - "./datasets.d:/datasets.d:ro"
+      - "./init.d:/init.d"
+      - ./tomcatLogs:/usr/local/tomcat/logs
+      - "/mnt/efs/algex:/algae_explorer"
       - "./datasets.d:/datasets.d"
     healthcheck:
       test:
