@@ -1,9 +1,11 @@
-version: '2'
+# see the .env file to set the variables used here
+version: "2"
 services:
   erddap:
+    image: "axiom/docker-erddap:2.23-jdk17-openjdk"
+    restart: always
     container_name: ${CONTAINER_NAME:-erddap}
-    image: axiom/docker-erddap:2.22-jdk17-openjdk
-    restart: unless-stopped
+    platform: linux/x86_64
     env_file:
       - .env
     ports:
@@ -18,13 +20,13 @@ services:
       - "./init.d:/init.d"
       - ./tomcatLogs:/usr/local/tomcat/logs
       - "/mnt/efs/algex:/algae_explorer"
-
+      - "./datasets.d:/datasets.d"
     healthcheck:
       test:
         [
           "CMD",
           "curl",
           "-f",
-          "http://localhost:8080/erddap/index.html"
+          "http://localhost:${HOST_PORT}/erddap/index.html"
         ]
       interval: 10s

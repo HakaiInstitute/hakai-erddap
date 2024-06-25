@@ -1,15 +1,9 @@
-name: Test ERDDAP views
+name: Test ERDDAP Database Views
 on:
-  push:
-    paths:
-      - views/**
-    branch:
-      - development
-      - master
   pull_request:
     paths:
       - views/**
-    branch:
+    branches:
       - development
       - master
 jobs:
@@ -18,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Import DB seed data
 
         env:

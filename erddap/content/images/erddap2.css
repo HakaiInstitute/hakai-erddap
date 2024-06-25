@@ -88,7 +88,7 @@ span.warningColor {color:red; }
 
 /* table.commonBGColor and table.erd are widely used for the HTML table style
 with the yellow (currently) background color.  */
-table.commonBGColor {background-color:#ffffcc; }
+table.commonBGColor {background-color:#ffffcc75; }
 
 table.erd {border-collapse:collapse; border:1px solid #bbbbbb; empty-cells:show; }
 table.erd th, table.erd td {padding:2px 4px; border:1px solid #bbbbbb; empty-cells:show;}
@@ -114,3 +114,38 @@ td.verticalLine {border-left:1px solid #bbbbbb; height:100%; }
 /* This is used on the /info/[datasetID]/index.html pages to highlight a cell or row. */
 td.highlightBGColor {background-color:#cceecc; }
 tr.highlightBGColor {background-color:#cceecc; }
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  background-color:#aa2025; 
+  padding:15px;
+  margin: 0 0 10px 0;
+  align-items: center;
+  border-radius: 10px;
+}
+#header-title-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#header-logo img {
+  height: 50px;
+  padding: 0 10px;
+}
+#header-title > * {
+  margin: 0 ;
+  padding: 0;
+  flex-direction: column;
+  font-size: large;
+}
+#header-right  {
+  display:flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#header-right img {
+  padding: 0 5px;
+}
