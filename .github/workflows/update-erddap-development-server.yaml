@@ -1,0 +1,25 @@
+name: Update Development ERDDAP server
+on:
+  push:
+    branches:
+      - development
+  workflow_run:
+    workflows: [Test datasets.xml and linter]
+    types:
+      - completed
+jobs:
+  development-update:
+    name: Update ERDDAP
+    runs-on: ubuntu-latest
+    environment:
+      name: development
+      url: https://goose.hakai.org/erddap/
+    steps:
+      - name: Update development server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.DEV_SERVER_HOST }}
+          username: ${{ secrets.DEV_SERVER_USERNAME }}
+          passphrase: ${{ secrets.DEV_SERVER_PASSPHRASE }}
+          key: ${{ secrets.DEV_SERVER_SSH_KEY }}
+          script: cd  ~/hakai-datasets/; bash update-erddap.sh --hardFlag
