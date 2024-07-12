@@ -1,18 +1,21 @@
-name: Test datasets.xml and linter
+name: Test on PR datasets
+run-name: Test PR branch:${{ github.head_ref }} -> ${{ github.base_ref}}
 on:
   pull_request:
     branches:
       - master
       - development
+      - caprover-deploy
     paths:
       - datasets.d/**
       - views/**
+      - .github/workflows/review-datasets.yml
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Lint Code Base
@@ -25,5 +28,7 @@ jobs:
           VALIDATE_SHELL_SHFMT: true
           LOG_LEVEL: WARN
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Review dataset.d/*.xml file names = datasetIDs
-        run: sh .github/workflows/test-datasets.d.sh
+      - name: Run erddap_deploy test
+        uses: hakaiinstitute/erddap-deploy/test@main
+        with:
+          datasets_xml: datasets.d/**/*.xml
