@@ -33,3 +33,20 @@ jobs:
              --records 'metadata/**/*.yaml' \
              --datasets-xml 'datasets/datasets.d/**/*.xml' \
              --erddap-url https://catalogue.hakai.org/erddap
+
+        - name: Create a PR with the changes
+          uses: peter-evans/create-pull-request@v6
+          with:
+            token: ${{ secrets.GITHUB_TOKEN }}
+            commit-message: "Sync ERDDAP metadata from metadata form file repository"
+            title: "Sync ERDDAP metadata from metadata form file repository"
+            body: "This PR was automatically created by the sync-metadata workflow."
+            branch: sync-metadata
+            base: development
+            labels: sync-metadata
+            reviewers: hakai-institute/metadata-team
+            assignees: hakai-institute/metadata-team
+            draft: false
+            signoff: true
+            branch-suffix: timestamp
+            delete-branch: true
