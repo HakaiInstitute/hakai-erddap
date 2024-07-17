@@ -24,7 +24,7 @@ jobs:
           with:
                 python-version: '3.11'
         - name: Install dependencies
-          run: pip install .
+          run: pip install poetry && poetry install
           working-directory: datasets
         
         - name: Update ERDDAP metadata
