@@ -1,10 +1,9 @@
 name: Sync ERDDAP metadata from metadata form file repository
 on:
     workflow_dispatch:
-    
     push:
         branches:
-            - sync-metadata
+            - development
 
 jobs:
     sync-metadata:
@@ -24,7 +23,7 @@ jobs:
           with:
                 python-version: '3.11'
         - name: Install dependencies
-          run: pip install git+https://github.com/HakaiInstitute/hakai-metadata-conversion.git@update-erddap-xml
+          run: pip install git+https://github.com/HakaiInstitute/hakai-metadata-conversion.git
           working-directory: datasets
         
         - name: Update ERDDAP metadata
