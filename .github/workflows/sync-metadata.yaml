@@ -41,7 +41,7 @@ jobs:
             commit-message: "Sync ERDDAP metadata from metadata form file repository"
             title: "Sync ERDDAP metadata from metadata form file repository"
             body: "This PR was automatically created by the sync-metadata workflow."
-            branch: sync-metadata
+            branch: update-erddap-metadata
             base: development
             path: datasets
             labels: sync-metadata
