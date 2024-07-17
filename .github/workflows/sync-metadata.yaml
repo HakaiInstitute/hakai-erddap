@@ -43,6 +43,7 @@ jobs:
             body: "This PR was automatically created by the sync-metadata workflow."
             branch: sync-metadata
             base: development
+            path: datasets
             labels: sync-metadata
             reviewers: hakai-institute/metadata-team
             assignees: hakai-institute/metadata-team
