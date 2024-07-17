@@ -24,12 +24,12 @@ jobs:
           with:
                 python-version: '3.11'
         - name: Install dependencies
-          run: pip install poetry && poetry install
+          run: pip install git+https://github.com/HakaiInstitute/hakai-metadata-conversion.git@update-erddap-xml
           working-directory: datasets
         
         - name: Update ERDDAP metadata
           run: |
-            poetry run python hakai_metadata_conversion erddap-update \
+            python hakai_metadata_conversion erddap-update \
              --metadata-dir metadata/**/*.yaml \
              --datasets-dir datasets/datasets.d/**/*.xml \
              --erddap-url https://catalogue.hakai.org/erddap
