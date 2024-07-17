@@ -37,7 +37,6 @@ jobs:
         - name: Create a PR with the changes
           uses: peter-evans/create-pull-request@v6
           with:
-            token: ${{ secrets.GITHUB_TOKEN }}
             commit-message: "Sync ERDDAP metadata from metadata form file repository"
             title: "Sync ERDDAP metadata from metadata form file repository"
             body: "This PR was automatically created by the sync-metadata workflow."
