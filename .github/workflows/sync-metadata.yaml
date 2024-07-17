@@ -31,5 +31,5 @@ jobs:
           run: |
             hakai_metadata_conversion erddap-update \
              --records metadata/**/*.yaml \
-             --datasets-dir datasets/datasets.d/**/*.xml \
+             --datasets-xml datasets/datasets.d/**/*.xml \
              --erddap-url https://catalogue.hakai.org/erddap
