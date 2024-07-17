@@ -45,9 +45,8 @@ jobs:
             base: development
             path: datasets
             labels: sync-metadata
-            reviewers: hakai-institute/data-mobilization-team
-            assignees: hakai-institute/data-mobilization-team
+            reviewers: hakaiinstitute/data-mobilization-team
+            assignees: hakaiinstitute/data-mobilization-team
             draft: false
             signoff: true
-            branch-suffix: timestamp
             delete-branch: true
