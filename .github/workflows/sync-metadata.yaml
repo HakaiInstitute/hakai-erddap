@@ -49,3 +49,4 @@ jobs:
             draft: false
             signoff: true
             delete-branch: true
+            token: ${{ secrets.CI_TOKEN }}
