@@ -14,20 +14,20 @@
         <att name="cdm_data_type">Other</att>
         <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
         <att name="creator_name">Hakai Institute</att>
-        <att name="creator_type">person</att>
-        <att name="infoUrl">https://www.hakai.org</att>
+        <att name="creator_type">institution</att>
+        <att name="infoUrl">https://catalogue.hakai.org/ca-cioos_2d693456-7e65-46be-95d7-6bb697320017</att>
         <att name="institution">Hakai Institute</att>
-        <att name="keywords">tide station,water level,Weather station,seaSurfaceHeight,1hour, air, amp, amps, atmosphere, atmospheric, available, average, batt, beach, cond, data, delta, density, depth, dir, direction, dock, earth, Earth Science &gt; Atmosphere &gt; Atmospheric Winds &gt; Surface Winds, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Salinity, enclosure, hakai, height, hours, institute, kid, kwh, level, local, lvl, max, measurement, med, min, minute, ocean, oceans, output, panel, par, par5, photosynthetically, pls, practical, precipitation, pressure, profiler, pruth, 1hourrain, pruthdock_1hourrain_flag, pruthdock_1hourrain_uql, pruthdock_airtemp, pruthdock_airtemp2, pruthdock_airtemp2_avg, pruthdock_airtemp2_flag, pruthdock_airtemp2_std, pruthdock_airtemp2_uql, pruthdock_airtemp_avg, pruthdock_airtemp_flag, pruthdock_airtemp_std, pruthdock_airtemp_uql, pruthdock_battvolt_avg, pruthdock_enclosuretemp_avg, pruthdock_kidamphours_avg, pruthdock_kidbattsoc, pruthdock_kidbatttemp_avg, pruthdock_kidbattvolt_avg, pruthdock_kidkwh_avg, pruthdock_kidoutputwatts_avg, pruthdock_kidpvvolt_avg, pruthdock_paneltemp_avg, pruthdock_par, pruthdock_par5minutetotal, pruthdock_par5minutetotal_flag, pruthdock_par5minutetotal_uql, pruthdock_par_avg, pruthdock_par_flag, pruthdock_par_std, pruthdock_par_uql, pruthdock_pls_cond, pruthdock_pls_cond_avg, pruthdock_pls_cond_max, pruthdock_pls_cond_min, pruthdock_pls_cond_flag, pruthdock_pls_cond_std, pruthdock_pls_cond_uql, pruthdock_pls_lvl, pruthdock_pls_lvl_avg, pruthdock_pls_lvl_max, pruthdock_pls_lvl_min, pruthdock_pls_lvl_flag, pruthdock_pls_lvl_std, pruthdock_pls_lvl_uql, pruthdock_pls_salinity, pruthdock_pls_salinity_avg, pruthdock_pls_salinity_max, pruthdock_pls_salinity_min, pruthdock_pls_salinity_flag, pruthdock_pls_salinity_std, pruthdock_pls_salinity_uql, pruthdock_pls_tds, pruthdock_pls_tds_avg, pruthdock_pls_tds_max, pruthdock_pls_tds_min, pruthdock_pls_tds_flag, pruthdock_pls_tds_std, pruthdock_pls_tds_uql, pruthdock_pls_temp, pruthdock_pls_temp_avg, pruthdock_pls_temp_max, pruthdock_pls_temp_min, pruthdock_pls_temp_flag, pruthdock_pls_temp_std, pruthdock_pls_temp_uql, pruthdock_rain, pruthdock_rain_flag, pruthdock_rain_uql, pruthdock_rh, pruthdock_rh_avg, pruthdock_rh_flag, pruthdock_rh_std, pruthdock_rh_uql, pruthdock_sealevelairpressure, pruthdock_sealevelairpressure_avg, pruthdock_sealevelairpressure_flag, pruthdock_sealevelairpressure_std, pruthdock_sealevelairpressure_uql, pruthdock_solarrad, pruthdock_solarrad5minutetotal, pruthdock_solarrad5minutetotal_flag, pruthdock_solarrad5minutetotal_uql, pruthdock_solarrad_avg, pruthdock_solarrad_flag, pruthdock_solarrad_std, pruthdock_solarrad_uql, pruthdock_stationairpressure, pruthdock_stationairpressure_avg, pruthdock_stationairpressure_flag, pruthdock_stationairpressure_std, pruthdock_stationairpressure_uql, pruthdock_tideheight_avg, pruthdock_tideheight_med, pruthdock_tideheight_flag, pruthdock_tideheight_uql, pruthdock_tideheightdelta_avg, pruthdock_tideheightdelta_flag, pruthdock_tideheightdelta_uql, pruthdock_tideheightpls_avg, pruthdock_tideheightpls_flag, pruthdock_tideheightpls_uql, pruthdock_uvrad, pruthdock_uvrad5minutetotal, pruthdock_uvrad5minutetotal_flag, pruthdock_uvrad5minutetotal_uql, pruthdock_uvrad_avg, pruthdock_uvrad_flag, pruthdock_uvrad_std, pruthdock_uvrad_uql, pruthdock_vegapuls_height_avg, pruthdock_vegapuls_height_med, pruthdock_vegapuls_height_flag, pruthdock_vegapuls_height_std, pruthdock_vegapuls_height_uql, pruthdock_wbjramphrremaining, pruthdock_wbjrcurrent_avg, pruthdock_westbeachamps_avg, pruthdock_westbeachpanelt_avg, pruthdock_westbeachvolt_avg, pruthdock_winddir_avg, pruthdock_winddir_flag, pruthdock_winddir_std, pruthdock_winddir_uql, pruthdock_windspd_avg, pruthdock_windspd_flag, pruthdock_windspd_std, pruthdock_windspd_uql, puls, pvvolt, rad, rad5, radiation, rain, rainfall, remaining, salinity, salinity-temperature-depth, science, sea, sea_water_practical_salinity, seawater, soc, solar, source, spd, station, std, surface, tds, temp2, temperature, tide, time, total, uql, uvrad, uvrad5, vega, volt, water, watts, wbjramp, wbjrcurrent, west, wind, wind_from_direction, winds</att>
-        <att name="keywords_vocabulary">GCMD Science Keywords,CIOOS EOVS</att>
-        <att name="license">[standard]</att>
+        <att name="keywords">Weather station,tide station,water level,CIOOS:seaSurfaceHeight,CIOOS:other</att>
+        <att name="keywords_vocabulary">CIOOS: CIOOS Essential Ocean Variables Vocabulary</att>
+        <att name="license">CC-BY-4.0</att>
         <att name="sourceUrl">(local database)</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
-        <att name="summary">The Hakai Institute maintains a weather station and tidal station at their remote research facility at the Pruth Dock on Calvert Island. The weather station measure atmospheric conditions above sea level at around 5-10m above sea level. The tide station consist of two separate measurement of the water level with a primary sensor being a radar sensor looking from and above with a millimeter accucary (VegaPuls 62) and a secondary under water pressure gauge sensor with ability to measure temperature and conductivity (OTT PLS-C).</att>
-        <att name="title">Pruth Dock, Calvert Island, BC Tide and Weather Station Provisional</att>
-        <att name='cdm_data_type'>Timeseries</att>
-        <att name='cdm_timeseries_variables'>station_id,latitude,longitude</att>
+        <att name="summary">The Hakai Institute maintains a weather and tide station on the main dock of its remote station located on Calvert Island within Pruth Bay. The weather station measures the air temperature, wind speed and direction, humidity, atmospheric pressure, UV radiation, solar radiation, PAR, and precipitation since July 2014. In June 2018, a tide station was installed to measure the water level within the bay. The station is a combination of a primary radar sensor mounted below the dock above the water and a secondary vented pressure sensor mounted within the water 2m below the lowest tides.</att>
+        <att name="title">Pruth Dock, Calvert Island Tide and Weather Station Provisional</att>
+        <att name="cdm_data_type">Timeseries</att>
+        <att name="cdm_timeseries_variables">station_id,latitude,longitude</att>
         <att name="subsetVariables">station_id,latitude,longitude,windspd_uql,winddir_uql,rh_uql,airtemp_uql,stationairpressure_uql,sealevelairpressure_uql,uvrad5minutetotal_uql,solarrad_uql,solarrad5minutetotal_uql,par_uql,par5minutetotal_uql,uvrad_uql,rain_uql,hourlyrain_uql,tideheight_uql,tideheightdelta_uql</att>
-        <att name="date_created">2014-07-24</att>
+        <att name="date_created">2024-03-14</att>
         <att name="geospatial_lat_max">51.6544888889</att>
         <att name="geospatial_lat_min">51.6544888889</att>
         <att name="geospatial_lon_max">-128.1302805556</att>
@@ -36,12 +36,13 @@
         <att name="keywords">tide station,water level,Weather station,seaSurfaceHeight</att>
         <att name="publisher_email">info@hakai.org</att>
         <att name="publisher_institution">Hakai Institute</att>
-        <att name="publisher_url">https://www.hakai.org</att>
+        <att name="publisher_url">https://www.hakai.org/</att>
         <att name="summary">The Hakai Institute maintains a weather and tide station on the main dock of its remote station located on Calvert Island within Pruth Bay. The weather station measures the air temperature, wind speed and direction, humidity, atmospheric pressure, UV radiation, solar radiation, PAR, and precipitation since July 2014. In June 2018, a tide station was installed to measure the water level within the bay. The station is a combination of a primary radar sensor mounted below the dock above the water and a secondary vented pressure sensor mounted within the water 2m below the lowest tides.</att>
         <att name="title">Pruth Dock, Calvert Island Tide and Weather Station Provisional</att>
         <att name="platform">coastal structure</att>
         <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
-    </addAttributes>
+    <att name="project">Oceanography,Watersheds</att><att name="comment">##Limitations:
+This is data is provisional only. Please handle with care.</att><att name="progress">onGoing</att><att name="id">2d693456-7e65-46be-95d7-6bb697320017</att><att name="naming_authority">ca.cioos</att><att name="date_modified">2024-03-15T14:31:48.669Z</att><att name="product_version">1.0</att><att name="creator_email">info@hakai.org</att><att name="creator_institution">Hakai Institute</att><att name="creator_address">1002 Wharf Street</att><att name="creator_city">Campbell River</att><att name="creator_country">Canada</att><att name="creator_url">https://www.hakai.org/</att><att name="creator_ror">https://ror.org/02pry0c91</att><att name="publisher_name">Hakai Institute</att><att name="publisher_type">institution</att><att name="publisher_address">1002 Wharf Street</att><att name="publisher_city">Campbell River</att><att name="publisher_country">Canada</att><att name="publisher_ror">https://ror.org/02pry0c91</att><att name="contributor_name">Barrette, Jessy;Hakai Institute;Tula Foundation</att><att name="contributor_role">custodian;owner,distributor,publisher;funder</att><att name="doi">https://doi.org/10.21966/8d4w-sr07</att><att name="metadata_link">https://catalogue.hakai.org/ca-cioos_2d693456-7e65-46be-95d7-6bb697320017</att><att name="metadata_form">https://hakaiinstitute.github.io/hakai-metadata-entry-form#/en/hakai/tV5qE0aUgaOjSVmgPgiZ6MyHuSy1/-MkxD-S6TxIvv2e6_OGH</att></addAttributes>
 
     <dataVariable>
         <sourceName>="PruthDock"</sourceName>
@@ -505,8 +506,8 @@
         <addAttributes>
             <att name="long_name">UVRad5 Minute Total</att>
             <att name="long_name">Cumulative UV Radiation</att>
-            <att name="units"></att>
-            <att name="standard_name"></att>
+            <att name="units"/>
+            <att name="standard_name"/>
             <att name="ancillary_data">uvrad5minutetotal_flag uvrad5minutetotal_uql</att>
             <att name="cell_methods">time: sum (interval: 5.0 minutes)</att>
         </addAttributes>
@@ -545,8 +546,8 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Solar Radiation</att>
-            <att name="units"></att>
-            <att name="standard_name"></att>
+            <att name="units"/>
+            <att name="standard_name"/>
             <att name="ancillary_data">solarrad_flag solarrad_uql</att>
             <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
         </addAttributes>
@@ -559,8 +560,8 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Solar Radiation Average</att>
-            <att name="units"></att>
-            <att name="standard_name"></att>
+            <att name="units"/>
+            <att name="standard_name"/>
             <att name="ancillary_data">solarrad_flag solarrad_uql</att>
             <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
         </addAttributes>
@@ -573,8 +574,8 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Solar Radiation STD</att>
-            <att name="units"></att>
-            <att name="standard_name"></att>
+            <att name="units"/>
+            <att name="standard_name"/>
             <att name="ancillary_data">solarrad_flag solarrad_uql</att>
             <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
         </addAttributes>
@@ -613,8 +614,8 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Cumulative Solar Radiation</att>
-            <att name="units"></att>
-            <att name="standard_name"></att>
+            <att name="units"/>
+            <att name="standard_name"/>
             <att name="ancillary_data">solarrad5minutetotal_flag solarrad5minutetotal_uql</att>
             <att name="cell_methods">time: sum (interval: 5.0 minutes)</att>
         </addAttributes>
@@ -830,7 +831,7 @@
         <addAttributes>
             <att name="long_name">Rain</att>
             <att name="units">mm</att>
-            <att name="standard_name"></att>
+            <att name="standard_name"/>
             <att name="ancillary_data">rain_flag rain_uql</att>
             <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
         </addAttributes>
@@ -870,7 +871,7 @@
         <addAttributes>
             <att name="long_name">1hour Cumulative Rain</att>
             <att name="units">mm</att>
-            <att name="standard_name"></att>
+            <att name="standard_name"/>
             <att name="ancillary_data">1hourrain_flag 1hourrain_uql</att>
             <att name="cell_methods">time: sum (interval: 60.0 minutes)</att>
         </addAttributes>

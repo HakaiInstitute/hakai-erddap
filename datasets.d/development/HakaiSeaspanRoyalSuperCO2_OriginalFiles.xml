@@ -8,11 +8,11 @@
     <metadataFrom>last</metadataFrom>
     <standardizeWhat>0</standardizeWhat>
     <charset>UTF-8</charset>
-    <columnSeparator>&#9;</columnSeparator>
+    <columnSeparator>	</columnSeparator>
     <columnNamesRow>5</columnNamesRow>
     <firstDataRow>6</firstDataRow>
-    <sortedColumnSourceName></sortedColumnSourceName>
-    <sortFilesBySourceNames></sortFilesBySourceNames>
+    <sortedColumnSourceName/>
+    <sortFilesBySourceNames/>
     <fileTableInMemory>false</fileTableInMemory>
     <accessibleViaFiles>true</accessibleViaFiles>
     <!-- sourceAttributes>
