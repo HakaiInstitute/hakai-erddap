@@ -73,7 +73,7 @@ Derive depth from corrected sea water pressure.
             <att name="standard_name">latitude</att>
             <att name="units">degree_north</att>
         </sourceAttributes -->
-        <addAttributes></addAttributes>
+        <addAttributes/>
     </dataVariable>
     <dataVariable>
         <sourceName>latitude</sourceName>
