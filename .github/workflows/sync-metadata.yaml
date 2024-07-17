@@ -30,6 +30,6 @@ jobs:
         - name: Update ERDDAP metadata
           run: |
             hakai_metadata_conversion erddap-update \
-             --records metadata/**/*.yaml \
-             --datasets-xml datasets/datasets.d/**/*.xml \
+             --records 'metadata/**/*.yaml' \
+             --datasets-xml 'datasets/datasets.d/**/*.xml' \
              --erddap-url https://catalogue.hakai.org/erddap
