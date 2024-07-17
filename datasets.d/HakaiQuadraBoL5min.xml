@@ -9,29 +9,29 @@
   <addAttributes>
     <att name="cde_ingest">false</att>
     <att name="language">eng</att>
-    <att name="id">HakaiQuadraBoL5min</att>
+    <att name="id">b62c3aaa-c3b8-41cb-b035-4da16209f26a</att>
 
-    <att name="title_fra">Données du Burke-o-Lator dans la baie Hyacinthe en Colombie-Britannique</att>
-    <att name="summary_fra">L'analyseur Burke-o-Lator (BoL) pCO2 / TCO2 mesure en continu la pression partielle du dioxyde de carbone (pCO2) et le carbone inorganique total dissous (TCO2) dans un flux d'eau de mer continu et des échantillons discrets. Le BoL est associé à un thermosalinographe SBE 45 qui mesure la température et la salinité de l'eau de mer.</att>
+    <att name="title_fra">Donn&#233;es du Burke-o-Lator dans la baie Hyacinthe en Colombie-Britannique</att>
+    <att name="summary_fra">L'analyseur Burke-o-Lator (BoL) pCO2 / TCO2 mesure en continu la pression partielle du dioxyde de carbone (pCO2) et le carbone inorganique total dissous (TCO2) dans un flux d'eau de mer continu et des &#233;chantillons discrets. Le BoL est associ&#233; &#224; un thermosalinographe SBE 45 qui mesure la temp&#233;rature et la salinit&#233; de l'eau de mer.</att>
     <att name="site_description">Burke-o-Lator at Hyacinthe Bay, BC</att>
     <att name="measurement_interval">5 minute</att>
     <att name="institution">Hakai Institute</att>
     <att name="publisher_email">data@hakai.org</att>
     <att name="publisher_name">Hakai Institute</att>
-    <att name="publisher_url">https://www.hakai.org/</att>
+    <att name="publisher_url">hakai.org</att>
 
-    <att name="infoUrl">https://www.hakai.org</att>
-    <att name="creator_url">https://www.hakai.org</att>
-    <att name="creator_email">data at hakai.org</att>
-    <att name="contributor_name">Wiley Evans</att>
-    <att name="contributor_role">Primary Investigator</att>
+    <att name="infoUrl">https://catalogue.hakai.org/dataset/ca-cioos_b62c3aaa-c3b8-41cb-b035-4da16209f26a</att>
+    <att name="creator_url">https://www.hakai.org/</att>
+    <att name="creator_email">wiley.evans@hakai.org</att>
+    <att name="contributor_name">Evans, Wiley;Campbell, Katie;Weekes, Carrie;Hare, Alex;Hakai Institute</att>
+    <att name="contributor_role">pointOfContact,author,custodian,owner,coAuthor;coAuthor;coAuthor;coAuthor;distributor,funder,publisher</att>
     <att name="contributor_email">wiley.evans at hakai.org</att>
     <att name="institution">Hakai Institute</att>
     <att name="infoUrl">https://www.hakai.org</att>
-    <att name="license">Creative Commons Attribution 4.0 (CC-BY-4.0)</att>
+    <att name="license">https://creativecommons.org/licenses/by/4.0</att>
     <att name="sourceUrl">https://www.nodc.noaa.gov/ocads/data/0208638.xml</att>
     <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
-    <att name="date_created">2014-12-19</att>
+    <att name="date_created">2021-03-31</att>
     <att name="geospatial_lat_max">50.116</att>
     <att name="geospatial_lat_min">50.116</att>
     <att name="geospatial_lon_max">-125.222</att>
@@ -40,7 +40,7 @@
     <att name="geospatial_vertical_max">1</att>
     <att name="institution">Hakai Institute</att>
     <att name="instrument">SUPERCO2,SBE 45,Burke-o-Lator pCO2/TCO2 analyzer</att>
-    <att name="keywords">North Pacific Ocean,Surface measurement,Northern Salish Sea,Sea Surface Temperature,Sea Surface Practical Salinity,Discrete measurement,Quadra Island,seaSurfaceSalinity,Ocean Acidification,Continuous measurement,seaSurfaceTemperature,Practical Salinity,inorganicCarbon,British Columbia coast,CO2</att>
+    <att name="keywords">Continuous measurement,Discrete measurement,Surface measurement,Quadra Island,Northern Salish Sea,British Columbia coast,North Pacific Ocean,Ocean Acidification,Practical Salinity,Sea Surface Temperature,Sea Surface Practical Salinity,CO2,CIOOS:inorganicCarbon,CIOOS:seaSurfaceSalinity,CIOOS:seaSurfaceTemperature</att>
     <att name="summary">This dataset includes continuous sea surface measurements of partial pressure of carbon dioxide (pCO2), sea surface temperature and salinity collected from Hakai Institute Quadra Island Field Station in Hyacinthe Bay, British Columbia, Canada. Quadra Island, at the northern terminus of the Salish Sea, has been a site for shore-based and high-resolution measurement of surface seawater CO2 content since December 2014. Measurements of in situ temperature, salinity, and CO2 partial pressure are made near-continuously on seawater drawn from a sample line with an intake 50 m from shore and a depth of 1 m in Hyacinthe Bay on the eastern side of Quadra Island. The effort to collect these data are part of the Hakai Institute's directive to advance the understanding of carbon cycling in northeast Pacific coastal settings with specific emphasis on ocean acidification.</att>
     <att name="title">Real-Time Provisional High-Resolution Record of Surface Seawater Carbon Dioxide (CO2) Content Collected from Hakai Institute Quadra Island Field Station in Hyacinthe Bay, British Columbia, Canada</att>
     <att name="subsetVariables">station</att>
@@ -48,7 +48,8 @@
     <att name="cdm_timeseries_variables">station</att>
     <att name="platform">coastal structure</att>
     <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
-  </addAttributes>
+  <att name="comment">##Limitations:
+This dataset is provisional. For science purposes, please refer to the dataset: "High-resolution record of surface seawater carbon dioxide (CO2) content collected from Hakai Institute Quadra Island Field Station in Hyacinthe Bay, British Columbia, Canada".</att><att name="progress">onGoing</att><att name="keywords_vocabulary">CIOOS: CIOOS Essential Ocean Variables Vocabulary</att><att name="naming_authority">ca.cioos</att><att name="date_modified">2024-03-14T19:30:45.234Z</att><att name="product_version">1</att><att name="creator_name">Evans, Wiley</att><att name="creator_orcid">https://orcid.org/0000-0002-5450-0903</att><att name="creator_type">person</att><att name="creator_institution">Hakai Institute</att><att name="creator_address">1713 Hyacinthe Bay Road</att><att name="creator_city">Campbell River</att><att name="creator_country">Canada</att><att name="creator_ror">https://ror.org/02pry0c91</att><att name="publisher_type">institution</att><att name="publisher_institution">Hakai Institute</att><att name="publisher_address">1713 Hyacinthe Bay Road</att><att name="publisher_city">Heriot Bay</att><att name="publisher_country">Canada</att><att name="metadata_link">https://catalogue.hakai.org/dataset/ca-cioos_b62c3aaa-c3b8-41cb-b035-4da16209f26a</att><att name="metadata_form">https://hakaiinstitute.github.io/hakai-metadata-entry-form#/en/hakai/tV5qE0aUgaOjSVmgPgiZ6MyHuSy1/-MVcYXEIW5uA9TBP6v64</att></addAttributes>
   <dataVariable>
     <sourceName>measurementTime</sourceName>
     <destinationName>time</destinationName>
@@ -107,7 +108,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">pCO2_Med</att>
-      <att name="units">μatm</att>
+      <att name="units">&#956;atm</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">pCO2_uatm_UQL pCO2_uatm_flags</att>
     </addAttributes>
@@ -123,7 +124,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">pCO2_Avg</att>
-      <att name="units">μatm</att>
+      <att name="units">&#956;atm</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">pCO2_uatm_UQL pCO2_uatm_flags</att>
     </addAttributes>
@@ -139,7 +140,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">pCO2_Min</att>
-      <att name="units">μatm</att>
+      <att name="units">&#956;atm</att>
       <att name="cell_methods">time: mininum (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">pCO2_uatm_UQL pCO2_uatm_flags</att>
     </addAttributes>
@@ -155,7 +156,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">pCO2_Max</att>
-      <att name="units">μatm</att>
+      <att name="units">&#956;atm</att>
       <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">pCO2_uatm_UQL pCO2_uatm_flags</att>
     </addAttributes>
@@ -171,7 +172,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">pCO2_Std</att>
-      <att name="units">μatm</att>
+      <att name="units">&#956;atm</att>
       <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">pCO2_uatm_UQL pCO2_uatm_flags</att>
     </addAttributes>
@@ -212,7 +213,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TCO2_Med</att>
-      <att name="units">μmol/kg</att>
+      <att name="units">&#956;mol/kg</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">calcTCO2_UQL calcTCO2_flags</att>
     </addAttributes>
@@ -227,7 +228,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TCO2_Avg</att>
-      <att name="units">μmol/kg</att>
+      <att name="units">&#956;mol/kg</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">calcTCO2_UQL calcTCO2_flags</att>
     </addAttributes>
@@ -242,7 +243,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TCO2_Min</att>
-      <att name="units">μmol/kg</att>
+      <att name="units">&#956;mol/kg</att>
       <att name="cell_methods">time: mininum (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">calcTCO2_UQL calcTCO2_flags</att>
     </addAttributes>
@@ -257,7 +258,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TCO2_Max</att>
-      <att name="units">μmol/kg</att>
+      <att name="units">&#956;mol/kg</att>
       <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">calcTCO2_UQL calcTCO2_flags</att>
     </addAttributes>
@@ -272,7 +273,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TCO2_Std</att>
-      <att name="units">μmol/kg</att>
+      <att name="units">&#956;mol/kg</att>
       <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">calcTCO2_UQL calcTCO2_flags</att>
     </addAttributes>
@@ -520,7 +521,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TA_Med</att>
-      <att name="units">μmol/kg</att>
+      <att name="units">&#956;mol/kg</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">AlkS_UQL AlkS_flags</att>
     </addAttributes>
@@ -535,7 +536,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TA_Avg</att>
-      <att name="units">μmol/kg</att>
+      <att name="units">&#956;mol/kg</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">AlkS_UQL AlkS_flags</att>
     </addAttributes>
@@ -550,7 +551,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TA_Min</att>
-      <att name="units">μmol/kg</att>
+      <att name="units">&#956;mol/kg</att>
       <att name="cell_methods">time: mininum (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">AlkS_UQL AlkS_flags</att>
     </addAttributes>
@@ -565,7 +566,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TA_Max</att>
-      <att name="units">μmol/kg</att>
+      <att name="units">&#956;mol/kg</att>
       <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">AlkS_UQL AlkS_flags</att>
     </addAttributes>
@@ -580,7 +581,7 @@
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
       <att name="long_name">TA_Std</att>
-      <att name="units">μmol/kg</att>
+      <att name="units">&#956;mol/kg</att>
       <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">AlkS_UQL AlkS_flags</att>
     </addAttributes>
@@ -620,7 +621,7 @@
     <addAttributes>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
-      <att name="long_name">Ω arag_Med</att>
+      <att name="long_name">&#937; arag_Med</att>
       <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">calcOmega_UQL calcOmega_flags</att>
     </addAttributes>
@@ -634,7 +635,7 @@
     <addAttributes>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
-      <att name="long_name">Ω arag_Avg</att>
+      <att name="long_name">&#937; arag_Avg</att>
       <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">calcOmega_UQL calcOmega_flags</att>
     </addAttributes>
@@ -648,7 +649,7 @@
     <addAttributes>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
-      <att name="long_name">Ω arag_Min</att>
+      <att name="long_name">&#937; arag_Min</att>
       <att name="cell_methods">time: mininum (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">calcOmega_UQL calcOmega_flags</att>
     </addAttributes>
@@ -662,7 +663,7 @@
     <addAttributes>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
-      <att name="long_name">Ω arag_Max</att>
+      <att name="long_name">&#937; arag_Max</att>
       <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">calcOmega_UQL calcOmega_flags</att>
     </addAttributes>
@@ -676,7 +677,7 @@
     <addAttributes>
       <att name="sensor_type">BoL</att>
       <att name="sensor_description">Burke-o-Lator</att>
-      <att name="long_name">Ω arag_Std</att>
+      <att name="long_name">&#937; arag_Std</att>
       <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_variables">calcOmega_UQL calcOmega_flags</att>
     </addAttributes>
@@ -688,7 +689,7 @@
     <destinationName>calcOmega_UQL</destinationName>
     <dataType>byte</dataType>
     <addAttributes>
-      <att name="long_name">Ω arag UNESCO Q level</att>
+      <att name="long_name">&#937; arag UNESCO Q level</att>
       <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
       <att name="flag_values" type="byteList">1 2 3 4 9</att>
       <att name="units">1</att>
@@ -703,7 +704,7 @@
     <destinationName>calcOmega_flags</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="long_name">Ω arag Q flags</att>
+      <att name="long_name">&#937; arag Q flags</att>
       <att name="units">Quality flags</att>
     </addAttributes>
   </dataVariable>
