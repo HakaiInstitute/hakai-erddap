@@ -1,0 +1,35 @@
+name: Sync ERDDAP metadata from metadata form file repository
+on:
+    workflow_dispatch:
+    
+    push:
+        branches:
+            - sync-metadata
+
+jobs:
+    sync-metadata:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout repository
+          uses: actions/checkout@v4
+          with:
+            path: datasets
+        - name: Checkout metadata
+          uses: actions/checkout@v4
+          with:
+            repository: HakaiInstitute/hakai-metadata-entry-form-files
+            path: metadata
+        - name: Install python
+          uses: actions/setup-python@v5
+          with:
+                python-version: '3.11'
+        - name: Install dependencies
+          run: pip install .
+          working-directory: datasets
+        
+        - name: Update ERDDAP metadata
+          run: |
+            python hakai_metadata_conversion erddap-update \
+             --metadata-dir metadata/**/*.yaml \
+             --datasets-dir datasets/datasets.d/**/*.xml \
+             --erddap-url https://catalogue.hakai.org/erddap
