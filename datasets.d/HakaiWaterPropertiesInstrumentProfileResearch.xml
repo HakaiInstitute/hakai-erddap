@@ -43,39 +43,46 @@
         <att name="subsetVariables">station_id, longitude, latitude</att>
     -->
     <addAttributes>
-        <att name="title">Hakai Water Properties Vertical Profiles Measured by Oceanographic Profilers, Research</att>
+        <att name="title">Hakai Water Properties Vertical Profile Data Measured by Oceanographic Profilers, Research</att>
         <att name="acknowledgment">Hakai Field Technicians, Research and IT groups</att>
-        <att name="creator_url">https://www.hakai.org/</att>
+        <att name="creator_url">hakai.org</att>
         <att name="publisher_email">data@hakai.org</att>
         <att name="publisher_name">Hakai Institute</att>
-        <att name="publisher_url">https://www.hakai.org/</att>
+        <att name="publisher_url">hakai.org</att>
         <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
         <att name="institution">Hakai Institute</att>
-        <att name="infoUrl">https://www.doi.org/10.21966/6cz5-6d70</att>
+        <att name="infoUrl">https://catalogue.hakai.orgca-cioos_ba41d935-f293-447f-be3d-7098e569b431</att>
         <att name="sourceUrl">(local files)</att>
-        <att name="keywords">aggregate_quality_flag, backscatter, backscatter_beta, backscatter_beta_flag, c_star_at, c_star_at_flag, c_star_at_flag_description, c_star_at_UQL, cast, cdom, cdom_ppb, cdom_ppb_flag,  chlorophyll, chlorophyll-a, conductivity, dissolved, dissolved oxygen, dissolved_oxygen_ml_l, dissolved_oxygen_percent, downwelling_photosynthetic_photon_spherical_irradiance_in_sea_water, flc, mass_concentration_of_chlorophyll_in_sea_water, par,  platform_speed_wrt_sea_water, pressure, rinko, rinko_do_ml_l, sea_water_electrical_conductivity, sea_water_practical_salinity, sea_water_pressure, sea_water_temperature, sea_water_turbidity, spec_cond, temperature,turbidity, volume_beam_attenuation_coefficient_of_radiative_flux_in_sea_water_corrected_for_pure_water_attenuance, volume_fraction_of_oxygen_in_sea_water</att>
-        <att name="keywords_vocabulary">GCMD Science Keywords</att>
-        <att name="license">Creative Commons Attribution 4.0</att>
+        <att name="keywords">fluorescence,turbidity,PAR,photosynthetically active radiation,Calvert Island,Quadra Island,transmissometer,Johnstone Strait,Queen Charlotte Sound,Strait of Georgia,salinity,coastal zone,CIOOS:oxygen,CIOOS:subSurfaceSalinity,CIOOS:subSurfaceTemperature</att>
+        <att name="keywords_vocabulary">CIOOS: CIOOS Essential Ocean Variables Vocabulary</att>
+        <att name="license">CC-BY-4.0</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
         <att name="subsetVariables">work_area,cruise, station,vessel, device_model, device_sn</att>
         <att name="cdm_data_type">TimeSeriesProfile</att>
         <att name="cdm_profile_variables">hakai_id</att>
         <att name="cdm_timeseries_variables">station,latitude,longitude</att>
-        <att name="date_created">2012-06-01</att>
+        <att name="date_created">2024-03-19</att>
         <att name="geospatial_bounds">-128.5,52.27 -127.4,52.21 -127.2,51.66 -125.6,51.13 -124.8,50.96 -124.1,50.43 -124.7,49.98 -124.9,49.80 -126.7,50.45 -128.1,51.37 -128.4,51.69 -128.5,52.27</att>
         <att name="geospatial_vertical_max">700.0</att>
         <att name="geospatial_vertical_min">1.0</att>
         <att name="institution">Hakai Institute</att>
         <att name="instrument">66061,1907674,18032,18066,65679,80217,1907467</att>
         <att name="keywords">Calvert Island,Quadra Island,subSurfaceSalinity,coastal zone,PAR,turbidity,fluorescence,salinity,Strait of Georgia,subSurfaceTemperature,Johnstone Strait,Queen Charlotte Sound,oxygen,photosynthetically active radiation,transmissometer</att>
-        <att name="summary">Temperature, conductivity, dissolved oxygen, fluorescence, photosynthetic active radiation, and turbidity data collected from 2012 to present by the Hakai Institute in waters surrounding Calvert Island, Johnstone Strait, and Quadra Island areas. This dataset presents data collected by oceanographic profiler instruments (RBR XR-620, RBR Concerto, RBR Maestro, and Seabird SBE 19plus v2) which have been automatically processed by following respective manufacturer's guidelines (see Hakai Water Properties Profile Processing and QA/QC Procedure Manual). The provisional processed data are then quality controlled by applying a series of tests that are following the QARTOD standards and more tests specific to the Hakai Institute data (see Hakai Water Properties Profile Processing and QA/QC Procedure Manual). The research dataset provides a subset of the provisional dataset which has been manually reviewed and judged good for science quality level. Data were collected by the Hakai Institute Oceanography Program, the Nearshore Program, and the Juvenile Salmon Program.</att>
+        <att name="summary">Temperature, conductivity, dissolved oxygen, fluorescence, photosynthetic active radiation, and turbidity data collected from 2012 to present by the Hakai Institute in waters surrounding Calvert Island, Johnstone Strait, and Quadra Island areas. This dataset presents data collected by oceanographic profiler instruments (RBR XR-620, RBR Concerto, RBR Maestro, and Seabird SBE 19plus v2) which have been automatically processed by following respective manufacturer's guidelines (see Hakai Water Properties Profile Processing and QA/QC Procedure Manual). 
+
+The provisional processed data are then quality controlled by applying a series of tests that are following the QARTOD standards and more tests specific to the Hakai Institute data (see Hakai Water Properties Profile Processing and QA/QC Procedure Manual).  
+
+The research dataset provides a subset of the provisional dataset which has been manually reviewed and judged good for science quality level.
+
+Data were collected by the Hakai Institute Oceanography Program, the Nearshore Program, and the Juvenile Salmon Program.</att>
         <att name="title">Hakai Water Properties Vertical Profiles Measured by Oceanographic Profilers, Research</att>
-        <att name="doi">10.21966/6cz5-6d70</att>
-        <att name="id">10.21966/6cz5-6d70</att>
-        <att name="naming_authority">org.doi</att>
+        <att name="doi">https://doi.org/10.21966/kace-2d24</att>
+        <att name="id">ba41d935-f293-447f-be3d-7098e569b431</att>
+        <att name="naming_authority">ca.cioos</att>
         <att name="platform">self-propelled small boat</att>
         <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
-    </addAttributes>
+    <att name="project">Oceanography,Nearshore,Watersheds</att><att name="comment">##Limitations:
+Instruments sensors are generally calibrated once a year by the manufacturer, no comparison and post-calibration correction based on data sampled by another method is applied to this dataset.</att><att name="progress">onGoing</att><att name="date_modified">2024-03-18T19:28:21.285Z</att><att name="product_version">1.0.0</att><att name="history">These data have been solely funded by the Tula Foundation. Data collection started near Calvert Island in 2012, near Quadra Island in 2014, and in Johnstone Strait from 2015 to 2019.</att><att name="creator_name">Hakai Institute</att><att name="creator_email">data@hakai.org</att><att name="creator_type">institution</att><att name="creator_institution">Hakai Institute</att><att name="creator_address">1713 Hyacinthe Bay Road</att><att name="creator_city">Heriot Bay</att><att name="creator_country">Canada</att><att name="publisher_type">institution</att><att name="publisher_institution">Hakai Institute</att><att name="publisher_address">1713 Hyacinthe Bay Road</att><att name="publisher_city">Heriot Bay</att><att name="publisher_country">Canada</att><att name="contributor_name">Hakai Institute;Barrette, Jessy;Hare, Alex;Tula Foundation</att><att name="contributor_role">distributor,owner,funder,publisher;custodian,pointOfContact,processor;processor;funder</att><att name="metadata_link">https://catalogue.hakai.orgca-cioos_ba41d935-f293-447f-be3d-7098e569b431</att><att name="metadata_form">https://hakaiinstitute.github.io/hakai-metadata-entry-form#/en/hakai/tV5qE0aUgaOjSVmgPgiZ6MyHuSy1/-MX35qgX-BrwJDdeJKe1</att></addAttributes>
     <dataVariable>
         <sourceName>work_area</sourceName>
         <destinationName>work_area</destinationName>

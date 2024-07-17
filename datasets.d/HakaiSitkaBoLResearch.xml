@@ -11,8 +11,8 @@
     <columnSeparator>,</columnSeparator>
     <columnNamesRow>7</columnNamesRow>
     <firstDataRow>8</firstDataRow>
-    <sortedColumnSourceName></sortedColumnSourceName>
-    <sortFilesBySourceNames></sortFilesBySourceNames>
+    <sortedColumnSourceName/>
+    <sortFilesBySourceNames/>
     <fileTableInMemory>false</fileTableInMemory>
     <accessibleViaFiles>true</accessibleViaFiles>
     <cacheFromUrl>https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0247208/</cacheFromUrl>

@@ -14,38 +14,47 @@
     -->
     <addAttributes>
         <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
-        <att name="infoUrl">https://www.doi.org/10.21966/wsvt-ew96</att>
-        <att name="keywords_vocabulary">GCMD Science Keywords</att>
-        <att name="license">[standard]</att>
+        <att name="infoUrl">https://catalogue.hakai.orgca-cioos_d55021c3-a142-4e14-8208-36c9826c1893</att>
+        <att name="keywords_vocabulary">CIOOS: CIOOS Essential Ocean Variables Vocabulary</att>
+        <att name="license">CC-BY-4.0</att>
         <att name="sourceUrl">(local database)</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
         <att name="cdm_data_type">TimeSeriesProfile</att>
         <att name="cdm_profile_variables">preciseLat, preciseLon, time </att>
         <att name="cdm_timeseries_variables">latitude, longitude, site_id, work_area </att>
         <att name="subsetVariables">work_area, survey, site_id, line_out_depth</att>
-        <att name="contributor_name">Justin Del Bel Belluz,Jennifer Jackson,Bryn Fedje</att>
-        <att name="contributor_role">custodian,custodian,custodian</att>
+        <att name="contributor_name">Hakai Institute;Del Bel Belluz, Justin;Fedje, Bryn;Tula Foundation</att>
+        <att name="contributor_role">owner,distributor;custodian,author,editor,pointOfContact,resourceProvider,principalInvestigator,originator,publisher;editor,processor,contributor;funder</att>
         <att name="creator_email">justin.belluz@hakai.org</att>
-        <att name="creator_name">Justin Del Bel Belluz</att>
-        <att name="creator_type">person</att>
-        <att name="date_created">2017-04-14</att>
+        <att name="creator_name">Hakai Institute</att>
+        <att name="creator_type">institution</att>
+        <att name="date_created">2024-07-12</att>
         <att name="geospatial_bounds">-128.5,52.27 -127.4,52.21 -127.2,51.66 -125.6,51.13 -124.8,50.96 -124.1,50.43 -124.7,49.98 -124.9,49.80 -126.7,50.45 -128.1,51.37 -128.4,51.69 -128.5,52.27</att>
         <att name="geospatial_vertical_max">650.0</att>
         <att name="institution">Hakai Institute</att>
-        <att name="keywords">other,abundance and biomass,phytoplankton,Quadra Island,Johnstone Strait,Calvert Island,water quality,Strait of Georgia,coastal characterization,chlorophyll a,Salish Sea</att>
-        <att name="publisher_email">data@hakai.org</att>
+        <att name="keywords">abundance and biomass,coastal characterization,chlorophyll a,phytoplankton,water quality,Calvert Island,Quadra Island,Johnstone Strait,Salish Sea,Strait of Georgia,CIOOS:other</att>
+        <att name="publisher_email">justin.belluz@hakai.org</att>
         <att name="publisher_institution">Hakai Institute</att>
-        <att name="publisher_name">Justin Del Bel Belluz</att>
-        <att name="publisher_url">www.hakai.org</att>
-        <att name="summary">This dataset is comprised of Hakai Institute chlorophyll and phaeopigment concentrations collected from 2017 to present at stations within the Calvert Island, Johnstone Strait, and the Quadra Island study regions. Samples for these data were collected in the field using Niskin bottles. Sample water (250 ml) was filtered through: 1) a single glass fiber filter (GF/F, nominal pore size 0.7 um) to comprise a bulk measure of phytoplankton chlorophyll and phaeopigment concentrations and 2) a stack of filters (GF/F, 3 um, and 20 um polycarbonate filters) to estimate chlorophyll and phaeopigment concentrations from pico, nano, and micro-phytoplankton, respectively. Filters were extracted for 24 hours in 10 ml of 90% acetone and analyzed on Turner Designs Trilogy laboratory fluorometers using the acidification module and following the method of Holm Hansen et al. (1965). Data have been quality controlled by manual inspection which included a comparison of bulk concentrations against the sum of the size-fractionated filter concentrations. Where available, further comparisons were done with other measures of chlorophyll concentrations including in situ CTD chlorophyll fluorescence and high-performance liquid chromatography (HPLC) data. Data were collected by the Hakai Institute Oceanography and Nearshore programs.</att>
+        <att name="publisher_name">Del Bel Belluz, Justin</att>
+        <att name="publisher_url">https://www.hakai.org/</att>
+        <att name="summary">This dataset is comprised of Hakai Institute chlorophyll and phaeopigment concentrations collected from 2017 to present at stations within the Calvert Island, Johnstone Strait, and the Quadra Island study regions. Samples for these data were collected in the field using Niskin bottles. Sample water (250 ml) was filtered through: 1) a single glass fiber filter (GF/F, nominal pore size 0.7 um) to comprise a bulk measure of phytoplankton chlorophyll and phaeopigment concentrations and 2) a stack of filters (GF/F, 3 um, and 20 um polycarbonate filters) to estimate chlorophyll and phaeopigment concentrations from pico, nano, and micro-phytoplankton, respectively. Filters were extracted for 24 hours in 10 ml of 90% acetone and analyzed on Turner Designs Trilogy laboratory fluorometers using the acidification module and following the method of Holm Hansen et al. (1965). 
+
+Data have been quality controlled by manual inspection which included a comparison of bulk concentrations against the sum of the size-fractionated filter concentrations. Where available, further comparisons were done with other measures of chlorophyll concentrations including in situ CTD chlorophyll fluorescence and high-performance liquid chromatography (HPLC) data.
+
+Data were collected by the Hakai Institute Oceanography and Nearshore programs.</att>
         <att name="title">Hakai Bulk and Size-Fractionated Chlorophyll and Phaeopigment Concentrations Collected by Niskin Bottle, Research</att>
         <att name="comments">The utilized acidification method is sensitive to interference by high concentrations of chlorophyll c and b. High chlorophyll c concentrations can cause a slight overestimation of chlorophyll a and an underestimation of phaeopigments, which can result in negative phaeopigment concentrations. High chlorophyll b concentrations can result in underestimations of chlorophyll a and overestimations of phaeopigments. When chlorophyll b is high relative to chlorophyll a,  chlorophyll a can be underestimated by as much as 2.5 fold. For more details see Welschmeyer et al. (1994). These two types of interference likely had an influence on the published chlorophyll and phaeopigment dataset. Notably, comparison with HPLC has shown that stations in the Quadra Island region often experience conditions where chlorophyll b is present in high concentrations and is high relative to chlorophyll a. The acidification method used to analyze the Hakai Institute dataset has been shown to highly overestimate phaeopigment concentrations based on comparison to concentrations determined by HPLC (Trees et al., 2003). Care should be used when interpreting the published phaeopigment concentrations. Prior to 2021, samples that exceeded the manufacturer specified instrument sensitivity range were not diluted to bring their concentrations within the specified range. Samples run above the  instrument sensitivity range may have underestimated chlorophyll concentrations due to the blockage of light passing through the sample and a corresponding reduction of fluorescence output (see Turner Trilogy user manual for complete description).  As a result these samples were removed and the dataset lacks many concentrations from phytoplankton bloom events. Comparison with matching HPLC derived chlorophyll a suggests that the affected samples may be useable, but further analysis is required. These data can be shared upon request.</att>
-        <att name="doi">10.21966/wsvt-ew96</att>
-        <att name="id">10.21966/wsvt-ew96</att>
-        <att name="naming_authority">org.doi</att>
+        <att name="doi">https://doi.org/10.21966/q5vm-8797</att>
+        <att name="id">d55021c3-a142-4e14-8208-36c9826c1893</att>
+        <att name="naming_authority">ca.cioos</att>
         <att name="platform">self-propelled small boat</att>
         <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
-    </addAttributes>
+    <att name="project">Oceanography</att><att name="comment">##Limitations:
+The utilized acidification method is sensitive to interference by high concentrations of chlorophyll c and b. High chlorophyll c concentrations can cause a slight overestimation of chlorophyll a and an underestimation of phaeopigments, which can result in negative phaeopigment concentrations. High chlorophyll b concentrations can result in underestimations of chlorophyll a and overestimations of phaeopigments. When chlorophyll b is high relative to chlorophyll a,  chlorophyll a can be underestimated by as much as 2.5 fold. For more details see Welschmeyer et al. (1994). These two types of interference likely had an influence on the published chlorophyll and phaeopigment dataset. Notably, comparison with HPLC has shown that stations in the Quadra Island region often experience conditions where chlorophyll b is present in high concentrations and is high relative to chlorophyll a.
+
+The acidification method used to analyze the Hakai Institute dataset has been shown to highly overestimate phaeopigment concentrations based on comparison to concentrations determined by HPLC (Trees et al., 2003). Care should be used when interpreting the published phaeopigment concentrations. 
+
+Prior to 2021, samples that exceeded the manufacturer specified instrument sensitivity range were not diluted to bring their concentrations within the specified range. Samples run above the  instrument sensitivity range may have underestimated chlorophyll concentrations due to the blockage of light passing through the sample and a corresponding reduction of fluorescence output (see Turner Trilogy user manual for complete description).  As a result these samples were removed and the dataset lacks many concentrations from phytoplankton bloom events. Comparison with matching HPLC derived chlorophyll a suggests that the affected samples may be useable, but further analysis is required. These data can be shared upon request and are available in the provisional dataset.</att><att name="progress">onGoing</att><att name="date_modified">2024-07-12T19:36:06.603Z</att><att name="product_version">1.0.0</att><att name="creator_institution">Hakai Institute</att><att name="creator_city">Campbell River</att><att name="creator_country">Canada</att><att name="creator_url">https://www.hakai.org/</att><att name="creator_ror">https://ror.org/02pry0c91</att><att name="publisher_orcid">https://orcid.org/0000-0002-3536-9508</att><att name="publisher_type">person</att><att name="publisher_address">1713 Hyacinthe Bay Road</att><att name="publisher_city">Campbell River</att><att name="publisher_country">Canada</att><att name="publisher_ror">https://ror.org/02pry0c91</att><att name="metadata_link">https://catalogue.hakai.orgca-cioos_d55021c3-a142-4e14-8208-36c9826c1893</att><att name="metadata_form">https://hakaiinstitute.github.io/hakai-metadata-entry-form#/en/hakai/7U7b8oPpeTN6gjvXlUCTGJr5pga2/-MadZvZJ4ZeikpCgRcV8</att></addAttributes>
     <dataVariable>
         <sourceName>work_area</sourceName>
         <destinationName>work_area</destinationName>
@@ -186,7 +195,7 @@
             <att name="long_name">Bigger than 20um Concentration Of Phaeopigments In Sea Water</att>
             <att name="units">ug/L</att>
             <att name="sdn_parameter_urn">SDN:P01::</att>
-            <att name="sdn_parameter_name">	Concentration of phaeopigments {pheopigments} per unit volume of the water body [particulate >20um phase] by filtration, acetone extraction and fluorometry</att>
+            <att name="sdn_parameter_name">	Concentration of phaeopigments {pheopigments} per unit volume of the water body [particulate &gt;20um phase] by filtration, acetone extraction and fluorometry</att>
             <att name="sdn_uom_urn">SDN:P06::UGPL</att>
             <att name="sdn_uom_name">Micrograms per litre</att>
         </addAttributes>
@@ -261,7 +270,7 @@
             <att name="long_name">Bulk Concentration Of Phaeopigments In Sea Water</att>
             <att name="units">ug/L</att>
             <att name="sdn_parameter_urn">SDN:P01::PHSDFLP1</att>
-            <att name="sdn_parameter_name">Concentration standard deviation of phaeopigments {pheopigments} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and fluorometry</att>
+            <att name="sdn_parameter_name">Concentration standard deviation of phaeopigments {pheopigments} per unit volume of the water body [particulate &gt;GF/F phase] by filtration, acetone extraction and fluorometry</att>
             <att name="sdn_uom_urn">SDN:P06::UGPL</att>
             <att name="sdn_uom_name">Micrograms per litre</att>
         </addAttributes>
@@ -275,10 +284,10 @@
         <addAttributes>
             <att name="colorBarMaximum" type="double">30.0</att>
             <att name="colorBarMinimum" type="double">0</att>
-            <att name="long_name">>20um Concentration Of Chlorophyll In Sea Water</att>
+            <att name="long_name">&gt;20um Concentration Of Chlorophyll In Sea Water</att>
             <att name="standard_name">mass_concentration_of_microphytoplankton_expressed_as_chlorophyll_in_sea_water</att>
             <att name="sdn_parameter_urn">SDN:P01::SCHLFLPQ</att>
-            <att name="sdn_parameter_name">Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate >20um phase] by filtration, acetone extraction and fluorometry</att>
+            <att name="sdn_parameter_name">Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate &gt;20um phase] by filtration, acetone extraction and fluorometry</att>
             <att name="sdn_uom_urn">SDN:P06::UGPL</att>
             <att name="sdn_uom_name">Micrograms per litre</att>
             <att name="units">ug/L</att>
@@ -351,7 +360,7 @@
             <att name="standard_name">mass_concentration_of_picophytoplankton_expressed_as_chlorophyll_in_sea_water</att>
             <att name="units">ug/L</att>
             <att name="sdn_parameter_urn">SDN:P01::</att>
-            <att name="sdn_parameter_name"></att>
+            <att name="sdn_parameter_name"/>
             <att name="sdn_uom_urn">SDN:P06::UGPL</att>
             <att name="sdn_uom_name">Micrograms per litre</att>
         </addAttributes>
@@ -369,7 +378,7 @@
             <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
             <att name="units">ug/L</att>
             <att name="sdn_parameter_urn">SDN:P01::CPHLFLP1</att>
-            <att name="sdn_parameter_name">Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and fluorometry</att>
+            <att name="sdn_parameter_name">Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate &gt;GF/F phase] by filtration, acetone extraction and fluorometry</att>
             <att name="sdn_uom_urn">SDN:P06::UGPL</att>
             <att name="sdn_uom_name">Micrograms per litre</att>
         </addAttributes>
