@@ -26,9 +26,9 @@
         <att name="license">https://creativecommons.org/licenses/by/4.0</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
         <att name="cdm_timeseries_variables">station,latitude,longitude</att>
-        <att name="contributor_name">Jackson, Jennifer;Barrette, Jessy;Hakai Institute</att>
-        <att name="contributor_role">principalInvestigator,pointOfContact,custodian;custodian,resourceProvider,processor;distributor,owner</att>
-        <att name="date_created">2021-12-03</att>
+        <att name="contributor_name">Barrette, Jessy;Hakai Institute;Tula Foundation</att>
+        <att name="contributor_role">custodian,resourceProvider,processor;distributor,owner;funder</att>
+        <att name="date_created">2024-07-17</att>
         <att name="geospatial_bounds">-128.5,52.27 -127.4,52.21 -127.2,51.66 -125.6,51.13 -124.8,50.96 -124.1,50.43 -124.7,49.98 -124.9,49.80 -126.7,50.45 -128.1,51.37 -128.4,51.69 -128.5,52.27</att>
         <att name="geospatial_vertical_max">700.0</att>
         <att name="geospatial_vertical_min">1.0</att>
@@ -49,7 +49,7 @@ Data were collected by the Hakai Institute Oceanography Program, the Nearshore P
         <att name="platform">self-propelled small boat</att>
         <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
     <att name="comment">##Limitations:
-This is only provisional data that has not yet been manually reviewed. Please refer to the Research Dataset for fully reviewed data. Instruments sensors are generally calibrated once a year by the manufacturer, no comparison and post-calibration correction based on data sampled by another method is applied to this dataset.</att><att name="progress">onGoing</att><att name="naming_authority">ca.cioos</att><att name="date_modified">2021-12-03T15:32:24.672Z</att><att name="history">These data have been solely funded by the Tula Foundation. Data collection started near Calvert Island in 2012, near Quadra Island in 2014, and in Johnstone Strait from 2015 to 2019.</att><att name="creator_name">Hakai Institute</att><att name="creator_email">data@hakai.org</att><att name="creator_type">institution</att><att name="creator_institution">Hakai Institute</att><att name="creator_address">1713 Hyacinthe Bay Road</att><att name="creator_city">Heriot Bay</att><att name="creator_country">Canada</att><att name="metadata_link">https://catalogue.hakai.org/dataset/ca-cioos_6143028b-028d-46c7-a67d-f3a513435e63</att><att name="metadata_form">https://hakaiinstitute.github.io/hakai-metadata-entry-form#/en/None/None/-MMHJ4k2EEwxkbXkrjxa</att></addAttributes>
+This is only provisional data that has not yet been manually reviewed. Please refer to the Research Dataset for fully reviewed data. Instruments sensors are generally calibrated once a year by the manufacturer, no comparison and post-calibration correction based on data sampled by another method is applied to this dataset.</att><att name="progress">onGoing</att><att name="naming_authority">ca.cioos</att><att name="date_modified">2024-07-17T21:16:17.363Z</att><att name="history">These data have been solely funded by the Tula Foundation. Data collection started near Calvert Island in 2012, near Quadra Island in 2014, and in Johnstone Strait from 2015 to 2019.</att><att name="creator_name">Hakai Institute</att><att name="creator_email">data@hakai.org</att><att name="creator_type">institution</att><att name="creator_institution">Hakai Institute</att><att name="creator_address">1713 Hyacinthe Bay Road</att><att name="creator_city">Heriot Bay</att><att name="creator_country">Canada</att><att name="metadata_link">https://catalogue.hakai.org/dataset/ca-cioos_6143028b-028d-46c7-a67d-f3a513435e63</att><att name="metadata_form">https://hakaiinstitute.github.io/hakai-metadata-entry-form#/en/hakai/tV5qE0aUgaOjSVmgPgiZ6MyHuSy1/-MMHJ4k2EEwxkbXkrjxa</att><att name="project">Juvenile Salmon Program,Oceanography,Nearshore</att></addAttributes>
     <dataVariable>
         <sourceName>work_area</sourceName>
         <destinationName>work_area</destinationName>
