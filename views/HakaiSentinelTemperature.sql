@@ -1,5 +1,5 @@
-CREATE
-OR REPLACE VIEW erddap."HakaiSentinelTempRaw" AS
+DROP IF EXISTS erddap."HakaiSentinelTemperature";
+CREATE TABLE erddap."HakaiSentinelTemperature" AS
 SELECT
     sm.*,
     data.source_file,
@@ -15,6 +15,11 @@ FROM
         SELECT *
         FROM
             sn_sa.sentinel_temp_cortes_bay_raw
+        UNION
+        ALL
+        SELECT *
+        FROM
+            sn_sa.sentinel_temp_cowichan_raw
         UNION
         ALL
         SELECT *
@@ -59,6 +64,11 @@ FROM
         ALL
         SELECT *
         FROM
+            sn_sa.sentinel_temp_pbs_raw
+        UNION
+        ALL
+        SELECT *
+        FROM
             sn_sa.sentinel_temp_psec_raw
         UNION
         ALL
@@ -75,6 +85,11 @@ FROM
         SELECT *
         FROM
             sn_sa.sentinel_temp_whaler_bay_raw
+        SELECT *
+        FROM
+            sn_sa.sentinel_temp_winter_cove_raw
+        UNION
+        ALL
     ) AS data
 INNER JOIN sn_sa.system_station_metadata AS sm ON sm.station = data.station
         AND sm.commissioned_time < data.measurement_time
