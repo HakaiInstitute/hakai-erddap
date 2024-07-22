@@ -129,6 +129,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Line Out Depth</att>
+            <att name="units">m</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -139,6 +140,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Pressure Transducer Depth</att>
+            <att name="units">m</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -212,6 +214,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Volume</att>
+            <att name="units">ml</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -241,7 +244,8 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">Pre Weight Mg</att>
+            <att name="long_name">Pre Weight</att>
+            <att name="units">mg</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -251,7 +255,8 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">Post Weight Mg</att>
+            <att name="long_name">Post Weight</att>
+            <att name="units">mg</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -261,7 +266,8 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">Filter Size Mm</att>
+            <att name="long_name">Filter Size</att>
+            <att name="units">mm</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -282,6 +288,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Extraction Duration</att>
+            <att name="units">minutes</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -302,6 +309,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Initial Extraction Volume</att>
+            <att name="units">ml</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -312,6 +320,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Volume Filtered Ml</att>
+            <att name="units">ml</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -322,6 +331,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Final Extraction Volume</att>
+            <att name="units">ml</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -342,6 +352,8 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">19 But</att>
+            <att name="units">kg/m^3</att>
+            <att name="standard_name">mass_concentration_of_19_butanoyloxyfucoxanthin_in_sea_water</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -352,6 +364,8 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">19 Hex</att>
+            <att name="units">kg/m^3</att>
+            <att name="standard_name">mass_concentration_of_19_hexanoyloxyfucoxanthin_in_sea_water</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -362,6 +376,8 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Alpha Carotene</att>
+            <att name="standard_name">mass_concentration_of_alpha_carotene_in_sea_water</att>
+            <att name="units">kg/m^3</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -372,6 +388,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Alloxanthin</att>
+            <att name="units">kg/m^3</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -382,6 +399,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Antheraxanthin</att>
+            <att name="units">kg/m^3</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -392,6 +410,8 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Beta Carotene</att>
+            <att name="standard_name">mass_concentration_of_beta_carotene_in_sea_water</att>
+            <att name="units">kg/m^3</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -402,6 +422,8 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">C2MGDG</att>
+            <att name="units">kg/m^3</att>
+            <att name="standard_name"></att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -411,9 +433,7 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="colorBarMaximum" type="double">30.0</att>
-            <att name="colorBarMinimum" type="double">0.03</att>
-            <att name="colorBarScale">Log</att>
+            <att name="long_name">Chlorophyll-A</att>
             <att name="long_name">Concentration Of Chlorophyll In Sea Water</att>
             <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
         </addAttributes>
@@ -425,7 +445,9 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">CHL B</att>
+            <att name="long_name">Chlorophyll-B</att>
+            <att name="standard_name">mass_concentration_of_chlorophyll_b_in_sea_water</att>
+            <att name="units">kg/m^3</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -435,7 +457,7 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">CHL C1</att>
+            <att name="long_name">Chlorophyll-C1</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -446,6 +468,8 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">CHL C1 C2</att>
+            <att name="units">mass_concentration_of_chlorophyll_c1_and_chlorophyll_c2_in_sea_water</att>
+            <att name="units">kg/m^3</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -455,7 +479,8 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">CHL C2</att>
+            <att name="long_name">Chlorophyll-C2</att>
+            <att name="units">kg/m^3</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -465,7 +490,9 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">CHL C3</att>
+            <att name="long_name">Chlorophyll-C3</att>
+            <att name="standard_name">mass_concentration_of_chlorophyll_c3_in_sea_water</att>
+            <att name="units">kg/m^3</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -476,6 +503,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Chl Ide A</att>
+            <att name="units">kg/m^3</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -485,10 +513,8 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="colorBarMaximum" type="double">30.0</att>
-            <att name="colorBarMinimum" type="double">0.03</att>
-            <att name="colorBarScale">Log</att>
-            <att name="long_name">Concentration Of Chlorophyll In Sea Water</att>
+            <att name="units">kg/m^3</att>
+            <att name="long_name">Chlorophyll-A Allomer</att>
             <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
         </addAttributes>
     </dataVariable>
@@ -499,11 +525,8 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="colorBarMaximum" type="double">30.0</att>
-            <att name="colorBarMinimum" type="double">0.03</att>
-            <att name="colorBarScale">Log</att>
-            <att name="long_name">Concentration Of Chlorophyll In Sea Water</att>
-            <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
+            <att name="units">kg/m^3</att>
+            <att name="long_name">Chlorophyll-A prime</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -514,6 +537,8 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Diadinoxanthin</att>
+            <att name="units">kg/m^3</att>
+            <att name="standard_name">mass_concentration_of_diadinoxanthin_in_sea_water</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -524,6 +549,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Diatoxanthin</att>
+            <att name="units">kg/m^3</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -533,11 +559,8 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="colorBarMaximum" type="double">30.0</att>
-            <att name="colorBarMinimum" type="double">0.03</att>
-            <att name="colorBarScale">Log</att>
-            <att name="long_name">Concentration Of Chlorophyll In Sea Water</att>
-            <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
+            <att name="long_name">DV Chlorophyll-A</att>
+            <att name="units">kg/m^3</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -548,6 +571,8 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Fuco</att>
+            <att name="units">kg/m^3</att>
+            <att name="standard_name">mass_concentration_of_fucoxanthin_in_sea_water</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -558,6 +583,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Gyroxanthin Diester</att>
+            <att name="units">kg/m^3</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -568,6 +594,8 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Lutein</att>
+            <att name="units">kg/m^3</att>
+            <att name="standard_name">mass_concentration_of_lutein_in_sea_water</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -577,7 +605,7 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">Me Chlide</att>
+            <att name="units">kg/m^3</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -587,7 +615,7 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">MGDVP</att>
+            <att name="units">kg/m^3</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -598,6 +626,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Neoxanthin</att>
+            <att name="units">kg/m^3</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -608,6 +637,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Peri</att>
+            <att name="units">kg/m^3</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -618,6 +648,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Phbide</att>
+            <att name="units">kg/m^3</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -628,6 +659,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">PHPHYT</att>
+            <att name="units">kg/m^3</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -638,6 +670,8 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Prasinoxanthin</att>
+            <att name="units">kg/m^3</att>
+            <att name="standard_name">mass_concentration_of_prasinoxanthin_in_sea_water</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -648,6 +682,8 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Violaxanthin</att>
+            <att name="units">kg/m^3</att>
+            <att name="standard_name">mass_concentration_of_violaxanthin_in_sea_water</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -658,6 +694,8 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="long_name">Zeaxanthin</att>
+            <att name="units">kg/m^3</att>
+            <att name="standard_name">mass_concentration_of_zeaxanthin_in_sea_water</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -667,11 +705,8 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="colorBarMaximum" type="double">30.0</att>
-            <att name="colorBarMinimum" type="double">0.03</att>
-            <att name="colorBarScale">Log</att>
-            <att name="long_name">Concentration Of Chlorophyll In Sea Water</att>
-            <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
+            <att name="units">kg/m^3</att>
+            <att name="long_name">Concentration Of Total Chlorophyll-A In Sea Water</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -681,11 +716,8 @@
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="colorBarMaximum" type="double">30.0</att>
-            <att name="colorBarMinimum" type="double">0.03</att>
-            <att name="colorBarScale">Log</att>
-            <att name="long_name">Concentration Of Chlorophyll In Sea Water</att>
-            <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
+            <att name="units">kg/m^3</att>
+            <att name="long_name">Concentration Of All Chlorophyll-A In Sea Water</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
