@@ -1,5 +1,5 @@
--- CREATE
--- OR REPLACE VIEW erddap."HakaiSentinelTemperature" AS
+CREATE
+OR REPLACE VIEW erddap."HakaiSentinelTemperature" AS
 SELECT
     sm.*,
     data.*
