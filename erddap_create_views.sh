@@ -1,4 +1,3 @@
-cat erddap_create_views.sh
 #!/bin/sh
 
 #
