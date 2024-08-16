@@ -1,6 +1,6 @@
-# Hakai Datasets
+# Hakai Erddap
 
-This repository contains different components needed to produce and maintain Hakai's datasets on Hakai ERDDAP servers.
+This repository contains different components needed to produce and maintain Hakai ERDDAP servers and associated datasets.
 Server update status:
 
 All datasets made available within the `datasets.d` folder in the ERDDAP XML format are made available on the production server.
