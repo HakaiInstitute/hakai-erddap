@@ -7,7 +7,7 @@ All datasets made available within the `datasets.d` folder in the ERDDAP XML for
 
 Hakai deploy ERDDAP as docker containers by using the [docker-erddap](https://github.com/axiom-data-science/docker-erddap) image. Continuous Integration is handled via the [erddap-deploy actions](https://github.com/HakaiInstitute/erddap-deploy) and the container configuration is handled via [CapRover](https://caprover.com/) applications.
 
-See [GitHub Deployments](https://github.com/HakaiInstitute/hakai-datasets/deployments) for all active deployments maintained via this repository.
+See [GitHub Deployments](https://github.com/HakaiInstitute/hakai-erddap/deployments) for all active deployments maintained via this repository.
 
 ## Configuration
 

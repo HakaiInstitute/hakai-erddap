@@ -22,4 +22,4 @@ jobs:
           username: ${{ secrets.PROD_SERVER_USERNAME }}
           passphrase: ${{ secrets.PROD_SERVER_PASSPHRASE }}
           key: ${{ secrets.PROD_SERVER_SSH_KEY }}
-          script: cd  ~/hakai-datasets/; bash update-erddap.sh --hardFlag
+          script: cd  ~/hakai-erddap/; bash update-erddap.sh --hardFlag
