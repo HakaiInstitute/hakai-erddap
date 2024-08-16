@@ -9,37 +9,12 @@ Hakai deploy ERDDAP as docker containers by using the [docker-erddap](https://gi
 
 See [GitHub Deployments](https://github.com/HakaiInstitute/hakai-erddap/deployments) for all active deployments maintained via this repository.
 
-## Configuration
+## Deployment
 
-The present repository is handled via CapRovers Applications. To configure a deployment, follow these steps:
+ERDDAP is deployed on <catalogue.hakai.org>, via docker-compose. 
+See local `.env` file for configuration.
 
-- Install CapRover on the server
-- CapRover Application Configuration:
-  - Create a new application for your ERDDAP instance
-  - Set container HTTP port: 8080
-  - Copy sample.env environment variables within `App. Configs` -> `Environment Variables` section and define the different parameters accordingly
-  - Define `Persistent Directories`:
-    - `/erddapData/` or defined `bigParentDirectory` environment variable
-    - `/datasets/` map to the local path on the server the file datasets are mounted
-    - `/algae_explorer` mapped to the directory on the server where the `algae explorer` files are mounted
-- Generate SSH key for GitHub CI
-- Add public key to  ` ~/.ssh/authorized_keys` within remote server
-- Define Environment on GitHub
-  - Create new Environment
-  - Add environment protection (optional)
-  - Add Environment Secrets:
-    - CAPROVER_TOKEN
-    - SSH_HOST
-    - SSH_USERNAME
-    - SSH_KEY
-    - SSH_PORT
-  - Add Environment Variables:
-    - CAPROVER_URL
-    - CAPROVER_APP_NAME
-    - NAME
-    - URL
-
-### Testing environment
+### Development
 
 For local development, make a copy of `sample.env` file as `.env`.
 Update the environment variables to match the deployed parameters.
@@ -55,10 +30,63 @@ docker-compose up -d
 
 If successful, you should be able to access your local ERDDAP instance at <http://localhost:{HOST_PORT}/erddap> (default: <http://localhost:8080/erddap>)
 
+## How to create a new dataset
+
+This is a step by step procedure to generate a new dataset:
+
+1. See [development](#development) for create a local testing environment.
+2. If the new dataset is form files, add the datawithin the [datasets](datasets) folder. Create a subdirectory for this dataset and structure the data accorindgly.
+3. Active your docker daemon
+4. Run the bash command: `sh Dasds.sh`
+5. Answer the different questions accordingly to generate a first draft of the 
+    xml associated with this dataset.
+6. Importat! All the paths requested by ERDDAP should be referencing the base 
+   directory (/datasets) within the container which is the local `./datasets/`
+   folder mounted within the container.
+7. Once all the answers completed, see what ERDDAP returned to you. 
+8. If sucessfully, completed ERDDAP should return the dataset.xml associated to this dataset. 
+9. You can also retrieve it at: [here](erddap/data/logs/GenerateDatasetsXml.out) within the log [folder](erddap/data/logs/)
+10. Copy this xml file to [./datasets.d](./datasets.d/), and name the file with its datasetID.
+11. Add the different missing metadata.
+12. Once satisfied, you can test the dataset with the command `sh DasDds.sh`
+13. Fix all the issues brought up by DasDds.sh
+14. Once completed, restart your local instance of ERDDAP and see if that dataset is now available.
+
+### Development Server
+
+1. Once satisfied, commit the changes to the `development` branch. 
+3. If needed, copy the file data to <goose.hakai.org> server within (/data2/erddap_data) and match the path you've used initially within [./datasets/](./datasets/)
+3. Any changes to the development branch should be reflected on the [development
+   erddap](https://goose.hakai.org/erddap) autimacally via a github action
+4. Review development version.
+
+### Production server
+
+1. From the development branch, create a release branch.
+2. Merge Master to the release branch, ignore any changes associated to other datasets in development
+3. Create PR to master
+4. Revise PR
+5. Make sure that the file data (if needed) is available within the `catalogue.hakai.org` server at `/data/erddap_data`
+6. Once happy with the PR, merge it.
+
+### Sync datasets metadata
+
+`Hakai-erddap` is using the `hakai-metadata-conversion` package to sync
+periodically the different datasets metadata based on the latest changes
+made within the Hakai Catalogue.
+
+If any changes are available a PR to development should be automatically
+generated. Merge the changes to development, and follow a similar method as
+described within the [production server section](production-server).
+
 ## Hakai Database integration
-All views and tables generated from the different SQL queries made available in the `view` directory are run nightly from the hecate.hakai.org server from the master branch.
+
+All views and tables generated from the different SQL queries made available in
+the `view` directory are run nightly from the hecate.hakai.org server from the
+master branch with the bash script [erddap_create_views.sh](erddap_create_views.sh)
 
 ## Continuous Integration
+
 All commits to this repository are tested by different linter through a PR or commit to the development and master branches:
 - python: black, isort
 - sql: sqlfluff
