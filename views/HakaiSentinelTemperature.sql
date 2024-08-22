@@ -2,7 +2,6 @@ CREATE
 OR REPLACE VIEW erddap."HakaiSentinelTempRaw" AS
 SELECT
     sm.*,
-    data.source_file,
     data.instrument_sn,
     data.measurement_time,
     data.depth,
@@ -76,7 +75,7 @@ FROM
         FROM
             sn_sa.sentinel_temp_whaler_bay_raw
     ) AS data
-INNER JOIN sn_sa.system_station_metadata AS sm ON sm.station = data.station
+INNER JOIN sn_sa.system_stations AS sm ON sm.id = data.station_id
         AND sm.commissioned_time < data.measurement_time
         AND (
             sm.decommissioned_time > data.measurement_time
