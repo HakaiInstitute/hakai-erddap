@@ -13,8 +13,7 @@ FROM
     (
         SELECT *
         FROM
-            sn_sa.{{ tables[0] }}
-        {% for table in tables[1:] %}
+            sn_sa.{{ tables[0] }}{% for table in tables[1:] %}
         UNION
         ALL
         SELECT *

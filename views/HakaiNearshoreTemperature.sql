@@ -18,7 +18,6 @@ FROM
         SELECT *
         FROM
             sn_sa.ns_koeye_mouth_raw
-        
         UNION
         ALL
         SELECT *

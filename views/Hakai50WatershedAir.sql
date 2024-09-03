@@ -14,7 +14,6 @@ FROM
         SELECT *
         FROM
             sn_sa.w50_mohu_outlet1_tair_raw
-        
         UNION
         ALL
         SELECT *

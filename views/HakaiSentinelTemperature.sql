@@ -14,7 +14,6 @@ FROM
         SELECT *
         FROM
             sn_sa.sentinel_cortes_bay_raw
-        
         UNION
         ALL
         SELECT *
