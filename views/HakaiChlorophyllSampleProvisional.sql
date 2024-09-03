@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS erddap."HakaiChlorophyllSampleProvisional";
 
-CREATE TABLE erddap."HakaiChlorophyllSampleProvisional" AS
+CREATE TABLE erddap."HakaiChlorophyllSampleProvisional" as
 SELECT
     *,
     (
