@@ -85,6 +85,20 @@ All views and tables generated from the different SQL queries made available in
 the `view` directory are run nightly from the hecate.hakai.org server from the
 master branch with the bash script [erddap_create_views.sh](erddap_create_views.sh)
 
+## Sync ERDDAP datasets with hakai database views
+
+ERDDAP relies on the different views and tables present within the erddap schema of the hakai database. 
+
+Some of those views are a union of mulitple tables hosted within sn_sa schema. We use the module `update_erddap_views.py` 
+to keep the different views in sync with all the associated tables. Use poetry to install the required package in `pyproject.toml`
+and run the following command:
+
+```
+python update_erddap_views.py
+```
+
+Commit any changes made to the different files within `views/*.sql` to the main branch.
+
 ## Continuous Integration
 
 All commits to this repository are tested by different linter through a PR or commit to the development and master branches:
