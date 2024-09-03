@@ -1,8 +1,8 @@
-<dataset type="EDDTableFromDatabase" datasetID="Hakai50Watersheds" active="true">
+<dataset type="EDDTableFromDatabase" datasetID="Hakai50WatershedAir" active="true">
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
     <schemaName>erddap</schemaName>
-    <tableName>"Hakai50Watersheds"</tableName>
+    <tableName>"Hakai50WatershedAir"</tableName>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <!-- sourceAttributes>
     </sourceAttributes -->
@@ -27,7 +27,7 @@ This data package includes:
         <att name="title">50 Watersheds Project Temperature Loggers</att>
         <att name="cdm_data_type">Timeseries</att>
         <att name="cdm_timeseries_variables">station,latitude,longitude</att>
-        <att name="subsetVariables">station,instrument_sn,water_temp_uql</att>
+        <att name="subsetVariables">station,instrument_sn,air_temp_uql</att>
         <att name="platform">coastal structure</att>
         <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
     <att name="project">50 Watersehds</att><att name="comment">##Limitations:
@@ -40,14 +40,6 @@ Appropriate QC may not yet be applied.</att><att name="progress">onGoing</att><a
         </sourceAttributes -->
         <addAttributes>
             <att name="cf_role">timeseries_id</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>source_file</sourceName>
-        <destinationName>source_file</destinationName>
-        <dataType>String</dataType>
-        <addAttributes>
-            <att name="long_name">Source File</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -111,43 +103,44 @@ Appropriate QC may not yet be applied.</att><att name="progress">onGoing</att><a
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>water_temp</sourceName>
-        <destinationName>water_temp</destinationName>
+        <sourceName>air_temp</sourceName>
+        <destinationName>air_temp</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="long_name">Water Temperature</att>
+            <att name="long_name">Air Temperature</att>
             <att name="units">degree_Celsius</att>
-            <att name="standard_name">sea_water_temperature</att>
-            <att name="ancillary_data">watertemp_qc watertemp_uql</att>
+            <att name="standard_name">air_temperature</att>
+            <att name="ancillary_data">air_temp_qc air_temp_uql</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>water_temp_ql</sourceName>
-        <destinationName>water_temp_ql</destinationName>
+        <sourceName>air_temp_ql</sourceName>
+        <destinationName>air_temp_ql</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
             <att name="ioos_category">Quality</att>
-            <att name="long_name">Watertemp Quality Level</att>
+            <att name="long_name">Air Temperature Quality Level</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>water_temp_qc</sourceName>
-        <destinationName>water_temp_qc</destinationName>
+        <sourceName>air_temp_qc</sourceName>
+        <destinationName>air_temp_qc</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
             <att name="ioos_category">Quality</att>
-            <att name="long_name">Watertemp Flag</att>
+            <att name="long_name">air_temp Flag</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>water_temp_uql</sourceName>
-        <destinationName>water_temp_uql</destinationName>
+        <sourceName>air_temp_uql</sourceName>
+        <destinationName>air_temp_uql</destinationName>
         <dataType>int</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->

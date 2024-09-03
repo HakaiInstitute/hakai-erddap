@@ -38,14 +38,6 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>source_file</sourceName>
-        <destinationName>source_file</destinationName>
-        <dataType>String</dataType>
-        <addAttributes>
-            <att name="long_name">Source File</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>instrument_sn</sourceName>
         <destinationName>instrument_sn</destinationName>
         <dataType>String</dataType>
@@ -115,7 +107,7 @@
             <att name="long_name">Water Temperature</att>
             <att name="units">degree_Celsius</att>
             <att name="standard_name">sea_water_temperature</att>
-            <att name="ancillary_data">watertemp_qc watertemp_uql</att>
+            <att name="ancillary_data">water_temp_qc water_temp_uql</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -126,7 +118,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="ioos_category">Quality</att>
-            <att name="long_name">Watertemp Quality Level</att>
+            <att name="long_name">water_temp Quality Level</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -137,7 +129,7 @@
         </sourceAttributes -->
         <addAttributes>
             <att name="ioos_category">Quality</att>
-            <att name="long_name">Watertemp Flag</att>
+            <att name="long_name">water_temp Flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>

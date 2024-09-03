@@ -1,5 +1,5 @@
 CREATE
-OR REPLACE VIEW erddap."Hakai50WatershedStream" AS
+OR REPLACE VIEW erddap."Hakai50WatershedStreams" AS
 SELECT
     sm.*,
     data.instrument_sn,

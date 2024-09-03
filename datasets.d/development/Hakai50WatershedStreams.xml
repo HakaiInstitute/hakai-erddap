@@ -1,8 +1,8 @@
-<dataset type="EDDTableFromDatabase" datasetID="HakaiSentinelTemperature" active="true">
+<dataset type="EDDTableFromDatabase" datasetID="Hakai50WatershedStreams" active="true">
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
     <schemaName>erddap</schemaName>
-    <tableName>"HakaiSentinelTemperature"</tableName>
+    <tableName>"Hakai50WatershedStreams"</tableName>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <!-- sourceAttributes>
     </sourceAttributes -->
@@ -24,13 +24,13 @@
 This data package includes: 
 -Sea surface temperature data from April 15th 2022 until September 1st (the duration of the light trap collection season)
 -Site metadata, including temperature logger location</att>
-        <att name="title">Sea surface temperature data along the British Columbia Coast</att>
+        <att name="title">50 Watersheds Project Temperature Loggers</att>
         <att name="cdm_data_type">Timeseries</att>
         <att name="cdm_timeseries_variables">station,latitude,longitude</att>
         <att name="subsetVariables">station,instrument_sn,water_temp_uql</att>
         <att name="platform">coastal structure</att>
         <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
-    <att name="project">Sentinels of Change</att><att name="comment">##Limitations:
+    <att name="project">50 Watersehds</att><att name="comment">##Limitations:
 Appropriate QC may not yet be applied.</att><att name="progress">onGoing</att><att name="keywords_vocabulary">CIOOS: CIOOS Essential Ocean Variables Vocabulary</att><att name="id">5185ac00-8148-4472-adfd-21741d8a10ce</att><att name="naming_authority">ca.cioos</att><att name="date_modified">2024-08-22T20:03:31.370Z</att><att name="product_version">1.1</att><att name="creator_name">Earle, Heather</att><att name="creator_email">heather.earle@hakai.org</att><att name="creator_type">person</att><att name="creator_institution">Hakai Institute</att><att name="creator_city">Campbell River</att><att name="creator_country">Canada</att><att name="creator_url">https://www.hakai.org/</att><att name="creator_ror">https://ror.org/02pry0c91</att><att name="publisher_name">Hakai Institute</att><att name="publisher_email">data@hakai.org</att><att name="publisher_type">institution</att><att name="publisher_institution">Hakai Institute</att><att name="publisher_city">Campbell River</att><att name="publisher_country">Canada</att><att name="publisher_url">https://www.hakai.org/</att><att name="publisher_ror">https://ror.org/02pry0c91</att><att name="contributor_name">Earle, Heather;Whalen, Matt;Hakai Institute;Krzus, Lauren</att><att name="contributor_role">custodian,owner,coAuthor,distributor;owner,coAuthor,distributor;publisher;custodian,owner,distributor</att><att name="metadata_link">https://catalogue.hakai.org/dataset/ca-cioos_5185ac00-8148-4472-adfd-21741d8a10ce</att><att name="metadata_form">https://hakaiinstitute.github.io/hakai-metadata-entry-form#/en/hakai/57FPdLIBPcb9BOLfIOW44RJVywN2/-NH0r8ddHNhVJ5bXkyqR</att></addAttributes>
     <dataVariable>
         <sourceName>station</sourceName>
@@ -135,6 +135,7 @@ Appropriate QC may not yet be applied.</att><att name="progress">onGoing</att><a
         <addAttributes>
             <att name="ioos_category">Quality</att>
             <att name="long_name">water_temp Flag</att>
+            <att name="standard_name">aggregate_quality_flag</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
