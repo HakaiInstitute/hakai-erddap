@@ -45,7 +45,7 @@ def generate_nearshore_view(tables):
     Generate the nearshore view for the ERDDAP server
     """
     ns_tables = [table for table in tables if table.startswith("ns_") and table.endswith("_raw")]
-    result = environment.get_template("HakaiNearshoreTemperature.sql.j2").render(tables=ns_tables)
+    result = environment.get_template("HakaiNearshoreTemperature.sql.j2").render(tables=ns_tables) + "\n"
     Path("views/HakaiNearshoreTemperature.sql").write_text(result)
 
 
@@ -55,11 +55,12 @@ def generate_50_watershed_view(tables):
     """
     ws_tables = [table for table in tables if table.startswith("w50_") and table.endswith("_raw")]
     water_temp_tables = [table for table in ws_tables if re.search("_t\d+_raw",table)] 
-    result = environment.get_template("Hakai50WatershedStreams.sql.j2").render(tables=water_temp_tables)
+    result = environment.get_template("Hakai50WatershedStreams.sql.j2").render(tables=water_temp_tables) + "\n"
     Path("views/Hakai50WatershedStreams.sql").write_text(result)
 
     air_temp_tables = [table for table in ws_tables if re.search("_tair_raw",table)] 
-    result = environment.get_template("Hakai50WatershedAir.sql.j2").render(tables=air_temp_tables)
+    result = environment.get_template("Hakai50WatershedAir.sql.j2").render(tables=air_temp_tables)  + "\n"
+    
     Path("views/Hakai50WatershedAir.sql").write_text(result)
 
 
@@ -71,7 +72,7 @@ def generate_sentinel_view(tables):
     sentinel_tables = [table for table in tables if table.startswith("sentinel_") and table.endswith("_raw")]
     result = environment.get_template("HakaiSentinelTemperature.sql.j2").render(
         tables=sentinel_tables
-    )
+    ) + "\n"
     Path("views/HakaiSentinelTemperature.sql").write_text(result)
 
 
