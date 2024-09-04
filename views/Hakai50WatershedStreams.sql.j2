@@ -1,0 +1,23 @@
+CREATE
+OR REPLACE VIEW erddap."Hakai50WatershedStream" AS
+SELECT
+    sm.*,
+    data.instrument_sn,
+    data.measurement_time,
+    data.depth,
+    data.water_temp,
+    data.water_temp_qc,
+    data.water_temp_ql,
+    data.water_temp_uql
+FROM
+    (
+        SELECT *
+        FROM
+            sn_sa.{{ tables[0] }}{% for table in tables[1:] %}
+        UNION
+        ALL
+        SELECT *
+        FROM
+            sn_sa.{{ table }}{% endfor %}
+    ) AS data
+INNER JOIN sn_sa.system_stations AS sm ON sm.id = data.station_id;
