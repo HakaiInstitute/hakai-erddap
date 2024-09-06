@@ -23,7 +23,7 @@
         <att name="title">Hakai Nearshore temperature and light instensity loggers</att>
         <att name="cdm_data_type">Timeseries</att>
         <att name="cdm_timeseries_variables">station,latitude,longitude</att>
-        <att name="subsetVariables">station,instrument_sn,water_temp_uql,light_intensity_uql</att>
+        <att name="subsetVariables">station,instrument_sn,water_temp_uql,par_uql</att>
         <att name="platform">mooring</att>
         <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
     </addAttributes>
@@ -151,8 +151,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>light_intensity</sourceName>
-        <destinationName>light_intensity</destinationName>
+        <sourceName>par</sourceName>
+        <destinationName>par</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -160,12 +160,12 @@
             <att name="long_name">Light Intensity</att>
             <att name="units">lux</att>
             <att name="standard_name">downwelling_photon_flux_in_sea_water</att>
-            <att name="ancillary_data">light_intensity_qc light_intensity_uql</att>
+            <att name="ancillary_data">par_qc par_uql</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>light_intensity_ql</sourceName>
-        <destinationName>light_intensity_ql</destinationName>
+        <sourceName>par_ql</sourceName>
+        <destinationName>par_ql</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -175,8 +175,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>light_intensity_qc</sourceName>
-        <destinationName>light_intensity_qc</destinationName>
+        <sourceName>par_qc</sourceName>
+        <destinationName>par_qc</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
@@ -186,8 +186,8 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>light_intensity_uql</sourceName>
-        <destinationName>light_intensity_uql</destinationName>
+        <sourceName>par_uql</sourceName>
+        <destinationName>par_uql</destinationName>
         <dataType>int</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
