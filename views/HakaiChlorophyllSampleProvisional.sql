@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS erddap."HakaiChlorophyllSampleProvisional";
 
-CREATE TABLE erddap."HakaiChlorophyllSampleProvisional" AS
+CREATE TABLE erddap."HakaiChlorophyllSampleProvisional" as
 SELECT
     *,
     (
@@ -245,8 +245,8 @@ FROM
                             OR phaeo IS NOT NULL
                         )
                         AND (
-                            chla_flag NOT IN ('SVD')
-                            AND phaeo_flag NOT IN ('SVD')
+                            (chla_flag is null OR chla_flag NOT IN ('SVD'))
+                            AND (phaeo_flag is null OR phaeo_flag NOT IN ('SVD'))
                         )
                     )
             ) AS subquery
