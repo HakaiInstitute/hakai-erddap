@@ -37,7 +37,7 @@ def get_sn_sa_tables(engine) -> list:
             )
         ).fetchall()
 
-    return [table[0] for table in tables]
+    return sorted([table[0] for table in tables])
 
 
 def generate_nearshore_view(tables):
