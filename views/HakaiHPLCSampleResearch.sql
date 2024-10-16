@@ -14,6 +14,7 @@ on x.site_id = y.name and x.work_area = y.work_area
 WHERE
     x.organization = 'HAKAI'
     AND x.row_flag = 'Results'
-    AND quality_level IN ('Principal Investigator')
+    AND quality_level IN ('Principal Investigator', 'Technicianmr')
+    AND x.hplc.all_chl_a_flag IN ('AV')
     -- AND site_id IN ('QU39')
 ;
