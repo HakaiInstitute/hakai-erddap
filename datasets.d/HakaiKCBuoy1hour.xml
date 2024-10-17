@@ -523,6 +523,23 @@ This dataset is provisional. For science purposes, please refer to the dataset: 
     </addAttributes>
   </dataVariable>
 
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterTemp_Std</sourceName>
+    <destinationName>WaterTemp_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">sea_water_temperature</att>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">TWtrKCBuoy_Std</att>
+      <att name="units">degree_Celsius</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
   <dataVariable>
     <sourceName>KCBuoy:WaterTemp_UQL</sourceName>
     <destinationName>WaterTemp_UQL</destinationName>
@@ -629,6 +646,23 @@ This dataset is provisional. For science purposes, please refer to the dataset: 
       <att name="standard_name">sea_water_electrical_conductivity</att>
     </addAttributes>
   </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterConductivity_Std</sourceName>
+    <destinationName>WaterConductivity_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">ConductivityKCBuoy_Std</att>
+      <att name="units">S/m</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterConductivity_UQL WaterConductivity_flags</att>
+      <att name="standard_name">sea_water_electrical_conductivity</att>
+    </addAttributes>
+  </dataVariable>
+
 
   <dataVariable>
     <sourceName>KCBuoy:WaterConductivity_UQL</sourceName>
@@ -739,6 +773,22 @@ This dataset is provisional. For science purposes, please refer to the dataset: 
 
 
   <dataVariable>
+    <sourceName>KCBuoy:WaterPressure_Std</sourceName>
+    <destinationName>WaterPressure_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">PressureKCBuoy_Std</att>
+      <att name="units">dbar</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterPressure_UQL WaterPressure_flags</att>
+      <att name="standard_name">sea_water_pressure</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
     <sourceName>KCBuoy:WaterPressure_UQL</sourceName>
     <destinationName>WaterPressure_UQL</destinationName>
     <dataType>int</dataType>
@@ -839,6 +889,22 @@ This dataset is provisional. For science purposes, please refer to the dataset: 
       <att name="long_name">SalinityKCBuoy_Max</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterSalinity_UQL WaterSalinity_flags</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
+      <att name="units">1e-3</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>KCBuoy:WaterSalinity_Std</sourceName>
+    <destinationName>WaterSalinity_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">SalinityKCBuoy_Std</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
       <att name="ancillary_data">WaterSalinity_UQL WaterSalinity_flags</att>
       <att name="standard_name">sea_water_practical_salinity</att>
       <att name="units">1e-3</att>

@@ -1,0 +1,979 @@
+[1;33mdiff --git a/GenerateDatasetsXml.sh b/GenerateDatasetsXml.sh[m
+[1;33mindex 9e0299e..86ae266 100644[m
+[1;33m--- a/GenerateDatasetsXml.sh[m
+[1;33m+++ b/GenerateDatasetsXml.sh[m
+[1;35m@@ -1,6 +1,3 @@[m
+ #!/bin/bash[m
+[1;31m-[m
+[1;31m-if [ -f .env ]; then[m
+[1;31m-    source .env[m
+[1;31m-fi[m
+[1;32m+[m[1;32m[[ -f ./.env ]] && export $(grep -v '^#' .env | xargs)[m
+ docker exec -it "${CONTAINER_NAME:-erddap}" bash -c "cd webapps/erddap/WEB-INF/ && bash GenerateDatasetsXml.sh -verbose $*" \[m
+[1;33mdiff --git a/README.md b/README.md[m
+[1;33mindex 921edc0..3327c62 100644[m
+[1;33m--- a/README.md[m
+[1;33m+++ b/README.md[m
+[1;35m@@ -9,12 +9,37 @@[m [mHakai deploy ERDDAP as docker containers by using the [docker-erddap](https://gi[m
+ [m
+ See [GitHub Deployments](https://github.com/HakaiInstitute/hakai-erddap/deployments) for all active deployments maintained via this repository.[m
+ [m
+[1;31m-## Deployment[m
+[1;31m-[m
+[1;31m-ERDDAP is deployed on <catalogue.hakai.org>, via docker-compose. [m
+[1;31m-See local `.env` file for configuration.[m
+[1;31m-[m
+[1;31m-### Development[m
+[1;32m+[m[1;32m## Configuration[m
+[1;32m+[m
+[1;32m+[m[1;32mThe present repository is handled via CapRovers Applications. To configure a deployment, follow these steps:[m
+[1;32m+[m
+[1;32m+[m[1;32m- Install CapRover on the server[m
+[1;32m+[m[1;32m- CapRover Application Configuration:[m
+[1;32m+[m[1;32m  - Create a new application for your ERDDAP instance[m
+[1;32m+[m[1;32m  - Set container HTTP port: 8080[m
+[1;32m+[m[1;32m  - Copy sample.env environment variables within `App. Configs` -> `Environment Variables` section and define the different parameters accordingly[m
+[1;32m+[m[1;32m  - Define `Persistent Directories`:[m
+[1;32m+[m[1;32m    - `/erddapData/` or defined `bigParentDirectory` environment variable[m
+[1;32m+[m[1;32m    - `/datasets/` map to the local path on the server the file datasets are mounted[m
+[1;32m+[m[1;32m    - `/algae_explorer` mapped to the directory on the server where the `algae explorer` files are mounted[m
+[1;32m+[m[1;32m- Generate SSH key for GitHub CI[m
+[1;32m+[m[1;32m- Add public key to  ` ~/.ssh/authorized_keys` within remote server[m
+[1;32m+[m[1;32m- Define Environment on GitHub[m
+[1;32m+[m[1;32m  - Create new Environment[m
+[1;32m+[m[1;32m  - Add environment protection (optional)[m
+[1;32m+[m[1;32m  - Add Environment Secrets:[m
+[1;32m+[m[1;32m    - CAPROVER_TOKEN[m
+[1;32m+[m[1;32m    - SSH_HOST[m
+[1;32m+[m[1;32m    - SSH_USERNAME[m
+[1;32m+[m[1;32m    - SSH_KEY[m
+[1;32m+[m[1;32m    - SSH_PORT[m
+[1;32m+[m[1;32m  - Add Environment Variables:[m
+[1;32m+[m[1;32m    - CAPROVER_URL[m
+[1;32m+[m[1;32m    - CAPROVER_APP_NAME[m
+[1;32m+[m[1;32m    - NAME[m
+[1;32m+[m[1;32m    - URL[m
+[1;32m+[m
+[1;32m+[m[1;32m### Testing environment[m
+ [m
+ For local development, make a copy of `sample.env` file as `.env`.[m
+ Update the environment variables to match the deployed parameters.[m
+[1;35m@@ -30,63 +55,10 @@[m [mdocker-compose up -d[m
+ [m
+ If successful, you should be able to access your local ERDDAP instance at <http://localhost:{HOST_PORT}/erddap> (default: <http://localhost:8080/erddap>)[m
+ [m
+[1;31m-## How to create a new dataset[m
+[1;31m-[m
+[1;31m-This is a step by step procedure to generate a new dataset:[m
+[1;31m-[m
+[1;31m-1. See [development](#development) for create a local testing environment.[m
+[1;31m-2. If the new dataset is form files, add the datawithin the [datasets](datasets) folder. Create a subdirectory for this dataset and structure the data accorindgly.[m
+[1;31m-3. Active your docker daemon[m
+[1;31m-4. Run the bash command: `sh Dasds.sh`[m
+[1;31m-5. Answer the different questions accordingly to generate a first draft of the [m
+[1;31m-    xml associated with this dataset.[m
+[1;31m-6. Importat! All the paths requested by ERDDAP should be referencing the base [m
+[1;31m-   directory (/datasets) within the container which is the local `./datasets/`[m
+[1;31m-   folder mounted within the container.[m
+[1;31m-7. Once all the answers completed, see what ERDDAP returned to you. [m
+[1;31m-8. If sucessfully, completed ERDDAP should return the dataset.xml associated to this dataset. [m
+[1;31m-9. You can also retrieve it at: [here](erddap/data/logs/GenerateDatasetsXml.out) within the log [folder](erddap/data/logs/)[m
+[1;31m-10. Copy this xml file to [./datasets.d](./datasets.d/), and name the file with its datasetID.[m
+[1;31m-11. Add the different missing metadata.[m
+[1;31m-12. Once satisfied, you can test the dataset with the command `sh DasDds.sh`[m
+[1;31m-13. Fix all the issues brought up by DasDds.sh[m
+[1;31m-14. Once completed, restart your local instance of ERDDAP and see if that dataset is now available.[m
+[1;31m-[m
+[1;31m-### Development Server[m
+[1;31m-[m
+[1;31m-1. Once satisfied, commit the changes to the `development` branch. [m
+[1;31m-3. If needed, copy the file data to <goose.hakai.org> server within (/data2/erddap_data) and match the path you've used initially within [./datasets/](./datasets/)[m
+[1;31m-3. Any changes to the development branch should be reflected on the [development[m
+[1;31m-   erddap](https://goose.hakai.org/erddap) autimacally via a github action[m
+[1;31m-4. Review development version.[m
+[1;31m-[m
+[1;31m-### Production server[m
+[1;31m-[m
+[1;31m-1. From the development branch, create a release branch.[m
+[1;31m-2. Merge Master to the release branch, ignore any changes associated to other datasets in development[m
+[1;31m-3. Create PR to master[m
+[1;31m-4. Revise PR[m
+[1;31m-5. Make sure that the file data (if needed) is available within the `catalogue.hakai.org` server at `/data/erddap_data`[m
+[1;31m-6. Once happy with the PR, merge it.[m
+[1;31m-[m
+[1;31m-### Sync datasets metadata[m
+[1;31m-[m
+[1;31m-`Hakai-erddap` is using the `hakai-metadata-conversion` package to sync[m
+[1;31m-periodically the different datasets metadata based on the latest changes[m
+[1;31m-made within the Hakai Catalogue.[m
+[1;31m-[m
+[1;31m-If any changes are available a PR to development should be automatically[m
+[1;31m-generated. Merge the changes to development, and follow a similar method as[m
+[1;31m-described within the [production server section](production-server).[m
+[1;31m-[m
+ ## Hakai Database integration[m
+[1;31m-[m
+[1;31m-All views and tables generated from the different SQL queries made available in[m
+[1;31m-the `view` directory are run nightly from the hecate.hakai.org server from the[m
+[1;31m-master branch with the bash script [erddap_create_views.sh](erddap_create_views.sh)[m
+[1;32m+[m[1;32mAll views and tables generated from the different SQL queries made available in the `view` directory are run nightly from the hecate.hakai.org server from the master branch.[m
+ [m
+ ## Continuous Integration[m
+[1;31m-[m
+ All commits to this repository are tested by different linter through a PR or commit to the development and master branches:[m
+ - python: black, isort[m
+ - sql: sqlfluff[m
+[1;33mdiff --git a/datasets.d/development/HakaiHPLCResearch.xml b/datasets.d/development/HakaiHPLCResearch.xml[m
+[1;33mdeleted file mode 100644[m
+[1;33mindex e23d24a..0000000[m
+[1;33m--- a/datasets.d/development/HakaiHPLCResearch.xml[m
+[1;33m+++ /dev/null[m
+[1;35m@@ -1,812 +0,0 @@[m
+[1;31m-<dataset type="EDDTableFromDatabase" datasetID="HakaiHPLCResearch" active="true">[m
+[1;31m-    <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>[m
+[1;31m-    <driverName>org.postgresql.Driver</driverName>[m
+[1;31m-    <schemaName>erddap</schemaName>[m
+[1;31m-    <tableName>"HakaiHPLCSampleResearch"</tableName>[m
+[1;31m-    <reloadEveryNMinutes>10080</reloadEveryNMinutes>[m
+[1;31m-    <!-- sourceAttributes>[m
+[1;31m-    </sourceAttributes -->[m
+[1;31m-    <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...[m
+[1;31m-        <att name="cdm_timeseries_variables">station_id, longitude, latitude</att>[m
+[1;31m-        <att name="subsetVariables">station_id, longitude, latitude</att>[m
+[1;31m-    -->[m
+[1;31m-    <addAttributes>[m
+[1;31m-        <att name="cdm_data_type">TimeSeriesProfile</att>[m
+[1;31m-        <att name="cdm_timeseries_variables">work_area,site_id</att>[m
+[1;31m-        <att name="cdm_profile_variables">project,survey,source,time</att>[m
+[1;31m-        <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>[m
+[1;31m-        <att name="infoUrl">https://catalogue.hakai.org/dataset/ca-cioos_7fd3ec6c-083a-4942-84b4-215e69492072</att>[m
+[1;31m-        <att name="institution">Hakai Institute</att>[m
+[1;31m-        <att name="keywords">phytoplankton,abundance and biomass,chlorophyll a,climate change,coastal zone,British Columbia,Canada,hplc,CIOOS:phytoplanktonBiomassAndDiversity</att>[m
+[1;31m-        <att name="keywords_vocabulary">CIOOS: CIOOS Essential Ocean Variables Vocabulary</att>[m
+[1;31m-        <att name="license">https://creativecommons.org/licenses/by/4.0</att>[m
+[1;31m-        <att name="sourceUrl">(local database)</att>[m
+[1;31m-        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>[m
+[1;31m-        <att name="summary">High performance liquid chromatography (HPLC) is a method that quantifies concentrations of phytoplankton pigments from bulk water samples. Phytoplankton species groupings  (i.e. diatoms, dinoflagellates, etc.) typically contain different pigments, and concentrations of pigments, used for photosynthesis. These differences make it possible to use statistical methods (e.g. chemotaxonomic analysis, CHEMTAX) to estimate phytoplankton group-level biomass contributions within a bulk water sample. These methods provide unique and valuable insight into phytoplankton community dynamics as they quantify the full phytoplankton size-spectrum, are relatively fast and cost-effective and, are directly relatable to remote sensing (i.e. pigments drive differences in light measured by satellites). Furthermore, HPLC is considered the gold-standard for quantifying phytoplankton total chlorophyll a concentrations (TChla, proxy for bulk phytoplankton biomass) required for satellite remote sensing validation.[m
+[1;31m-[m
+[1;31m-The Hakai institute has been collecting HPLC samples in the Northern Salish Sea (NSS) at the QU39 long-term ecological research station (LTER) and at various stations on the central coast of British Columbia since 2015. These data are used to monitor phytoplankton group level dynamics, build knowledge of different environmental conditions driving their variability (Del Bel Belluz et al., 2021), investigate linkages to the food web and carbonate system, evaluate long-term change and, to build regional remote sensing models (Vishnu et al., 2022). Data from station QU39 within the NSS are collected weekly and from 2015 -2019 at 5m depth and afterwards at 0, 5 , 10 and 20m depth. On the central coast of British Columbia, data are collected monthly at 5m depth. [m
+[1;31m-[m
+[1;31m-Samples are analyzed at the University of South Carolina Baruch Institute for Marine and Coastal Sciences using the USC method. This method was evaluated and is detailed in the NASA Fourth SeaWiFS HPLC Analysis Round-Robin Experiment (SeaHARRE-4, Hooker et al., 2010).[m
+[1;31m-[m
+[1;31m-Phytoplankton form the base of marine food webs and play key roles in biogeochemical cycling and carbon sequestration. The high turnover rates of phytoplankton species make them ideal sentinels of environmental change as they quickly respond to perturbations; however, a paucity of data, notably in terms of community composition, exists across coastal systems hindering the derivation of baseline conditions to assess change. This knowledge gap is especially pertinent when considering that coastal regions are experiencing rapid climate-driven change including increased temperature and acidification, reduced oxygen and altered freshwater dynamics. The synergy of these influences has the potential to alter phytoplankton community and size structure having large downstream implications on ecosystem resiliency, food production and climate regulation.</att>[m
+[1;31m-        <att name="title">High performance liquid chromatography phytoplankton pigment timeseries for the northern Salish Sea and central coast, British Columbia</att>[m
+[1;31m-        <att name="subsetVariables">project,work_area,survey,site_id,source</att>[m
+[1;31m-    <att name="project">Oceanography</att><att name="comment">##Limitations:[m
+[1;31m-Care should be taken when using HPLC phytoplankton pigment concentrations for community based analysis. Species within different phytoplankton groupings can show comparable pigment profiles or variable presence/absence of marker pigments. Pigment concentrations can also vary as a result of environmental conditions (light, nutrients, etc.). In addition, small cryptic species with similar pigment profiles as broader groupings are often not separated and are included in the biomass of the most similar grouping. Furthermore, endosymbiosis can result in mixotrophic grazers displaying pigment profiles of their endosymbiont (i.e. cryptophyte pigments within the ciliate Mesodinium rubrum). These issues can result in misclassifications or error when using chemotaxonomic and other pigment based methods. Strong knowledge of expected phytoplankton species is required prior to analysis and outputs are meant to represent broad trends in phytoplankton species composition.</att><att name="progress">onGoing</att><att name="id">7fd3ec6c-083a-4942-84b4-215e69492072</att><att name="naming_authority">ca.cioos</att><att name="date_modified">2024-07-22T20:18:57.436Z</att><att name="product_version">1.0</att><att name="history">Metadata record history:[m
+[1;31m-- additionalDocumentation:[m
+[1;31m-  - authority: URL[m
+[1;31m-    code: https://ntrs.nasa.gov/citations/20110008482[m
+[1;31m-    title:[m
+[1;31m-      en: The Fourth SeaWiFS HPLC Analysis Round-Robin Experiment (SeaHARRE-4)[m
+[1;31m-      fr: "La quatri\xE8me exp\xE9rience Round Robin d'analyse HPLC de SeaWiFS (SeaHarre-4)"[m
+[1;31m-      translations:[m
+[1;31m-        fr:[m
+[1;31m-          message: "text translated using the Amazon translate service / texte traduit\[m
+[1;31m-            \ \xE0 l'aide du service de traduction Amazon"[m
+[1;31m-          verified: false[m
+[1;31m-  scope: Dataset[m
+[1;31m-  statement:[m
+[1;31m-    en: Explanation of HPLC USC analysis method and comparison with other methods[m
+[1;31m-    fr: "Explication de la m\xE9thode d'analyse HPLC USC et comparaison avec d'autres\[m
+[1;31m-      \ m\xE9thodes"[m
+[1;31m-    translations:[m
+[1;31m-      fr:[m
+[1;31m-        message: "text translated using the Amazon translate service / texte traduit\[m
+[1;31m-          \ \xE0 l'aide du service de traduction Amazon"[m
+[1;31m-        verified: false[m
+[1;31m-</att><att name="creator_name">Hakai Institute</att><att name="creator_type">institution</att><att name="creator_institution">Hakai Institute</att><att name="creator_city">Campbell River</att><att name="creator_country">Canada</att><att name="creator_url">https://www.hakai.org/</att><att name="creator_ror">https://ror.org/02pry0c91</att><att name="publisher_name">Hakai Institute</att><att name="publisher_type">institution</att><att name="publisher_institution">Hakai Institute</att><att name="publisher_city">Campbell River</att><att name="publisher_country">Canada</att><att name="publisher_url">https://www.hakai.org/</att><att name="publisher_ror">https://ror.org/02pry0c91</att><att name="contributor_name">Del Bel Belluz, Justin;Jordison, Drew;Evans, Wiley;Hakai Institute;Tula Foundation</att><att name="contributor_role">custodian,author,editor,pointOfContact,principalInvestigator,originator;custodian,pointOfContact,contributor;custodian,principalInvestigator;publisher,owner,distributor;funder</att><att name="doi">https://doi.org/10.21966/bw2d-tg65</att><att name="metadata_link">https://catalogue.hakai.org/dataset/ca-cioos_7fd3ec6c-083a-4942-84b4-215e69492072</att><att name="metadata_form">https://hakaiinstitute.github.io/hakai-metadata-entry-form#/en/hakai/7U7b8oPpeTN6gjvXlUCTGJr5pga2/-O25qzW3OpioeACGpRHl</att></addAttributes>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>project</sourceName>[m
+[1;31m-        <destinationName>project</destinationName>[m
+[1;31m-        <dataType>String</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Project</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>work_area</sourceName>[m
+[1;31m-        <destinationName>work_area</destinationName>[m
+[1;31m-        <dataType>String</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Work Area</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>survey</sourceName>[m
+[1;31m-        <destinationName>survey</destinationName>[m
+[1;31m-        <dataType>String</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Survey</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>site_id</sourceName>[m
+[1;31m-        <destinationName>site_id</destinationName>[m
+[1;31m-        <dataType>String</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Site Id</att>[m
+[1;31m-            <att name="cf_role">timeseries_id</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>latitude</sourceName>[m
+[1;31m-        <destinationName>latitude</destinationName>[m
+[1;31m-        <dataType>float</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">latitude</att>[m
+[1;31m-            <att name="standard_name">latitude</att>[m
+[1;31m-            <att name="units">degrees_north</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>longitude</sourceName>[m
+[1;31m-        <destinationName>longitude</destinationName>[m
+[1;31m-        <dataType>float</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">longitude</att>[m
+[1;31m-            <att name="standard_name">longitude</att>[m
+[1;31m-            <att name="units">degrees_east</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>source</sourceName>[m
+[1;31m-        <destinationName>source</destinationName>[m
+[1;31m-        <dataType>String</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Source</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>project_specific_id</sourceName>[m
+[1;31m-        <destinationName>project_specific_id</destinationName>[m
+[1;31m-        <dataType>String</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Project Specific Id</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>hakai_id</sourceName>[m
+[1;31m-        <destinationName>hakai_id</destinationName>[m
+[1;31m-        <dataType>String</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Hakai Id</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>line_out_depth</sourceName>[m
+[1;31m-        <destinationName>line_out_depth</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Line Out Depth</att>[m
+[1;31m-            <att name="units">m</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>pressure_transducer_depth</sourceName>[m
+[1;31m-        <destinationName>pressure_transducer_depth</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Pressure Transducer Depth</att>[m
+[1;31m-            <att name="units">m</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>depth</sourceName>[m
+[1;31m-        <destinationName>depth</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Depth</att>[m
+[1;31m-            <att name="standard_name">depth</att>[m
+[1;31m-            <att name="units">m</att>[m
+[1;31m-            <att name="source">pressure_transducer_depth if available otherse line_out_depth</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>collected</sourceName>[m
+[1;31m-        <destinationName>time</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="ioos_category">Time</att>[m
+[1;31m-            <att name="long_name">Collected</att>[m
+[1;31m-            <att name="standard_name">time</att>[m
+[1;31m-            <att name="units">seconds since 1970-01-01T00:00:00Z</att>[m
+[1;31m-            <att name="cf_role">profile_id</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>preserved</sourceName>[m
+[1;31m-        <destinationName>preserved</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="ioos_category">Time</att>[m
+[1;31m-            <att name="long_name">Preserved</att>[m
+[1;31m-            <att name="standard_name">time</att>[m
+[1;31m-            <att name="units">seconds since 1970-01-01T00:00:00Z</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>analyzed</sourceName>[m
+[1;31m-        <destinationName>analyzed</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="ioos_category">Time</att>[m
+[1;31m-            <att name="long_name">Analyzed</att>[m
+[1;31m-            <att name="standard_name">time</att>[m
+[1;31m-            <att name="units">seconds since 1970-01-01T00:00:00Z</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>acidified</sourceName>[m
+[1;31m-        <destinationName>acidified</destinationName>[m
+[1;31m-        <dataType>boolean</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Acidified</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>volume</sourceName>[m
+[1;31m-        <destinationName>volume</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Volume</att>[m
+[1;31m-            <att name="units">ml</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>lab_technician</sourceName>[m
+[1;31m-        <destinationName>lab_technician</destinationName>[m
+[1;31m-        <dataType>String</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Lab Technician</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>filter_portion</sourceName>[m
+[1;31m-        <destinationName>filter_portion</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Filter Portion</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>pre_weight_mg</sourceName>[m
+[1;31m-        <destinationName>pre_weight_mg</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Pre Weight</att>[m
+[1;31m-            <att name="units">mg</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>post_weight_mg</sourceName>[m
+[1;31m-        <destinationName>post_weight_mg</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Post Weight</att>[m
+[1;31m-            <att name="units">mg</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>filter_size_mm</sourceName>[m
+[1;31m-        <destinationName>filter_size_mm</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Filter Size</att>[m
+[1;31m-            <att name="units">mm</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>filter_type</sourceName>[m
+[1;31m-        <destinationName>filter_type</destinationName>[m
+[1;31m-        <dataType>String</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Filter Type</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>extraction_duration</sourceName>[m
+[1;31m-        <destinationName>extraction_duration</destinationName>[m
+[1;31m-        <dataType>String</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Extraction Duration</att>[m
+[1;31m-            <att name="units">minutes</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>extraction_method</sourceName>[m
+[1;31m-        <destinationName>extraction_method</destinationName>[m
+[1;31m-        <dataType>String</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Extraction Method</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>initial_extraction_volume</sourceName>[m
+[1;31m-        <destinationName>initial_extraction_volume</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Initial Extraction Volume</att>[m
+[1;31m-            <att name="units">ml</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>volume_filtered_ml</sourceName>[m
+[1;31m-        <destinationName>volume_filtered_ml</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Volume Filtered Ml</att>[m
+[1;31m-            <att name="units">ml</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>final_extraction_volume</sourceName>[m
+[1;31m-        <destinationName>final_extraction_volume</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Final Extraction Volume</att>[m
+[1;31m-            <att name="units">ml</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>tac_peak</sourceName>[m
+[1;31m-        <destinationName>tac_peak</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Tac Peak</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>_19_but</sourceName>[m
+[1;31m-        <destinationName>a_19_but</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">19 But</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-            <att name="standard_name">mass_concentration_of_19_butanoyloxyfucoxanthin_in_sea_water</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>_19_hex</sourceName>[m
+[1;31m-        <destinationName>a_19_hex</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">19 Hex</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-            <att name="standard_name">mass_concentration_of_19_hexanoyloxyfucoxanthin_in_sea_water</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>alpha_carotene</sourceName>[m
+[1;31m-        <destinationName>alpha_carotene</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Alpha Carotene</att>[m
+[1;31m-            <att name="standard_name">mass_concentration_of_alpha_carotene_in_sea_water</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>alloxanthin</sourceName>[m
+[1;31m-        <destinationName>alloxanthin</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Alloxanthin</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>antheraxanthin</sourceName>[m
+[1;31m-        <destinationName>antheraxanthin</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Antheraxanthin</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>beta_carotene</sourceName>[m
+[1;31m-        <destinationName>beta_carotene</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Beta Carotene</att>[m
+[1;31m-            <att name="standard_name">mass_concentration_of_beta_carotene_in_sea_water</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>c2mgdg</sourceName>[m
+[1;31m-        <destinationName>c2mgdg</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">C2MGDG</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-            <att name="standard_name"/>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>chl_a</sourceName>[m
+[1;31m-        <destinationName>chl_a</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Chlorophyll-A</att>[m
+[1;31m-            <att name="long_name">Concentration Of Chlorophyll In Sea Water</att>[m
+[1;31m-            <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>chl_b</sourceName>[m
+[1;31m-        <destinationName>chl_b</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Chlorophyll-B</att>[m
+[1;31m-            <att name="standard_name">mass_concentration_of_chlorophyll_b_in_sea_water</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>chl_c1</sourceName>[m
+[1;31m-        <destinationName>chl_c1</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Chlorophyll-C1</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>chl_c1_c2</sourceName>[m
+[1;31m-        <destinationName>chl_c1_c2</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">CHL C1 C2</att>[m
+[1;31m-            <att name="units">mass_concentration_of_chlorophyll_c1_and_chlorophyll_c2_in_sea_water</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>chl_c2</sourceName>[m
+[1;31m-        <destinationName>chl_c2</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Chlorophyll-C2</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>chl_c3</sourceName>[m
+[1;31m-        <destinationName>chl_c3</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Chlorophyll-C3</att>[m
+[1;31m-            <att name="standard_name">mass_concentration_of_chlorophyll_c3_in_sea_water</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>chl_ide_a</sourceName>[m
+[1;31m-        <destinationName>chl_ide_a</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Chl Ide A</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>chla_allomer</sourceName>[m
+[1;31m-        <destinationName>chla_allomer</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-            <att name="long_name">Chlorophyll-A Allomer</att>[m
+[1;31m-            <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>chla_prime</sourceName>[m
+[1;31m-        <destinationName>chla_prime</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-            <att name="long_name">Chlorophyll-A prime</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>diadinoxanthin</sourceName>[m
+[1;31m-        <destinationName>diadinoxanthin</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Diadinoxanthin</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-            <att name="standard_name">mass_concentration_of_diadinoxanthin_in_sea_water</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>diatoxanthin</sourceName>[m
+[1;31m-        <destinationName>diatoxanthin</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Diatoxanthin</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>dv_chl_a</sourceName>[m
+[1;31m-        <destinationName>dv_chl_a</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">DV Chlorophyll-A</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>fuco</sourceName>[m
+[1;31m-        <destinationName>fuco</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Fuco</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-            <att name="standard_name">mass_concentration_of_fucoxanthin_in_sea_water</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>gyroxanthin_diester</sourceName>[m
+[1;31m-        <destinationName>gyroxanthin_diester</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Gyroxanthin Diester</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>lutein</sourceName>[m
+[1;31m-        <destinationName>lutein</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Lutein</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-            <att name="standard_name">mass_concentration_of_lutein_in_sea_water</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>me_chlide</sourceName>[m
+[1;31m-        <destinationName>me_chlide</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>mgdvp</sourceName>[m
+[1;31m-        <destinationName>mgdvp</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>neoxanthin</sourceName>[m
+[1;31m-        <destinationName>neoxanthin</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Neoxanthin</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>peri</sourceName>[m
+[1;31m-        <destinationName>peri</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Peri</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>phbide</sourceName>[m
+[1;31m-        <destinationName>phbide</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Phbide</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>phphyt</sourceName>[m
+[1;31m-        <destinationName>phphyt</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">PHPHYT</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>prasinoxanthin</sourceName>[m
+[1;31m-        <destinationName>prasinoxanthin</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Prasinoxanthin</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-            <att name="standard_name">mass_concentration_of_prasinoxanthin_in_sea_water</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>violaxanthin</sourceName>[m
+[1;31m-        <destinationName>violaxanthin</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Violaxanthin</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-            <att name="standard_name">mass_concentration_of_violaxanthin_in_sea_water</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>zeaxanthin</sourceName>[m
+[1;31m-        <destinationName>zeaxanthin</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Zeaxanthin</att>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-            <att name="standard_name">mass_concentration_of_zeaxanthin_in_sea_water</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>total_chl_a</sourceName>[m
+[1;31m-        <destinationName>total_chl_a</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-            <att name="long_name">Concentration Of Total Chlorophyll-A In Sea Water</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>all_chl_a</sourceName>[m
+[1;31m-        <destinationName>all_chl_a</destinationName>[m
+[1;31m-        <dataType>double</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="units">kg/m^3</att>[m
+[1;31m-            <att name="long_name">Concentration Of All Chlorophyll-A In Sea Water</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>all_chl_a_flag</sourceName>[m
+[1;31m-        <destinationName>all_chl_a_flag</destinationName>[m
+[1;31m-        <dataType>String</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">All Chl A Flag</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>analyzing_lab</sourceName>[m
+[1;31m-        <destinationName>analyzing_lab</destinationName>[m
+[1;31m-        <dataType>String</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Analyzing Lab</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>row_flag</sourceName>[m
+[1;31m-        <destinationName>row_flag</destinationName>[m
+[1;31m-        <dataType>String</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Row Flag</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>quality_level</sourceName>[m
+[1;31m-        <destinationName>quality_level</destinationName>[m
+[1;31m-        <dataType>String</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Quality Level</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>comments</sourceName>[m
+[1;31m-        <destinationName>comments</destinationName>[m
+[1;31m-        <dataType>String</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Comments</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-    <dataVariable>[m
+[1;31m-        <sourceName>quality_log</sourceName>[m
+[1;31m-        <destinationName>quality_log</destinationName>[m
+[1;31m-        <dataType>String</dataType>[m
+[1;31m-        <!-- sourceAttributes>[m
+[1;31m-        </sourceAttributes -->[m
+[1;31m-        <addAttributes>[m
+[1;31m-            <att name="long_name">Quality Log</att>[m
+[1;31m-        </addAttributes>[m
+[1;31m-    </dataVariable>[m
+[1;31m-</dataset>[m
+[1;33mdiff --git a/docker-compose-local.yml b/docker-compose-local.yml[m
+[1;33mdeleted file mode 100644[m
+[1;33mindex 3416ffd..0000000[m
+[1;33m--- a/docker-compose-local.yml[m
+[1;33m+++ /dev/null[m
+[1;35m@@ -1,30 +0,0 @@[m
+[1;31m-# see the .env file to set the variables used here[m
+[1;31m-version: "2"[m
+[1;31m-services:[m
+[1;31m-  erddap:[m
+[1;31m-    image: "axiom/docker-erddap:2.23-jdk17-openjdk"[m
+[1;31m-    restart: always[m
+[1;31m-    container_name: ${CONTAINER_NAME:-erddap}[m
+[1;31m-    platform: linux/x86_64[m
+[1;31m-    env_file:[m
+[1;31m-      - .env[m
+[1;31m-    ports:[m
+[1;31m-      - "${HOST_PORT:-8090}:8080"[m
+[1;31m-    volumes:[m
+[1;31m-      - "./erddap/conf/robots.txt:/usr/local/tomcat/webapps/ROOT/robots.txt"[m
+[1;31m-      - "./erddap/content:/usr/local/tomcat/content/erddap"[m
+[1;31m-      - "./erddap/data:/erddapData"[m
+[1;31m-      - "${DATASETS_DIR:-./datasets}:/datasets"[m
+[1;31m-      - "./datasets.d:/datasets.d:ro"[m
+[1;31m-      - "./init.d:/init.d"[m
+[1;31m-      # - "/mnt/efs/algex:/algae_explorer"[m
+[1;31m-      - "./datasets.d:/datasets.d"[m
+[1;31m-    healthcheck:[m
+[1;31m-      test:[m
+[1;31m-        [[m
+[1;31m-          "CMD",[m
+[1;31m-          "curl",[m
+[1;31m-          "-f",[m
+[1;31m-          "http://localhost:${HOST_PORT}/erddap/index.html"[m
+[1;31m-        ][m
+[1;31m-      interval: 10s[m
