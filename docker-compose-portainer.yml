@@ -4,9 +4,8 @@ volumes:
 
 services :
   # remember to setup cron job to update letsencrypt on server
-  nginx:
+  nginx_proxy:
     image: nginx:latest
-    container_name: nginx_proxy
     ports:
       - 80:80
       - 443:443
@@ -20,8 +19,7 @@ services :
       - nginx_proxy_network
     # network_mode: host
 
-  letsencrypt:
-    container_name: 'certbot-service'
+  certbot-service:
     image: certbot/certbot:v1.17.0
     command: sh -c "certbot certonly --expand --webroot -w /tmp/acme_challenge -d erddap.hakai.app --text --agree-tos --email matthew.foster@hakai.org --rsa-key-size 4096 --verbose --keep-until-expiring --preferred-challenges=http"
     entrypoint: ""
@@ -36,7 +34,6 @@ services :
   erddap-dev:
     image: "axiom/docker-erddap:2.24-jdk21-openjdk"
     restart: always
-    container_name: erddap-dev
     ports:
       - "8091:8080"
     volumes:
