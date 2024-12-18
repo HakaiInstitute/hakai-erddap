@@ -31,7 +31,7 @@ services :
     networks:
       - nginx_proxy_network
 
-  erddap-dev:
+  dev:
     image: "axiom/docker-erddap:2.24-jdk21-openjdk"
     restart: always
     ports:
@@ -59,4 +59,4 @@ services :
 
 networks:
   nginx_proxy_network:
-    driver: bridge
+    driver: overlay
