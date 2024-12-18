@@ -1,5 +1,4 @@
 name: Deploy Nginx Image to GHCR
-
 on:
   push:
     paths:
@@ -11,9 +10,6 @@ on:
 jobs:
       push-nginx-image:
         runs-on: ubuntu-latest
-        defaults:
-          run:
-            working-directory: './hakai_erddap_nginx_proxy'
         steps:
             - name: 'Checkout GitHub Action'
               uses: actions/checkout@main
@@ -31,6 +27,9 @@ jobs:
                     type=semver,pattern={{version}}
                     type=semver,pattern={{major}}.{{minor}}
                     type=semver,pattern={{major}}
+
+            - name: Set up Docker Buildx
+              uses: docker/setup-buildx-action@v3
 
             - name: 'Login to GitHub Container Registry'
               uses: docker/login-action@v1
