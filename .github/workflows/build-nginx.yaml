@@ -27,5 +27,5 @@ jobs:
 
           - name: 'Build Inventory Image'
             run: |
-              docker build . --tag ghcr.io/hakaiinstitute/hakai_erddap_nginx_proxy:latest
+              docker build ./nginx/ --tag ghcr.io/hakaiinstitute/hakai_erddap_nginx_proxy:latest
               docker push ghcr.io/hakaiinstitute/hakai_erddap_nginx_proxy:latest
