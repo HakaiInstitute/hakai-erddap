@@ -21,9 +21,9 @@ jobs:
           - name: 'Login to GitHub Container Registry'
             uses: docker/login-action@v1
             with:
-            registry: ghcr.io
-            username: hakai-it
-            password: ${{ secrets.CI_TOKEN }}
+                registry: ghcr.io
+                username: hakai-it
+                password: ${{ secrets.CI_TOKEN }}
 
           - name: 'Build Inventory Image'
             run: |
