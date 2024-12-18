@@ -7,7 +7,7 @@ services :
   # must install certbot on host https://certbot.eff.org/instructions?ws=other&os=ubuntufocal
   # certbot certonly --webroot
   nginx_proxy:
-    image: nginx_proxy:latest
+    image: ghcr.io/hakaiinstitute/hakai_erddap_nginx_proxy:latest
     build:
       context: ./nginx/
       dockerfile: Dockerfile
