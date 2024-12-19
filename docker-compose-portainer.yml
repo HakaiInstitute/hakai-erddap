@@ -3,9 +3,10 @@ volumes:
   erddap-data:
 
 services :
-
+  # must create /tmp/acme_challenge and /etc/letsencrypt on host
   # must install certbot on host https://certbot.eff.org/instructions?ws=other&os=ubuntufocal
-  # certbot certonly --webroot
+  # run this on server first time before spinning up the swarm stack
+  # certbot certonly --expand  -w /tmp/acme_challenge -d development.erddap.hakai.app --text --agree-tos --email matthew.foster@hakai.org --rsa-key-size 4096 --verbose --keep-until-expiring --preferred-challenges=http
   nginx_proxy:
     image: ghcr.io/hakaiinstitute/hakai_erddap_nginx_proxy:latest
     build:
@@ -26,10 +27,10 @@ services :
       - nginx_proxy_network
     # network_mode: host
 
-  # must install certbot on host https://certbot.eff.org/instructions?ws=other&os=ubuntufocal
+  
   # certbot-service:
   #   image: certbot/certbot:v1.17.0
-  #   command: sh -c "certbot certonly --expand --webroot -w /tmp/acme_challenge -d erddap.hakai.app --text --agree-tos --email matthew.foster@hakai.org --rsa-key-size 4096 --verbose --keep-until-expiring --preferred-challenges=http"
+  #   command: sh -c "certbot certonly --expand --webroot -w /tmp/acme_challenge -d development.erddap.hakai.app --text --agree-tos --email matthew.foster@hakai.org --rsa-key-size 4096 --verbose --keep-until-expiring --preferred-challenges=http"
   #   entrypoint: ""
   #   deploy:
   #     replicas: 1
