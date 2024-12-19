@@ -49,6 +49,8 @@ services :
     restart: always
     ports:
       - "8091:8080"
+    env_file:
+      - stack.env
     deploy:
       replicas: 1
       restart_policy:
