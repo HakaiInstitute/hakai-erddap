@@ -22,9 +22,7 @@ services:
     healthcheck:
       test:
         [
-          "CMD",
-          "curl",
-          "-f",
-          "http://localhost:${HOST_PORT}/erddap/index.html"
+          "CMD-SHELL",
+          "curl -f http://localhost:8080/erddap/index.html || exit 1"
         ]
       interval: 10s
