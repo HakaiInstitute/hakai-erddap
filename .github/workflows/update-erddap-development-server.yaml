@@ -22,4 +22,4 @@ jobs:
           username: ${{ secrets.DEV_SERVER_USERNAME }}
           passphrase: ${{ secrets.DEV_SERVER_PASSPHRASE }}
           key: ${{ secrets.DEV_SERVER_SSH_KEY }}
-          script: cd  ~/hakai-erddap/; bash update-erddap.sh --hardFlag
+          script: cd  ~/hakai-erddap-dev/; bash CONTAINER_NAME=$(sudo docker ps -q -f name="erddap_dev\.") update-erddap.sh --hardFlag
