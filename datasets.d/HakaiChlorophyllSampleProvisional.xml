@@ -28,7 +28,7 @@
         <att name="creator_email">justin.belluz@hakai.org</att>
         <att name="creator_name">Hakai Institute</att>
         <att name="creator_type">institution</att>
-        <att name="date_created">2024-03-18</att>
+        <att name="date_created">2024-07-12</att>
         <att name="geospatial_bounds">-128.5,52.27 -127.4,52.21 -127.2,51.66 -125.6,51.13 -124.8,50.96 -124.1,50.43 -124.7,49.98 -124.9,49.80 -126.7,50.45 -128.1,51.37 -128.4,51.69 -128.5,52.27</att>
         <att name="geospatial_vertical_max">650.0</att>
         <att name="institution">Hakai Institute</att>
