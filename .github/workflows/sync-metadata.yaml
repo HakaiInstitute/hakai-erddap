@@ -27,6 +27,8 @@ jobs:
           working-directory: datasets
         
         - name: Update ERDDAP metadata
+          env:
+            LOGURU_LEVEL: 'INFO'
           run: |
             hakai_metadata_conversion erddap-update \
              --records 'metadata/**/*.yaml' \
