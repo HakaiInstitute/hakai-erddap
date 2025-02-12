@@ -15,7 +15,6 @@ services:
       - "./erddap/content:/usr/local/tomcat/content/erddap"
       - "./erddap/data:/erddapData"
       - "${DATASETS_DIR:-./datasets}:/datasets"
-      - "./datasets.d:/datasets.d:ro"
       - "./init.d:/init.d"
       # - "/mnt/efs/algex:/algae_explorer"
       - "./datasets.d:/datasets.d"
