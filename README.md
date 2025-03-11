@@ -6,6 +6,16 @@ Hakai deploys ERDDAP as docker containers by using the [docker-erddap](https://g
 
 See [GitHub Deployments](https://github.com/HakaiInstitute/hakai-erddap/deployments) for all active deployments maintained via this repository.
 
+## Dependencies
+- HakaiInstitute/hakai-metadata-entry-form-files
+- HakaiInstitute/hakai-metadata-conversion
+- hakaiinstitute/erddap-deploy: GitHub repository used to test erddap deployments
+- hakaiinstitute/data-mobilization-team: Github team assigned reo review pull request when new metadata is merged into xml files under /datasets.d
+- https://catalogue.hakai.org/erddap/: Production server where datasets are deployed when pushing to master branch
+- https://development.erddap.hakai.app/erddap/: Development server where datasets are deployed when pushing to development branch
+- db.hakai.org: Hakai AWS RDS instance where erddap views are located and many hakai datasets are pulled from
+- axiom/docker-erddap: base docker image used to build the hakai docker containers
+
 ## Deployment
 
 ERDDAP is deployed on <catalogue.hakai.org> and <development.erddap.hakai.app>, via docker-compose. 
