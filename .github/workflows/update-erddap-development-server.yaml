@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: development
-      url: https://goose.hakai.org/erddap/
+      url: https://development.erddap.hakai.app/erddap/
     steps:
       - name: Update development server
         uses: appleboy/ssh-action@master
