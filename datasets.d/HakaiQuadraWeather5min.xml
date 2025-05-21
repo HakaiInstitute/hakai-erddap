@@ -152,7 +152,6 @@
     </addAttributes>
   </dataVariable>
 
-
   <dataVariable>
     <sourceName>Quadra:AirPressure_QC</sourceName>
     <destinationName>AirPressure_flags</destinationName>
@@ -163,6 +162,18 @@
     </addAttributes>
   </dataVariable>
 
+  <dataVariable>
+    <sourceName>Quadra:AirPressure</sourceName>
+    <destinationName>AirPressure</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="long_name">AirPressure</att>
+      <att name="units">hPa</att>
+      <att name="standard_name">air_pressure</att>
+      <att name="ancillary_data">AirPressure_flags</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
 
   <dataVariable>
     <sourceName>Quadra:RH_Avg</sourceName>

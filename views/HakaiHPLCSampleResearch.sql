@@ -13,7 +13,9 @@ join eims.output_sites y
 on x.site_id = y.name and x.work_area = y.work_area
 WHERE
     x.organization = 'HAKAI'
-    and x.row_flag = 'Results'
-    -- AND quality_level IN ('Principal Investigator', 'Technicianmr')
+    AND x.row_flag = 'Results'
+    AND quality_level IN ('Principal Investigator', 'Technicianmr')
+    AND x.all_chl_a_flag IN ('AV')
+    AND x.analyzing_lab = 'USC'
     -- AND site_id IN ('QU39')
 ;

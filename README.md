@@ -1,4 +1,4 @@
-# Hakai Datasets
+# Hakai Erddap
 
 This repository contains different components needed to produce and maintain Hakai's datasets on Hakai ERDDAP servers. 
 

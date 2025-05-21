@@ -133,29 +133,10 @@ FROM
                 FROM
                     eims.output_chlorophyll
                 WHERE
-                    collected > '2018-05-04'
-                    AND quality_level = 'Publication'
-                    AND (
-                        chla_flag IN ('AV')
-                        AND phaeo_flag IN ('AV')
-                        AND site_id IN (
-                            'BU4',
-                            'DFO2',
-                            'DFO5',
-                            'FZH01',
-                            'KC10',
-                            'KN3',
-                            'KWY01',
-                            'PRUTH',
-                            'QCS01',
-                            'QU29',
-                            'QU38',
-                            'QU39',
-                            'QU43',
-                            'TO2',
-                            'TO5'
-                        )
-                    )
+                    collected > '2018-05-04' -- calibrations prier to this were extremly veriable and should not be trusted
+                    AND quality_level = 'Principal Investigator'
+                    AND chla_flag IN ('AV')
+                    AND phaeo_flag IN ('AV')
             ) AS subquery
         GROUP BY
             (

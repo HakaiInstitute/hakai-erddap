@@ -5,7 +5,6 @@
     <tableName>"HakaiChlorophyllSampleResearch"</tableName>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
 
-    <iso19115File>/xml/hakai_bulk_and_size_fractionat_d5502.xml</iso19115File>
     <!-- sourceAttributes>
     </sourceAttributes -->
     <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
