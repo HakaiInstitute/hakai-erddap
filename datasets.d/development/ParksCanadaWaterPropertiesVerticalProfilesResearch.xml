@@ -1,0 +1,473 @@
+<dataset type="EDDTableFromDatabase" datasetID="ParksCanadaWaterPropertiesVerticalProfilesResearch" active="false">
+    <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
+    <driverName>org.postgresql.Driver</driverName>
+    <schemaName>erddap</schemaName>
+    <tableName>"ParksCanadaWaterPropertiesVerticalProfilesResearch"</tableName>
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <orderBy>work_area,station,start_dt,direction_flag,pressure</orderBy>
+    <!-- sourceAttributes>
+        <att name="acknowledgment">Hakai Field Technicians, research and IT groups</att>
+        <att name="cdm_data_type">TimeSeriesProfile</att>
+        <att name="cdm_profile_variables">hakai_id</att>
+        <att name="cdm_timeseries_variables">station</att>
+        <att name="comments">None</att>
+        <att name="date_created">2021-03-15T18:23:42.685292</att>
+        <att name="geospatial_lat_max" type="double">50.0296197983001</att>
+        <att name="geospatial_lat_min" type="double">50.0296197983001</att>
+        <att name="geospatial_lat_units">degrees_north</att>
+        <att name="geospatial_lon_max" type="double">-125.100440466767</att>
+        <att name="geospatial_lon_min" type="double">-125.100440466767</att>
+        <att name="geospatial_lon_units">degrees_east</att>
+        <att name="geospatial_vertical_max" type="double">251.668</att>
+        <att name="geospatial_vertical_min" type="double">0.991</att>
+        <att name="id">01907674_2020-06-17T17:22:06Z</att>
+        <att name="infoUrl">https://www.hakai.org</att>
+        <att name="institution">Hakai Institute</att>
+        <att name="instrument">SBE19plus SN01907674 Firmware2.5.2</att>
+        <att name="keywords">conductivity,temperature,salinity,depth,pressure,dissolved oxygen</att>
+        <att name="license">unknown</att>
+        <att name="naming_authority">Hakai Institute</att>
+        <att name="processing_level">10_qc_pi</att>
+        <att name="project">Hakai Oceanography</att>
+        <att name="standard_name_vocabulary">CF 1.3</att>
+        <att name="station">QU39</att>
+        <att name="summary">text describing that specific data</att>
+        <att name="time_coverage_duration">306.355 seconds</att>
+        <att name="time_coverage_end">2020-06-17T17:30:36.551000000</att>
+        <att name="time_coverage_start">2020-06-17T17:25:30.196000000</att>
+        <att name="title">Hakai Research CTD Profile: 01907674_2020-06-17T17:22:06Z</att>
+        <att name="work_area">QUADRA</att>
+    </sourceAttributes -->
+    <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
+        <att name="cdm_timeseries_variables">station_id, longitude, latitude</att>
+        <att name="subsetVariables">station_id, longitude, latitude</att>
+    -->
+    <addAttributes>
+        <att name="title">Hakai Water Properties Vertical Profiles Measured by Oceanographic Profilers, Research</att>
+        <att name="acknowledgment">Hakai Field Technicians, Research and IT groups</att>
+        <att name="creator_url">https://www.hakai.org/</att>
+        <att name="publisher_email">data@hakai.org</att>
+        <att name="publisher_name">Hakai Institute</att>
+        <att name="publisher_url">https://www.hakai.org/</att>
+        <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
+        <att name="institution">Hakai Institute</att>
+        <att name="infoUrl">https://www.doi.org/10.21966/6cz5-6d70</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="keywords">aggregate_quality_flag, backscatter, backscatter_beta, backscatter_beta_flag, c_star_at, c_star_at_flag, c_star_at_flag_description, c_star_at_UQL, cast, cdom, cdom_ppb, cdom_ppb_flag,  chlorophyll, chlorophyll-a, conductivity, dissolved, dissolved oxygen, dissolved_oxygen_ml_l, dissolved_oxygen_percent, downwelling_photosynthetic_photon_spherical_irradiance_in_sea_water, flc, mass_concentration_of_chlorophyll_in_sea_water, par,  platform_speed_wrt_sea_water, pressure, rinko, rinko_do_ml_l, sea_water_electrical_conductivity, sea_water_practical_salinity, sea_water_pressure, sea_water_temperature, sea_water_turbidity, spec_cond, temperature,turbidity, volume_beam_attenuation_coefficient_of_radiative_flux_in_sea_water_corrected_for_pure_water_attenuance, volume_fraction_of_oxygen_in_sea_water</att>
+        <att name="keywords_vocabulary">GCMD Science Keywords</att>
+        <att name="license">Creative Commons Attribution 4.0</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
+        <att name="subsetVariables">work_area,cruise, station,vessel, device_model, device_sn</att>
+        <att name="cdm_data_type">TimeSeriesProfile</att>
+        <att name="cdm_profile_variables">hakai_id</att>
+        <att name="cdm_timeseries_variables">station,latitude,longitude</att>
+        <att name="date_created">2012-06-01</att>
+        <att name="geospatial_bounds">-128.5,52.27 -127.4,52.21 -127.2,51.66 -125.6,51.13 -124.8,50.96 -124.1,50.43 -124.7,49.98 -124.9,49.80 -126.7,50.45 -128.1,51.37 -128.4,51.69 -128.5,52.27</att>
+        <att name="geospatial_vertical_max">700.0</att>
+        <att name="geospatial_vertical_min">1.0</att>
+        <att name="institution">Parks Canada</att>
+        <att name="instrument">66061,1907674,18032,18066,65679,80217,1907467</att>
+        <att name="keywords">ctd,profiles</att>
+        <att name="summary">Parks Canada Research water properties profiles</att>
+        <att name="title">Parks Canada Water Properties Vertical Profiles Measured by Oceanographic Profilers, Research</att>
+        <att name="platform">self-propelled small boat</att>
+        <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>work_area</sourceName>
+        <destinationName>work_area</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Work Area</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>cruise</sourceName>
+        <destinationName>cruise</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Cruise</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>hakai_id</sourceName>
+        <destinationName>hakai_id</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="cf_role">profile_id</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Hakai ID</att>
+            <att name="cf_role">profile_id</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>vessel</sourceName>
+        <destinationName>vessel</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Vessel</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>operators</sourceName>
+        <destinationName>operators</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Operators</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>cast_comments</sourceName>
+        <destinationName>comments</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Comments</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>device_model</sourceName>
+        <destinationName>device_model</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Device Model</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>device_sn</sourceName>
+        <destinationName>device_sn</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Device Serial Number</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>device_firmware</sourceName>
+        <destinationName>device_firmware</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Device Firmware</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>station</sourceName>
+        <destinationName>station</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="cf_role">timeseries_id</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Station</att>
+            <att name="cf_role">timeseries_id</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>latitude</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="long_name">Latitude</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>longitude</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="long_name">Longitude</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>start_dt</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>long</dataType>
+        <!-- sourceAttributes>
+            <att name="calendar">proleptic_gregorian</att>
+            <att name="timezone">UTC</att>
+            <att name="units">seconds since 1970-01-01T00:00:00+00:00</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="long">9223372036854775807</att>
+            <att name="long_name">Profile Start Time</att>
+            <att name="source_name">Profile Start Time</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>bottom_dt</sourceName>
+        <destinationName>bottom_date_time</destinationName>
+        <dataType>long</dataType>
+        <!-- sourceAttributes>
+            <att name="calendar">proleptic_gregorian</att>
+            <att name="timezone">UTC</att>
+            <att name="units">seconds since 1970-01-01T00:00:00+00:00</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="long">9223372036854775807</att>
+            <att name="long_name">Profile Bottom Time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>end_dt</sourceName>
+        <destinationName>end_date_time</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Profile End Time</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>measurement_dt</sourceName>
+        <destinationName>measurement_dt</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="calendar">proleptic_gregorian</att>
+            <att name="timezone">UTC</att>
+            <att name="units">seconds since 1970-01-01T00:00:00+00:00</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Precise Measurement Time</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>bottom_depth</sourceName>
+        <destinationName>bottom_depth</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Bottom Depth</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>target_depth</sourceName>
+        <destinationName>target_depth</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="int">2147483647</att>
+            <att name="long_name">Target Depth</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>drop_speed</sourceName>
+        <destinationName>drop_speed</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Drop Speed</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>direction_flag</sourceName>
+        <destinationName>direction_flag</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Direction Flag</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>descent_rate</sourceName>
+        <destinationName>descent_rate</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="long_name">Profiling Speed</att>
+            <att name="standard_name">platform_speed_wrt_sea_water</att>
+            <att name="units">m/s</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="long_name">Profiling Speed</att>
+            <att name="standard_name">platform_speed_wrt_sea_water</att>
+            <att name="units">m s-1</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>depth</sourceName>
+        <destinationName>depth</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">null</att>
+            <att name="long_name">Depth</att>
+            <att name="standard_name">depth</att>
+            <att name="units">m</att>
+            <att name="colorBarMaximum" type="double">8000.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="colorBarPalette">TopographyDepth</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>pressure</sourceName>
+        <destinationName>pressure</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="ancillary_variables">null</att>
+            <att name="long_name">Sea Water Pressure</att>
+            <att name="standard_name">sea_water_pressure</att>
+            <att name="units">dBar</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ancillary_variables">null</att>
+            <att name="long_name">Sea Water Pressure</att>
+            <att name="standard_name">sea_water_pressure</att>
+            <att name="units">dBar</att>
+            <att name="_FillValue" type="int">2147483647</att>
+            <att name="colorBarMaximum" type="double">700.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>conductivity</sourceName>
+        <destinationName>conductivity</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">null</att>
+            <att name="long_name">Sea Water Conductivity</att>
+            <att name="standard_name">sea_water_electrical_conductivity</att>
+            <att name="units">mS/cm</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">null</att>
+            <att name="long_name">Sea Water Conductivity</att>
+            <att name="standard_name">sea_water_electrical_conductivity</att>
+            <att name="units">mS cm-1</att>
+            <att name="colorBarMaximum" type="double">40.0</att>
+            <att name="colorBarMinimum" type="double">15.0</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>temperature</sourceName>
+        <destinationName>temperature</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">null</att>
+            <att name="long_name">Sea Water Temperature</att>
+            <att name="scale">ITS-90</att>
+            <att name="standard_name">sea_water_temperature</att>
+            <att name="units">degree_Celsius</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">null</att>
+            <att name="long_name">Sea Water Temperature</att>
+            <att name="scale">ITS-90</att>
+            <att name="standard_name">sea_water_temperature</att>
+            <att name="units">degree_Celsius</att>
+            <att name="colorBarMaximum" type="double">15.0</att>
+            <att name="colorBarMinimum" type="double">5.0</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>salinity</sourceName>
+        <destinationName>salinity</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">null</att>
+            <att name="long_name">Practical Salinity</att>
+            <att name="scale">PSS-78</att>
+            <att name="standard_name">sea_water_practical_salinity</att>
+            <att name="units">PSU</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">null</att>
+            <att name="long_name">Practical Salinity</att>
+            <att name="scale">PSS-78</att>
+            <att name="standard_name">sea_water_practical_salinity</att>
+            <att name="units">PSU</att>
+            <att name="colorBarMaximum" type="double">33.0</att>
+            <att name="colorBarMinimum" type="double">20.0</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>dissolved_oxygen_ml_l</sourceName>
+        <destinationName>dissolved_oxygen_ml_l</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">null</att>
+            <att name="long_name">Dissolved Oxygen Concentration</att>
+            <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+            <att name="units">mL/L</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">null</att>
+            <att name="long_name">Dissolved Oxygen Concentration</att>
+            <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+            <att name="units">mL L-1</att>
+            <att name="colorBarMaximum" type="double">12.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>flc</sourceName>
+        <destinationName>flc</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">null</att>
+            <att name="long_name">Chlorophyll-a Concentration</att>
+            <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
+            <att name="units">ug/L</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">null</att>
+            <att name="long_name">Chlorophyll-a Concentration</att>
+            <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
+            <att name="units">ug L-1</att>
+            <att name="colorBarMaximum" type="double">30.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
