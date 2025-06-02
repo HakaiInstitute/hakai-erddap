@@ -113,8 +113,8 @@ SELECT
     "OrfordSeaology:airPumpOffRH"
 FROM
     sn."OrfordBuoy:1hourSamples" JOIN
-    sn."OrfordSeaology:1hourSamples" 
-	ON sn."OrfordBuoy:1hourSamples"."measurementTime" = sn."OrfordSeaology:1hourSamples"."measurementTime"
+    sn."OrfordSeaology:1hourSamples"
+    ON sn."OrfordBuoy:1hourSamples"."measurementTime" = sn."OrfordSeaology:1hourSamples"."measurementTime"
 
 WHERE
     "OrfordBuoy:1hourSamples"."measurementTime" > (
