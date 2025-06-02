@@ -27,7 +27,7 @@
         <att name="creator_email">justin.belluz@hakai.org</att>
         <att name="creator_name">Hakai Institute</att>
         <att name="creator_type">institution</att>
-        <att name="date_created">2024-03-18</att>
+        <att name="date_created">2024-07-12</att>
         <att name="geospatial_bounds">-128.5,52.27 -127.4,52.21 -127.2,51.66 -125.6,51.13 -124.8,50.96 -124.1,50.43 -124.7,49.98 -124.9,49.80 -126.7,50.45 -128.1,51.37 -128.4,51.69 -128.5,52.27</att>
         <att name="geospatial_vertical_max">650.0</att>
         <att name="institution">Hakai Institute</att>
@@ -56,7 +56,28 @@ Prior to 2018, QA/QC analysis suggests potential influence by acid contamination
 This provisional dataset includes all data flagged as "suspicious" (show suspicious trends, but may not be incorrect), but excludes data flagged as "discard" (clearly erroneous).</att>
         <att name="platform">self-propelled small boat</att>
         <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
-    <att name="project">Oceanography</att><att name="progress">onGoing</att><att name="id">1755dc37-8d33-4158-8041-c22536fd5771</att><att name="naming_authority">ca.cioos</att><att name="date_modified">2024-07-12T13:35:46.784Z</att><att name="product_version">1.0.0</att><att name="creator_institution">Hakai Institute</att><att name="creator_city">Campbell River</att><att name="creator_country">Canada</att><att name="creator_url">https://www.hakai.org/</att><att name="creator_ror">https://ror.org/02pry0c91</att><att name="publisher_type">institution</att><att name="publisher_city">Campbell River</att><att name="publisher_country">Canada</att><att name="publisher_ror">https://ror.org/02pry0c91</att><att name="doi">https://doi.org/10.21966/90h6-b497</att><att name="metadata_link">https://catalogue.hakai.org/dataset/ca-cioos_1755dc37-8d33-4158-8041-c22536fd5771</att><att name="metadata_form">https://hakaiinstitute.github.io/hakai-metadata-entry-form#/en/hakai/7U7b8oPpeTN6gjvXlUCTGJr5pga2/-McQFPAf457LB4-SWmyL</att></addAttributes>
+    <att name="project">Oceanography</att><att name="progress">onGoing</att><att name="id">1755dc37-8d33-4158-8041-c22536fd5771</att><att name="naming_authority">ca.cioos</att><att name="date_modified">2025-04-23T21:48:53.628Z</att><att name="product_version">1.0.0</att><att name="creator_institution">Hakai Institute</att><att name="creator_city">Campbell River</att><att name="creator_country">Canada</att><att name="creator_url">https://www.hakai.org/</att><att name="creator_ror">https://ror.org/02pry0c91</att><att name="publisher_type">institution</att><att name="publisher_city">Campbell River</att><att name="publisher_country">Canada</att><att name="publisher_ror">https://ror.org/02pry0c91</att><att name="doi">https://doi.org/10.21966/90h6-b497</att><att name="metadata_link">https://catalogue.hakai.org/dataset/ca-cioos_1755dc37-8d33-4158-8041-c22536fd5771</att><att name="metadata_form">https://hakaiinstitute.github.io/hakai-metadata-entry-form#/en/hakai/7U7b8oPpeTN6gjvXlUCTGJr5pga2/-McQFPAf457LB4-SWmyL</att><att name="history">Metadata record history:
+- additionalDocumentation:
+  - authority: URL
+    code: http://docs.turnerdesigns.com/t2/doc/manuals/998-7210.pdf
+    title:
+      en: Turner Designs Trilogy Laboratory Fluorometer User's Manual
+      fr: "Manuel d'utilisation du fluorom\xE8tre de laboratoire Turner Designs Trilogy"
+      translations:
+        fr:
+          message: "text translated using the Amazon translate service / texte traduit\
+            \ \xE0 l'aide du service de traduction Amazon"
+          verified: false
+  scope: Dataset
+  statement:
+    en: User Manual for Benchtop Laboratory Fluorometers
+    fr: "Manuel de l'utilisateur pour les fluorom\xE8tres de laboratoire Benchtop"
+    translations:
+      fr:
+        message: "text translated using the Amazon translate service / texte traduit\
+          \ \xE0 l'aide du service de traduction Amazon"
+        verified: false
+</att></addAttributes>
     <dataVariable>
         <sourceName>work_area</sourceName>
         <destinationName>work_area</destinationName>

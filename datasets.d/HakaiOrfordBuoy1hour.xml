@@ -1,0 +1,1329 @@
+<dataset type="EDDTableFromDatabase" datasetID="HakaiOrfordBuoy1hour">
+  <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
+  <driverName>org.postgresql.Driver</driverName>
+  <schemaName>erddap</schemaName>
+  <tableName>"HakaiOrfordBuoy1hour"</tableName>
+
+  <iso19115File>/xml/HakaiOrfordBuoy1hour_iso19115.xml</iso19115File>
+
+  <addAttributes>
+    <att name="language">eng</att>
+    <att name="id">763f3e59-49fe-420a-91da-a046b4690bea</att>
+
+    <att name="keywords">Continuous measurement,Discrete measurement,Surface measurement,Quadra Island,Northern Salish Sea,British Columbia coast,North Pacific Ocean,CIOOS:inorganicCarbon,CIOOS:seaSurfaceSalinity,CIOOS:seaSurfaceTemperature,CIOOS:other</att>
+    <att name="keywords_fra">temp&#233;rature sous la surface, salinit&#233; sous la surface</att>
+    <att name="title_fra">Bou&#233;e KC avec un instrument Seology et des capteurs m&#233;t&#233;orologiques</att>
+    <att name="summary_fra">La bou&#233;e KC utilise un syst&#232;me Battelle Seaology qui mesure en continu la pression partielle du dioxyde de carbone (pCO2) &#224; la surface de l'oc&#233;an et la couche limite marine. Ces donn&#233;es sont coupl&#233;es &#224; des capteurs m&#233;t&#233;orologiques, ainsi qu'&#224; des mesures de temp&#233;rature et de salinit&#233; &#224; la surface de la mer &#224; l'aide d'un instrument Seabird Electronics 16Plus V2 SeaCAT CT.</att>
+
+    <att name="site_id">OrfordBuoy</att>
+    <att name="site_description">Seaology buoy with met sensors</att>
+    <att name="elevation">2</att>
+    <att name="measurement_interval">1 hour</att>
+    <att name="creator_url">https://www.hakai.org/</att>
+    <att name="publisher_email">data@hakai.org</att>
+    <att name="publisher_name">Hakai Institute</att>
+    <att name="publisher_url">https://www.hakai.org/</att>
+    <att name="cdm_data_type">TimeSeries</att>
+    <att name="cdm_timeseries_variables">station</att>
+    <att name="infoUrl">https://catalogue.hakai.org/dataset/ca-cioos_763f3e59-49fe-420a-91da-a046b4690bea</att>
+
+
+    <att name="contributor_role">pointOfContact,author,owner,custodian;author;author;author;distributor;publisher;funder</att>
+    <att name="date_created">2021-03-31</att>
+    <att name="geospatial_lat_max">51.6507</att>
+    <att name="geospatial_lat_min">51.6507</att>
+    <att name="geospatial_lon_max">-127.9697</att>
+    <att name="geospatial_lon_min">-127.9697</att>
+    <att name="geospatial_vertical_max">0.5</att>
+    <att name="geospatial_vertical_min">0.5</att>
+    <att name="institution">Hakai Institute</att>
+    <att name="instrument">SBE 16,Battelle Seaology (MApCO2) System with LI-COR LI-820</att>
+    <att name="keywords">Quadra Island,seaSurfaceSalinity,Continuous measurement,inorganicCarbon,British Columbia coast,seaSurfaceTemperature,North Pacific Ocean,Northern Salish Sea,Surface measurement,Discrete measurement</att>
+    <att name="summary">Kwakshua Channel, located near Fitz Hugh Sound on the central coast of British Columbia, has been a site for moored, high-resolution measurements of surface seawater and marine boundary layer CO2 content since May 2018. Measurements of in situ temperature, salinity, seawater and atmospheric CO2 partial pressure are made using a Battelle Seaology (MApCO2) System. The effort to collect these data are part of the Hakai Institute&#8217;s directive to advance the understanding of carbon cycling in northeast Pacific coastal settings with specific emphasis on ocean acidification. This data contribution consists of measurements since May 1, 2018.</att>
+    <att name="title">Real-Time Provisional Surface Seawater and Marine Boundary Layer CO2 Observations made from the Kwakshua Channel (KC) Buoy on the central coast of British Columbia</att>
+    <att name="subsetVariables">station,latitude,longitude,WindSpd_UQL,WindDir_UQL,AirTemp_UQL,StationAirPressure_UQL,WaterTemp_UQL,WaterConductivity_UQL,WaterPressure_UQL,WaterSalinity_UQL,sw_xCO2_UQL,atm_xCO2_UQL</att>
+    <att name="platform">moored surface buoy</att>
+    <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
+    <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
+  <att name="project">Oceanography</att><att name="comment">##Limitations:
+This dataset is provisional. For science purposes, please refer to the dataset: "Surface seawater and marine boundary layer CO2 observations made from the Kwakshua Channel (KC) Buoy on the central coast of British Columbia".</att><att name="progress">onGoing</att><att name="keywords_vocabulary">CIOOS: CIOOS Essential Ocean Variables Vocabulary</att><att name="naming_authority">ca.cioos</att><att name="date_modified">2024-07-23T13:41:20.094Z</att><att name="license">https://creativecommons.org/licenses/by/4.0</att><att name="creator_name">Evans, Wiley</att><att name="creator_email">wiley.evans@hakai.org</att><att name="creator_orcid">https://orcid.org/0000-0002-5450-0903</att><att name="creator_type">person</att><att name="creator_institution">Hakai Institute</att><att name="creator_city">Campbell River</att><att name="creator_country">Canada</att><att name="creator_ror">https://ror.org/02pry0c91</att><att name="publisher_type">institution</att><att name="publisher_institution">Hakai Institute</att><att name="publisher_city">Campbell River</att><att name="publisher_country">Canada</att><att name="publisher_ror">https://ror.org/02pry0c91</att><att name="contributor_name">Evans, Wiley;Campbell, Katie;Hateley, Shawn;Barrette, Jessy;Hakai Institute;Hakai Institute;Tula Foundation</att><att name="metadata_link">https://catalogue.hakai.org/dataset/ca-cioos_763f3e59-49fe-420a-91da-a046b4690bea</att><att name="metadata_form">https://hakaiinstitute.github.io/hakai-metadata-entry-form#/en/hakai/tV5qE0aUgaOjSVmgPgiZ6MyHuSy1/-MVwuNesQj7Lp1-f-cp9</att></addAttributes>
+
+
+  <dataVariable>
+    <sourceName>="OrfordBuoy"</sourceName>
+    <destinationName>station</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="ioos_category">Location</att>
+      <att name="cf_role">timeseries_id</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>measurementTime</sourceName>
+    <destinationName>time</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="standard_name">time</att>
+      <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>=51.6499</sourceName>
+    <destinationName>latitude</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">latitude</att>
+      <att name="units">degrees_north</att>
+      <att name="long_name">Latitude</att>
+      <att name="description">Fixed latitude of the site</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>=-127.9663</sourceName>
+    <destinationName>longitude</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">longigutde</att>
+      <att name="units">degrees_east</att>
+      <att name="long_name">Longitude</att>
+      <att name="description">Fixed longitude of the site</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WindSpd_Avg</sourceName>
+    <destinationName>WindSpd_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_speed</att>
+      <att name="long_name">WindSpdOrfordBuoy_Avg</att>
+      <att name="units">m/s</att>
+      <att name="height">3</att>
+      <att name="ancillary_data">WindSpd_UQL WindSpd_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WindSpd_Min</sourceName>
+    <destinationName>WindSpd_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_speed</att>
+      <att name="long_name">WindSpdOrfordBuoy_Min</att>
+      <att name="units">m/s</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WindSpd_UQL WindSpd_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WindSpd_Max</sourceName>
+    <destinationName>WindSpd_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_speed</att>
+      <att name="long_name">WindSpdOrfordBuoy_Max</att>
+      <att name="units">m/s</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WindSpd_UQL WindSpd_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WindSpd_Std</sourceName>
+    <destinationName>WindSpd_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_speed</att>
+      <att name="long_name">WindSpdOrfordBuoy_Std</att>
+      <att name="units">m/s</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WindSpd_UQL WindSpd_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WindSpd_UQL</sourceName>
+    <destinationName>WindSpd_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">WindSpdOrfordBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WindSpd_QC</sourceName>
+    <destinationName>WindSpd_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">WindSpdOrfordBuoy Flag</att>
+      <att name="units">Quality flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WindDir_Avg</sourceName>
+    <destinationName>WindDir_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_from_direction</att>
+      <att name="long_name">WindDirOrfordBuoy_Avg</att>
+      <att name="units">degrees</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WindDir_UQL WindDir_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WindDir_Std</sourceName>
+    <destinationName>WindDir_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_from_direction</att>
+      <att name="long_name">WindDirOrfordBuoy_Std</att>
+      <att name="units">degrees</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WindDir_UQL WindDir_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WindDir_UQL</sourceName>
+    <destinationName>WindDir_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">WindDirOrfordBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WindDir_QC</sourceName>
+    <destinationName>WindDir_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">WindDirOrfordBuoy Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:AirTemp</sourceName>
+    <destinationName>AirTemp</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">air_temperature</att>
+      <att name="long_name">TAirOrfordBuoy</att>
+      <att name="units">degree_Celsius</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">AirTemp_UQL AirTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:AirTemp_Med</sourceName>
+    <destinationName>AirTemp_Med</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">air_temperature</att>
+      <att name="long_name">TAirOrfordBuoy_Med</att>
+      <att name="units">degree_Celsius</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">AirTemp_UQL AirTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:AirTemp_Avg</sourceName>
+    <destinationName>AirTemp_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">air_temperature</att>
+      <att name="long_name">TAirOrfordBuoy_Avg</att>
+      <att name="units">degree_Celsius</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">AirTemp_UQL AirTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:AirTemp_Min</sourceName>
+    <destinationName>AirTemp_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">air_temperature</att>
+      <att name="long_name">TAirOrfordBuoy_Min</att>
+      <att name="units">degree_Celsius</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">AirTemp_UQL AirTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:AirTemp_Max</sourceName>
+    <destinationName>AirTemp_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">air_temperature</att>
+      <att name="long_name">TAirOrfordBuoy_Max</att>
+      <att name="units">degree_Celsius</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">AirTemp_UQL AirTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:AirTemp_UQL</sourceName>
+    <destinationName>AirTemp_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">TAirOrfordBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:AirTemp_QC</sourceName>
+    <destinationName>AirTemp_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">TAirOrfordBuoy Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:StationAirPressure</sourceName>
+    <destinationName>StationAirPressure</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">surface_air_pressure</att>
+      <att name="long_name">StationAirPressure</att>
+      <att name="units">hPa</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">StationAirPressure_UQL StationAirPressure_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:StationAirPressure_Avg</sourceName>
+    <destinationName>StationAirPressure_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">surface_air_pressure</att>
+      <att name="long_name">StationAirPressure_Avg</att>
+      <att name="units">hPa</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">StationAirPressure_UQL StationAirPressure_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:StationAirPressure_Min</sourceName>
+    <destinationName>StationAirPressure_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">surface_air_pressure</att>
+      <att name="long_name">StationAirPressure_Min</att>
+      <att name="units">hPa</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">StationAirPressure_UQL StationAirPressure_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:StationAirPressure_Max</sourceName>
+    <destinationName>StationAirPressure_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">surface_air_pressure</att>
+      <att name="long_name">StationAirPressure_Max</att>
+      <att name="units">hPa</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">StationAirPressure_UQL StationAirPressure_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:StationAirPressure_Std</sourceName>
+    <destinationName>StationAirPressure_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">surface_air_pressure</att>
+      <att name="long_name">StationAirPressure_Std</att>
+      <att name="units">hPa</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">StationAirPressure_UQL StationAirPressure_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:StationAirPressure_UQL</sourceName>
+    <destinationName>StationAirPressure_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">StationAirPressure UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:StationAirPressure_QC</sourceName>
+    <destinationName>StationAirPressure_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">StationAirPressure Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterTemp</sourceName>
+    <destinationName>WaterTemp</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">sea_water_temperature</att>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">TWtrOrfordBuoy</att>
+      <att name="units">degree_Celsius</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterTemp_Med</sourceName>
+    <destinationName>WaterTemp_Med</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">sea_water_temperature</att>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">TWtrOrfordBuoy_Med</att>
+      <att name="units">degree_Celsius</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterTemp_Avg</sourceName>
+    <destinationName>WaterTemp_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">sea_water_temperature</att>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">TWtrOrfordBuoy_Avg</att>
+      <att name="units">degree_Celsius</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterTemp_Min</sourceName>
+    <destinationName>WaterTemp_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">sea_water_temperature</att>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">TWtrOrfordBuoy_Min</att>
+      <att name="units">degree_Celsius</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterTemp_Max</sourceName>
+    <destinationName>WaterTemp_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">sea_water_temperature</att>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">TWtrOrfordBuoy_Max</att>
+      <att name="units">degree_Celsius</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterTemp_UQL WaterTemp_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterTemp_UQL</sourceName>
+    <destinationName>WaterTemp_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">TWtrOrfordBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterTemp_QC</sourceName>
+    <destinationName>WaterTemp_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">TWtrOrfordBuoy Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterConductivity</sourceName>
+    <destinationName>WaterConductivity</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">ConductivityOrfordBuoy</att>
+      <att name="units">S/m</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterConductivity_UQL WaterConductivity_flags</att>
+      <att name="standard_name">sea_water_electrical_conductivity</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterConductivity_Med</sourceName>
+    <destinationName>WaterConductivity_Med</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">ConductivityOrfordBuoy_Med</att>
+      <att name="units">S/m</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterConductivity_UQL WaterConductivity_flags</att>
+      <att name="standard_name">sea_water_electrical_conductivity</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterConductivity_Avg</sourceName>
+    <destinationName>WaterConductivity_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">ConductivityOrfordBuoy_Avg</att>
+      <att name="units">S/m</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterConductivity_UQL WaterConductivity_flags</att>
+      <att name="standard_name">sea_water_electrical_conductivity</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterConductivity_Min</sourceName>
+    <destinationName>WaterConductivity_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">ConductivityOrfordBuoy_Min</att>
+      <att name="units">S/m</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterConductivity_UQL WaterConductivity_flags</att>
+      <att name="standard_name">sea_water_electrical_conductivity</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterConductivity_Max</sourceName>
+    <destinationName>WaterConductivity_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">ConductivityOrfordBuoy_Max</att>
+      <att name="units">S/m</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterConductivity_UQL WaterConductivity_flags</att>
+      <att name="standard_name">sea_water_electrical_conductivity</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterConductivity_UQL</sourceName>
+    <destinationName>WaterConductivity_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">ConductivityOrfordBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterConductivity_QC</sourceName>
+    <destinationName>WaterConductivity_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">ConductivityOrfordBuoy Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterPressure</sourceName>
+    <destinationName>WaterPressure</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">PressureOrfordBuoy</att>
+      <att name="units">dbar</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterPressure_UQL WaterPressure_flags</att>
+      <att name="standard_name">sea_water_pressure</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterPressure_Med</sourceName>
+    <destinationName>WaterPressure_Med</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">PressureOrfordBuoy_Med</att>
+      <att name="units">dbar</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterPressure_UQL WaterPressure_flags</att>
+      <att name="standard_name">sea_water_pressure</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterPressure_Avg</sourceName>
+    <destinationName>WaterPressure_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">PressureOrfordBuoy_Avg</att>
+      <att name="units">dbar</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterPressure_UQL WaterPressure_flags</att>
+      <att name="standard_name">sea_water_pressure</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterPressure_Min</sourceName>
+    <destinationName>WaterPressure_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">PressureOrfordBuoy_Min</att>
+      <att name="units">dbar</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterPressure_UQL WaterPressure_flags</att>
+      <att name="standard_name">sea_water_pressure</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterPressure_Max</sourceName>
+    <destinationName>WaterPressure_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">PressureOrfordBuoy_Max</att>
+      <att name="units">dbar</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterPressure_UQL WaterPressure_flags</att>
+      <att name="standard_name">sea_water_pressure</att>
+    </addAttributes>
+  </dataVariable>
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterPressure_UQL</sourceName>
+    <destinationName>WaterPressure_UQL</destinationName>
+    <dataType>int</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">PressureOrfordBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterPressure_QC</sourceName>
+    <destinationName>WaterPressure_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">PressureOrfordBuoy Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterSalinity</sourceName>
+    <destinationName>WaterSalinity</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">SalinityOrfordBuoy</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterSalinity_UQL WaterSalinity_flags</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
+      <att name="units">1e-3</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterSalinity_Med</sourceName>
+    <destinationName>WaterSalinity_Med</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">SalinityOrfordBuoy_Med</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterSalinity_UQL WaterSalinity_flags</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
+      <att name="units">1e-3</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterSalinity_Avg</sourceName>
+    <destinationName>WaterSalinity_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">SalinityOrfordBuoy_Avg</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterSalinity_UQL WaterSalinity_flags</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
+      <att name="units">1e-3</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterSalinity_Min</sourceName>
+    <destinationName>WaterSalinity_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">SalinityOrfordBuoy_Min</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterSalinity_UQL WaterSalinity_flags</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
+      <att name="units">1e-3</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterSalinity_Max</sourceName>
+    <destinationName>WaterSalinity_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">SBE16</att>
+      <att name="long_name">SalinityOrfordBuoy_Max</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WaterSalinity_UQL WaterSalinity_flags</att>
+      <att name="standard_name">sea_water_practical_salinity</att>
+      <att name="units">1e-3</att>
+    </addAttributes>
+  </dataVariable>
+
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterSalinity_UQL</sourceName>
+    <destinationName>WaterSalinity_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="long_name">SalinityOrfordBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WaterSalinity_QC</sourceName>
+    <destinationName>WaterSalinity_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">SalinityOrfordBuoy Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <!-- <dataVariable>
+    <sourceName>OrfordBuoy:OxygenConcentration</sourceName>
+    <destinationName>Oxygen_Concentration</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird SBE 63</att>
+      <att name="long_name">Oxygen Concentration</att>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+      <att name="units">mL/L</att>
+      <att name="depth">0.5</att>
+      <att name="ancillary_data">Oxygen_Concentration_UQL Oxygen_Concentration_flags</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:OxygenConcentration_Med</sourceName>
+    <destinationName>Oxygen_Concentration_Med</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird SBE 63</att>
+      <att name="long_name">Oxygen Concentration Median</att>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+      <att name="units">mL/L</att>
+      <att name="depth">0.5</att>
+      <att name="ancillary_data">Oxygen_Concentration_UQL Oxygen_Concentration_flags</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:OxygenConcentration_Avg</sourceName>
+    <destinationName>Oxygen_Concentration_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird SBE 63</att>
+      <att name="long_name">Oxygen Concentration Mean</att>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+      <att name="units">mL/L</att>
+      <att name="depth">0.5</att>
+      <att name="ancillary_data">Oxygen_Concentration_UQL Oxygen_Concentration_flags</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:OxygenConcentration_Min</sourceName>
+    <destinationName>Oxygen_Concentration_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird SBE 63</att>
+      <att name="long_name">Oxygen Concentration Minimum</att>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+      <att name="units">mL/L</att>
+      <att name="depth">0.5</att>
+      <att name="ancillary_data">Oxygen_Concentration_UQL Oxygen_Concentration_flags</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:OxygenConcentration_Max</sourceName>
+    <destinationName>Oxygen_Concentration_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird SBE 63</att>
+      <att name="long_name">Oxygen Concentration Maximum</att>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+      <att name="units">mL/L</att>
+      <att name="depth">0.5</att>
+      <att name="ancillary_data">Oxygen_Concentration_UQL Oxygen_Concentration_flags</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:OxygenConcentration_UQL</sourceName>
+    <destinationName>Oxygen_Concentration_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">Oxygen Concentration UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:OxygenConcentration_QC</sourceName>
+    <destinationName>Oxygen_Concentration_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">Oxygen Concentration Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:Fluorometer</sourceName>
+    <destinationName>Fluorometer</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird FLS</att>
+      <att name="long_name">Fluorescence</att>
+      <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
+      <att name="units">ug/L</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">Fluorometer_UQL Fluorometer_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:Fluorometer_Med</sourceName>
+    <destinationName>Fluorometer_Med</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird FLS</att>
+      <att name="long_name">Fluorescence Median</att>
+      <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
+      <att name="units">ug/L</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">Fluorometer_UQL Fluorometer_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:Fluorometer_Avg</sourceName>
+    <destinationName>Fluorometer_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird FLS</att>
+      <att name="long_name">Fluorescence Mean</att>
+      <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
+      <att name="units">ug/L</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">Fluorometer_UQL Fluorometer_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:Fluorometer_Min</sourceName>
+    <destinationName>Fluorometer_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird FLS</att>
+      <att name="long_name">Fluorescence Minimum</att>
+      <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
+      <att name="units">ug/L</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">Fluorometer_UQL Fluorometer_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:Fluorometer_Max</sourceName>
+    <destinationName>Fluorometer_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seabird FLS</att>
+      <att name="long_name">Fluorescence Maximum</att>
+      <att name="standard_name">mass_concentration_of_chlorophyll_in_sea_water</att>
+      <att name="units">ug/L</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">Fluorometer_UQL Fluorometer_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:Fluorometer_UQL</sourceName>
+    <destinationName>Fluorometer_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">Fluorescence UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:Fluorometer_QC</sourceName>
+    <destinationName>Fluorometer_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">Fluorescence Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable> -->
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:Latitude</sourceName>
+    <destinationName>preciseLat</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="long_name">LatOrfordBuoy</att>
+      <att name="units">degrees_north</att>
+      <att name="_CoordinateAxisType">Lat</att>
+      <att name="axis">Y</att>
+      <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:Latitude_Med</sourceName>
+    <destinationName>preciseLat_Med</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="long_name">LatOrfordBuoy_Med</att>
+      <att name="units">degrees_north</att>
+      <att name="_CoordinateAxisType">Lat</att>
+      <att name="axis">Y</att>
+      <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:Latitude_Avg</sourceName>
+    <destinationName>preciseLat_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="long_name">LatOrfordBuoy_Avg</att>
+      <att name="units">degrees_north</att>
+      <att name="_CoordinateAxisType">Lat</att>
+      <att name="axis">Y</att>
+      <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:Latitude_Min</sourceName>
+    <destinationName>preciseLat_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="long_name">LatOrfordBuoy_Min</att>
+      <att name="units">degrees_north</att>
+      <att name="_CoordinateAxisType">Lat</att>
+      <att name="axis">Y</att>
+      <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:Latitude_Max</sourceName>
+    <destinationName>preciseLat_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="long_name">LatOrfordBuoy_Max</att>
+      <att name="units">degrees_north</att>
+      <att name="_CoordinateAxisType">Lat</att>
+      <att name="axis">Y</att>
+      <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:Longitude</sourceName>
+    <destinationName>preciseLong</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="long_name">LonOrfordBuoy</att>
+      <att name="units">degrees_east</att>
+      <att name="_CoordinateAxisType">Lon</att>
+      <att name="axis">X</att>
+      <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:Longitude_Med</sourceName>
+    <destinationName>preciseLong_Med</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="long_name">LonOrfordBuoy_Med</att>
+      <att name="units">degrees_east</att>
+      <att name="_CoordinateAxisType">Lon</att>
+      <att name="axis">X</att>
+      <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: median (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:Longitude_Avg</sourceName>
+    <destinationName>preciseLong_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="long_name">LonOrfordBuoy_Avg</att>
+      <att name="units">degrees_east</att>
+      <att name="_CoordinateAxisType">Lon</att>
+      <att name="axis">X</att>
+      <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:Longitude_Min</sourceName>
+    <destinationName>preciseLong_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="long_name">LonOrfordBuoy_Min</att>
+      <att name="units">degrees_east</att>
+      <att name="_CoordinateAxisType">Lon</att>
+      <att name="axis">X</att>
+      <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:Longitude_Max</sourceName>
+    <destinationName>preciseLong_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="long_name">LonOrfordBuoy_Max</att>
+      <att name="units">degrees_east</att>
+      <att name="_CoordinateAxisType">Lon</att>
+      <att name="axis">X</att>
+      <att name="ioos_category">Location</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordSeaology:sw_xCO2</sourceName>
+    <destinationName>sw_xCO2</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seaology</att>
+      <att name="long_name">Seawater xCO2</att>
+      <att name="units">ppm</att>
+      <att name="depth">0.5</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">sw_xCO2_UQL sw_xCO2_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordSeaology:sw_xCO2_UQL</sourceName>
+    <destinationName>sw_xCO2_UQL</destinationName>
+    <dataType>byte</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">Seawater xCO2 UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordSeaology:sw_xCO2_QC</sourceName>
+    <destinationName>sw_xCO2_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">Seawater xCO2 Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordSeaology:atm_xCO2</sourceName>
+    <destinationName>atm_xCO2</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="sensor_type">Seaology</att>
+      <att name="long_name">Atmospheric xCO2</att>
+      <att name="units">ppm</att>
+      <att name="height">1</att>
+      <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">atm_xCO2_UQL atm_xCO_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordSeaology:atm_xCO2_UQL</sourceName>
+    <destinationName>atm_xCO2_UQL</destinationName>
+    <dataType>int</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">Atmospheric xCO2 UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordSeaology:atm_xCO2_QC</sourceName>
+    <destinationName>atm_xCO2_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">Atmospheric xCO2 Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+</dataset>
