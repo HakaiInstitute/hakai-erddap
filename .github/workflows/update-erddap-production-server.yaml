@@ -16,10 +16,9 @@ jobs:
       url: https://catalogue.hakai.org/erddap/
     steps:
       - name: Update production server
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@2ead5e36573f08b82fbfce1504f1a4b05a647c6f
         with:
-          host: ${{ secrets.PROD_SERVER_HOST }}
-          username: ${{ secrets.PROD_SERVER_USERNAME }}
-          passphrase: ${{ secrets.PROD_SERVER_PASSPHRASE }}
+          host: catalogue.hakai.org
+          username: hakai
           key: ${{ secrets.PROD_SERVER_SSH_KEY }}
           script: cd  ~/hakai-erddap/; bash update-erddap.sh --hardFlag
