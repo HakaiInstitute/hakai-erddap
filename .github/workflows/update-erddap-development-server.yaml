@@ -18,8 +18,7 @@ jobs:
       - name: Update development server
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.DEV_SERVER_HOST }}
-          username: ${{ secrets.DEV_SERVER_USERNAME }}
-          passphrase: ${{ secrets.DEV_SERVER_PASSPHRASE }}
+          host: erddap.hakai.app
+          username: hakai
           key: ${{ secrets.DEV_SERVER_SSH_KEY }}
           script: cd  ~/hakai-erddap-dev/; bash update-erddap.sh --hardFlag
