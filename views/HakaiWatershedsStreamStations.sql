@@ -56,7 +56,7 @@ sn_table AS (
     FROM
         sn.ssn626us_5minute
 )
-SELECT 
+SELECT
     sn.station,
     sn.latitude,
     sn.longitude,
@@ -162,7 +162,7 @@ sn_table AS (
     FROM
         sn.ssn693us_5minute
 )
-SELECT 
+SELECT
     sn.station,
     sn.latitude,
     sn.longitude,
@@ -268,7 +268,7 @@ sn_table AS (
     FROM
         sn.ssn703us_5minute
 )
-SELECT 
+SELECT
     sn.station,
     sn.latitude,
     sn.longitude,
@@ -374,7 +374,7 @@ sn_table AS (
     FROM
         sn.ssn708_5minute
 )
-SELECT 
+SELECT
     sn.station,
     sn.latitude,
     sn.longitude,
@@ -480,7 +480,7 @@ sn_table AS (
     FROM
         sn.ssn844us_5minute
 )
-SELECT 
+SELECT
     sn.station,
     sn.latitude,
     sn.longitude,
@@ -586,7 +586,7 @@ sn_table AS (
     FROM
         sn.ssn1015us_5minute
 )
-SELECT 
+SELECT
     sn.station,
     sn.latitude,
     sn.longitude,
