@@ -1,13 +1,6 @@
 CREATE
 OR REPLACE VIEW erddap."HakaiWatershedsStreamStations" AS
-WITH last_updated_tbl AS (
-    SELECT
-        measurement_time,
-        MAX(recorded_time) AS last_updated_time
-    FROM sn_qc.ssn626us_5minute
-    GROUP BY measurement_time
-),
-sn_table AS (
+WITH sn_table AS (
     SELECT
         'SSN626US' AS station,
         51.64081 AS latitude,
@@ -62,7 +55,7 @@ SELECT
     sn.longitude,
     sn.elevation,
     sn.measurement_time,
-    lut.last_updated_time,
+    NULL AS last_updated_time,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -103,17 +96,10 @@ SELECT
     sn.turbidity_ntu_med,
     sn.turbidity_ntu_avg
 FROM sn_table sn
-LEFT JOIN last_updated_tbl lut ON sn.measurement_time = lut.measurement_time
+
 UNION
 ALL
-WITH last_updated_tbl AS (
-    SELECT
-        measurement_time,
-        MAX(recorded_time) AS last_updated_time
-    FROM sn_qc.ssn693us_5minute
-    GROUP BY measurement_time
-),
-sn_table AS (
+WITH sn_table AS (
     SELECT
         'SSN693US' AS station,
         51.645 AS latitude,
@@ -168,7 +154,7 @@ SELECT
     sn.longitude,
     sn.elevation,
     sn.measurement_time,
-    lut.last_updated_time,
+    NULL AS last_updated_time,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -209,17 +195,10 @@ SELECT
     sn.turbidity_ntu_med,
     sn.turbidity_ntu_avg
 FROM sn_table sn
-LEFT JOIN last_updated_tbl lut ON sn.measurement_time = lut.measurement_time
+
 UNION
 ALL
-WITH last_updated_tbl AS (
-    SELECT
-        measurement_time,
-        MAX(recorded_time) AS last_updated_time
-    FROM sn_qc.ssn703us_5minute
-    GROUP BY measurement_time
-),
-sn_table AS (
+WITH sn_table AS (
     SELECT
         'SSN703US' AS station,
         51.64333333 AS latitude,
@@ -274,7 +253,7 @@ SELECT
     sn.longitude,
     sn.elevation,
     sn.measurement_time,
-    lut.last_updated_time,
+    NULL AS last_updated_time,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -315,7 +294,7 @@ SELECT
     sn.turbidity_ntu_med,
     sn.turbidity_ntu_avg
 FROM sn_table sn
-LEFT JOIN last_updated_tbl lut ON sn.measurement_time = lut.measurement_time
+
 UNION
 ALL
 WITH last_updated_tbl AS (
@@ -424,14 +403,7 @@ FROM sn_table sn
 LEFT JOIN last_updated_tbl lut ON sn.measurement_time = lut.measurement_time
 UNION
 ALL
-WITH last_updated_tbl AS (
-    SELECT
-        measurement_time,
-        MAX(recorded_time) AS last_updated_time
-    FROM sn_qc.ssn844us_5minute
-    GROUP BY measurement_time
-),
-sn_table AS (
+WITH sn_table AS (
     SELECT
         'SSN844US' AS station,
         51.66083333 AS latitude,
@@ -486,7 +458,7 @@ SELECT
     sn.longitude,
     sn.elevation,
     sn.measurement_time,
-    lut.last_updated_time,
+    NULL AS last_updated_time,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -527,17 +499,10 @@ SELECT
     sn.turbidity_ntu_med,
     sn.turbidity_ntu_avg
 FROM sn_table sn
-LEFT JOIN last_updated_tbl lut ON sn.measurement_time = lut.measurement_time
+
 UNION
 ALL
-WITH last_updated_tbl AS (
-    SELECT
-        measurement_time,
-        MAX(recorded_time) AS last_updated_time
-    FROM sn_qc.ssn1015us_5minute
-    GROUP BY measurement_time
-),
-sn_table AS (
+WITH sn_table AS (
     SELECT
         'SSN1015US' AS station,
         51.69055556 AS latitude,
@@ -592,7 +557,7 @@ SELECT
     sn.longitude,
     sn.elevation,
     sn.measurement_time,
-    lut.last_updated_time,
+    NULL AS last_updated_time,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -633,7 +598,7 @@ SELECT
     sn.turbidity_ntu_med,
     sn.turbidity_ntu_avg
 FROM sn_table sn
-LEFT JOIN last_updated_tbl lut ON sn.measurement_time = lut.measurement_time;
+;
 
 CREATE
 OR REPLACE VIEW erddap."HakaiWatershedsStreamStationsResearch" AS
