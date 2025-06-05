@@ -2,7 +2,7 @@ CREATE
 OR REPLACE VIEW erddap."HakaiWatershedsStreamStations" AS
 {% for station in stations -%}
 WITH last_updated_tbl AS (
-    SELECT 
+    SELECT
         measurement_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.{{ station.table_name }}

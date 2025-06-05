@@ -1,7 +1,7 @@
 CREATE
 OR REPLACE VIEW erddap."HakaiWatershedsStreamStations" AS
 WITH last_updated_tbl AS (
-    SELECT 
+    SELECT
         measurement_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.ssn626us_5minute
@@ -107,7 +107,7 @@ LEFT JOIN last_updated_tbl lut ON sn.measurement_time = lut.measurement_time
 UNION
 ALL
 WITH last_updated_tbl AS (
-    SELECT 
+    SELECT
         measurement_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.ssn693us_5minute
@@ -213,7 +213,7 @@ LEFT JOIN last_updated_tbl lut ON sn.measurement_time = lut.measurement_time
 UNION
 ALL
 WITH last_updated_tbl AS (
-    SELECT 
+    SELECT
         measurement_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.ssn703us_5minute
@@ -319,7 +319,7 @@ LEFT JOIN last_updated_tbl lut ON sn.measurement_time = lut.measurement_time
 UNION
 ALL
 WITH last_updated_tbl AS (
-    SELECT 
+    SELECT
         measurement_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.ssn708_5minute
@@ -425,7 +425,7 @@ LEFT JOIN last_updated_tbl lut ON sn.measurement_time = lut.measurement_time
 UNION
 ALL
 WITH last_updated_tbl AS (
-    SELECT 
+    SELECT
         measurement_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.ssn844us_5minute
@@ -531,7 +531,7 @@ LEFT JOIN last_updated_tbl lut ON sn.measurement_time = lut.measurement_time
 UNION
 ALL
 WITH last_updated_tbl AS (
-    SELECT 
+    SELECT
         measurement_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.ssn1015us_5minute
