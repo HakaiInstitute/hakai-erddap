@@ -97,6 +97,20 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
+        <sourceName>last_updated_time</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">Last Updated Time</att>
+            <att name="source_name">last_updated_time</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
         <sourceName>record</sourceName>
         <destinationName>record</destinationName>
         <dataType>int</dataType>
