@@ -1,0 +1,63 @@
+# ================================================
+# Hakai Watersheds Stream Stations Configuration
+# 
+# This file defines the configuration for stream monitoring stations
+# used to generate the HakaiWatershedsStreamStations ERDDAP view.
+#
+# Each station includes:
+# - station: Unique identifier (matches ERDDAP station name)
+# - latitude/longitude: Coordinates in decimal degrees (WGS84)
+# - elevation: Height above sea level in meters
+# - table_name: Source table in the 'sn' schema
+# - qc_table_name: QC table in the 'sn_qc' schema (if different)
+# - has_turbidity: Whether station includes turbidity measurements
+# ================================================
+
+stations:
+  - station: SSN626US
+    latitude: 51.64081
+    longitude: -128.12065
+    elevation: 8  # meters above sea level
+    table_name: ssn626us_5minute
+    qc_table_name: ssn626us_5minute
+    has_turbidity: true  # Includes both turbidity and turbidity_ntu measurements
+    
+  - station: SSN693US
+    latitude: 51.645
+    longitude: -127.9977778
+    elevation: 51
+    table_name: ssn693us_5minute
+    qc_table_name: ssn693us_5minute
+    has_turbidity: false  # No turbidity measurements available
+    
+  - station: SSN703US
+    latitude: 51.64333333
+    longitude: -128.0227778
+    elevation: 42
+    table_name: ssn703us_5minute
+    qc_table_name: ssn703us_5minute
+    has_turbidity: true
+    
+  - station: SSN708
+    latitude: 51.648561
+    longitude: -128.06835
+    elevation: 12
+    table_name: ssn708_5minute
+    qc_table_name: ssn708_5minute  # Uses sn_qc schema for last_updated_time
+    has_turbidity: true
+    
+  - station: SSN844US
+    latitude: 51.66083333
+    longitude: -128.0025
+    elevation: 35
+    table_name: ssn844us_5minute
+    qc_table_name: ssn844us_5minute
+    has_turbidity: true
+    
+  - station: SSN1015US
+    latitude: 51.69055556
+    longitude: -128.0652778
+    elevation: 17
+    table_name: ssn1015us_5minute
+    qc_table_name: ssn1015us_5minute
+    has_turbidity: true

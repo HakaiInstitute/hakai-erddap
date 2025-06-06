@@ -8,7 +8,7 @@ are the views that are templated
 
 from pathlib import Path
 import re
-import json
+import yaml
 
 import click
 from jinja2 import Environment, FileSystemLoader
@@ -98,15 +98,15 @@ def generate_stream_stations_view():
     Generate the stream stations view for the ERDDAP server
     """
     # Load station configuration
-    config_path = Path("views/HakaiWatershedsStreamStations.json")
+    config_path = Path("views/HakaiWatershedsStreamStations.yaml")
     if not config_path.exists():
         click.echo(
-            "Warning: stations_config.json not found, skipping stream stations view generation"
+            "Warning: HakaiWatershedsStreamStations.yaml not found, skipping stream stations view generation"
         )
         return
 
     with open(config_path) as f:
-        config = json.load(f)
+        config = yaml.safe_load(f)
 
     result = environment.get_template("HakaiWatershedsStreamStations.sql.j2").render(
         **config
