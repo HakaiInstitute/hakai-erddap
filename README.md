@@ -175,6 +175,8 @@ If you are _just_ updatin the jinja templates, you can run the command with the 
 python update_erddap_views.py --jinja-only
 ```
 
+The `views/HakaiWatershedsStreamStations.json` config determines how they are updated.
+
 Commit any changes made to the different files within `views/*.sql` to the main branch.
 
 ## Continuous Integration
