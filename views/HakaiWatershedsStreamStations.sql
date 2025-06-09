@@ -1,5 +1,5 @@
 CREATE OR REPLACE VIEW erddap."HakaiWatershedsStreamStations" AS
-WITH 
+WITH
 last_updated_ssn626us AS (
     SELECT
         measurement_time,

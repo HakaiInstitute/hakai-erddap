@@ -1,5 +1,5 @@
 CREATE OR REPLACE VIEW erddap."HakaiWatershedsStreamStations" AS
-WITH 
+WITH
 {% for station in stations -%}
 last_updated_{{ station.station.lower() }} AS (
     SELECT
