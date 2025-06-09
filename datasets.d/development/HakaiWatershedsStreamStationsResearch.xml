@@ -36,6 +36,7 @@
         <addAttributes>
             <att name="ioos_category">Identifier</att>
             <att name="long_name">Station</att>
+            <att name="actual_range">SSN626US,SSN693US,SSN703US,SSN708,SSN844US,SSN1015US</att>
             <att name="cf_role">timeseries_id</att>
         </addAttributes>
     </dataVariable>
@@ -98,7 +99,7 @@
     </dataVariable>
     <dataVariable>
         <sourceName>last_updated_time</sourceName>
-        <destinationName>time</destinationName>
+        <destinationName>last_updated_time</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
