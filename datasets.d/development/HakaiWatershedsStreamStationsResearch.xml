@@ -1,9 +1,6 @@
-<!-- NOTE! Since database tables don't have any metadata, you must add metadata
-  below, notably 'units' for each of the dataVariables. -->
 <dataset type="EDDTableFromDatabase" datasetID="HakaiWatershedsStreamStationsResearch" active="true">
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
-    <catalogName>hakai</catalogName>
     <schemaName>erddap</schemaName>
     <tableName>"HakaiWatershedsStreamStationsResearch"</tableName>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
