@@ -19,3 +19,8 @@ datasets/**
 !datasets/README.md
 .last_update_sha
 temp.tar
+
+.pgpass
+.pguser
+.pgdb
+.pghost

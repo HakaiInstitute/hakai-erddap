@@ -5,5 +5,5 @@
 IFS='
 '
 export $(grep -v '^#' .env | xargs -d '\n')
-docker exec -it "${CONTAINER_NAME:-erddap}" bash -c "cd webapps/erddap/WEB-INF/ && bash DasDds.sh $*" \
+docker exec -it --user tomcat "${CONTAINER_NAME:-erddap}" bash -c "cd webapps/erddap/WEB-INF/ && bash DasDds.sh $*" \
   

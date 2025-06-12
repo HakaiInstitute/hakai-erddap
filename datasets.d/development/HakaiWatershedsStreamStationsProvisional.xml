@@ -1,9 +1,6 @@
-<!-- NOTE! Since database tables don't have any metadata, you must add metadata
-  below, notably 'units' for each of the dataVariables. -->
 <dataset type="EDDTableFromDatabase" datasetID="HakaiWatershedsStreamStationsProvisional" active="true">
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
-    <catalogName>hakai</catalogName>
     <schemaName>erddap</schemaName>
     <tableName>"HakaiWatershedsStreamStations"</tableName>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
@@ -36,6 +33,7 @@
         <addAttributes>
             <att name="ioos_category">Identifier</att>
             <att name="long_name">Station</att>
+            <att name="actual_range">SSN626US,SSN693US,SSN703US,SSN708,SSN844US,SSN1015US</att>
             <att name="cf_role">timeseries_id</att>
         </addAttributes>
     </dataVariable>
@@ -92,6 +90,20 @@
             <att name="ioos_category">Time</att>
             <att name="long_name">Measurement Time</att>
             <att name="source_name">measurement_time</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>last_updated_time</sourceName>
+        <destinationName>last_updated_time</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">Last Updated Time</att>
+            <att name="source_name">last_updated_time</att>
             <att name="standard_name">time</att>
             <att name="units">seconds since 1970-01-01T00:00:00Z</att>
         </addAttributes>

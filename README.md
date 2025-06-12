@@ -169,6 +169,14 @@ and run the following command:
 python update_erddap_views.py
 ```
 
+If you are _just_ updatin the jinja templates, you can run the command with the `--jinja-only` flag to only update the jinja templates without needing to access the database:
+
+```
+python update_erddap_views.py --jinja-only
+```
+
+The `views/HakaiWatershedsStreamStations.json` config determines how they are updated.
+
 Commit any changes made to the different files within `views/*.sql` to the main branch.
 
 ## Continuous Integration
