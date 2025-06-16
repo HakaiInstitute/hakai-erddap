@@ -411,7 +411,7 @@ SELECT
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
-    CASE 
+    CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'modified'
         ELSE 'raw_measurement'
     END AS measurement_status,
@@ -468,7 +468,7 @@ SELECT
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
-    CASE 
+    CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'modified'
         ELSE 'raw_measurement'
     END AS measurement_status,
@@ -525,7 +525,7 @@ SELECT
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
-    CASE 
+    CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'modified'
         ELSE 'raw_measurement'
     END AS measurement_status,
@@ -582,7 +582,7 @@ SELECT
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
-    CASE 
+    CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'modified'
         ELSE 'raw_measurement'
     END AS measurement_status,
@@ -639,7 +639,7 @@ SELECT
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
-    CASE 
+    CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'modified'
         ELSE 'raw_measurement'
     END AS measurement_status,
@@ -696,7 +696,7 @@ SELECT
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
-    CASE 
+    CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'modified'
         ELSE 'raw_measurement'
     END AS measurement_status,
@@ -753,7 +753,7 @@ SELECT
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
-    CASE 
+    CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'modified'
         ELSE 'raw_measurement'
     END AS measurement_status,
@@ -811,7 +811,7 @@ SELECT
     elevation,
     measurement_time,
     last_updated_time,
-    CASE 
+    CASE
         WHEN last_updated_time > measurement_time THEN 'modified'
         ELSE 'raw_measurement'
     END AS measurement_status,
