@@ -11,6 +11,8 @@ last_updated_{{ station.station.lower() }} AS (
 sn_{{ station.station.lower() }} AS (
     SELECT
         '{{ station.station }}' AS station,
+        '{{ station.station_id }}' AS station_id,
+        '{{ station.station_description }}' AS station_description,
         {{ station.latitude }} AS latitude,
         {{ station.longitude }} AS longitude,
         {{ station.elevation }} AS elevation,
@@ -75,11 +77,17 @@ sn_{{ station.station.lower() }} AS (
 {% for station in stations -%}
 SELECT
     sn.station,
+    sn.station_id,
+    sn.station_description,
     sn.latitude,
     sn.longitude,
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
+    CASE 
+        WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'modified'
+        ELSE 'raw_measurement'
+    END AS measurement_status,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -129,11 +137,17 @@ UNION ALL
 CREATE OR REPLACE VIEW erddap."HakaiWatershedsStreamStationsResearch" AS
 SELECT
     station,
+    station_id,
+    station_description,
     latitude,
     longitude,
     elevation,
     measurement_time,
     last_updated_time,
+    CASE 
+        WHEN last_updated_time > measurement_time THEN 'modified'
+        ELSE 'raw_measurement'
+    END AS measurement_status,
     record,
     pls_lvl_ql,
     pls_lvl_qc,
