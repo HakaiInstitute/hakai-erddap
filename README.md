@@ -157,7 +157,41 @@ example crontab snippet
 40 3 * * *	/bin/bash $HOME/hakai-sensor-network/sensor-network-tools/initate-remote-process-sn-data.bash -P -R -S >> $HOME/logs/publish-sn-data.log 2>&1 && /bin/bash $HOME/hakai-erddap/erddap_create_views.sh > /dev/null
 ```
 
-## Sync ERDDAP datasets with hakai database views
+## How to add modify data in an existing ERDDAP record
+
+Start your entire process by merging to the `development` branch. This is where all testing should occur. 
+
+### 1. Modify the either the `*.sql` or `.sql.j2` files in the `views/` folder.
+
+This is where you decide upon your data model, add columns and generally figure out what your data will look like. Be sure to test your queries of the `hakaidev` database rather than the `hakai` production database.
+
+### 2. Update the XML file in the `datasets.d/` directory that corresponding to the data you have modified
+
+Any changes to the view need to be reflected in the corresponding XML file
+
+### 3. Test Dataset
+
+Once satisfied, you can test the dataset with the command `sh DasDds.sh`. If issues are identified, fix and rerun DasDds.sh. `DasDds.sh` is setup to run on a live container so make
+sure that the correct container name is specified in the `DasDds.sh` file itself.
+
+### 4. Update views
+
+Refresh the views with your updated `*.sql` files using the `erddap_create_views.sh` script. This script uses dotfiles to specific which databases is being used
+so be very sure that you are updating the correct database. In this step, it is very possible that you will encounter additional issues that may require you to
+jump back up to number 3. This is exactly where you should be using the development version of ERDDAP. If you make significant changes, it may just be easier to
+delete the view completely and recreate it.
+
+### 5. Re-deploy ERDDAP
+
+This step may not be explicitly required because some automation steps (i.e. merging a PR) mioght do it for you. However in practice it often is helpful.
+
+```bash
+git pull
+sudo docker compose build
+sudo docker compose up -d
+```
+
+## More on syncing ERDDAP datasets with hakai database views
 
 ERDDAP relies on the different views and tables present within the erddap schema of the hakai database. 
 
@@ -169,13 +203,13 @@ and run the following command:
 python update_erddap_views.py
 ```
 
-If you are _just_ updatin the jinja templates, you can run the command with the `--jinja-only` flag to only update the jinja templates without needing to access the database:
+If you are _just_ updating the jinja templates, you can run the command with the `--jinja-only` flag to only update the jinja templates without needing to access the database:
 
 ```
 python update_erddap_views.py --jinja-only
 ```
 
-The `views/HakaiWatershedsStreamStations.json` config determines how they are updated.
+The `views/HakaiWatershedsStreamStations.yaml` config determines how they are updated.
 
 Commit any changes made to the different files within `views/*.sql` to the main branch.
 
