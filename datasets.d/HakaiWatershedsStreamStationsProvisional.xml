@@ -47,7 +47,6 @@
             <att name="ioos_category">Identifier</att>
             <att name="long_name">Station ID</att>
             <att name="actual_range">H08KC0626,H08KC0693,H08KC0703,H08KC0708,H08KC0844,H08KC0819,H08KC1015</att>
-            <att name="cf_role">timeseries_id</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -59,7 +58,6 @@
         <addAttributes>
             <att name="ioos_category">Identifier</att>
             <att name="long_name">Station Description</att>
-            <att name="cf_role">timeseries_id</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
