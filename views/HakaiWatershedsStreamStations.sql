@@ -412,9 +412,9 @@ SELECT
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
     CASE
-        WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'modified'
-        ELSE 'raw_measurement'
-    END AS measurement_status,
+       WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN true
+       ELSE false
+    END AS is_qc,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -469,9 +469,9 @@ SELECT
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
     CASE
-        WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'modified'
-        ELSE 'raw_measurement'
-    END AS measurement_status,
+       WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN true
+       ELSE false
+    END AS is_qc,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -526,9 +526,9 @@ SELECT
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
     CASE
-        WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'modified'
-        ELSE 'raw_measurement'
-    END AS measurement_status,
+       WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN true
+       ELSE false
+    END AS is_qc,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -583,9 +583,9 @@ SELECT
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
     CASE
-        WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'modified'
-        ELSE 'raw_measurement'
-    END AS measurement_status,
+       WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN true
+       ELSE false
+    END AS is_qc,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -640,9 +640,9 @@ SELECT
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
     CASE
-        WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'modified'
-        ELSE 'raw_measurement'
-    END AS measurement_status,
+       WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN true
+       ELSE false
+    END AS is_qc,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -697,9 +697,9 @@ SELECT
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
     CASE
-        WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'modified'
-        ELSE 'raw_measurement'
-    END AS measurement_status,
+       WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN true
+       ELSE false
+    END AS is_qc,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -754,9 +754,9 @@ SELECT
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
     CASE
-        WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'modified'
-        ELSE 'raw_measurement'
-    END AS measurement_status,
+       WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN true
+       ELSE false
+    END AS is_qc,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -811,10 +811,7 @@ SELECT
     elevation,
     measurement_time,
     last_updated_time,
-    CASE
-        WHEN last_updated_time > measurement_time THEN 'modified'
-        ELSE 'raw_measurement'
-    END AS measurement_status,
+    is_qc,
     record,
     pls_lvl_ql,
     pls_lvl_qc,

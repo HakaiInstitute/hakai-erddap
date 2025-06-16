@@ -1,8 +1,8 @@
-<dataset type="EDDTableFromDatabase" datasetID="HakaiWatershedsStreamStationsProvisional" active="true">
+<dataset type="EDDTableFromDatabase" datasetID="HakaiWatershedsStreamStationsResearch" active="true">
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
     <schemaName>erddap</schemaName>
-    <tableName>"HakaiWatershedsStreamStations"</tableName>
+    <tableName>"HakaiWatershedsStreamStationsResearch"</tableName>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <!-- sourceAttributes>
     </sourceAttributes -->
@@ -22,7 +22,7 @@
         <att name="sourceUrl">(local database)</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
         <att name="summary">Data from a local source.</att>
-        <att name="title">Hakai Watersheds Stream Stations Timeseries Provisional</att>
+        <att name="title">Hakai Watersheds Stream Stations Timeseries Research</att>
     </addAttributes>
     <dataVariable>
         <sourceName>station</sourceName>
@@ -34,6 +34,31 @@
             <att name="ioos_category">Identifier</att>
             <att name="long_name">Station</att>
             <att name="actual_range">SSN626US,SSN693US,SSN703US,SSN708,SSN844US,SSN1015US</att>
+            <att name="cf_role">timeseries_id</att>
+        </addAttributes>
+    </dataVariable>
+        <dataVariable>
+        <sourceName>station_id</sourceName>
+        <destinationName>station_id</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Identifier</att>
+            <att name="long_name">Station ID</att>
+            <att name="actual_range">H08KC0626,H08KC0693,H08KC0703,H08KC0708,H08KC0844,H08KC0819,H08KC1015</att>
+            <att name="cf_role">timeseries_id</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>station_description</sourceName>
+        <destinationName>station_description</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Identifier</att>
+            <att name="long_name">Station Description</att>
             <att name="cf_role">timeseries_id</att>
         </addAttributes>
     </dataVariable>
@@ -106,6 +131,19 @@
             <att name="source_name">last_updated_time</att>
             <att name="standard_name">time</att>
             <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </addAttributes>
+    </dataVariable>
+        <dataVariable>
+        <sourceName>is_qc</sourceName>
+        <destinationName>is_qc</destinationName>
+        <dataType>boolean</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Quality</att>
+            <att name="long_name">Quality Control Applied</att>
+            <att name="standard_name">status_flag</att>
+            <att name="comment">True if measurement has been quality controlled, false if raw measurement</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
