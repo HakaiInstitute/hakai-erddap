@@ -49,12 +49,12 @@ stations:
     table_name: ssn844us_5minute
     has_turbidity: true
 
-  # - station: SSN819US
-  #   latitude: null
-  #   longitude: null
-  #   elevation: null
-  #   table_name: ssn819us_5minute
-  #   has_turbidity: true
+  - station: SSN819US
+    latitude: 51.66222222
+    longitude: -128.0419444
+    elevation: 79
+    table_name: ssn819us_5minute
+    has_turbidity: true
     
   - station: SSN1015US
     latitude: 51.69055556
