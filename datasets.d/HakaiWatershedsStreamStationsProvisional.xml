@@ -101,6 +101,7 @@
             <att name="long_name">Elevation</att>
             <att name="standard_name">altitude</att>
             <att name="units">m</att>
+            <att name="_FillValue" type="int">2147483647</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -141,6 +142,7 @@
             <att name="ioos_category">Quality</att>
             <att name="long_name">Quality Control Applied</att>
             <att name="standard_name">status_flag</att>
+            <att name="_FillValue" type="byte">127</att>
             <att name="comment">True if measurement has been quality controlled, false if raw measurement</att>
         </addAttributes>
     </dataVariable>
@@ -153,6 +155,7 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Record</att>
+            <att name="_FillValue" type="int">2147483647</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -164,6 +167,7 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">PLS LVL QL</att>
+            <att name="_FillValue" type="short">32767</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -241,7 +245,7 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Pls Lvl Max</att>
-            <att name="cell_methods">time: ax (interval: 5.0 minutes)</att>
+            <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
             <att name="units">m</att>
         </addAttributes>
     </dataVariable>
@@ -267,6 +271,7 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Pls Temp Ql</att>
+            <att name="_FillValue" type="short">32767</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -358,6 +363,7 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Pls Temp Std</att>
+            <att name="units">degrees_celsius</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -370,6 +376,7 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Discharge Rate Ql</att>
+            <att name="_FillValue" type="short">32767</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -448,6 +455,7 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Discharge Volume Ql</att>
+            <att name="_FillValue" type="short">32767</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -526,6 +534,7 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Turbidity Ql</att>
+            <att name="_FillValue" type="short">32767</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -591,6 +600,7 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Turbidity Ntu Ql</att>
+            <att name="_FillValue" type="short">32767</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
