@@ -414,7 +414,7 @@ SELECT
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
-    END AS qc_status
+    END AS qc_status,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -471,7 +471,7 @@ SELECT
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
-    END AS qc_status
+    END AS qc_status,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -528,7 +528,7 @@ SELECT
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
-    END AS qc_status
+    END AS qc_status,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -585,7 +585,7 @@ SELECT
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
-    END AS qc_status
+    END AS qc_status,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -642,7 +642,7 @@ SELECT
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
-    END AS qc_status
+    END AS qc_status,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -699,7 +699,7 @@ SELECT
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
-    END AS qc_status
+    END AS qc_status,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -756,7 +756,7 @@ SELECT
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
-    END AS qc_status
+    END AS qc_status,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
