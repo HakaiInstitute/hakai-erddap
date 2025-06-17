@@ -1,9 +1,6 @@
-<!-- NOTE! Since database tables don't have any metadata, you must add metadata
-  below, notably 'units' for each of the dataVariables. -->
 <dataset type="EDDTableFromDatabase" datasetID="HakaiWatershedsStreamStationsProvisional" active="true">
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
-    <catalogName>hakai</catalogName>
     <schemaName>erddap</schemaName>
     <tableName>"HakaiWatershedsStreamStations"</tableName>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
@@ -36,7 +33,31 @@
         <addAttributes>
             <att name="ioos_category">Identifier</att>
             <att name="long_name">Station</att>
+            <att name="actual_range">SSN626US,SSN693US,SSN703US,SSN708,SSN819US,SSN844US,SSN1015US</att>
             <att name="cf_role">timeseries_id</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>station_id</sourceName>
+        <destinationName>station_id</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Identifier</att>
+            <att name="long_name">Station ID</att>
+            <att name="actual_range">H08KC0626,H08KC0693,H08KC0703,H08KC0708,H08KC0844,H08KC0819,H08KC1015</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>station_description</sourceName>
+        <destinationName>station_description</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Identifier</att>
+            <att name="long_name">Station Description</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -80,6 +101,7 @@
             <att name="long_name">Elevation</att>
             <att name="standard_name">altitude</att>
             <att name="units">m</att>
+            <att name="_FillValue" type="int">2147483647</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -97,6 +119,59 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
+        <sourceName>last_updated_time</sourceName>
+        <destinationName>last_updated_time</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">Last Updated Time</att>
+            <att name="source_name">last_updated_time</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>last_updated_status</sourceName>
+        <destinationName>last_updated_status</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Last Updated Status</att>
+            <att name="long_name">Last Updated Status</att>
+            <att name="standard_name">last_updated_status</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>last_updated_lvl_time</sourceName>
+        <destinationName>last_updated_lvl_time</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">Last Updated Level Time</att>
+            <att name="source_name">last_updated_lvl_time</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+            <att name="comment">Time since the level parameter was updated</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>last_updated_lvl_status</sourceName>
+        <destinationName>last_updated_lvl_status</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Last Updated Status for Only Level</att>
+            <att name="long_name">Last Updated Status for Only Level</att>
+            <att name="standard_name">last_updated_lvl_status</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
         <sourceName>record</sourceName>
         <destinationName>record</destinationName>
         <dataType>int</dataType>
@@ -105,6 +180,7 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Record</att>
+            <att name="_FillValue" type="int">2147483647</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -116,6 +192,7 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">PLS LVL QL</att>
+            <att name="_FillValue" type="short">32767</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -193,7 +270,7 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Pls Lvl Max</att>
-            <att name="cell_methods">time: ax (interval: 5.0 minutes)</att>
+            <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
             <att name="units">m</att>
         </addAttributes>
     </dataVariable>
@@ -219,6 +296,7 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Pls Temp Ql</att>
+            <att name="_FillValue" type="short">32767</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -310,6 +388,7 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Pls Temp Std</att>
+            <att name="units">degrees_celsius</att>
             <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
         </addAttributes>
     </dataVariable>
@@ -322,6 +401,7 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Discharge Rate Ql</att>
+            <att name="_FillValue" type="short">32767</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -400,6 +480,7 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Discharge Volume Ql</att>
+            <att name="_FillValue" type="short">32767</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -478,6 +559,7 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Turbidity Ql</att>
+            <att name="_FillValue" type="short">32767</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -543,6 +625,7 @@
         <addAttributes>
             <att name="ioos_category">Unknown</att>
             <att name="long_name">Turbidity Ntu Ql</att>
+            <att name="_FillValue" type="short">32767</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>

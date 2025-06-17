@@ -1,0 +1,261 @@
+CREATE OR REPLACE VIEW erddap."HakaiWatershedsStreamStations" AS
+WITH
+{% for station in stations -%}
+last_updated_{{ station.station.lower() }} AS (
+    SELECT
+        measurement_time,
+        MAX(CASE WHEN measurement_name = 'PLS_Lvl' THEN recorded_time END) AS last_updated_lvl_time,
+        MAX(recorded_time) AS last_updated_time
+    FROM sn_qc.{{ station.table_name }}
+    GROUP BY measurement_time
+),
+sn_{{ station.station.lower() }} AS (
+    SELECT
+        '{{ station.station }}' AS station,
+        '{{ station.station_id }}' AS station_id,
+        '{{ station.station_description }}' AS station_description,
+        {{ station.latitude }} AS latitude,
+        {{ station.longitude }} AS longitude,
+        {{ station.elevation }} AS elevation,
+        measurement_time,
+        record,
+        pls_lvl_ql,
+        pls_lvl_qc,
+        pls_lvl_uql,
+        pls_lvl,
+        pls_lvl_avg,
+        pls_lvl_min,
+        pls_lvl_max,
+        pls_lvl_std,
+        pls_temp_ql,
+        pls_temp_qc,
+        pls_temp_uql,
+        pls_temp,
+        pls_temp_avg,
+        pls_temp_min,
+        pls_temp_max,
+        pls_temp_std,
+        discharge_rate_ql,
+        discharge_rate_qc,
+        discharge_rate_uql,
+        discharge_rate,
+        discharge_rate_min,
+        discharge_rate_max,
+        discharge_volume_ql,
+        discharge_volume_qc,
+        discharge_volume_uql,
+        discharge_volume,
+        discharge_volume_min,
+        discharge_volume_max,
+        {% if station.has_turbidity -%}
+        turbidity_ql::numeric AS turbidity_ql,
+        turbidity_qc::character varying AS turbidity_qc,
+        turbidity_uql::numeric AS turbidity_uql,
+        turbidity_med,
+        turbidity_avg,
+        turbidity_ntu_ql::numeric AS turbidity_ntu_ql,
+        turbidity_ntu_qc::character varying AS turbidity_ntu_qc,
+        turbidity_ntu_uql::numeric AS turbidity_ntu_uql,
+        turbidity_ntu_med,
+        turbidity_ntu_avg
+        {%- else -%}
+        NULL::numeric AS turbidity_ql,
+        NULL::character varying AS turbidity_qc,
+        NULL::numeric AS turbidity_uql,
+        NULL::numeric AS turbidity_med,
+        NULL::numeric AS turbidity_avg,
+        NULL::numeric AS turbidity_ntu_ql,
+        NULL::character varying AS turbidity_ntu_qc,
+        NULL::numeric AS turbidity_ntu_uql,
+        NULL::numeric AS turbidity_ntu_med,
+        NULL::numeric AS turbidity_ntu_avg
+        {%- endif %}
+    FROM sn.{{ station.table_name }}
+){% if not loop.last %},{% endif %}
+{% endfor %}
+
+-- Main query with simple UNION ALL
+{% for station in stations -%}
+SELECT
+    sn.station,
+    sn.station_id,
+    sn.station_description,
+    sn.latitude,
+    sn.longitude,
+    sn.elevation,
+    sn.measurement_time,
+    COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
+    CASE
+        WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
+        ELSE 'raw'
+    END AS last_updated_status,
+    COALESCE(lut.last_updated_lvl_time, sn.measurement_time) AS last_updated_lvl_time,
+    CASE
+        WHEN COALESCE(lut.last_updated_lvl_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
+        ELSE 'raw'
+    END AS last_updated_lvl_status,
+    sn.record,
+    sn.pls_lvl_ql,
+    sn.pls_lvl_qc,
+    sn.pls_lvl_uql,
+    sn.pls_lvl,
+    sn.pls_lvl_avg,
+    sn.pls_lvl_min,
+    sn.pls_lvl_max,
+    sn.pls_lvl_std,
+    sn.pls_temp_ql,
+    sn.pls_temp_qc,
+    sn.pls_temp_uql,
+    sn.pls_temp,
+    sn.pls_temp_avg,
+    sn.pls_temp_min,
+    sn.pls_temp_max,
+    sn.pls_temp_std,
+    sn.discharge_rate_ql,
+    sn.discharge_rate_qc,
+    sn.discharge_rate_uql,
+    sn.discharge_rate,
+    sn.discharge_rate_min,
+    sn.discharge_rate_max,
+    sn.discharge_volume_ql,
+    sn.discharge_volume_qc,
+    sn.discharge_volume_uql,
+    sn.discharge_volume,
+    sn.discharge_volume_min,
+    sn.discharge_volume_max,
+    sn.turbidity_ql,
+    sn.turbidity_qc,
+    sn.turbidity_uql,
+    sn.turbidity_med,
+    sn.turbidity_avg,
+    sn.turbidity_ntu_ql,
+    sn.turbidity_ntu_qc,
+    sn.turbidity_ntu_uql,
+    sn.turbidity_ntu_med,
+    sn.turbidity_ntu_avg
+FROM sn_{{ station.station.lower() }} sn
+LEFT JOIN last_updated_{{ station.station.lower() }} lut ON sn.measurement_time = lut.measurement_time
+{% if not loop.last %}
+UNION ALL
+{% endif %}
+{% endfor %};
+
+CREATE OR REPLACE VIEW erddap."HakaiWatershedsStreamStationsResearch" AS
+SELECT
+    station,
+    station_id,
+    station_description,
+    latitude,
+    longitude,
+    elevation,
+    measurement_time,
+    last_updated_time,
+    last_updated_lvl_time,
+    last_updated_status,
+    last_updated_lvl_status
+    record,
+    pls_lvl_ql,
+    pls_lvl_qc,
+    pls_lvl_uql,
+    pls_temp_ql,
+    pls_temp_qc,
+    pls_temp_uql,
+    discharge_rate_ql,
+    discharge_rate_qc,
+    discharge_rate_uql,
+    discharge_volume_ql,
+    discharge_volume_qc,
+    discharge_volume_uql,
+    turbidity_ql,
+    turbidity_qc,
+    turbidity_uql,
+    turbidity_ntu_ql,
+    turbidity_ntu_qc,
+    turbidity_ntu_uql,
+    CASE
+        WHEN (pls_lvl_uql = 4 OR pls_lvl_ql < 2) THEN NULL
+        ELSE pls_lvl
+    END AS pls_lvl,
+    CASE
+        WHEN (pls_lvl_uql = 4 OR pls_lvl_ql < 2) THEN NULL
+        ELSE pls_lvl_avg
+    END AS pls_lvl_avg,
+    CASE
+        WHEN (pls_lvl_uql = 4 OR pls_lvl_ql < 2) THEN NULL
+        ELSE pls_lvl_min
+    END AS pls_lvl_min,
+    CASE
+        WHEN (pls_lvl_uql = 4 OR pls_lvl_ql < 2) THEN NULL
+        ELSE pls_lvl_max
+    END AS pls_lvl_max,
+    CASE
+        WHEN (pls_lvl_uql = 4 OR pls_lvl_ql < 2) THEN NULL
+        ELSE pls_lvl_std
+    END AS pls_lvl_std,
+    CASE
+        WHEN (pls_temp_uql = 4 OR pls_temp_ql < 2) THEN NULL
+        ELSE pls_temp
+    END AS pls_temp,
+    CASE
+        WHEN (pls_temp_uql = 4 OR pls_temp_ql < 2) THEN NULL
+        ELSE pls_temp_avg
+    END AS pls_temp_avg,
+    CASE
+        WHEN (pls_temp_uql = 4 OR pls_temp_ql < 2) THEN NULL
+        ELSE pls_temp_min
+    END AS pls_temp_min,
+    CASE
+        WHEN (pls_temp_uql = 4 OR pls_temp_ql < 2) THEN NULL
+        ELSE pls_temp_max
+    END AS pls_temp_max,
+    CASE
+        WHEN (pls_temp_uql = 4 OR pls_temp_ql < 2) THEN NULL
+        ELSE pls_temp_std
+    END AS pls_temp_std,
+    CASE
+        WHEN (discharge_rate_uql = 4 OR discharge_rate_ql < 2) THEN NULL
+        ELSE discharge_rate
+    END AS discharge_rate,
+    CASE
+        WHEN (discharge_rate_uql = 4 OR discharge_rate_ql < 2) THEN NULL
+        ELSE discharge_rate_min
+    END AS discharge_rate_min,
+    CASE
+        WHEN (discharge_rate_uql = 4 OR discharge_rate_ql < 2) THEN NULL
+        ELSE discharge_rate_max
+    END AS discharge_rate_max,
+    CASE
+        WHEN (discharge_volume_uql = 4 OR discharge_volume_ql < 2) THEN NULL
+        ELSE discharge_volume
+    END AS discharge_volume,
+    CASE
+        WHEN (discharge_volume_uql = 4 OR discharge_volume_ql < 2) THEN NULL
+        ELSE discharge_volume_min
+    END AS discharge_volume_min,
+    CASE
+        WHEN (discharge_volume_uql = 4 OR discharge_volume_ql < 2) THEN NULL
+        ELSE discharge_volume_max
+    END AS discharge_volume_max,
+    CASE
+        WHEN (turbidity_uql = 4 OR turbidity_ql < 2) THEN NULL
+        ELSE turbidity_med
+    END AS turbidity_med,
+    CASE
+        WHEN (turbidity_uql = 4 OR turbidity_ql < 2) THEN NULL
+        ELSE turbidity_avg
+    END AS turbidity_avg,
+    CASE
+        WHEN (turbidity_ntu_uql = 4 OR turbidity_ntu_ql < 2) THEN NULL
+        ELSE turbidity_ntu_med
+    END AS turbidity_ntu_med,
+    CASE
+        WHEN (turbidity_ntu_uql = 4 OR turbidity_ntu_ql < 2) THEN NULL
+        ELSE turbidity_ntu_avg
+    END AS turbidity_ntu_avg
+FROM erddap."HakaiWatershedsStreamStations"
+WHERE
+    pls_lvl_ql = 2
+    OR pls_temp_ql = 2
+    OR discharge_rate_ql = 2
+    OR discharge_volume_ql = 2
+    OR turbidity_ql = 2;
