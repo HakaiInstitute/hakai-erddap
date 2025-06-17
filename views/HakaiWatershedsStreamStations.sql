@@ -3,6 +3,7 @@ WITH
 last_updated_ssn626us AS (
     SELECT
         measurement_time,
+        MAX(CASE WHEN measurement_name = 'PLS_Lvl' THEN recorded_time END) AS last_updated_lvl_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.ssn626us_5minute
     GROUP BY measurement_time
@@ -60,6 +61,7 @@ sn_ssn626us AS (
 last_updated_ssn693us AS (
     SELECT
         measurement_time,
+        MAX(CASE WHEN measurement_name = 'PLS_Lvl' THEN recorded_time END) AS last_updated_lvl_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.ssn693us_5minute
     GROUP BY measurement_time
@@ -117,6 +119,7 @@ sn_ssn693us AS (
 last_updated_ssn703us AS (
     SELECT
         measurement_time,
+        MAX(CASE WHEN measurement_name = 'PLS_Lvl' THEN recorded_time END) AS last_updated_lvl_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.ssn703us_5minute
     GROUP BY measurement_time
@@ -174,6 +177,7 @@ sn_ssn703us AS (
 last_updated_ssn708 AS (
     SELECT
         measurement_time,
+        MAX(CASE WHEN measurement_name = 'PLS_Lvl' THEN recorded_time END) AS last_updated_lvl_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.ssn708_5minute
     GROUP BY measurement_time
@@ -231,6 +235,7 @@ sn_ssn708 AS (
 last_updated_ssn844us AS (
     SELECT
         measurement_time,
+        MAX(CASE WHEN measurement_name = 'PLS_Lvl' THEN recorded_time END) AS last_updated_lvl_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.ssn844us_5minute
     GROUP BY measurement_time
@@ -288,6 +293,7 @@ sn_ssn844us AS (
 last_updated_ssn819us AS (
     SELECT
         measurement_time,
+        MAX(CASE WHEN measurement_name = 'PLS_Lvl' THEN recorded_time END) AS last_updated_lvl_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.ssn819us_5minute
     GROUP BY measurement_time
@@ -345,6 +351,7 @@ sn_ssn819us AS (
 last_updated_ssn1015us AS (
     SELECT
         measurement_time,
+        MAX(CASE WHEN measurement_name = 'PLS_Lvl' THEN recorded_time END) AS last_updated_lvl_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.ssn1015us_5minute
     GROUP BY measurement_time
@@ -411,10 +418,15 @@ SELECT
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
+    COALESCE(lut.last_updated_lvl_time, sn.measurement_time) AS last_updated_lvl_time,
+    CASE
+        WHEN COALESCE(lut.last_updated_lvl_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
+        ELSE 'raw'
+    END AS last_updated_lvl_status,
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
-    END AS qc_status,
+    END AS last_updated_status,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -468,10 +480,15 @@ SELECT
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
+    COALESCE(lut.last_updated_lvl_time, sn.measurement_time) AS last_updated_lvl_time,
+    CASE
+        WHEN COALESCE(lut.last_updated_lvl_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
+        ELSE 'raw'
+    END AS last_updated_lvl_status,
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
-    END AS qc_status,
+    END AS last_updated_status,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -525,10 +542,15 @@ SELECT
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
+    COALESCE(lut.last_updated_lvl_time, sn.measurement_time) AS last_updated_lvl_time,
+    CASE
+        WHEN COALESCE(lut.last_updated_lvl_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
+        ELSE 'raw'
+    END AS last_updated_lvl_status,
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
-    END AS qc_status,
+    END AS last_updated_status,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -582,10 +604,15 @@ SELECT
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
+    COALESCE(lut.last_updated_lvl_time, sn.measurement_time) AS last_updated_lvl_time,
+    CASE
+        WHEN COALESCE(lut.last_updated_lvl_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
+        ELSE 'raw'
+    END AS last_updated_lvl_status,
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
-    END AS qc_status,
+    END AS last_updated_status,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -639,10 +666,15 @@ SELECT
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
+    COALESCE(lut.last_updated_lvl_time, sn.measurement_time) AS last_updated_lvl_time,
+    CASE
+        WHEN COALESCE(lut.last_updated_lvl_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
+        ELSE 'raw'
+    END AS last_updated_lvl_status,
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
-    END AS qc_status,
+    END AS last_updated_status,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -696,10 +728,15 @@ SELECT
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
+    COALESCE(lut.last_updated_lvl_time, sn.measurement_time) AS last_updated_lvl_time,
+    CASE
+        WHEN COALESCE(lut.last_updated_lvl_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
+        ELSE 'raw'
+    END AS last_updated_lvl_status,
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
-    END AS qc_status,
+    END AS last_updated_status,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -753,10 +790,15 @@ SELECT
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
+    COALESCE(lut.last_updated_lvl_time, sn.measurement_time) AS last_updated_lvl_time,
+    CASE
+        WHEN COALESCE(lut.last_updated_lvl_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
+        ELSE 'raw'
+    END AS last_updated_lvl_status,
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
-    END AS qc_status,
+    END AS last_updated_status,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -811,7 +853,9 @@ SELECT
     elevation,
     measurement_time,
     last_updated_time,
-    qc_status,
+    last_updated_lvl_time,
+    last_updated_status,
+    last_updated_lvl_status
     record,
     pls_lvl_ql,
     pls_lvl_qc,

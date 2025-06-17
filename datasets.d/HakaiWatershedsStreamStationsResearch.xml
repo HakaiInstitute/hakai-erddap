@@ -133,15 +133,42 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>qc_status</sourceName>
-        <destinationName>qc_status</destinationName>
+        <sourceName>last_updated_status</sourceName>
+        <destinationName>last_updated_status</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="ioos_category">Quality Control Status</att>
-            <att name="long_name">Quality Control Status</att>
-            <att name="standard_name">qc_status</att>
+            <att name="ioos_category">Last Updated Status</att>
+            <att name="long_name">Last Updated Status</att>
+            <att name="standard_name">last_updated_status</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>last_updated_lvl_time</sourceName>
+        <destinationName>last_updated_lvl_time</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">Last Updated Level Time</att>
+            <att name="source_name">last_updated_lvl_time</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+            <att name="comment">Time since the level parameter was updated</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>last_updated_lvl_status</sourceName>
+        <destinationName>last_updated_lvl_status</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Last Updated Status for Only Level</att>
+            <att name="long_name">Last Updated Status for Only Level</att>
+            <att name="standard_name">last_updated_lvl_status</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>

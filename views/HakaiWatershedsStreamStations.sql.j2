@@ -4,6 +4,7 @@ WITH
 last_updated_{{ station.station.lower() }} AS (
     SELECT
         measurement_time,
+        MAX(CASE WHEN measurement_name = 'PLS_Lvl' THEN recorded_time END) AS last_updated_lvl_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.{{ station.table_name }}
     GROUP BY measurement_time
@@ -87,7 +88,12 @@ SELECT
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
-    END AS qc_status,
+    END AS last_updated_status,
+    COALESCE(lut.last_updated_lvl_time, sn.measurement_time) AS last_updated_lvl_time,
+    CASE
+        WHEN COALESCE(lut.last_updated_lvl_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
+        ELSE 'raw'
+    END AS last_updated_lvl_status,
     sn.record,
     sn.pls_lvl_ql,
     sn.pls_lvl_qc,
@@ -144,7 +150,9 @@ SELECT
     elevation,
     measurement_time,
     last_updated_time,
-    qc_status,
+    last_updated_lvl_time,
+    last_updated_status,
+    last_updated_lvl_status
     record,
     pls_lvl_ql,
     pls_lvl_qc,
