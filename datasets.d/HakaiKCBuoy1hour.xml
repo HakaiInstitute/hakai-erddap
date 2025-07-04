@@ -41,7 +41,7 @@
     <att name="keywords">Quadra Island,seaSurfaceSalinity,Continuous measurement,inorganicCarbon,British Columbia coast,seaSurfaceTemperature,North Pacific Ocean,Northern Salish Sea,Surface measurement,Discrete measurement</att>
     <att name="summary">Kwakshua Channel, located near Fitz Hugh Sound on the central coast of British Columbia, has been a site for moored, high-resolution measurements of surface seawater and marine boundary layer CO2 content since May 2018. Measurements of in situ temperature, salinity, seawater and atmospheric CO2 partial pressure are made using a Battelle Seaology (MApCO2) System. The effort to collect these data are part of the Hakai Institute&#8217;s directive to advance the understanding of carbon cycling in northeast Pacific coastal settings with specific emphasis on ocean acidification. This data contribution consists of measurements since May 1, 2018.</att>
     <att name="title">Real-Time Provisional Surface Seawater and Marine Boundary Layer CO2 Observations made from the Kwakshua Channel (KC) Buoy on the central coast of British Columbia</att>
-    <att name="subsetVariables">station,latitude,longitude,WindSpd_UQL,WindDir_UQL,AirTemp_UQL,StationAirPressure_UQL,WaterTemp_UQL,WaterConductivity_UQL,WaterPressure_UQL,WaterSalinity_UQL,Fluorometer_UQL,sw_xCO2_UQL,atm_xCO2_UQL</att>
+    <att name="subsetVariables">station,latitude,longitude,WindSpd_UQL,WindDir_UQL,AirTemp_UQL,StationAirPressure_UQL,WaterTemp_UQL,WaterConductivity_UQL,WaterPressure_UQL,WaterSalinity_UQL,Fluorometer_UQL</att>
     <att name="platform">moored surface buoy</att>
     <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
     <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
@@ -1250,38 +1250,8 @@ This dataset is provisional. For science purposes, please refer to the dataset: 
       <att name="units">ppm</att>
       <att name="depth">0.5</att>
       <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">sw_xCO2_UQL sw_xCO2_flags</att>
     </addAttributes>
   </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>KCSeaology:sw_xCO2_UQL</sourceName>
-    <destinationName>sw_xCO2_UQL</destinationName>
-    <dataType>byte</dataType>
-    <addAttributes>
-      <att name="units">1</att>
-      <att name="long_name">Seawater xCO2 UNESCO Flag</att>
-      <att name="ioos_category">Quality</att>
-      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-      <att name="flag_values" type="byteList">1 2 3 4 9</att>
-      <att name="missing_value" type="byte">2</att>
-      <att name="standard_name">aggregate_quality_flag</att>
-    </addAttributes>
-  </dataVariable>
-
-
-  <dataVariable>
-    <sourceName>KCSeaology:sw_xCO2_QC</sourceName>
-    <destinationName>sw_xCO2_flags</destinationName>
-    <dataType>String</dataType>
-    <addAttributes>
-      <att name="long_name">Seawater xCO2 Flag</att>
-      <att name="units">Quality flags</att>
-      <att name="standard_name">aggregate_quality_flag</att>
-    </addAttributes>
-  </dataVariable>
-
 
   <dataVariable>
     <sourceName>KCSeaology:atm_xCO2</sourceName>
@@ -1293,36 +1263,10 @@ This dataset is provisional. For science purposes, please refer to the dataset: 
       <att name="units">ppm</att>
       <att name="height">1</att>
       <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
-      <att name="ancillary_data">atm_xCO2_UQL atm_xCO_flags</att>
     </addAttributes>
   </dataVariable>
 
 
-  <dataVariable>
-    <sourceName>KCSeaology:atm_xCO2_UQL</sourceName>
-    <destinationName>atm_xCO2_UQL</destinationName>
-    <dataType>int</dataType>
-    <addAttributes>
-      <att name="units">1</att>
-      <att name="long_name">Atmospheric xCO2 UNESCO Flag</att>
-      <att name="ioos_category">Quality</att>
-      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
-      <att name="flag_values" type="byteList">1 2 3 4 9</att>
-      <att name="missing_value" type="byte">2</att>
-      <att name="standard_name">aggregate_quality_flag</att>
-    </addAttributes>
-  </dataVariable>
 
-
-  <dataVariable>
-    <sourceName>KCSeaology:atm_xCO2_QC</sourceName>
-    <destinationName>atm_xCO2_flags</destinationName>
-    <dataType>String</dataType>
-    <addAttributes>
-      <att name="long_name">Atmospheric xCO2 Flag</att>
-      <att name="units">Quality flags</att>
-      <att name="standard_name">aggregate_quality_flag</att>
-    </addAttributes>
-  </dataVariable>
 
 </dataset>

@@ -6,7 +6,7 @@
     <recursive>true</recursive>
     <pathRegex>.*</pathRegex>
     <metadataFrom>last</metadataFrom>
-    <matchAxisNDigits>20</matchAxisNDigits>
+    <matchAxisNDigits>10</matchAxisNDigits>
     <fileTableInMemory>false</fileTableInMemory>
     <accessibleViaWMS>true</accessibleViaWMS>
     <!-- sourceAttributes>

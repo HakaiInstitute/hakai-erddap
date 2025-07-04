@@ -6,7 +6,7 @@
     <recursive>true</recursive>
     <pathRegex>.*</pathRegex>
     <metadataFrom>last</metadataFrom>
-    <matchAxisNDigits>20</matchAxisNDigits>
+    <matchAxisNDigits>10</matchAxisNDigits>
     <fileTableInMemory>false</fileTableInMemory>
     <accessibleViaWMS>true</accessibleViaWMS>
     <defaultGraphQuery>chl_conc_mean[last][0][0:last][0:last]&amp;.draw=surface&amp;.vars=longitude|latitude|temp</defaultGraphQuery>
