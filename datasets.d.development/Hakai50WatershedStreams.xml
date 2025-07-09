@@ -2,7 +2,7 @@
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
     <schemaName>erddap</schemaName>
-    <tableName>"Hakai50WatershedStreams"</tableName>
+    <tableName>"Hakai50WatershedStream"</tableName>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <!-- sourceAttributes>
     </sourceAttributes -->
