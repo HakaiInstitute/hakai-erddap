@@ -3,7 +3,6 @@
 <dataset type="EDDTableFromDatabase" datasetID="HakaiWeatherStationsProvisional" active="true">
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
-    <catalogName>hakai</catalogName>
     <schemaName>erddap</schemaName>
     <tableName>"HakaiWeatherStations"</tableName>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
