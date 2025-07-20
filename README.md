@@ -195,18 +195,18 @@ sudo docker compose up -d
 
 ERDDAP relies on the different views and tables present within the erddap schema of the hakai database. 
 
-Some of those views are a union of mulitple tables hosted within sn_sa schema. We use the module `generate_view_sql.py` 
+Some of those views are a union of mulitple tables hosted within sn_sa schema. We use the module `update_erddap_views.py` 
 to keep the different views in sync with all the associated tables. Use poetry to install the required package in `pyproject.toml`
 and run the following command:
 
 ```
-python generate_view_sql.py
+python update_erddap_views.py
 ```
 
 If you are _just_ updating the jinja templates, you can run the command with the `--jinja-only` flag to only update the jinja templates without needing to access the database:
 
 ```
-python generate_view_sql --jinja-only
+python update_erddap_views.py --jinja-only
 ```
 
 The `views/HakaiWatershedsStreamStations.yaml` config determines how they are updated.
