@@ -40,17 +40,3 @@ jobs:
         fi
         echo "✓ SQL file generated successfully"
         
-    - name: Commit and push generated SQL (only on push to development)
-      if: github.event_name == 'push' && github.ref == 'refs/heads/development'
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        
-        # Check if there are changes to commit
-        if git diff --quiet views/HakaiWatershedsStreamStations.sql; then
-          echo "No changes to SQL file"
-        else
-          git add views/HakaiWatershedsStreamStations.sql
-          git commit -m "Auto-update generated SQL from templates [skip ci]"
-          git push
-        fi
