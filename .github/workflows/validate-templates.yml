@@ -1,0 +1,56 @@
+name: Validate Jinja Templates
+
+on:
+  pull_request:
+    branches: [ development ]
+    paths:
+      - 'views/**/*.j2'
+      - 'views/**/*.yaml'
+      - 'generate_view_sql.py'
+  push:
+    branches: [ development ]
+    paths:
+      - 'views/**/*.j2'
+      - 'views/**/*.yaml'
+      - 'generate_view_sql.py'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install uv
+      uses: astral-sh/setup-uv@v4
+        
+    - name: Set up Python and install dependencies
+      run: |
+        uv sync
+        
+    - name: Validate templates can be rendered
+      run: |
+        uv run python generate_view_sql.py --jinja-only
+        
+    - name: Check if SQL files were generated
+      run: |
+        if [ ! -f "views/HakaiWatershedsStreamStations.sql" ]; then
+          echo "Error: HakaiWatershedsStreamStations.sql was not generated"
+          exit 1
+        fi
+        echo "✓ SQL file generated successfully"
+        
+    - name: Commit and push generated SQL (only on push to development)
+      if: github.event_name == 'push' && github.ref == 'refs/heads/development'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        # Check if there are changes to commit
+        if git diff --quiet views/HakaiWatershedsStreamStations.sql; then
+          echo "No changes to SQL file"
+        else
+          git add views/HakaiWatershedsStreamStations.sql
+          git commit -m "Auto-update generated SQL from templates [skip ci]"
+          git push
+        fi
