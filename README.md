@@ -1,15 +1,10 @@
 # Hakai Erddap
 
-|  |  |
-|--|--|
 | **Development Deployment** | [![Update Development ERDDAP server](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/update-erddap-development-server.yaml/badge.svg)](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/update-erddap-development-server.yaml) |
 | **Production Deployment** | [![Update Production ERDDAP server](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/update-erddap-production-server.yaml/badge.svg)](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/update-erddap-production-server.yaml) |
-|--|--|
 | **Metadata Sync** | [![Sync ERDDAP metadata from metadata form file repository](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/sync-metadata.yaml/badge.svg)](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/sync-metadata.yaml) |
 | **Test datasets** | [![Test on PR datasets](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/test-datasets-xml.yaml/badge.svg)](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/test-datasets-xml.yaml) |
 | **Validate templates** | [![Validate HakaiWatershedsStreamStations Template](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/validate-templates.yml/badge.svg)](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/validate-templates.yml) |
-|--|--|
-
 
 This repository contains different components needed to produce and maintain Hakai's datasets on Hakai ERDDAP servers. 
 
