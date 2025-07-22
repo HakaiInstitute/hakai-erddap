@@ -3,7 +3,7 @@ WITH
 last_updated_ssn626us AS (
     SELECT
         measurement_time,
-        MAX(CASE WHEN measurement_name = 'PLS_Lvl' THEN recorded_time END) AS last_updated_lvl_time,
+        MAX(CASE WHEN measurement_name = 'Stage' THEN recorded_time END) AS last_updated_stage_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.ssn626us_5minute
     GROUP BY measurement_time
@@ -18,14 +18,10 @@ sn_ssn626us AS (
         8 AS elevation,
         measurement_time,
         record,
-        pls_lvl_ql,
-        pls_lvl_qc,
-        pls_lvl_uql,
-        pls_lvl,
-        pls_lvl_avg,
-        pls_lvl_min,
-        pls_lvl_max,
-        pls_lvl_std,
+        stage_ql,
+        stage_qc,
+        stage_uql,
+        stage_avg as stage,
         pls_temp_ql,
         pls_temp_qc,
         pls_temp_uql,
@@ -61,7 +57,7 @@ sn_ssn626us AS (
 last_updated_ssn693us AS (
     SELECT
         measurement_time,
-        MAX(CASE WHEN measurement_name = 'PLS_Lvl' THEN recorded_time END) AS last_updated_lvl_time,
+        MAX(CASE WHEN measurement_name = 'Stage' THEN recorded_time END) AS last_updated_stage_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.ssn693us_5minute
     GROUP BY measurement_time
@@ -76,14 +72,10 @@ sn_ssn693us AS (
         51 AS elevation,
         measurement_time,
         record,
-        pls_lvl_ql,
-        pls_lvl_qc,
-        pls_lvl_uql,
-        pls_lvl,
-        pls_lvl_avg,
-        pls_lvl_min,
-        pls_lvl_max,
-        pls_lvl_std,
+        stage_ql,
+        stage_qc,
+        stage_uql,
+        stage_avg as stage,
         pls_temp_ql,
         pls_temp_qc,
         pls_temp_uql,
@@ -119,7 +111,7 @@ sn_ssn693us AS (
 last_updated_ssn703us AS (
     SELECT
         measurement_time,
-        MAX(CASE WHEN measurement_name = 'PLS_Lvl' THEN recorded_time END) AS last_updated_lvl_time,
+        MAX(CASE WHEN measurement_name = 'Stage' THEN recorded_time END) AS last_updated_stage_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.ssn703us_5minute
     GROUP BY measurement_time
@@ -134,14 +126,10 @@ sn_ssn703us AS (
         42 AS elevation,
         measurement_time,
         record,
-        pls_lvl_ql,
-        pls_lvl_qc,
-        pls_lvl_uql,
-        pls_lvl,
-        pls_lvl_avg,
-        pls_lvl_min,
-        pls_lvl_max,
-        pls_lvl_std,
+        stage_ql,
+        stage_qc,
+        stage_uql,
+        stage_avg as stage,
         pls_temp_ql,
         pls_temp_qc,
         pls_temp_uql,
@@ -177,7 +165,7 @@ sn_ssn703us AS (
 last_updated_ssn708 AS (
     SELECT
         measurement_time,
-        MAX(CASE WHEN measurement_name = 'PLS_Lvl' THEN recorded_time END) AS last_updated_lvl_time,
+        MAX(CASE WHEN measurement_name = 'Stage' THEN recorded_time END) AS last_updated_stage_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.ssn708_5minute
     GROUP BY measurement_time
@@ -192,14 +180,10 @@ sn_ssn708 AS (
         12 AS elevation,
         measurement_time,
         record,
-        pls_lvl_ql,
-        pls_lvl_qc,
-        pls_lvl_uql,
-        pls_lvl,
-        pls_lvl_avg,
-        pls_lvl_min,
-        pls_lvl_max,
-        pls_lvl_std,
+        stage_ql,
+        stage_qc,
+        stage_uql,
+        stage_avg as stage,
         pls_temp_ql,
         pls_temp_qc,
         pls_temp_uql,
@@ -235,7 +219,7 @@ sn_ssn708 AS (
 last_updated_ssn844us AS (
     SELECT
         measurement_time,
-        MAX(CASE WHEN measurement_name = 'PLS_Lvl' THEN recorded_time END) AS last_updated_lvl_time,
+        MAX(CASE WHEN measurement_name = 'Stage' THEN recorded_time END) AS last_updated_stage_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.ssn844us_5minute
     GROUP BY measurement_time
@@ -250,14 +234,10 @@ sn_ssn844us AS (
         35 AS elevation,
         measurement_time,
         record,
-        pls_lvl_ql,
-        pls_lvl_qc,
-        pls_lvl_uql,
-        pls_lvl,
-        pls_lvl_avg,
-        pls_lvl_min,
-        pls_lvl_max,
-        pls_lvl_std,
+        stage_ql,
+        stage_qc,
+        stage_uql,
+        stage_avg as stage,
         pls_temp_ql,
         pls_temp_qc,
         pls_temp_uql,
@@ -293,7 +273,7 @@ sn_ssn844us AS (
 last_updated_ssn819us AS (
     SELECT
         measurement_time,
-        MAX(CASE WHEN measurement_name = 'PLS_Lvl' THEN recorded_time END) AS last_updated_lvl_time,
+        MAX(CASE WHEN measurement_name = 'Stage' THEN recorded_time END) AS last_updated_stage_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.ssn819us_5minute
     GROUP BY measurement_time
@@ -308,14 +288,10 @@ sn_ssn819us AS (
         79 AS elevation,
         measurement_time,
         record,
-        pls_lvl_ql,
-        pls_lvl_qc,
-        pls_lvl_uql,
-        pls_lvl,
-        pls_lvl_avg,
-        pls_lvl_min,
-        pls_lvl_max,
-        pls_lvl_std,
+        stage_ql,
+        stage_qc,
+        stage_uql,
+        stage_avg as stage,
         pls_temp_ql,
         pls_temp_qc,
         pls_temp_uql,
@@ -351,7 +327,7 @@ sn_ssn819us AS (
 last_updated_ssn1015us AS (
     SELECT
         measurement_time,
-        MAX(CASE WHEN measurement_name = 'PLS_Lvl' THEN recorded_time END) AS last_updated_lvl_time,
+        MAX(CASE WHEN measurement_name = 'Stage' THEN recorded_time END) AS last_updated_stage_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.ssn1015us_5minute
     GROUP BY measurement_time
@@ -366,14 +342,10 @@ sn_ssn1015us AS (
         17 AS elevation,
         measurement_time,
         record,
-        pls_lvl_ql,
-        pls_lvl_qc,
-        pls_lvl_uql,
-        pls_lvl,
-        pls_lvl_avg,
-        pls_lvl_min,
-        pls_lvl_max,
-        pls_lvl_std,
+        stage_ql,
+        stage_qc,
+        stage_uql,
+        stage_avg as stage,
         pls_temp_ql,
         pls_temp_qc,
         pls_temp_uql,
@@ -418,24 +390,20 @@ SELECT
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
-    COALESCE(lut.last_updated_lvl_time, sn.measurement_time) AS last_updated_lvl_time,
-    CASE
-        WHEN COALESCE(lut.last_updated_lvl_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
-        ELSE 'raw'
-    END AS last_updated_lvl_status,
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
     END AS last_updated_status,
+    COALESCE(lut.last_updated_stage_time, sn.measurement_time) AS last_updated_stage_time,
+    CASE
+        WHEN COALESCE(lut.last_updated_stage_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
+        ELSE 'raw'
+    END AS last_updated_stage_status,
     sn.record,
-    sn.pls_lvl_ql,
-    sn.pls_lvl_qc,
-    sn.pls_lvl_uql,
-    sn.pls_lvl,
-    sn.pls_lvl_avg,
-    sn.pls_lvl_min,
-    sn.pls_lvl_max,
-    sn.pls_lvl_std,
+    sn.stage_ql,
+    sn.stage_qc,
+    sn.stage_uql,
+    sn.stage_avg as stage,
     sn.pls_temp_ql,
     sn.pls_temp_qc,
     sn.pls_temp_uql,
@@ -480,24 +448,20 @@ SELECT
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
-    COALESCE(lut.last_updated_lvl_time, sn.measurement_time) AS last_updated_lvl_time,
-    CASE
-        WHEN COALESCE(lut.last_updated_lvl_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
-        ELSE 'raw'
-    END AS last_updated_lvl_status,
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
     END AS last_updated_status,
+    COALESCE(lut.last_updated_stage_time, sn.measurement_time) AS last_updated_stage_time,
+    CASE
+        WHEN COALESCE(lut.last_updated_stage_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
+        ELSE 'raw'
+    END AS last_updated_stage_status,
     sn.record,
-    sn.pls_lvl_ql,
-    sn.pls_lvl_qc,
-    sn.pls_lvl_uql,
-    sn.pls_lvl,
-    sn.pls_lvl_avg,
-    sn.pls_lvl_min,
-    sn.pls_lvl_max,
-    sn.pls_lvl_std,
+    sn.stage_ql,
+    sn.stage_qc,
+    sn.stage_uql,
+    sn.stage_avg as stage,
     sn.pls_temp_ql,
     sn.pls_temp_qc,
     sn.pls_temp_uql,
@@ -542,24 +506,20 @@ SELECT
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
-    COALESCE(lut.last_updated_lvl_time, sn.measurement_time) AS last_updated_lvl_time,
-    CASE
-        WHEN COALESCE(lut.last_updated_lvl_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
-        ELSE 'raw'
-    END AS last_updated_lvl_status,
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
     END AS last_updated_status,
+    COALESCE(lut.last_updated_stage_time, sn.measurement_time) AS last_updated_stage_time,
+    CASE
+        WHEN COALESCE(lut.last_updated_stage_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
+        ELSE 'raw'
+    END AS last_updated_stage_status,
     sn.record,
-    sn.pls_lvl_ql,
-    sn.pls_lvl_qc,
-    sn.pls_lvl_uql,
-    sn.pls_lvl,
-    sn.pls_lvl_avg,
-    sn.pls_lvl_min,
-    sn.pls_lvl_max,
-    sn.pls_lvl_std,
+    sn.stage_ql,
+    sn.stage_qc,
+    sn.stage_uql,
+    sn.stage_avg as stage,
     sn.pls_temp_ql,
     sn.pls_temp_qc,
     sn.pls_temp_uql,
@@ -604,24 +564,20 @@ SELECT
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
-    COALESCE(lut.last_updated_lvl_time, sn.measurement_time) AS last_updated_lvl_time,
-    CASE
-        WHEN COALESCE(lut.last_updated_lvl_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
-        ELSE 'raw'
-    END AS last_updated_lvl_status,
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
     END AS last_updated_status,
+    COALESCE(lut.last_updated_stage_time, sn.measurement_time) AS last_updated_stage_time,
+    CASE
+        WHEN COALESCE(lut.last_updated_stage_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
+        ELSE 'raw'
+    END AS last_updated_stage_status,
     sn.record,
-    sn.pls_lvl_ql,
-    sn.pls_lvl_qc,
-    sn.pls_lvl_uql,
-    sn.pls_lvl,
-    sn.pls_lvl_avg,
-    sn.pls_lvl_min,
-    sn.pls_lvl_max,
-    sn.pls_lvl_std,
+    sn.stage_ql,
+    sn.stage_qc,
+    sn.stage_uql,
+    sn.stage_avg as stage,
     sn.pls_temp_ql,
     sn.pls_temp_qc,
     sn.pls_temp_uql,
@@ -666,24 +622,20 @@ SELECT
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
-    COALESCE(lut.last_updated_lvl_time, sn.measurement_time) AS last_updated_lvl_time,
-    CASE
-        WHEN COALESCE(lut.last_updated_lvl_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
-        ELSE 'raw'
-    END AS last_updated_lvl_status,
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
     END AS last_updated_status,
+    COALESCE(lut.last_updated_stage_time, sn.measurement_time) AS last_updated_stage_time,
+    CASE
+        WHEN COALESCE(lut.last_updated_stage_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
+        ELSE 'raw'
+    END AS last_updated_stage_status,
     sn.record,
-    sn.pls_lvl_ql,
-    sn.pls_lvl_qc,
-    sn.pls_lvl_uql,
-    sn.pls_lvl,
-    sn.pls_lvl_avg,
-    sn.pls_lvl_min,
-    sn.pls_lvl_max,
-    sn.pls_lvl_std,
+    sn.stage_ql,
+    sn.stage_qc,
+    sn.stage_uql,
+    sn.stage_avg as stage,
     sn.pls_temp_ql,
     sn.pls_temp_qc,
     sn.pls_temp_uql,
@@ -728,24 +680,20 @@ SELECT
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
-    COALESCE(lut.last_updated_lvl_time, sn.measurement_time) AS last_updated_lvl_time,
-    CASE
-        WHEN COALESCE(lut.last_updated_lvl_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
-        ELSE 'raw'
-    END AS last_updated_lvl_status,
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
     END AS last_updated_status,
+    COALESCE(lut.last_updated_stage_time, sn.measurement_time) AS last_updated_stage_time,
+    CASE
+        WHEN COALESCE(lut.last_updated_stage_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
+        ELSE 'raw'
+    END AS last_updated_stage_status,
     sn.record,
-    sn.pls_lvl_ql,
-    sn.pls_lvl_qc,
-    sn.pls_lvl_uql,
-    sn.pls_lvl,
-    sn.pls_lvl_avg,
-    sn.pls_lvl_min,
-    sn.pls_lvl_max,
-    sn.pls_lvl_std,
+    sn.stage_ql,
+    sn.stage_qc,
+    sn.stage_uql,
+    sn.stage_avg as stage,
     sn.pls_temp_ql,
     sn.pls_temp_qc,
     sn.pls_temp_uql,
@@ -790,24 +738,20 @@ SELECT
     sn.elevation,
     sn.measurement_time,
     COALESCE(lut.last_updated_time, sn.measurement_time) AS last_updated_time,
-    COALESCE(lut.last_updated_lvl_time, sn.measurement_time) AS last_updated_lvl_time,
-    CASE
-        WHEN COALESCE(lut.last_updated_lvl_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
-        ELSE 'raw'
-    END AS last_updated_lvl_status,
     CASE
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
     END AS last_updated_status,
+    COALESCE(lut.last_updated_stage_time, sn.measurement_time) AS last_updated_stage_time,
+    CASE
+        WHEN COALESCE(lut.last_updated_stage_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
+        ELSE 'raw'
+    END AS last_updated_stage_status,
     sn.record,
-    sn.pls_lvl_ql,
-    sn.pls_lvl_qc,
-    sn.pls_lvl_uql,
-    sn.pls_lvl,
-    sn.pls_lvl_avg,
-    sn.pls_lvl_min,
-    sn.pls_lvl_max,
-    sn.pls_lvl_std,
+    sn.stage_ql,
+    sn.stage_qc,
+    sn.stage_uql,
+    sn.stage_avg as stage,
     sn.pls_temp_ql,
     sn.pls_temp_qc,
     sn.pls_temp_uql,
@@ -853,13 +797,13 @@ SELECT
     elevation,
     measurement_time,
     last_updated_time,
-    last_updated_lvl_time,
+    last_updated_stage_time,
     last_updated_status,
-    last_updated_lvl_status
+    last_updated_stage_status
     record,
-    pls_lvl_ql,
-    pls_lvl_qc,
-    pls_lvl_uql,
+    stage_ql,
+    stage_qc,
+    stage_uql,
     pls_temp_ql,
     pls_temp_qc,
     pls_temp_uql,
@@ -876,25 +820,9 @@ SELECT
     turbidity_ntu_qc,
     turbidity_ntu_uql,
     CASE
-        WHEN (pls_lvl_uql = 4 OR pls_lvl_ql < 2) THEN NULL
-        ELSE pls_lvl
-    END AS pls_lvl,
-    CASE
-        WHEN (pls_lvl_uql = 4 OR pls_lvl_ql < 2) THEN NULL
-        ELSE pls_lvl_avg
-    END AS pls_lvl_avg,
-    CASE
-        WHEN (pls_lvl_uql = 4 OR pls_lvl_ql < 2) THEN NULL
-        ELSE pls_lvl_min
-    END AS pls_lvl_min,
-    CASE
-        WHEN (pls_lvl_uql = 4 OR pls_lvl_ql < 2) THEN NULL
-        ELSE pls_lvl_max
-    END AS pls_lvl_max,
-    CASE
-        WHEN (pls_lvl_uql = 4 OR pls_lvl_ql < 2) THEN NULL
-        ELSE pls_lvl_std
-    END AS pls_lvl_std,
+        WHEN (stage_uql = 4 OR stage_ql < 2) THEN NULL
+        ELSE stage
+    END AS stage,
     CASE
         WHEN (pls_temp_uql = 4 OR pls_temp_ql < 2) THEN NULL
         ELSE pls_temp
@@ -957,7 +885,7 @@ SELECT
     END AS turbidity_ntu_avg
 FROM erddap."HakaiWatershedsStreamStations"
 WHERE
-    pls_lvl_ql = 2
+    stage_ql = 2
     OR pls_temp_ql = 2
     OR discharge_rate_ql = 2
     OR discharge_volume_ql = 2
