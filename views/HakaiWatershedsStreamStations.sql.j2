@@ -4,7 +4,7 @@ WITH
 last_updated_{{ station.station.lower() }} AS (
     SELECT
         measurement_time,
-        MAX(CASE WHEN measurement_name = 'Stage' THEN recorded_time END) AS last_updated_lvl_time,
+        MAX(CASE WHEN measurement_name = 'Stage' THEN recorded_time END) AS last_updated_stage_time,
         MAX(recorded_time) AS last_updated_time
     FROM sn_qc.{{ station.table_name }}
     GROUP BY measurement_time
@@ -22,7 +22,7 @@ sn_{{ station.station.lower() }} AS (
         stage_ql,
         stage_qc,
         stage_uql,
-        stage_avg,
+        stage_avg as stage,
         pls_temp_ql,
         pls_temp_qc,
         pls_temp_uql,
@@ -85,16 +85,16 @@ SELECT
         WHEN COALESCE(lut.last_updated_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
     END AS last_updated_status,
-    COALESCE(lut.last_updated_lvl_time, sn.measurement_time) AS last_updated_lvl_time,
+    COALESCE(lut.last_updated_stage_time, sn.measurement_time) AS last_updated_stage_time,
     CASE
-        WHEN COALESCE(lut.last_updated_lvl_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
+        WHEN COALESCE(lut.last_updated_stage_time, sn.measurement_time) > sn.measurement_time THEN 'updated'
         ELSE 'raw'
-    END AS last_updated_lvl_status,
+    END AS last_updated_stage_status,
     sn.record,
     sn.stage_ql,
     sn.stage_qc,
     sn.stage_uql,
-    sn.stage_avg,
+    sn.stage_avg as stage,
     sn.pls_temp_ql,
     sn.pls_temp_qc,
     sn.pls_temp_uql,
@@ -142,14 +142,13 @@ SELECT
     elevation,
     measurement_time,
     last_updated_time,
-    last_updated_lvl_time,
+    last_updated_stage_time,
     last_updated_status,
-    last_updated_lvl_status
+    last_updated_stage_status
     record,
     stage_ql,
     stage_qc,
     stage_uql,
-    stage_avg,
     pls_temp_ql,
     pls_temp_qc,
     pls_temp_uql,
@@ -167,8 +166,8 @@ SELECT
     turbidity_ntu_uql,
     CASE
         WHEN (stage_uql = 4 OR stage_ql < 2) THEN NULL
-        ELSE stage_avg
-    END AS stage_avg,
+        ELSE stage
+    END AS stage,
     CASE
         WHEN (pls_temp_uql = 4 OR pls_temp_ql < 2) THEN NULL
         ELSE pls_temp
