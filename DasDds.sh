@@ -1,9 +1,16 @@
 #!/bin/bash
-#[[ -f ./.env ]] && export $(grep -v '^#' .env | xargs)
-#[[ -f ./.env ]] && grep -v '^#' .env | tr '\n' '\0' | xargs -0 | export
-# env $(cat .env)
-IFS='
-'
-export $(grep -v '^#' .env | xargs -d '\n')
-docker exec -it --user tomcat "${CONTAINER_NAME:-erddap}" bash -c "cd webapps/erddap/WEB-INF/ && bash DasDds.sh $*" \
-  
+
+# Load environment variables
+if [[ -f .env ]]; then
+    set -a
+    source .env
+    set +a
+    echo "Using container: ${CONTAINER_NAME}"
+else
+    echo "Warning: .env file not found"
+    exit 1
+fi
+
+# Execute DasDds.sh in container
+docker exec -it --user tomcat "${CONTAINER_NAME}" bash -c \
+    "cd webapps/erddap/WEB-INF/ && bash DasDds.sh $*"
