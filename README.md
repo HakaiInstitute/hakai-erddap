@@ -1,5 +1,14 @@
 # Hakai Erddap
 
+| Category | Status |
+|-|-|
+| **Development Deployment** | [![Update Development ERDDAP server](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/update-erddap-development-server.yaml/badge.svg)](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/update-erddap-development-server.yaml) |
+| **Production Deployment** | [![Update Production ERDDAP server](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/update-erddap-production-server.yaml/badge.svg)](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/update-erddap-production-server.yaml) |
+| **Metadata Sync** | [![Sync ERDDAP metadata from metadata form file repository](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/sync-metadata.yaml/badge.svg)](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/sync-metadata.yaml) |
+| **Test datasets** | [![Test on PR datasets](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/test-datasets-xml.yaml/badge.svg)](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/test-datasets-xml.yaml) |
+| **Validate templates** | [![Validate HakaiWatershedsStreamStations Template](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/validate-templates.yml/badge.svg)](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/validate-templates.yml) |
+
+
 This repository contains different components needed to produce and maintain Hakai's datasets on Hakai ERDDAP servers. 
 
 Hakai deploys ERDDAP as docker containers by using the [docker-erddap](https://github.com/axiom-data-science/docker-erddap) image. Continuous Integration is handled via the [github actions](https://github.com/HakaiInstitute/hakai-erddap/tree/master/.github/workflows) and the container configuration is handled via this repo.
@@ -206,7 +215,7 @@ python generate_view_sql.py
 If you are _just_ updating the jinja templates, you can run the command with the `--jinja-only` flag to only update the jinja templates without needing to access the database:
 
 ```
-python generate_view_sql --jinja-only
+python generate_view_sql.py --jinja-only
 ```
 
 The `views/HakaiWatershedsStreamStations.yaml` config determines how they are updated.

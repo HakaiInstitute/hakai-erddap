@@ -1,20 +1,13 @@
-[tool.poetry]
+[project]
 name = "hakai-erddap"
 version = "0.1.0"
 description = ""
-authors = ["Jessy Barrette <30420025+JessyBarrette@users.noreply.github.com>"]
 readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.10"
-sqlalchemy = "^2.0.32"
-click = "^8.1.7"
-jinja2 = "^3.1.4"
-python-dotenv = "^1.0.1"
-psycopg2-binary = "^2.9.9"
-pyyaml = "^6.0"
-
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires-python = ">=3.13"
+dependencies = [
+    "click>=8.2.1",
+    "jinja2>=3.1.6",
+    "python-dotenv>=1.1.1",
+    "pyyaml>=6.0.2",
+    "sqlalchemy>=2.0.41",
+]

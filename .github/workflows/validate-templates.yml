@@ -1,0 +1,43 @@
+name: Validate HakaiWatershedsStreamStations Template
+
+on:
+  pull_request:
+    branches: [ development ]
+    paths:
+      - 'views/HakaiWatershedsStreamStations.sql.j2'
+      - 'views/HakaiWatershedsStreamStations.yaml'
+      - 'generate_view_sql.py'
+      - '.github/workflows/validate-templates.yml'
+  push:
+    branches: [ development ]
+    paths:
+      - 'views/HakaiWatershedsStreamStations.sql.j2'
+      - 'views/HakaiWatershedsStreamStations.yaml'
+      - 'generate_view_sql.py'
+      - '.github/workflows/validate-templates.yml'
+
+jobs:
+  validate-HakaiWatershedsStreamStations:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install uv
+      uses: astral-sh/setup-uv@v4
+        
+    - name: Set up Python and install dependencies
+      run: |
+        uv sync
+        
+    - name: Validate templates can be rendered
+      run: |
+        uv run python generate_view_sql.py --jinja-only
+        
+    - name: Commit HakaiWatershedsStreamStations.sql file
+      if: github.event_name != 'pull_request'
+      uses: stefanzweifel/git-auto-commit-action@778341af668090896ca464160c2def5d1d1a3eb0
+      with:
+        commit_message: "Creating HakaiWatershedsStreamStations.sql from template"
+        file_pattern: "HakaiWatershedsStreamStations.sql"
+        

@@ -17,7 +17,7 @@
         <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
         <att name="infoUrl">???</att>
         <att name="institution">Hakai Institute</att>
-        <att name="keywords">average, data, depth, discharge, discharge_rate, discharge_rate_max, discharge_rate_min, discharge_rate_qc, discharge_rate_ql, discharge_rate_uql, discharge_volume, discharge_volume_max, discharge_volume_min, discharge_volume_qc, discharge_volume_ql, discharge_volume_uql, elevation, identifier, latitude, local, longitude, lvl, max, measurement, med, min, nephelometric, ntu, pls, pls_lvl, pls_lvl_avg, pls_lvl_max, pls_lvl_min, pls_lvl_qc, pls_lvl_ql, pls_lvl_std, pls_lvl_uql, pls_temp, pls_temp_avg, pls_temp_max, pls_temp_min, pls_temp_qc, pls_temp_ql, pls_temp_std, pls_temp_uql, profiler, quality, rate, record, salinity, salinity-temperature-depth, source, station, std, temperature, time, turbidity, turbidity_avg, turbidity_med, turbidity_ntu_avg, turbidity_ntu_med, turbidity_ntu_qc, turbidity_ntu_ql, turbidity_ntu_uql, turbidity_qc, turbidity_ql, turbidity_uql, units, uql, volume</att>
+        <att name="keywords">average, data, discharge, elevation, turbidity, temperature, stage</att>
         <att name="license">[standard]</att>
         <att name="sourceUrl">(local database)</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
@@ -145,30 +145,30 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>last_updated_lvl_time</sourceName>
-        <destinationName>last_updated_lvl_time</destinationName>
+        <sourceName>last_updated_stage_time</sourceName>
+        <destinationName>last_updated_stage_time</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
             <att name="ioos_category">Time</att>
-            <att name="long_name">Last Updated Level Time</att>
-            <att name="source_name">last_updated_lvl_time</att>
+            <att name="long_name">Last Updated Stage Time</att>
+            <att name="source_name">last_updated_stage_time</att>
             <att name="standard_name">time</att>
             <att name="units">seconds since 1970-01-01T00:00:00Z</att>
-            <att name="comment">Time since the level parameter was updated</att>
+            <att name="comment">Time since the stage parameter was updated</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>last_updated_lvl_status</sourceName>
-        <destinationName>last_updated_lvl_status</destinationName>
+        <sourceName>last_updated_stage_status</sourceName>
+        <destinationName>last_updated_stage_status</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
-            <att name="ioos_category">Last Updated Status for Only Level</att>
-            <att name="long_name">Last Updated Status for Only Level</att>
-            <att name="standard_name">last_updated_lvl_status</att>
+            <att name="ioos_category">Last Updated Status for Only Stage</att>
+            <att name="long_name">Last Updated Status for Only Stage</att>
+            <att name="standard_name">last_updated_stage_status</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -184,37 +184,37 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>pls_lvl_ql</sourceName>
-        <destinationName>pls_lvl_ql</destinationName>
+        <sourceName>stage_ql</sourceName>
+        <destinationName>stage_ql</destinationName>
         <dataType>short</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
             <att name="ioos_category">Unknown</att>
-            <att name="long_name">PLS LVL QL</att>
+            <att name="long_name">STAGE QL</att>
             <att name="_FillValue" type="short">32767</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>pls_lvl_qc</sourceName>
-        <destinationName>pls_lvl_qc</destinationName>
+        <sourceName>stage_qc</sourceName>
+        <destinationName>stage_qc</destinationName>
         <dataType>String</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
             <att name="ioos_category">Quality</att>
-            <att name="long_name">PLS LVL QC</att>
+            <att name="long_name">STAGE QC</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>pls_lvl_uql</sourceName>
-        <destinationName>pls_lvl_uql</destinationName>
+        <sourceName>stage_uql</sourceName>
+        <destinationName>stage_uql</destinationName>
         <dataType>short</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
             <att name="ioos_category">Unknown</att>
-            <att name="long_name">Pls Lvl Uql</att>
+            <att name="long_name">STAGE UQL</att>
             <att name="ioos_category">Quality</att>
             <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
             <att name="flag_values" type="byteList">1 2 3 4 9</att>
@@ -224,67 +224,15 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>pls_lvl</sourceName>
-        <destinationName>pls_lvl</destinationName>
+        <sourceName>stage</sourceName>
+        <destinationName>stage</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
         </sourceAttributes -->
         <addAttributes>
             <att name="ioos_category">Unknown</att>
-            <att name="long_name">PLS LVL</att>
+            <att name="long_name">STAGE</att>
             <att name="cell_methods">time: point (interval: 5.0 minutes)</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>pls_lvl_avg</sourceName>
-        <destinationName>pls_lvl_avg</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="ioos_category">Unknown</att>
-            <att name="long_name">Pls Lvl Avg</att>
-            <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
-            <att name="units">m</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>pls_lvl_min</sourceName>
-        <destinationName>pls_lvl_min</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="ioos_category">Unknown</att>
-            <att name="long_name">Pls Lvl Min</att>
-            <att name="cell_methods">time: min (interval: 5.0 minutes)</att>
-            <att name="units">m</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>pls_lvl_max</sourceName>
-        <destinationName>pls_lvl_max</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="ioos_category">Unknown</att>
-            <att name="long_name">Pls Lvl Max</att>
-            <att name="cell_methods">time: max (interval: 5.0 minutes)</att>
-            <att name="units">m</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>pls_lvl_std</sourceName>
-        <destinationName>pls_lvl_std</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="ioos_category">Unknown</att>
-            <att name="long_name">PLS LVL STD</att>
-            <att name="cell_methods">time: std (interval: 5.0 minutes)</att>
-            <att name="units">m</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
