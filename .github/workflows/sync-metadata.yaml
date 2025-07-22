@@ -31,11 +31,12 @@ jobs:
             LOGURU_LEVEL: 'INFO'
           run: |
             hakai_metadata_conversion erddap-update \
-             --records 'metadata/**/*.yaml' \
-             --datasets-xml 'datasets/datasets.d/**/*.xml' \
-             --erddap-url https://catalogue.hakai.org/erddap
+              --records 'metadata/**/*.yaml' \
+              --datasets-xml 'datasets/datasets.d/**/*.xml' \
+              --erddap-url https://catalogue.hakai.org/erddap
 
         - name: Create a PR with the changes
+          id: create-pr
           uses: peter-evans/create-pull-request@v6
           with:
             commit-message: "Sync ERDDAP metadata from metadata form file repository"
@@ -50,3 +51,12 @@ jobs:
             signoff: true
             delete-branch: true
             token: ${{ secrets.CI_TOKEN }}
+
+        - name: PR Creation Summary
+          run: |
+            if [ "${{ steps.create-pr.outputs.pull-request-number }}" != "" ]; then
+              echo "✅ Pull request created: ${{ steps.create-pr.outputs.pull-request-url }}"
+              echo "PR #${{ steps.create-pr.outputs.pull-request-number }}"
+            else
+              echo "ℹ️ No metadata changes detected - no pull request created"
+            fi
