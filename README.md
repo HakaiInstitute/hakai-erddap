@@ -1,6 +1,8 @@
 # Hakai Erddap
 
 | Category | Status |
+|-|-|
+
 | **Development Deployment** | [![Update Development ERDDAP server](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/update-erddap-development-server.yaml/badge.svg)](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/update-erddap-development-server.yaml) |
 | **Production Deployment** | [![Update Production ERDDAP server](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/update-erddap-production-server.yaml/badge.svg)](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/update-erddap-production-server.yaml) |
 | **Metadata Sync** | [![Sync ERDDAP metadata from metadata form file repository](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/sync-metadata.yaml/badge.svg)](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/sync-metadata.yaml) |
