@@ -224,7 +224,6 @@ SELECT
     sn.turbidity_ntu_avg
 FROM sn_ssn844us sn
 LEFT JOIN last_updated_ssn844us lut ON sn.measurement_time = lut.measurement_time
-
 ;
 
 CREATE OR REPLACE VIEW erddap."HakaiWatershedsStreamStationsResearch" AS
