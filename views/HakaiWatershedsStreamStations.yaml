@@ -23,32 +23,32 @@ stations:
     table_name: ssn626us_5minute
     has_turbidity: true
     
-  - station: SSN693US
-    station_id: H08KC0693
-    station_description: "Hakai Institute - Calvert Island Watershed 693"
-    latitude: 51.645
-    longitude: -127.9977778
-    elevation: 51
-    table_name: ssn693us_5minute
-    has_turbidity: false
+  # - station: SSN693US
+  #   station_id: H08KC0693
+  #   station_description: "Hakai Institute - Calvert Island Watershed 693"
+  #   latitude: 51.645
+  #   longitude: -127.9977778
+  #   elevation: 51
+  #   table_name: ssn693us_5minute
+  #   has_turbidity: false
     
-  - station: SSN703US
-    station_id: H08KC0703
-    station_description: "Hakai Institute - Calvert Island Watershed 703"
-    latitude: 51.64333333
-    longitude: -128.0227778
-    elevation: 42
-    table_name: ssn703us_5minute
-    has_turbidity: true
+  # - station: SSN703US
+  #   station_id: H08KC0703
+  #   station_description: "Hakai Institute - Calvert Island Watershed 703"
+  #   latitude: 51.64333333
+  #   longitude: -128.0227778
+  #   elevation: 42
+  #   table_name: ssn703us_5minute
+  #   has_turbidity: true
     
-  - station: SSN708
-    station_id: H08KC0708
-    station_description: "Hakai Institute - Calvert Island Watershed 708"
-    latitude: 51.648561
-    longitude: -128.06835
-    elevation: 12
-    table_name: ssn708_5minute
-    has_turbidity: true
+  # - station: SSN708
+  #   station_id: H08KC0708
+  #   station_description: "Hakai Institute - Calvert Island Watershed 708"
+  #   latitude: 51.648561
+  #   longitude: -128.06835
+  #   elevation: 12
+  #   table_name: ssn708_5minute
+  #   has_turbidity: true
     
   - station: SSN844US
     station_id: H08KC0844
@@ -59,20 +59,20 @@ stations:
     table_name: ssn844us_5minute
     has_turbidity: true
 
-  - station: SSN819US
-    station_id: H08KC0819
-    station_description: "Hakai Institute - Hecate Island Watershed 819"
-    latitude: 51.66222222
-    longitude: -128.0419444
-    elevation: 79
-    table_name: ssn819us_5minute
-    has_turbidity: true
+  # - station: SSN819US
+  #   station_id: H08KC0819
+  #   station_description: "Hakai Institute - Hecate Island Watershed 819"
+  #   latitude: 51.66222222
+  #   longitude: -128.0419444
+  #   elevation: 79
+  #   table_name: ssn819us_5minute
+  #   has_turbidity: true
     
-  - station: SSN1015US
-    station_id: H08KC1015
-    station_description: "Hakai Institute - Hecate Island Watershed 1015"
-    latitude: 51.69055556
-    longitude: -128.0652778
-    elevation: 17
-    table_name: ssn1015us_5minute
-    has_turbidity: true
+  # - station: SSN1015US
+  #   station_id: H08KC1015
+  #   station_description: "Hakai Institute - Hecate Island Watershed 1015"
+  #   latitude: 51.69055556
+  #   longitude: -128.0652778
+  #   elevation: 17
+  #   table_name: ssn1015us_5minute
+  #   has_turbidity: true
