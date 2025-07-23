@@ -1,5 +1,14 @@
 # Hakai Erddap
 
+| Category | Status |
+|-|-|
+| **Development Deployment** | [![Update Development ERDDAP server](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/update-erddap-development-server.yaml/badge.svg)](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/update-erddap-development-server.yaml) |
+| **Production Deployment** | [![Update Production ERDDAP server](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/update-erddap-production-server.yaml/badge.svg)](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/update-erddap-production-server.yaml) |
+| **Metadata Sync** | [![Sync ERDDAP metadata from metadata form file repository](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/sync-metadata.yaml/badge.svg)](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/sync-metadata.yaml) |
+| **Test datasets** | [![Test on PR datasets](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/test-datasets-xml.yaml/badge.svg)](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/test-datasets-xml.yaml) |
+| **Validate templates** | [![Validate HakaiWatershedsStreamStations Template](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/validate-templates.yml/badge.svg)](https://github.com/HakaiInstitute/hakai-erddap/actions/workflows/validate-templates.yml) |
+
+
 This repository contains different components needed to produce and maintain Hakai's datasets on Hakai ERDDAP servers. 
 
 Hakai deploys ERDDAP as docker containers by using the [docker-erddap](https://github.com/axiom-data-science/docker-erddap) image. Continuous Integration is handled via the [github actions](https://github.com/HakaiInstitute/hakai-erddap/tree/master/.github/workflows) and the container configuration is handled via this repo.
@@ -163,7 +172,7 @@ Start your entire process by merging to the `development` branch. This is where 
 
 ### 1. Modify the either the `*.sql` or `.sql.j2` files in the `views/` folder.
 
-This is where you decide upon your data model, add columns and generally figure out what your data will look like. Be sure to test your queries of the `hakaidev` database rather than the `hakai` production database.
+This is where you decide upon your data model, add columns and determine what your data will look like. Be sure to test your queries on the `hakaidev` database rather than the `hakai` production database.
 
 ### 2. Update the XML file in the `datasets.d/` directory that corresponding to the data you have modified
 
@@ -171,19 +180,19 @@ Any changes to the view need to be reflected in the corresponding XML file
 
 ### 3. Test Dataset
 
-Once satisfied, you can test the dataset with the command `sh DasDds.sh`. If issues are identified, fix and rerun DasDds.sh. `DasDds.sh` is setup to run on a live container so make
-sure that the correct container name is specified in the `DasDds.sh` file itself.
+Once satisfied, you can test the dataset with the command `./DasDds.sh`. If issues are identified, fix and rerun DasDds.sh. `DasDds.sh` is setup to run on a live container so make
+sure that the correct container name is specified in the `DasDds.sh` file itself. 
 
 ### 4. Update views
 
-Refresh the views with your updated `*.sql` files using the `erddap_create_views.sh` script. This script uses dotfiles to specific which databases is being used
+Refresh the views with your updated `*.sql` files using the `./erddap_create_views.sh` script. This script uses dotfiles to specific which databases is being used
 so be very sure that you are updating the correct database. In this step, it is very possible that you will encounter additional issues that may require you to
-jump back up to number 3. This is exactly where you should be using the development version of ERDDAP. If you make significant changes, it may just be easier to
+jump back up to number 3. This is exactly where you should be using the development version of ERDDAP. If you make significant changes, you may need to
 delete the view completely and recreate it.
 
 ### 5. Re-deploy ERDDAP
 
-This step may not be explicitly required because some automation steps (i.e. merging a PR) mioght do it for you. However in practice it often is helpful.
+This step may not be explicitly required because some automation steps (i.e. merging a PR) might do it for you. However in practice it often is helpful.
 
 ```bash
 git pull
@@ -193,20 +202,20 @@ sudo docker compose up -d
 
 ## More on syncing ERDDAP datasets with hakai database views
 
-ERDDAP relies on the different views and tables present within the erddap schema of the hakai database. 
+ERDDAP relies on the different views and tables present within the erddap schema of the hakai database.
 
-Some of those views are a union of mulitple tables hosted within sn_sa schema. We use the module `update_erddap_views.py` 
-to keep the different views in sync with all the associated tables. Use poetry to install the required package in `pyproject.toml`
+Some of those views are a union of mulitple tables hosted within sn_sa schema. We use the module `generate_view_sql.py` 
+to keep the different views in sync with all the associated tables. Use uv to install the required package in `pyproject.toml`
 and run the following command:
 
 ```
-python update_erddap_views.py
+python generate_view_sql.py
 ```
 
 If you are _just_ updating the jinja templates, you can run the command with the `--jinja-only` flag to only update the jinja templates without needing to access the database:
 
 ```
-python update_erddap_views.py --jinja-only
+python generate_view_sql.py --jinja-only
 ```
 
 The `views/HakaiWatershedsStreamStations.yaml` config determines how they are updated.
