@@ -18,10 +18,10 @@ sn_ssn626us AS (
         8 AS elevation,
         measurement_time,
         record,
+        stage_avg as stage,
         stage_ql,
         stage_qc,
         stage_uql,
-        stage_avg as stage,
         pls_temp_ql,
         pls_temp_qc,
         pls_temp_uql,
@@ -72,10 +72,10 @@ sn_ssn844us AS (
         35 AS elevation,
         measurement_time,
         record,
+        stage_avg as stage,
         stage_ql,
         stage_qc,
         stage_uql,
-        stage_avg as stage,
         pls_temp_ql,
         pls_temp_qc,
         pls_temp_uql,
@@ -224,6 +224,7 @@ SELECT
     sn.turbidity_ntu_avg
 FROM sn_ssn844us sn
 LEFT JOIN last_updated_ssn844us lut ON sn.measurement_time = lut.measurement_time
+
 ;
 
 CREATE OR REPLACE VIEW erddap."HakaiWatershedsStreamStationsResearch" AS
@@ -238,7 +239,7 @@ SELECT
     last_updated_time,
     last_updated_stage_time,
     last_updated_status,
-    last_updated_stage_status
+    last_updated_stage_status,
     record,
     stage_ql,
     stage_qc,
