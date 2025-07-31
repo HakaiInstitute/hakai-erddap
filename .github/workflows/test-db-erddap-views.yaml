@@ -10,7 +10,6 @@ jobs:
   test:
     name: Test ERDDAP Views
     runs-on: ubuntu-latest
-    if: false ## remove to actually run. just for safety.
     env:
       PGHOST: db.hakai.org
       PGPORT: 5432
@@ -39,5 +38,5 @@ jobs:
         run: |
           uv run python generate_view_sql.py --jinja-only
 
-      - name: Test DB views
-        run: (echo "BEGIN:"; cat views/*.sql; echo "ROLLBACK;") | psql
+      # - name: Test DB views
+      #   run: (echo "BEGIN:"; cat views/*.sql; echo "ROLLBACK;") | psql
