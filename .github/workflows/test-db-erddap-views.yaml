@@ -39,5 +39,6 @@ jobs:
         run: |
           uv run python generate_view_sql.py --jinja-only
 
-      # - name: Test DB views
-      #   run: (echo "BEGIN:"; cat views/*.sql; echo "ROLLBACK;") | psql
+      - name: Test DB views
+        run: |
+          (echo "BEGIN;"; cat views/*.sql; echo "ROLLBACK;") | psql -v ON_ERROR_STOP=1 -e
