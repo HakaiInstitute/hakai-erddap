@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - views/**
+      - '.github/workflows/test-db-erddap-views.yaml'
     branches:
       - development
       - master
