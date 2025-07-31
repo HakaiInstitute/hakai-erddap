@@ -10,10 +10,23 @@ jobs:
   test:
     name: Test ERDDAP Views
     runs-on: ubuntu-latest
-    if: false ## remove to actually run. just for safety. 
+    if: false ## remove to actually run. just for safety.
+    env:
+      PGHOST: db.hakai.org
+      PGPORT: 5432
+      PGDATABASE: hakai
+      PGUSER: hakai_erddap_user
+      PGPASSWORD: ${{ secrets.PGPASSWORD }} 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      
+      - name: Verify user permissions
+        run: |
+          psql -t -c "SELECT CASE WHEN rolsuper THEN 'FAIL: User has superuser privileges' END FROM pg_roles WHERE rolname = current_user;" | grep -q FAIL && exit 1
+          psql -t -c "SELECT CASE WHEN rolcreatedb THEN 'FAIL: User can create databases' END FROM pg_roles WHERE rolname = current_user;" | grep -q FAIL && exit 1
+          psql -t -c "SELECT CASE WHEN has_database_privilege(current_user, 'hakai', 'CREATE') THEN 'FAIL: User can create objects in database' END;" | grep -q FAIL && exit 1
+          echo "✓ hakai_erddap_user permissions verified - no disallowed permissions found"
       
       - name: Install uv
         uses: astral-sh/setup-uv@v4
@@ -27,10 +40,4 @@ jobs:
           uv run python generate_view_sql.py --jinja-only
 
       - name: Test DB views
-        env:
-          PGHOST: db.hakai.org
-          PGPORT: 5432
-          PGDATABASE: hakai
-          PGUSER: hakai_erddap_user
-          PGPASSWORD: ${secrets.PGPASSWORD}
         run: (echo "BEGIN:"; cat views/*.sql; echo "ROLLBACK;") | psql
