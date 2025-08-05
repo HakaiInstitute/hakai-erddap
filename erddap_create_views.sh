@@ -16,7 +16,7 @@ export PGHOST=$(cat .pghost)
 export PGDATABASE=$(cat .pgdb)
 export QUIET=1
 {
-    echo "SET ROLE hakai_admin;"
+    echo "SET ROLE hakai_erddap_user;"
     for f in $HOME/hakai-erddap/views/*.sql;do echo "BEGIN;";cat $f;echo "COMMIT;";done;
-    echo "GRANT SELECT ON ALL TABLES IN SCHEMA erddap TO hakai_erddap_user;"
+    echo "GRANT ALL ON ALL TABLES IN SCHEMA erddap TO hakai_admin;"
 } | PGOPTIONS='--client-min-messages=warning' psql -X --quiet --pset pager=off >/dev/null
