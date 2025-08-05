@@ -42,11 +42,3 @@ jobs:
       - name: Test DB views
         run: |
           (echo "BEGIN;"; cat views/*.sql; echo "ROLLBACK;") | psql -v ON_ERROR_STOP=1 -e
-          
-      - name: Upload SQL files as artifacts
-        uses: actions/upload-artifact@v4
-        if: always()  # Upload even if tests fail
-        with:
-          name: hakai-watersheds-stream-stations-sql
-          path: views/HakaiWatershedsStreamStations.sql
-          retention-days: 7
