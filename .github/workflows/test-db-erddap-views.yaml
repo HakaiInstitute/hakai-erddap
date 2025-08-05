@@ -3,22 +3,42 @@ on:
   pull_request:
     paths:
       - views/**
+      - '.github/workflows/test-db-erddap-views.yaml'
     branches:
       - development
       - master
 jobs:
   test:
-    name: Test somemodule Go code
+    name: Test ERDDAP Views
     runs-on: ubuntu-latest
+    env:
+      PGHOST: db.hakai.org
+      PGPORT: 5432
+      PGDATABASE: hakai
+      PGUSER: hakai_erddap_user
+      PGPASSWORD: ${{ secrets.PGPASSWORD }} 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Import DB seed data
+      
+      - name: Verify user permissions
+        run: |
+          psql -t -c "SELECT CASE WHEN rolsuper THEN 'FAIL: User has superuser privileges' END FROM pg_roles WHERE rolname = current_user;" | grep -q FAIL && exit 1
+          psql -t -c "SELECT CASE WHEN rolcreatedb THEN 'FAIL: User can create databases' END FROM pg_roles WHERE rolname = current_user;" | grep -q FAIL && exit 1
+          psql -t -c "SELECT CASE WHEN has_database_privilege(current_user, 'hakai', 'CREATE') THEN 'FAIL: User can create objects in database' END;" | grep -q FAIL && exit 1
+          echo "✓ hakai_erddap_user permissions verified - no disallowed permissions found"
+      
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+        
+      - name: Set up Python and install dependencies
+        run: |
+          uv sync
+        
+      - name: Validate templates can be rendered
+        run: |
+          uv run python generate_view_sql.py --jinja-only
 
-        env:
-          PGHOST: ${secrets.PGHOST}
-          PGPORT: ${secrets.PGPORT}
-          PGDATABASE: ${secrets.PGDATABASE}
-          PGUSER: ${secrets.PGUSER}
-          PGPASSWORD: ${secrets.PGPASSWORD}
-        run: (echo "BEGIN:"; cat .views/*.sql; echo "ROLLBACK;") | psql
+      - name: Test DB views
+        run: |
+          (echo "BEGIN;"; cat views/*.sql; echo "ROLLBACK;") | psql -v ON_ERROR_STOP=1 -e
