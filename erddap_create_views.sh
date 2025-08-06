@@ -8,7 +8,7 @@
 #
 # Contact Nate if there are issues with this script
 
-git --git-dir hakai-erddap/.git pull
+git --git-dir hakai-erddap/.git --work-tree hakai-erddap pull
 
 export PGUSER=$(cat .pguser)
 export PGPASSWORD=$(cat .pgpass)
