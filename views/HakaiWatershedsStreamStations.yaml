@@ -17,8 +17,8 @@ stations:
   - station: SSN626US
     station_id: H08KC0626
     station_description: "Hakai Institute - Calvert Island Watershed 626"
-    latitude: 51.64081
-    longitude: -128.12065
+    latitude: 51.64111111
+    longitude: -128.1205556
     elevation: 8
     table_name: ssn626us_5minute
     has_turbidity: true
@@ -35,9 +35,9 @@ stations:
   - station: SSN703US
     station_id: H08KC0703
     station_description: "Hakai Institute - Calvert Island Watershed 703"
-    latitude: 51.64333333
-    longitude: -128.0227778
-    elevation: 42
+    latitude: 51.646612
+    longitude: -128.025715
+    elevation: 40
     table_name: ssn703us_5minute
     has_turbidity: true
     
