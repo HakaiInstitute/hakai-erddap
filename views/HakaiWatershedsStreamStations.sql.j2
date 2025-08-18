@@ -19,17 +19,10 @@ sn_{{ station.station.lower() }} AS (
         {{ station.elevation }} AS elevation,
         measurement_time,
         record,
-        {% if station.station in ['SSN693US', 'SSN708', 'SSN819US'] -%}
-        pls_lvl as stage,
-        pls_lvl_ql as stage_ql,
-        pls_lvl_qc as stage_qc,
-        pls_lvl_uql as stage_uql,
-        {%- else -%}
         stage_avg as stage,
         stage_ql,
         stage_qc,
         stage_uql,
-        {%- endif %}
         pls_temp_ql,
         pls_temp_qc,
         pls_temp_uql,
