@@ -599,7 +599,7 @@ ERDDAP, Version &erddapVersion;
           overlay.style.display = 'none';
           reject(e);
         },
-        'callback': function (token) {
+        'callback': async function (token) {
           const rawResponse = await fetch(window.location.protocol + "//" + window.location.hostname + "/submit",
             {
               method: 'POST',
