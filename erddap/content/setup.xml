@@ -514,8 +514,6 @@ information.
   gtag('config', 'G-89DX3W0YL1');
 </script>
 
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=turnstileLoad" async defer></script>
-
 <meta charset="UTF-8">
 <title>Hakai ERDDAP</title>
 <link rel="shortcut icon" href="&erddapUrl;/images/favicon.ico">
@@ -615,6 +613,7 @@ ERDDAP, Version &erddapVersion;
   }
 
 </script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=turnstileLoad" async defer></script>
 </body>
 ]]>  </endBodyHtml5>
 
