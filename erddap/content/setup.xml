@@ -514,11 +514,7 @@ information.
   gtag('config', 'G-89DX3W0YL1');
 </script>
 
-<script
-  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-  async
-  defer
-></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=turnstileLoad" async defer></script>
 
 <meta charset="UTF-8">
 <title>Hakai ERDDAP</title>
@@ -533,12 +529,6 @@ information.
   <!-- The standard startBodyHtml -->
   <startBodyHtml5><![CDATA[
 <body>
-
-    <div class="checkbox mb-3">
-      <!-- The Turnstile widget will be injected in the following div. -->
-      <div ID="myTurnstileWidget" class="cf-turnstile" data-sitekey="0x4AAAAAAB4xlu0mY5PvCeUb" data-callback="turnstileCompleted"></div>
-      <!-- end. -->
-    </div>
 
 <link href="&erddapUrl;/images/erddap2.css" rel="stylesheet" type="text/css">
 <div id="header" class="header"> 
@@ -583,32 +573,46 @@ ERDDAP, Version &erddapVersion;
 </div>
 
 <script>
-// This function is called when the Turnstile script is loaded and ready to be used.
-// The function name matches the "onload=..." parameter.
-async function turnstileCompleted(token, preClearanceObtained) {
-  if (preClearanceObtained) {
-    alert("Pre Clearance Obtained")
+
+ async function turnstileLoad() {
+  // Save a reference to the original fetch function
+  //const originalFetch = window.fetch;
+
+    // A simple modal to contain Cloudflare Turnstile
+    overlay = document.createElement('div');
+    overlay.style.position = 'fixed';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.right = '0';
+    overlay.style.bottom = '0';
+    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+    overlay.style.border = '1px solid grey';
+    overlay.style.zIndex = '10000';
+    overlay.style.display = 'none';
+    overlay.innerHTML =       '<p style="color: white; text-align: center; margin-top: 50vh;">One more step before you proceed...</p><div style=”display: flex; flex-wrap: nowrap; align-items: center; justify-content: center;” id="turnstile_widget"></div>';
+    document.body.appendChild(overlay);
+
+    overlay.style.display = 'block';
+
+    await new Promise((resolve, reject) => {
+      turnstile.render('#turnstile_widget', {
+        'sitekey': '0x4AAAAAAB4xlu0mY5PvCeUb',
+        'error-callback': function(e) {
+          overlay.style.display = 'none';
+          reject(e);
+        },
+        'callback': function (token, preClearanceObtained) {
+          if (preClearanceObtained) {
+            // The visitor successfully solved the challenge on the page. 
+            overlay.style.display = 'none';
+            resolve();
+          } else {
+            reject(new Error('Unable to obtain pre-clearance'));
+          }
+        },
+      })
+    })
   }
-  console.log("Turnstile token:", token);
-  // Handle successful verification
-  //const rawResponse = await fetch(window.location.protocol + "//" + window.location.hostname + ":9988/submit", 
-  // {
-  //    method: 'POST',
-  //    credentials: 'include',
-  //    headers: {
-  //      'Accept': 'application/json',
-  //      'Content-Type': 'application/json',
-  //      'Access-Control-Allow-Headers': '*',
-  //      'Access-Control-Expose-Headers': '*'
-  //    },
-  //    body: JSON.stringify({ 'cf-turnstile-response': token,})
-  //  }
-  //).then(resp=>{
-  //  console.log(...resp.headers);
-  //  return resp
-  //});
-  //console.log("server response:", rawResponse);
-}
 
 </script>
 </body>
