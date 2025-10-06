@@ -585,26 +585,29 @@ ERDDAP, Version &erddapVersion;
 <script>
 // This function is called when the Turnstile script is loaded and ready to be used.
 // The function name matches the "onload=..." parameter.
-async function turnstileCompleted(token) {
+async function turnstileCompleted(token, preClearanceObtained) {
+  if (preClearanceObtained) {
+    alert("Pre Clearance Obtained")
+  }
   console.log("Turnstile token:", token);
   // Handle successful verification
-  const rawResponse = await fetch(window.location.protocol + "//" + window.location.hostname + ":9988/submit", 
-    {
-      method: 'POST',
-      credentials: 'include',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Headers': '*',
-        'Access-Control-Expose-Headers': '*'
-      },
-      body: JSON.stringify({ 'cf-turnstile-response': token,})
-    }
-  ).then(resp=>{
-    console.log(...resp.headers);
-    return resp
-  });
-  console.log("server response:", rawResponse);
+  //const rawResponse = await fetch(window.location.protocol + "//" + window.location.hostname + ":9988/submit", 
+  // {
+  //    method: 'POST',
+  //    credentials: 'include',
+  //    headers: {
+  //      'Accept': 'application/json',
+  //      'Content-Type': 'application/json',
+  //      'Access-Control-Allow-Headers': '*',
+  //      'Access-Control-Expose-Headers': '*'
+  //    },
+  //    body: JSON.stringify({ 'cf-turnstile-response': token,})
+  //  }
+  //).then(resp=>{
+  //  console.log(...resp.headers);
+  //  return resp
+  //});
+  //console.log("server response:", rawResponse);
 }
 
 </script>
