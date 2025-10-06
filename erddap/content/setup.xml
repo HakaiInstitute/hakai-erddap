@@ -605,7 +605,9 @@ ERDDAP, Version &erddapVersion;
             overlay.style.display = 'none';
             resolve();
           } else {
-            reject(new Error('Unable to obtain pre-clearance'));
+            console.log(token);
+            console.log(preClearanceObtained);
+            //reject(new Error('Unable to obtain pre-clearance'));
           }
         },
       })
