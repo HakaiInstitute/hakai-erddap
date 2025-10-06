@@ -513,6 +513,13 @@ information.
 
   gtag('config', 'G-89DX3W0YL1');
 </script>
+
+<script
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+  async
+  defer
+></script>
+
 <meta charset="UTF-8">
 <title>Hakai ERDDAP</title>
 <link rel="shortcut icon" href="&erddapUrl;/images/favicon.ico">
@@ -526,6 +533,13 @@ information.
   <!-- The standard startBodyHtml -->
   <startBodyHtml5><![CDATA[
 <body>
+
+    <div class="checkbox mb-3">
+      <!-- The Turnstile widget will be injected in the following div. -->
+      <div ID="myTurnstileWidget" class="cf-turnstile" data-sitekey="0x4AAAAAAB4xlu0mY5PvCeUb" data-callback="turnstileCompleted"></div>
+      <!-- end. -->
+    </div>
+
 <link href="&erddapUrl;/images/erddap2.css" rel="stylesheet" type="text/css">
 <div id="header" class="header"> 
   <div id="header-title-logo">
@@ -567,6 +581,33 @@ ERDDAP, Version &erddapVersion;
 <p>&nbsp;
 <p>&nbsp;
 </div>
+
+<script>
+// This function is called when the Turnstile script is loaded and ready to be used.
+// The function name matches the "onload=..." parameter.
+async function turnstileCompleted(token) {
+  console.log("Turnstile token:", token);
+  // Handle successful verification
+  const rawResponse = await fetch(window.location.protocol + "//" + window.location.hostname + ":9988/submit", 
+    {
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Headers': '*',
+        'Access-Control-Expose-Headers': '*'
+      },
+      body: JSON.stringify({ 'cf-turnstile-response': token,})
+    }
+  ).then(resp=>{
+    console.log(...resp.headers);
+    return resp
+  });
+  console.log("server response:", rawResponse);
+}
+
+</script>
 </body>
 ]]>  </endBodyHtml5>
 
