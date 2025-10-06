@@ -600,7 +600,7 @@ ERDDAP, Version &erddapVersion;
           reject(e);
         },
         'callback': async function (token) {
-          const rawResponse = await fetch(window.location.protocol + "//" + window.location.hostname + "/submit",
+          const rawResponse = await fetch(window.location.protocol + "//" + window.location.hostname + "/cf/submit",
             {
               method: 'POST',
               credentials: 'include',
