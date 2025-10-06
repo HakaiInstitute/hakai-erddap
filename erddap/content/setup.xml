@@ -599,16 +599,23 @@ ERDDAP, Version &erddapVersion;
           overlay.style.display = 'none';
           reject(e);
         },
-        'callback': function (token, preClearanceObtained) {
-          if (preClearanceObtained) {
-            // The visitor successfully solved the challenge on the page. 
-            overlay.style.display = 'none';
-            resolve();
-          } else {
-            console.log(token);
-            console.log(preClearanceObtained);
-            //reject(new Error('Unable to obtain pre-clearance'));
-          }
+        'callback': function (token) {
+          const rawResponse = await fetch(window.location.protocol + "//" + window.location.hostname + "/submit",
+            {
+              method: 'POST',
+              credentials: 'include',
+              headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Headers': '*',
+                'Access-Control-Expose-Headers': '*'
+              },
+              body: JSON.stringify({ 'cf-turnstile-response': token, })
+            }
+          ).then(resp => {
+            console.log(...resp.headers);
+            return resp
+          });
         },
       })
     })
