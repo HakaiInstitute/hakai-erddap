@@ -16,6 +16,10 @@ class Settings(BaseSettings):
     root_path: str = ""
     max_subprocesses: int = 4
     cf_turnstile_secret: str = "1x0000000000000000000000000000000AA"
+    erddap_container: str = "http://localhost:8090"
+    JWT_SECRET: str = None
+    JWT_ALGORITHM: str = None
+
 
     class Config:
         env_file = ".env"

@@ -572,29 +572,23 @@ ERDDAP, Version &erddapVersion;
 
 <script>
 
-function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i <ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-
  async function turnstileLoad() {
-    if(getCookie('cf_turnstile_response')){
+    let include_paths = [
+      "/erddap/files/",
+    ]
+    if (!include_paths.some(v => window.location.href.includes(v))) {
+      return
+    }
+
+    cookie = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("cf_turnstile_response="))
+    if(cookie){
       return
     }
 
     // A simple modal to contain Cloudflare Turnstile
-    overlay = document.createElement('div');
+    let overlay = document.createElement('div');
     overlay.style.position = 'fixed';
     overlay.style.top = '0';
     overlay.style.left = '0';
@@ -604,7 +598,7 @@ function getCookie(cname) {
     overlay.style.border = '1px solid grey';
     overlay.style.zIndex = '10000';
     overlay.style.display = 'none';
-    overlay.innerHTML =       '<p style="color: white; text-align: center; margin-top: 50vh;">One more step before you proceed...</p><div style=”display: flex; flex-wrap: nowrap; align-items: center; justify-content: center;” id="turnstile_widget"></div>';
+    overlay.innerHTML =       '<p style="color: white; text-align: center; margin-top: 50vh;">One more step before you proceed...</p><div style="display: flex; flex-wrap: nowrap; align-items: center; justify-content: center;" id="turnstile_widget"></div>';
     document.body.appendChild(overlay);
 
     overlay.style.display = 'block';
@@ -612,12 +606,14 @@ function getCookie(cname) {
     await new Promise((resolve, reject) => {
       turnstile.render('#turnstile_widget', {
         'sitekey': '0x4AAAAAAB4xlu0mY5PvCeUb',
+        //'sitekey': '1x00000000000000000000AA',
         'error-callback': function(e) {
           overlay.style.display = 'none';
           reject(e);
         },
         'callback': async function (token) {
           const rawResponse = await fetch(window.location.protocol + "//" + window.location.hostname + "/cf/submit",
+          //const rawResponse = await fetch(window.location.protocol + "//" + window.location.hostname + ":9988/submit",
             {
               method: 'POST',
               credentials: 'include',
