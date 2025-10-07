@@ -582,7 +582,7 @@ ERDDAP, Version &erddapVersion;
 
     cookie = document.cookie
     .split("; ")
-    .find((row) => row.startsWith("cf_turnstile_response="))
+    .find((row) => row.startsWith("cf_turnstile_token="))
     if(cookie){
       return
     }
