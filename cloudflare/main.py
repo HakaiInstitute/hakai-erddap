@@ -75,17 +75,17 @@ async def proxy(request: Request, path: str, cf_turnstile_token: str = Cookie(No
     if decoded_token is None:
         return Response(status_code=status.HTTP_401_UNAUTHORIZED, content="Invalid or expired token")
 
-    # client = AsyncClient(base_url=f'{settings.erddap_container}', timeout=30.0)
+    client = AsyncClient(base_url=f'{settings.erddap_container}', timeout=30.0)
     # Here you would typically forward the request to the desired URL
     # For demonstration, we'll just return a success message and the decoded token
-    return {"message": "Token validated successfully", "decoded_token": decoded_token}
-#     req = client.build_request("GET", path)
-#     r = await client.send(req, stream=True)
-#     return StreamingResponse(
-#         r.aiter_raw(),
-#         background=BackgroundTask(r.aclose),
-#         headers=r.headers
-#    )
+    #return {"message": "Token validated successfully", "decoded_token": decoded_token}
+    req = client.build_request("GET", path)
+    r = await client.send(req, stream=True)
+    return StreamingResponse(
+        r.aiter_raw(),
+        background=BackgroundTask(r.aclose),
+        headers=r.headers
+   )
     
 @app.post("/submit", status_code=200)
 async def submit(request: Request, response: Response):
