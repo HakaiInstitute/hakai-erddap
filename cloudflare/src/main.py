@@ -8,7 +8,7 @@ import os
 import time
 from typing import Dict
 from jose import jwt, JWTError
-from httpx import AsyncClient
+from httpx import AsyncClient, HTTPError
 from starlette.responses import StreamingResponse
 from starlette.background import BackgroundTask
 
@@ -78,15 +78,19 @@ async def proxy(path: str, request: Request, cf_turnstile_token: str = Cookie(No
         log.warning(f"Invalid or expired token provided for path: {path}, request: {request.client.host}, token: {cf_turnstile_token}")
         return Response(status_code=status.HTTP_401_UNAUTHORIZED, content="Invalid or expired token")
 
-    client = AsyncClient(base_url=f'{settings.downstream_container}', timeout=30.0)
-    req = client.build_request("GET", path)
-    r = await client.send(req, stream=True)
-    log.info(f"Valid token provided for path: {path}, request: {request.client.host}, token: {cf_turnstile_token}")
-    return StreamingResponse(
-        r.aiter_raw(),
-        background=BackgroundTask(r.aclose),
-        headers=r.headers
-   )
+    try:
+        client = AsyncClient(base_url=f'{settings.downstream_container}', timeout=30.0)
+        req = client.build_request("GET", path)
+        r = await client.send(req, stream=True)
+        log.info(f"Valid token provided for path: {path}, request: {request.client.host}, token: {cf_turnstile_token}")
+        return StreamingResponse(
+            r.aiter_raw(),
+            background=BackgroundTask(r.aclose),
+            headers=r.headers
+        )
+    except HTTPError as exc:
+        log.error(f"HTTP Exception for {exc.request.url} - {exc}")
+        return Response(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, content="Something went wrong with a downstream service")
 
 @app.get("/", status_code=200)
 def health_check():
