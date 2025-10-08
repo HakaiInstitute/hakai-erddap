@@ -7,10 +7,11 @@ import uvicorn
 import os
 import time
 from typing import Dict
-import jwt
+from jose import jwt, JWTError
 from httpx import AsyncClient
 from starlette.responses import StreamingResponse
 from starlette.background import BackgroundTask
+
 
 from settings import get_settings
 
@@ -61,13 +62,13 @@ def sign_jwt(cf_token: str) -> Dict[str, str]:
 
 def decode_jwt(token: str) -> dict:
     try:
-        decoded_token = jwt.decode(token, settings.JWT_SECRET, algorithms=[settings.JWT_ALGORITHM])
+        decoded_token = jwt.decode(token, settings.JWT_SECRET, algorithms=[settings.JWT_ALGORITHM or "HS256"])
         return decoded_token if decoded_token["expires"] >= time.time() else None
-    except:
-        return {}
+    except JWTError:
+        return None
 
-@app.get("/proxy/{path:path}")
-async def proxy(request: Request, path: str, cf_turnstile_token: str = Cookie(None)):
+@app.get("/proxy/{path:path}", status_code=200)
+async def proxy(path: str, request: Request, cf_turnstile_token: str = Cookie(None)):
     if cf_turnstile_token is None:
         return Response(status_code=status.HTTP_401_UNAUTHORIZED, content="No token provided")
 
@@ -86,7 +87,11 @@ async def proxy(request: Request, path: str, cf_turnstile_token: str = Cookie(No
         background=BackgroundTask(r.aclose),
         headers=r.headers
    )
-    
+
+@app.get("/", status_code=200)
+def health_check():
+    return {"status": "ok"}
+
 @app.post("/submit", status_code=200)
 async def submit(request: Request, response: Response):
 
