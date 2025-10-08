@@ -28,7 +28,7 @@ In summary, this module is a clever and decoupled way to add "are you a human?" 
 overview writen by Gemini
 
 ## building
-docker compose build cloudflare_proxy
+docker compose --env-file cloudflare/.env build cloudflare_proxy
 
 ## deployment
 docker compose up -d cloudflare_proxy

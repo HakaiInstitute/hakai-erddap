@@ -6,6 +6,10 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     """Settings for the application"""
 
+    model_config = SettingsConfigDict(
+        env_file=".env", env_file_encoding="utf-8", extra="ignore"
+    )
+
     # Application settings
     app_name: str = "Hakai RSK Conversion Service"
     app_description: str = ""
@@ -16,13 +20,14 @@ class Settings(BaseSettings):
     root_path: str = ""
     max_subprocesses: int = 4
     cf_turnstile_secret: str = "1x0000000000000000000000000000000AA"
-    erddap_container: str = "http://localhost:8090"
+    downstream_container: str = "http://localhost:8090"
     JWT_SECRET: str = None
     JWT_ALGORITHM: str = None
+    log_level: str = "DEBUG"
+    log_format: str = "%(asctime)s [%(levelname)s] %(name)s: %(message)s"
+    log_date_format: str = "%Y/%m/%d %H:%M:%S"
 
-    model_config = SettingsConfigDict(
-        env_file=".env", env_file_encoding="utf-8", extra="ignore"
-    )
+
 
 
 @lru_cache()

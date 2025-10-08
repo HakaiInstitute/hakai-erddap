@@ -70,18 +70,18 @@ def decode_jwt(token: str) -> dict:
 @app.get("/proxy/{path:path}", status_code=200)
 async def proxy(path: str, request: Request, cf_turnstile_token: str = Cookie(None)):
     if cf_turnstile_token is None:
+        log.warning(f"No token provided for path: {path}, request: {request.client.host}")
         return Response(status_code=status.HTTP_401_UNAUTHORIZED, content="No token provided")
 
     decoded_token = decode_jwt(cf_turnstile_token)
     if decoded_token is None:
+        log.warning(f"Invalid or expired token provided for path: {path}, request: {request.client.host}, token: {cf_turnstile_token}")
         return Response(status_code=status.HTTP_401_UNAUTHORIZED, content="Invalid or expired token")
 
-    client = AsyncClient(base_url=f'{settings.erddap_container}', timeout=30.0)
-    # Here you would typically forward the request to the desired URL
-    # For demonstration, we'll just return a success message and the decoded token
-    #return {"message": "Token validated successfully", "decoded_token": decoded_token}
+    client = AsyncClient(base_url=f'{settings.downstream_container}', timeout=30.0)
     req = client.build_request("GET", path)
     r = await client.send(req, stream=True)
+    log.info(f"Valid token provided for path: {path}, request: {request.client.host}, token: {cf_turnstile_token}")
     return StreamingResponse(
         r.aiter_raw(),
         background=BackgroundTask(r.aclose),

@@ -39,6 +39,8 @@ services:
     environment:
       # Override erddap_container to use the internal docker network name
       - erddap_container=http://erddap:8080
+    volumes:
+      - ${CF_LOG_PATH}:/app/logs
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:9988/ || exit 1"]
       interval: 10s
