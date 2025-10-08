@@ -13,9 +13,9 @@ COPY pyproject.toml .
 RUN uv sync --no-dev 
 
 # Copy the rest of the application code
-COPY . .
+COPY ./src .
 
 EXPOSE 9988
 
 # Run the application with Gunicorn
-CMD [".venv/bin/python", "./main.py"]
+CMD ["uv", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "9988", "--workers", "4"]
