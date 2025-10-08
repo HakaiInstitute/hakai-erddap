@@ -625,10 +625,7 @@ ERDDAP, Version &erddapVersion;
               },
               body: JSON.stringify({ 'cf-turnstile-response': token, })
             }
-          ).then(resp => {
-            console.log(...resp.headers);
-            return resp
-          });
+          );
           overlay.style.display = 'none';
         },
       })
