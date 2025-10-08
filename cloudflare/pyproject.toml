@@ -4,7 +4,9 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
-
+authors = [
+    {name = "Matthew Foster"}
+]
 dependencies = [
     "fastapi>=0.118.0",
     "uvicorn>=0.37.0",
