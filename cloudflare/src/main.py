@@ -82,7 +82,7 @@ async def proxy(path: str, request: Request, cf_turnstile_token: str = Cookie(No
         client = AsyncClient(base_url=f'{settings.downstream_container}', timeout=30.0)
         req = client.build_request("GET", path)
         r = await client.send(req, stream=True)
-        log.info(f"Valid token provided for path: {path}, request: {request.client.host}, token: {cf_turnstile_token}")
+        log.info(f"Valid token provided for path: {path}, request: {request.client.host}")
         return StreamingResponse(
             r.aiter_raw(),
             background=BackgroundTask(r.aclose),
