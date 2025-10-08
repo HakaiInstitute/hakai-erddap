@@ -21,6 +21,7 @@ class Settings(BaseSettings):
     max_subprocesses: int = 4
     cf_turnstile_secret: str = "1x0000000000000000000000000000000AA"
     downstream_container: str = "http://localhost:8090"
+    upstream_url: str = "http://localhost:8090/erddap"
     JWT_SECRET: str = None
     JWT_ALGORITHM: str = None
     log_level: str = "DEBUG"

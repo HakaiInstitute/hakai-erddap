@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Request, status, Cookie
-from fastapi.responses import Response
+from fastapi.responses import Response, RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 from cloudstile import AsyncTurnstile
 from logger import get_logger
@@ -71,12 +71,12 @@ def decode_jwt(token: str) -> dict:
 async def proxy(path: str, request: Request, cf_turnstile_token: str = Cookie(None)):
     if cf_turnstile_token is None:
         log.warning(f"No token provided for path: {path}, request: {request.client.host}")
-        return Response(status_code=status.HTTP_401_UNAUTHORIZED, content="No token provided")
+        return RedirectResponse(settings.upstream_url)
 
     decoded_token = decode_jwt(cf_turnstile_token)
     if decoded_token is None:
         log.warning(f"Invalid or expired token provided for path: {path}, request: {request.client.host}, token: {cf_turnstile_token}")
-        return Response(status_code=status.HTTP_401_UNAUTHORIZED, content="Invalid or expired token")
+        return RedirectResponse(settings.upstream_url)
 
     try:
         client = AsyncClient(base_url=f'{settings.downstream_container}', timeout=30.0)
