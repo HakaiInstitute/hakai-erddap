@@ -11,3 +11,8 @@ dependencies = [
     "pyyaml>=6.0.2",
     "sqlalchemy>=2.0.41",
 ]
+
+[tool.uv.workspace]
+members = [
+    "cloudflare",
+]
