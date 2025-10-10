@@ -27,3 +27,21 @@ services:
           "http://localhost:${HOST_PORT}/erddap/index.html"
         ]
       interval: 10s
+
+  cloudflare_proxy:
+    build: ./cloudflare
+    container_name: ${CF_CONTAINER_NAME:-cloudflare_proxy}
+    restart: always
+    env_file:
+      - cloudflare/.env
+    ports:
+      - "${CF_HOST_PORT:-9988}:9988"
+    environment:
+      # Override downstream_container to use the internal docker network name
+      - downstream_container=http://erddap:8080
+    volumes:
+      - ${CF_LOG_PATH}:/app/logs
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:9988/ || exit 1"]
+      interval: 10s
+      start_period: 10s
