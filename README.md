@@ -125,6 +125,9 @@ If successfully completed, ERDDAP should return the dataset.xml associated with 
 ### 5. Add remaining metadata
 The `addAttributes` section can be populated by downloading the erddap snippet for an existing metadata record from the [hakai metadata form](https://hakaiinstitute.github.io/hakai-metadata-entry-form/#/en/hakai). Alternitivly you can fill this out by hand.
 
+> [!NOTE]
+> Dataset titles use consistent title case (verbs capitalized, prepositions lowercase) and distinguish provisional/research versions by parenthetical suffixes like (Provisional) or (Research).
+
 ### 6. Test Dataset
 Once satisfied, you can test the dataset with the command `sh DasDds.sh`. If issues are identified, fix and rerun DasDds.sh
 
