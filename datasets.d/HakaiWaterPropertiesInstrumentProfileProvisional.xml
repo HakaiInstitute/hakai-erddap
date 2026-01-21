@@ -42,7 +42,7 @@ The provisional processed data are then quality controlled by applying a series 
 The research dataset provides a subset of the provisional dataset which has been manually reviewed and judged good for science quality level.
 
 Data were collected by the Hakai Institute Oceanography Program, the Nearshore Program, and the Juvenile Salmon Program.</att>
-        <att name="title">Water Properties Vertical Profiles Measured by Oceanographic Profilers (Provisional)</att>
+        <att name="title">Water Property Measurements from Conductivity-Temperature-Depth Profiles, BC, Canada (Provisional)</att>
         <att name="subsetVariables">work_area,cruise, station,vessel, device_model, device_sn,cast_processing_stage</att>
         <att name="cdm_data_type">TimeSeriesProfile</att>
         <att name="cdm_profile_variables">hakai_id</att>
