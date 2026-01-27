@@ -1,5 +1,5 @@
 <dataset type="EDDTableFromAsciiFiles" datasetID="HakaiQuadraBoLResearch" active="true">
-    <iso19115File>https://pac-dev1.cioos.org/dev/metadata/pacific/high_resolution_record_of_surf_a6f6c.xml</iso19115File>
+    <iso19115File>https://metadata-generator-proxy.server.hakai.app/metadata/hakai/high_resolution_record_of_surf_fe76e.xml</iso19115File>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <updateEveryNMillis>10000</updateEveryNMillis>
     <fileDir>/datasets/HakaiQuadraBoLResearch/</fileDir>

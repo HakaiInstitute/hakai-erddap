@@ -1,5 +1,5 @@
 <dataset type="EDDTableFromAsciiFiles" datasetID="HakaiColumbiaFerryResearch" active="true">
-	<iso19115File>https://pac-dev1.cioos.org/dev/metadata/pacific/underway_surface_seawater_and__57416.xml</iso19115File>
+	<iso19115File>https://metadata-generator-proxy.server.hakai.app/metadata/hakai/underway_surface_seawater_and__dd325.xml</iso19115File>
 	<reloadEveryNMinutes>10080</reloadEveryNMinutes>
 	<updateEveryNMillis>10000</updateEveryNMillis>
 	<fileDir>/datasets/HakaiColumbiaFerryResearch/</fileDir>
