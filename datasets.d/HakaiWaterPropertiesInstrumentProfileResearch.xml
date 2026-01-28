@@ -43,7 +43,7 @@
         <att name="subsetVariables">station_id, longitude, latitude</att>
     -->
     <addAttributes>
-        <att name="title">Hakai Water Properties Vertical Profile Data Measured by Oceanographic Profilers, Research</att>
+        <att name="title">Water Property Measurements from Conductivity-Temperature-Depth Profiles, BC, Canada (Research)</att>
         <att name="acknowledgment">Hakai Field Technicians, Research and IT groups</att>
         <att name="creator_url">hakai.org</att>
         <att name="publisher_email">data@hakai.org</att>
@@ -75,7 +75,7 @@ The provisional processed data are then quality controlled by applying a series 
 The research dataset provides a subset of the provisional dataset which has been manually reviewed and judged good for science quality level.
 
 Data were collected by the Hakai Institute Oceanography Program, the Nearshore Program, and the Juvenile Salmon Program.</att>
-        <att name="title">Hakai Water Properties Vertical Profiles Measured by Oceanographic Profilers, Research</att>
+        <att name="title">Water Property Measurements from Conductivity-Temperature-Depth Profiles, BC, Canada (Research)</att>
         <att name="doi">https://doi.org/10.21966/kace-2d24</att>
         <att name="id">ba41d935-f293-447f-be3d-7098e569b431</att>
         <att name="naming_authority">ca.cioos</att>

@@ -22,7 +22,7 @@
         <att name="sourceUrl">(local database)</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
         <att name="summary">Data from a local source.</att>
-        <att name="title">Hakai Watersheds Stream Stations Timeseries Provisional</att>
+        <att name="title">Watersheds Stream Stations Timeseries, Calvert and Hecate Islands, BC, Canada (Provisional)</att>
     </addAttributes>
     <dataVariable>
         <sourceName>station</sourceName>

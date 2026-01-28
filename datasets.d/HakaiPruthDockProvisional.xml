@@ -23,7 +23,7 @@
         <att name="sourceUrl">(local database)</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
         <att name="summary">The Hakai Institute maintains a weather and tide station on the main dock of its remote station located on Calvert Island within Pruth Bay. The weather station measures the air temperature, wind speed and direction, humidity, atmospheric pressure, UV radiation, solar radiation, PAR, and precipitation since July 2014. In June 2018, a tide station was installed to measure the water level within the bay. The station is a combination of a primary radar sensor mounted below the dock above the water and a secondary vented pressure sensor mounted within the water 2m below the lowest tides.</att>
-        <att name="title">Pruth Dock, Calvert Island Tide and Weather Station Provisional</att>
+        <att name="title">Water Level and Weather Station Time Series, Pruth Bay, Kwakshua Channel, Central Coast, BC, Canada (Provisional)</att>
         <att name="cdm_data_type">Timeseries</att>
         <att name="cdm_timeseries_variables">station_id,latitude,longitude</att>
         <att name="subsetVariables">station_id,latitude,longitude,windspd_uql,winddir_uql,rh_uql,airtemp_uql,stationairpressure_uql,sealevelairpressure_uql,uvrad5minutetotal_uql,solarrad_uql,solarrad5minutetotal_uql,par_uql,par5minutetotal_uql,uvrad_uql,rain_uql,hourlyrain_uql,tideheight_uql,tideheightdelta_uql</att>
@@ -37,8 +37,6 @@
         <att name="publisher_email">info@hakai.org</att>
         <att name="publisher_institution">Hakai Institute</att>
         <att name="publisher_url">https://www.hakai.org/</att>
-        <att name="summary">The Hakai Institute maintains a weather and tide station on the main dock of its remote station located on Calvert Island within Pruth Bay. The weather station measures the air temperature, wind speed and direction, humidity, atmospheric pressure, UV radiation, solar radiation, PAR, and precipitation since July 2014. In June 2018, a tide station was installed to measure the water level within the bay. The station is a combination of a primary radar sensor mounted below the dock above the water and a secondary vented pressure sensor mounted within the water 2m below the lowest tides.</att>
-        <att name="title">Pruth Dock, Calvert Island Tide and Weather Station Provisional</att>
         <att name="platform">coastal structure</att>
         <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
     <att name="project">Oceanography,Watersheds</att><att name="comment">##Limitations:

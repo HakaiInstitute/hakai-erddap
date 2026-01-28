@@ -40,7 +40,7 @@ Derive depth from corrected sea water pressure.
         <att name="license">https://creativecommons.org/licenses/by/4.0</att>
         <att name="sourceUrl">(local files)</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
-        <att name="title">Water Level measured from a Pressure Tide Gauge Instrument Deployed in Choke Pass on Calvert Island Research</att>
+        <att name="title">Water Level Time Series, Choke Pass, Central Coast, BC, Canada (Provisional)</att>
         <att name="summary">This dataset present a time series of water level measurements made by an RBR Solo pressure sensor deployed by the Hakai Institute near the Calvert Island Research Station in the coastal region of Choke Pass. Sea Pressure collected by the instrument just above the sea bed was then corrected to substract the atmospheric pressure based on the Hakai Pruth Dock Weather Station. The resulting sea pressure was then converted to a depth with the Gibbs Sea Water TEOS-10 toolbox and substracted by the mean water level measured at the location.</att>
         <att name="instrument">RBR SoloD SN</att>
         <att name="cdm_data_type">TimeSeries</att>
