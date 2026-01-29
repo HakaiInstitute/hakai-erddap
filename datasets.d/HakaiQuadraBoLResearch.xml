@@ -16,7 +16,6 @@
     <sortFilesBySourceNames/>
     <fileTableInMemory>false</fileTableInMemory>
     <accessibleViaFiles>true</accessibleViaFiles>
-    <cacheFromUrl>https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0208638/</cacheFromUrl>
     <addAttributes>
         <att name="cdm_data_type">TimeSeries</att>
         <att name="cdm_timeseries_variables">station_id, latitude, longitude</att>
@@ -157,21 +156,6 @@ None</att><att name="progress">onGoing</att><att name="keywords_vocabulary">CIOO
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>pCO2 (uatm)</sourceName>
-        <destinationName>pCO2</destinationName>
-        <dataType>float</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="_FillValue" type="float">-999.0</att>
-            <att name="long_name">Partial Pressure of Carbon Dioxide in Sea Water</att>
-            <att name="sensor_description">Burke-o-Lator</att>
-            <att name="sensor_type">BoL</att>
-            <att name="units">uatm</att>
-            <att name="standard_name">partial_pressure_of_carbon_dioxide_in_sea_water</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
         <sourceName>corrected xCO2 (ppm)</sourceName>
         <destinationName>corrected_xCO2</destinationName>
         <dataType>float</dataType>
@@ -230,19 +214,6 @@ None</att><att name="progress">onGoing</att><att name="keywords_vocabulary">CIOO
             <att name="long_name">SBE56 T (deg C)</att>
             <att name="standard_name">sea_water_temperature</att>
             <att name="units">degree_Celsius</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>"DiverCTD9875_Pressure (standard atm pressure removed, mbar)"</sourceName>
-        <destinationName>DiverCTD9875_Pressure</destinationName>
-        <dataType>float</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="_FillValue" type="float">NaN</att>
-            <att name="long_name">Diver CTD9875 Pressure (standard Atm Pressure Removed, mbar)</att>
-            <att name="units">mbar</att>
-            <att name="standard_name">sea_water_pressure_due_to_sea_water </att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
