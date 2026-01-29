@@ -28,6 +28,7 @@
         <att name="institution">Hakai Institute</att>
         <att name="infoUrl">https://catalogue.hakai.org/dataset/ca-cioos_TODO_UUID</att>
         <att name="license">https://creativecommons.org/licenses/by/4.0</att>
+        <att name="sourceUrl">(local files)</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
         <att name="subsetVariables">station_id</att>
         <att name="contributor_name">Wiley Evans</att>
