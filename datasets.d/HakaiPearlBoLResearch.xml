@@ -92,6 +92,7 @@ None</att>
         <destinationName>Year</destinationName>
         <dataType>short</dataType>
         <addAttributes>
+            <att name="_FillValue" type="short">32767</att>
             <att name="long_name">Year</att>
         </addAttributes>
     </dataVariable>
