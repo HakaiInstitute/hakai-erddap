@@ -25,7 +25,7 @@
 This data package includes: 
 -Sea surface temperature data from April 15th to September 1st for 2022, 2023, and 2024 (the duration of the light trap collection season)
 -Site metadata, including temperature logger location</att>
-        <att name="title">Sentinels of Change Sea Surface Temperature Time Series Data Along the British Columbia Coast</att>
+        <att name="title">Sentinels of Change Sea surface temperature time series data along the British Columbia Coast</att>
         <att name="cdm_data_type">Timeseries</att>
         <att name="cdm_timeseries_variables">station,latitude,longitude</att>
         <att name="subsetVariables">station,instrument_sn,water_temp_uql</att>
