@@ -43,7 +43,7 @@
         <att name="subsetVariables">station_id, longitude, latitude</att>
     -->
     <addAttributes>
-        <att name="title">Water Property Measurements from Conductivity-Temperature-Depth Profiles, BC, Canada (Research)</att>
+        <att name="title">Hakai Water Properties Vertical Profile Data Measured by Oceanographic Profilers, Research</att>
         <att name="acknowledgment">Hakai Field Technicians, Research and IT groups</att>
         <att name="creator_url">hakai.org</att>
         <att name="publisher_email">data@hakai.org</att>
