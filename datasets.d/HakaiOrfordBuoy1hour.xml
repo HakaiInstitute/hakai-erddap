@@ -41,7 +41,7 @@
     <att name="keywords">Quadra Island,seaSurfaceSalinity,Continuous measurement,inorganicCarbon,British Columbia coast,seaSurfaceTemperature,North Pacific Ocean,Northern Salish Sea,Surface measurement,Discrete measurement</att>
     <att name="summary">Orford Bay, located in Bute Inlet on the coast of British Columbia, has been a site for moored, high-resolution measurements of surface seawater and marine boundary layer CO2 content since June 2024. Measurements of in situ temperature, salinity, seawater and atmospheric CO2 partial pressure are made using a Battelle Seaology (MApCO2) System. The effort to collect these data are part of the Hakai Institute&#8217;s directive to advance the understanding of carbon cycling in northeast Pacific coastal settings with specific emphasis on ocean acidification. This data contribution consists of measurements since June 24, 2024.</att>
     <att name="title">Surface Seawater and Marine Boundary Layer CO2 Time Series from the Bute Inlet Ocean Observing Station (BIOOS) Buoy, Bute Inlet, BC, Canada (Provisional)</att>
-    <att name="subsetVariables">station,latitude,longitude,WindSpd_UQL,WindDir_UQL,AirTemp_UQL,StationAirPressure_UQL,WaterTemp_UQL,WaterConductivity_UQL,WaterPressure_UQL,WaterSalinity_UQL,sw_xCO2_UQL,atm_xCO2_UQL</att>
+    <att name="subsetVariables">station,latitude,longitude,WindSpd_UQL,WindSpd2_UQL,WindDir_UQL,WindDir2_UQL,AirTemp_UQL,StationAirPressure_UQL,WaterTemp_UQL,WaterConductivity_UQL,WaterPressure_UQL,WaterSalinity_UQL,sw_xCO2_UQL,atm_xCO2_UQL</att>
     <att name="platform">moored surface buoy</att>
     <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
     <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
@@ -233,6 +233,148 @@ This dataset is provisional. For science purposes, please refer to the dataset: 
     <dataType>String</dataType>
     <addAttributes>
       <att name="long_name">WindDirOrfordBuoy Flag</att>
+      <att name="units">Quality flags</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WindSpd2_Avg</sourceName>
+    <destinationName>WindSpd2_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_speed</att>
+      <att name="long_name">WindSpd2OrfordBuoy_Avg</att>
+      <att name="units">m/s</att>
+      <att name="height">3</att>
+      <att name="ancillary_data">WindSpd2_UQL WindSpd2_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WindSpd2_Min</sourceName>
+    <destinationName>WindSpd2_Min</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_speed</att>
+      <att name="long_name">WindSpd2OrfordBuoy_Min</att>
+      <att name="units">m/s</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: minimum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WindSpd2_UQL WindSpd2_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WindSpd2_Max</sourceName>
+    <destinationName>WindSpd2_Max</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_speed</att>
+      <att name="long_name">WindSpd2OrfordBuoy_Max</att>
+      <att name="units">m/s</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: maximum (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WindSpd2_UQL WindSpd2_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WindSpd2_Std</sourceName>
+    <destinationName>WindSpd2_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_speed</att>
+      <att name="long_name">WindSpd2OrfordBuoy_Std</att>
+      <att name="units">m/s</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WindSpd2_UQL WindSpd2_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WindSpd2_UQL</sourceName>
+    <destinationName>WindSpd2_UQL</destinationName>
+    <dataType>int</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">WindSpd2OrfordBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WindSpd2_QC</sourceName>
+    <destinationName>WindSpd2_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">WindSpd2OrfordBuoy Flag</att>
+      <att name="units">Quality flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WindDir2_Avg</sourceName>
+    <destinationName>WindDir2_Avg</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_from_direction</att>
+      <att name="long_name">WindDir2OrfordBuoy_Avg</att>
+      <att name="units">degrees</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: mean (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WindDir2_UQL WindDir2_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WindDir2_Std</sourceName>
+    <destinationName>WindDir2_Std</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="standard_name">wind_from_direction</att>
+      <att name="long_name">WindDir2OrfordBuoy_Std</att>
+      <att name="units">degrees</att>
+      <att name="height">3</att>
+      <att name="cell_methods">time: standard_deviation (interval: 5.0 minutes)</att>
+      <att name="ancillary_data">WindDir2_UQL WindDir2_flags</att>
+    </addAttributes>
+  </dataVariable>
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WindDir2_UQL</sourceName>
+    <destinationName>WindDir2_UQL</destinationName>
+    <dataType>int</dataType>
+    <addAttributes>
+      <att name="units">1</att>
+      <att name="long_name">WindDir2OrfordBuoy UNESCO Flag</att>
+      <att name="ioos_category">Quality</att>
+      <att name="flag_meaning">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+      <att name="flag_values" type="byteList">1 2 3 4 9</att>
+      <att name="missing_value" type="byte">2</att>
+      <att name="standard_name">aggregate_quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+
+
+  <dataVariable>
+    <sourceName>OrfordBuoy:WindDir2_QC</sourceName>
+    <destinationName>WindDir2_flags</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="long_name">WindDir2OrfordBuoy Flag</att>
       <att name="units">Quality flags</att>
       <att name="standard_name">aggregate_quality_flag</att>
     </addAttributes>
