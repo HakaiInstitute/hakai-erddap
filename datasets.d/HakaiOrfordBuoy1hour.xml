@@ -33,7 +33,7 @@
     <att name="geospatial_lat_max">50.596611</att>
     <att name="geospatial_lat_min">50.596611</att>
     <att name="geospatial_lon_max">-124.901806</att>
-    <att name="geospatial_lon_min">-124.90180</att>
+    <att name="geospatial_lon_min">-124.901806</att>
     <att name="geospatial_vertical_max">0.5</att>
     <att name="geospatial_vertical_min">0.5</att>
     <att name="institution">Hakai Institute</att>
@@ -72,7 +72,7 @@ This dataset is provisional. For science purposes, please refer to the dataset: 
 
 
   <dataVariable>
-    <sourceName>=51.6499</sourceName>
+    <sourceName>=50.596611</sourceName>
     <destinationName>latitude</destinationName>
     <dataType>double</dataType>
     <addAttributes>
@@ -85,7 +85,7 @@ This dataset is provisional. For science purposes, please refer to the dataset: 
 
 
   <dataVariable>
-    <sourceName>=-127.9663</sourceName>
+    <sourceName>=-124.901806</sourceName>
     <destinationName>longitude</destinationName>
     <dataType>double</dataType>
     <addAttributes>
