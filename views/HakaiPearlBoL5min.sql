@@ -61,6 +61,8 @@ SELECT
 FROM
     sn."PearlBoL:5minuteSamples"
 WHERE
-    "measurementTime" > (NOW() - '60 days'::INTERVAL)
+    "measurementTime" >= (
+        date_trunc('year',NOW())
+    )
 ORDER BY
     "measurementTime" DESC;
