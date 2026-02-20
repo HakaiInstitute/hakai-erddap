@@ -110,19 +110,7 @@ SELECT
     "OrfordSeaology:equilPumpOffO2",
     "OrfordSeaology:equilPumpOffRH",
     "OrfordSeaology:airPumpOffO2",
-    "OrfordSeaology:airPumpOffRH",
-    "OrfordBuoy:WindSpd2_QL",
-    "OrfordBuoy:WindSpd2_QC",
-    "OrfordBuoy:WindSpd2_UQL",
-    "OrfordBuoy:WindSpd2_Avg",
-    "OrfordBuoy:WindSpd2_Min",
-    "OrfordBuoy:WindSpd2_Max",
-    "OrfordBuoy:WindSpd2_Std",
-    "OrfordBuoy:WindDir2_QL",
-    "OrfordBuoy:WindDir2_QC",
-    "OrfordBuoy:WindDir2_UQL",
-    "OrfordBuoy:WindDir2_Avg",
-    "OrfordBuoy:WindDir2_Std"
+    "OrfordSeaology:airPumpOffRH"
 FROM
     sn."OrfordBuoy:1hourSamples" JOIN
     sn."OrfordSeaology:1hourSamples"
