@@ -29,7 +29,7 @@
         <att name="creator_country">Canada</att>
         <att name="creator_ror">https://ror.org/02pry0c91</att>
         <att name="contributor_name">Evans, Wiley;Hakai Institute;Hakai Institute;Tula Foundation</att>
-        <att name="contributor_role">pointOfContact,publisher;funder</att>
+        <att name="contributor_role">pointOfContact,author,custodian,owner;distributor;publisher;funder</att>
         <att name="institution">Hakai Institute</att>
         <att name="infoUrl">https://catalogue.hakai.org/dataset/ca-cioos_TODO_UUID</att>
         <att name="license">https://creativecommons.org/licenses/by/4.0</att>
