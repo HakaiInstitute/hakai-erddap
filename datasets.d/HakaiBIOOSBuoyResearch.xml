@@ -28,10 +28,10 @@
         <att name="creator_city">Campbell River</att>
         <att name="creator_country">Canada</att>
         <att name="creator_ror">https://ror.org/02pry0c91</att>
-        <att name="contributor_name">Evans, Wiley;Hakai Institute;Hakai Institute;Tula Foundation</att>
-        <att name="contributor_role">pointOfContact,author,custodian,owner;distributor;publisher;funder</att>
+        <att name="contributor_name">Evans, Wiley;Hakai Institute;Tula Foundation;Bedard, Kimberly;Campbell, Katie</att>
+        <att name="contributor_role">owner,custodian,distributor;publisher;funder;coAuthor;coAuthor</att>
         <att name="institution">Hakai Institute</att>
-        <att name="infoUrl">https://catalogue.hakai.org/dataset/ca-cioos_TODO_UUID</att>
+        <att name="infoUrl">https://catalogue.hakai.org/dataset/ca-cioos_bfefcdf9-c922-4e4f-a958-aa6da739d3cd</att>
         <att name="license">https://creativecommons.org/licenses/by/4.0</att>
         <att name="sourceUrl">(local files)</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
@@ -45,16 +45,16 @@
         <att name="geospatial_vertical_max">0.5</att>
         <att name="geospatial_vertical_min">0.5</att>
         <att name="instrument">Battelle Seaology (MApCO2) System with LI-COR LI-820,SBE 16</att>
-        <att name="keywords">Continuous measurement,Discrete measurement,Surface measurement,Bute Inlet,British Columbia coast,North Pacific Ocean,CIOOS:inorganicCarbon,CIOOS:seaSurfaceSalinity,CIOOS:seaSurfaceTemperature</att>
+        <att name="keywords">Bute Inlet,Homalco Territory,Salish Sea,ocean acidification,marine productivity,CIOOS:oxygen,CIOOS:inorganicCarbon,CIOOS:particulateMatter,CIOOS:phytoplanktonBiomassAndDiversity,CIOOS:seaSurfaceSalinity,CIOOS:seaSurfaceTemperature</att>
         <att name="platform">moored surface buoy</att>
         <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
-        <att name="summary">Orford Bay, located in Bute Inlet on the coast of British Columbia, has been a site for moored, high-resolution measurements of surface seawater and marine boundary layer CO2 content since June 2024. Measurements of in situ temperature, salinity, seawater and atmospheric CO2 partial pressure are made using a Battelle Seaology (MApCO2) System. The effort to collect these data are part of the Hakai Institute&#8217;s directive to advance the understanding of carbon cycling in northeast Pacific coastal settings with specific emphasis on ocean acidification.</att>
-        <att name="title">Surface Seawater and Marine Boundary Layer CO2 Observations Made from the Bute Inlet Ocean Observing Station (BIOOS) Buoy, Bute Inlet, BC, Canada (Research)</att>
+        <att name="summary">Bute Inlet, a prominent fjord on the British Columbia coast, has been a site for moored, high-resolution measurements of surface seawater and marine boundary layer CO2 content since February 2025. Measurements of temperature, salinity, seawater and atmospheric CO2 partial pressure were collected from a surface buoy located in the central fjord using a MApCO2 System. This data contribution consists of measurements from February 15, 2025 to November 21, 2025.</att>
+        <att name="title">Surface Seawater and Marine Boundary Layer CO2 Time Series from the Bute Inlet Ocean Observing Station (BIOOS) Buoy, Bute Inlet, BC, Canada (Research)</att>
         <att name="project">Oceanography</att>
         <att name="comment">##Limitations:
-None</att>
+This dataset is research-ready.</att>
         <att name="progress">onGoing</att>
-        <att name="id">TODO_UUID</att>
+        <att name="id">bfefcdf9-c922-4e4f-a958-aa6da739d3cd</att>
         <att name="naming_authority">ca.cioos</att>
         <att name="publisher_name">Hakai Institute</att>
         <att name="publisher_email">data@hakai.org</att>
@@ -64,9 +64,9 @@ None</att>
         <att name="publisher_country">Canada</att>
         <att name="publisher_url">https://www.hakai.org/</att>
         <att name="publisher_ror">https://ror.org/02pry0c91</att>
-        <att name="metadata_link">https://catalogue.hakai.org/dataset/ca-cioos_TODO_UUID</att>
-        <att name="metadata_form">https://hakaiinstitute.github.io/hakai-metadata-entry-form#/en/hakai/tV5qE0aUgaOjSVmgPgiZ6MyHuSy1/-TODO</att>
-    </addAttributes>
+        <att name="metadata_link">https://catalogue.hakai.org/dataset/ca-cioos_bfefcdf9-c922-4e4f-a958-aa6da739d3cd</att>
+        <att name="metadata_form">https://hakaiinstitute.github.io/hakai-metadata-entry-form#/en/hakai/RLSJmX44tkZoh8ncSpZECUoikBt1/-OOYvTmfsWUPdHkDTTFS</att>
+    <att name="date_modified">2026-02-20T22:22:42.847Z</att><att name="product_version">1.1</att><att name="creator_address">303-1100 Island Highway</att><att name="doi">https://doi.org/10.21966/4jvz-bv44</att></addAttributes>
     <dataVariable>
         <sourceName>="BIOOSBuoy"</sourceName>
         <destinationName>station_id</destinationName>
