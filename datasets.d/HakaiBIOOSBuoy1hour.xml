@@ -1,4 +1,4 @@
-<dataset type="EDDTableFromDatabase" datasetID="HakaiOrfordBuoy1hour">
+<dataset type="EDDTableFromDatabase" datasetID="HakaiBIOOSBuoy1hour">
   <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
   <driverName>org.postgresql.Driver</driverName>
   <schemaName>erddap</schemaName>
@@ -15,7 +15,7 @@
     <att name="title_fra">Bou&#233;e KC avec un instrument Seology et des capteurs m&#233;t&#233;orologiques</att>
     <att name="summary_fra">La bou&#233;e KC utilise un syst&#232;me Battelle Seaology qui mesure en continu la pression partielle du dioxyde de carbone (pCO2) &#224; la surface de l'oc&#233;an et la couche limite marine. Ces donn&#233;es sont coupl&#233;es &#224; des capteurs m&#233;t&#233;orologiques, ainsi qu'&#224; des mesures de temp&#233;rature et de salinit&#233; &#224; la surface de la mer &#224; l'aide d'un instrument Seabird Electronics 16Plus V2 SeaCAT CT.</att>
 
-    <att name="site_id">OrfordBuoy</att>
+    <att name="site_id">BIOOSBuoy</att>
     <att name="site_description">Seaology buoy with met sensors</att>
     <att name="elevation">2</att>
     <att name="measurement_interval">1 hour</att>
@@ -50,7 +50,7 @@ This dataset is provisional. For science purposes, please refer to the dataset: 
 
 
   <dataVariable>
-    <sourceName>="OrfordBuoy"</sourceName>
+    <sourceName>="BIOOSBuoy"</sourceName>
     <destinationName>station</destinationName>
     <dataType>String</dataType>
     <addAttributes>
