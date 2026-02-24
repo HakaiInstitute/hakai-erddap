@@ -117,8 +117,8 @@ FROM
     ON sn."OrfordBuoy:1hourSamples"."measurementTime" = sn."OrfordSeaology:1hourSamples"."measurementTime"
 
 WHERE
-    "OrfordBuoy:1hourSamples"."measurementTime" > (
-        NOW() - '60 days'::INTERVAL
+    "OrfordBuoy:1hourSamples"."measurementTime" >= (
+        date_trunc('year',NOW())
     )
 ORDER BY
     "measurementTime" DESC;

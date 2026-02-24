@@ -43,7 +43,7 @@
         <att name="instrument">SBE 45,Burke-o-Lator pCO2/TCO2 analyzer</att>
         <att name="keywords">Continuous measurement,Discrete measurement,Surface measurement,Bamfield,British Columbia coast,North Pacific Ocean,Ocean Acidification,Practical Salinity,Sea Surface Temperature,Sea Surface Practical Salinity,CO2,CIOOS:inorganicCarbon,CIOOS:seaSurfaceSalinity,CIOOS:seaSurfaceTemperature</att>
         <att name="summary">This dataset includes continuous sea surface measurements of partial pressure of carbon dioxide (pCO2), sea surface temperature and salinity collected from the PEARL lab at Bamfield Marine Sciences Centre in British Columbia, Canada. Measurements of in situ temperature, salinity, and CO2 partial pressure are made near-continuously on seawater drawn from a sample line. The effort to collect these data are part of the Hakai Institute's directive to advance the understanding of carbon cycling in northeast Pacific coastal settings with specific emphasis on ocean acidification.</att>
-        <att name="title">Seawater Carbon Dioxide (CO2) Content from the Burke-o-Lator pCO2/TCO2 analyzer located at the PEARL Lab, Bamfield Marine Sciences Centre, BC, Canada (Research)</att>
+        <att name="title">Seawater Carbon Dioxide (CO2) Content from the SuperCO2 System in the Pacific Ecosystem Autonomous Research Laboratory, Bamfield Marine Sciences Centre, BC, Canada (Research)</att>
         <att name="platform">coastal structure</att>
         <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
         <att name="project">Oceanography</att>
