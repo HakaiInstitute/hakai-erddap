@@ -9,10 +9,9 @@ assignees: ''
 
 -----
 *Related links*
-- [ ] Development ERDDAP Dataset: https://pac-dev2.cioospacific.ca/erddap/...
-- [ ] CIOOS Pacific Metadata Form:
-- [ ] CIOOS Pacific Catalogue:
-- [ ] Production ERDDAP Dataset: https://data.cioospacific.ca/erddap/...
+- [ ] Hakai Metadata Form:
+- [ ] Hakai Catalogue:
+- [ ] Production ERDDAP Dataset: https://catalogue.hakai.org/erddap/...
 -----
 
 ## ERDDAP Dataset Update Steps
@@ -26,24 +25,23 @@ List any issues related to this dataset submission that need to be reviewed prio
 - [ ] ...
 
 ## Dataset Review
-Data provider should revised the updated ERDDAP dataset and approve the latest changes prior to make those available on the CIOOS Pacific Production ERDDAP.
+Data provider should revised the updated ERDDAP dataset and approve the latest changes prior to make those available on the Hakai Production ERDDAP.
 
 - [ ] Dataset Development Branch Approved
 
 ------
 ### Dataset Integration 
-This section list all the different steps needed to integrate the latest changes to the CIOOS Production server.
+This section list all the different steps needed to integrate the latest changes to the Hakai Production server.
 #### ERDDAP
 
 - [ ] Merge Development  ERDDAP Dataset to Production Branch
-- [ ] Confirm ERDDAP Dataset is running on [CIOOS Pacific Production ERDDAP Server](https://data.cioospacific.ca/erddap/index.html)
+- [ ] Confirm ERDDAP Dataset is running on [Hakai Production ERDDAP Server](https://catalogue.hakai.org/erddap/index.html)
 
 #### Metadata Record
 
 - [ ] Confirm Metadata Record is pointing to the Production ERDDAP dataset
 - [ ] Publish Metadata record
-- [ ] Confirm Metadata record is available appropriately on the [CIOOS Pacific](https://catalogue.cioospacific.ca/dataset)
-- [ ] Confirm Metadata record is available appropriately on the [CIOOS National](https://catalogue.cioos.ca/dataset)
+- [ ] Confirm Metadata record is available appropriately on the [Hakai](https://catalogue.hakai.org/dataset)
 
 #### Full completion
 - [ ] Completed

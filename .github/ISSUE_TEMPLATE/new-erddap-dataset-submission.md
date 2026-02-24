@@ -1,26 +1,25 @@
 ---
 name: New ERDDAP Dataset Submission
-about: To Do list associated to a new CIOOS Pacific ERDDAP dataset submission.
+about: To Do list associated to a new Hakai ERDDAP dataset submission.
 title: 'New ERDDAP Dataset: datasetID'
 labels: 'new submission'
 assignees: ''
 
 ---
 
-## CIOOS Pacific Dataset Submission
-This github issue present the different steps associated with the creation of a CIOOS Pacific ERDDAP dataset.
+## Hakai Dataset Submission
+This github issue present the different steps associated with the creation of a Hakai ERDDAP dataset.
 
 *Related links:*
-- [ ] Development ERDDAP Dataset: https://pac-dev2.cioospacific.ca/erddap/...
-- [ ] CIOOS Pacific Metadata Form:
-- [ ] CIOOS Pacific Catalogue:
-- [ ] Production ERDDAP Dataset: https://data.cioospacific.ca/erddap/...
+- [ ] Hakai Metadata Form:
+- [ ] Hakai Catalogue:
+- [ ] Production ERDDAP Dataset: https://catalogue.hakai.org/erddap/...
 --------
 
 ## Submission steps
 ### Initial Submission
 - [ ] Original Data Source is available
-- [ ] CIOOS Metadata Form is completed
+- [ ] Hakai Metadata Form is completed
 
 ### ERDDAP Dataset Creation (Data Integrator)
 - [ ] Dataset Transformation
@@ -37,7 +36,7 @@ List any issues related to this dataset submission that need to be reviewed prio
 - [ ] ...
 
 ### Dataset Approuval
-The dataset provider needs to approve the dataset present within the CIOOS Pacific ERDDAP development server prior to make it available in production.
+The dataset provider needs to approve the dataset present within the Hakai ERDDAP development server prior to make it available in production.
 - [ ] Development Dataset approved
 
 -----
@@ -46,13 +45,12 @@ This section list the differents steps needed to make an ERDDPAP dataset availab
 
 #### ERDDAP
 - [ ] Merge Development  ERDDAP Dataset to Production Branch
-- [ ] Confirm ERDDAP Dataset is running on [CIOOS Pacific Production ERDDAP Server](https://data.cioospacific.ca/erddap/index.html)
+- [ ] Confirm ERDDAP Dataset is running on [Hakai Production ERDDAP Server](https://catalogue.hakai.org/erddap/index.html)
 #### Metadata Record
 - [ ] Confirm Metadata Record is pointing to the Production ERDDAP dataset
 - [ ] Publish Metadata record
-- [ ] Confirm Metadata record is available appropriately on the [CIOOS Pacific](https://catalogue.cioospacific.ca/dataset)
-- [ ] Confirm Metadata record is available appropriately on the [CIOOS National](https://catalogue.cioos.ca/dataset)
+- [ ] Confirm Metadata record is available appropriately on the [Hakai](https://catalogue.hakai.org/dataset)
 
 ### DOI
-- [ ] Generate DOI associated with CIOOS Pacific CKAN dataset page?
+- [ ] Generate DOI associated with Hakai CKAN dataset page?
 - [ ] COMPLETED
