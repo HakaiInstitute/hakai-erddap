@@ -26,8 +26,8 @@
         <att name="license">https://creativecommons.org/licenses/by/4.0</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
         <att name="cdm_timeseries_variables">station,latitude,longitude</att>
-        <att name="contributor_name">Barrette, Jessy;Hakai Institute;Tula Foundation</att>
-        <att name="contributor_role">custodian,resourceProvider,processor;distributor,owner,custodian,publisher;funder</att>
+        <att name="contributor_name">Hakai Institute;Hare, Alex;Barrette, Jessy;Jackson, Jennifer;Tula Foundation</att>
+        <att name="contributor_role">distributor,owner,publisher;processor,custodian;resourceProvider,processor;processor;funder</att>
         <att name="date_created">2024-07-17</att>
         <att name="geospatial_bounds">-128.5,52.27 -127.4,52.21 -127.2,51.66 -125.6,51.13 -124.8,50.96 -124.1,50.43 -124.7,49.98 -124.9,49.80 -126.7,50.45 -128.1,51.37 -128.4,51.69 -128.5,52.27</att>
         <att name="geospatial_vertical_max">700.0</att>
@@ -49,7 +49,7 @@ Data were collected by the Hakai Institute Oceanography Program, the Nearshore P
         <att name="platform">self-propelled small boat</att>
         <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
     <att name="comment">##Limitations:
-This is only provisional data that has not yet been manually reviewed. Please refer to the Research Dataset for fully reviewed data. Instruments sensors are generally calibrated once a year by the manufacturer, no comparison and post-calibration correction based on data sampled by another method is applied to this dataset.</att><att name="progress">onGoing</att><att name="naming_authority">ca.cioos</att><att name="date_modified">2024-12-04T16:51:35.389Z</att><att name="history">Metadata record history:
+This is only provisional data that has not yet been manually reviewed. Please refer to the Research Dataset for fully reviewed data. Instruments sensors are generally calibrated once a year by the manufacturer, no comparison and post-calibration correction based on data sampled by another method is applied to this dataset.</att><att name="progress">onGoing</att><att name="naming_authority">ca.cioos</att><att name="date_modified">2026-02-21T01:12:41.791Z</att><att name="history">Metadata record history:
 - processingStep:
   - authority: URL
     code: https://github.com/HakaiInstitute/hakai-datasets/raw/development/datasets_documents/HakaiWaterPropertiesProfiles/Hakai_Water_Properties_Processing_and_QAQC_Procedure_20210331.pdf
