@@ -16,7 +16,7 @@
     <att name="summary_fra">La limpet fournit des donn&#233;es en temps r&#233;el sur la temp&#233;rature de l'oc&#233;an, la conductivit&#233; et l'oxyg&#232;ne dissous pour les eaux au large de l'&#238;le Quadra.</att>
 
     <att name="site_id">Quadra Limpet</att>
-    <att name="title">Real-Time Seafloor Observatory in Hyacinthe Bay, Quadra Island, British Columbia, Canada (Provisional)</att>
+    <att name="title">Seafloor Observatory in Hyacinthe Bay, Quadra Island, British Columbia, Canada (Provisional)</att>
     <att name="summary">The limpet provides real-time data on ocean temperature, conductivity, and dissolved oxygen for the waters off Quadra Island.</att>
     <att name="elevation">-20</att>
     <att name="measurement_interval">5 minute</att>

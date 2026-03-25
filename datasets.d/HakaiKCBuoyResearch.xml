@@ -46,7 +46,7 @@
 		<att name="keywords">Continuous measurement,Discrete measurement,Surface measurement,Quadra Island,Northern Salish Sea,British Columbia coast,North Pacific Ocean,CIOOS:inorganicCarbon,CIOOS:seaSurfaceSalinity,CIOOS:seaSurfaceTemperature</att>
 		<att name="platform">moored surface buoy</att>
 		<att name="summary">Kwakshua Channel, located near Fitz Hugh Sound on the central coast of British Columbia, has been a site for moored, high-resolution measurements of surface seawater and marine boundary layer CO2 content since May 2018. Measurements of in situ temperature, salinity, seawater and atmospheric CO2 partial pressure are made using a Battelle Seaology (MApCO2) System. The effort to collect these data are part of the Hakai Institute&#8217;s directive to advance the understanding of carbon cycling in northeast Pacific coastal settings with specific emphasis on ocean acidification. This data contribution consists of measurements since May 1, 2018.</att>
-		<att name="title">Surface Seawater and Marine Boundary Layer CO2 Observations Made from the Kwakshua Channel (KC) Buoy on the Central Coast of British Columbia (Research)</att>
+		<att name="title">Surface Seawater and Marine Boundary Layer CO2 Observations from the Kwakshua Channel (KC) Buoy on the Central Coast of British Columbia (Research)</att>
 		<att name="platform">moored surface buoy</att>
 		<att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
 	<att name="project">Oceanography</att><att name="comment">##Limitations:
