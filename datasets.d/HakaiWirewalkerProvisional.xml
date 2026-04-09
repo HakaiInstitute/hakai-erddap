@@ -1,5 +1,5 @@
 <dataset type="EDDTableFromParquetFiles" datasetID="HakaiWirewalkerProvisional" active="true">
-    <fileDir>/tmp/windmill/erddap-prod/HakaiWirewalkerProvisional/</fileDir>
+    <fileDir>/mnt/efs/erddap-prod/HakaiWirewalkerProvisional/</fileDir>
     <fileNameRegex>.*\.parquet</fileNameRegex>
     <recursive>true</recursive>
     <reloadEveryNMinutes>1440</reloadEveryNMinutes>
@@ -11,7 +11,7 @@
         <att name="cdm_data_type">TimeSeries</att>
         <att name="cdm_timeseries_variables">serial_number, latitude, longitude</att>
         <att name="subsetVariables">serial_number, latitude, longitude</att>
-        <att name="title">Hakai Wirewalker Provisional</att>
+        <att name="title">Water Property Measurements from the Bute Inlet Ocean Observing Station (BIOOS) Wirewalker, Bute Inlet, BC, Canada (Provisional)</att>
         <att name="summary">Provisional Wirewalker oceanographic data from the Hakai Institute. This dataset has not been fully quality controlled.</att>
         <att name="infoUrl">https://www.hakai.org</att>
         <att name="geospatial_lat_max">50.5744</att>
