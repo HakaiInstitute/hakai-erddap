@@ -65,7 +65,7 @@
             <att name="ioos_category">Time</att>
             <att name="long_name">Time</att>
             <att name="standard_name">time</att>
-            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+            <att name="units">milliseconds since 1970-01-01T00:00:00Z</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
