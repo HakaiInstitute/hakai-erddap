@@ -1,8 +1,13 @@
 <dataset type="EDDTableFromParquetFiles" datasetID="HakaiWirewalkerProvisional" active="true">
-    <fileDir>/mnt/efs/erddap-prod/HakaiWirewalkerProvisional/</fileDir>
+    <fileDir>/datasets/HakaiWirewalkerProvisional/</fileDir>
     <fileNameRegex>.*\.parquet</fileNameRegex>
     <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <fileTableInMemory>false</fileTableInMemory>
+    <accessibleViaFiles>true</accessibleViaFiles>
     <reloadEveryNMinutes>1440</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
     <addAttributes>
         <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
         <att name="institution">Hakai Institute</att>
