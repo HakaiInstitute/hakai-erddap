@@ -28,7 +28,7 @@
     <dataVariable>
         <sourceName>serial_number</sourceName>
         <destinationName>serial_number</destinationName>
-        <dataType>int</dataType>
+        <dataType>long</dataType>
         <addAttributes>
             <att name="long_name">Serial Number</att>
             <att name="cf_role">timeseries_id</att>
@@ -121,6 +121,15 @@
             <att name="standard_name">moles_of_oxygen_per_unit_mass_in_sea_water</att>
             <att name="units">umol/L</att>
             <att name="ioos_category">Dissolved O2</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>cast_id</sourceName>
+        <destinationName>cast_id</destinationName>
+        <dataType>long</dataType>
+        <addAttributes>
+            <att name="long_name">Cast ID</att>
+            <att name="ioos_category">Identifier</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
