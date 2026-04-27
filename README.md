@@ -225,6 +225,16 @@ The `views/HakaiWatershedsStreamStations.yaml` config determines how they are up
 
 Commit any changes made to the different files within `views/*.sql` to the main branch.
 
+## Force-reloading a dataset
+
+ERDDAP periodically reloads datasets according to `reloadEveryNMinutes`. To trigger an immediate reload of a specific dataset without restarting the container, place a file named after the dataset ID in the `hardFlag` directory on the host:
+
+```bash
+touch ~/hakai-erddap/erddap/data/hardFlag/<datasetID>
+```
+
+ERDDAP will pick up the flag within its next polling cycle, perform a hard reload (clearing cached data), and delete the flag file. This is the appropriate method when underlying data files have been updated - for example, after rsyncing new parquet files to the EFS volume for a file-based dataset.
+
 ## Continuous Integration
 
 All commits to this repository are tested by different linter through a PR or commit to the development and master branches:
