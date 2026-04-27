@@ -8,6 +8,7 @@
     <accessibleViaFiles>true</accessibleViaFiles>
     <reloadEveryNMinutes>1440</reloadEveryNMinutes>
     <updateEveryNMillis>10000</updateEveryNMillis>
+    <defaultDataQuery>&amp;cast_id!=NaN</defaultDataQuery>
     <addAttributes>
         <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
         <att name="institution">Hakai Institute</att>
@@ -17,14 +18,14 @@
         <att name="cdm_timeseries_variables">serial_number, latitude, longitude</att>
         <att name="subsetVariables">serial_number, latitude, longitude</att>
         <att name="title">Water Property Measurements from the Bute Inlet Ocean Observing Station (BIOOS) Wirewalker, Bute Inlet, BC, Canada (Provisional)</att>
-        <att name="summary">Provisional Wirewalker oceanographic data from the Hakai Institute. This dataset has not been fully quality controlled.</att>
-        <att name="infoUrl">https://www.hakai.org</att>
+        <att name="summary">Bute Inlet, a prominent fjord on the British Columbia coast, has been a site for high-resolution oceanographic profiling through the Bute Inlet Ocean Observing Station (BIOOS). A Canadian Pacific Robotic Ocean Observing Facility (C-PROOF) Wirewalker wave-powered profiling instrument is deployed on a mooring in the central fjord, collecting vertical profiles of conductivity, temperature, pressure, and dissolved oxygen concentration. This data contribution consists of provisional measurements spanning the current year and has not undergone full quality control.</att>
+        <att name="infoUrl">https://catalogue.hakai.org/dataset/ca-cioos_a8671db6-81cc-4c92-b681-58595fe66182</att>
         <att name="sourceUrl">(local files)</att>
         <att name="geospatial_lat_max">50.5744</att>
         <att name="geospatial_lat_min">50.5744</att>
         <att name="geospatial_lon_max">-124.9009</att>
         <att name="geospatial_lon_min">-124.9009</att>
-    </addAttributes>
+    <att name="project">Oceanography</att><att name="progress">onGoing</att><att name="keywords">oceans,bute-inlet,homalco-territory,salish-sea,marine-productivity,oceanography,water temperature,salinity,wirewalker,CIOOS:subSurfaceTemperature,CIOOS:subSurfaceSalinity,CIOOS:oxygen,CIOOS:phytoplanktonBiomassAndDiversity</att><att name="keywords_vocabulary">CIOOS: CIOOS Essential Ocean Variables Vocabulary</att><att name="id">a8671db6-81cc-4c92-b681-58595fe66182</att><att name="naming_authority">ca.cioos</att><att name="date_modified">2026-04-27T22:13:10.700Z</att><att name="creator_name">Hakai Institute</att><att name="creator_type">institution</att><att name="creator_institution">Hakai Institute</att><att name="creator_city">Campbell River</att><att name="creator_country">Canada</att><att name="creator_url">https://www.hakai.org/</att><att name="creator_ror">https://ror.org/02pry0c91</att><att name="publisher_name">Hakai Institute</att><att name="publisher_type">institution</att><att name="publisher_institution">Hakai Institute</att><att name="publisher_city">Campbell River</att><att name="publisher_country">Canada</att><att name="publisher_url">https://www.hakai.org/</att><att name="publisher_ror">https://ror.org/02pry0c91</att><att name="contributor_name">Hakai Institute;Hakai Institute;Evans, Wiley;Albers, Sam;Tula Foundation</att><att name="contributor_role">publisher;owner,distributor;author;coAuthor,custodian,pointOfContact;funder</att><att name="doi">https://doi.org/10.21966/3q5j-n957</att><att name="metadata_link">https://catalogue.hakai.org/dataset/ca-cioos_a8671db6-81cc-4c92-b681-58595fe66182</att><att name="metadata_form">https://hakaiinstitute.github.io/hakai-metadata-entry-form#/en/hakai/3LY8ezYsI9hglwZSsfkAdSBcoEG3/-OqDQ7wqqJtwSgUoAN1g</att><att name="platform">moored surface buoy</att><att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att><att name="date_created">2026-04-27</att><att name="publisher_email">data@hakai.org</att></addAttributes>
     <dataVariable>
         <sourceName>serial_number</sourceName>
         <destinationName>serial_number</destinationName>
@@ -80,7 +81,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>Temperature (°C)</sourceName>
+        <sourceName>Temperature (&#176;C)</sourceName>
         <destinationName>temperature</destinationName>
         <dataType>double</dataType>
         <addAttributes>
@@ -102,7 +103,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>Temperature 1 (°C)</sourceName>
+        <sourceName>Temperature 1 (&#176;C)</sourceName>
         <destinationName>temperature_1</destinationName>
         <dataType>double</dataType>
         <addAttributes>
@@ -113,7 +114,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>Dissolved O₂ concentration (µmol/l)</sourceName>
+        <sourceName>Dissolved O&#8322; concentration (&#181;mol/l)</sourceName>
         <destinationName>dissolved_o2</destinationName>
         <dataType>double</dataType>
         <addAttributes>
@@ -140,7 +141,8 @@
             <att name="long_name">Time (ms)</att>
             <att name="units">ms</att>
             <att name="ioos_category">Time</att>
-            <att name="comment">Raw instrument timestamp in milliseconds, retained for traceability.</att>
+            <att name="comment">##Limitations:
+Haven&#8217;t applied appropriate QC on the data yet.</att>
         </addAttributes>
     </dataVariable>
 </dataset>
