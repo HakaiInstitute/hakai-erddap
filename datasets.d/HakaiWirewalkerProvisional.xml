@@ -8,6 +8,7 @@
     <accessibleViaFiles>true</accessibleViaFiles>
     <reloadEveryNMinutes>1440</reloadEveryNMinutes>
     <updateEveryNMillis>10000</updateEveryNMillis>
+    <defaultDataQuery>&amp;cast_id!=NaN</defaultDataQuery>
     <addAttributes>
         <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
         <att name="institution">Hakai Institute</att>
