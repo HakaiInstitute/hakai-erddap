@@ -13,7 +13,7 @@
     <addAttributes>
         <att name="cdm_data_type">Timeseries</att>
         <att name="cdm_timeseries_variables">station</att>
-        <att name="subsetVariables">station, station_id, station_description, latitude, longitude, elevation</att>
+        <att name="subsetVariables">station</att>
         <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
         <att name="infoUrl">???</att>
         <att name="institution">Hakai Institute</att>
