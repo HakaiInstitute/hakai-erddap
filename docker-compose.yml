@@ -24,6 +24,7 @@ services:
       - "./init.d:/init.d"
       - "/mnt/efs/algex:/algae_explorer"
       - "./datasets.d:/datasets.d"
+      - "./logs:/usr/local/tomcat/logs"
     healthcheck:
       test:
         [
