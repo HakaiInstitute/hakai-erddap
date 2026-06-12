@@ -764,8 +764,8 @@ public class EDDTableFromDatabase extends EDDTable {
         EDV edv =
             findDataVariableBySourceName(sourceName); // throws exception, but should always succeed
         if (scriptNames == null) {
-          scriptNames = new StringArray();
-          scriptTypes = new StringArray();
+          scriptNames = new StringArray(resultsVariables.size(), false);
+          scriptTypes = new StringArray(resultsVariables.size(), false);
           needOtherSourceNames = new HashSet<>();
         }
         scriptNames.add(sourceName);
@@ -947,34 +947,33 @@ public class EDDTableFromDatabase extends EDDTable {
       StringBuilder query = new StringBuilder();
       int nRv = resultsVariables.size();
       String distinctString = distinct ? "DISTINCT " : "";
-      for (int rv = 0; rv < nRv; rv++)
+      for (int rv = 0; rv < nRv; rv++) {
         // no danger of sql injection since query has been parsed and
         //  resultsVariables must be known sourceNames
         // Note that I tried to use '?' for resultsVariables, but never got it to work: wierd
         // results.
         // Quotes around colNames avoid trouble when colName is a SQL reserved word.
-        query.append(
-            (rv == 0 ? "SELECT " + distinctString : ", ")
-                + columnNameQuotes
-                + resultsVariables.get(rv)
-                + columnNameQuotes);
+        if (rv == 0) query.append("SELECT ").append(distinctString);
+        else query.append(", ");
+        query.append(columnNameQuotes).append(resultsVariables.get(rv)).append(columnNameQuotes);
+      }
       // Lack of quotes around table names means they can't be SQL reserved words.
       // (If do quote in future, quote individual parts.)
-      query.append(
-          " FROM "
-              + (catalogName.isEmpty() ? "" : catalogName + catalogSeparator)
-              + (schemaName.isEmpty() ? "" : schemaName + ".")
-              + tableName);
+      query.append(" FROM ");
+      if (!catalogName.isEmpty()) query.append(catalogName).append(catalogSeparator);
+      if (!schemaName.isEmpty()) query.append(schemaName).append('.');
+      query.append(tableName);
 
       // create orderBySB
-      StringBuilder orderBySB = new StringBuilder();
+      int obCols = queryOrderBy != null ? queryOrderBy.size() : orderBy.length;
+      StringBuilder orderBySB = new StringBuilder(Math.max(obCols * 32, 16));
       if (queryOrderBy != null) {
         // append queryOrderBy variables
         for (int ob = 0; ob < queryOrderBy.size(); ob++) {
           if (resultsVariables.indexOf(queryOrderBy.get(ob)) >= 0) { // should be
             if (orderBySB.length() > 0) orderBySB.append(", ");
             // Quotes around colNames avoid trouble when colName is a SQL reserved word.
-            orderBySB.append(columnNameQuotes + queryOrderBy.get(ob) + columnNameQuotes);
+            orderBySB.append(columnNameQuotes).append(queryOrderBy.get(ob)).append(columnNameQuotes);
           }
         }
       } else {
@@ -983,7 +982,7 @@ public class EDDTableFromDatabase extends EDDTable {
           if (resultsVariables.indexOf(s) >= 0) {
             if (orderBySB.length() > 0) orderBySB.append(", ");
             // Quotes around colNames avoid trouble when colName is a SQL reserved word.
-            orderBySB.append(columnNameQuotes + s + columnNameQuotes);
+            orderBySB.append(columnNameQuotes).append(s).append(columnNameQuotes);
           }
         }
       }
@@ -991,9 +990,7 @@ public class EDDTableFromDatabase extends EDDTable {
 
       // add constraints to query
       int nCv = constraintVariables.size();
-      if (verbose) {
-        StringBuilder humanQuery = new StringBuilder(query);
-      }
+      StringBuilder humanQuery = verbose ? new StringBuilder(query) : null;
       int nActiveCV = 0;
       for (int cv = 0; cv < nCv; cv++) {
         String constraintVariable = constraintVariables.get(cv);
@@ -1011,20 +1008,17 @@ public class EDDTableFromDatabase extends EDDTable {
         // again, no danger of sql injection since query has been parsed and
         //  constraintVariables must be known sourceNames
         // Quotes around colNames avoid trouble when colName is a SQL reserved word.
-        String ts =
-            (nActiveCV == 1 ? " WHERE " : " AND ")
-                + columnNameQuotes
-                + constraintVariables.get(cv)
-                + columnNameQuotes
-                + " "
-                + tOp;
-        query.append(ts + " ?"); // ? is the place holder for a value
-        humanQuery.append(ts + " '" + constraintValues.get(cv) + "'");
+        String whereAnd = nActiveCV == 1 ? " WHERE " : " AND ";
+        query.append(whereAnd).append(columnNameQuotes).append(constraintVariables.get(cv))
+            .append(columnNameQuotes).append(' ').append(tOp).append(" ?");
+        if (humanQuery != null)
+          humanQuery.append(whereAnd).append(columnNameQuotes).append(constraintVariables.get(cv))
+              .append(columnNameQuotes).append(' ').append(tOp)
+              .append(" '").append(constraintValues.get(cv)).append('\'');
       }
       if (orderBySB.length() > 0) {
-        String ts = " ORDER BY " + orderBySB;
-        query.append(ts);
-        humanQuery.append(ts);
+        query.append(" ORDER BY ").append(orderBySB);
+        if (humanQuery != null) humanQuery.append(" ORDER BY ").append(orderBySB);
       }
 
       // fill in the '?' in the preparedStatement
@@ -1032,8 +1026,9 @@ public class EDDTableFromDatabase extends EDDTable {
       // (see https://en.wikipedia.org/wiki/SQL_injection) by using
       // preparedStatements (so String values are properly escaped and
       // numbers are assured to be numbers).
-      statement = connection.prepareStatement(query.toString());
-      statement.setFetchSize(1000);  // or a configurable value; streams rows in chunks
+      statement = connection.prepareStatement(
+          query.toString(), ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
+      statement.setFetchSize(1000);
       nActiveCV = 0;
       for (int cv = 0; cv < nCv; cv++) {
         if (constraintVariables.get(cv).startsWith("=")) continue;
@@ -1091,7 +1086,7 @@ public class EDDTableFromDatabase extends EDDTable {
             rs.findColumn(tName); // stored as 1..    throws Throwable if not found
       }
       int triggerNRows = EDStatic.config.partialRequestMaxCells / resultsEDVs.length;
-      Table table = makeEmptySourceTable(resultsEDVs, triggerNRows);
+      Table table = makeEmptySourceTable(resultsEDVs, Math.min(triggerNRows, 1024));
       PrimitiveArray paArray[] = new PrimitiveArray[nRv];
       for (int rv = 0; rv < nRv; rv++) paArray[rv] = table.getColumn(rv);
 
@@ -1164,7 +1159,7 @@ public class EDDTableFromDatabase extends EDDTable {
           }
 
           if (hasNext) {
-            table = makeEmptySourceTable(resultsEDVs, triggerNRows);
+            table = makeEmptySourceTable(resultsEDVs, Math.min(triggerNRows, 1024));
             for (int rv = 0; rv < nRv; rv++) paArray[rv] = table.getColumn(rv);
           }
           if (tableWriter.noMoreDataPlease) {
@@ -1276,40 +1271,40 @@ public class EDDTableFromDatabase extends EDDTable {
 
       if (catalogName != null && catalogName.equals("!!!LIST!!!")) {
         if (verbose) String2.log("getting catalog list");
-        table.readSqlResultSet(dm.getCatalogs());
+        table.readSqlResultSet(dm.getCatalogs(), 10000);
         return table.saveAsCsvASCIIString();
       }
 
       if (schemaName != null && schemaName.equals("!!!LIST!!!")) {
         if (verbose) String2.log("getting schema list");
-        table.readSqlResultSet(dm.getSchemas());
+        table.readSqlResultSet(dm.getSchemas(), 10000);
         return table.saveAsCsvASCIIString();
       }
 
       if (tableName.equals("!!!LIST!!!")) {
         if (verbose) String2.log("getting tables list");
-        table.readSqlResultSet(dm.getTables(catalogName, schemaName, null, null));
+        table.readSqlResultSet(dm.getTables(catalogName, schemaName, null, null), 10000);
         return table.saveAsCsvASCIIString();
       }
 
       // from here on, we are working with a specific table
-      // get the primary keys for the table
+      // get the primary keys for the table (column 4 = COLUMN_NAME per JDBC spec)
       if (verbose) String2.log("getting primaryKey list");
-      Table pkTable = new Table();
-      pkTable.readSqlResultSet(dm.getPrimaryKeys(catalogName, schemaName, tableName));
-      PrimitiveArray pkSA =
-          pkTable.nColumns() >= 4
-              ? pkTable.getColumn(3)
-              : new StringArray(); // table columns are 0..
+      Set<String> pkSet = new HashSet<>();
+      try (ResultSet pkRs = dm.getPrimaryKeys(catalogName, schemaName, tableName)) {
+        while (pkRs.next()) pkSet.add(pkRs.getString(4));
+      }
 
-      // get the foreign keys for the table
+      // get the foreign keys for the table (FKCOLUMN_NAME col 8 -> [pktable cat/schema/name/col])
       if (verbose) String2.log("getting foreignKey list");
-      Table fkTable = new Table();
-      fkTable.readSqlResultSet(dm.getImportedKeys(catalogName, schemaName, tableName));
-      PrimitiveArray fkNames =
-          fkTable.nColumns() >= 8
-              ? fkTable.getColumn(7)
-              : new StringArray(); // table columns are 0..
+      Map<String, String[]> fkMap = new HashMap<>();
+      try (ResultSet fkRs = dm.getImportedKeys(catalogName, schemaName, tableName)) {
+        while (fkRs.next()) {
+          fkMap.put(
+              fkRs.getString(8),
+              new String[] {fkRs.getString(1), fkRs.getString(2), fkRs.getString(3), fkRs.getString(4)});
+        }
+      }
 
       // get all column types for the given catalog/schema/table
       addDummyRequiredGlobalAttributesForDatasetsXml(
@@ -1343,44 +1338,34 @@ public class EDDTableFromDatabase extends EDDTable {
         int sqlType = rs.getInt(5);
         String remarks = rs.getString(12);
         if (remarks == null) remarks = "";
-        String key = pkSA.indexOf(sqlName) >= 0 ? "P" : "";
-        int fkRow = fkNames.indexOf(sqlName);
-        if (fkRow >= 0) {
+        String key = pkSet.contains(sqlName) ? "P" : "";
+        String[] fkInfo = fkMap.get(sqlName);
+        if (fkInfo != null) {
           key += "F";
           remarks =
               remarks
                   + (remarks.length() > 0 ? " " : "")
                   + "[FK from "
-                  + fkTable.getStringData(0, fkRow)
-                  + "."
-                  + fkTable.getStringData(1, fkRow)
-                  + "."
-                  + fkTable.getStringData(2, fkRow)
-                  + "."
-                  + fkTable.getStringData(3, fkRow)
+                  + fkInfo[0] + "." + fkInfo[1] + "." + fkInfo[2] + "." + fkInfo[3]
                   + "]";
         }
         if (sqlType == Types.BIT || sqlType == Types.BOOLEAN) booleanList.add(sqlName);
 
         PrimitiveArray pa = PrimitiveArray.sqlFactory(sqlType);
-        sb.append(
-            String2.left("" + col, 4)
-                + String2.left(key, 4)
-                + String2.left(sqlName, 24)
-                + String2.left(
-                    (sqlType == -7
-                        ? "bit"
-                        : sqlType == 16
-                            ? "boolean"
-                            : sqlType == 91
-                                ? "Date"
-                                : sqlType == 92
-                                    ? "Time"
-                                    : sqlType == 93 ? "TimeStamp" : "" + sqlType),
-                    15)
-                + String2.left(pa.elementTypeString(), 10)
-                + (remarks == null ? "" : remarks)
-                + "\n"); // remarks
+        String sqlTypeName =
+            sqlType == -7 ? "bit"
+            : sqlType == 16 ? "boolean"
+            : sqlType == 91 ? "Date"
+            : sqlType == 92 ? "Time"
+            : sqlType == 93 ? "TimeStamp"
+            : String.valueOf(sqlType);
+        sb.append(String2.left(String.valueOf(col), 4))
+            .append(String2.left(key, 4))
+            .append(String2.left(sqlName, 24))
+            .append(String2.left(sqlTypeName, 15))
+            .append(String2.left(pa.elementTypeString(), 10))
+            .append(remarks)
+            .append('\n');
         col++;
       }
     } finally {
@@ -1492,25 +1477,23 @@ public class EDDTableFromDatabase extends EDDTable {
       DatabaseMetaData dm = con.getMetaData();
 
       // from here on, we are working with a specific table
-      // get the primary keys for the table
+      // get the primary keys for the table (column 4 = COLUMN_NAME per JDBC spec)
       if (verbose) String2.log("getting primaryKey list");
-      Table pkTable = new Table();
-      pkTable.readSqlResultSet(dm.getPrimaryKeys(catalogName, schemaName, tableName));
-      PrimitiveArray pkSA =
-          pkTable.nColumns() >= 4
-              ? pkTable.getColumn(3)
-              : // table columns are 0..
-              new StringArray();
+      Set<String> pkSet = new HashSet<>();
+      try (ResultSet pkRs = dm.getPrimaryKeys(catalogName, schemaName, tableName)) {
+        while (pkRs.next()) pkSet.add(pkRs.getString(4));
+      }
 
-      // get the foreign keys for the table
+      // get the foreign keys for the table (FKCOLUMN_NAME col 8 -> [pktable cat/schema/name/col])
       if (verbose) String2.log("getting foreignKey list");
-      Table fkTable = new Table();
-      fkTable.readSqlResultSet(dm.getImportedKeys(catalogName, schemaName, tableName));
-      PrimitiveArray fkNames =
-          fkTable.nColumns() >= 8
-              ? fkTable.getColumn(7)
-              : // table columns are 0..
-              new StringArray();
+      Map<String, String[]> fkMap = new HashMap<>();
+      try (ResultSet fkRs = dm.getImportedKeys(catalogName, schemaName, tableName)) {
+        while (fkRs.next()) {
+          fkMap.put(
+              fkRs.getString(8),
+              new String[] {fkRs.getString(1), fkRs.getString(2), fkRs.getString(3), fkRs.getString(4)});
+        }
+      }
 
       // get all column types for the given catalog/schema/table
       rs = dm.getColumns(catalogName, schemaName, tableName, "%");
@@ -1536,21 +1519,15 @@ public class EDDTableFromDatabase extends EDDTable {
         int sqlType = rs.getInt(5);
         String remarks = rs.getString(12);
         if (remarks == null) remarks = "";
-        String key = pkSA.indexOf(sqlName) >= 0 ? "P" : "";
-        int fkRow = fkNames.indexOf(sqlName);
-        if (fkRow >= 0) {
+        String key = pkSet.contains(sqlName) ? "P" : "";
+        String[] fkInfo = fkMap.get(sqlName);
+        if (fkInfo != null) {
           key += "F";
           remarks =
               remarks
                   + (remarks.length() > 0 ? " " : "")
                   + "[FK from "
-                  + fkTable.getStringData(0, fkRow)
-                  + "."
-                  + fkTable.getStringData(1, fkRow)
-                  + "."
-                  + fkTable.getStringData(2, fkRow)
-                  + "."
-                  + fkTable.getStringData(3, fkRow)
+                  + fkInfo[0] + "." + fkInfo[1] + "." + fkInfo[2] + "." + fkInfo[3]
                   + "]";
         }
         boolean isTime = sqlType == Types.DATE || sqlType == Types.TIMESTAMP;
