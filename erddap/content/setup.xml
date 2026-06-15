@@ -574,6 +574,8 @@ ERDDAP, Version &erddapVersion;
  async function turnstileLoad() {
     let include_paths = [
       "/erddap/files/",
+      "/erddap/tabledap/",
+      "/erddap/info/",
     ]
     if (!include_paths.some(v => window.location.href.includes(v))) {
       return
