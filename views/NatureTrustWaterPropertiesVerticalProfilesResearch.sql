@@ -1,9 +1,9 @@
 ------------------------------------------------------------------------------------------------------------
 -- Ahousaht First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_AhousahtFirstNation";
+DROP TABLE IF EXISTS erddap."NT_CTD_Research_AhousahtFirstNation";
 
-CREATE TABLE erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_AhousahtFirstNation" AS
+CREATE TABLE erddap."NT_CTD_Research_AhousahtFirstNation" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -32,9 +32,9 @@ ORDER BY
 ------------------------------------------------------------------------------------------------------------
 -- Cowichan Tribes
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_CowichanTribes";
+DROP TABLE IF EXISTS erddap."NT_CTD_Research_CowichanTribes";
 
-CREATE TABLE erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_CowichanTribes" AS
+CREATE TABLE erddap."NT_CTD_Research_CowichanTribes" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -61,11 +61,11 @@ ORDER BY
     ctd.ctd_file_cast_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
--- Da’naxda’xw Awaetlala Nation
+-- Da'naxda'xw Awaetlala Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_Da’naxda’xwAwaetlalaNation";
+DROP TABLE IF EXISTS erddap."NT_CTD_Research_DanaxdaxwAwaetlalaNation";
 
-CREATE TABLE erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_Da’naxda’xwAwaetlalaNation" AS
+CREATE TABLE erddap."NT_CTD_Research_DanaxdaxwAwaetlalaNation" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -94,9 +94,9 @@ ORDER BY
 ------------------------------------------------------------------------------------------------------------
 -- Council of the Haida Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_CounciloftheHaidaNation";
+DROP TABLE IF EXISTS erddap."NT_CTD_Research_CounciloftheHaidaNation";
 
-CREATE TABLE erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_CounciloftheHaidaNation" AS
+CREATE TABLE erddap."NT_CTD_Research_CounciloftheHaidaNation" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -125,9 +125,9 @@ ORDER BY
 ------------------------------------------------------------------------------------------------------------
 -- Halalt First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_HalaltFirstNation";
+DROP TABLE IF EXISTS erddap."NT_CTD_Research_HalaltFirstNation";
 
-CREATE TABLE erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_HalaltFirstNation" AS
+CREATE TABLE erddap."NT_CTD_Research_HalaltFirstNation" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -156,9 +156,9 @@ ORDER BY
 ------------------------------------------------------------------------------------------------------------
 -- Heiltsuk  Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_HeiltsukNation";
+DROP TABLE IF EXISTS erddap."NT_CTD_Research_HeiltsukNation";
 
-CREATE TABLE erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_HeiltsukNation" AS
+CREATE TABLE erddap."NT_CTD_Research_HeiltsukNation" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -187,9 +187,9 @@ ORDER BY
 ------------------------------------------------------------------------------------------------------------
 -- K'ómoks First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_K'ómoksFirstNation";
+DROP TABLE IF EXISTS erddap."NT_CTD_Research_KmoksFirstNation";
 
-CREATE TABLE erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_K'ómoksFirstNation" AS
+CREATE TABLE erddap."NT_CTD_Research_KmoksFirstNation" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -218,9 +218,9 @@ ORDER BY
 ------------------------------------------------------------------------------------------------------------
 -- Kwakiutl First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_KwakiutlFirstNation";
+DROP TABLE IF EXISTS erddap."NT_CTD_Research_KwakiutlFirstNation";
 
-CREATE TABLE erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_KwakiutlFirstNation" AS
+CREATE TABLE erddap."NT_CTD_Research_KwakiutlFirstNation" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -249,9 +249,9 @@ ORDER BY
 ------------------------------------------------------------------------------------------------------------
 -- Ka:'yu:'k't'h'/Che:k'tles7et'h' First Nations
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_Ka:'yu:'k't'h'/Che:k'tles7et'h'FirstNations";
+DROP TABLE IF EXISTS erddap."NT_CTD_Research_KayukthChektles7ethFirstNations";
 
-CREATE TABLE erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_Ka:'yu:'k't'h'/Che:k'tles7et'h'FirstNations" AS
+CREATE TABLE erddap."NT_CTD_Research_KayukthChektles7ethFirstNations" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -280,9 +280,9 @@ ORDER BY
 ------------------------------------------------------------------------------------------------------------
 -- Mamalilikulla First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_MamalilikullaFirstNation";
+DROP TABLE IF EXISTS erddap."NT_CTD_Research_MamalilikullaFirstNation";
 
-CREATE TABLE erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_MamalilikullaFirstNation" AS
+CREATE TABLE erddap."NT_CTD_Research_MamalilikullaFirstNation" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -311,9 +311,9 @@ ORDER BY
 ------------------------------------------------------------------------------------------------------------
 -- Mowachaht-Muchalaht First Nations / Salmon Parks Stewardship Society
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_Mowachaht-MuchalahtFirstNations/SalmonParksStewardshipSociety";
+DROP TABLE IF EXISTS erddap."NT_CTD_Research_MowachahtMuchalahtFirstNationsSalmonParksStewar";
 
-CREATE TABLE erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_Mowachaht-MuchalahtFirstNations/SalmonParksStewardshipSociety" AS
+CREATE TABLE erddap."NT_CTD_Research_MowachahtMuchalahtFirstNationsSalmonParksStewar" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -342,9 +342,9 @@ ORDER BY
 ------------------------------------------------------------------------------------------------------------
 -- Nuxalk First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_NuxalkFirstNation";
+DROP TABLE IF EXISTS erddap."NT_CTD_Research_NuxalkFirstNation";
 
-CREATE TABLE erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_NuxalkFirstNation" AS
+CREATE TABLE erddap."NT_CTD_Research_NuxalkFirstNation" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -373,9 +373,9 @@ ORDER BY
 ------------------------------------------------------------------------------------------------------------
 -- Qualicum First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_QualicumFirstNation";
+DROP TABLE IF EXISTS erddap."NT_CTD_Research_QualicumFirstNation";
 
-CREATE TABLE erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_QualicumFirstNation" AS
+CREATE TABLE erddap."NT_CTD_Research_QualicumFirstNation" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -404,9 +404,9 @@ ORDER BY
 ------------------------------------------------------------------------------------------------------------
 -- Snaw-Naw-As First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_Snaw-Naw-AsFirstNation";
+DROP TABLE IF EXISTS erddap."NT_CTD_Research_SnawNawAsFirstNation";
 
-CREATE TABLE erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_Snaw-Naw-AsFirstNation" AS
+CREATE TABLE erddap."NT_CTD_Research_SnawNawAsFirstNation" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -435,9 +435,9 @@ ORDER BY
 ------------------------------------------------------------------------------------------------------------
 -- Snuneymuxw First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_SnuneymuxwFirstNation";
+DROP TABLE IF EXISTS erddap."NT_CTD_Research_SnuneymuxwFirstNation";
 
-CREATE TABLE erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_SnuneymuxwFirstNation" AS
+CREATE TABLE erddap."NT_CTD_Research_SnuneymuxwFirstNation" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -466,9 +466,9 @@ ORDER BY
 ------------------------------------------------------------------------------------------------------------
 -- Tlowitsis First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_TlowitsisFirstNation";
+DROP TABLE IF EXISTS erddap."NT_CTD_Research_TlowitsisFirstNation";
 
-CREATE TABLE erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_TlowitsisFirstNation" AS
+CREATE TABLE erddap."NT_CTD_Research_TlowitsisFirstNation" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data

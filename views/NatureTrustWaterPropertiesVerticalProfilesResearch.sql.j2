@@ -2,9 +2,9 @@
 ------------------------------------------------------------------------------------------------------------
 -- {{nation.nation}}
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_{{nation.nation.replace(' ','')}}";
+DROP TABLE IF EXISTS erddap."{{nation.tablename}}";
 
-CREATE TABLE erddap."NatureTrustWaterPropertiesVerticalProfilesResearch_{{nation.nation.replace(' ','')}}" AS
+CREATE TABLE erddap."{{nation.tablename}}" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data

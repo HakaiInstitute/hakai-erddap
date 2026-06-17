@@ -2,9 +2,9 @@
 ------------------------------------------------------------------------------------------------------------
 -- {{nation.nation}}
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NatureTrustWaterPropertiesVerticalProfilesProvisional_{{nation.nation.replace(' ','')}}";
+DROP TABLE IF EXISTS erddap."{{nation.tablename}}";
 
-CREATE TABLE erddap."NatureTrustWaterPropertiesVerticalProfilesProvisional_{{nation.nation.replace(' ','')}}" AS
+CREATE TABLE erddap."{{nation.tablename}}" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -23,7 +23,7 @@ WHERE
         )
     )
     AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.survey in ('{{nation.surveys|join("','")|upper()}}')
+    AND ctd.ctd_file_cast_data.cruise in ('{{nation.surveys|join("','")|upper()}}')
 ORDER BY
     ctd.ctd_file_cast_data.work_area ASC,
     ctd.ctd_file_cast_data.station ASC,

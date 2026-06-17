@@ -132,6 +132,9 @@ def generate_nature_trust_provisional_ctd_view():
     with open(config_path) as f:
         config = yaml.safe_load(f)
 
+    for nation in config.get("nations"):
+        nation["tablename"] = ('NTCTDProvisional' + re.sub("[^A-Za-z0-9]", "", nation.get("nation")))[:63]
+
     result = environment.get_template(
         "NatureTrustWaterPropertiesVerticalProfilesProvisional.sql.j2"
     ).render(**config)
@@ -157,6 +160,11 @@ def generate_nature_trust_research_ctd_view():
 
     with open(config_path) as f:
         config = yaml.safe_load(f)
+
+    for nation in config.get("nations"):
+        nation["tablename"] = (
+            "NT_CTD_Research_" + re.sub("[^A-Za-z0-9]", "", nation.get("nation"))
+        )[:63]
 
     result = environment.get_template(
         "NatureTrustWaterPropertiesVerticalProfilesResearch.sql.j2"

@@ -1,12 +1,12 @@
-<dataset type="EDDTableFromDatabase" datasetID="NatureTrustWaterPropertiesVerticalProfilesResearch_{{name_san}}" active="false">
+<dataset type="EDDTableFromDatabase" datasetID="NatureTrustWaterPropertiesVerticalProfilesResearch_CowichanTribes" active="false">
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
     <schemaName>erddap</schemaName>
-    <tableName>"{{tablename}}"</tableName>
+    <tableName>"NTCTDResearchCowichanTribes"</tableName>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <orderBy>work_area,station,start_dt,direction_flag,pressure</orderBy>
     <addAttributes>
-        <att name="title">{{nation}} - Nature Trust Water Properties Profiles Measured by Oceanographic Profilers, Research</att>
+        <att name="title">Cowichan Tribes - Nature Trust Water Properties Profiles Measured by Oceanographic Profilers, Research</att>
         <att name="acknowledgment">Hakai Field Technicians, Research and IT groups</att>
         <att name="creator_url">https://www.hakai.org/</att>
         <att name="publisher_email">data@hakai.org</att>
