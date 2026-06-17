@@ -115,6 +115,58 @@ def generate_stream_stations_view():
     click.echo("Generated HakaiWatershedsStreamStations.sql")
 
 
+def generate_nature_trust_provisional_ctd_view():
+    """
+    Generate the nature trust ctd views for the ERDDAP server
+    """
+    # Load station configuration
+    config_path = Path(
+        "views/NatureTrustWaterPropertiesVerticalProfiles.yaml"
+    )
+    if not config_path.exists():
+        click.echo(
+            "Warning: NatureTrustWaterPropertiesVerticalProfiles.yaml not found, skipping stream stations view generation"
+        )
+        return
+
+    with open(config_path) as f:
+        config = yaml.safe_load(f)
+
+    result = environment.get_template(
+        "NatureTrustWaterPropertiesVerticalProfilesProvisional.sql.j2"
+    ).render(**config)
+    Path("views/NatureTrustWaterPropertiesVerticalProfilesProvisional.sql").write_text(
+        result
+    )
+    click.echo("Generated NatureTrustWaterPropertiesVerticalProfilesProvisional.sql")
+
+
+def generate_nature_trust_research_ctd_view():
+    """
+    Generate the nature trust ctd views for the ERDDAP server
+    """
+    # Load station configuration
+    config_path = Path(
+        "views/NatureTrustWaterPropertiesVerticalProfiles.yaml"
+    )
+    if not config_path.exists():
+        click.echo(
+            "Warning: NatureTrustWaterPropertiesVerticalProfiles.yaml not found, skipping stream stations view generation"
+        )
+        return
+
+    with open(config_path) as f:
+        config = yaml.safe_load(f)
+
+    result = environment.get_template(
+        "NatureTrustWaterPropertiesVerticalProfilesResearch.sql.j2"
+    ).render(**config)
+    Path("views/NatureTrustWaterPropertiesVerticalProfilesResearch.sql").write_text(
+        result
+    )
+    click.echo("Generated NatureTrustWaterPropertiesVerticalProfilesResearch.sql")
+
+
 @click.command()
 @click.option("--db_user", help="The database user", envvar="DB_USER")
 @click.option("--db_password", help="The database password", envvar="DB_PASSWORD")
@@ -139,6 +191,8 @@ def main(db_user, db_password, db_host, db_name, db_port, erddap_db_url, jinja_o
     """
     # Always try to generate stream stations view (no DB required)
     generate_stream_stations_view()
+    generate_nature_trust_provisional_ctd_view()
+    generate_nature_trust_research_ctd_view()
 
     if jinja_only:
         click.echo("Jinja-only mode - skipping database-dependent views")
