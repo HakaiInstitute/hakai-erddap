@@ -162,9 +162,7 @@ def generate_nature_trust_research_ctd_view():
         config = yaml.safe_load(f)
 
     for nation in config.get("nations"):
-        nation["tablename"] = (
-            "NT_CTD_Research_" + re.sub("[^A-Za-z0-9]", "", nation.get("nation"))
-        )[:63]
+        nation["tablename"] = ("NTCTDResearch" + re.sub("[^A-Za-z0-9]", "", nation.get("nation")))[:63]
 
     result = environment.get_template(
         "NatureTrustWaterPropertiesVerticalProfilesResearch.sql.j2"

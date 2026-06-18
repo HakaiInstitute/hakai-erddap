@@ -1,496 +1,496 @@
 ------------------------------------------------------------------------------------------------------------
 -- Ahousaht First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NT_CTD_Research_AhousahtFirstNation";
+DROP TABLE IF EXISTS erddap."NTCTDResearchAhousahtFirstNation";
 
-CREATE TABLE erddap."NT_CTD_Research_AhousahtFirstNation" AS
+CREATE TABLE erddap."NTCTDResearchAhousahtFirstNation" AS
 SELECT *
 FROM
-    ctd.ctd_file_cast_data
+    ctd.ctd_post_qc_data
 WHERE
     (
         ctd.ctd_post_qc_data.cast_processing_stage >= '10_qc_pi'::ctd.processing_stage
     )
-    AND ctd.ctd_file_cast_data.status IS NULL
-    AND ctd.ctd_file_cast_data.measurement_dt IS NOT NULL
+    AND ctd.ctd_post_qc_data.status IS NULL
+    AND ctd.ctd_post_qc_data.measurement_dt IS NOT NULL
     AND (
-        ctd.ctd_file_cast_data.direction_flag::text = 'd'::text
+        ctd.ctd_post_qc_data.direction_flag::text = 'd'::text
         OR (
-            ctd.ctd_file_cast_data.cast_type::text = 'Static'
-            AND ctd.ctd_file_cast_data.direction_flag::text = 's'
+            ctd.ctd_post_qc_data.cast_type::text = 'Static'
+            AND ctd.ctd_post_qc_data.direction_flag::text = 's'
         )
     )
-    AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.survey in ('MOYEHA')
+    AND ctd.ctd_post_qc_data.organization = 'NATURE TRUST'
+    AND ctd.ctd_post_qc_data.cruise in ('MOYEHA')
 ORDER BY
-    ctd.ctd_file_cast_data.work_area ASC,
-    ctd.ctd_file_cast_data.station ASC,
-    ctd.ctd_file_cast_data.start_dt ASC,
-    ctd.ctd_file_cast_data.direction_flag ASC,
-    ctd.ctd_file_cast_data.pressure ASC;
+    ctd.ctd_post_qc_data.work_area ASC,
+    ctd.ctd_post_qc_data.station ASC,
+    ctd.ctd_post_qc_data.start_dt ASC,
+    ctd.ctd_post_qc_data.direction_flag ASC,
+    ctd.ctd_post_qc_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
 -- Cowichan Tribes
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NT_CTD_Research_CowichanTribes";
+DROP TABLE IF EXISTS erddap."NTCTDResearchCowichanTribes";
 
-CREATE TABLE erddap."NT_CTD_Research_CowichanTribes" AS
+CREATE TABLE erddap."NTCTDResearchCowichanTribes" AS
 SELECT *
 FROM
-    ctd.ctd_file_cast_data
+    ctd.ctd_post_qc_data
 WHERE
     (
         ctd.ctd_post_qc_data.cast_processing_stage >= '10_qc_pi'::ctd.processing_stage
     )
-    AND ctd.ctd_file_cast_data.status IS NULL
-    AND ctd.ctd_file_cast_data.measurement_dt IS NOT NULL
+    AND ctd.ctd_post_qc_data.status IS NULL
+    AND ctd.ctd_post_qc_data.measurement_dt IS NOT NULL
     AND (
-        ctd.ctd_file_cast_data.direction_flag::text = 'd'::text
+        ctd.ctd_post_qc_data.direction_flag::text = 'd'::text
         OR (
-            ctd.ctd_file_cast_data.cast_type::text = 'Static'
-            AND ctd.ctd_file_cast_data.direction_flag::text = 's'
+            ctd.ctd_post_qc_data.cast_type::text = 'Static'
+            AND ctd.ctd_post_qc_data.direction_flag::text = 's'
         )
     )
-    AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.survey in ('COWICHAN')
+    AND ctd.ctd_post_qc_data.organization = 'NATURE TRUST'
+    AND ctd.ctd_post_qc_data.cruise in ('COWICHAN')
 ORDER BY
-    ctd.ctd_file_cast_data.work_area ASC,
-    ctd.ctd_file_cast_data.station ASC,
-    ctd.ctd_file_cast_data.start_dt ASC,
-    ctd.ctd_file_cast_data.direction_flag ASC,
-    ctd.ctd_file_cast_data.pressure ASC;
+    ctd.ctd_post_qc_data.work_area ASC,
+    ctd.ctd_post_qc_data.station ASC,
+    ctd.ctd_post_qc_data.start_dt ASC,
+    ctd.ctd_post_qc_data.direction_flag ASC,
+    ctd.ctd_post_qc_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
 -- Da'naxda'xw Awaetlala Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NT_CTD_Research_DanaxdaxwAwaetlalaNation";
+DROP TABLE IF EXISTS erddap."NTCTDResearchDanaxdaxwAwaetlalaNation";
 
-CREATE TABLE erddap."NT_CTD_Research_DanaxdaxwAwaetlalaNation" AS
+CREATE TABLE erddap."NTCTDResearchDanaxdaxwAwaetlalaNation" AS
 SELECT *
 FROM
-    ctd.ctd_file_cast_data
+    ctd.ctd_post_qc_data
 WHERE
     (
         ctd.ctd_post_qc_data.cast_processing_stage >= '10_qc_pi'::ctd.processing_stage
     )
-    AND ctd.ctd_file_cast_data.status IS NULL
-    AND ctd.ctd_file_cast_data.measurement_dt IS NOT NULL
+    AND ctd.ctd_post_qc_data.status IS NULL
+    AND ctd.ctd_post_qc_data.measurement_dt IS NOT NULL
     AND (
-        ctd.ctd_file_cast_data.direction_flag::text = 'd'::text
+        ctd.ctd_post_qc_data.direction_flag::text = 'd'::text
         OR (
-            ctd.ctd_file_cast_data.cast_type::text = 'Static'
-            AND ctd.ctd_file_cast_data.direction_flag::text = 's'
+            ctd.ctd_post_qc_data.cast_type::text = 'Static'
+            AND ctd.ctd_post_qc_data.direction_flag::text = 's'
         )
     )
-    AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.survey in ('GLENDALE')
+    AND ctd.ctd_post_qc_data.organization = 'NATURE TRUST'
+    AND ctd.ctd_post_qc_data.cruise in ('GLENDALE')
 ORDER BY
-    ctd.ctd_file_cast_data.work_area ASC,
-    ctd.ctd_file_cast_data.station ASC,
-    ctd.ctd_file_cast_data.start_dt ASC,
-    ctd.ctd_file_cast_data.direction_flag ASC,
-    ctd.ctd_file_cast_data.pressure ASC;
+    ctd.ctd_post_qc_data.work_area ASC,
+    ctd.ctd_post_qc_data.station ASC,
+    ctd.ctd_post_qc_data.start_dt ASC,
+    ctd.ctd_post_qc_data.direction_flag ASC,
+    ctd.ctd_post_qc_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
 -- Council of the Haida Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NT_CTD_Research_CounciloftheHaidaNation";
+DROP TABLE IF EXISTS erddap."NTCTDResearchCounciloftheHaidaNation";
 
-CREATE TABLE erddap."NT_CTD_Research_CounciloftheHaidaNation" AS
+CREATE TABLE erddap."NTCTDResearchCounciloftheHaidaNation" AS
 SELECT *
 FROM
-    ctd.ctd_file_cast_data
+    ctd.ctd_post_qc_data
 WHERE
     (
         ctd.ctd_post_qc_data.cast_processing_stage >= '10_qc_pi'::ctd.processing_stage
     )
-    AND ctd.ctd_file_cast_data.status IS NULL
-    AND ctd.ctd_file_cast_data.measurement_dt IS NOT NULL
+    AND ctd.ctd_post_qc_data.status IS NULL
+    AND ctd.ctd_post_qc_data.measurement_dt IS NOT NULL
     AND (
-        ctd.ctd_file_cast_data.direction_flag::text = 'd'::text
+        ctd.ctd_post_qc_data.direction_flag::text = 'd'::text
         OR (
-            ctd.ctd_file_cast_data.cast_type::text = 'Static'
-            AND ctd.ctd_file_cast_data.direction_flag::text = 's'
+            ctd.ctd_post_qc_data.cast_type::text = 'Static'
+            AND ctd.ctd_post_qc_data.direction_flag::text = 's'
         )
     )
-    AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.survey in ('NADEN','KUMDIS')
+    AND ctd.ctd_post_qc_data.organization = 'NATURE TRUST'
+    AND ctd.ctd_post_qc_data.cruise in ('NADEN','KUMDIS')
 ORDER BY
-    ctd.ctd_file_cast_data.work_area ASC,
-    ctd.ctd_file_cast_data.station ASC,
-    ctd.ctd_file_cast_data.start_dt ASC,
-    ctd.ctd_file_cast_data.direction_flag ASC,
-    ctd.ctd_file_cast_data.pressure ASC;
+    ctd.ctd_post_qc_data.work_area ASC,
+    ctd.ctd_post_qc_data.station ASC,
+    ctd.ctd_post_qc_data.start_dt ASC,
+    ctd.ctd_post_qc_data.direction_flag ASC,
+    ctd.ctd_post_qc_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
 -- Halalt First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NT_CTD_Research_HalaltFirstNation";
+DROP TABLE IF EXISTS erddap."NTCTDResearchHalaltFirstNation";
 
-CREATE TABLE erddap."NT_CTD_Research_HalaltFirstNation" AS
+CREATE TABLE erddap."NTCTDResearchHalaltFirstNation" AS
 SELECT *
 FROM
-    ctd.ctd_file_cast_data
+    ctd.ctd_post_qc_data
 WHERE
     (
         ctd.ctd_post_qc_data.cast_processing_stage >= '10_qc_pi'::ctd.processing_stage
     )
-    AND ctd.ctd_file_cast_data.status IS NULL
-    AND ctd.ctd_file_cast_data.measurement_dt IS NOT NULL
+    AND ctd.ctd_post_qc_data.status IS NULL
+    AND ctd.ctd_post_qc_data.measurement_dt IS NOT NULL
     AND (
-        ctd.ctd_file_cast_data.direction_flag::text = 'd'::text
+        ctd.ctd_post_qc_data.direction_flag::text = 'd'::text
         OR (
-            ctd.ctd_file_cast_data.cast_type::text = 'Static'
-            AND ctd.ctd_file_cast_data.direction_flag::text = 's'
+            ctd.ctd_post_qc_data.cast_type::text = 'Static'
+            AND ctd.ctd_post_qc_data.direction_flag::text = 's'
         )
     )
-    AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.survey in ('CHEMAINUS')
+    AND ctd.ctd_post_qc_data.organization = 'NATURE TRUST'
+    AND ctd.ctd_post_qc_data.cruise in ('CHEMAINUS')
 ORDER BY
-    ctd.ctd_file_cast_data.work_area ASC,
-    ctd.ctd_file_cast_data.station ASC,
-    ctd.ctd_file_cast_data.start_dt ASC,
-    ctd.ctd_file_cast_data.direction_flag ASC,
-    ctd.ctd_file_cast_data.pressure ASC;
+    ctd.ctd_post_qc_data.work_area ASC,
+    ctd.ctd_post_qc_data.station ASC,
+    ctd.ctd_post_qc_data.start_dt ASC,
+    ctd.ctd_post_qc_data.direction_flag ASC,
+    ctd.ctd_post_qc_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
 -- Heiltsuk  Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NT_CTD_Research_HeiltsukNation";
+DROP TABLE IF EXISTS erddap."NTCTDResearchHeiltsukNation";
 
-CREATE TABLE erddap."NT_CTD_Research_HeiltsukNation" AS
+CREATE TABLE erddap."NTCTDResearchHeiltsukNation" AS
 SELECT *
 FROM
-    ctd.ctd_file_cast_data
+    ctd.ctd_post_qc_data
 WHERE
     (
         ctd.ctd_post_qc_data.cast_processing_stage >= '10_qc_pi'::ctd.processing_stage
     )
-    AND ctd.ctd_file_cast_data.status IS NULL
-    AND ctd.ctd_file_cast_data.measurement_dt IS NOT NULL
+    AND ctd.ctd_post_qc_data.status IS NULL
+    AND ctd.ctd_post_qc_data.measurement_dt IS NOT NULL
     AND (
-        ctd.ctd_file_cast_data.direction_flag::text = 'd'::text
+        ctd.ctd_post_qc_data.direction_flag::text = 'd'::text
         OR (
-            ctd.ctd_file_cast_data.cast_type::text = 'Static'
-            AND ctd.ctd_file_cast_data.direction_flag::text = 's'
+            ctd.ctd_post_qc_data.cast_type::text = 'Static'
+            AND ctd.ctd_post_qc_data.direction_flag::text = 's'
         )
     )
-    AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.survey in ('KOEYE')
+    AND ctd.ctd_post_qc_data.organization = 'NATURE TRUST'
+    AND ctd.ctd_post_qc_data.cruise in ('KOEYE')
 ORDER BY
-    ctd.ctd_file_cast_data.work_area ASC,
-    ctd.ctd_file_cast_data.station ASC,
-    ctd.ctd_file_cast_data.start_dt ASC,
-    ctd.ctd_file_cast_data.direction_flag ASC,
-    ctd.ctd_file_cast_data.pressure ASC;
+    ctd.ctd_post_qc_data.work_area ASC,
+    ctd.ctd_post_qc_data.station ASC,
+    ctd.ctd_post_qc_data.start_dt ASC,
+    ctd.ctd_post_qc_data.direction_flag ASC,
+    ctd.ctd_post_qc_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
 -- K'ómoks First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NT_CTD_Research_KmoksFirstNation";
+DROP TABLE IF EXISTS erddap."NTCTDResearchKmoksFirstNation";
 
-CREATE TABLE erddap."NT_CTD_Research_KmoksFirstNation" AS
+CREATE TABLE erddap."NTCTDResearchKmoksFirstNation" AS
 SELECT *
 FROM
-    ctd.ctd_file_cast_data
+    ctd.ctd_post_qc_data
 WHERE
     (
         ctd.ctd_post_qc_data.cast_processing_stage >= '10_qc_pi'::ctd.processing_stage
     )
-    AND ctd.ctd_file_cast_data.status IS NULL
-    AND ctd.ctd_file_cast_data.measurement_dt IS NOT NULL
+    AND ctd.ctd_post_qc_data.status IS NULL
+    AND ctd.ctd_post_qc_data.measurement_dt IS NOT NULL
     AND (
-        ctd.ctd_file_cast_data.direction_flag::text = 'd'::text
+        ctd.ctd_post_qc_data.direction_flag::text = 'd'::text
         OR (
-            ctd.ctd_file_cast_data.cast_type::text = 'Static'
-            AND ctd.ctd_file_cast_data.direction_flag::text = 's'
+            ctd.ctd_post_qc_data.cast_type::text = 'Static'
+            AND ctd.ctd_post_qc_data.direction_flag::text = 's'
         )
     )
-    AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.survey in ('SALMON')
+    AND ctd.ctd_post_qc_data.organization = 'NATURE TRUST'
+    AND ctd.ctd_post_qc_data.cruise in ('SALMON')
 ORDER BY
-    ctd.ctd_file_cast_data.work_area ASC,
-    ctd.ctd_file_cast_data.station ASC,
-    ctd.ctd_file_cast_data.start_dt ASC,
-    ctd.ctd_file_cast_data.direction_flag ASC,
-    ctd.ctd_file_cast_data.pressure ASC;
+    ctd.ctd_post_qc_data.work_area ASC,
+    ctd.ctd_post_qc_data.station ASC,
+    ctd.ctd_post_qc_data.start_dt ASC,
+    ctd.ctd_post_qc_data.direction_flag ASC,
+    ctd.ctd_post_qc_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
 -- Kwakiutl First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NT_CTD_Research_KwakiutlFirstNation";
+DROP TABLE IF EXISTS erddap."NTCTDResearchKwakiutlFirstNation";
 
-CREATE TABLE erddap."NT_CTD_Research_KwakiutlFirstNation" AS
+CREATE TABLE erddap."NTCTDResearchKwakiutlFirstNation" AS
 SELECT *
 FROM
-    ctd.ctd_file_cast_data
+    ctd.ctd_post_qc_data
 WHERE
     (
         ctd.ctd_post_qc_data.cast_processing_stage >= '10_qc_pi'::ctd.processing_stage
     )
-    AND ctd.ctd_file_cast_data.status IS NULL
-    AND ctd.ctd_file_cast_data.measurement_dt IS NOT NULL
+    AND ctd.ctd_post_qc_data.status IS NULL
+    AND ctd.ctd_post_qc_data.measurement_dt IS NOT NULL
     AND (
-        ctd.ctd_file_cast_data.direction_flag::text = 'd'::text
+        ctd.ctd_post_qc_data.direction_flag::text = 'd'::text
         OR (
-            ctd.ctd_file_cast_data.cast_type::text = 'Static'
-            AND ctd.ctd_file_cast_data.direction_flag::text = 's'
+            ctd.ctd_post_qc_data.cast_type::text = 'Static'
+            AND ctd.ctd_post_qc_data.direction_flag::text = 's'
         )
     )
-    AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.survey in ('CLUXEWE','QUATSE')
+    AND ctd.ctd_post_qc_data.organization = 'NATURE TRUST'
+    AND ctd.ctd_post_qc_data.cruise in ('CLUXEWE','QUATSE')
 ORDER BY
-    ctd.ctd_file_cast_data.work_area ASC,
-    ctd.ctd_file_cast_data.station ASC,
-    ctd.ctd_file_cast_data.start_dt ASC,
-    ctd.ctd_file_cast_data.direction_flag ASC,
-    ctd.ctd_file_cast_data.pressure ASC;
+    ctd.ctd_post_qc_data.work_area ASC,
+    ctd.ctd_post_qc_data.station ASC,
+    ctd.ctd_post_qc_data.start_dt ASC,
+    ctd.ctd_post_qc_data.direction_flag ASC,
+    ctd.ctd_post_qc_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
 -- Ka:'yu:'k't'h'/Che:k'tles7et'h' First Nations
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NT_CTD_Research_KayukthChektles7ethFirstNations";
+DROP TABLE IF EXISTS erddap."NTCTDResearchKayukthChektles7ethFirstNations";
 
-CREATE TABLE erddap."NT_CTD_Research_KayukthChektles7ethFirstNations" AS
+CREATE TABLE erddap."NTCTDResearchKayukthChektles7ethFirstNations" AS
 SELECT *
 FROM
-    ctd.ctd_file_cast_data
+    ctd.ctd_post_qc_data
 WHERE
     (
         ctd.ctd_post_qc_data.cast_processing_stage >= '10_qc_pi'::ctd.processing_stage
     )
-    AND ctd.ctd_file_cast_data.status IS NULL
-    AND ctd.ctd_file_cast_data.measurement_dt IS NOT NULL
+    AND ctd.ctd_post_qc_data.status IS NULL
+    AND ctd.ctd_post_qc_data.measurement_dt IS NOT NULL
     AND (
-        ctd.ctd_file_cast_data.direction_flag::text = 'd'::text
+        ctd.ctd_post_qc_data.direction_flag::text = 'd'::text
         OR (
-            ctd.ctd_file_cast_data.cast_type::text = 'Static'
-            AND ctd.ctd_file_cast_data.direction_flag::text = 's'
+            ctd.ctd_post_qc_data.cast_type::text = 'Static'
+            AND ctd.ctd_post_qc_data.direction_flag::text = 's'
         )
     )
-    AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.survey in ('KAOUK','MALKSOPE')
+    AND ctd.ctd_post_qc_data.organization = 'NATURE TRUST'
+    AND ctd.ctd_post_qc_data.cruise in ('KAOUK','MALKSOPE')
 ORDER BY
-    ctd.ctd_file_cast_data.work_area ASC,
-    ctd.ctd_file_cast_data.station ASC,
-    ctd.ctd_file_cast_data.start_dt ASC,
-    ctd.ctd_file_cast_data.direction_flag ASC,
-    ctd.ctd_file_cast_data.pressure ASC;
+    ctd.ctd_post_qc_data.work_area ASC,
+    ctd.ctd_post_qc_data.station ASC,
+    ctd.ctd_post_qc_data.start_dt ASC,
+    ctd.ctd_post_qc_data.direction_flag ASC,
+    ctd.ctd_post_qc_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
 -- Mamalilikulla First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NT_CTD_Research_MamalilikullaFirstNation";
+DROP TABLE IF EXISTS erddap."NTCTDResearchMamalilikullaFirstNation";
 
-CREATE TABLE erddap."NT_CTD_Research_MamalilikullaFirstNation" AS
+CREATE TABLE erddap."NTCTDResearchMamalilikullaFirstNation" AS
 SELECT *
 FROM
-    ctd.ctd_file_cast_data
+    ctd.ctd_post_qc_data
 WHERE
     (
         ctd.ctd_post_qc_data.cast_processing_stage >= '10_qc_pi'::ctd.processing_stage
     )
-    AND ctd.ctd_file_cast_data.status IS NULL
-    AND ctd.ctd_file_cast_data.measurement_dt IS NOT NULL
+    AND ctd.ctd_post_qc_data.status IS NULL
+    AND ctd.ctd_post_qc_data.measurement_dt IS NOT NULL
     AND (
-        ctd.ctd_file_cast_data.direction_flag::text = 'd'::text
+        ctd.ctd_post_qc_data.direction_flag::text = 'd'::text
         OR (
-            ctd.ctd_file_cast_data.cast_type::text = 'Static'
-            AND ctd.ctd_file_cast_data.direction_flag::text = 's'
+            ctd.ctd_post_qc_data.cast_type::text = 'Static'
+            AND ctd.ctd_post_qc_data.direction_flag::text = 's'
         )
     )
-    AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.survey in ('HOEYA')
+    AND ctd.ctd_post_qc_data.organization = 'NATURE TRUST'
+    AND ctd.ctd_post_qc_data.cruise in ('HOEYA')
 ORDER BY
-    ctd.ctd_file_cast_data.work_area ASC,
-    ctd.ctd_file_cast_data.station ASC,
-    ctd.ctd_file_cast_data.start_dt ASC,
-    ctd.ctd_file_cast_data.direction_flag ASC,
-    ctd.ctd_file_cast_data.pressure ASC;
+    ctd.ctd_post_qc_data.work_area ASC,
+    ctd.ctd_post_qc_data.station ASC,
+    ctd.ctd_post_qc_data.start_dt ASC,
+    ctd.ctd_post_qc_data.direction_flag ASC,
+    ctd.ctd_post_qc_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
 -- Mowachaht-Muchalaht First Nations / Salmon Parks Stewardship Society
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NT_CTD_Research_MowachahtMuchalahtFirstNationsSalmonParksStewar";
+DROP TABLE IF EXISTS erddap."NTCTDResearchMowachahtMuchalahtFirstNationsSalmonParksStewardsh";
 
-CREATE TABLE erddap."NT_CTD_Research_MowachahtMuchalahtFirstNationsSalmonParksStewar" AS
+CREATE TABLE erddap."NTCTDResearchMowachahtMuchalahtFirstNationsSalmonParksStewardsh" AS
 SELECT *
 FROM
-    ctd.ctd_file_cast_data
+    ctd.ctd_post_qc_data
 WHERE
     (
         ctd.ctd_post_qc_data.cast_processing_stage >= '10_qc_pi'::ctd.processing_stage
     )
-    AND ctd.ctd_file_cast_data.status IS NULL
-    AND ctd.ctd_file_cast_data.measurement_dt IS NOT NULL
+    AND ctd.ctd_post_qc_data.status IS NULL
+    AND ctd.ctd_post_qc_data.measurement_dt IS NOT NULL
     AND (
-        ctd.ctd_file_cast_data.direction_flag::text = 'd'::text
+        ctd.ctd_post_qc_data.direction_flag::text = 'd'::text
         OR (
-            ctd.ctd_file_cast_data.cast_type::text = 'Static'
-            AND ctd.ctd_file_cast_data.direction_flag::text = 's'
+            ctd.ctd_post_qc_data.cast_type::text = 'Static'
+            AND ctd.ctd_post_qc_data.direction_flag::text = 's'
         )
     )
-    AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.survey in ('CONUMA')
+    AND ctd.ctd_post_qc_data.organization = 'NATURE TRUST'
+    AND ctd.ctd_post_qc_data.cruise in ('CONUMA')
 ORDER BY
-    ctd.ctd_file_cast_data.work_area ASC,
-    ctd.ctd_file_cast_data.station ASC,
-    ctd.ctd_file_cast_data.start_dt ASC,
-    ctd.ctd_file_cast_data.direction_flag ASC,
-    ctd.ctd_file_cast_data.pressure ASC;
+    ctd.ctd_post_qc_data.work_area ASC,
+    ctd.ctd_post_qc_data.station ASC,
+    ctd.ctd_post_qc_data.start_dt ASC,
+    ctd.ctd_post_qc_data.direction_flag ASC,
+    ctd.ctd_post_qc_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
 -- Nuxalk First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NT_CTD_Research_NuxalkFirstNation";
+DROP TABLE IF EXISTS erddap."NTCTDResearchNuxalkFirstNation";
 
-CREATE TABLE erddap."NT_CTD_Research_NuxalkFirstNation" AS
+CREATE TABLE erddap."NTCTDResearchNuxalkFirstNation" AS
 SELECT *
 FROM
-    ctd.ctd_file_cast_data
+    ctd.ctd_post_qc_data
 WHERE
     (
         ctd.ctd_post_qc_data.cast_processing_stage >= '10_qc_pi'::ctd.processing_stage
     )
-    AND ctd.ctd_file_cast_data.status IS NULL
-    AND ctd.ctd_file_cast_data.measurement_dt IS NOT NULL
+    AND ctd.ctd_post_qc_data.status IS NULL
+    AND ctd.ctd_post_qc_data.measurement_dt IS NOT NULL
     AND (
-        ctd.ctd_file_cast_data.direction_flag::text = 'd'::text
+        ctd.ctd_post_qc_data.direction_flag::text = 'd'::text
         OR (
-            ctd.ctd_file_cast_data.cast_type::text = 'Static'
-            AND ctd.ctd_file_cast_data.direction_flag::text = 's'
+            ctd.ctd_post_qc_data.cast_type::text = 'Static'
+            AND ctd.ctd_post_qc_data.direction_flag::text = 's'
         )
     )
-    AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.survey in ('BELLA COOLA','ASSEEK')
+    AND ctd.ctd_post_qc_data.organization = 'NATURE TRUST'
+    AND ctd.ctd_post_qc_data.cruise in ('BELLA COOLA','ASSEEK')
 ORDER BY
-    ctd.ctd_file_cast_data.work_area ASC,
-    ctd.ctd_file_cast_data.station ASC,
-    ctd.ctd_file_cast_data.start_dt ASC,
-    ctd.ctd_file_cast_data.direction_flag ASC,
-    ctd.ctd_file_cast_data.pressure ASC;
+    ctd.ctd_post_qc_data.work_area ASC,
+    ctd.ctd_post_qc_data.station ASC,
+    ctd.ctd_post_qc_data.start_dt ASC,
+    ctd.ctd_post_qc_data.direction_flag ASC,
+    ctd.ctd_post_qc_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
 -- Qualicum First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NT_CTD_Research_QualicumFirstNation";
+DROP TABLE IF EXISTS erddap."NTCTDResearchQualicumFirstNation";
 
-CREATE TABLE erddap."NT_CTD_Research_QualicumFirstNation" AS
+CREATE TABLE erddap."NTCTDResearchQualicumFirstNation" AS
 SELECT *
 FROM
-    ctd.ctd_file_cast_data
+    ctd.ctd_post_qc_data
 WHERE
     (
         ctd.ctd_post_qc_data.cast_processing_stage >= '10_qc_pi'::ctd.processing_stage
     )
-    AND ctd.ctd_file_cast_data.status IS NULL
-    AND ctd.ctd_file_cast_data.measurement_dt IS NOT NULL
+    AND ctd.ctd_post_qc_data.status IS NULL
+    AND ctd.ctd_post_qc_data.measurement_dt IS NOT NULL
     AND (
-        ctd.ctd_file_cast_data.direction_flag::text = 'd'::text
+        ctd.ctd_post_qc_data.direction_flag::text = 'd'::text
         OR (
-            ctd.ctd_file_cast_data.cast_type::text = 'Static'
-            AND ctd.ctd_file_cast_data.direction_flag::text = 's'
+            ctd.ctd_post_qc_data.cast_type::text = 'Static'
+            AND ctd.ctd_post_qc_data.direction_flag::text = 's'
         )
     )
-    AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.survey in ('LITTLE QUALICUM')
+    AND ctd.ctd_post_qc_data.organization = 'NATURE TRUST'
+    AND ctd.ctd_post_qc_data.cruise in ('LITTLE QUALICUM')
 ORDER BY
-    ctd.ctd_file_cast_data.work_area ASC,
-    ctd.ctd_file_cast_data.station ASC,
-    ctd.ctd_file_cast_data.start_dt ASC,
-    ctd.ctd_file_cast_data.direction_flag ASC,
-    ctd.ctd_file_cast_data.pressure ASC;
+    ctd.ctd_post_qc_data.work_area ASC,
+    ctd.ctd_post_qc_data.station ASC,
+    ctd.ctd_post_qc_data.start_dt ASC,
+    ctd.ctd_post_qc_data.direction_flag ASC,
+    ctd.ctd_post_qc_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
 -- Snaw-Naw-As First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NT_CTD_Research_SnawNawAsFirstNation";
+DROP TABLE IF EXISTS erddap."NTCTDResearchSnawNawAsFirstNation";
 
-CREATE TABLE erddap."NT_CTD_Research_SnawNawAsFirstNation" AS
+CREATE TABLE erddap."NTCTDResearchSnawNawAsFirstNation" AS
 SELECT *
 FROM
-    ctd.ctd_file_cast_data
+    ctd.ctd_post_qc_data
 WHERE
     (
         ctd.ctd_post_qc_data.cast_processing_stage >= '10_qc_pi'::ctd.processing_stage
     )
-    AND ctd.ctd_file_cast_data.status IS NULL
-    AND ctd.ctd_file_cast_data.measurement_dt IS NOT NULL
+    AND ctd.ctd_post_qc_data.status IS NULL
+    AND ctd.ctd_post_qc_data.measurement_dt IS NOT NULL
     AND (
-        ctd.ctd_file_cast_data.direction_flag::text = 'd'::text
+        ctd.ctd_post_qc_data.direction_flag::text = 'd'::text
         OR (
-            ctd.ctd_file_cast_data.cast_type::text = 'Static'
-            AND ctd.ctd_file_cast_data.direction_flag::text = 's'
+            ctd.ctd_post_qc_data.cast_type::text = 'Static'
+            AND ctd.ctd_post_qc_data.direction_flag::text = 's'
         )
     )
-    AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.survey in ('ENGLISHMAN')
+    AND ctd.ctd_post_qc_data.organization = 'NATURE TRUST'
+    AND ctd.ctd_post_qc_data.cruise in ('ENGLISHMAN')
 ORDER BY
-    ctd.ctd_file_cast_data.work_area ASC,
-    ctd.ctd_file_cast_data.station ASC,
-    ctd.ctd_file_cast_data.start_dt ASC,
-    ctd.ctd_file_cast_data.direction_flag ASC,
-    ctd.ctd_file_cast_data.pressure ASC;
+    ctd.ctd_post_qc_data.work_area ASC,
+    ctd.ctd_post_qc_data.station ASC,
+    ctd.ctd_post_qc_data.start_dt ASC,
+    ctd.ctd_post_qc_data.direction_flag ASC,
+    ctd.ctd_post_qc_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
 -- Snuneymuxw First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NT_CTD_Research_SnuneymuxwFirstNation";
+DROP TABLE IF EXISTS erddap."NTCTDResearchSnuneymuxwFirstNation";
 
-CREATE TABLE erddap."NT_CTD_Research_SnuneymuxwFirstNation" AS
+CREATE TABLE erddap."NTCTDResearchSnuneymuxwFirstNation" AS
 SELECT *
 FROM
-    ctd.ctd_file_cast_data
+    ctd.ctd_post_qc_data
 WHERE
     (
         ctd.ctd_post_qc_data.cast_processing_stage >= '10_qc_pi'::ctd.processing_stage
     )
-    AND ctd.ctd_file_cast_data.status IS NULL
-    AND ctd.ctd_file_cast_data.measurement_dt IS NOT NULL
+    AND ctd.ctd_post_qc_data.status IS NULL
+    AND ctd.ctd_post_qc_data.measurement_dt IS NOT NULL
     AND (
-        ctd.ctd_file_cast_data.direction_flag::text = 'd'::text
+        ctd.ctd_post_qc_data.direction_flag::text = 'd'::text
         OR (
-            ctd.ctd_file_cast_data.cast_type::text = 'Static'
-            AND ctd.ctd_file_cast_data.direction_flag::text = 's'
+            ctd.ctd_post_qc_data.cast_type::text = 'Static'
+            AND ctd.ctd_post_qc_data.direction_flag::text = 's'
         )
     )
-    AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.survey in ('NANAIMO')
+    AND ctd.ctd_post_qc_data.organization = 'NATURE TRUST'
+    AND ctd.ctd_post_qc_data.cruise in ('NANAIMO')
 ORDER BY
-    ctd.ctd_file_cast_data.work_area ASC,
-    ctd.ctd_file_cast_data.station ASC,
-    ctd.ctd_file_cast_data.start_dt ASC,
-    ctd.ctd_file_cast_data.direction_flag ASC,
-    ctd.ctd_file_cast_data.pressure ASC;
+    ctd.ctd_post_qc_data.work_area ASC,
+    ctd.ctd_post_qc_data.station ASC,
+    ctd.ctd_post_qc_data.start_dt ASC,
+    ctd.ctd_post_qc_data.direction_flag ASC,
+    ctd.ctd_post_qc_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
 -- Tlowitsis First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NT_CTD_Research_TlowitsisFirstNation";
+DROP TABLE IF EXISTS erddap."NTCTDResearchTlowitsisFirstNation";
 
-CREATE TABLE erddap."NT_CTD_Research_TlowitsisFirstNation" AS
+CREATE TABLE erddap."NTCTDResearchTlowitsisFirstNation" AS
 SELECT *
 FROM
-    ctd.ctd_file_cast_data
+    ctd.ctd_post_qc_data
 WHERE
     (
         ctd.ctd_post_qc_data.cast_processing_stage >= '10_qc_pi'::ctd.processing_stage
     )
-    AND ctd.ctd_file_cast_data.status IS NULL
-    AND ctd.ctd_file_cast_data.measurement_dt IS NOT NULL
+    AND ctd.ctd_post_qc_data.status IS NULL
+    AND ctd.ctd_post_qc_data.measurement_dt IS NOT NULL
     AND (
-        ctd.ctd_file_cast_data.direction_flag::text = 'd'::text
+        ctd.ctd_post_qc_data.direction_flag::text = 'd'::text
         OR (
-            ctd.ctd_file_cast_data.cast_type::text = 'Static'
-            AND ctd.ctd_file_cast_data.direction_flag::text = 's'
+            ctd.ctd_post_qc_data.cast_type::text = 'Static'
+            AND ctd.ctd_post_qc_data.direction_flag::text = 's'
         )
     )
-    AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.survey in ('FULMORE','SHOAL')
+    AND ctd.ctd_post_qc_data.organization = 'NATURE TRUST'
+    AND ctd.ctd_post_qc_data.cruise in ('FULMORE','SHOAL')
 ORDER BY
-    ctd.ctd_file_cast_data.work_area ASC,
-    ctd.ctd_file_cast_data.station ASC,
-    ctd.ctd_file_cast_data.start_dt ASC,
-    ctd.ctd_file_cast_data.direction_flag ASC,
-    ctd.ctd_file_cast_data.pressure ASC;
+    ctd.ctd_post_qc_data.work_area ASC,
+    ctd.ctd_post_qc_data.station ASC,
+    ctd.ctd_post_qc_data.start_dt ASC,
+    ctd.ctd_post_qc_data.direction_flag ASC,
+    ctd.ctd_post_qc_data.pressure ASC;
 

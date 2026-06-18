@@ -3,27 +3,26 @@
     <driverName>org.postgresql.Driver</driverName>
     <schemaName>erddap</schemaName>
     <tableName>"NTCTDProvisionalDanaxdaxwAwaetlalaNation"</tableName>
+
     <orderBy>work_area,station,start_dt,direction_flag,pressure</orderBy>
-
-    <!-- <iso19115File>/xml/HakaiCTDQU39_iso19115.xml</iso19115File> -->
-
     <addAttributes>
-        <att name="acknowledgment">Hakai Field Technicians, Research and IT groups</att>
-        <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
-        <att name="infoUrl">https://www.hakai.org</att>
-        <att name="sourceUrl">(local files)</att>
-        <att name="keywords_vocabulary">GCMD Science Keywords</att>
-        <att name="license">Creative Commons Attribution 4.0</att>
-        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
-        <att name="cdm_timeseries_variables">station,latitude,longitude</att>
-        <att name="institution">Nature Trust</att>
-        <att name="title">Da'naxda'xw Awaetlala Nation - Nature Trust Water Properties Profiles Measured by Oceanographic Profilers, Provisional</att>
-        <att name="subsetVariables">cruise, vessel, device_model, device_sn, device_firmware, work_area, direction_flag,hakai_id,station</att>
+        <att name="acknowledgment">Nature Trust, Partner First Nation, and Hakai Field Technicians, Research and IT groups</att>
         <att name="cdm_data_type">TimeSeriesProfile</att>
         <att name="cdm_profile_variables">hakai_id</att>
-        <att name="platform">self-propelled small boat</att>
+        <att name="cdm_timeseries_variables">station,latitude,longitude</att>
+        <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
+        <att name="infoUrl">https://www.hakai.org</att>
+        <att name="institution">Nature Trust</att>
+        <att name="keywords_vocabulary">GCMD Science Keywords</att>
+        <att name="keywords">aggregate_quality_flag, backscatter, backscatter_beta, backscatter_beta_flag, c_star_at, c_star_at_flag, c_star_at_flag_description, c_star_at_UQL, cast, cdom, cdom_ppb, cdom_ppb_flag,  chlorophyll, chlorophyll-a, conductivity, dissolved, dissolved oxygen, dissolved_oxygen_ml_l, dissolved_oxygen_percent, downwelling_photosynthetic_photon_spherical_irradiance_in_sea_water, flc, mass_concentration_of_chlorophyll_in_sea_water, par,  platform_speed_wrt_sea_water, pressure, rinko, rinko_do_ml_l, sea_water_electrical_conductivity, sea_water_practical_salinity, sea_water_pressure, sea_water_temperature, sea_water_turbidity, spec_cond, temperature,turbidity, volume_beam_attenuation_coefficient_of_radiative_flux_in_sea_water_corrected_for_pure_water_attenuance, volume_fraction_of_oxygen_in_sea_water</att>        
+        <att name="license">Creative Commons Attribution 4.0</att>
         <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
-        <att name="summary">CTD Profile dataset summary</att>
+        <att name="platform">self-propelled small boat</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
+        <att name="subsetVariables">work_area, cruise, station, vessel, device_model, device_sn</att>
+        <att name="summary">Nature Trust CTD profiles provisional</att>
+        <att name="title">BC Estuary Water Quality Monitoring Data (Da'naxda'xw Awaetlala Nation) - Provisional</att>
     </addAttributes>
     <dataVariable>
         <sourceName>work_area</sourceName>
