@@ -24,7 +24,7 @@
 		<att name="cdm_timeseries_variables">filename,instrument_model,instrument_serial_number,station,latitude,longitude,ALATZZ01,ALONZZ01</att>
 		<att name="cdm_profile_variables">time,ELTMEP01,PTCHGP01,HEADCM01,ROLLGP01,PRESPR01,PRESPR01_QC,SVELCV01,DTUT8601,PPSAADCP</att>
 		<att name="Conventions">CF-1.8, COARDS, ACDD-1.3</att>
-		<att name="date_modified">2026-05-12T21:34:22.249Z</att>
+		<att name="date_modified">2026-06-10T22:29:05.219Z</att>
 		<att name="infoUrl">https://catalogue.hakai.org/dataset/ca-cioos_87a845e3-e71a-43cc-a75f-ec6a3b812a0e</att>
 		<att name="institution">Hakai Institute</att>
 		<att name="creator_name">Hakai Institute</att>
