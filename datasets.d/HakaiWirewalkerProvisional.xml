@@ -1,14 +1,11 @@
-<dataset type="EDDTableFromParquetFiles" datasetID="HakaiWirewalkerProvisional" active="true">
-    <fileDir>/datasets/HakaiWirewalkerProvisional/</fileDir>
-    <fileNameRegex>.*\.parquet</fileNameRegex>
-    <recursive>true</recursive>
-    <pathRegex>.*</pathRegex>
-    <metadataFrom>last</metadataFrom>
-    <fileTableInMemory>false</fileTableInMemory>
-    <accessibleViaFiles>true</accessibleViaFiles>
+<dataset type="EDDTableFromDatabase" datasetID="HakaiWirewalkerProvisional" active="true">
+    <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
+    <driverName>org.postgresql.Driver</driverName>
+    <schemaName>erddap</schemaName>
+    <tableName>"HakaiWirewalkerProvisional"</tableName>
     <reloadEveryNMinutes>1440</reloadEveryNMinutes>
-    <updateEveryNMillis>10000</updateEveryNMillis>
-    <defaultDataQuery>&amp;cast_id!=NaN</defaultDataQuery>
+    <defaultGraphQuery>longitude%2Clatitude%2Ctime&amp;time&gt;=now-1month</defaultGraphQuery>
+    <defaultDataQuery>&amp;time&gt;=now-1month</defaultDataQuery>
     <addAttributes>
         <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
         <att name="institution">Hakai Institute</att>
@@ -20,7 +17,7 @@
         <att name="title">Water Property Measurements from the Bute Inlet Ocean Observing Station (BIOOS) Wirewalker, Bute Inlet, BC, Canada (Provisional)</att>
         <att name="summary">Bute Inlet, a prominent fjord on the British Columbia coast, has been a site for high-resolution oceanographic profiling through the Bute Inlet Ocean Observing Station (BIOOS). A Canadian Pacific Robotic Ocean Observing Facility (C-PROOF) Wirewalker wave-powered profiling instrument is deployed on a mooring in the central fjord, collecting vertical profiles of conductivity, temperature, pressure, and dissolved oxygen concentration. This data contribution consists of provisional measurements spanning the current year and has not undergone full quality control.</att>
         <att name="infoUrl">https://catalogue.hakai.org/dataset/ca-cioos_a8671db6-81cc-4c92-b681-58595fe66182</att>
-        <att name="sourceUrl">(local files)</att>
+        <att name="sourceUrl">(local database)</att>
         <att name="geospatial_lat_max">50.5744</att>
         <att name="geospatial_lat_min">50.5744</att>
         <att name="geospatial_lon_max">-124.9009</att>
@@ -59,18 +56,27 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>datetime_utc</sourceName>
+        <sourceName>measurement_dt</sourceName>
         <destinationName>time</destinationName>
         <dataType>double</dataType>
         <addAttributes>
             <att name="ioos_category">Time</att>
             <att name="long_name">Time</att>
             <att name="standard_name">time</att>
-            <att name="units">milliseconds since 1970-01-01T00:00:00Z</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>Conductivity (mS/cm)</sourceName>
+        <sourceName>pk</sourceName>
+        <destinationName>pk</destinationName>
+        <dataType>long</dataType>
+        <addAttributes>
+            <att name="long_name">Primary Key</att>
+            <att name="ioos_category">Identifier</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>conductivity</sourceName>
         <destinationName>conductivity</destinationName>
         <dataType>double</dataType>
         <addAttributes>
@@ -81,7 +87,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>Temperature (&#176;C)</sourceName>
+        <sourceName>temperature</sourceName>
         <destinationName>temperature</destinationName>
         <dataType>double</dataType>
         <addAttributes>
@@ -92,7 +98,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>Pressure (dbar)</sourceName>
+        <sourceName>pressure</sourceName>
         <destinationName>pressure</destinationName>
         <dataType>double</dataType>
         <addAttributes>
@@ -103,7 +109,7 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>Temperature 1 (&#176;C)</sourceName>
+        <sourceName>temperature_1</sourceName>
         <destinationName>temperature_1</destinationName>
         <dataType>double</dataType>
         <addAttributes>
@@ -114,14 +120,44 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>Dissolved O&#8322; concentration (&#181;mol/l)</sourceName>
+        <sourceName>dissolved_oxygen_ml_l</sourceName>
         <destinationName>dissolved_o2</destinationName>
         <dataType>double</dataType>
         <addAttributes>
-            <att name="long_name">Dissolved O2 Concentration</att>
-            <att name="standard_name">moles_of_oxygen_per_unit_mass_in_sea_water</att>
-            <att name="units">umol/L</att>
+            <att name="long_name">Dissolved Oxygen Concentration</att>
+            <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+            <att name="units">mL/L</att>
             <att name="ioos_category">Dissolved O2</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>backscatter_counts</sourceName>
+        <destinationName>backscatter_counts</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            <att name="long_name">Backscatter Counts</att>
+            <att name="units">counts</att>
+            <att name="ioos_category">Optical Properties</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>chlorophyll_counts</sourceName>
+        <destinationName>chlorophyll_counts</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            <att name="long_name">Chlorophyll Counts</att>
+            <att name="units">counts</att>
+            <att name="ioos_category">Optical Properties</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>cdom_counts</sourceName>
+        <destinationName>cdom_counts</destinationName>
+        <dataType>double</dataType>
+        <addAttributes>
+            <att name="long_name">CDOM Counts</att>
+            <att name="units">counts</att>
+            <att name="ioos_category">Optical Properties</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -131,16 +167,6 @@
         <addAttributes>
             <att name="long_name">Cast ID</att>
             <att name="ioos_category">Identifier</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>Time (ms)</sourceName>
-        <destinationName>time_ms</destinationName>
-        <dataType>double</dataType>
-        <addAttributes>
-            <att name="long_name">Time (ms)</att>
-            <att name="units">ms</att>
-            <att name="ioos_category">Time</att>
             <att name="comment">##Limitations:
 Haven&#8217;t applied appropriate QC on the data yet.</att>
         </addAttributes>
