@@ -15,15 +15,25 @@
         <att name="cdm_timeseries_variables">station</att>
         <att name="subsetVariables">station</att>
         <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
-        <att name="infoUrl">???</att>
-        <att name="institution">Hakai Institute</att>
-        <att name="keywords">average, data, discharge, elevation, turbidity, temperature, stage</att>
-        <att name="license">[standard]</att>
+        <att name="infoUrl">https://catalogue.hakai.org/dataset/ca-cioos_79368bf3-8f02-4355-837e-3a6cef0d2886</att>
+        <att name="institution">Vancouver Island University</att>
+        <att name="keywords">discharge,water,hydrograph,stream,high flow,other,watersheds,CIOOS:other</att>
+        <att name="license">https://creativecommons.org/licenses/by/4.0</att>
         <att name="sourceUrl">(local database)</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
-        <att name="summary">Data from a local source.</att>
+        <att name="summary">**General field methods**
+
+In natural streams it is not possible to continuously measure stream discharge, thus an indirect approach was used: river height (stage) was continuously measured at a gauging station using a pressure transducer and periodic discharge measurements were taken along the range of potential stages to develop a stage-discharge rating curve.
+
+Pressure transducers were installed in the fall of 2013 at watershed 708 and in the fall of 2014 at the other watersheds. Watersheds 708, 819, and 693 were decommissioned in 2020 and are no longer active monitoring sites. Beginning in 2025, gauging stations are visited twice per year and surveyed against a minimum of three independent benchmarks to detect sensor movement or datum shifts. Corrections are applied to the stage record where offsets are identified, and where possible, have been applied retrospectively to earlier records. Low flows were manually measured using the velocity-area method with either a Swoffer Current Velocimeter or a Sontek Acoustic Doppler Velocimeter. Higher flows, generally greater than 0.5 m&#179;/s, were measured using the automated salt dilution (auto-salt) method, which releases pre-defined volumes of salt solution at pre-defined water stages and measures the passing salt wave using two permanently installed downstream electrical conductivity sensors. Data are available in near real-time using the Hakai Telemetry Network ([www.hakai.org/technology/#science-1](https://www.hakai.org/technology/#science-1)).
+
+**General data QC and analysis**
+
+Stage-discharge rating curves are not static but shift over time due to changes in river channel morphology, often associated with flood events, and are updated regularly. Discharge measurements are assigned a relative uncertainty based on the measurement method and are used to develop a LOESS regression rating curve with confidence intervals following the methodology of Coxon et al. (2015).
+
+The discharge record linked here is a provisional, unreviewed dataset. A fully QC'd time-series with uncertainty estimates, flagging, and detailed methodology is available upon request or in subsequent data releases.</att>
         <att name="title">Watersheds Stream Stations Timeseries, Calvert and Hecate Islands, BC, Canada (Provisional)</att>
-    </addAttributes>
+    <att name="project">Watersheds</att><att name="progress">onGoing</att><att name="keywords_vocabulary">CIOOS: CIOOS Essential Ocean Variables Vocabulary</att><att name="id">79368bf3-8f02-4355-837e-3a6cef0d2886</att><att name="naming_authority">ca.cioos</att><att name="date_modified">2026-05-28T22:23:29.147Z</att><att name="creator_name">Floyd, William C.</att><att name="creator_email">bill.floyd@via.ca</att><att name="creator_type">person</att><att name="creator_institution">Vancouver Island University</att><att name="creator_city">Nanaimo</att><att name="creator_country">Canada</att><att name="creator_url">https://www.viu.ca/</att><att name="creator_ror">https://ror.org/033wcvv61</att><att name="contributor_name">Haughton, Emily;Floyd, William C.;Korver, Maartje C.;Giesbrecht, Ian;Tula Foundation</att><att name="contributor_role">custodian,author;author,pointOfContact,owner,distributor;author;pointOfContact;funder</att><att name="doi">https://doi.org/10.21966/c6xs-y324</att><att name="metadata_link">https://catalogue.hakai.org/dataset/ca-cioos_79368bf3-8f02-4355-837e-3a6cef0d2886</att><att name="metadata_form">https://hakaiinstitute.github.io/hakai-metadata-entry-form#/en/hakai/zBOULF9sDAgC4rkoZUFQq7sBGCf2/-OtAIe6lv3elLZd4c-V1</att></addAttributes>
     <dataVariable>
         <sourceName>station</sourceName>
         <destinationName>station</destinationName>
@@ -156,7 +166,8 @@
             <att name="source_name">last_updated_stage_time</att>
             <att name="standard_name">time</att>
             <att name="units">seconds since 1970-01-01T00:00:00Z</att>
-            <att name="comment">Time since the stage parameter was updated</att>
+            <att name="comment">##Limitations:
+Appropriate credit must be given to Hakai Institute and the authors of the dataset.</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
