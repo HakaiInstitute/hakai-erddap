@@ -1,0 +1,72 @@
+
+nations:
+  - nation: Ahousaht First Nation
+    surveys: 
+      - Moyeha
+
+  - nation: Cowichan Tribes
+    surveys: 
+      - Cowichan
+
+  - nation: Da'naxda'xw Awaetlala Nation
+    surveys: 
+      - Glendale
+
+  - nation: Council of the Haida Nation
+    surveys: 
+      - Naden
+      - Kumdis
+
+  - nation: Halalt First Nation
+    surveys: 
+      - Chemainus
+
+  - nation: Heiltsuk  Nation
+    surveys: 
+      - Koeye
+
+  - nation: K'ómoks First Nation
+    surveys:
+      - Salmon
+
+  - nation: Kwakiutl First Nation
+    surveys: 
+      - Cluxewe
+      - Quatse
+
+  - nation: Ka:'yu:'k't'h'/Che:k'tles7et'h' First Nations
+    surveys: 
+      - Kaouk
+      - Malksope
+
+  - nation: Mamalilikulla First Nation
+    surveys:
+      - Hoeya
+
+  - nation: Mowachaht-Muchalaht First Nations / Salmon Parks Stewardship Society
+    surveys:
+      - Conuma
+
+  - nation: Nuxalk First Nation
+    surveys: 
+      - Bella Coola
+      - Asseek
+
+  - nation: Qualicum First Nation
+    surveys:
+      - Little Qualicum
+
+  - nation: Snaw-Naw-As First Nation
+    surveys: 
+      - Englishman
+
+  - nation: Snuneymuxw First Nation
+    surveys: 
+      - Nanaimo
+
+  - nation: Tlowitsis First Nation
+    surveys: 
+      - Fulmore
+      - Shoal
+
+ 
