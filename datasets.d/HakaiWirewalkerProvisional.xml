@@ -4,8 +4,8 @@
     <schemaName>erddap</schemaName>
     <tableName>"HakaiWirewalkerProvisional"</tableName>
     <reloadEveryNMinutes>1440</reloadEveryNMinutes>
-    <defaultGraphQuery>longitude%2Clatitude%2Ctime&amp;time&gt;=now-1month</defaultGraphQuery>
-    <defaultDataQuery>&amp;time&gt;=now-1month</defaultDataQuery>
+    <defaultGraphQuery>longitude%2Clatitude%2Ctime&amp;time&gt;=now-2days</defaultGraphQuery>
+    <defaultDataQuery>&amp;time&gt;=now-2days</defaultDataQuery>
     <addAttributes>
         <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
         <att name="institution">Hakai Institute</att>
