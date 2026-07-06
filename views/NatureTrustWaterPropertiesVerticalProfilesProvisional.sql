@@ -1,9 +1,9 @@
 ------------------------------------------------------------------------------------------------------------
--- Ahousaht First Nation
+-- Moyeha - Ahousaht First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NTCTDProvisionalAhousahtFirstNation";
+DROP TABLE IF EXISTS erddap."NTCTDProvisionalMoyeha";
 
-CREATE TABLE erddap."NTCTDProvisionalAhousahtFirstNation" AS
+CREATE TABLE erddap."NTCTDProvisionalMoyeha" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -22,7 +22,7 @@ WHERE
         )
     )
     AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.cruise in ('MOYEHA')
+    AND ctd.ctd_file_cast_data.cruise = 'MOYEHA'
 ORDER BY
     ctd.ctd_file_cast_data.work_area ASC,
     ctd.ctd_file_cast_data.station ASC,
@@ -31,11 +31,11 @@ ORDER BY
     ctd.ctd_file_cast_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
--- Cowichan Tribes
+-- Cowichan - Cowichan Tribes
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NTCTDProvisionalCowichanTribes";
+DROP TABLE IF EXISTS erddap."NTCTDProvisionalCowichan";
 
-CREATE TABLE erddap."NTCTDProvisionalCowichanTribes" AS
+CREATE TABLE erddap."NTCTDProvisionalCowichan" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -54,7 +54,7 @@ WHERE
         )
     )
     AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.cruise in ('COWICHAN')
+    AND ctd.ctd_file_cast_data.cruise = 'COWICHAN'
 ORDER BY
     ctd.ctd_file_cast_data.work_area ASC,
     ctd.ctd_file_cast_data.station ASC,
@@ -63,11 +63,11 @@ ORDER BY
     ctd.ctd_file_cast_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
--- Da'naxda'xw Awaetlala Nation
+-- Glendale - Da'naxda'xw Awaetlala Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NTCTDProvisionalDanaxdaxwAwaetlalaNation";
+DROP TABLE IF EXISTS erddap."NTCTDProvisionalGlendale";
 
-CREATE TABLE erddap."NTCTDProvisionalDanaxdaxwAwaetlalaNation" AS
+CREATE TABLE erddap."NTCTDProvisionalGlendale" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -86,7 +86,7 @@ WHERE
         )
     )
     AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.cruise in ('GLENDALE')
+    AND ctd.ctd_file_cast_data.cruise = 'GLENDALE'
 ORDER BY
     ctd.ctd_file_cast_data.work_area ASC,
     ctd.ctd_file_cast_data.station ASC,
@@ -95,11 +95,11 @@ ORDER BY
     ctd.ctd_file_cast_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
--- Council of the Haida Nation
+-- Chemainus - Halalt First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NTCTDProvisionalCounciloftheHaidaNation";
+DROP TABLE IF EXISTS erddap."NTCTDProvisionalChemainus";
 
-CREATE TABLE erddap."NTCTDProvisionalCounciloftheHaidaNation" AS
+CREATE TABLE erddap."NTCTDProvisionalChemainus" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -118,7 +118,7 @@ WHERE
         )
     )
     AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.cruise in ('NADEN','KUMDIS')
+    AND ctd.ctd_file_cast_data.cruise = 'CHEMAINUS'
 ORDER BY
     ctd.ctd_file_cast_data.work_area ASC,
     ctd.ctd_file_cast_data.station ASC,
@@ -127,11 +127,11 @@ ORDER BY
     ctd.ctd_file_cast_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
--- Halalt First Nation
+-- Koeye - Heiltsuk  Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NTCTDProvisionalHalaltFirstNation";
+DROP TABLE IF EXISTS erddap."NTCTDProvisionalKoeye";
 
-CREATE TABLE erddap."NTCTDProvisionalHalaltFirstNation" AS
+CREATE TABLE erddap."NTCTDProvisionalKoeye" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -150,7 +150,7 @@ WHERE
         )
     )
     AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.cruise in ('CHEMAINUS')
+    AND ctd.ctd_file_cast_data.cruise = 'KOEYE'
 ORDER BY
     ctd.ctd_file_cast_data.work_area ASC,
     ctd.ctd_file_cast_data.station ASC,
@@ -159,11 +159,11 @@ ORDER BY
     ctd.ctd_file_cast_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
--- Heiltsuk  Nation
+-- Salmon - K'ómoks First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NTCTDProvisionalHeiltsukNation";
+DROP TABLE IF EXISTS erddap."NTCTDProvisionalSalmon";
 
-CREATE TABLE erddap."NTCTDProvisionalHeiltsukNation" AS
+CREATE TABLE erddap."NTCTDProvisionalSalmon" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -182,7 +182,7 @@ WHERE
         )
     )
     AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.cruise in ('KOEYE')
+    AND ctd.ctd_file_cast_data.cruise = 'SALMON'
 ORDER BY
     ctd.ctd_file_cast_data.work_area ASC,
     ctd.ctd_file_cast_data.station ASC,
@@ -191,11 +191,11 @@ ORDER BY
     ctd.ctd_file_cast_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
--- K'ómoks First Nation
+-- Cluxewe - Kwakiutl First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NTCTDProvisionalKmoksFirstNation";
+DROP TABLE IF EXISTS erddap."NTCTDProvisionalCluxewe";
 
-CREATE TABLE erddap."NTCTDProvisionalKmoksFirstNation" AS
+CREATE TABLE erddap."NTCTDProvisionalCluxewe" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -214,7 +214,7 @@ WHERE
         )
     )
     AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.cruise in ('SALMON')
+    AND ctd.ctd_file_cast_data.cruise = 'CLUXEWE'
 ORDER BY
     ctd.ctd_file_cast_data.work_area ASC,
     ctd.ctd_file_cast_data.station ASC,
@@ -223,11 +223,11 @@ ORDER BY
     ctd.ctd_file_cast_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
--- Kwakiutl First Nation
+-- Quatse - Kwakiutl First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NTCTDProvisionalKwakiutlFirstNation";
+DROP TABLE IF EXISTS erddap."NTCTDProvisionalQuatse";
 
-CREATE TABLE erddap."NTCTDProvisionalKwakiutlFirstNation" AS
+CREATE TABLE erddap."NTCTDProvisionalQuatse" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -246,7 +246,7 @@ WHERE
         )
     )
     AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.cruise in ('CLUXEWE','QUATSE')
+    AND ctd.ctd_file_cast_data.cruise = 'QUATSE'
 ORDER BY
     ctd.ctd_file_cast_data.work_area ASC,
     ctd.ctd_file_cast_data.station ASC,
@@ -255,11 +255,11 @@ ORDER BY
     ctd.ctd_file_cast_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
--- Ka:'yu:'k't'h'/Che:k'tles7et'h' First Nations
+-- Kaouk - Ka:'yu:'k't'h'/Che:k'tles7et'h' First Nations
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NTCTDProvisionalKayukthChektles7ethFirstNations";
+DROP TABLE IF EXISTS erddap."NTCTDProvisionalKaouk";
 
-CREATE TABLE erddap."NTCTDProvisionalKayukthChektles7ethFirstNations" AS
+CREATE TABLE erddap."NTCTDProvisionalKaouk" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -278,7 +278,7 @@ WHERE
         )
     )
     AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.cruise in ('KAOUK','MALKSOPE')
+    AND ctd.ctd_file_cast_data.cruise = 'KAOUK'
 ORDER BY
     ctd.ctd_file_cast_data.work_area ASC,
     ctd.ctd_file_cast_data.station ASC,
@@ -287,11 +287,11 @@ ORDER BY
     ctd.ctd_file_cast_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
--- Mamalilikulla First Nation
+-- KaoukMalksope - Ka:'yu:'k't'h'/Che:k'tles7et'h' First Nations
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NTCTDProvisionalMamalilikullaFirstNation";
+DROP TABLE IF EXISTS erddap."NTCTDProvisionalKaoukMalksope";
 
-CREATE TABLE erddap."NTCTDProvisionalMamalilikullaFirstNation" AS
+CREATE TABLE erddap."NTCTDProvisionalKaoukMalksope" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -310,7 +310,7 @@ WHERE
         )
     )
     AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.cruise in ('HOEYA')
+    AND ctd.ctd_file_cast_data.cruise = 'KAOUKMALKSOPE'
 ORDER BY
     ctd.ctd_file_cast_data.work_area ASC,
     ctd.ctd_file_cast_data.station ASC,
@@ -319,11 +319,11 @@ ORDER BY
     ctd.ctd_file_cast_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
--- Mowachaht-Muchalaht First Nations / Salmon Parks Stewardship Society
+-- Hoeya - Mamalilikulla First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NTCTDProvisionalMowachahtMuchalahtFirstNationsSalmonParksStewar";
+DROP TABLE IF EXISTS erddap."NTCTDProvisionalHoeya";
 
-CREATE TABLE erddap."NTCTDProvisionalMowachahtMuchalahtFirstNationsSalmonParksStewar" AS
+CREATE TABLE erddap."NTCTDProvisionalHoeya" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -342,7 +342,7 @@ WHERE
         )
     )
     AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.cruise in ('CONUMA')
+    AND ctd.ctd_file_cast_data.cruise = 'HOEYA'
 ORDER BY
     ctd.ctd_file_cast_data.work_area ASC,
     ctd.ctd_file_cast_data.station ASC,
@@ -351,11 +351,11 @@ ORDER BY
     ctd.ctd_file_cast_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
--- Nuxalk First Nation
+-- Conuma - Mowachaht-Muchalaht First Nations / Salmon Parks Stewardship Society
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NTCTDProvisionalNuxalkFirstNation";
+DROP TABLE IF EXISTS erddap."NTCTDProvisionalConuma";
 
-CREATE TABLE erddap."NTCTDProvisionalNuxalkFirstNation" AS
+CREATE TABLE erddap."NTCTDProvisionalConuma" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -374,7 +374,7 @@ WHERE
         )
     )
     AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.cruise in ('BELLA COOLA','ASSEEK')
+    AND ctd.ctd_file_cast_data.cruise = 'CONUMA'
 ORDER BY
     ctd.ctd_file_cast_data.work_area ASC,
     ctd.ctd_file_cast_data.station ASC,
@@ -383,11 +383,11 @@ ORDER BY
     ctd.ctd_file_cast_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
--- Qualicum First Nation
+-- Bella Coola - Nuxalk First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NTCTDProvisionalQualicumFirstNation";
+DROP TABLE IF EXISTS erddap."NTCTDProvisionalBellaCoola";
 
-CREATE TABLE erddap."NTCTDProvisionalQualicumFirstNation" AS
+CREATE TABLE erddap."NTCTDProvisionalBellaCoola" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -406,7 +406,7 @@ WHERE
         )
     )
     AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.cruise in ('LITTLE QUALICUM')
+    AND ctd.ctd_file_cast_data.cruise = 'BELLA COOLA'
 ORDER BY
     ctd.ctd_file_cast_data.work_area ASC,
     ctd.ctd_file_cast_data.station ASC,
@@ -415,11 +415,11 @@ ORDER BY
     ctd.ctd_file_cast_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
--- Snaw-Naw-As First Nation
+-- Asseek - Nuxalk First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NTCTDProvisionalSnawNawAsFirstNation";
+DROP TABLE IF EXISTS erddap."NTCTDProvisionalAsseek";
 
-CREATE TABLE erddap."NTCTDProvisionalSnawNawAsFirstNation" AS
+CREATE TABLE erddap."NTCTDProvisionalAsseek" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -438,7 +438,7 @@ WHERE
         )
     )
     AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.cruise in ('ENGLISHMAN')
+    AND ctd.ctd_file_cast_data.cruise = 'ASSEEK'
 ORDER BY
     ctd.ctd_file_cast_data.work_area ASC,
     ctd.ctd_file_cast_data.station ASC,
@@ -447,11 +447,11 @@ ORDER BY
     ctd.ctd_file_cast_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
--- Snuneymuxw First Nation
+-- Little Qualicum - Qualicum First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NTCTDProvisionalSnuneymuxwFirstNation";
+DROP TABLE IF EXISTS erddap."NTCTDProvisionalLittleQualicum";
 
-CREATE TABLE erddap."NTCTDProvisionalSnuneymuxwFirstNation" AS
+CREATE TABLE erddap."NTCTDProvisionalLittleQualicum" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -470,7 +470,7 @@ WHERE
         )
     )
     AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.cruise in ('NANAIMO')
+    AND ctd.ctd_file_cast_data.cruise = 'LITTLE QUALICUM'
 ORDER BY
     ctd.ctd_file_cast_data.work_area ASC,
     ctd.ctd_file_cast_data.station ASC,
@@ -479,11 +479,11 @@ ORDER BY
     ctd.ctd_file_cast_data.pressure ASC;
 
 ------------------------------------------------------------------------------------------------------------
--- Tlowitsis First Nation
+-- Englishman - Snaw-Naw-As First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NTCTDProvisionalTlowitsisFirstNation";
+DROP TABLE IF EXISTS erddap."NTCTDProvisionalEnglishman";
 
-CREATE TABLE erddap."NTCTDProvisionalTlowitsisFirstNation" AS
+CREATE TABLE erddap."NTCTDProvisionalEnglishman" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -502,7 +502,103 @@ WHERE
         )
     )
     AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.cruise in ('FULMORE','SHOAL')
+    AND ctd.ctd_file_cast_data.cruise = 'ENGLISHMAN'
+ORDER BY
+    ctd.ctd_file_cast_data.work_area ASC,
+    ctd.ctd_file_cast_data.station ASC,
+    ctd.ctd_file_cast_data.start_dt ASC,
+    ctd.ctd_file_cast_data.direction_flag ASC,
+    ctd.ctd_file_cast_data.pressure ASC;
+
+------------------------------------------------------------------------------------------------------------
+-- Nanaimo - Snuneymuxw First Nation
+------------------------------------------------------------------------------------------------------------
+DROP TABLE IF EXISTS erddap."NTCTDProvisionalNanaimo";
+
+CREATE TABLE erddap."NTCTDProvisionalNanaimo" AS
+SELECT *
+FROM
+    ctd.ctd_file_cast_data
+WHERE
+    (
+        ctd.ctd_file_cast_data.cast_processing_stage >= '8_binAvg'::ctd.processing_stage
+        OR ctd.ctd_file_cast_data.cast_processing_stage >= '8_rbr_processed'::ctd.processing_stage
+    )
+    AND ctd.ctd_file_cast_data.status IS NULL
+    AND ctd.ctd_file_cast_data.measurement_dt IS NOT NULL
+    AND (
+        ctd.ctd_file_cast_data.direction_flag::text = 'd'::text
+        OR (
+            ctd.ctd_file_cast_data.cast_type::text = 'Static'
+            AND ctd.ctd_file_cast_data.direction_flag::text = 's'
+        )
+    )
+    AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
+    AND ctd.ctd_file_cast_data.cruise = 'NANAIMO'
+ORDER BY
+    ctd.ctd_file_cast_data.work_area ASC,
+    ctd.ctd_file_cast_data.station ASC,
+    ctd.ctd_file_cast_data.start_dt ASC,
+    ctd.ctd_file_cast_data.direction_flag ASC,
+    ctd.ctd_file_cast_data.pressure ASC;
+
+------------------------------------------------------------------------------------------------------------
+-- Fulmore - Tlowitsis First Nation
+------------------------------------------------------------------------------------------------------------
+DROP TABLE IF EXISTS erddap."NTCTDProvisionalFulmore";
+
+CREATE TABLE erddap."NTCTDProvisionalFulmore" AS
+SELECT *
+FROM
+    ctd.ctd_file_cast_data
+WHERE
+    (
+        ctd.ctd_file_cast_data.cast_processing_stage >= '8_binAvg'::ctd.processing_stage
+        OR ctd.ctd_file_cast_data.cast_processing_stage >= '8_rbr_processed'::ctd.processing_stage
+    )
+    AND ctd.ctd_file_cast_data.status IS NULL
+    AND ctd.ctd_file_cast_data.measurement_dt IS NOT NULL
+    AND (
+        ctd.ctd_file_cast_data.direction_flag::text = 'd'::text
+        OR (
+            ctd.ctd_file_cast_data.cast_type::text = 'Static'
+            AND ctd.ctd_file_cast_data.direction_flag::text = 's'
+        )
+    )
+    AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
+    AND ctd.ctd_file_cast_data.cruise = 'FULMORE'
+ORDER BY
+    ctd.ctd_file_cast_data.work_area ASC,
+    ctd.ctd_file_cast_data.station ASC,
+    ctd.ctd_file_cast_data.start_dt ASC,
+    ctd.ctd_file_cast_data.direction_flag ASC,
+    ctd.ctd_file_cast_data.pressure ASC;
+
+------------------------------------------------------------------------------------------------------------
+-- Shoal - Tlowitsis First Nation
+------------------------------------------------------------------------------------------------------------
+DROP TABLE IF EXISTS erddap."NTCTDProvisionalShoal";
+
+CREATE TABLE erddap."NTCTDProvisionalShoal" AS
+SELECT *
+FROM
+    ctd.ctd_file_cast_data
+WHERE
+    (
+        ctd.ctd_file_cast_data.cast_processing_stage >= '8_binAvg'::ctd.processing_stage
+        OR ctd.ctd_file_cast_data.cast_processing_stage >= '8_rbr_processed'::ctd.processing_stage
+    )
+    AND ctd.ctd_file_cast_data.status IS NULL
+    AND ctd.ctd_file_cast_data.measurement_dt IS NOT NULL
+    AND (
+        ctd.ctd_file_cast_data.direction_flag::text = 'd'::text
+        OR (
+            ctd.ctd_file_cast_data.cast_type::text = 'Static'
+            AND ctd.ctd_file_cast_data.direction_flag::text = 's'
+        )
+    )
+    AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
+    AND ctd.ctd_file_cast_data.cruise = 'SHOAL'
 ORDER BY
     ctd.ctd_file_cast_data.work_area ASC,
     ctd.ctd_file_cast_data.station ASC,

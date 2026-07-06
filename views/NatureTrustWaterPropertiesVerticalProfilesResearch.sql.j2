@@ -1,10 +1,10 @@
-{% for nation in nations -%}
+{% for estuary in surveys -%}
 ------------------------------------------------------------------------------------------------------------
--- {{nation.nation}}
+-- {{estuary.survey}} - {{estuary.nation}}
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."{{nation.tablename}}";
+DROP TABLE IF EXISTS erddap."{{estuary.tablename}}";
 
-CREATE TABLE erddap."{{nation.tablename}}" AS
+CREATE TABLE erddap."{{estuary.tablename}}" AS
 SELECT *
 FROM
     ctd.ctd_post_qc_data
@@ -22,7 +22,7 @@ WHERE
         )
     )
     AND ctd.ctd_post_qc_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_post_qc_data.cruise in ('{{nation.surveys|join("','")|upper()}}')
+    AND ctd.ctd_post_qc_data.cruise = '{{estuary.survey|upper()}}'
 ORDER BY
     ctd.ctd_post_qc_data.work_area ASC,
     ctd.ctd_post_qc_data.station ASC,

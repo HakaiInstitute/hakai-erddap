@@ -212,13 +212,13 @@ to keep the different views in sync with all the associated tables. Use uv to in
 and run the following command:
 
 ```
-python generate_view_sql.py
+uv run  generate_view_sql.py
 ```
 
 If you are _just_ updating the jinja templates, you can run the command with the `--jinja-only` flag to only update the jinja templates without needing to access the database:
 
 ```
-python generate_view_sql.py --jinja-only
+uv run  generate_view_sql.py --jinja-only
 ```
 
 The `views/HakaiWatershedsStreamStations.yaml` config determines how they are updated.

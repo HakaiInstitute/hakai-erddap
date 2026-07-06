@@ -1,72 +1,66 @@
 
-nations:
+surveys:  
   - nation: Ahousaht First Nation
-    surveys: 
-      - Moyeha
+    survey: Moyeha
 
   - nation: Cowichan Tribes
-    surveys: 
-      - Cowichan
+    survey: Cowichan
 
   - nation: Da'naxda'xw Awaetlala Nation
-    surveys: 
-      - Glendale
+    survey: Glendale
 
-  - nation: Council of the Haida Nation
-    surveys: 
-      - Naden
-      - Kumdis
+  # Haida have not agreed to make data pulbic
+  # - nation: Council of the Haida Nation
+  #   survey: Naden
+  # - nation: Council of the Haida Nation
+  #   survey:  Kumdis
 
   - nation: Halalt First Nation
-    surveys: 
-      - Chemainus
+    survey: Chemainus
 
   - nation: Heiltsuk  Nation
-    surveys: 
-      - Koeye
+    survey: Koeye
 
   - nation: K'ómoks First Nation
-    surveys:
-      - Salmon
+    survey: Salmon
 
   - nation: Kwakiutl First Nation
-    surveys: 
-      - Cluxewe
-      - Quatse
+    survey: Cluxewe
+
+  - nation: Kwakiutl First Nation
+    survey: Quatse
 
   - nation: Ka:'yu:'k't'h'/Che:k'tles7et'h' First Nations
-    surveys: 
-      - Kaouk
-      - Malksope
+    survey: Kaouk
+
+  - nation: Ka:'yu:'k't'h'/Che:k'tles7et'h' First Nations
+    survey: KaoukMalksope
 
   - nation: Mamalilikulla First Nation
-    surveys:
-      - Hoeya
+    survey: Hoeya
 
   - nation: Mowachaht-Muchalaht First Nations / Salmon Parks Stewardship Society
-    surveys:
-      - Conuma
+    survey: Conuma
 
   - nation: Nuxalk First Nation
-    surveys: 
-      - Bella Coola
-      - Asseek
+    survey: Bella Coola
+
+  - nation: Nuxalk First Nation
+    survey: Asseek
 
   - nation: Qualicum First Nation
-    surveys:
-      - Little Qualicum
+    survey: Little Qualicum
 
   - nation: Snaw-Naw-As First Nation
-    surveys: 
-      - Englishman
+    survey: Englishman
 
   - nation: Snuneymuxw First Nation
-    surveys: 
-      - Nanaimo
+    survey: Nanaimo
 
   - nation: Tlowitsis First Nation
-    surveys: 
-      - Fulmore
-      - Shoal
+    survey: Fulmore
+    
+  - nation: Tlowitsis First Nation
+    survey: Shoal
 
  

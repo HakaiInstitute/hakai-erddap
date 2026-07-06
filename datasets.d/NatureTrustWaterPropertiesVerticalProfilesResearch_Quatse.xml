@@ -1,8 +1,8 @@
-<dataset type="EDDTableFromDatabase" datasetID="NatureTrustWaterPropertiesVerticalProfilesResearch_{{name_san}}" active="false">
+<dataset type="EDDTableFromDatabase" datasetID="NatureTrustWaterPropertiesVerticalProfilesResearch_Quatse" active="false">
     <sourceUrl>hakai_erddap_sourceUrl</sourceUrl>
     <driverName>org.postgresql.Driver</driverName>
     <schemaName>erddap</schemaName>
-    <tableName>"{{tablename}}"</tableName>
+    <tableName>"NTCTDResearchQuatse"</tableName>
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <orderBy>work_area,station,start_dt,direction_flag,pressure</orderBy>
     <addAttributes>
@@ -22,7 +22,7 @@
         <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
         <att name="subsetVariables">work_area, cruise, station, vessel, device_model, device_sn</att>
         <att name="summary">Nature Trust CTD profiles research</att>
-        <att name="title">BC Estuary Water Quality Monitoring Data ({{survey}}) - Research</att>
+        <att name="title">BC Estuary Water Quality Monitoring Data (Quatse) - Research</att>
     </addAttributes>
     <dataVariable>
         <sourceName>work_area</sourceName>
