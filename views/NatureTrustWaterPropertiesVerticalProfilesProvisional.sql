@@ -30,6 +30,9 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalMoyeha" OWNER to hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalMoyeha" TO hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalMoyeha" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
 -- Cowichan - Cowichan Tribes
 ------------------------------------------------------------------------------------------------------------
@@ -62,6 +65,9 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalCowichan" OWNER to hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalCowichan" TO hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalCowichan" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
 -- Glendale - Da'naxda'xw Awaetlala Nation
 ------------------------------------------------------------------------------------------------------------
@@ -94,6 +100,9 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalGlendale" OWNER to hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalGlendale" TO hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalGlendale" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
 -- Chemainus - Halalt First Nation
 ------------------------------------------------------------------------------------------------------------
@@ -126,6 +135,9 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalChemainus" OWNER to hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalChemainus" TO hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalChemainus" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
 -- Koeye - Heiltsuk  Nation
 ------------------------------------------------------------------------------------------------------------
@@ -158,6 +170,9 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalKoeye" OWNER to hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalKoeye" TO hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalKoeye" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
 -- Salmon - K'ómoks First Nation
 ------------------------------------------------------------------------------------------------------------
@@ -190,6 +205,9 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalSalmon" OWNER to hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalSalmon" TO hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalSalmon" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
 -- Cluxewe - Kwakiutl First Nation
 ------------------------------------------------------------------------------------------------------------
@@ -222,6 +240,9 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalCluxewe" OWNER to hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalCluxewe" TO hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalCluxewe" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
 -- Quatse - Kwakiutl First Nation
 ------------------------------------------------------------------------------------------------------------
@@ -254,6 +275,9 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalQuatse" OWNER to hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalQuatse" TO hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalQuatse" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
 -- Kaouk - Ka:'yu:'k't'h'/Che:k'tles7et'h' First Nations
 ------------------------------------------------------------------------------------------------------------
@@ -286,12 +310,15 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalKaouk" OWNER to hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalKaouk" TO hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalKaouk" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
--- KaoukMalksope - Ka:'yu:'k't'h'/Che:k'tles7et'h' First Nations
+-- Malksope - Ka:'yu:'k't'h'/Che:k'tles7et'h' First Nations
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NTCTDProvisionalKaoukMalksope";
+DROP TABLE IF EXISTS erddap."NTCTDProvisionalMalksope";
 
-CREATE TABLE erddap."NTCTDProvisionalKaoukMalksope" AS
+CREATE TABLE erddap."NTCTDProvisionalMalksope" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -310,7 +337,7 @@ WHERE
         )
     )
     AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.cruise = 'KAOUKMALKSOPE'
+    AND ctd.ctd_file_cast_data.cruise = 'MALKSOPE'
 ORDER BY
     ctd.ctd_file_cast_data.work_area ASC,
     ctd.ctd_file_cast_data.station ASC,
@@ -318,6 +345,9 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalMalksope" OWNER to hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalMalksope" TO hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalMalksope" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
 -- Hoeya - Mamalilikulla First Nation
 ------------------------------------------------------------------------------------------------------------
@@ -350,6 +380,9 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalHoeya" OWNER to hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalHoeya" TO hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalHoeya" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
 -- Conuma - Mowachaht-Muchalaht First Nations / Salmon Parks Stewardship Society
 ------------------------------------------------------------------------------------------------------------
@@ -382,6 +415,9 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalConuma" OWNER to hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalConuma" TO hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalConuma" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
 -- Bella Coola - Nuxalk First Nation
 ------------------------------------------------------------------------------------------------------------
@@ -414,6 +450,9 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalBellaCoola" OWNER to hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalBellaCoola" TO hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalBellaCoola" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
 -- Asseek - Nuxalk First Nation
 ------------------------------------------------------------------------------------------------------------
@@ -446,6 +485,9 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalAsseek" OWNER to hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalAsseek" TO hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalAsseek" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
 -- Little Qualicum - Qualicum First Nation
 ------------------------------------------------------------------------------------------------------------
@@ -478,6 +520,9 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalLittleQualicum" OWNER to hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalLittleQualicum" TO hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalLittleQualicum" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
 -- Englishman - Snaw-Naw-As First Nation
 ------------------------------------------------------------------------------------------------------------
@@ -510,6 +555,9 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalEnglishman" OWNER to hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalEnglishman" TO hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalEnglishman" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
 -- Nanaimo - Snuneymuxw First Nation
 ------------------------------------------------------------------------------------------------------------
@@ -542,12 +590,15 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalNanaimo" OWNER to hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalNanaimo" TO hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalNanaimo" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
--- Fulmore - Tlowitsis First Nation
+-- Fulmore-Shoal - Tlowitsis First Nation
 ------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NTCTDProvisionalFulmore";
+DROP TABLE IF EXISTS erddap."NTCTDProvisionalFulmoreShoal";
 
-CREATE TABLE erddap."NTCTDProvisionalFulmore" AS
+CREATE TABLE erddap."NTCTDProvisionalFulmoreShoal" AS
 SELECT *
 FROM
     ctd.ctd_file_cast_data
@@ -566,7 +617,7 @@ WHERE
         )
     )
     AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.cruise = 'FULMORE'
+    AND ctd.ctd_file_cast_data.cruise = 'FULMORE-SHOAL'
 ORDER BY
     ctd.ctd_file_cast_data.work_area ASC,
     ctd.ctd_file_cast_data.station ASC,
@@ -574,35 +625,6 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
-------------------------------------------------------------------------------------------------------------
--- Shoal - Tlowitsis First Nation
-------------------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS erddap."NTCTDProvisionalShoal";
-
-CREATE TABLE erddap."NTCTDProvisionalShoal" AS
-SELECT *
-FROM
-    ctd.ctd_file_cast_data
-WHERE
-    (
-        ctd.ctd_file_cast_data.cast_processing_stage >= '8_binAvg'::ctd.processing_stage
-        OR ctd.ctd_file_cast_data.cast_processing_stage >= '8_rbr_processed'::ctd.processing_stage
-    )
-    AND ctd.ctd_file_cast_data.status IS NULL
-    AND ctd.ctd_file_cast_data.measurement_dt IS NOT NULL
-    AND (
-        ctd.ctd_file_cast_data.direction_flag::text = 'd'::text
-        OR (
-            ctd.ctd_file_cast_data.cast_type::text = 'Static'
-            AND ctd.ctd_file_cast_data.direction_flag::text = 's'
-        )
-    )
-    AND ctd.ctd_file_cast_data.organization = 'NATURE TRUST'
-    AND ctd.ctd_file_cast_data.cruise = 'SHOAL'
-ORDER BY
-    ctd.ctd_file_cast_data.work_area ASC,
-    ctd.ctd_file_cast_data.station ASC,
-    ctd.ctd_file_cast_data.start_dt ASC,
-    ctd.ctd_file_cast_data.direction_flag ASC,
-    ctd.ctd_file_cast_data.pressure ASC;
-
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalFulmoreShoal" OWNER to hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalFulmoreShoal" TO hakai_admin;
+GRANT ALL ON TABLE erddap."NTCTDProvisionalFulmoreShoal" TO hakai_erddap_admin;

@@ -30,4 +30,7 @@ ORDER BY
     ctd.ctd_post_qc_data.direction_flag ASC,
     ctd.ctd_post_qc_data.pressure ASC;
 
+ALTER TABLE IF EXISTS erddap."{{estuary.tablename}}" OWNER to hakai_admin;
+GRANT ALL ON TABLE erddap."{{estuary.tablename}}" TO hakai_admin;
+GRANT ALL ON TABLE erddap."{{estuary.tablename}}" TO hakai_erddap_admin;
 {% endfor %}

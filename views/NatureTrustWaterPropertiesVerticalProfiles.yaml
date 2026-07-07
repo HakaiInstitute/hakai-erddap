@@ -34,7 +34,7 @@ surveys:
     survey: Kaouk
 
   - nation: Ka:'yu:'k't'h'/Che:k'tles7et'h' First Nations
-    survey: KaoukMalksope
+    survey: Malksope
 
   - nation: Mamalilikulla First Nation
     survey: Hoeya
@@ -58,9 +58,7 @@ surveys:
     survey: Nanaimo
 
   - nation: Tlowitsis First Nation
-    survey: Fulmore
+    survey: Fulmore-Shoal
     
-  - nation: Tlowitsis First Nation
-    survey: Shoal
 
  
