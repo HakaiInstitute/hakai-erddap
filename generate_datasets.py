@@ -37,13 +37,13 @@ def generate_nature_trust_provisional_ctd_dataset():
     with open(config_path) as f:
         config = yaml.safe_load(f)
 
-    for nation in config.get('nations'):
-        name = sanitize_filename(re.sub("[^A-Za-z0-9]", "", nation.get("nation")))
-        nation["name_san"] = name
-        nation["tablename"] = ("NTCTDProvisional" + name)[:63]
+    for survey in config.get('surveys'):
+        name = sanitize_filename(re.sub("[^A-Za-z0-9]", "", survey.get("survey")))
+        survey["name_san"] = name
+        survey["tablename"] = ("NTCTDProvisional" + name)[:63]
         result = environment.get_template(
             "NatureTrustWaterPropertiesVerticalProfilesProvisional.xml.j2"
-        ).render(**nation)
+        ).render(**survey)
 
         Path(
             "datasets.d/NatureTrustWaterPropertiesVerticalProfilesProvisional_%s.xml"
@@ -70,13 +70,13 @@ def generate_nature_trust_research_ctd_dataset():
     with open(config_path) as f:
         config = yaml.safe_load(f)
 
-    for nation in config.get("nations"):
-        name = sanitize_filename(re.sub("[^A-Za-z0-9]", "", nation.get("nation")))
-        nation["name_san"] = name
-        nation["tablename"] = ("NTCTDResearch" + name)[:63]
+    for survey in config.get("surveys"):
+        name = sanitize_filename(re.sub("[^A-Za-z0-9]", "", survey.get("survey")))
+        survey["name_san"] = name
+        survey["tablename"] = ("NTCTDResearch" + name)[:63]
         result = environment.get_template(
             "NatureTrustWaterPropertiesVerticalProfilesResearch.xml.j2"
-        ).render(**nation)
+        ).render(**survey)
         Path(
             "datasets.d/NatureTrustWaterPropertiesVerticalProfilesResearch_%s.xml" % name
         ).write_text(result)
