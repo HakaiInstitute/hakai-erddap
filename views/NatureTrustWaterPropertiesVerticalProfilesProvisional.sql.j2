@@ -31,7 +31,7 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."{{estuary.tablename}}" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."{{estuary.tablename}}" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."{{estuary.tablename}}" TO hakai_admin;
 GRANT ALL ON TABLE erddap."{{estuary.tablename}}" TO hakai_erddap_admin;
 {% endfor %}

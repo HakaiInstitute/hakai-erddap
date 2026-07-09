@@ -29,7 +29,7 @@ ORDER BY
     ctd.ctd_post_qc_data.direction_flag ASC,
     ctd.ctd_post_qc_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDResearchMoyeha" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDResearchMoyeha" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchMoyeha" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchMoyeha" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -63,7 +63,7 @@ ORDER BY
     ctd.ctd_post_qc_data.direction_flag ASC,
     ctd.ctd_post_qc_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDResearchCowichan" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDResearchCowichan" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchCowichan" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchCowichan" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -97,7 +97,7 @@ ORDER BY
     ctd.ctd_post_qc_data.direction_flag ASC,
     ctd.ctd_post_qc_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDResearchGlendale" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDResearchGlendale" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchGlendale" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchGlendale" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -131,7 +131,7 @@ ORDER BY
     ctd.ctd_post_qc_data.direction_flag ASC,
     ctd.ctd_post_qc_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDResearchChemainus" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDResearchChemainus" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchChemainus" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchChemainus" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -165,7 +165,7 @@ ORDER BY
     ctd.ctd_post_qc_data.direction_flag ASC,
     ctd.ctd_post_qc_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDResearchKoeye" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDResearchKoeye" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchKoeye" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchKoeye" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -199,7 +199,7 @@ ORDER BY
     ctd.ctd_post_qc_data.direction_flag ASC,
     ctd.ctd_post_qc_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDResearchSalmon" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDResearchSalmon" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchSalmon" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchSalmon" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -233,7 +233,7 @@ ORDER BY
     ctd.ctd_post_qc_data.direction_flag ASC,
     ctd.ctd_post_qc_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDResearchCluxewe" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDResearchCluxewe" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchCluxewe" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchCluxewe" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -267,7 +267,7 @@ ORDER BY
     ctd.ctd_post_qc_data.direction_flag ASC,
     ctd.ctd_post_qc_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDResearchQuatse" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDResearchQuatse" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchQuatse" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchQuatse" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -301,7 +301,7 @@ ORDER BY
     ctd.ctd_post_qc_data.direction_flag ASC,
     ctd.ctd_post_qc_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDResearchKaouk" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDResearchKaouk" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchKaouk" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchKaouk" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -335,7 +335,7 @@ ORDER BY
     ctd.ctd_post_qc_data.direction_flag ASC,
     ctd.ctd_post_qc_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDResearchMalksope" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDResearchMalksope" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchMalksope" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchMalksope" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -369,7 +369,7 @@ ORDER BY
     ctd.ctd_post_qc_data.direction_flag ASC,
     ctd.ctd_post_qc_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDResearchHoeya" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDResearchHoeya" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchHoeya" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchHoeya" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -403,7 +403,7 @@ ORDER BY
     ctd.ctd_post_qc_data.direction_flag ASC,
     ctd.ctd_post_qc_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDResearchConuma" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDResearchConuma" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchConuma" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchConuma" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -437,7 +437,7 @@ ORDER BY
     ctd.ctd_post_qc_data.direction_flag ASC,
     ctd.ctd_post_qc_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDResearchBellaCoola" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDResearchBellaCoola" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchBellaCoola" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchBellaCoola" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -471,7 +471,7 @@ ORDER BY
     ctd.ctd_post_qc_data.direction_flag ASC,
     ctd.ctd_post_qc_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDResearchAsseek" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDResearchAsseek" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchAsseek" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchAsseek" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -505,7 +505,7 @@ ORDER BY
     ctd.ctd_post_qc_data.direction_flag ASC,
     ctd.ctd_post_qc_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDResearchLittleQualicum" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDResearchLittleQualicum" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchLittleQualicum" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchLittleQualicum" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -539,7 +539,7 @@ ORDER BY
     ctd.ctd_post_qc_data.direction_flag ASC,
     ctd.ctd_post_qc_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDResearchEnglishman" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDResearchEnglishman" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchEnglishman" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchEnglishman" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -573,7 +573,7 @@ ORDER BY
     ctd.ctd_post_qc_data.direction_flag ASC,
     ctd.ctd_post_qc_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDResearchNanaimo" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDResearchNanaimo" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchNanaimo" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchNanaimo" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -607,6 +607,6 @@ ORDER BY
     ctd.ctd_post_qc_data.direction_flag ASC,
     ctd.ctd_post_qc_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDResearchFulmoreShoal" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDResearchFulmoreShoal" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchFulmoreShoal" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDResearchFulmoreShoal" TO hakai_erddap_admin;

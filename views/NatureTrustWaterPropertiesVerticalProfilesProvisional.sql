@@ -30,7 +30,7 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDProvisionalMoyeha" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalMoyeha" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalMoyeha" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalMoyeha" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -65,7 +65,7 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDProvisionalCowichan" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalCowichan" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalCowichan" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalCowichan" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -100,7 +100,7 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDProvisionalGlendale" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalGlendale" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalGlendale" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalGlendale" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -135,7 +135,7 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDProvisionalChemainus" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalChemainus" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalChemainus" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalChemainus" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -170,7 +170,7 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDProvisionalKoeye" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalKoeye" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalKoeye" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalKoeye" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -205,7 +205,7 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDProvisionalSalmon" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalSalmon" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalSalmon" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalSalmon" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -240,7 +240,7 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDProvisionalCluxewe" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalCluxewe" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalCluxewe" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalCluxewe" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -275,7 +275,7 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDProvisionalQuatse" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalQuatse" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalQuatse" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalQuatse" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -310,7 +310,7 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDProvisionalKaouk" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalKaouk" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalKaouk" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalKaouk" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -345,7 +345,7 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDProvisionalMalksope" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalMalksope" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalMalksope" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalMalksope" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -380,7 +380,7 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDProvisionalHoeya" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalHoeya" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalHoeya" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalHoeya" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -415,7 +415,7 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDProvisionalConuma" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalConuma" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalConuma" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalConuma" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -450,7 +450,7 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDProvisionalBellaCoola" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalBellaCoola" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalBellaCoola" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalBellaCoola" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -485,7 +485,7 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDProvisionalAsseek" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalAsseek" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalAsseek" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalAsseek" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -520,7 +520,7 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDProvisionalLittleQualicum" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalLittleQualicum" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalLittleQualicum" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalLittleQualicum" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -555,7 +555,7 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDProvisionalEnglishman" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalEnglishman" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalEnglishman" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalEnglishman" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -590,7 +590,7 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDProvisionalNanaimo" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalNanaimo" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalNanaimo" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalNanaimo" TO hakai_erddap_admin;
 ------------------------------------------------------------------------------------------------------------
@@ -625,6 +625,6 @@ ORDER BY
     ctd.ctd_file_cast_data.direction_flag ASC,
     ctd.ctd_file_cast_data.pressure ASC;
 
-ALTER TABLE IF EXISTS erddap."NTCTDProvisionalFulmoreShoal" OWNER to hakai_admin;
+ALTER TABLE IF EXISTS erddap."NTCTDProvisionalFulmoreShoal" OWNER to hakai_erddap_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalFulmoreShoal" TO hakai_admin;
 GRANT ALL ON TABLE erddap."NTCTDProvisionalFulmoreShoal" TO hakai_erddap_admin;
