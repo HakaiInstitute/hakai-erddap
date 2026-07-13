@@ -1,5 +1,5 @@
 <dataset type="EDDGridFromNcFiles" datasetID="sentinel_3A_POLYMER" active="true">
-    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <reloadEveryNMinutes>1440</reloadEveryNMinutes>
     <updateEveryNMillis>10000</updateEveryNMillis>
     <fileDir>/algae_explorer/5_erddap_data</fileDir>
     <fileNameRegex>polymer_mosaic_output\.nc</fileNameRegex>
