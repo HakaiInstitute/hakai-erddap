@@ -7,7 +7,7 @@
     <pathRegex>.*</pathRegex>
     <metadataFrom>last</metadataFrom>
     <matchAxisNDigits>10</matchAxisNDigits>
-    <fileTableInMemory>false</fileTableInMemory>
+    <fileTableInMemory>true</fileTableInMemory>
     <accessibleViaWMS>true</accessibleViaWMS>
     <!-- sourceAttributes>
         <att name="Conventions">CF-1.4</att>
