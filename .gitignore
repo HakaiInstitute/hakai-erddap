@@ -24,3 +24,4 @@ temp.tar
 .pguser
 .pgdb
 .pghost
+.idea/
