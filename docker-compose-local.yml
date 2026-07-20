@@ -16,7 +16,7 @@ services:
       - "./erddap/data:/erddapData"
       - "${DATASETS_DIR:-./datasets}:/datasets"
       - "./init.d:/init.d"
-      # - "/mnt/efs/algex:/algae_explorer"
+      # - "/mnt/s3/algex:/algae_explorer"
       - "./datasets.d:/datasets.d"
     healthcheck:
       test:

@@ -14,7 +14,7 @@ services:
       resources:
         limits:
           memory: 12G
-      replicas: 1      
+      replicas: 1
     volumes:
       - "./erddap/EDDTableFromDatabase.java:/usr/local/tomcat/webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/datasetEDDTableFromDatabase.java"
       - "./erddap/conf/robots.txt:/usr/local/tomcat/webapps/ROOT/robots.txt"
@@ -22,7 +22,7 @@ services:
       - "./erddap/data:/erddapData"
       - "${DATASETS_DIR:-./datasets}:/datasets"
       - "./init.d:/init.d"
-      - "/mnt/efs/algex:/algae_explorer"
+      - "/mnt/s3/algex:/algae_explorer"
       - "./datasets.d:/datasets.d"
       - "./logs:/usr/local/tomcat/logs"
     healthcheck:
