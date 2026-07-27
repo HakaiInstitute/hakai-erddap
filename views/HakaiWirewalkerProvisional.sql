@@ -26,7 +26,8 @@ OR REPLACE VIEW erddap."HakaiWirewalkerProvisional" AS (
         d.pressure,
         d.dissolved_oxygen_ml_l,
         CASE WHEN f.device_sn ~ '^\d+$' THEN f.device_sn::bigint END AS serial_number,
-        d.ctd_cast_pk AS cast_id,  -- global, stable id; see cast_id contract in header
+        -- cast_id: global, stable id (see cast_id contract in header)
+        d.ctd_cast_pk AS cast_id,
         NULL::numeric AS temperature_1,
         NULL::numeric AS backscatter_counts,
         NULL::numeric AS chlorophyll_counts,
@@ -48,7 +49,8 @@ OR REPLACE VIEW erddap."HakaiWirewalkerProvisional" AS (
         w.pressure,
         w.dissolved_oxygen_ml_l,
         w.serial_number,
-        w.cast_id,  -- per-deployment counter, resets; see cast_id contract in header
+        -- cast_id: per-deployment counter, resets (see cast_id contract in header)
+        w.cast_id,
         w.temperature_1,
         w.backscatter_counts,
         w.chlorophyll_counts,
