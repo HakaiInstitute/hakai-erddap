@@ -1,11 +1,9 @@
 -- Wirewalker processed profiles, from the binned/QC'd ctd_data record. Every measurement
 -- carries its native cast (ctd_cast_pk) and calibrated values, so no cast reconstruction or
 -- unit conversion is needed. Wirewalker data is upcast-only, so there is no direction
--- filter. For raw, full-resolution, up-to-the-minute data use HakaiWirewalkerRealTime.
---
--- Small (~250k rows) with no expensive join, so a plain view is fine.
-CREATE
-OR REPLACE VIEW erddap."HakaiWirewalkerProvisional" AS (
+-- filter. 
+DROP VIEW IF EXISTS erddap."HakaiWirewalkerProvisional";
+CREATE VIEW erddap."HakaiWirewalkerProvisional" AS (
     SELECT
         d.pk,
         d.measurement_dt,
