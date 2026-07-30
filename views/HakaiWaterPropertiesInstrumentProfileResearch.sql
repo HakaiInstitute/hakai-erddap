@@ -13,6 +13,14 @@ WHERE
     AND ctd.ctd_post_qc_data.direction_flag::text = 'd'::text
     AND ctd.ctd_post_qc_data.organization = 'HAKAI'
     AND ctd.ctd_post_qc_data.cruise NOT IN ('CEDAR COAST', 'HER')
+    -- Exclude wirewalker data (served by the dedicated HakaiWirewalker datasets). Keyed on
+    -- the authoritative is_wirewalker flag rather than relying on the incidental
+    -- direction_flag = 'd' filter, which only excludes it because wirewalker is upcast-only.
+    AND NOT EXISTS (
+        SELECT 1 FROM ctd.ctd_file f
+        WHERE f.pk = ctd.ctd_post_qc_data.ctd_file_pk
+          AND f.is_wirewalker IS TRUE
+    )
 ORDER BY
     ctd.ctd_post_qc_data.work_area ASC,
     ctd.ctd_post_qc_data.station ASC,
