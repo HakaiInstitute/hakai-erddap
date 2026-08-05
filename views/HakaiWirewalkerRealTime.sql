@@ -12,13 +12,22 @@
 -- dissolved_o2 is converted from umol/L to mL/L (/ 44.661) on the offloaded side to match
 -- the radio feed's units. cdom_counts and temperature_1 are absent from raw_ctd_data, so
 -- they are null on offloaded rows.
+--
+-- The cutoff is per instrument (serial_number), not global: each instrument's radio feed is
+-- kept only beyond that instrument's own latest offloaded timestamp. A global cutoff would
+-- discard radio data from an instrument still transmitting whenever a different instrument
+-- had been offloaded to a later date. An instrument with no offloaded record yet has no
+-- cutoff row, so all of its radio data is kept.
 CREATE
 OR REPLACE VIEW erddap."HakaiWirewalkerRealTime" AS (
     WITH cutoff AS (
-        SELECT max(r.measurement_dt) AS max_dt
+        SELECT
+            f.device_sn::bigint AS serial_number,
+            max(r.measurement_dt) AS max_dt
         FROM ctd.raw_ctd_data r
         JOIN ctd.ctd_file f ON f.pk = r.ctd_file_pk
         WHERE f.is_wirewalker IS TRUE
+        GROUP BY 1
     )
     -- Offloaded, full-resolution data (everything up to the cutoff). No cast assignment.
     SELECT
@@ -28,7 +37,7 @@ OR REPLACE VIEW erddap."HakaiWirewalkerRealTime" AS (
         r.temperature,
         r.pressure,
         r.dissolved_oxygen_umol_l / 44.661 AS dissolved_oxygen_ml_l,
-        CASE WHEN f.device_sn ~ '^\d+$' THEN f.device_sn::bigint END AS serial_number,
+        f.device_sn::bigint AS serial_number,
         NULL::bigint AS cast_id,
         NULL::numeric AS temperature_1,
         r.backscatter_counts,
@@ -54,7 +63,8 @@ OR REPLACE VIEW erddap."HakaiWirewalkerRealTime" AS (
         w.cdom_counts
     FROM
         ctd.raw_ww_data w
+        LEFT JOIN cutoff c ON c.serial_number = w.serial_number
     WHERE
         w.cast_id IS NOT NULL
-        AND w.measurement_dt > (SELECT max_dt FROM cutoff)
+        AND (c.max_dt IS NULL OR w.measurement_dt > c.max_dt)
 );
