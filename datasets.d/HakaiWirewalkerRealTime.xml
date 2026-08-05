@@ -17,7 +17,7 @@
         <att name="standard_name_vocabulary">CF Standard Name Table v79</att>
         <att name="cdm_data_type">TimeSeries</att>
         <att name="cdm_timeseries_variables">serial_number, latitude, longitude</att>
-        <att name="subsetVariables">serial_number, latitude, longitude</att>
+        <att name="subsetVariables">latitude, longitude</att>
         <att name="title">Water Property Measurements from the Bute Inlet Ocean Observing Station (BIOOS) Wirewalker, Bute Inlet, BC, Canada (Real-Time)</att>
         <att name="summary">Bute Inlet, a prominent fjord on the British Columbia coast, has been a site for high-resolution oceanographic profiling through the Bute Inlet Ocean Observing Station (BIOOS). A Canadian Pacific Robotic Ocean Observing Facility (C-PROOF) Wirewalker wave-powered profiling instrument is deployed on a mooring in the central fjord, collecting vertical profiles of conductivity, temperature, pressure, and dissolved oxygen concentration. This real-time contribution combines the full-resolution record offloaded from the instrument with the radio-transmitted telemetry that extends it to the present. It is raw and has not undergone quality control; for processed, cast-grouped profiles see the HakaiWirewalkerProvisional dataset.</att>
         <att name="infoUrl">https://www.hakai.org/</att>

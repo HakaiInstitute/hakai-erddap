@@ -1,7 +1,7 @@
 -- Wirewalker processed profiles, from the binned/QC'd ctd_data record. Every measurement
 -- carries its native cast (ctd_cast_pk) and calibrated values, so no cast reconstruction or
 -- unit conversion is needed. Wirewalker data is upcast-only, so there is no direction
--- filter. 
+-- filter.
 DROP VIEW IF EXISTS erddap."HakaiWirewalkerProvisional";
 CREATE VIEW erddap."HakaiWirewalkerProvisional" AS (
     SELECT
@@ -13,7 +13,7 @@ CREATE VIEW erddap."HakaiWirewalkerProvisional" AS (
         d.depth,
         d.salinity,
         d.dissolved_oxygen_ml_l,
-        CASE WHEN f.device_sn ~ '^\d+$' THEN f.device_sn::bigint END AS serial_number,
+        f.device_sn::bigint AS serial_number,
         d.ctd_cast_pk AS cast_id,
         d.backscatter_beta,
         d.flc,
