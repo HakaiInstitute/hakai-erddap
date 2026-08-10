@@ -81,17 +81,14 @@ None</att><att name="progress">onGoing</att><att name="keywords_vocabulary">CIOO
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>date and time in GMT (yyyy-mm-dd hh:mm:ss)</sourceName>
+        <sourceName>Excel Serial Date Number</sourceName>
         <destinationName>time</destinationName>
-        <dataType>String</dataType>
-        <!-- sourceAttributes>
-        </sourceAttributes -->
+        <dataType>double</dataType>
         <addAttributes>
             <att name="long_name">Date Time</att>
-            <att name="source_name">date_time</att>
             <att name="standard_name">time</att>
             <att name="time_precision">1970-01-01T00:00:00Z</att>
-            <att name="units">yyyy-MM-dd H:mm[:ss]</att>
+            <att name="units">days since 1899-12-30</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
