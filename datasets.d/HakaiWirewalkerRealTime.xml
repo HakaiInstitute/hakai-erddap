@@ -19,8 +19,8 @@
         <att name="cdm_timeseries_variables">serial_number, latitude, longitude</att>
         <att name="subsetVariables">latitude, longitude</att>
         <att name="title">Water Property Measurements from the Bute Inlet Ocean Observing Station (BIOOS) Wirewalker, Bute Inlet, BC, Canada (Real-Time)</att>
-        <att name="summary">Bute Inlet, a prominent fjord on the British Columbia coast, has been a site for high-resolution oceanographic profiling through the Bute Inlet Ocean Observing Station (BIOOS). A Canadian Pacific Robotic Ocean Observing Facility (C-PROOF) Wirewalker wave-powered profiling instrument is deployed on a mooring in the central fjord, collecting vertical profiles of conductivity, temperature, pressure, and dissolved oxygen concentration. This real-time contribution combines the full-resolution record offloaded from the instrument with the radio-transmitted telemetry that extends it to the present. It is raw and has not undergone quality control; for processed, cast-grouped profiles see the HakaiWirewalkerProvisional dataset.</att>
-        <att name="infoUrl">https://www.hakai.org/</att>
+        <att name="summary">Bute Inlet, a prominent fjord on the British Columbia coast, has been a site for high-resolution oceanographic profiling through the Bute Inlet Ocean Observing Station (BIOOS). A Canadian Pacific Robotic Ocean Observing Facility (C-PROOF) Wirewalker wave-powered profiling instrument is deployed on a mooring in the central fjord, collecting vertical profiles of conductivity, temperature, pressure, and dissolved oxygen concentration. This data contribution consists of real-time measurements reliant on satellite communications. The data is presented as-is and some communication gaps will be present resulting in an incomplete record. This data has not undergone full quality control.</att>
+        <att name="infoUrl">https://catalogue.hakai.org/dataset/ca-cioos_2f74c998-7788-4967-a0f4-ab6bc5cc2765</att>
         <att name="sourceUrl">(local database)</att>
         <att name="geospatial_lat_max">50.5744</att>
         <att name="geospatial_lat_min">50.5744</att>
@@ -40,7 +40,7 @@
         <att name="publisher_email">data@hakai.org</att>
         <att name="platform">moored surface buoy</att>
         <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
-    </addAttributes>
+    <att name="progress">onGoing</att><att name="id">2f74c998-7788-4967-a0f4-ab6bc5cc2765</att><att name="naming_authority">ca.cioos</att><att name="date_modified">2026-08-10T22:05:07.090Z</att><att name="creator_city">Campbell River</att><att name="creator_country">Canada</att><att name="creator_ror">https://ror.org/02pry0c91</att><att name="publisher_city">Campbell River</att><att name="publisher_country">Canada</att><att name="publisher_ror">https://ror.org/02pry0c91</att><att name="contributor_name">Evans, Wiley;Albers, Sam;Hakai Institute;Hakai Institute;Tula Foundation</att><att name="contributor_role">author;coAuthor,custodian,pointOfContact;publisher;owner,distributor;funder</att><att name="metadata_link">https://catalogue.hakai.org/dataset/ca-cioos_2f74c998-7788-4967-a0f4-ab6bc5cc2765</att><att name="metadata_form">https://hakaiinstitute.github.io/hakai-metadata-entry-form#/en/hakai/3LY8ezYsI9hglwZSsfkAdSBcoEG3/-OzhdriEzC6Cish3c7RU</att></addAttributes>
     <dataVariable>
         <sourceName>serial_number</sourceName>
         <destinationName>serial_number</destinationName>
@@ -185,7 +185,8 @@
         <addAttributes>
             <att name="long_name">Cast ID</att>
             <att name="ioos_category">Identifier</att>
-            <att name="comment">Present only for radio-transmitted rows; null for the offloaded full-resolution record. A radio cast counter resets per deployment, so identify a profile by (serial_number, cast_id).</att>
+            <att name="comment">##Limitations:
+Haven&#8217;t applied appropriate QC on the data yet.</att>
         </addAttributes>
     </dataVariable>
 </dataset>
