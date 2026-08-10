@@ -91,7 +91,7 @@ None</att><att name="progress">onGoing</att><att name="keywords_vocabulary">CIOO
             <att name="source_name">date_time</att>
             <att name="standard_name">time</att>
             <att name="time_precision">1970-01-01T00:00:00Z</att>
-            <att name="units">yyyy-MM-dd H:mm</att>
+            <att name="units">yyyy-MM-dd H:mm[:ss]</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
