@@ -25,6 +25,7 @@ services:
       - "/mnt/s3/algex:/algae_explorer"
       - "./datasets.d:/datasets.d"
       - "./logs:/usr/local/tomcat/logs"
+      - "./erddap/server.xml:/usr/local/tomcat/conf/server.xml"      
     healthcheck:
       test:
         [
