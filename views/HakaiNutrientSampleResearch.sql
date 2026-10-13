@@ -73,8 +73,8 @@ FROM
     eims.output_nutrients
 WHERE
     organization = 'HAKAI'
-    AND quality_level IN ('Principal Investigator', 'Technicianmr')
-    AND site_id IN ('QU39')
+    AND quality_level IN ('Principal Investigator')
+    AND site_id IN ('QU39', 'KC10')
     AND (
         no2_no3_flag IN ('AV', 'BDL')
         AND po4_flag IN ('AV', 'BDL')
