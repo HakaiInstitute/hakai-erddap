@@ -82,3 +82,7 @@ WHERE
     )
 ORDER BY
     "collected" DESC;
+
+ALTER TABLE IF EXISTS erddap."HakaiNutrientSampleResearch" OWNER to hakai_erddap_admin;
+GRANT ALL ON TABLE erddap."HakaiNutrientSampleResearch" TO hakai_admin;
+GRANT ALL ON TABLE erddap."HakaiNutrientSampleResearch" TO hakai_erddap_admin;
