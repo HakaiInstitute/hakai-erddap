@@ -2,14 +2,26 @@
 version: "2"
 services:
   erddap:
-    image: "axiom/docker-erddap:v2.31.1"
+    # Builds a thin patch layer over axiom/docker-erddap:v2.31.1 to pick up
+    # Ubuntu security updates missing from the upstream base. See
+    # docker/erddap/Dockerfile. Requires `docker compose up -d --build`.
+    build:
+      context: ./docker/erddap
+      args:
+        ERDDAP_IMAGE: "axiom/docker-erddap:v2.31.1"
+    image: "hakai-erddap:v2.31.1-patched"
     restart: always
     container_name: ${CONTAINER_NAME:-erddap}
     # platform: linux/x86_64
     env_file:
       - .env
+    # Bound to loopback deliberately: ERDDAP is reached by the Cloudflare
+    # Turnstile proxy over the `proxynet` docker network, so publishing on
+    # 0.0.0.0 would expose an unauthenticated path that bypasses Turnstile.
     ports:
-      - "${HOST_PORT:-8090}:8080"
+      - "127.0.0.1:${HOST_PORT:-8090}:8080"
+    security_opt:
+      - no-new-privileges:true
     deploy:
       resources:
         limits:
@@ -21,7 +33,14 @@ services:
       - "./erddap/content:/usr/local/tomcat/content/erddap"
       - "./erddap/data:/erddapData"
       - "${DATASETS_DIR:-./datasets}:/datasets"
-      - "./init.d:/init.d"
+      # Bind the single script rather than the whole directory: mounting
+      # ./init.d over /init.d shadows the image's own 00-advise-upstream.sh and
+      # 50-datasets.d.sh, which is what regenerates datasets.xml from
+      # datasets.d/ on every boot. Shadowing it loses that self-healing step.
+      # Glob order still runs this last (digits sort before letters).
+      # Read-only: /init.d is executed as root by the upstream entrypoint
+      # before it drops privileges via setpriv.
+      - "./init.d/replace-datasets-secrets.sh:/init.d/replace-datasets-secrets.sh:ro"
       - "/mnt/s3/algex:/algae_explorer"
       - "./datasets.d:/datasets.d"
       - "./logs:/usr/local/tomcat/logs"

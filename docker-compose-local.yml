@@ -2,20 +2,32 @@
 version: "2"
 services:
   erddap:
-    image: "axiom/docker-erddap:v2.31.1"
+    # Mirrors docker-compose.yml so local testing exercises the same patched
+    # image as production. Requires `docker compose up -d --build`.
+    build:
+      context: ./docker/erddap
+      args:
+        ERDDAP_IMAGE: "axiom/docker-erddap:v2.31.1"
+    image: "hakai-erddap:v2.31.1-patched"
     restart: always
     container_name: ${CONTAINER_NAME:-erddap}
     platform: linux/x86_64
     env_file:
       - .env
+    # Loopback-only; still reachable at http://localhost:${HOST_PORT}.
     ports:
-      - "${HOST_PORT:-8090}:8080"
+      - "127.0.0.1:${HOST_PORT:-8090}:8080"
+    security_opt:
+      - no-new-privileges:true
     volumes:
       - "./erddap/conf/robots.txt:/usr/local/tomcat/webapps/ROOT/robots.txt"
       - "./erddap/content:/usr/local/tomcat/content/erddap"
       - "./erddap/data:/erddapData"
       - "${DATASETS_DIR:-./datasets}:/datasets"
-      - "./init.d:/init.d"
+      # Bind the single script rather than the whole directory, so the image's
+      # 50-datasets.d.sh (datasets.d/ -> datasets.xml) is not shadowed out.
+      # See docker-compose.yml for the full rationale.
+      - "./init.d/replace-datasets-secrets.sh:/init.d/replace-datasets-secrets.sh:ro"
       # - "/mnt/s3/algex:/algae_explorer"
       - "./datasets.d:/datasets.d"
       - "./erddap/server.xml:/usr/local/tomcat/conf/server.xml"      
