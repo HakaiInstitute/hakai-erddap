@@ -40,6 +40,7 @@ services:
       # Glob order still runs this last (digits sort before letters).
       # Read-only: /init.d is executed as root by the upstream entrypoint
       # before it drops privileges via setpriv.
+      - "./init.d/05-fix-webapp-overlay-perms.sh:/init.d/05-fix-webapp-overlay-perms.sh:ro"
       - "./init.d/replace-datasets-secrets.sh:/init.d/replace-datasets-secrets.sh:ro"
       - "/mnt/s3/algex:/algae_explorer"
       - "./datasets.d:/datasets.d"
