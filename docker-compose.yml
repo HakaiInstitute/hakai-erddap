@@ -2,14 +2,35 @@
 version: "2"
 services:
   erddap:
-    # Builds a thin patch layer over axiom/docker-erddap:v2.31.1 to pick up
-    # Ubuntu security updates missing from the upstream base. See
+    # Builds a thin patch layer over axiom/docker-erddap to pick up Ubuntu
+    # security updates missing from the upstream base. See
     # docker/erddap/Dockerfile. Requires `docker compose up -d --build`.
+    #
+    # Held at v2.30.0, NOT the latest v2.31.1. ERDDAP v2.31.0 added an
+    # unconditional handleViaFixedOrSubsetVariables() call to the top of
+    # EDDTableFromDatabase.getDataForDapQuery (upstream e71fbafa, PR #36).
+    # EDDTable.subsetVariablesDataTable builds the subset table by calling
+    # getDataForDapQuery with "<subsetVars>&distinct()" -- a query that is by
+    # construction fully satisfiable from subsetVariables -- so the new call
+    # returns true and recurses straight back in. The reentrance guard at
+    # EDDTable.java:12208 then aborts TASK_CREATE_SUBSET_TABLE with
+    #   Unable to create subsetVariablesDataTable. (in danger of stack overflow)
+    # for every EDDTableFromDatabase dataset declaring subsetVariables, which is
+    # 54 of 68 in datasets.d/ and 15 of 20 in datasets.d.development/.
+    #
+    # Still broken on v2.31.1 and upstream main as of 2026-10-30, and still
+    # >=v2.27.0, so this remains the official non-root base that
+    # init.d/05-fix-webapp-overlay-perms.sh exists for.
+    #
+    # Unpin once upstream guards that call (e.g. with isProcessingSubset()).
+    # The alternative -- hand-maintained content/erddap/subset/<id>.json files,
+    # which short-circuit before the recursion -- was rejected: they are read
+    # verbatim forever, so new stations would not appear until regenerated.
     build:
       context: ./docker/erddap
       args:
-        ERDDAP_IMAGE: "axiom/docker-erddap:v2.31.1"
-    image: "hakai-erddap:v2.31.1-patched"
+        ERDDAP_IMAGE: "axiom/docker-erddap:v2.30.0"
+    image: "hakai-erddap:v2.30.0-patched"
     restart: always
     container_name: ${CONTAINER_NAME:-erddap}
     # platform: linux/x86_64

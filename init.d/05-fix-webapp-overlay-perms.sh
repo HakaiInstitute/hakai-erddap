@@ -21,8 +21,9 @@
 #   /usr/local/tomcat/webapps/erddap/WEB-INF/cptfiles/Spectrum.cpt
 # which takes the whole webapp down. See EDMessages.java:3990.
 #
-# This ran fine until the image bump to v2.31.1 (84d62be) because the old
-# axiom image predates the official erddap/erddap base and ran Tomcat as root.
+# This ran fine until the image bump off 2.25.1 (84d62be) because the old axiom
+# image predates the official erddap/erddap base and ran Tomcat as root. It
+# applies to every axiom tag >=v2.27.0, including the v2.30.0 we now pin.
 #
 # Runs as root: the entrypoint executes /init.d/* before it drops privileges.
 ###

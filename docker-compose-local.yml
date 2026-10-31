@@ -4,11 +4,12 @@ services:
   erddap:
     # Mirrors docker-compose.yml so local testing exercises the same patched
     # image as production. Requires `docker compose up -d --build`.
+    # Held at v2.30.0 -- see docker-compose.yml for why v2.31.x is unusable here.
     build:
       context: ./docker/erddap
       args:
-        ERDDAP_IMAGE: "axiom/docker-erddap:v2.31.1"
-    image: "hakai-erddap:v2.31.1-patched"
+        ERDDAP_IMAGE: "axiom/docker-erddap:v2.30.0"
+    image: "hakai-erddap:v2.30.0-patched"
     restart: always
     container_name: ${CONTAINER_NAME:-erddap}
     platform: linux/x86_64
