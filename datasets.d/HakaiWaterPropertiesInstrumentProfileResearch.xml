@@ -43,7 +43,7 @@
         <att name="subsetVariables">station_id, longitude, latitude</att>
     -->
     <addAttributes>
-        <att name="title">Water Property Measurements from Conductivity-Temperature-Depth Profiles, BC, Canada (Research)</att>
+        <att name="title">Water Property Measurements from Conductivity-Temperature-Depth Profilers, BC, Canada (Research)</att>
         <att name="acknowledgment">Hakai Field Technicians, Research and IT groups</att>
         <att name="creator_url">https://www.hakai.org/</att>
         <att name="publisher_email">data@hakai.org</att>
@@ -82,7 +82,7 @@ Data were collected by the Hakai Institute Oceanography Program, the Nearshore P
         <att name="platform">research vessel</att>
         <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
     <att name="project">Oceanography,Nearshore,Watersheds,Juvenile Salmon Program</att><att name="comment">##Limitations:
-Instruments sensors are generally calibrated once a year by the manufacturer, no comparison and post-calibration correction based on data sampled by another method is applied to this dataset.</att><att name="progress">onGoing</att><att name="date_modified">2026-07-17T17:02:49.010Z</att><att name="product_version">1.0.0</att><att name="history">Metadata record history:
+Instruments sensors are generally calibrated once a year by the manufacturer, no comparison and post-calibration correction based on data sampled by another method is applied to this dataset.</att><att name="progress">onGoing</att><att name="date_modified">2026-09-28T18:48:37.675Z</att><att name="product_version">1.0.0</att><att name="history">Metadata record history:
 - scope: Dataset
   statement:
     en: These data have been solely funded by the Tula Foundation. Data collection
