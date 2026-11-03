@@ -96,7 +96,19 @@ exit 1
 fi
 
 # update datasets.xml
-sudo docker exec $CONTAINER_NAME bash -c "/datasets.d.sh > /usr/local/tomcat/content/erddap/datasets.xml"
+# Reuse the image's own init script rather than redirecting stdout into
+# datasets.xml. A `> datasets.xml` redirect truncates the catalog *before*
+# generation runs, so any failure (e.g. a malformed fragment in datasets.d/)
+# leaves a zero-byte datasets.xml with no backup. 50-datasets.d.sh takes a
+# timestamped backup first and passes -o/-w so the file is only written after
+# the document has been built successfully. This also keeps the deploy path
+# and the container-startup path on identical logic.
+# NB: invoked via `bash` deliberately. The upstream script's shebang is
+# `#/bin/sh` (missing the `!`), so it has no valid interpreter line. The
+# entrypoint gets away with running it directly because bash falls back to sh
+# on ENOEXEC, but `docker exec` calls execve directly and would fail with
+# "exec format error".
+sudo docker exec $CONTAINER_NAME bash /init.d/50-datasets.d.sh
 sudo docker exec $CONTAINER_NAME bash /init.d/replace-datasets-secrets.sh
 
 # Get xml files that were modified[M] or added[A] since the last commit  and generate flag

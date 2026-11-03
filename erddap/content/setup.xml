@@ -255,7 +255,12 @@ But if you you think someone is abusing the flag system,
 change this text again, restart ERDDAP, and send
 all of the users of the flag system the relevant new flagKeys
 (see the list in the Daily Report). -->
-  <flagKeyKey>example-default-key-replace-me</flagKeyKey>
+  <!-- The real value is supplied by ERDDAP_flagKeyKey in .env, which overrides
+  this element at runtime. Do NOT replace the text below with a placeholder of
+  your own: the upstream entrypoint greps for this exact string to decide
+  whether to generate a random flagKeyKey when ERDDAP_flagKeyKey is unset. Any
+  other text silently disables that fallback and ships a guessable key. -->
+  <flagKeyKey>CHANGE THIS TO YOUR FAVORITE QUOTE</flagKeyKey>
 
   <!-- ERDDAP has an email/URL subscription system which sends a user an email
 or pings a url whenever an interesting dataset changes.
