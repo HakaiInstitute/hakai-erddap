@@ -4,7 +4,7 @@
     <schemaName>erddap</schemaName>
     <tableName>"HakaiWirewalkerProvisional"</tableName>
     <reloadEveryNMinutes>1440</reloadEveryNMinutes>
-    <defaultGraphQuery>longitude%2Clatitude%2Ctime&amp;time&gt;=now-2days</defaultGraphQuery>
+    <defaultGraphQuery>time%2Cpressure%2Ctemperature&amp;time&gt;=now-6months&amp;.draw=markers&amp;.marker=3%7C3&amp;.yRange=%7C%7Cfalse</defaultGraphQuery>
     <defaultDataQuery>&amp;time&gt;=now-2days</defaultDataQuery>
     <addAttributes>
         <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
